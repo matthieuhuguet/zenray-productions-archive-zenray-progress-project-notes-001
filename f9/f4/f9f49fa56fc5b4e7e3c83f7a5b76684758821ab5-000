@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-10-07T11:54:04.676Z",
+ "scannedAt": "2026-10-07T22:08:22.303Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -53,18 +53,18 @@
   },
   {
    "projectId": "zenray-progress",
-   "lines": 46,
+   "lines": 47,
    "work": 3,
    "prompts": 0,
    "first": "2026-09-23T16:32:49.898Z",
-   "last": "2026-10-07T11:51:13.330Z",
+   "last": "2026-10-07T21:13:17.675Z",
    "strength": "strong",
    "conversationId": "claude:2562b086-836d-49c5-80c7-0c935a98513c",
    "provider": "claude",
    "sessionId": "2562b086-836d-49c5-80c7-0c935a98513c",
    "title": "Vegetations Creating Materials October 2026",
-   "updatedAt": "2026-10-07T11:53:17.138Z",
-   "bytes": 23732,
+   "updatedAt": "2026-10-07T21:17:21.926Z",
+   "bytes": 23711,
    "boundProject": "vegetation-assets-collection-01"
   },
   {
@@ -146,6 +146,22 @@
    "updatedAt": "2026-10-07T09:56:31.543Z",
    "bytes": 224429887,
    "boundProject": "vegetation-assets-collection-01"
+  },
+  {
+   "projectId": "zenray-progress",
+   "lines": 14,
+   "work": 0,
+   "prompts": 7,
+   "first": "2026-10-07T12:25:29.615Z",
+   "last": "2026-10-07T22:01:08.770Z",
+   "strength": "strong",
+   "conversationId": "codex:01a11653-69f5-7492-b80e-dbcc6a785d87",
+   "provider": "codex",
+   "sessionId": "01a11653-69f5-7492-b80e-dbcc6a785d87",
+   "title": "Conversation codex 01a11653",
+   "updatedAt": "2026-10-07T22:07:27.266Z",
+   "bytes": 12336373,
+   "boundProject": "zenray-assets-v2"
   },
   {
    "projectId": "zenray-progress",
@@ -241,6 +257,54 @@
    "title": "Mail transfert dossier auto-école",
    "updatedAt": "2026-10-02T14:38:28.892Z",
    "bytes": 22368,
+   "boundProject": null
+  },
+  {
+   "projectId": "zenray-progress",
+   "lines": 2,
+   "work": 0,
+   "prompts": 1,
+   "first": "2026-10-07T14:20:09.100Z",
+   "last": "2026-10-07T14:20:09.100Z",
+   "strength": "weak",
+   "conversationId": "codex:01a116bc-69de-76e0-bb55-12b769b917d5",
+   "provider": "codex",
+   "sessionId": "01a116bc-69de-76e0-bb55-12b769b917d5",
+   "title": "Conversation codex 01a116bc",
+   "updatedAt": "2026-10-07T21:12:53.356Z",
+   "bytes": 2956215,
+   "boundProject": null
+  },
+  {
+   "projectId": "zenray-progress",
+   "lines": 2,
+   "work": 0,
+   "prompts": 1,
+   "first": "2026-10-07T14:20:19.937Z",
+   "last": "2026-10-07T14:20:19.937Z",
+   "strength": "weak",
+   "conversationId": "codex:01a116bc-9430-76a0-b32c-d3c4c78a4e98",
+   "provider": "codex",
+   "sessionId": "01a116bc-9430-76a0-b32c-d3c4c78a4e98",
+   "title": "Conversation codex 01a116bc",
+   "updatedAt": "2026-10-07T21:12:24.813Z",
+   "bytes": 2677320,
+   "boundProject": null
+  },
+  {
+   "projectId": "zenray-progress",
+   "lines": 2,
+   "work": 0,
+   "prompts": 1,
+   "first": "2026-10-07T14:26:54.742Z",
+   "last": "2026-10-07T14:26:54.742Z",
+   "strength": "weak",
+   "conversationId": "codex:01a116c2-9a65-7e52-a96c-faaeea84429b",
+   "provider": "codex",
+   "sessionId": "01a116c2-9a65-7e52-a96c-faaeea84429b",
+   "title": "Conversation codex 01a116c2",
+   "updatedAt": "2026-10-07T21:12:07.424Z",
+   "bytes": 2084474,
    "boundProject": null
   },
   {
@@ -558,8 +622,8 @@
    "conversationId": "gemini:3e22a918-b7a6-4b1f-99ea-e50907f40d44",
    "provider": "gemini",
    "sessionId": "3e22a918-b7a6-4b1f-99ea-e50907f40d44",
-   "title": "Conversation Gemini 3e22a918",
-   "updatedAt": "2026-09-15T20:06:00.494Z",
+   "title": "'/Users/zenray/Movies/2026-09-15 20-36-50.mkv' to mov et speed jusqu'à ce que ça fasse 30 secondes speed ajusté à la longueur initial. go da",
+   "updatedAt": "2026-09-15T20:05:24.351772+00:00",
    "bytes": 3629056,
    "boundProject": null
   }
