@@ -74,3 +74,17 @@
 > | Grouper en vue alignée partout | Oui | 9 tests passent | (3 October 2026, 10:39:14 +0200)
 > | Déployer | Oui | Fichier de production identique au build | (3 October 2026, 10:39:14 +0200)
 > | Vérification visuelle | Non | Pas vérifiée dans le navigateur | (3 October 2026, 10:39:14 +0200)
+
+## 7 October 2026, 08:34:18 +0200 : Prompt
+
+<!-- feedback-event:9a9b8711de40c07d870bca898f2e6fa8eb8accfce0dd6f94c10566904151ef5a (7 October 2026, 08:34:18 +0200) -->
+- Project: zenray-progress; kind: prompt. (7 October 2026, 08:34:18 +0200)
+
+> Ameliorer les performances du streaming via benchmarks, suppression de code inutile pour le cloud streamable, integration universelle des sous-titres (police Inter en small) pour tous les medias, et placeholder SRT desactivable pour Hors Normes (7 October 2026, 08:34:18 +0200)
+
+## 7 October 2026, 08:34:26 +0200 : Standing rule
+
+<!-- feedback-event:4a13040bee059379c6abb7cffc2379281a6b87d4873b3e2fbe0d74a9e3a1a10f (7 October 2026, 08:34:26 +0200) -->
+- Project: zenray-progress; kind: rule. (7 October 2026, 08:34:26 +0200)
+
+> Sous-titres video : disponibles universellement sur tous les medias, rendus en police Inter en small (var(--zr-police-sans), taille small), avec toggle actif/desactif et support SRT/VTT/ASS. Pour Hors Normes, injecter un placeholder SRT desactivable pour test. (7 October 2026, 08:34:26 +0200)
