@@ -88,3 +88,24 @@
 - Project: zenray-progress; kind: rule. (7 October 2026, 08:34:26 +0200)
 
 > Sous-titres video : disponibles universellement sur tous les medias, rendus en police Inter en small (var(--zr-police-sans), taille small), avec toggle actif/desactif et support SRT/VTT/ASS. Pour Hors Normes, injecter un placeholder SRT desactivable pour test. (7 October 2026, 08:34:26 +0200)
+
+## 7 October 2026, 08:52:11 +0200 : Log
+
+<!-- feedback-event:9bb7988cd51c49693c87541ea913ecc0dcf752d3117c70ca358280f877087e3c (7 October 2026, 08:52:11 +0200) -->
+- Project: zenray-progress; kind: log. (7 October 2026, 08:52:11 +0200)
+
+> 07 October 2026: Integration universelle des sous-titres (SRT, WebVTT, ASS) avec typographie Inter small, texte blanc sur fond semi-transparent, injection automatique d un SRT placeholder desactivable pour Hors Normes (2019), selecteur dans le menu parametres et validation par tests unitaires Vitest et deploiement Cloudflare Pages. (7 October 2026, 08:52:11 +0200)
+
+## 7 October 2026, 08:56:58 +0200 : Log
+
+<!-- feedback-event:9afa691a026171c3f54001d9b16865598c0d33a70245c41e630599e6002dbd98 (7 October 2026, 08:56:58 +0200) -->
+- Project: zenray-progress; kind: log. (7 October 2026, 08:56:58 +0200)
+
+> 07 October 2026: Amelioration de la reactivite du seeking video dans VideoPlayer2 (jumpGaps Dash.js, nudgeOffset et maxBufferHole Hls.js, suivi tactile instantane via onInput et repli scrubTime sur pointerup), deploye sur Cloudflare Pages. (7 October 2026, 08:56:58 +0200)
+
+## 7 October 2026, 09:12:44 +0200 : Log
+
+<!-- feedback-event:e4ee05f150a73e92c5265b2a2668ecc2fc76281822846f18d74a79491bd9d94a (7 October 2026, 09:12:44 +0200) -->
+- Project: zenray-progress; kind: log. (7 October 2026, 09:12:44 +0200)
+
+> 07 October 2026: Piste de test dense (103 sous-titres toutes les 3 secondes de 0 à 5 minutes) integree pour tester le rendu, la fonte Inter small, le contraste et le recalage temporel sur Hors Normes (2019). (7 October 2026, 09:12:44 +0200)
