@@ -116,3 +116,10 @@
 - Project: zenray-progress; kind: log. (7 October 2026, 09:34:55 +0200)
 
 > 07 October 2026: Ajout du selecteur de 3 tailles de sous-titres (Petite, Moyenne, Grande) memorise en local, avec retour a la ligne equilibre (text-wrap: balance) et garantie anti-rognage (max-width, overflow-wrap). (7 October 2026, 09:34:55 +0200)
+
+## 7 October 2026, 10:05:58 +0200 : Log
+
+<!-- feedback-event:d94ec25e5509f90932fd6e045ad92af8eb49741b7407799c8bb64244cf443fd4 (7 October 2026, 10:05:58 +0200) -->
+- Project: zenray-progress; kind: log. (7 October 2026, 10:05:58 +0200)
+
+> Taille fluide des sous-titres en pourcentage du lecteur (cqi) avec paliers 4K cales sur des multiples de 8 et 16 (Petite 40px, Moyenne 64px, Grande 96px), adaptation mobile sans debordement ni rognage, et i18n player.subtitles completee. (7 October 2026, 10:05:58 +0200)
