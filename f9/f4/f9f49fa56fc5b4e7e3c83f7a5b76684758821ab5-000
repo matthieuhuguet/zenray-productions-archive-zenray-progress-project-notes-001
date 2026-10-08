@@ -1,22 +1,22 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-10-08T16:33:53.590Z",
+ "scannedAt": "2026-10-08T20:32:37.211Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
-   "lines": 82,
-   "work": 8,
-   "prompts": 32,
+   "lines": 115,
+   "work": 10,
+   "prompts": 46,
    "first": "2026-10-07T12:25:29.615Z",
-   "last": "2026-10-08T16:29:49.343Z",
+   "last": "2026-10-08T20:27:57.801Z",
    "strength": "strong",
    "conversationId": "codex:01a11653-69f5-7492-b80e-dbcc6a785d87",
    "provider": "codex",
    "sessionId": "01a11653-69f5-7492-b80e-dbcc6a785d87",
    "title": "Conversation codex 01a11653",
-   "updatedAt": "2026-10-08T16:33:53.137Z",
-   "bytes": 129180097,
+   "updatedAt": "2026-10-08T20:32:32.999Z",
+   "bytes": 188005660,
    "boundProject": "zenray-assets-v2"
   },
   {
@@ -520,6 +520,22 @@
    "lines": 1,
    "work": 0,
    "prompts": 0,
+   "first": "2026-10-08T20:13:19.641Z",
+   "last": "2026-10-08T20:13:19.641Z",
+   "strength": "weak",
+   "conversationId": "claude:fa4b854c-d32b-463e-9994-34b34d998356",
+   "provider": "claude",
+   "sessionId": "fa4b854c-d32b-463e-9994-34b34d998356",
+   "title": "Montage vidéo pot tournage",
+   "updatedAt": "2026-10-08T20:23:42.504Z",
+   "bytes": 20720,
+   "boundProject": "poisson-gloss-matthieu-poterie-aix-8-octobre-2026"
+  },
+  {
+   "projectId": "zenray-progress",
+   "lines": 1,
+   "work": 0,
+   "prompts": 0,
    "first": "2026-10-07T06:37:01.342Z",
    "last": "2026-10-07T06:37:01.342Z",
    "strength": "weak",
@@ -654,8 +670,8 @@
    "conversationId": "gemini:3e22a918-b7a6-4b1f-99ea-e50907f40d44",
    "provider": "gemini",
    "sessionId": "3e22a918-b7a6-4b1f-99ea-e50907f40d44",
-   "title": "Conversation Gemini 3e22a918",
-   "updatedAt": "2026-09-15T20:06:00.494Z",
+   "title": "'/Users/zenray/Movies/2026-09-15 20-36-50.mkv' to mov et speed jusqu'à ce que ça fasse 30 secondes speed ajusté à la longueur initial. go da",
+   "updatedAt": "2026-09-15T20:05:24.351772+00:00",
    "bytes": 3629056,
    "boundProject": null
   }
