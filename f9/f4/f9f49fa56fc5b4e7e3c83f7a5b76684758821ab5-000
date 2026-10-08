@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-10-08T21:30:55.938Z",
+ "scannedAt": "2026-10-08T21:39:32.754Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -15,8 +15,8 @@
    "provider": "codex",
    "sessionId": "01a11653-69f5-7492-b80e-dbcc6a785d87",
    "title": "Conversation codex 01a11653",
-   "updatedAt": "2026-10-08T21:30:32.694Z",
-   "bytes": 207268378,
+   "updatedAt": "2026-10-08T21:39:30.775Z",
+   "bytes": 208577711,
    "boundProject": "zenray-assets-v2"
   },
   {
@@ -520,6 +520,22 @@
    "lines": 1,
    "work": 0,
    "prompts": 0,
+   "first": "2026-10-08T21:30:54.798Z",
+   "last": "2026-10-08T21:30:54.798Z",
+   "strength": "weak",
+   "conversationId": "claude:f34e2192-4574-4f42-a42a-1615ed66cbdf",
+   "provider": "claude",
+   "sessionId": "f34e2192-4574-4f42-a42a-1615ed66cbdf",
+   "title": "Son Zelda modifications premium",
+   "updatedAt": "2026-10-08T21:39:07.046Z",
+   "bytes": 20653,
+   "boundProject": null
+  },
+  {
+   "projectId": "zenray-progress",
+   "lines": 1,
+   "work": 0,
+   "prompts": 0,
    "first": "2026-10-08T20:13:19.641Z",
    "last": "2026-10-08T20:13:19.641Z",
    "strength": "weak",
@@ -527,8 +543,8 @@
    "provider": "claude",
    "sessionId": "fa4b854c-d32b-463e-9994-34b34d998356",
    "title": "Montage vidéo pot tournage",
-   "updatedAt": "2026-10-08T21:29:41.947Z",
-   "bytes": 11324098,
+   "updatedAt": "2026-10-08T21:31:49.677Z",
+   "bytes": 20766,
    "boundProject": "poisson-gloss-matthieu-poterie-aix-8-octobre-2026"
   },
   {
@@ -670,7 +686,7 @@
    "conversationId": "gemini:3e22a918-b7a6-4b1f-99ea-e50907f40d44",
    "provider": "gemini",
    "sessionId": "3e22a918-b7a6-4b1f-99ea-e50907f40d44",
-   "title": "'/Users/zenray/Movies/2026-09-15 20-36-50.mkv' to mov et speed jusqu'à ce que ça fasse 30 secondes speed ajusté à la longueur initial. go da",
+   "title": "Conversation Gemini 3e22a918",
    "updatedAt": "2026-09-15T20:06:00.494Z",
    "bytes": 3629056,
    "boundProject": null
