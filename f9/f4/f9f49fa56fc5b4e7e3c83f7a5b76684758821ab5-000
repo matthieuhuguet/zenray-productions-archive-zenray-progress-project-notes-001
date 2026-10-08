@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-10-07T22:08:22.303Z",
+ "scannedAt": "2026-10-08T07:57:06.891Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -63,8 +63,8 @@
    "provider": "claude",
    "sessionId": "2562b086-836d-49c5-80c7-0c935a98513c",
    "title": "Vegetations Creating Materials October 2026",
-   "updatedAt": "2026-10-07T21:17:21.926Z",
-   "bytes": 23711,
+   "updatedAt": "2026-10-08T07:57:02.289Z",
+   "bytes": 23744,
    "boundProject": "vegetation-assets-collection-01"
   },
   {
@@ -149,18 +149,18 @@
   },
   {
    "projectId": "zenray-progress",
-   "lines": 14,
+   "lines": 18,
    "work": 0,
-   "prompts": 7,
+   "prompts": 9,
    "first": "2026-10-07T12:25:29.615Z",
-   "last": "2026-10-07T22:01:08.770Z",
+   "last": "2026-10-08T07:51:14.509Z",
    "strength": "strong",
    "conversationId": "codex:01a11653-69f5-7492-b80e-dbcc6a785d87",
    "provider": "codex",
    "sessionId": "01a11653-69f5-7492-b80e-dbcc6a785d87",
    "title": "Conversation codex 01a11653",
-   "updatedAt": "2026-10-07T22:07:27.266Z",
-   "bytes": 12336373,
+   "updatedAt": "2026-10-08T07:57:05.987Z",
+   "bytes": 17073628,
    "boundProject": "zenray-assets-v2"
   },
   {
@@ -257,6 +257,22 @@
    "title": "Mail transfert dossier auto-école",
    "updatedAt": "2026-10-02T14:38:28.892Z",
    "bytes": 22368,
+   "boundProject": null
+  },
+  {
+   "projectId": "zenray-progress",
+   "lines": 2,
+   "work": 0,
+   "prompts": 1,
+   "first": "2026-10-07T22:16:59.755Z",
+   "last": "2026-10-07T22:16:59.756Z",
+   "strength": "weak",
+   "conversationId": "codex:01a11870-f407-78e3-b98a-37cbf5040dbf",
+   "provider": "codex",
+   "sessionId": "01a11870-f407-78e3-b98a-37cbf5040dbf",
+   "title": "Conversation codex 01a11870",
+   "updatedAt": "2026-10-07T22:17:10.398Z",
+   "bytes": 326465,
    "boundProject": null
   },
   {
@@ -622,8 +638,8 @@
    "conversationId": "gemini:3e22a918-b7a6-4b1f-99ea-e50907f40d44",
    "provider": "gemini",
    "sessionId": "3e22a918-b7a6-4b1f-99ea-e50907f40d44",
-   "title": "'/Users/zenray/Movies/2026-09-15 20-36-50.mkv' to mov et speed jusqu'à ce que ça fasse 30 secondes speed ajusté à la longueur initial. go da",
-   "updatedAt": "2026-09-15T20:05:24.351772+00:00",
+   "title": "Conversation Gemini 3e22a918",
+   "updatedAt": "2026-09-15T20:06:00.494Z",
    "bytes": 3629056,
    "boundProject": null
   }
