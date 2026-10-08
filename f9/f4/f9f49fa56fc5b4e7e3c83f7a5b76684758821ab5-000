@@ -1,22 +1,22 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-10-08T20:54:48.664Z",
+ "scannedAt": "2026-10-08T21:15:16.252Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
-   "lines": 119,
-   "work": 11,
-   "prompts": 47,
+   "lines": 125,
+   "work": 12,
+   "prompts": 49,
    "first": "2026-10-07T12:25:29.615Z",
-   "last": "2026-10-08T20:42:20.039Z",
+   "last": "2026-10-08T21:14:52.399Z",
    "strength": "strong",
    "conversationId": "codex:01a11653-69f5-7492-b80e-dbcc6a785d87",
    "provider": "codex",
    "sessionId": "01a11653-69f5-7492-b80e-dbcc6a785d87",
    "title": "Conversation codex 01a11653",
-   "updatedAt": "2026-10-08T20:54:26.983Z",
-   "bytes": 195405459,
+   "updatedAt": "2026-10-08T21:15:04.400Z",
+   "bytes": 201020735,
    "boundProject": "zenray-assets-v2"
   },
   {
@@ -527,8 +527,8 @@
    "provider": "claude",
    "sessionId": "fa4b854c-d32b-463e-9994-34b34d998356",
    "title": "Montage vidéo pot tournage",
-   "updatedAt": "2026-10-08T20:23:42.504Z",
-   "bytes": 20720,
+   "updatedAt": "2026-10-08T21:15:04.612Z",
+   "bytes": 7404176,
    "boundProject": "poisson-gloss-matthieu-poterie-aix-8-octobre-2026"
   },
   {
@@ -670,8 +670,8 @@
    "conversationId": "gemini:3e22a918-b7a6-4b1f-99ea-e50907f40d44",
    "provider": "gemini",
    "sessionId": "3e22a918-b7a6-4b1f-99ea-e50907f40d44",
-   "title": "'/Users/zenray/Movies/2026-09-15 20-36-50.mkv' to mov et speed jusqu'à ce que ça fasse 30 secondes speed ajusté à la longueur initial. go da",
-   "updatedAt": "2026-09-15T20:05:24.351772+00:00",
+   "title": "Conversation Gemini 3e22a918",
+   "updatedAt": "2026-09-15T20:06:00.494Z",
    "bytes": 3629056,
    "boundProject": null
   }
