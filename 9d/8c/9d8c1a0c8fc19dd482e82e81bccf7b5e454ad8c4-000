@@ -123,3 +123,10 @@
 - Project: zenray-progress; kind: log. (7 October 2026, 10:05:58 +0200)
 
 > Taille fluide des sous-titres en pourcentage du lecteur (cqi) avec paliers 4K cales sur des multiples de 8 et 16 (Petite 40px, Moyenne 64px, Grande 96px), adaptation mobile sans debordement ni rognage, et i18n player.subtitles completee. (7 October 2026, 10:05:58 +0200)
+
+## 9 October 2026, 01:16:53 +0200 : Prompt
+
+<!-- feedback-event:9fccb2e4b94083f022de923521c5cc082c2b3768f498cb94be48f7b301134b30 (9 October 2026, 01:16:53 +0200) -->
+- Project: zenray-progress; kind: prompt. (9 October 2026, 01:16:53 +0200)
+
+> Demande de Matthieu pour ZenRayProgress, issue d’un second projet car la session Codex reste liée à zenray-assets-v2 : « via les gallery de projet j'aimerai link un projet et pouvoir link (peut être setup manuellement ou via le skill à une vue gallery par exemple dans to do 3D j'ai une vue louisiana bayou ce qui serait intelligent ce serait de pouvoir lié le projet pour pouvoir accèder à tout les png / img de concept pas forcément les textures quoi que en fait à la limite si les textures aussi bref tout les projet img qui sont déjà backup. J'ai un autre bug dans la vue zenray-progress assets sidebar de gauche : le scroll via scrollbar et souris molette fonctionne mais sur les autres vues ça ne marche plus pour scroller uniquement sur la sidebar de gauche de manière individuelle ; je suis bloqué à Gallery ToDo mais je ne peux pas voir Design. Fix it et regarde le screen. La solution doit exister dans la vue custom Assets car ça marche. La vue cloud pourrait être indexée par rapport à ce qui existe déjà en local, notamment mes fichiers de concepts ; il faudrait setup manuellement, avec des filtres et des dossiers pour voir mes images déjà rangées dans le cloud, sans dupliquer les fichiers mais avec un affichage intégré à l’UI de Gallery. » Capture fournie : codex-clipboard-59e5ae35-a0f9-47a5-825a-f881d9a03361.png. (9 October 2026) (9 October 2026, 01:16:53 +0200)
