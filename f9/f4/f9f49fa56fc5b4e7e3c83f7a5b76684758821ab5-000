@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-10-09T11:02:56.500Z",
+ "scannedAt": "2026-10-09T11:06:58.719Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -15,8 +15,8 @@
    "provider": "codex",
    "sessionId": "01a11653-69f5-7492-b80e-dbcc6a785d87",
    "title": "Conversation codex 01a11653",
-   "updatedAt": "2026-10-09T11:02:35.147Z",
-   "bytes": 637628937,
+   "updatedAt": "2026-10-09T11:06:35.240Z",
+   "bytes": 637933249,
    "boundProject": "zenray-assets-v2"
   },
   {
@@ -79,8 +79,8 @@
    "provider": "claude",
    "sessionId": "2562b086-836d-49c5-80c7-0c935a98513c",
    "title": "Vegetations Creating Materials October 2026",
-   "updatedAt": "2026-10-09T11:02:27.226Z",
-   "bytes": 1107101325,
+   "updatedAt": "2026-10-09T11:06:18.841Z",
+   "bytes": 23745,
    "boundProject": "vegetation-assets-collection-01"
   },
   {
