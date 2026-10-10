@@ -1,22 +1,22 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-10-10T11:05:57.888Z",
+ "scannedAt": "2026-10-10T11:38:04.323Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
-   "lines": 378,
+   "lines": 380,
    "work": 56,
-   "prompts": 130,
+   "prompts": 131,
    "first": "2026-10-07T12:25:29.615Z",
-   "last": "2026-10-10T10:23:04.388Z",
+   "last": "2026-10-10T11:25:11.630Z",
    "strength": "strong",
    "conversationId": "codex:01a11653-69f5-7492-b80e-dbcc6a785d87",
    "provider": "codex",
    "sessionId": "01a11653-69f5-7492-b80e-dbcc6a785d87",
    "title": "Conversation codex 01a11653",
-   "updatedAt": "2026-10-10T11:05:39.944Z",
-   "bytes": 849321177,
+   "updatedAt": "2026-10-10T11:37:52.458Z",
+   "bytes": 855488019,
    "boundProject": "zenray-assets-v2"
   },
   {
@@ -79,8 +79,8 @@
    "provider": "claude",
    "sessionId": "2562b086-836d-49c5-80c7-0c935a98513c",
    "title": "Vegetations Creating Materials October 2026",
-   "updatedAt": "2026-10-10T11:01:03.925Z",
-   "bytes": 23913,
+   "updatedAt": "2026-10-10T11:37:58.718Z",
+   "bytes": 1235451426,
    "boundProject": "vegetation-assets-collection-01"
   },
   {
@@ -718,8 +718,8 @@
    "conversationId": "gemini:3e22a918-b7a6-4b1f-99ea-e50907f40d44",
    "provider": "gemini",
    "sessionId": "3e22a918-b7a6-4b1f-99ea-e50907f40d44",
-   "title": "Conversation Gemini 3e22a918",
-   "updatedAt": "2026-09-15T20:06:00.494Z",
+   "title": "'/Users/zenray/Movies/2026-09-15 20-36-50.mkv' to mov et speed jusqu'à ce que ça fasse 30 secondes speed ajusté à la longueur initial. go da",
+   "updatedAt": "2026-09-15T20:05:24.351772+00:00",
    "bytes": 3629056,
    "boundProject": null
   }
