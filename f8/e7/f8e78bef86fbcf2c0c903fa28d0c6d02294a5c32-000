@@ -3,3 +3,24 @@
 - Project ID: zenray-progress. (3 October 2026)
 - Canonical feedback: /Users/zenray/.claude/Memory1/Projects/zenray-progress/FEEDBACK.md. (3 October 2026)
 - Append dated decisions and verified knowledge here; retain existing entries. (3 October 2026)
+
+## 10 October 2026 : Crash à l’ouverture des anciens projets Assets
+
+- 10 October 2026 : Les entrées historiques peuvent avoir des sources sans `id` et des fichiers cloud sans `sourceId`. Une recherche qui compare ces champs manquants peut associer deux valeurs `undefined`, puis le validateur lève `Invalid source id`. (10 October 2026)
+- 10 October 2026 : Un correctif valide les deux identifiants avant toute association et laisse visible le chemin cloud quand aucun lien local fiable n’existe. Il est enregistré dans le worktree `/Users/zenray/.claude/tmp/tmp-assets-project-click-fix/worktree`, branche `codex/assets-project-click-fix`, commit local `2efed00d`. (10 October 2026)
+- 10 October 2026 : Les deux suites ciblées passent, 32 tests au total ; le build Vite et `CheckSkillContract.mjs` passent. La suite Pages complète a été arrêtée à la demande de Matthieu après environ une minute ; le résultat global reste donc non vérifié. Le correctif n’est ni poussé ni déployé. (10 October 2026)
+- 10 October 2026 : Prochaine action prioritaire : reprendre ce worktree, finir la vérification complète, puis publier et vérifier le parcours d’ouverture sur plusieurs anciens projets. Les transferts restent en pause et ne doivent pas être relancés sans demande explicite. (10 October 2026)
+
+## 10 October 2026 : Fichier unique de reprise des conversations
+
+- Correction du relevé précédent : le fil successeur publie le correctif sous `9c8b1d5a481c5ba5402b8dbffc83c5ced8e4fdac`, présent sur `origin/main` ; son FEEDBACK consigne 1937 tests Pages passés, 6 ignorés, 32 tests ciblés et le domaine réel comparé au build. Les transferts restent en pause. (10 October 2026)
+- Porte d’entrée à transmettre : `/Users/zenray/.codex/01a11653-69f5-7492-b80e-dbcc6a785d87/ConversationResume.md`, vue dérivée des mappings Assets et suivis des deux sessions, avec objectifs ouverts, pauses, preuves et liens vers les originaux. (10 October 2026)
+- Générateur canonique : `/Users/zenray/.claude/skills/zenray-switch-conversations/scripts/BuildConversationResume.py` ; cinq tests vérifient la conservation des tâches, les statuts récents, les identifiants, les originaux protégés et la régénération. Aucun service ni transfert ne démarre. (10 October 2026)
+- La liaison Assets du fil successeur reste non établie tant que le service est indisponible ; FEEDBACK et deux index canonical-skill attendent la reprise autorisée, sans preuve de sauvegarde cloud. (10 October 2026)
+
+## 10 October 2026 : Index réel des 253 Gio de films
+
+- Index de reprise des films : `/Users/zenray/.claude/tmp/tmp-movies-series-upload/FilmsIndexMapping.md` ; index exhaustif de 2722 fichiers dans `FilmsIndexMapping.json` du même dossier. Source `/Users/zenray/.claude/tmp/tmp-films-series`, destination prévue `pages/Movies_Series-yl1x`. Scan local : 252,63 Gio logiques, 233 vidéos, zéro chemin vidéo manquant. (10 October 2026)
+- Les 233 vidéos se répartissent en 183 prêtes, 25 à filtrer, 22 copies identiques et 3 exceptions ; les 2489 fichiers associés sont hors de la file vidéo. Le checkpoint sauvegardé indique 40 nouvelles publications sur 170, en plus de 13 préexistantes ; aucune nouvelle lecture distante effectuée. (10 October 2026)
+- Une seule restauration complète retrouvée, Initial-D-S01E01 : 54221129 octets et SHA-256 concordants. Aucune couverture HLS/DASH complète prouvée et aucune libération du volume films prouvée. La pause et la réconciliation Git nécessaire restent explicites. (10 October 2026)
+- Régénérer sans transfert avec `python3 /Users/zenray/.claude/tmp/tmp-movies-series-upload/Scripts/BuildFilmsIndexMapping.py` ; la classification des doublons prend le membre réellement admis par la file, pas la première entrée du groupe. (10 October 2026)
