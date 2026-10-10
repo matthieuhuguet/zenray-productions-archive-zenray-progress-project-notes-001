@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-10-10T21:33:07.630Z",
+ "scannedAt": "2026-10-10T21:42:10.650Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -95,8 +95,8 @@
    "provider": "claude",
    "sessionId": "2562b086-836d-49c5-80c7-0c935a98513c",
    "title": "Vegetations Creating Materials October 2026",
-   "updatedAt": "2026-10-10T21:32:57.133Z",
-   "bytes": 24001,
+   "updatedAt": "2026-10-10T21:41:33.297Z",
+   "bytes": 23915,
    "boundProject": "vegetation-assets-collection-01"
   },
   {
@@ -287,8 +287,8 @@
    "provider": "claude",
    "sessionId": "3e51dc3d-4e58-441b-abf8-9f6013ebbf24",
    "title": "Monitoring film upload deployment",
-   "updatedAt": "2026-10-10T21:32:28.430Z",
-   "bytes": 20855,
+   "updatedAt": "2026-10-10T21:40:57.405Z",
+   "bytes": 20843,
    "boundProject": null
   },
   {
@@ -655,8 +655,8 @@
    "provider": "claude",
    "sessionId": "e067e0eb-400b-4769-9366-225560e7a0e4",
    "title": "Vidéo motion design OneKey Pro 2",
-   "updatedAt": "2026-10-10T21:32:57.991Z",
-   "bytes": 5123589,
+   "updatedAt": "2026-10-10T21:41:59.772Z",
+   "bytes": 8080706,
    "boundProject": "zenray-motion-design-01"
   },
   {
