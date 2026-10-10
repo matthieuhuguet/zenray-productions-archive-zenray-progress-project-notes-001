@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-10-09T23:22:54.938Z",
+ "scannedAt": "2026-10-10T08:37:07.170Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -280,16 +280,16 @@
    "lines": 2,
    "work": 0,
    "prompts": 1,
-   "first": "2026-10-09T14:34:54.428Z",
-   "last": "2026-10-09T14:34:54.429Z",
+   "first": "2026-10-10T08:31:16.258Z",
+   "last": "2026-10-10T08:31:16.258Z",
    "strength": "weak",
-   "conversationId": "codex:01a12115-ab1b-7262-9039-00c41e82a05c",
+   "conversationId": "codex:01a124f0-0c66-7462-b1ff-038af6783afb",
    "provider": "codex",
-   "sessionId": "01a12115-ab1b-7262-9039-00c41e82a05c",
-   "title": "Conversation codex 01a12115",
-   "updatedAt": "2026-10-09T14:41:51.276Z",
-   "bytes": 8949568,
-   "boundProject": "louisiana-bayou"
+   "sessionId": "01a124f0-0c66-7462-b1ff-038af6783afb",
+   "title": "Conversation codex 01a124f0",
+   "updatedAt": "2026-10-10T08:37:00.832Z",
+   "bytes": 2725308,
+   "boundProject": "conversation-codex-aec1fa9e2736c44185ca1c87"
   },
   {
    "projectId": "zenray-progress",
@@ -303,9 +303,25 @@
    "provider": "codex",
    "sessionId": "01a11870-f407-78e3-b98a-37cbf5040dbf",
    "title": "Conversation codex 01a11870",
-   "updatedAt": "2026-10-07T22:17:10.398Z",
-   "bytes": 326465,
+   "updatedAt": "2026-10-10T08:31:52.585Z",
+   "bytes": 328304,
    "boundProject": null
+  },
+  {
+   "projectId": "zenray-progress",
+   "lines": 2,
+   "work": 0,
+   "prompts": 1,
+   "first": "2026-10-09T14:34:54.428Z",
+   "last": "2026-10-09T14:34:54.429Z",
+   "strength": "weak",
+   "conversationId": "codex:01a12115-ab1b-7262-9039-00c41e82a05c",
+   "provider": "codex",
+   "sessionId": "01a12115-ab1b-7262-9039-00c41e82a05c",
+   "title": "Conversation codex 01a12115",
+   "updatedAt": "2026-10-09T14:41:51.276Z",
+   "bytes": 8949568,
+   "boundProject": "louisiana-bayou"
   },
   {
    "projectId": "zenray-progress",
@@ -702,8 +718,8 @@
    "conversationId": "gemini:3e22a918-b7a6-4b1f-99ea-e50907f40d44",
    "provider": "gemini",
    "sessionId": "3e22a918-b7a6-4b1f-99ea-e50907f40d44",
-   "title": "Conversation Gemini 3e22a918",
-   "updatedAt": "2026-09-15T20:06:00.494Z",
+   "title": "'/Users/zenray/Movies/2026-09-15 20-36-50.mkv' to mov et speed jusqu'à ce que ça fasse 30 secondes speed ajusté à la longueur initial. go da",
+   "updatedAt": "2026-09-15T20:05:24.351772+00:00",
    "bytes": 3629056,
    "boundProject": null
   }
