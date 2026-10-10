@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-10-10T21:57:15.958Z",
+ "scannedAt": "2026-10-10T22:07:43.309Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -95,8 +95,8 @@
    "provider": "claude",
    "sessionId": "2562b086-836d-49c5-80c7-0c935a98513c",
    "title": "Vegetations Creating Materials October 2026",
-   "updatedAt": "2026-10-10T21:57:00.262Z",
-   "bytes": 1393425933,
+   "updatedAt": "2026-10-10T22:06:42.197Z",
+   "bytes": 1393702500,
    "boundProject": "vegetation-assets-collection-01"
   },
   {
@@ -287,8 +287,8 @@
    "provider": "claude",
    "sessionId": "3e51dc3d-4e58-441b-abf8-9f6013ebbf24",
    "title": "Monitoring film upload deployment",
-   "updatedAt": "2026-10-10T21:56:45.718Z",
-   "bytes": 20855,
+   "updatedAt": "2026-10-10T22:06:16.983Z",
+   "bytes": 20846,
    "boundProject": null
   },
   {
@@ -354,6 +354,22 @@
    "updatedAt": "2026-10-02T14:38:28.892Z",
    "bytes": 22368,
    "boundProject": null
+  },
+  {
+   "projectId": "zenray-progress",
+   "lines": 2,
+   "work": 0,
+   "prompts": 0,
+   "first": "2026-10-10T21:07:39.124Z",
+   "last": "2026-10-10T22:01:11.344Z",
+   "strength": "weak",
+   "conversationId": "claude:e067e0eb-400b-4769-9366-225560e7a0e4",
+   "provider": "claude",
+   "sessionId": "e067e0eb-400b-4769-9366-225560e7a0e4",
+   "title": "Vidéo motion design OneKey Pro 2",
+   "updatedAt": "2026-10-10T22:07:31.771Z",
+   "bytes": 13023950,
+   "boundProject": "zenray-motion-design-01"
   },
   {
    "projectId": "zenray-progress",
@@ -642,22 +658,6 @@
    "updatedAt": "2026-09-30T10:58:03.807Z",
    "bytes": 22075,
    "boundProject": null
-  },
-  {
-   "projectId": "zenray-progress",
-   "lines": 1,
-   "work": 0,
-   "prompts": 0,
-   "first": "2026-10-10T21:07:39.124Z",
-   "last": "2026-10-10T21:07:39.124Z",
-   "strength": "weak",
-   "conversationId": "claude:e067e0eb-400b-4769-9366-225560e7a0e4",
-   "provider": "claude",
-   "sessionId": "e067e0eb-400b-4769-9366-225560e7a0e4",
-   "title": "Vidéo motion design OneKey Pro 2",
-   "updatedAt": "2026-10-10T21:56:21.511Z",
-   "bytes": 9110131,
-   "boundProject": "zenray-motion-design-01"
   },
   {
    "projectId": "zenray-progress",
