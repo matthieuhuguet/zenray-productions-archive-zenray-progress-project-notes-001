@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-10-10T23:39:51.239Z",
+ "scannedAt": "2026-10-10T23:49:14.375Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -287,8 +287,8 @@
    "provider": "claude",
    "sessionId": "3e51dc3d-4e58-441b-abf8-9f6013ebbf24",
    "title": "Monitoring film upload deployment",
-   "updatedAt": "2026-10-10T23:39:32.827Z",
-   "bytes": 20874,
+   "updatedAt": "2026-10-10T23:48:05.743Z",
+   "bytes": 20868,
    "boundProject": null
   },
   {
