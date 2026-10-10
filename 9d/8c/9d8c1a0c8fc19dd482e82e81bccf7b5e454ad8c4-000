@@ -294,3 +294,10 @@
 - Project: zenray-progress; kind: prompt. (10 October 2026, 22:56:46 +0200)
 
 > pour get le context et l'index mapping bug sur la vue design de zenray-progress impossible d'ajouter un lien avec une image debug et code. Le problème à débug, c'est de faire en sorte que la vue design et la vue des galeries puissent ajouter des liens. puis ajoute anyway : https://prompt-motion.com/ https://whatships.com/videos/onekey-pro-2/ et whatships.com https://flora.ai/ (10 October 2026, 22:56:46 +0200)
+
+## 10 October 2026, 23:02:55 +0200 : Log
+
+<!-- feedback-event:4678aae60ff7952a6c1a5ca45e7b972e1eb2df64babec4f3906bbc606fb1ddfe (10 October 2026, 23:02:55 +0200) -->
+- Project: zenray-progress; kind: log. (10 October 2026, 23:02:55 +0200)
+
+> Cause prouvée par tests rouges puis verts. La carte « Ajouter une référence » ne prenait pas le focus à l'ouverture : un ⌘V sortait de la carte et tombait sur la cible globale de la galerie, qui créait une tuile orpheline au lieu d'attacher l'image au lien. Correctif : focus à l'ouverture, images lues dans files et items, acceptImage via ref, erreur visible quand l'envoi échoue, aperçu borné côté serveur, entités HTML décodées. Commit 948acf0c poussé sur origin/main, déployé en production (bundle assets/index-Ch5dG9dQ.js, identique au build local). Tests : 5 nouveaux, suite Pages complète 209 fichiers et 1950 tests passés. Aperçus des 4 URL vérifiés en production (titre et image présents). NON FAIT : ajout des 4 liens dans la vue Design, bloqué : l'écriture exige le code du drive (x-zr-auth), refusé en production avec le secret de .env.local. (10 October 2026, 23:02:55 +0200)

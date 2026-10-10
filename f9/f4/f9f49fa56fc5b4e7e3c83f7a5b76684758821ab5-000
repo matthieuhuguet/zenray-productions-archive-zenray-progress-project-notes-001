@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-10-10T20:56:26.842Z",
+ "scannedAt": "2026-10-10T21:14:11.434Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -33,6 +33,22 @@
    "title": "Conversation codex 01a126e0",
    "updatedAt": "2026-10-10T17:41:19.785Z",
    "bytes": 2579131,
+   "boundProject": null
+  },
+  {
+   "projectId": "zenray-progress",
+   "lines": 79,
+   "work": 10,
+   "prompts": 0,
+   "first": "2026-10-10T20:50:25.142Z",
+   "last": "2026-10-10T21:03:31.843Z",
+   "strength": "strong",
+   "conversationId": "claude:5be85b54-ff94-4c79-8cab-7131103e6d68",
+   "provider": "claude",
+   "sessionId": "5be85b54-ff94-4c79-8cab-7131103e6d68",
+   "title": "Zenray design view link bug",
+   "updatedAt": "2026-10-10T21:03:31.921Z",
+   "bytes": 20967,
    "boundProject": null
   },
   {
@@ -261,18 +277,18 @@
   },
   {
    "projectId": "zenray-progress",
-   "lines": 6,
+   "lines": 5,
    "work": 1,
    "prompts": 0,
-   "first": "2026-10-10T20:50:25.142Z",
-   "last": "2026-10-10T20:54:14.070Z",
+   "first": "2026-10-10T20:53:28.651Z",
+   "last": "2026-10-10T21:13:42.955Z",
    "strength": "weak",
-   "conversationId": "claude:5be85b54-ff94-4c79-8cab-7131103e6d68",
+   "conversationId": "claude:3e51dc3d-4e58-441b-abf8-9f6013ebbf24",
    "provider": "claude",
-   "sessionId": "5be85b54-ff94-4c79-8cab-7131103e6d68",
-   "title": "Zenray design view link bug",
-   "updatedAt": "2026-10-10T20:55:18.403Z",
-   "bytes": 2350538,
+   "sessionId": "3e51dc3d-4e58-441b-abf8-9f6013ebbf24",
+   "title": "Monitoring film upload deployment",
+   "updatedAt": "2026-10-10T21:13:46.727Z",
+   "bytes": 20848,
    "boundProject": null
   },
   {
@@ -632,15 +648,15 @@
    "lines": 1,
    "work": 0,
    "prompts": 0,
-   "first": "2026-10-10T20:53:28.651Z",
-   "last": "2026-10-10T20:53:28.651Z",
+   "first": "2026-10-10T21:07:39.124Z",
+   "last": "2026-10-10T21:07:39.124Z",
    "strength": "weak",
-   "conversationId": "claude:3e51dc3d-4e58-441b-abf8-9f6013ebbf24",
+   "conversationId": "claude:e067e0eb-400b-4769-9366-225560e7a0e4",
    "provider": "claude",
-   "sessionId": "3e51dc3d-4e58-441b-abf8-9f6013ebbf24",
-   "title": "Monitoring film upload deployment",
-   "updatedAt": "2026-10-10T20:55:16.600Z",
-   "bytes": 20977,
+   "sessionId": "e067e0eb-400b-4769-9366-225560e7a0e4",
+   "title": "Vidéo motion design OneKey Pro 2",
+   "updatedAt": "2026-10-10T21:13:53.354Z",
+   "bytes": 1343395,
    "boundProject": null
   },
   {
