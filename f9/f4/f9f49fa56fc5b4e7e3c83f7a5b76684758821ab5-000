@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-10-10T21:14:11.434Z",
+ "scannedAt": "2026-10-10T21:25:08.234Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -37,18 +37,18 @@
   },
   {
    "projectId": "zenray-progress",
-   "lines": 79,
-   "work": 10,
+   "lines": 82,
+   "work": 11,
    "prompts": 0,
    "first": "2026-10-10T20:50:25.142Z",
-   "last": "2026-10-10T21:03:31.843Z",
+   "last": "2026-10-10T21:16:30.502Z",
    "strength": "strong",
    "conversationId": "claude:5be85b54-ff94-4c79-8cab-7131103e6d68",
    "provider": "claude",
    "sessionId": "5be85b54-ff94-4c79-8cab-7131103e6d68",
    "title": "Zenray design view link bug",
-   "updatedAt": "2026-10-10T21:03:31.921Z",
-   "bytes": 20967,
+   "updatedAt": "2026-10-10T21:16:40.595Z",
+   "bytes": 20944,
    "boundProject": null
   },
   {
@@ -287,7 +287,7 @@
    "provider": "claude",
    "sessionId": "3e51dc3d-4e58-441b-abf8-9f6013ebbf24",
    "title": "Monitoring film upload deployment",
-   "updatedAt": "2026-10-10T21:13:46.727Z",
+   "updatedAt": "2026-10-10T21:24:56.139Z",
    "bytes": 20848,
    "boundProject": null
   },
@@ -655,9 +655,9 @@
    "provider": "claude",
    "sessionId": "e067e0eb-400b-4769-9366-225560e7a0e4",
    "title": "Vidéo motion design OneKey Pro 2",
-   "updatedAt": "2026-10-10T21:13:53.354Z",
-   "bytes": 1343395,
-   "boundProject": null
+   "updatedAt": "2026-10-10T21:24:01.143Z",
+   "bytes": 4478190,
+   "boundProject": "zenray-motion-design-01"
   },
   {
    "projectId": "zenray-progress",
@@ -846,8 +846,8 @@
    "conversationId": "gemini:3e22a918-b7a6-4b1f-99ea-e50907f40d44",
    "provider": "gemini",
    "sessionId": "3e22a918-b7a6-4b1f-99ea-e50907f40d44",
-   "title": "Conversation Gemini 3e22a918",
-   "updatedAt": "2026-09-15T20:06:00.494Z",
+   "title": "'/Users/zenray/Movies/2026-09-15 20-36-50.mkv' to mov et speed jusqu'à ce que ça fasse 30 secondes speed ajusté à la longueur initial. go da",
+   "updatedAt": "2026-09-15T20:05:24.351772+00:00",
    "bytes": 3629056,
    "boundProject": null
   }
