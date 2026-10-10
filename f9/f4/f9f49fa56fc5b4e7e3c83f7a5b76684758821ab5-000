@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-10-10T22:49:30.636Z",
+ "scannedAt": "2026-10-10T22:53:30.890Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -287,8 +287,8 @@
    "provider": "claude",
    "sessionId": "3e51dc3d-4e58-441b-abf8-9f6013ebbf24",
    "title": "Monitoring film upload deployment",
-   "updatedAt": "2026-10-10T22:49:08.419Z",
-   "bytes": 20910,
+   "updatedAt": "2026-10-10T22:52:55.058Z",
+   "bytes": 20891,
    "boundProject": null
   },
   {
@@ -367,8 +367,8 @@
    "provider": "claude",
    "sessionId": "e067e0eb-400b-4769-9366-225560e7a0e4",
    "title": "Vidéo motion design OneKey Pro 2",
-   "updatedAt": "2026-10-10T22:49:27.006Z",
-   "bytes": 16567956,
+   "updatedAt": "2026-10-10T22:53:15.456Z",
+   "bytes": 16777961,
    "boundProject": "zenray-motion-design-01"
   },
   {
