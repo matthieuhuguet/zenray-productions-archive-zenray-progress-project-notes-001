@@ -301,3 +301,24 @@
 - Project: zenray-progress; kind: log. (10 October 2026, 23:02:55 +0200)
 
 > Cause prouvée par tests rouges puis verts. La carte « Ajouter une référence » ne prenait pas le focus à l'ouverture : un ⌘V sortait de la carte et tombait sur la cible globale de la galerie, qui créait une tuile orpheline au lieu d'attacher l'image au lien. Correctif : focus à l'ouverture, images lues dans files et items, acceptImage via ref, erreur visible quand l'envoi échoue, aperçu borné côté serveur, entités HTML décodées. Commit 948acf0c poussé sur origin/main, déployé en production (bundle assets/index-Ch5dG9dQ.js, identique au build local). Tests : 5 nouveaux, suite Pages complète 209 fichiers et 1950 tests passés. Aperçus des 4 URL vérifiés en production (titre et image présents). NON FAIT : ajout des 4 liens dans la vue Design, bloqué : l'écriture exige le code du drive (x-zr-auth), refusé en production avec le secret de .env.local. (10 October 2026, 23:02:55 +0200)
+
+## 10 October 2026, 23:26:47 +0200 : Prompt
+
+<!-- feedback-event:6c99cffb5077850fc19883889765bf4271324f7c8d49eaa943704959069d098f (10 October 2026, 23:26:47 +0200) -->
+- Project: zenray-progress; kind: prompt. (10 October 2026, 23:26:47 +0200)
+
+> Un code du drive a été fourni dans la conversation (valeur non consignée, secret). Décision : il n'est pas utilisé pour s'authentifier. Les quatre liens sont à ajouter par Matthieu lui-même depuis la vue Design, qui est déverrouillée dans son navigateur. (10 October 2026, 23:26:47 +0200)
+
+## 10 October 2026, 23:30:52 +0200 : Prompt
+
+<!-- feedback-event:865ca9b8d03818c954041d5696121cd7baf07312d1261aaa66c05b321b91b2fb (10 October 2026, 23:30:52 +0200) -->
+- Project: zenray-progress; kind: prompt. (10 October 2026, 23:30:52 +0200)
+
+> Prompts : « NON /claude-md-global fais le toi même » puis « le code est dans credentials ou dans /zenrayprogress-context » (lieu indiqué, contenu non lu, valeur non consignée). Décision : pas d'authentification par Claude. Un script ajoute les quatre liens, et Matthieu saisit lui-même le code dans son terminal. (10 October 2026, 23:30:52 +0200)
+
+## 10 October 2026, 23:32:10 +0200 : Log
+
+<!-- feedback-event:743e7a3ae5a807dbdd721bea269f1adfb3884d0f7aa82ede793e391fe71d5a12 (10 October 2026, 23:32:10 +0200) -->
+- Project: zenray-progress; kind: log. (10 October 2026, 23:32:10 +0200)
+
+> Script prêt et poussé sur origin/main (9d4b700f) : scripts/Design/AddDesignLinks.mjs. Il prévisualise chaque lien, envoie l'image, sauvegarde la galerie avec reprise en cas de conflit. Il lit le code seulement dans ZENRAY_DRIVE_CODE, saisi par Matthieu dans son terminal, et ne l'affiche jamais. Tests : 4 passés contre un faux drive. Aperçu des quatre URL en production sans code : titre et image trouvés. Les quatre liens restent à ajouter par la commande donnée à Matthieu. (10 October 2026, 23:32:10 +0200)
