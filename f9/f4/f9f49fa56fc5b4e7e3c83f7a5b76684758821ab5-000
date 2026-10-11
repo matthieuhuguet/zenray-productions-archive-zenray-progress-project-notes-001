@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-10-11T13:48:14.165Z",
+ "scannedAt": "2026-10-11T14:11:24.618Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -95,8 +95,8 @@
    "provider": "claude",
    "sessionId": "2562b086-836d-49c5-80c7-0c935a98513c",
    "title": "Vegetations Creating Materials October 2026",
-   "updatedAt": "2026-10-11T13:47:21.924Z",
-   "bytes": 23846,
+   "updatedAt": "2026-10-11T14:07:03.057Z",
+   "bytes": 23853,
    "boundProject": "vegetation-assets-collection-01"
   },
   {
@@ -287,8 +287,8 @@
    "provider": "claude",
    "sessionId": "3e51dc3d-4e58-441b-abf8-9f6013ebbf24",
    "title": "Monitoring film upload deployment",
-   "updatedAt": "2026-10-11T12:58:19.611Z",
-   "bytes": 21061,
+   "updatedAt": "2026-10-11T14:11:10.550Z",
+   "bytes": 21094,
    "boundProject": null
   },
   {
@@ -673,6 +673,38 @@
    "title": "Organisation dossier Downloads",
    "updatedAt": "2026-09-30T10:58:03.807Z",
    "bytes": 22075,
+   "boundProject": null
+  },
+  {
+   "projectId": "zenray-progress",
+   "lines": 1,
+   "work": 0,
+   "prompts": 0,
+   "first": "2026-10-11T14:09:59.235Z",
+   "last": "2026-10-11T14:09:59.235Z",
+   "strength": "weak",
+   "conversationId": "claude:3a9c2407-7dcc-4acd-baf2-90a94300e953",
+   "provider": "claude",
+   "sessionId": "3a9c2407-7dcc-4acd-baf2-90a94300e953",
+   "title": "ZENRAY HEIGHT",
+   "updatedAt": "2026-10-11T14:11:22.961Z",
+   "bytes": 1173543,
+   "boundProject": null
+  },
+  {
+   "projectId": "zenray-progress",
+   "lines": 1,
+   "work": 0,
+   "prompts": 0,
+   "first": "2026-10-11T14:00:22.037Z",
+   "last": "2026-10-11T14:00:22.037Z",
+   "strength": "weak",
+   "conversationId": "claude:1b717209-2f46-4bf9-bb75-32feced5db13",
+   "provider": "claude",
+   "sessionId": "1b717209-2f46-4bf9-bb75-32feced5db13",
+   "title": "Méthode optimale height map IA",
+   "updatedAt": "2026-10-11T14:00:22.481Z",
+   "bytes": 20453,
    "boundProject": null
   },
   {
