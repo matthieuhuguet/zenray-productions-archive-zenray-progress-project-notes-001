@@ -322,3 +322,101 @@
 - Project: zenray-progress; kind: log. (10 October 2026, 23:32:10 +0200)
 
 > Script prêt et poussé sur origin/main (9d4b700f) : scripts/Design/AddDesignLinks.mjs. Il prévisualise chaque lien, envoie l'image, sauvegarde la galerie avec reprise en cas de conflit. Il lit le code seulement dans ZENRAY_DRIVE_CODE, saisi par Matthieu dans son terminal, et ne l'affiche jamais. Tests : 4 passés contre un faux drive. Aperçu des quatre URL en production sans code : titre et image trouvés. Les quatre liens restent à ajouter par la commande donnée à Matthieu. (10 October 2026, 23:32:10 +0200)
+
+## 12 October 2026, 00:24:00 +0200 : Prompt
+
+<!-- feedback-event:5364d02d6ba1970838e86401b242924ec563f0dbb36915e51afdd020e8f157c3 (12 October 2026, 00:24:00 +0200) -->
+- Project: zenray-progress; kind: prompt. (12 October 2026, 00:24:00 +0200)
+
+> Beaucoup de fichiers n'ont pas eu leur thumbnail, donc c'est un problème critique à corriger et à fixer notamment pour les futurs films /videos. Et toutes les modifications que je t'ai fait faire jusqu'à maintenant, il faut que tu notes absolument. Déjà dans le code de ZenReProgress, une consigne à faire pour pas que ça se reproduise dans le futur. Il faut aussi que tu notes dans ZenReAssets tout ce que je te dis. tout les feedbacks etc. (12 October 2026, 00:24:00 +0200)
+
+## 12 October 2026, 00:24:00 +0200 : Prompt
+
+<!-- feedback-event:c5c52a5f70293f9f7c28701632c9d9e2d48ea9bc594f1bd5765a656223314a4f (12 October 2026, 00:24:00 +0200) -->
+- Project: zenray-progress; kind: prompt. (12 October 2026, 00:24:00 +0200)
+
+> Chaque fichier qui est renommé avant d'être uploadé sur le cloud devrait être renommé en local pour que ce soit la même chose sur le cloud et donc devrait avoir un clean name. Si par exemple le fichier est écrit dans un format qui n'est pas propre, il faut le réécrire jusqu'à un format propre. Under.the.Open.Sky.2020.FR.mkv devient Under The Open Sky ou encore Akane-banashi S01E12 VOSTFR 1080p WEB x264 AAC -Tsundere-Raws (ADN).mkv devient Akane Banashi S01E12 et ainsi de suite a consigner dans zenray assets et /zenrayprogress-context le coder directement pour chaque futurs upload avoir une phase préalable de rename avec ma validation et index mapping post upload pour que ce soit déjà rangé et propre et aussi proposer de mettre dans des subfolders directement. (12 October 2026, 00:24:00 +0200)
+
+## 12 October 2026, 00:24:00 +0200 : Prompt
+
+<!-- feedback-event:c4d7ecabcb47caaff4ab58a9c0316eefa742138223b6d08f308a91441c9eb87c (12 October 2026, 00:24:00 +0200) -->
+- Project: zenray-progress; kind: prompt. (12 October 2026, 00:24:00 +0200)
+
+> faut renamme proprement tout les fichiers existant avec le code que tu va créer et ATTENTION DRAMATIQUE tout mushishi à pas les sous titres essaie de voir si je l'ai encore en local ou à défaut essaie de trouver des sous titres (francais manquant) pour les append dans les fichiers du drive ... ce serait dramatique de tout devoir reupload etc... /prompt-stacking clean rename plus append les sous titres fr ... aussi renamme proprement la metadata audio_1 n'indique rien à noter le feedback /zenray-assets de zenray-progress (12 October 2026, 00:24:00 +0200)
+
+## 12 October 2026, 00:24:00 +0200 : Prompt
+
+<!-- feedback-event:b9c1ec5711e46843f59702eca4b35b4ea384912d140ecabc182eee8fbbeb0f11 (12 October 2026, 00:24:00 +0200) -->
+- Project: zenray-progress; kind: prompt. (12 October 2026, 00:24:00 +0200)
+
+> Est-ce que tu peux me donner un film / VIDEOS qui a deux pistes audio, comme ça je peux vérifier que ça fonctionne bien.? (12 October 2026, 00:24:00 +0200)
+
+## 12 October 2026, 00:24:00 +0200 : Prompt
+
+<!-- feedback-event:64b7be2630b47a62e3edce6201499d73f757df3f613a5a162d75548bea15f94a (12 October 2026, 00:24:00 +0200) -->
+- Project: zenray-progress; kind: prompt. (12 October 2026, 00:24:00 +0200)
+
+> (capture du lecteur, film Le Rakugo ou la vie S01E05, menu sans option de piste audio) JE VOIS PAS L'OPTION POUR CHANGER LA PISTE SONORE ... GROS PROBLÈME HARD FIX IT (12 October 2026, 00:24:00 +0200)
+
+## 12 October 2026, 00:24:00 +0200 : Prompt
+
+<!-- feedback-event:41d1c116c554c54af118581ce35a58d50865705ca82aa2f94a7766be6221c4f9 (12 October 2026, 00:24:00 +0200) -->
+- Project: zenray-progress; kind: prompt. (12 October 2026, 00:24:00 +0200)
+
+> en fait simplement les films / vidéos restantes doivent simplement avoir toutes leurs pistes audio et toute leur pistes sous titres si la deuxième ou n(ième) piste audio existe pas code le et ensuite redeploie et continue de monitorer l'upload (12 October 2026, 00:24:00 +0200)
+
+## 12 October 2026, 00:24:00 +0200 : Prompt
+
+<!-- feedback-event:d0642a096a393b7b01943efebf8099b65880acfa138b70f0f226e538bb76a454 (12 October 2026, 00:24:00 +0200) -->
+- Project: zenray-progress; kind: prompt. (12 October 2026, 00:24:00 +0200)
+
+> (résumé de la session du 11 October 2026, reconstitué depuis le résumé de compaction, pas le texte original) Reprendre et monitorer l'upload des films HLS/DASH en boucle de 15 s jusqu'à 100 % ; barre de progression toujours visible dans Assets ; vue simple avec le toggle « Nouveaux médias · 24 h » ouvrant le média exact par un lien-pointeur ; fusionner zenray-upload et zenray-assets-upload dans zenray-assets puis les supprimer ; noter le WORKFLOW des sous-titres (pas la preuve) dans les skills ; supprimer tous les épisodes de Natsume's Book of Friends (local et cloud) ; faire marcher la capture ⌘5 OCR ; tous les films restants doivent avoir tous leurs sous-titres. (12 October 2026, 00:24:00 +0200)
+
+## 12 October 2026, 00:24:00 +0200 : Standing rule
+
+<!-- feedback-event:daebdd527386906cbd6e6360c493095f5031083dd6739045011acd4ba26e8c5e (12 October 2026, 00:24:00 +0200) -->
+- Project: zenray-progress; kind: rule. (12 October 2026, 00:24:00 +0200)
+
+> Poster d'un film : toujours une URL jsDelivr publique pinnée sur un commit, jamais /api/raw-proxy ni raw.githubusercontent.com (la production n'a pas ZENRAY_RAW_TOKEN). Vérificateur : scripts/CheckFilmPosters.mjs, vert avant d'annoncer un lot. Consigné dans CLAUDE.md et docs/INDEX-ERREURS-FEATURES.md de ZenRayProgress, et dans les skills zenray-assets et zenrayprogress-context (12 October 2026). (12 October 2026, 00:24:00 +0200)
+
+## 12 October 2026, 00:24:00 +0200 : Standing rule
+
+<!-- feedback-event:85924a82da621eba08b08506e3af62b6ece415e151f02e87752ee19f233d149a (12 October 2026, 00:24:00 +0200) -->
+- Project: zenray-progress; kind: rule. (12 October 2026, 00:24:00 +0200)
+
+> Phase de renommage propre avant tout upload : le nom local est le nom cloud, propre, validé par Matthieu, sous-dossiers proposés (Titre/Saison NN). Outils : scripts/MediaRename.mjs plan/apply/undo/check, porte ZR_REQUIRE_CLEAN_NAMES=1 dans le worker (12 October 2026). (12 October 2026, 00:24:00 +0200)
+
+## 12 October 2026, 00:24:00 +0200 : Standing rule
+
+<!-- feedback-event:06506cfad4775abdc1e47b74ffb6f3e47f410ce759d694411c04f14f1d6ad9d4 (12 October 2026, 00:24:00 +0200) -->
+- Project: zenray-progress; kind: rule. (12 October 2026, 00:24:00 +0200)
+
+> Une piste audio se nomme par sa langue (日本語, Français), jamais « audio_1 » ni le titre technique de la source ; deux pistes de même langue se distinguent par leur titre ou un numéro. Le menu Audio du lecteur est toujours visible, même avec une seule piste (12 October 2026). (12 October 2026, 00:24:00 +0200)
+
+## 12 October 2026, 00:24:01 +0200 : Standing rule
+
+<!-- feedback-event:5eea3d8e24790c3da2c19e431065907195084e661fbc8a31a7b3ad9f777c4711 (12 October 2026, 00:24:01 +0200) -->
+- Project: zenray-progress; kind: rule. (12 October 2026, 00:24:01 +0200)
+
+> Les sous-titres d'un film déjà déchargé se récupèrent par restauration depuis le reçu cloud vérifié (Git, sans quota REST), extraction des pistes texte, ajout au manifeste, puis suppression de la copie : jamais de ré-upload du film. Outil : scripts/AppendSubtitlesFromCloud.mjs, reçus rafraîchis par RefreshRecoveryReceipts.mjs (empreinte de récupération indépendante du poster, des noms audio et des sous-titres) (12 October 2026). (12 October 2026, 00:24:01 +0200)
+
+## 12 October 2026, 00:24:01 +0200 : Log
+
+<!-- feedback-event:e1eca949d9c7c02288042122724ac7ac39745aa7cf9971fa64b89768efcc5587 (12 October 2026, 00:24:01 +0200) -->
+- Project: zenray-progress; kind: log. (12 October 2026, 00:24:01 +0200)
+
+> Mesuré le 12 October 2026 : 195 manifestes de films, 192 posters passaient par /api/raw-proxy (503 en production), réparés par Git dans le dépôt public zenray-poster-public-01, vérificateur vert (195/195), client déployé avec des clés de cache versionnées (index-D3oCVnVh.js). (12 October 2026, 00:24:01 +0200)
+
+## 12 October 2026, 00:24:01 +0200 : Log
+
+<!-- feedback-event:9426771e3f01d4b2a524e9ad0ccdda1af10f17ccd20d63412ab5fccf12e5c742 (12 October 2026, 00:24:01 +0200) -->
+- Project: zenray-progress; kind: log. (12 October 2026, 00:24:01 +0200)
+
+> Mesuré le 12 October 2026 : 166 films existants renommés côté pistes audio (NAME et LANGUAGE des playlists HLS, manifest.audio) à partir des sondes sources de Inventory.json ; le premier film publié avec deux pistes audio est Witch Hat Atelier S01E11 (français, japonais, 3 pistes de sous-titres). (12 October 2026, 00:24:01 +0200)
+
+## 12 October 2026, 00:24:01 +0200 : Log
+
+<!-- feedback-event:4e31e9a06419ee14fef62e9c8f264e644e62581192a4aeeea7cc1c5b122a21ef (12 October 2026, 00:24:01 +0200) -->
+- Project: zenray-progress; kind: log. (12 October 2026, 00:24:01 +0200)
+
+> Mesuré le 12 October 2026 : les 49 sources Mushishi contenaient deux pistes de sous-titres français ASS (Pour la VO, Pour la VF), seule la source du film est encore sur disque ; les 38 épisodes déjà déchargés sont restaurés depuis le cloud (1,1 Go chacun, environ 8 minutes) pour en extraire les sous-titres, sans ré-upload. (12 October 2026, 00:24:01 +0200)
