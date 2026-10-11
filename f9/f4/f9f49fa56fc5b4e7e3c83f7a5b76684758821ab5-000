@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-10-11T11:33:16.326Z",
+ "scannedAt": "2026-10-11T11:40:22.096Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -671,8 +671,8 @@
    "provider": "claude",
    "sessionId": "6ab0a8c4-7fa2-46a1-b1f4-282a74f8f6f2",
    "title": "Installation Blender macOS",
-   "updatedAt": "2026-10-11T11:32:36.749Z",
-   "bytes": 20518,
+   "updatedAt": "2026-10-11T11:39:10.426Z",
+   "bytes": 20782,
    "boundProject": "conversation-claude-3918c05f2e72431e7521d763"
   },
   {
