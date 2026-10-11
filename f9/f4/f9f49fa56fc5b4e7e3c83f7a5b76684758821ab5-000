@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-10-11T08:46:55.212Z",
+ "scannedAt": "2026-10-11T08:53:56.408Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -95,8 +95,8 @@
    "provider": "claude",
    "sessionId": "2562b086-836d-49c5-80c7-0c935a98513c",
    "title": "Vegetations Creating Materials October 2026",
-   "updatedAt": "2026-10-11T08:46:25.351Z",
-   "bytes": 1421675138,
+   "updatedAt": "2026-10-11T08:50:01.185Z",
+   "bytes": 23849,
    "boundProject": "vegetation-assets-collection-01"
   },
   {
@@ -287,8 +287,8 @@
    "provider": "claude",
    "sessionId": "3e51dc3d-4e58-441b-abf8-9f6013ebbf24",
    "title": "Monitoring film upload deployment",
-   "updatedAt": "2026-10-11T08:43:08.717Z",
-   "bytes": 20980,
+   "updatedAt": "2026-10-11T08:52:40.863Z",
+   "bytes": 20969,
    "boundProject": null
   },
   {
@@ -671,9 +671,9 @@
    "provider": "claude",
    "sessionId": "6ab0a8c4-7fa2-46a1-b1f4-282a74f8f6f2",
    "title": "Installation Blender macOS",
-   "updatedAt": "2026-10-11T08:45:00.538Z",
-   "bytes": 1278600,
-   "boundProject": null
+   "updatedAt": "2026-10-11T08:51:19.662Z",
+   "bytes": 20889,
+   "boundProject": "conversation-claude-3918c05f2e72431e7521d763"
   },
   {
    "projectId": "zenray-progress",
