@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-10-11T14:11:24.618Z",
+ "scannedAt": "2026-10-11T14:18:28.544Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -286,9 +286,9 @@
    "conversationId": "claude:3e51dc3d-4e58-441b-abf8-9f6013ebbf24",
    "provider": "claude",
    "sessionId": "3e51dc3d-4e58-441b-abf8-9f6013ebbf24",
-   "title": "Monitoring film upload deployment",
-   "updatedAt": "2026-10-11T14:11:10.550Z",
-   "bytes": 21094,
+   "title": "DRIVE",
+   "updatedAt": "2026-10-11T14:18:26.276Z",
+   "bytes": 5631868,
    "boundProject": null
   },
   {
@@ -680,6 +680,22 @@
    "lines": 1,
    "work": 0,
    "prompts": 0,
+   "first": "2026-10-11T14:11:25.131Z",
+   "last": "2026-10-11T14:11:25.131Z",
+   "strength": "weak",
+   "conversationId": "claude:8152bc29-16c2-4858-828d-937ab6240571",
+   "provider": "claude",
+   "sessionId": "8152bc29-16c2-4858-828d-937ab6240571",
+   "title": "LOUISIANA BAYOU",
+   "updatedAt": "2026-10-11T14:18:28.432Z",
+   "bytes": 20554,
+   "boundProject": "louisiana-bayou"
+  },
+  {
+   "projectId": "zenray-progress",
+   "lines": 1,
+   "work": 0,
+   "prompts": 0,
    "first": "2026-10-11T14:09:59.235Z",
    "last": "2026-10-11T14:09:59.235Z",
    "strength": "weak",
@@ -687,9 +703,9 @@
    "provider": "claude",
    "sessionId": "3a9c2407-7dcc-4acd-baf2-90a94300e953",
    "title": "ZENRAY HEIGHT",
-   "updatedAt": "2026-10-11T14:11:22.961Z",
-   "bytes": 1173543,
-   "boundProject": null
+   "updatedAt": "2026-10-11T14:18:22.734Z",
+   "bytes": 3794884,
+   "boundProject": "zenray-height"
   },
   {
    "projectId": "zenray-progress",
