@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-10-11T21:47:58.205Z",
+ "scannedAt": "2026-10-11T21:57:04.985Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -49,6 +49,22 @@
    "title": "Zenray design view link bug",
    "updatedAt": "2026-10-10T21:32:46.778Z",
    "bytes": 20927,
+   "boundProject": null
+  },
+  {
+   "projectId": "zenray-progress",
+   "lines": 37,
+   "work": 7,
+   "prompts": 1,
+   "first": "2026-10-10T20:53:28.651Z",
+   "last": "2026-10-11T21:57:01.644Z",
+   "strength": "strong",
+   "conversationId": "claude:3e51dc3d-4e58-441b-abf8-9f6013ebbf24",
+   "provider": "claude",
+   "sessionId": "3e51dc3d-4e58-441b-abf8-9f6013ebbf24",
+   "title": "DRIVE",
+   "updatedAt": "2026-10-11T21:57:01.644Z",
+   "bytes": 10961720,
    "boundProject": null
   },
   {
@@ -130,22 +146,6 @@
    "updatedAt": "2026-10-06T02:03:41.129Z",
    "bytes": 118310043,
    "boundProject": "zenray-assets-v2"
-  },
-  {
-   "projectId": "zenray-progress",
-   "lines": 24,
-   "work": 3,
-   "prompts": 0,
-   "first": "2026-10-10T20:53:28.651Z",
-   "last": "2026-10-11T21:37:25.570Z",
-   "strength": "strong",
-   "conversationId": "claude:3e51dc3d-4e58-441b-abf8-9f6013ebbf24",
-   "provider": "claude",
-   "sessionId": "3e51dc3d-4e58-441b-abf8-9f6013ebbf24",
-   "title": "DRIVE",
-   "updatedAt": "2026-10-11T21:47:06.424Z",
-   "bytes": 20990,
-   "boundProject": null
   },
   {
    "projectId": "zenray-progress",
@@ -325,18 +325,18 @@
   },
   {
    "projectId": "zenray-progress",
-   "lines": 13,
+   "lines": 15,
    "work": 0,
    "prompts": 0,
    "first": "2026-10-11T14:09:59.235Z",
-   "last": "2026-10-11T20:55:51.911Z",
+   "last": "2026-10-11T21:52:03.711Z",
    "strength": "weak",
    "conversationId": "claude:3a9c2407-7dcc-4acd-baf2-90a94300e953",
    "provider": "claude",
    "sessionId": "3a9c2407-7dcc-4acd-baf2-90a94300e953",
    "title": "ZENRAY HEIGHT",
-   "updatedAt": "2026-10-11T21:47:05.219Z",
-   "bytes": 24653111,
+   "updatedAt": "2026-10-11T21:56:29.005Z",
+   "bytes": 20619,
    "boundProject": "zenray-height"
   },
   {
@@ -400,7 +400,7 @@
    "sessionId": "d14e8f35-cea0-477b-9340-cae9bcefa792",
    "title": "Mail transfert dossier auto-école",
    "updatedAt": "2026-10-02T14:38:28.892Z",
-   "bytes": 22368,
+   "bytes": 23040,
    "boundProject": null
   },
   {
