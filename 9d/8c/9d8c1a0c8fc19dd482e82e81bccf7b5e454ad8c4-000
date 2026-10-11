@@ -420,3 +420,10 @@
 - Project: zenray-progress; kind: log. (12 October 2026, 00:24:01 +0200)
 
 > Mesuré le 12 October 2026 : les 49 sources Mushishi contenaient deux pistes de sous-titres français ASS (Pour la VO, Pour la VF), seule la source du film est encore sur disque ; les 38 épisodes déjà déchargés sont restaurés depuis le cloud (1,1 Go chacun, environ 8 minutes) pour en extraire les sous-titres, sans ré-upload. (12 October 2026, 00:24:01 +0200)
+
+## 12 October 2026, 00:42:35 +0200 : Log
+
+<!-- feedback-event:976b099a655b20c1c9eb4614675b973c6d4dbf12bd9a06dfda35635efc9836fa (12 October 2026, 00:42:35 +0200) -->
+- Project: zenray-progress; kind: log. (12 October 2026, 00:42:35 +0200)
+
+> Incident du 12 October 2026 (00:37 à 00:41) : le renommage du cloud a laissé un rebase suspendu dans le clone des manifestes du worker ; le film Witch Hat Atelier S01E10 a été abandonné après 4 tentatives et Polar Opposites S01E04 était en échec. Réparé : rebase terminé, clone synchronisé (0 0 avec origin/main), doublon obsolète de S01E09 remplacé par la version CMAF, worker redémarré (reprend S01E10), garde ajoutée pour finir ou abandonner un rebase suspendu, règle « un seul écrivain Git » consignée. (12 October 2026, 00:42:35 +0200)
