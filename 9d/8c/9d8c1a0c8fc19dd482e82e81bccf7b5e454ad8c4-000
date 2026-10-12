@@ -448,3 +448,17 @@
 - Project: zenray-progress; kind: log. (12 October 2026, 02:50:26 +0200)
 
 > Mesuré le 12 October 2026 : le premier pipeline à deux étages était plus lent que le séquentiel (1 219 s par film contre 517 s) à cause d'une barrière sur une relecture limitée par flux ; remplacé par des voies parallèles (archive || empaquetage || trois relectures), un verrou unique sur le clone des manifestes, un compteur écrit au commit, un reçu réutilisé ; montée mesurée 11 Mo/s (la ligne) contre 5 Mo/s. Un blocage GitHub 403 (secondary rate limit) à 01:46 a fait abandonner 3 films : le worker attend désormais. Rapports : SpeedResearch/agents. (12 October 2026, 02:50:26 +0200)
+
+## 12 October 2026, 09:38:48 +0200 : Log
+
+<!-- feedback-event:f019338e233c412290c225b91eed1d50d46cbd93f3bf373e71a21921aa21ef37 (12 October 2026, 09:38:48 +0200) -->
+- Project: zenray-progress; kind: log. (12 October 2026, 09:38:48 +0200)
+
+> 12 October 2026, 09:40 : la file des films s'etait arretee a 211/230 (7 films 4K restaient sur disque). Cause : le worker destinait S03E07 de House of the Dragon au dossier 'House of the Dragon' alors que le clone suit 'House Of The Dragon' ; APFS ignore la casse, git non, donc git commit -- chemin echouait et le nettoyage supprimait le manifeste suivi, ce qui a rendu le clone sale et fait echouer 5 films en secondes. Corrige (canonical-rel.mjs, canonical_dest, restore_tracked_changes), pousse (530b672a), worker relance a 09:37. Preuves : 3 tests Node et 2 tests Python verts, manifeste restaure, 3 commits en avance du clone pousses. (12 October 2026, 09:38:48 +0200)
+
+## 12 October 2026, 09:38:48 +0200 : Log
+
+<!-- feedback-event:f333bbc56c9d9816156c96663b87cd0db87bcdde175f9916f7ce5aa6082a4790 (12 October 2026, 09:38:48 +0200) -->
+- Project: zenray-progress; kind: log. (12 October 2026, 09:38:48 +0200)
+
+> 12 October 2026, 09:40 : Mushishi, sous-titres francais restaures depuis le cloud pour les 38 episodes (0 echec) ; releve sur origin/main : 46 manifestes Mushishi sur 46 portent une piste francaise. Index de recherche differe (ZR_DEFER_INDEX_ADD, commit b7a60c6b) actif depuis le redemarrage de 09:37 : un seul lot tous les 8 films. (12 October 2026, 09:38:48 +0200)
