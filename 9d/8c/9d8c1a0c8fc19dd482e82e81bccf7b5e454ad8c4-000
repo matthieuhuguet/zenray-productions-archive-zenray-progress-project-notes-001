@@ -462,3 +462,10 @@
 - Project: zenray-progress; kind: log. (12 October 2026, 09:38:48 +0200)
 
 > 12 October 2026, 09:40 : Mushishi, sous-titres francais restaures depuis le cloud pour les 38 episodes (0 echec) ; releve sur origin/main : 46 manifestes Mushishi sur 46 portent une piste francaise. Index de recherche differe (ZR_DEFER_INDEX_ADD, commit b7a60c6b) actif depuis le redemarrage de 09:37 : un seul lot tous les 8 films. (12 October 2026, 09:38:48 +0200)
+
+## 12 October 2026, 11:25:46 +0200 : Log
+
+<!-- feedback-event:8bab6fa52b69aeef9e78b2702391d8807fdd3e685399a29bc4f6916d46ec020f (12 October 2026, 11:25:46 +0200) -->
+- Project: zenray-progress; kind: log. (12 October 2026, 11:25:46 +0200)
+
+> 12 October 2026, 11:50 : sous-titres : un seul rendu pour tous les formats (ASS ne passe plus par libass), taille en pourcentage 100/75/50 plus grille de 5 %, police serif ou sans, fond arrondi desactivable ; 20 pistes francaises ajoutees depuis des fichiers adjacents (Twilight Samurai, Under The Open Sky, Smoking Behind) ; verificateur CheckSubtitles.mjs : 191 films, 375 pistes, 0 probleme, 92 films sans francais (3 Gatsu, Rakugo, Bleach, Akane, Initial D, Witch Hat, Yomi : texte dans l'archive, restauration a decider). Deploye (VideoPlayer2-DiiorsWE.js). (12 October 2026, 11:25:46 +0200)
