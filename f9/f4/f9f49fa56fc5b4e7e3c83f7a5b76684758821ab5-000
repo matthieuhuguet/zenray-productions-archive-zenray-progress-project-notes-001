@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-10-12T12:28:41.820Z",
+ "scannedAt": "2026-10-12T13:36:28.189Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -31,8 +31,8 @@
    "provider": "claude",
    "sessionId": "3e51dc3d-4e58-441b-abf8-9f6013ebbf24",
    "title": "DRIVE evolution",
-   "updatedAt": "2026-10-12T11:34:14.611Z",
-   "bytes": 20919,
+   "updatedAt": "2026-10-12T13:33:17.430Z",
+   "bytes": 20974,
    "boundProject": null
   },
   {
@@ -178,6 +178,38 @@
    "updatedAt": "2026-10-07T10:15:35.851Z",
    "bytes": 22009465,
    "boundProject": "zenray-dictate"
+  },
+  {
+   "projectId": "zenray-progress",
+   "lines": 7,
+   "work": 2,
+   "prompts": 1,
+   "first": "2026-10-12T12:35:23.765Z",
+   "last": "2026-10-12T12:38:45.107Z",
+   "strength": "strong",
+   "conversationId": "codex:01a1301b-f199-7773-863c-b2a78d50b909",
+   "provider": "codex",
+   "sessionId": "01a1301b-f199-7773-863c-b2a78d50b909",
+   "title": "Conversation codex 01a1301b",
+   "updatedAt": "2026-10-12T12:45:49.691Z",
+   "bytes": 4029898,
+   "boundProject": "zenray-japanese"
+  },
+  {
+   "projectId": "zenray-progress",
+   "lines": 6,
+   "work": 2,
+   "prompts": 1,
+   "first": "2026-10-12T12:38:09.438Z",
+   "last": "2026-10-12T12:45:32.884Z",
+   "strength": "strong",
+   "conversationId": "codex:01a1301e-d4f0-7783-9557-9cccca9d86d5",
+   "provider": "codex",
+   "sessionId": "01a1301e-d4f0-7783-9557-9cccca9d86d5",
+   "title": "Conversation codex 01a1301e",
+   "updatedAt": "2026-10-12T12:45:48.805Z",
+   "bytes": 1335730,
+   "boundProject": null
   },
   {
    "projectId": "zenray-progress",
@@ -465,6 +497,38 @@
    "title": "Mail transfert dossier auto-école",
    "updatedAt": "2026-10-02T14:38:28.892Z",
    "bytes": 23040,
+   "boundProject": null
+  },
+  {
+   "projectId": "zenray-progress",
+   "lines": 2,
+   "work": 0,
+   "prompts": 1,
+   "first": "2026-10-12T12:37:58.027Z",
+   "last": "2026-10-12T12:37:58.027Z",
+   "strength": "weak",
+   "conversationId": "codex:01a1301e-a85b-7c61-b215-cd06adcfcbf4",
+   "provider": "codex",
+   "sessionId": "01a1301e-a85b-7c61-b215-cd06adcfcbf4",
+   "title": "Conversation codex 01a1301e",
+   "updatedAt": "2026-10-12T12:45:53.956Z",
+   "bytes": 1513788,
+   "boundProject": null
+  },
+  {
+   "projectId": "zenray-progress",
+   "lines": 2,
+   "work": 0,
+   "prompts": 1,
+   "first": "2026-10-12T12:38:20.531Z",
+   "last": "2026-10-12T12:38:20.531Z",
+   "strength": "weak",
+   "conversationId": "codex:01a1301f-004c-7f90-8a16-a1fd6d965a93",
+   "provider": "codex",
+   "sessionId": "01a1301f-004c-7f90-8a16-a1fd6d965a93",
+   "title": "Conversation codex 01a1301f",
+   "updatedAt": "2026-10-12T12:45:45.003Z",
+   "bytes": 1121201,
    "boundProject": null
   },
   {
