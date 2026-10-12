@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-10-12T12:21:18.214Z",
+ "scannedAt": "2026-10-12T12:24:36.475Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -417,7 +417,7 @@
    "title": "ZenRay Assets UI rework",
    "updatedAt": "2026-10-12T12:11:20.483Z",
    "bytes": 20996,
-   "boundProject": null
+   "boundProject": "zenray-assets-tube-view"
   },
   {
    "projectId": "zenray-progress",
