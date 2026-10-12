@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-10-12T00:17:33.948Z",
+ "scannedAt": "2026-10-12T00:30:47.696Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -21,6 +21,22 @@
   },
   {
    "projectId": "zenray-progress",
+   "lines": 128,
+   "work": 20,
+   "prompts": 1,
+   "first": "2026-10-10T20:53:28.651Z",
+   "last": "2026-10-12T00:29:58.567Z",
+   "strength": "strong",
+   "conversationId": "claude:3e51dc3d-4e58-441b-abf8-9f6013ebbf24",
+   "provider": "claude",
+   "sessionId": "3e51dc3d-4e58-441b-abf8-9f6013ebbf24",
+   "title": "DRIVE",
+   "updatedAt": "2026-10-12T00:29:58.567Z",
+   "bytes": 15092704,
+   "boundProject": null
+  },
+  {
+   "projectId": "zenray-progress",
    "lines": 31,
    "work": 16,
    "prompts": 1,
@@ -33,22 +49,6 @@
    "title": "Conversation codex 01a126e0",
    "updatedAt": "2026-10-10T17:41:19.785Z",
    "bytes": 2579131,
-   "boundProject": null
-  },
-  {
-   "projectId": "zenray-progress",
-   "lines": 112,
-   "work": 14,
-   "prompts": 1,
-   "first": "2026-10-10T20:53:28.651Z",
-   "last": "2026-10-11T23:19:22.092Z",
-   "strength": "strong",
-   "conversationId": "claude:3e51dc3d-4e58-441b-abf8-9f6013ebbf24",
-   "provider": "claude",
-   "sessionId": "3e51dc3d-4e58-441b-abf8-9f6013ebbf24",
-   "title": "DRIVE",
-   "updatedAt": "2026-10-12T00:07:26.762Z",
-   "bytes": 20923,
    "boundProject": null
   },
   {
@@ -351,8 +351,8 @@
    "provider": "claude",
    "sessionId": "3a9c2407-7dcc-4acd-baf2-90a94300e953",
    "title": "ZENRAY HEIGHT",
-   "updatedAt": "2026-10-12T00:17:13.617Z",
-   "bytes": 20923,
+   "updatedAt": "2026-10-12T00:28:10.319Z",
+   "bytes": 20929,
    "boundProject": "zenray-height"
   },
   {
