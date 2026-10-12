@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-10-12T13:36:28.189Z",
+ "scannedAt": "2026-10-12T19:52:23.038Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -21,18 +21,18 @@
   },
   {
    "projectId": "zenray-progress",
-   "lines": 208,
+   "lines": 213,
    "work": 28,
    "prompts": 2,
    "first": "2026-10-10T20:53:28.651Z",
-   "last": "2026-10-12T11:18:06.774Z",
+   "last": "2026-10-12T15:02:01.489Z",
    "strength": "strong",
    "conversationId": "claude:3e51dc3d-4e58-441b-abf8-9f6013ebbf24",
    "provider": "claude",
    "sessionId": "3e51dc3d-4e58-441b-abf8-9f6013ebbf24",
    "title": "DRIVE evolution",
-   "updatedAt": "2026-10-12T13:33:17.430Z",
-   "bytes": 20974,
+   "updatedAt": "2026-10-12T17:46:26.544Z",
+   "bytes": 21033,
    "boundProject": null
   },
   {
@@ -191,8 +191,8 @@
    "provider": "codex",
    "sessionId": "01a1301b-f199-7773-863c-b2a78d50b909",
    "title": "Conversation codex 01a1301b",
-   "updatedAt": "2026-10-12T12:45:49.691Z",
-   "bytes": 4029898,
+   "updatedAt": "2026-10-12T18:18:08.907Z",
+   "bytes": 7953266,
    "boundProject": "zenray-japanese"
   },
   {
@@ -207,8 +207,8 @@
    "provider": "codex",
    "sessionId": "01a1301e-d4f0-7783-9557-9cccca9d86d5",
    "title": "Conversation codex 01a1301e",
-   "updatedAt": "2026-10-12T12:45:48.805Z",
-   "bytes": 1335730,
+   "updatedAt": "2026-10-12T17:58:37.012Z",
+   "bytes": 3130286,
    "boundProject": null
   },
   {
@@ -357,6 +357,22 @@
   },
   {
    "projectId": "zenray-progress",
+   "lines": 4,
+   "work": 0,
+   "prompts": 2,
+   "first": "2026-10-12T12:37:58.027Z",
+   "last": "2026-10-12T18:17:45.545Z",
+   "strength": "strong",
+   "conversationId": "codex:01a1301e-a85b-7c61-b215-cd06adcfcbf4",
+   "provider": "codex",
+   "sessionId": "01a1301e-a85b-7c61-b215-cd06adcfcbf4",
+   "title": "Conversation codex 01a1301e",
+   "updatedAt": "2026-10-12T18:17:47.144Z",
+   "bytes": 4312593,
+   "boundProject": null
+  },
+  {
+   "projectId": "zenray-progress",
    "lines": 2,
    "work": 1,
    "prompts": 0,
@@ -405,6 +421,22 @@
   },
   {
    "projectId": "zenray-progress",
+   "lines": 8,
+   "work": 0,
+   "prompts": 0,
+   "first": "2026-10-12T09:52:06.211Z",
+   "last": "2026-10-12T14:58:16.905Z",
+   "strength": "weak",
+   "conversationId": "claude:d71651de-2d57-45d0-b20d-830dd146d2ac",
+   "provider": "claude",
+   "sessionId": "d71651de-2d57-45d0-b20d-830dd146d2ac",
+   "title": "ZenRay Assets UI rework",
+   "updatedAt": "2026-10-12T15:02:52.284Z",
+   "bytes": 20888,
+   "boundProject": "zenray-assets-tube-view"
+  },
+  {
+   "projectId": "zenray-progress",
    "lines": 6,
    "work": 0,
    "prompts": 0,
@@ -415,7 +447,7 @@
    "provider": "claude",
    "sessionId": "7e78b89b-c9f6-435b-aeea-a9878d6c808b",
    "title": "Motion Design GLSL",
-   "updatedAt": "2026-10-12T12:16:40.144Z",
+   "updatedAt": "2026-10-12T18:30:01.657Z",
    "bytes": 20761,
    "boundProject": "zenray-motion-design"
   },
@@ -434,22 +466,6 @@
    "updatedAt": "2026-10-07T09:05:28.740Z",
    "bytes": 23172,
    "boundProject": "zenray-freelance"
-  },
-  {
-   "projectId": "zenray-progress",
-   "lines": 4,
-   "work": 0,
-   "prompts": 0,
-   "first": "2026-10-12T09:52:06.211Z",
-   "last": "2026-10-12T11:42:46.818Z",
-   "strength": "weak",
-   "conversationId": "claude:d71651de-2d57-45d0-b20d-830dd146d2ac",
-   "provider": "claude",
-   "sessionId": "d71651de-2d57-45d0-b20d-830dd146d2ac",
-   "title": "ZenRay Assets UI rework",
-   "updatedAt": "2026-10-12T12:11:20.483Z",
-   "bytes": 20996,
-   "boundProject": "zenray-assets-tube-view"
   },
   {
    "projectId": "zenray-progress",
@@ -504,22 +520,6 @@
    "lines": 2,
    "work": 0,
    "prompts": 1,
-   "first": "2026-10-12T12:37:58.027Z",
-   "last": "2026-10-12T12:37:58.027Z",
-   "strength": "weak",
-   "conversationId": "codex:01a1301e-a85b-7c61-b215-cd06adcfcbf4",
-   "provider": "codex",
-   "sessionId": "01a1301e-a85b-7c61-b215-cd06adcfcbf4",
-   "title": "Conversation codex 01a1301e",
-   "updatedAt": "2026-10-12T12:45:53.956Z",
-   "bytes": 1513788,
-   "boundProject": null
-  },
-  {
-   "projectId": "zenray-progress",
-   "lines": 2,
-   "work": 0,
-   "prompts": 1,
    "first": "2026-10-12T12:38:20.531Z",
    "last": "2026-10-12T12:38:20.531Z",
    "strength": "weak",
@@ -527,8 +527,8 @@
    "provider": "codex",
    "sessionId": "01a1301f-004c-7f90-8a16-a1fd6d965a93",
    "title": "Conversation codex 01a1301f",
-   "updatedAt": "2026-10-12T12:45:45.003Z",
-   "bytes": 1121201,
+   "updatedAt": "2026-10-12T15:25:19.405Z",
+   "bytes": 1249987,
    "boundProject": null
   },
   {
@@ -1118,8 +1118,8 @@
    "conversationId": "gemini:3e22a918-b7a6-4b1f-99ea-e50907f40d44",
    "provider": "gemini",
    "sessionId": "3e22a918-b7a6-4b1f-99ea-e50907f40d44",
-   "title": "'/Users/zenray/Movies/2026-09-15 20-36-50.mkv' to mov et speed jusqu'à ce que ça fasse 30 secondes speed ajusté à la longueur initial. go da",
-   "updatedAt": "2026-09-15T20:05:24.351772+00:00",
+   "title": "Conversation Gemini 3e22a918",
+   "updatedAt": "2026-09-15T20:06:00.494Z",
    "bytes": 3629056,
    "boundProject": null
   }
