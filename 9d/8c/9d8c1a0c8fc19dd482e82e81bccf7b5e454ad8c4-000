@@ -427,3 +427,17 @@
 - Project: zenray-progress; kind: log. (12 October 2026, 00:42:35 +0200)
 
 > Incident du 12 October 2026 (00:37 à 00:41) : le renommage du cloud a laissé un rebase suspendu dans le clone des manifestes du worker ; le film Witch Hat Atelier S01E10 a été abandonné après 4 tentatives et Polar Opposites S01E04 était en échec. Réparé : rebase terminé, clone synchronisé (0 0 avec origin/main), doublon obsolète de S01E09 remplacé par la version CMAF, worker redémarré (reprend S01E10), garde ajoutée pour finir ou abandonner un rebase suspendu, règle « un seul écrivain Git » consignée. (12 October 2026, 00:42:35 +0200)
+
+## 12 October 2026, 01:11:50 +0200 : Prompt
+
+<!-- feedback-event:69b449ef2373892247e46e7885a1833be65140aecaf49a7055fcdcd30fd6ae82 (12 October 2026, 01:11:50 +0200) -->
+- Project: zenray-progress; kind: prompt. (12 October 2026, 01:11:50 +0200)
+
+> Prompt du 12 October 2026 (capture d'un speedtest Google : 68,7 Mbps en descente, 67,7 Mbps en montée) : « tu as mis le worker et l'upload en pause ? ... est-ce que tu peux augmenter la cadence de l'upload par rapport à ma co max ? ». Réponse : le worker n'était pas en pause (193/230) ; l'envoi et la vérification ne se chevauchaient pas ; le worker passe en pipeline (vérification du film N pendant l'envoi du film N+1), voir la section du 12 October 2026 du skill zenray-assets. (12 October 2026, 01:11:50 +0200)
+
+## 12 October 2026, 01:19:22 +0200 : Prompt
+
+<!-- feedback-event:fc45c7958514e08eccb765462595a6e92ace68f95786823e2db2ceebd064500c (12 October 2026, 01:19:22 +0200) -->
+- Project: zenray-progress; kind: prompt. (12 October 2026, 01:19:22 +0200)
+
+> Est-ce que tu peux encore améliorer au maximum la vitesse d'upload pour que les films se upload le plus rapidement possible ? Je suis sûr qu'il y a moyen de rendre le code de Zenrai Assets et Zenrai Progress le plus rapide possible. ON VEUT AUGMENTER AU MAX LA VITESSE A LAQUELLE LES CHOSES S'UPLOAD UTILISE UN WORKFLOW OU QUELQUES AGENTS POUR FAIRE DES RECHERCHES ET POUSSER AU PAROXISME LA VITESSE D'UPLOAD DES FICHIERS EN PENSANT À TOUT /zenray-methodology /think-of-everything (12 October 2026, 01:19:22 +0200)
