@@ -441,3 +441,10 @@
 - Project: zenray-progress; kind: prompt. (12 October 2026, 01:19:22 +0200)
 
 > Est-ce que tu peux encore améliorer au maximum la vitesse d'upload pour que les films se upload le plus rapidement possible ? Je suis sûr qu'il y a moyen de rendre le code de Zenrai Assets et Zenrai Progress le plus rapide possible. ON VEUT AUGMENTER AU MAX LA VITESSE A LAQUELLE LES CHOSES S'UPLOAD UTILISE UN WORKFLOW OU QUELQUES AGENTS POUR FAIRE DES RECHERCHES ET POUSSER AU PAROXISME LA VITESSE D'UPLOAD DES FICHIERS EN PENSANT À TOUT /zenray-methodology /think-of-everything (12 October 2026, 01:19:22 +0200)
+
+## 12 October 2026, 02:50:26 +0200 : Log
+
+<!-- feedback-event:d2d592b2b4c499c3b72fd55b16990a5fe1cc284867ce2eb39fd5d0732f77423a (12 October 2026, 02:50:26 +0200) -->
+- Project: zenray-progress; kind: log. (12 October 2026, 02:50:26 +0200)
+
+> Mesuré le 12 October 2026 : le premier pipeline à deux étages était plus lent que le séquentiel (1 219 s par film contre 517 s) à cause d'une barrière sur une relecture limitée par flux ; remplacé par des voies parallèles (archive || empaquetage || trois relectures), un verrou unique sur le clone des manifestes, un compteur écrit au commit, un reçu réutilisé ; montée mesurée 11 Mo/s (la ligne) contre 5 Mo/s. Un blocage GitHub 403 (secondary rate limit) à 01:46 a fait abandonner 3 films : le worker attend désormais. Rapports : SpeedResearch/agents. (12 October 2026, 02:50:26 +0200)
