@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-10-12T08:32:35.515Z",
+ "scannedAt": "2026-10-12T08:50:00.196Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -21,18 +21,18 @@
   },
   {
    "projectId": "zenray-progress",
-   "lines": 174,
+   "lines": 179,
    "work": 26,
    "prompts": 2,
    "first": "2026-10-10T20:53:28.651Z",
-   "last": "2026-10-12T08:23:22.873Z",
+   "last": "2026-10-12T08:45:56.944Z",
    "strength": "strong",
    "conversationId": "claude:3e51dc3d-4e58-441b-abf8-9f6013ebbf24",
    "provider": "claude",
    "sessionId": "3e51dc3d-4e58-441b-abf8-9f6013ebbf24",
    "title": "DRIVE",
-   "updatedAt": "2026-10-12T08:31:08.551Z",
-   "bytes": 20935,
+   "updatedAt": "2026-10-12T08:46:35.161Z",
+   "bytes": 21054,
    "boundProject": null
   },
   {
@@ -399,9 +399,25 @@
    "provider": "claude",
    "sessionId": "7e78b89b-c9f6-435b-aeea-a9878d6c808b",
    "title": "Motion Design V2",
-   "updatedAt": "2026-10-12T08:32:28.543Z",
-   "bytes": 8233523,
+   "updatedAt": "2026-10-12T08:46:01.722Z",
+   "bytes": 20598,
    "boundProject": "zenray-motion-design"
+  },
+  {
+   "projectId": "zenray-progress",
+   "lines": 3,
+   "work": 0,
+   "prompts": 0,
+   "first": "2026-10-12T08:37:20.686Z",
+   "last": "2026-10-12T08:44:21.442Z",
+   "strength": "weak",
+   "conversationId": "claude:5eff1aab-c6ea-4a74-81cf-51380f6fc653",
+   "provider": "claude",
+   "sessionId": "5eff1aab-c6ea-4a74-81cf-51380f6fc653",
+   "title": "ZENRAY FREELANCE",
+   "updatedAt": "2026-10-12T08:46:48.619Z",
+   "bytes": 20606,
+   "boundProject": "zenray-freelance"
   },
   {
    "projectId": "zenray-progress",
