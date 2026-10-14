@@ -1621,3 +1621,36 @@
 > | Trois correctifs empilés, aucun vérifié | Enchaînement sans preuve intermédiaire | Une preuve par feuille, avant la suivante | (15 October 2026, 01:05:05 +0200)
 > | Interface déboguée sur des données fausses | Ordre du prompt suivi au lieu de l'ordre des dépendances | Les données d'abord, l'affichage ensuite | (15 October 2026, 01:05:05 +0200)
 > | Brique générique réécrite | Recherche par le NOM de la fonctionnalité | Chercher le geste technique (`a.download`, `zipSync`, `onPaste`) | (15 October 2026, 01:05:05 +0200)
+
+## 15 October 2026, 01:11:15 +0200 : Iteration
+
+<!-- feedback-event:f71fef891eb62cca76a93ef1526eba1b040d2239f4baa31e06d738579e2d304c (15 October 2026, 01:11:15 +0200) -->
+- Project: zenray-progress; kind: iteration. (15 October 2026, 01:11:15 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/5bd15db6-f2d9-4010-bcb3-0d609a42bc5e.jsonl. (15 October 2026, 01:11:15 +0200)
+
+> Continuation faite, tout est déployé (2 560 tests verts) : (15 October 2026, 01:11:15 +0200)
+>
+> | Cran | État | Preuve | (15 October 2026, 01:11:15 +0200)
+> |---|---|---| (15 October 2026, 01:11:15 +0200)
+> | Liens entre menus | Fait | Depuis Freelance, l'événement « ouvrir dans Create » bascule et ouvre `Photos/DJI` ; le projet Assets a un bouton « Ouvrir dans Create » | (15 October 2026, 01:11:15 +0200)
+> | Gallery | Fait | Lightbox : Échap, flèches, compteur « 1 / 53 » vérifié dans le navigateur | (15 October 2026, 01:11:15 +0200)
+> | Create (performance) | Vérifié, rien à corriger | Dossier de 20 846 éléments : premières tuiles en 250 ms, aucune tâche longue | (15 October 2026, 01:11:15 +0200)
+> | Rangement de Create | Plan à blanc prêt, **non exécuté** | `/Users/zenray/.claude/tmp/tmp-zenray-refine-14oct/data/Plan-TEMP.json` : 12 902 nœuds, 181 Go, déplacement d'un seul dossier, annulable | (15 October 2026, 01:11:15 +0200)
+> | Nettoyage des fichiers temporaires du service | Codé, testé, pas encore actif | Prend effet au prochain redémarrage, que je ferai quand Japanese aura fini | (15 October 2026, 01:11:15 +0200)
+> | Archive Japanese | En cours | 39 001 fichiers restants, ~20 fichiers/s | (15 October 2026, 01:11:15 +0200)
+> | Pic de latence du bridge | À confirmer | Un sondage a mesuré 20 s une fois, puis 75 ms ; un moniteur note tout pic de plus de 3 s avec la phase en cours | (15 October 2026, 01:11:15 +0200)
+>
+> Prochain geste, après Japanese : relancer le service, puis l'essai à blanc de l'index (la commande est dans mon message précédent). (15 October 2026, 01:11:15 +0200)
+
+## 15 October 2026, 01:14:19 +0200 : Prompt
+
+<!-- feedback-event:e1d828987eadb72b9b24a2735462513a46dc0c3cb2d1d6dac6de56c5faf24871 (15 October 2026, 01:14:19 +0200) -->
+- Project: zenray-progress; kind: prompt. (15 October 2026, 01:14:19 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/5bd15db6-f2d9-4010-bcb3-0d609a42bc5e.jsonl. (15 October 2026, 01:14:19 +0200)
+
+> <task-notification> (15 October 2026, 01:14:19 +0200)
+> <task-id>biaza8ubk</task-id> (15 October 2026, 01:14:19 +0200)
+> <summary>Monitor event: "Pics de latence du bridge Assets (&gt;3 s) et phase en cours"</summary> (15 October 2026, 01:14:19 +0200)
+> <event>SPIKE 25786 ms at 23:14:19 during ERR fetch failed japanesePending=?</event> (15 October 2026, 01:14:19 +0200)
+> If this event is something the user would act on now, send a PushNotification. Routine or benign output doesn't need one. (15 October 2026, 01:14:19 +0200)
+> </task-notification> (15 October 2026, 01:14:19 +0200)
