@@ -469,3 +469,122 @@
 - Project: zenray-progress; kind: log. (12 October 2026, 11:25:46 +0200)
 
 > 12 October 2026, 11:50 : sous-titres : un seul rendu pour tous les formats (ASS ne passe plus par libass), taille en pourcentage 100/75/50 plus grille de 5 %, police serif ou sans, fond arrondi desactivable ; 20 pistes francaises ajoutees depuis des fichiers adjacents (Twilight Samurai, Under The Open Sky, Smoking Behind) ; verificateur CheckSubtitles.mjs : 191 films, 375 pistes, 0 probleme, 92 films sans francais (3 Gatsu, Rakugo, Bleach, Akane, Initial D, Witch Hat, Yomi : texte dans l'archive, restauration a decider). Deploye (VideoPlayer2-DiiorsWE.js). (12 October 2026, 11:25:46 +0200)
+
+## 12 October 2026, 23:24:21 +0200 : Standing rule
+
+<!-- feedback-event:2b233b090f4e7bacb65fd8ff5d8a425ac89f0ad78416ad523576698fda14859b (12 October 2026, 23:24:21 +0200) -->
+- Project: zenray-progress; kind: rule. (12 October 2026, 23:24:21 +0200)
+
+> 12 October 2026 : un push GitHub de données envoie jusqu'à 1 900 Mio (20 parts de 95 Mio, 7,2 % sous la limite appliquée de 2 Gio), lots remplis au maximum, montée par paliers 2, 4, 8, 12, 16, 20 parts depuis 8 ; échecs comptés PAR LOT : un seul est retenté à l'identique, au troisième retour à 190 Mio (2 parts) puis remontée après 3 réussites ; jamais deux pushes simultanés vers le même dépôt, le lot suivant se prépare pendant l'envoi ; on maximise le débit réel moyen, pas la taille du push. Paramètres : scripts/lib/push-batch-policy.mjs, test de garde contre les pushes hors politique. (12 October 2026, 23:24:21 +0200)
+
+## 12 October 2026, 23:24:21 +0200 : Standing rule
+
+<!-- feedback-event:9163e6f1941744167760ca81cf00cb3e4ff165820341f4ea4a777e3c61d63607 (12 October 2026, 23:24:21 +0200) -->
+- Project: zenray-progress; kind: rule. (12 October 2026, 23:24:21 +0200)
+
+> 12 October 2026 : dépôts d'archive plafonnés à 4 096 Mio (43 parts) pour diviser par deux les créations de dépôts (elles déclenchent les 403 secondaires), pour les films NOUVEAUX seulement ; l'ancien rejet vers 4 Go du 10 June 2026 est contredit par des dépôts de 9,7 à 10,4 Go qui acceptent des pushes le 12 October 2026 ; un refus définitif passe sur un nouveau dépôt sans perte. (12 October 2026, 23:24:21 +0200)
+
+## 12 October 2026, 23:24:21 +0200 : Standing rule
+
+<!-- feedback-event:00f081ddde545e36e7c7c23ceb4151ecb6d5d01da8bd7cf1d808e25cf8b689f0 (12 October 2026, 23:24:21 +0200) -->
+- Project: zenray-progress; kind: rule. (12 October 2026, 23:24:21 +0200)
+
+> 12 October 2026 : l'autorité de déchargement d'un original est la preuve par identité d'objets (manifeste en ligne, une vraie part relue, 1 film sur 8 relu en entier), plus la relecture SHA-256 complète systématique ; vaut pour ZenRay Assets et ZenRayProgress ; tests verts sur un bon cas et rouges sur un cas corrompu. (12 October 2026, 23:24:21 +0200)
+
+## 12 October 2026, 23:24:21 +0200 : Standing rule
+
+<!-- feedback-event:d5c72102002584b444de936ed37f2903a51c9442bc2f63448929ad59555071fb (12 October 2026, 23:24:21 +0200) -->
+- Project: zenray-progress; kind: rule. (12 October 2026, 23:24:21 +0200)
+
+> 12 October 2026 : le repli CMAF par transcodage descend par puissances de 2 en Mbit/s : source 4K 16 puis 8, 4, 2 ; autre source 8 puis 4, 2 ; chaque segment sous 19 Mio ; la copie directe passe d'abord ; mêmes lots d'octets que l'archive. (12 October 2026, 23:24:21 +0200)
+
+## 14 October 2026, 00:49:33 +0200 : Standing rule
+
+<!-- feedback-event:e310a5ea055636d04a7c6aaef16db9d0fdee024991e49b4bdc7e209c1db54f65 (14 October 2026, 00:49:33 +0200) -->
+- Project: zenray-progress; kind: rule. (14 October 2026, 00:49:33 +0200)
+
+> 14 October 2026, POLITIQUE GITHUB EN LANGAGE NATUREL (décidée par Matthieu, mesurée sur Bleach S17E25 et E26). Pourquoi : la ligne montante de Matthieu fait environ 11 Mo/s et GitHub n'est pas ce qui limite, c'est le temps mort entre deux envois ; on cherche donc le débit réel moyen, jamais la taille d'un push pour elle-même. (1) Taille d'un envoi : un push porte 1 900 Mio, soit 20 parts chiffrées de 95 Mio, car GitHub refuse un push au-delà de 2 048 Mio (limite appliquée) et 1 900 laisse 7,2 % de marge ; le lot suivant est préparé pendant l'envoi du précédent et part dès la confirmation, mais jamais deux pushes en même temps vers le même dépôt. Mesuré : 2 pushes de 1 900 Mio à 11,1 et 11,3 Mo/s, 0 échec, contre 6,2 Mo/s avant. (2) Échecs : un échec isolé est accidentel (réseau, délai, serveur GitHub), on réessaie le même lot sans rien changer ; au troisième échec du même lot, on revient à l'ancienne règle de 190 Mio (2 parts) et on remonte par paliers 2, 4, 8, 12, 16, 20 après 3 réussites de lots pleins ; les échecs se comptent par lot, pas par fichier, parce que Git transmet un ensemble. Un push refusé pour sa taille réduit le lot et réessaie sans rien perdre. Le délai d'un push (30 min minimum) n'est qu'un garde-fou contre un envoi figé ; il s'allonge avec la taille du lot. (3) Cadence : GitHub recommande 6 pushes par minute et par dépôt au maximum ; avec des lots de 1 900 Mio on en fait un toutes les 3 minutes, très loin de cette limite. (4) Dépôts : un dépôt d'archive reçoit jusqu'à 4 096 Mio, soit 43 parts, pour deux fois moins de créations de dépôts, car ce sont les créations qui déclenchent les blocages 403 « secondary rate limit » ; uniquement pour les films nouveaux, les anciens manifestes restent lisibles tels quels. Une création bloquée attend la fin du blocage (jusqu'à 60 min) au lieu de faire échouer le film. (5) Vérification avant de décharger un original : on ne relit PAS tout le film depuis GitHub, ce serait un téléchargement massif et un ralentissement contraire au but ; la preuve par identité d'objets suffit (le manifeste est en ligne, les noms et identifiants de chaque part correspondent, une vraie part est relue et déchiffrée), et seul un échec de cette preuve déclenche une relecture complète. Aucun échantillon « 1 film sur 8 » : il vaut 0 par défaut, réglable. (6) CMAF (la copie pour le streaming) : copie directe d'abord, sinon transcodage à 16 puis 8, 4, 2 Mbit/s pour une source 4K, et 8, 4, 2 pour les autres, chaque segment restant sous 19 Mio (limite jsDelivr). (7) Où régler : un seul fichier de paramètres, scripts/lib/push-batch-policy.mjs, avec des variables d'environnement ZR_PUSH_*, et un test de garde qui échoue si un script pousse hors de cette politique. ZR_SHARD_PUSH_BATCH_MB, s'il est défini, désactive la politique (lot fixe) : ne jamais l'épingler dans un script. (14 October 2026, 00:49:33 +0200)
+
+## 14 October 2026, 00:49:33 +0200 : Standing rule
+
+<!-- feedback-event:d605bcbb6db9362b01b528a4af233a3eac3bc1fbb49d9e5095ca886a47a3eb20 (14 October 2026, 00:49:33 +0200) -->
+- Project: zenray-progress; kind: rule. (14 October 2026, 00:49:33 +0200)
+
+> 14 October 2026 : correction de la règle de preuve du 12 October 2026, l'échantillon de relecture complète « 1 film sur 8 » est abandonné (valeur 0 par défaut dans scripts/lib/video-identity-proof.mjs et AssetsConfig.json), le worker utilise ZR_VERIFY_MODE=identity par défaut ; décision de Matthieu, une relecture massive ralentit et contredit le but. (14 October 2026, 00:49:33 +0200)
+
+## 14 October 2026, 01:17:25 +0200 : Standing rule
+
+<!-- feedback-event:d9b7d19c93dfc68af94832156b03dd346d5d2912287c5a4f9905e893926e7c30 (14 October 2026, 01:17:25 +0200) -->
+- Project: zenray-progress; kind: rule. (14 October 2026, 01:17:25 +0200)
+
+> 14 October 2026, INCIDENT ET RÈGLE : un film ou un épisode n'est JAMAIS « envoyé » avec la seule archive chiffrée ; l'envoi complet est le worker ProcessFilmsSequentially.py (archive, puis CMAF HLS/DASH pour le streaming, puis sous-titres, puis preuve, puis déchargement), jamais upload-mapped-git.mjs seul. Le 14 October 2026, 7 épisodes Bleach (E25, E26, E28, E30, E38, E42, E45) ont été archivés sans CMAF puis leurs sources locales supprimées : ils ne se lisent pas en streaming et il faut les restaurer depuis l'archive pour produire le CMAF. Règle : avant de supprimer une source locale, vérifier que le manifeste porte master et mpd (CMAF) ET ses sous-titres ; sans eux, ne rien supprimer et poser la question à Matthieu. Les politiques GitHub (lots, plafond, preuve, échelle CMAF) vivent dans ZenRayProgress (scripts/lib/push-batch-policy.mjs et ce Rules.md), pas dans le skill zenray-assets, qui ne fait que renvoyer vers elles. (14 October 2026, 01:17:25 +0200)
+
+## 14 October 2026, 09:55:40 +0200 : Standing rule
+
+<!-- feedback-event:de3f1d2353e9f2183b3e9676495d3dbe4223c2a178018ab50b70e03b10e46640 (14 October 2026, 09:55:40 +0200) -->
+- Project: zenray-progress; kind: rule. (14 October 2026, 09:55:40 +0200)
+
+> 14 October 2026, UNE PHRASE = UNE MÉTHODE (décision de Matthieu) : avant tout envoi, chargement ou rangement, lancer node ~/.claude/skills/zenray-assets/scripts/route-method.mjs "<la phrase de Matthieu>" ; il rend UNE méthode, ou « AUCUNE MÉTHODE » et alors on pose la question. CREATE est la bibliothèque (l'arbre cloud : films, photos, audio) ; ASSETS est la résidence locale (charger, décharger, restaurer) et les projets de production ; c'est le VERBE qui décide, jamais un nom de dossier : envoie, upload, streaming = Create, avec le worker complet (renommage validé, archive, CMAF, sous-titres, preuve, déchargement) ; charge, décharge, restaure = Assets ; archive le projet = Assets. Les règles de contenu (nom, CMAF, sous-titres, dossier) vivent dans le Rules.md de zenray-progress, celles de résidence (preuve avant suppression) dans Assets. (14 October 2026, 09:55:40 +0200)
+
+## 14 October 2026, 10:46:11 +0200 : Standing rule
+
+<!-- feedback-event:2593570cdc9558f80b99569c016d93e29ef9f2eb6552090f3c8aa8c31c33cd7e (14 October 2026, 10:46:11 +0200) -->
+- Project: zenray-progress; kind: rule. (14 October 2026, 10:46:11 +0200)
+
+> 14 October 2026, JAMAIS PLUS DE BLOCAGE GITHUB À LA CRÉATION DE DÉPÔTS : la cause mesurée n'est ni le nombre de dépôts (limite 100 000, nous en avons environ 3 000) ni leur taille (des dépôts de 10 Go acceptent des pushes), c'est la limite secondaire GitHub sur la CRÉATION DE CONTENU qui réagit à une rafale : le worker ouvrait un dépôt privé par film, soit 12 dépôts en 4 minutes le 14 October 2026 (07:44 à 07:48 UTC), avec d'autres services du compte qui créaient des dépôts au même moment, puis chaque processus bloqué réessayait toutes les 1 à 5 minutes, ce qui prolonge le blocage. La doc annonce environ 80 créations par minute et 500 par heure (documenté, sujet à changement) ; le seuil réel pour les dépôts est plus bas (non documenté). Correction dans le code : scripts/lib/repo-create-policy.mjs, (1) une voie par processus réutilise son dépôt ouvert tant qu'il reste de la place sous 4 096 Mio, donc 15 petits épisodes tiennent dans 1 dépôt au lieu de 15 ; (2) une porte partagée par toute la machine espace les créations de 2 minutes minimum, 12 par heure au plus, et un blocage vu par UN processus est partagé, les sondes suivantes attendent 5, 10, 20 puis 30 minutes sans que personne d'autre n'envoie de requête. Réglages : ZR_REPO_POOL_SLOTS, ZR_REPO_CREATE_MIN_INTERVAL_S, ZR_REPO_CREATE_MAX_PER_HOUR, ZR_REPO_POOL=0 pour couper la réutilisation. Règle de conduite : ne jamais lancer plusieurs créations de dépôts en parallèle depuis un autre script ; passer par le worker. (14 October 2026, 10:46:11 +0200)
+
+## 14 October 2026, 11:01:02 +0200 : Standing rule
+
+<!-- feedback-event:a0df08d28912a67050c50629b3231c784022e6143dd7940f88d46966a8dcab21 (14 October 2026, 11:01:02 +0200) -->
+- Project: zenray-progress; kind: rule. (14 October 2026, 11:01:02 +0200)
+
+> 14 October 2026, POLITIQUE GITHUB DYNAMIQUE, EN LANGAGE HUMAIN (décision de Matthieu : ta connexion peut changer, un envoi peut passer de 15 épisodes à 150, de 250 Go à 2,5 To, la politique doit rester la plus rapide sans rien retoucher). (1) La taille d'un push suit la ligne MESURÉE : on vise une durée de push, calculée comme la racine de 2 fois le coût fixe d'un push (6 s mesurées) fois le temps moyen entre deux coupures de la ligne, appris des échecs réels (au départ 2 h supposées, chaque coupure vue le fait baisser), bornée entre 60 et 600 s. Sur une ligne rapide et stable, cela donne plus que 1 900 Mio : c'est la limite GitHub de 2 Gio (7,2 % de marge) qui plafonne, donc 20 parts. Sur une ligne lente ou instable, les pushes rétrécissent jusqu'à une part de 95 Mio, car un push raté coûte moins cher quand il est petit ; si la ligne se rétablit, la moyenne (poids 0,3 sur la dernière mesure) ramène les gros pushes en trois pushes environ. La moyenne et le taux de coupure passent d'un processus à l'autre par un fichier d'état (valable 6 h). Les échecs répétés d'un même lot, eux, ramènent toujours à 190 Mio après trois essais. (2) Le budget de créations de dépôts suit le volume : base 12 par heure, relevé à ce que la ligne demande (octets par heure divisés par la taille d'un dépôt, fois 1,5) jusqu'à 24 par heure au plus ; à 25 Mo/s il faut 21 dépôts par heure, un budget fixe de 12 freinerait l'envoi lui-même. Un blocage de GitHub divise le budget par deux (plancher 0,25), il remonte d'un quart après chaque période de 6 h sans blocage : le seuil réel de GitHub étant non documenté, la politique l'apprend. (3) Ce qui reste fixe, volontairement, ce sont les limites de GitHub (2 Gio par push, 100 Mo par fichier, 4 096 Mio par dépôt) et la règle d'ordre : une voie par processus, jamais deux pushes en même temps vers un dépôt. (4) Vérification : un modèle en espérance (scripts/lib/push-policy-simulation.mjs, testé) compare la politique à un lot fixe de 95, 190, 760 ou 1 900 Mio sur des lignes de 0,5 à 40 Mo/s, stables ou instables, de 3 Go à 2,5 To : elle reste à moins de 3 % du meilleur lot fixe partout, et bat nettement un lot fixe de 1 900 Mio sur une ligne lente et instable (9,1 h contre 16,9 h pour 30 Go à 1 Mo/s). C'est un modèle, pas une mesure ; le CMAF double environ le volume envoyé pour un film. Réglages : ZR_PUSH_THROUGHPUT_SIZING (0 = lots par niveau), ZR_PUSH_TARGET_SECONDS (0 = automatique), ZR_PUSH_FIXED_OVERHEAD_S, ZR_PUSH_HICCUP_PRIOR_MTBF_S, ZR_REPO_CREATE_CEILING_PER_HOUR. (14 October 2026, 11:01:02 +0200)
+
+## 14 October 2026, 12:19:07 +0200 : Standing rule
+
+<!-- feedback-event:4f8cb2d9e317c335207b359dc2100327cd12e16fe2a626660cac4a51957ff822 (14 October 2026, 12:19:07 +0200) -->
+- Project: zenray-progress; kind: rule. (14 October 2026, 12:19:07 +0200)
+
+> Les films vivent dans pages/Anime_Movies_Series_Documentaries/{Anime,Movies,Series,Documentaries} : le dossier d'un fichier se decide AVANT l'envoi depuis scripts/Films/WorkCategories.json (oeuvre inconnue = demander a Matthieu, jamais deviner ; le worker la refuse et ecrit NeedsCategory.json). Une oeuvre n'a qu'un seul dossier ; rien ne se supprime au rangement (collision = ' (2)'). Outil : scripts/Films/RestructureCloud.py. (14 October 2026, 12:19:07 +0200)
+
+## 14 October 2026, 12:30:16 +0200 : Standing rule
+
+<!-- feedback-event:74775272109411486d3f21bda395171ff1aeec4fd0c72e2e338dfc1731a7ef68 (14 October 2026, 12:30:16 +0200) -->
+- Project: zenray-progress; kind: rule. (14 October 2026, 12:30:16 +0200)
+
+> Le skill du site ZenRayProgress s'appelle zenray-progress (ex-zenrayprogress-context, ancien nom supprime, ne pas le recreer). Il porte le code du site ET toutes les politiques de drive et d'upload (films, CMAF, push GitHub, miniatures, sous-titres, dossiers Anime/Movies/Series/Documentaries) ; zenray-assets ne porte que les projets de production (registre, mapping, feedback, LOAD/UNLOAD, panneau macOS). Verbe envoie/upload/streaming = zenray-progress ; charge/decharge/restaure/archive le projet = zenray-assets (route-method.mjs). (14 October 2026, 12:30:16 +0200)
+
+## 14 October 2026, 12:30:16 +0200 : Standing rule
+
+<!-- feedback-event:0748567fdfa5283d01d4d3a8d95b85006f4c43d3a106fdc2994eb521497214dd (14 October 2026, 12:30:16 +0200) -->
+- Project: zenray-progress; kind: rule. (14 October 2026, 12:30:16 +0200)
+
+> Correction du chemin du routeur (14 October 2026) : route-method.mjs vit dans ~/.claude/skills/zenray-progress/scripts/ ; la ligne UNE PHRASE = UNE METHODE ci-dessus cite l'ancien chemin zenray-assets/scripts. (14 October 2026, 12:30:16 +0200)
+
+## 14 October 2026, 14:52:15 +0200 : Standing rule
+
+<!-- feedback-event:99155746ebbd6c7086aabc3b992efcc59b146d340400f8afc3242f00c1b68b7f (14 October 2026, 14:52:15 +0200) -->
+- Project: zenray-progress; kind: rule. (14 October 2026, 14:52:15 +0200)
+
+> 14 October 2026, DECISION DE MATTHIEU : STREAMING SEUL, CMAF GARDE, plus de double copie. Pour tous les films et tous les formats video : une seule copie, le CMAF streame (HLS + DASH, pistes audio separees), et plus d'archive chiffree de l'original. Toutes les pistes audio sont gardees, chacune avec un nom clair (langue : 日本語, Français, English ; deux pistes d'une meme langue numerotees). Un film transcode n'est plus l'original : accepte, ca economise des octets. Re-telechargement : la video, chaque audio (ou la langue choisie) et les sous-titres (.srt ou .ass du manifeste) en fichiers separes, sans ffmpeg cote site. Un fichier n'est 'uploade' que s'il est streame (master, mpd, affiche publique, sous-titres) ; la preuve de dechargement devient la preuve du streaming. Les films deja archives gardent leurs deux copies, rien n'est supprime sans ordre. STATUT : regle decidee ; le code (worker sans etape archive, preuve du streaming, telechargement par fichiers, rechauffement du CDN) attend le feu vert du recap. (14 October 2026, 14:52:15 +0200)
+
+## 14 October 2026, 15:12:22 +0200 : Standing rule
+
+<!-- feedback-event:06543ce0f8bcc3e2211105425a1a79676aa3067caa59da58a67d91a03a062542 (14 October 2026, 15:12:22 +0200) -->
+- Project: zenray-progress; kind: rule. (14 October 2026, 15:12:22 +0200)
+
+> 14 October 2026, CATEGORIES ET MODE, A CONSIGNER PARTOUT : tout film ou episode va dans pages/Anime_Movies_Series_Documentaries/{Anime,Movies,Series,Documentaries}, decide par le code depuis scripts/Films/WorkCategories.json AVANT l'envoi. Le mode est UN SEUL des deux : stream (defaut) ou archive, jamais archive + streaming par defaut. Une oeuvre ou un fichier que la table ne connait pas (par exemple une capture d'ecran d'Houdini) n'est JAMAIS devine : le worker ne l'envoie pas, ecrit NeedsCategory.json avec la question, et l'agent demande a Matthieu le dossier ET streaming ou archive, puis ajoute l'oeuvre a la table. En cas de doute sur une categorie, un nom ou un mode : poser la question, ne plus jamais se tromper. Valeurs a changer a un seul endroit : WorkCategories.json (works, defaultMode, modes). (14 October 2026, 15:12:22 +0200)
+
+## 14 October 2026, 20:43:38 +0200 : Standing rule
+
+<!-- feedback-event:85e2fcfa5b37fb89c1a46a831a27ac51ab0483ccd8784148239a474f456fb7c7 (14 October 2026, 20:43:38 +0200) -->
+- Project: zenray-progress; kind: rule. (14 October 2026, 20:43:38 +0200)
+
+> 14 October 2026, ETAT FINAL DES ENVOIS DE FILMS, EN LANGAGE NATUREL, PLUS JAMAIS DE QUESTION (decision de Matthieu, qui a passe la journee a expliquer ces politiques). (1) Un film ou episode est envoye en STREAMING SEUL : une seule copie, le CMAF streame (HLS et DASH, une piste par audio, toutes les pistes audio gardees avec leur langue), plus d'archive chiffree. (2) TOUS les sous-titres texte sont dans le cloud : ceux qui tiennent dans le manifeste y sont ; ceux qui sont trop gros partent en fichier texte dans le MEME depot public que les segments et le manifeste y renvoie par src, que le lecteur lit deja. Rien n'est jamais abandonne faute de place. (3) Un push est rempli jusqu'a 1 900 Mio (limite GitHub 2 048), quelles que soient les frontieres de films : plusieurs films preparent d'avance forment UNE liste par depot de 4,2 Gio, que la politique decoupe ; jamais deux pushes en meme temps vers un depot. La preparation (empaquetage CMAF, local, sans reseau) et la publication sont separees : PublishStagedBatch.mjs publie, AttachVideoCmafDashHls.mjs --stage-only prepare. (4) Le point d'entree d'un envoi de plusieurs films en streaming est scripts/Films/StreamBatch.py (preparer, publier des qu'un depot est pret, sous-titres, preuve, dechargement) ; le worker ProcessFilmsSequentially.py reste pour un film seul ou une archive ; aucun autre script d'envoi ne se cree a cote. (5) Une source locale est SUPPRIMEE automatiquement quand la preuve est verte (manifeste en ligne, tous les audios, tous les sous-titres, un echantillon lu) ; preuve rouge = source conservee et rapport, sans question. (6) La lecture : jsDelivr d'abord avec 3 s sans retente, GitHub raw tout de suite s'il refuse, avec memoire par commit ; la preuve de publication accepte raw. (7) En cas de doute (oeuvre inconnue, dossier, mode), l'agent TRANCHE seul d'apres ces regles et le dit apres coup dans le recap ; il ne pose pas de question. (14 October 2026, 20:43:38 +0200)
+
+## 14 October 2026, 20:50:25 +0200 : Standing rule
+
+<!-- feedback-event:45b02fe0b60ffbd4df5cec24b19535017bc9152a0c0448658237e0867448b6a9 (14 October 2026, 20:50:25 +0200) -->
+- Project: zenray-progress; kind: rule. (14 October 2026, 20:50:25 +0200)
+
+> 14 October 2026, CORRECTION de la regle ETAT FINAL (point 4) : StreamBatch.py n'existe plus, supprime sur demande de Matthieu. Il n'y a qu'UN point d'entree d'envoi, le worker scripts/Films/ProcessFilmsSequentially.py : avec ZR_ONLY_PLAN=<plan.json> et ZR_PROGRESS_REPO=<depot>, un plan fait uniquement de films en streaming tourne en un lot (empaquetage CMAF local, publication par depot en pushes remplis, sous-titres, preuve, dechargement si preuve verte). ZR_UNLOAD_ROOTS=<dossier des sources> autorise le dechargement hors Downloads. Jamais de script d'envoi a cote du worker. (14 October 2026, 20:50:25 +0200)

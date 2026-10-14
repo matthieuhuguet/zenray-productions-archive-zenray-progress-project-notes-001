@@ -1,0 +1,17 @@
+{
+  "date": "14 October 2026",
+  "slug": "delivery-mode-context-menu",
+  "folder": "2026-10-14-delivery-mode-context-menu",
+  "version": 1,
+  "title": "Clic droit : archive, streaming ou les deux (3 designs A B C)",
+  "module": "create-context-menu",
+  "project": "zenray-progress",
+  "status": "chosen B+C",
+  "atelier": "/Users/zenray/.claude/tmp/tmp-delivery-widget-3-designs",
+  "files": [
+    "index.html"
+  ],
+  "indexSha256": "a071082f2c01e3b3f581772ddb534dab2ee900109efc829649ec80f7dfd7a74d",
+  "filedAt": "2026-10-14T12:48:46.200Z",
+  "note": "A carte d'etat, B entree avec valeur, C tableau des trois etats ; Matthieu a choisi B + C dans un seul clic droit (14 October 2026). Code sur origin/main (bd106c36), deploye : bundle de production index-CfICjFMF.js identique au build."
+}

@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Clic droit : archive ou streaming, 3 designs</title>
+<!-- 14 October 2026. STATIC gallery, nothing to test: the right click menu in three designs, for ONE film and for THREE films selected.
+     The state is always written in words (Archive seule, Streaming, Archive + streaming); the colour only repeats the words.
+     FR : galerie STATIQUE, rien a tester : le menu clic droit en trois designs, pour UN film puis TROIS films. L'etat est toujours ecrit en mots. -->
+<style>
+@font-face{font-family:'InterVariable';src:url('file:///Users/zenray/.claude/skills/zenray-edit/designs/_shared/fonts/InterVariable.woff2') format('woff2');font-weight:100 900}
+:root{--bg:#e9ebf0;--card:rgba(255,255,255,.7);--glass:rgba(255,255,255,.88);--line:rgba(25,27,31,.12);--fg:rgba(25,27,31,.92);--muted:rgba(25,27,31,.58);--accent:#0a84ff;
+ --stream:#1f9d43;--both:#0a6fdc;--archive:#c76b00;--shadow:0 14px 40px rgba(20,24,40,.2);--sans:'InterVariable','Hiragino Sans W4',sans-serif}
+*{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:14px}
+body{padding:22px 16px 60px}.wrap{max-width:980px;margin:0 auto}
+h1{font-size:22px;margin:0 0 4px;font-weight:600}.sub{color:var(--muted);margin:0 0 18px}
+.legend{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 22px}
+.lg{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 12px;font-size:13px;max-width:300px}
+.lg b{display:flex;align-items:center;gap:7px;font-weight:600;margin-bottom:3px}
+section{margin-bottom:28px}
+h2{font-size:16px;margin:0 0 2px;font-weight:600}.why{margin:0 0 10px;color:var(--muted)}
+.row{display:flex;gap:18px;align-items:flex-start;flex-wrap:wrap}
+.case{display:flex;flex-direction:column;gap:6px}.cap{font-size:12px;color:var(--muted);font-weight:500}
+.stage{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px;min-height:200px}
+/* the real menu: glass shell radius 22, columns of 238 px, rows min 30 px radius 8 (ColumnMenu.jsx) */
+.menu{display:inline-flex;border-radius:22px;overflow:hidden;background:var(--glass);border:1px solid var(--line);box-shadow:var(--shadow)}
+.col{width:238px;flex:0 0 238px;padding:8px 7px;display:flex;flex-direction:column;gap:1px}.col+.col{border-left:1px solid rgba(60,60,67,.18)}
+.it{display:flex;align-items:center;gap:8px;min-height:30px;padding:4px 10px;border-radius:8px;font-size:15px;color:rgba(24,24,27,.88)}
+.it .ic{width:18px;display:inline-flex;justify-content:center}.it svg{width:15px;height:15px}.it .lb{flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.it .tr{color:rgba(60,60,67,.54);font-size:13px}.it.dis{opacity:.45}.it.dan{color:#ff3b30}.it.on{background:var(--accent);color:#fff}.it.on .tr{color:#fff}
+.sep{height:1px;background:var(--line);margin:4px 6px}
+/* the state, always in words */
+.mode{display:inline-flex;align-items:center;gap:6px;font-weight:600;white-space:nowrap}
+.mode svg{width:16px;height:16px;flex:0 0 auto}
+.m-archive{color:var(--archive)}.m-stream{color:var(--stream)}.m-both{color:var(--both)}
+.card{margin:2px 2px 6px;padding:9px 10px;border-radius:12px;border:1px solid var(--line);background:rgba(255,255,255,.55)}
+.card .t{font-size:16px}.card .d{color:var(--muted);font-size:12.5px;margin-top:3px;line-height:1.35}
+.card .l{display:flex;justify-content:space-between;gap:8px;align-items:center;padding:3px 0;font-size:14px}
+.card .l b{font-variant-numeric:tabular-nums;font-weight:600}
+.tbl{margin:2px 2px 6px;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:rgba(255,255,255,.55)}
+.tbl .r{display:flex;align-items:center;gap:8px;padding:7px 10px;font-size:14px;border-bottom:1px solid var(--line)}.tbl .r:last-child{border:0}
+.tbl .r .n{margin-left:auto;font-weight:600;font-variant-numeric:tabular-nums}.tbl .r.off{opacity:.42}.tbl .r.here{background:rgba(10,132,255,.1)}
+.grp{padding:4px 10px 8px}.grp .h{font-weight:600;margin:6px 0 3px;display:flex;gap:6px;align-items:center;white-space:nowrap}.grp svg{width:16px;height:16px;flex:0 0 auto}.grp .f{font-size:12.5px;color:var(--muted);padding:2px 0 2px 22px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.hint{font-size:11.5px;color:var(--muted);padding:2px 10px 6px}
+.val{color:var(--muted);font-size:13px;font-weight:600}
+.note{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin-top:6px}
+</style></head><body><div class="wrap">
+<h1>Clic droit : archive, streaming ou les deux ?</h1>
+<p class="sub">Trois designs du menu, montrés ouverts, pour <b>un film</b> puis pour <b>trois films sélectionnés</b>. Rien à tester : tu regardes et tu choisis. Le mode est toujours écrit en toutes lettres.</p>
+<div class="legend" id="legend"></div>
+<div id="out"></div>
+<div class="note"><b>Ton choix</b> : dis « A », « B » ou « C » (ou un mélange, par exemple « le tableau de C en haut de la colonne de A »). Je code ensuite le design dans le vrai menu.</div>
+</div>
+<script>
+const SVG={
+ archive:'<path d="M4 7h16v3H4zM6 10v9h12v-9M10 14h4"/>',
+ stream:'<path d="M9 7v10l8-5z"/>',
+ both:'<path d="M3 7h9v3H3zM4.5 10v8h6v-8M15 9v8l6-4z"/>',
+ open:'<path d="M7 17 17 7M9 7h8v8"/>',dl:'<path d="M6 4h8l4 4v12H6zM14 4v4h4"/>',ren:'<path d="M5 19l3-1 10-10-2-2L6 16z"/>',mv:'<path d="M3 7h6l2 2h10v10H3z"/>',
+ sort:'<path d="M5 4h14M5 10h10M5 16h6"/>',cp:'<rect x="8" y="8" width="11" height="12" rx="2"/><path d="M5 16V5a1 1 0 0 1 1-1h9"/>',cut:'<circle cx="7" cy="17" r="2.5"/><circle cx="17" cy="17" r="2.5"/><path d="M8.5 15 17 4M15.5 15 7 4"/>',
+ star:'<path d="m12 4 2.4 5 5.4.7-4 3.8 1 5.4-4.8-2.7-4.8 2.7 1-5.4-4-3.8 5.4-.7z"/>',tag:'<path d="M4 4h8l8 8-8 8-8-8z"/>',org:'<path d="M5 6h14M5 12h14M5 18h14"/>',
+ share:'<path d="M7 17 17 7M9 7h8v8"/>',info:'<path d="M6 9h12M6 15h12M10 5 8 19M16 5l-2 14"/>',trash:'<path d="M5 7h14M10 7V4h4v3M7 7l1 13h8l1-13"/>'}
+const ico=(n)=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${SVG[n]}</svg>`
+const MODE={
+ archive:{t:'Archive seule',c:'m-archive',i:'archive',d:'Original chiffré conservé. Pas de lecture directe : à empaqueter en streaming.'},
+ stream:{t:'Streaming',c:'m-stream',i:'stream',d:'Lecture directe. Pas d’original conservé en archive.'},
+ both:{t:'Archive + streaming',c:'m-both',i:'both',d:'Lecture directe et original chiffré conservé.'}}
+const badge=(k)=>`<span class="mode ${MODE[k].c}">${ico(MODE[k].i)}${MODE[k].t}</span>`
+document.getElementById('legend').innerHTML=Object.keys(MODE).map(k=>`<div class="lg"><b class="mode ${MODE[k].c}">${ico(MODE[k].i)}${MODE[k].t}</b>${MODE[k].d}</div>`).join('')
+
+// the two situations used in every design. FR : les deux situations utilisees dans chaque design.
+const ONE={n:1,files:[['The Dark Knight Rises (2012).mkv','archive']]}
+const THREE={n:3,files:[['Black Panther.mkv','both'],['The Dark Knight Rises (2012).mkv','archive'],['The Dark Knight Rises.mkv','archive']]}
+const count=(s,k)=>s.files.filter(f=>f[1]===k).length
+const item=(label,icon,o={})=>`<div class="it ${o.dis?'dis':''} ${o.dan?'dan':''} ${o.on?'on':''}"><span class="ic">${icon?ico(icon):''}</span><span class="lb">${label}</span>${o.tr?`<span class="tr">${o.tr}</span>`:''}</div>`
+function rootItems(s,extra={}){
+  const N=s.n>1?` (${s.n})`:''
+  return [item('Ouvrir','open'),item('Télécharger','dl'),item('Renommer','ren',{dis:s.n>1}),item('Déplacer vers…'+N,'mv'),item('Trier vers…'+N,'sort',{tr:'›'}),item('Copier'+N,'cp'),item('Couper'+N,'cut'),
+    item('Ajouter aux favoris','star',{dis:s.n>1}),item('Tags'+(s.n>1?' · '+s.n:''),'tag',{tr:'›'}),item('Organiser','org',{tr:'›'}),item('Partager et exporter','share',{tr:'›'}),
+    extra.beforeInfo||'',item('Informations','info',{tr:'›',on:extra.infoOn}),item(s.n>1?`Supprimer ${s.n} éléments`:'Mettre à la corbeille','trash',{dan:true})].join('')
+}
+const menu=(cols)=>`<div class="menu">${cols.map(c=>`<div class="col">${c}</div>`).join('')}</div>`
+const groups=(s)=>['both','stream','archive'].filter(k=>count(s,k)).map(k=>`<div class="h ${MODE[k].c}">${ico(MODE[k].i)}${MODE[k].t} <span style="color:var(--muted);font-weight:500">· ${count(s,k)}</span></div>`+s.files.filter(f=>f[1]===k).map(f=>`<div class="f" title="${f[0]}">${f[0]}</div>`).join('')).join('')
+
+// A. status card at the top of the menu
+function designA(s){
+  let head
+  if(s.n===1) head=`<div class="card"><div class="t">${badge(s.files[0][1])}</div><div class="d">${MODE[s.files[0][1]].d}</div></div>`
+  else head=`<div class="card"><div class="t" style="font-weight:600">${s.n} films</div>${['both','stream','archive'].filter(k=>count(s,k)).map(k=>`<div class="l">${badge(k)}<b>${count(s,k)}</b></div>`).join('')}</div>`
+  const cols=[head+rootItems(s)]
+  return menu(cols)
+}
+// B. one entry whose VALUE is written on the right, a column opens on click
+function designB(s){
+  const kinds=['both','stream','archive'].filter(k=>count(s,k)), one=kinds.length===1
+  const value=one?`<span class="val ${MODE[kinds[0]].c}">${MODE[kinds[0]].t}</span>`:`<span class="val">Mixte</span>`
+  const label=one?MODE[kinds[0]].t:'Mixte : '+kinds.map(k=>count(s,k)+' '+MODE[k].t.toLowerCase()).join(', ')
+  const entry=`<div class="it on" style="align-items:flex-start;padding:6px 10px"><span class="ic" style="margin-top:2px">${ico('both')}</span><span class="lb" style="white-space:normal">Mode d’envoi<br><span style="font-size:12.5px;font-weight:600;opacity:.95">${label}</span></span><span class="tr" style="margin-top:2px">›</span></div>`
+  const c1=rootItems(s,{beforeInfo:entry})
+  const c2=`<div class="grp">${groups(s)}</div>`+(s.n===1?'':'<div class="hint">Cliquer une ligne sélectionne ces films.</div>')
+  return menu([c1,c2])
+}
+// C. the three states as a table, always visible
+function designC(s){
+  const rows=['stream','both','archive'].map(k=>{const c=count(s,k);return `<div class="r ${c?(s.n===1?'here':''):'off'}">${badge(k)}<span class="n">${s.n===1?(c?'✓':''):c}</span></div>`}).join('')
+  return menu([`<div class="tbl">${rows}</div>`+rootItems(s)])
+}
+const DESIGNS=[
+ ['A · Carte d’état en tête du menu','Dès que le menu s’ouvre, une carte dit en toutes lettres où en est le film : icône, mot, phrase d’explication. Pour plusieurs films, une ligne par mode avec le nombre.',designA],
+ ['B · Entrée « Mode d’envoi » avec sa valeur écrite','Dans le menu, une entrée qui affiche à droite le mode (« Archive seule »). Pour plusieurs films elle affiche « Mixte » et la colonne qui s’ouvre liste les films groupés par mode.',designB],
+ ['C · Tableau des trois états','Les trois états sont TOUJOURS écrits (Streaming, Archive + streaming, Archive seule) avec, pour un film, un ✓ sur le sien ; pour plusieurs films, le nombre de films par état. Les états à zéro sont grisés.',designC]]
+document.getElementById('out').innerHTML=DESIGNS.map(([t,w,fn])=>`<section><h2>${t}</h2><p class="why">${w}</p><div class="row">
+ <div class="case"><div class="cap">Un film sélectionné</div><div class="stage">${fn(ONE)}</div></div>
+ <div class="case"><div class="cap">Trois films sélectionnés</div><div class="stage">${fn(THREE)}</div></div></div></section>`).join('')
+</script></body></html>

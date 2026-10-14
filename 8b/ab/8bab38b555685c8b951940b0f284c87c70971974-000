@@ -1,0 +1,19 @@
+{
+  "date": "14 October 2026",
+  "slug": "video-player-minimal-absolu",
+  "folder": "2026-10-14-video-player-minimal-absolu",
+  "version": 1,
+  "title": "Lecteur minimal absolu : barre flottante avec marges et volume en haut (3 variantes A B C, curseurs)",
+  "module": "video-player",
+  "project": "zenray-progress",
+  "status": "pending",
+  "atelier": "/Users/zenray/.claude/tmp/tmp-video-player-minimal-absolu-3-designs",
+  "files": [
+    "index.html",
+    "frame.webp",
+    "icons.json"
+  ],
+  "indexSha256": "6ef82570d20fc69d80b8b2b398dbf18e30f9b378bcf25260acee42b553ffab2b",
+  "filedAt": "2026-10-14T12:55:37.370Z",
+  "note": "suite du choix C de video-player-icons-only ; 9 curseurs : hauteur et marges de la barre, epaisseur, largeur, rangee du haut, volume, icones, ombre"
+}

@@ -1,0 +1,19 @@
+{
+  "date": "14 October 2026",
+  "slug": "video-player-icons-only",
+  "folder": "2026-10-14-video-player-icons-only",
+  "version": 1,
+  "title": "Lecteur video : icones seules sans cercles (3 designs A B C)",
+  "module": "video-player",
+  "project": "zenray-progress",
+  "status": "pending",
+  "atelier": "/Users/zenray/.claude/tmp/tmp-video-player-icons-3-designs",
+  "files": [
+    "index.html",
+    "frame.webp",
+    "icons.json"
+  ],
+  "indexSha256": "5abcbdc9dbd8da4711001b4aa059d1a9c15141d3d5b63a8e1cdcde1f6af688a7",
+  "filedAt": "2026-10-14T12:48:46.303Z",
+  "note": "icones reelles de Icon.jsx, ombre portee, test scene sombre et claire"
+}

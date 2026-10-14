@@ -1,0 +1,84 @@
+# Resume zenray-progress (14 October 2026 at 23:18)
+
+- Generated from FEEDBACK.md, Rules.md and ConversationIndex.json; derived, never edited by hand, never a substitute for the originals. (14 October 2026 at 23:18)
+- Pinned rules, read first: [Rules.md](/Users/zenray/.claude/Memory1/Projects/zenray-progress/Rules.md) (22 rules). (14 October 2026 at 23:18)
+- Canonical feedback: [FEEDBACK.md](/Users/zenray/.claude/Memory1/Projects/zenray-progress/FEEDBACK.md), 76 entries, last Standing rule at 14 October 2026, 20:50:25 +0200. (14 October 2026 at 23:18)
+
+## Latest conversations (14 October 2026 at 23:18)
+
+- LATEST codex:01a100e2-32f9-7a43-8b5f-ef21c5f96d4d, « Conversation codex 01a100e2 », last activity 3 October 2026 at 10:39 Paris (from feedback). Original: `node scripts/Assets/ConversationDigest.mjs codex:01a100e2-32f9-7a43-8b5f-ef21c5f96d4d --out <file.md>`. (14 October 2026 at 23:18)
+
+## Last 6 prompts of Matthieu, oldest first (14 October 2026 at 23:18)
+
+### 12 October 2026, 00:24:00 +0200 · Prompt · manual
+
+> Est-ce que tu peux me donner un film / VIDEOS qui a deux pistes audio, comme ça je peux vérifier que ça fonctionne bien.?
+
+### 12 October 2026, 00:24:00 +0200 · Prompt · manual
+
+> (capture du lecteur, film Le Rakugo ou la vie S01E05, menu sans option de piste audio) JE VOIS PAS L'OPTION POUR CHANGER LA PISTE SONORE ... GROS PROBLÈME HARD FIX IT
+
+### 12 October 2026, 00:24:00 +0200 · Prompt · manual
+
+> en fait simplement les films / vidéos restantes doivent simplement avoir toutes leurs pistes audio et toute leur pistes sous titres si la deuxième ou n(ième) piste audio existe pas code le et ensuite redeploie et continue de monitorer l'upload
+
+### 12 October 2026, 00:24:00 +0200 · Prompt · manual
+
+> (résumé de la session du 11 October 2026, reconstitué depuis le résumé de compaction, pas le texte original) Reprendre et monitorer l'upload des films HLS/DASH en boucle de 15 s jusqu'à 100 % ; barre de progression toujours visible dans Assets ; vue simple avec le toggle « Nouveaux médias · 24 h » ouvrant le média exact par un lien-pointeur ; fusionner zenray-upload et zenray-assets-upload dans zenray-assets puis les supprimer ; noter le WORKFLOW des sous-titres (pas la preuve) dans les skills ; supprimer tous les épisodes de Natsume's Book of Friends (local et cloud) ; faire marcher la capture ⌘5 OCR ; tous les films restants doivent avoir tous leurs sous-titres.
+
+### 12 October 2026, 01:11:50 +0200 · Prompt · manual
+
+> Prompt du 12 October 2026 (capture d'un speedtest Google : 68,7 Mbps en descente, 67,7 Mbps en montée) : « tu as mis le worker et l'upload en pause ? ... est-ce que tu peux augmenter la cadence de l'upload par rapport à ma co max ? ». Réponse : le worker n'était pas en pause (193/230) ; l'envoi et la vérification ne se chevauchaient pas ; le worker passe en pipeline (vérification du film N pendant l'envoi du film N+1), voir la section du 12 October 2026 du skill zenray-assets.
+
+### 12 October 2026, 01:19:22 +0200 · Prompt · manual
+
+> Est-ce que tu peux encore améliorer au maximum la vitesse d'upload pour que les films se upload le plus rapidement possible ? Je suis sûr qu'il y a moyen de rendre le code de Zenrai Assets et Zenrai Progress le plus rapide possible. ON VEUT AUGMENTER AU MAX LA VITESSE A LAQUELLE LES CHOSES S'UPLOAD UTILISE UN WORKFLOW OU QUELQUES AGENTS POUR FAIRE DES RECHERCHES ET POUSSER AU PAROXISME LA VITESSE D'UPLOAD DES FICHIERS EN PENSANT À TOUT /zenray-methodology /think-of-everything
+
+
+## Last 3 iterations or checkpoints (14 October 2026 at 23:18)
+
+### 3 October 2026, 10:39:13 +0200 · Iteration · codex:01a100e2
+
+> 3 October 2026 : codé et [déployé](https://zenray-progress.pages.dev) dans les six galeries.
+> 
+> En vue alignée, glisse une image au centre d’une autre pour créer un groupe, ou sur un groupe pour l’y ajouter. Les bords permettent toujours de changer l’ordre.
+> 
+> | Ce que tu voulais | Fait | Preuve |
+> |---|---|---|
+> | Grouper en vue alignée partout | Oui | 9 tests passent |
+> | Déployer | Oui | Fichier de production identique au build |
+> | Vérification visuelle | Non | Pas vérifiée dans le navigateur |
+
+### 3 October 2026, 10:39:14 +0200 · Iteration · codex:01a100e2
+
+> 3 October 2026 : codé et [déployé](https://zenray-progress.pages.dev) dans les six galeries.
+> 
+> En vue alignée, glisse une image au centre d’une autre pour créer un groupe, ou sur un groupe pour l’y ajouter. Les bords permettent toujours de changer l’ordre.
+> 
+> | Ce que tu voulais | Fait | Preuve |
+> |---|---|---|
+> | Grouper en vue alignée partout | Oui | 9 tests passent |
+> | Déployer | Oui | Fichier de production identique au build |
+> | Vérification visuelle | Non | Pas vérifiée dans le navigateur |
+
+### 3 October 2026, 10:39:13 +0200 · Iteration · codex:01a100e2
+
+> 3 October 2026 : codé et [déployé](https://zenray-progress.pages.dev) dans les six galeries.
+> 
+> En vue alignée, glisse une image au centre d’une autre pour créer un groupe, ou sur un groupe pour l’y ajouter. Les bords permettent toujours de changer l’ordre.
+> 
+> | Ce que tu voulais | Fait | Preuve |
+> |---|---|---|
+> | Grouper en vue alignée partout | Oui | 9 tests passent |
+> | Déployer | Oui | Fichier de production identique au build |
+> | Vérification visuelle | Non | Pas vérifiée dans le navigateur |
+
+
+## Last order of work (14 October 2026 at 23:18)
+
+### 10 October 2026, 18:03:28 +0200 · Order of work · manual
+
+> stop l'upload ...pause
+
+
+Next step: reread the latest prompt above, check it against Rules.md, then continue; append through feedback.py and close the turn with Client.mjs checkpoint. (14 October 2026 at 23:18)
