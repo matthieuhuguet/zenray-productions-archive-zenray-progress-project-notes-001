@@ -1427,3 +1427,197 @@
 - Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/5bd15db6-f2d9-4010-bcb3-0d609a42bc5e.jsonl. (15 October 2026, 00:06:38 +0200)
 
 > Je termine le filtre Gallery avec un test (filtre visuel seulement, l'ordre sauvegardé reste intact), puis je livre le tout. (15 October 2026, 00:06:38 +0200)
+
+## 15 October 2026, 01:04:40 +0200 : Iteration
+
+<!-- feedback-event:86e4ebb66cb01df8ccf62a9270406b9fe120a91b5baef6e91cadf6cb0a4e2af4 (15 October 2026, 01:04:40 +0200) -->
+- Project: zenray-progress; kind: iteration. (15 October 2026, 01:04:40 +0200)
+- Source: checkpoint:claude:5bd15db6-f2d9-4010-bcb3-0d609a42bc5e. (15 October 2026, 01:04:40 +0200)
+
+> 15 October 2026, 01:30 : service Assets fluide (passes sans nouveaute 0,4-1,8 s au lieu de 27-31 s, publication en une transaction Git, snapshots 88 ms), lots de 2000 fichiers, palette Cmd+K globale, boite aux lettres Create corrigee (Notes depuis une autre vue), lot Freelance en onglets, filtre Gallery, index delta lu par ses premiers octets, finish des films 4 a la fois. Deploye (dernier bundle index-jbGhT3z8), 2553 tests verts. Archive Japanese en cours (43 919 fichiers restants a 01:25, ~20 fichiers/s). Prochain : verifier la fin de Japanese, relancer le service pour le nettoyage des .tmp, essai a blanc de build-search-index, rapport rangement Create a valider. (15 October 2026, 01:04:40 +0200)
+
+## 15 October 2026, 01:04:59 +0200 : Iteration
+
+<!-- feedback-event:053f21b016ed5df0e4344d66310bede2f3f3a61d228db1800a9b3fdb6b125210 (15 October 2026, 01:04:59 +0200) -->
+- Project: zenray-progress; kind: iteration. (15 October 2026, 01:04:59 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/5bd15db6-f2d9-4010-bcb3-0d609a42bc5e.jsonl. (15 October 2026, 01:04:59 +0200)
+
+> Terminé pour cette passe, bilan ci-dessous. Le point de retour (tag `restore-point-20261014-231754`), le rapport de rangement et le journal sont écrits. (15 October 2026, 01:04:59 +0200)
+>
+> | Ce que tu voulais | Fait ? | Comment je le sais | (15 October 2026, 01:04:59 +0200)
+> |---|---|---| (15 October 2026, 01:04:59 +0200)
+> | Backup et point de retour avant de commencer | Oui | Tag git, instantané de l'arbre de travail et archive dans `/Users/zenray/.claude/tmp/tmp-zenray-refine-14oct/backup/` | (15 October 2026, 01:04:59 +0200)
+> | Assets qui ne tombe plus « occupé » | Oui | Le service tourne ; le bridge répond en 70 à 500 ms avec 31 jobs en file ; un chargement réel de 28 fichiers a pris 23 s pendant que 29 sauvegardes attendaient | (15 October 2026, 01:04:59 +0200)
+> | Uploads vers Assets plus rapides | Oui | Passe sans nouveauté 27–31 s → 0,4–1,8 s ; publication 26–30 s → 8–18 s ; lots de 2 000 fichiers, Japanese à ~20 fichiers/s au lieu de 1/s | (15 October 2026, 01:04:59 +0200)
+> | Uploads vers Create plus rapides | Partiel | Les étapes finales des films tournent 4 à la fois (test vert) ; l'encodeur matériel plafonne à ~20× le temps réel, donc l'empaquetage ne s'accélère plus par réglage | (15 October 2026, 01:04:59 +0200)
+> | App cohérente qui « se parle » | Oui | Cmd+K depuis toutes les vues ; les liens « Ouvrir dans Create » marchent depuis Freelance, Assets, Media ; bug trouvé et corrigé : « Notes » depuis une autre vue perdait la demande | (15 October 2026, 01:04:59 +0200)
+> | Freelance : lancer 10, 20, 50 onglets | Oui | Lots de 3/5/10/20/50, « Ouvrir les N pages » par le service local, « Copier » la lettre, « Tout marquer fait » avec confirmation ; 52 tests verts | (15 October 2026, 01:04:59 +0200)
+> | Gallery : fonctionnalités et fluidité | Oui | Filtre texte (n'affecte que l'affichage, test vert) | (15 October 2026, 01:04:59 +0200)
+> | Ranger Create sans rien casser | Rapport seulement | `/Users/zenray/.claude/tmp/tmp-zenray-refine-14oct/REPORT-create-organisation.md` : trois poches de désordre chiffrées, aucun fichier déplacé | (15 October 2026, 01:04:59 +0200)
+> | Bilan toutes les 30 min | Oui | Cron actif (:11 et :41, il se déclenche quand je suis libre, 7 jours max) | (15 October 2026, 01:04:59 +0200)
+>
+> **À toi de lancer** (réservé à toi par ta règle) : le delta de l'index de recherche pèse 22 Mo et ralentit chaque indexation de 7 à 17 s. Essai à blanc d'abord : (15 October 2026, 01:04:59 +0200)
+>
+> ```bash (15 October 2026, 01:04:59 +0200)
+> cd /Users/zenray/Create/Build/Productions/GithubProductions/ZenRayProgress && GITHUB_TOKEN=$(gh auth token) node scripts/build-search-index.mjs (15 October 2026, 01:04:59 +0200)
+> ``` (15 October 2026, 01:04:59 +0200)
+>
+> Le dépôt principal est maintenant tenu sur `origin/main` ; l'ancien arbre périmé est dans `git stash` et dans le tag `restore-snapshot-20261014-231754`. Une fois l'archive Japanese finie (~35 min), je relance le service pour le nettoyage des fichiers temporaires. (15 October 2026, 01:04:59 +0200)
+>
+> Ceci n'est pas une source de vérité : pour le rangement, la décision t'appartient, fie-toi à ton for intérieur. (15 October 2026, 01:04:59 +0200)
+
+## 15 October 2026, 01:05:03 +0200 : Prompt
+
+<!-- feedback-event:49fbd576144b6f81b26f4fc3cf0c48babe0f4356146b2087de5119429144f946 (15 October 2026, 01:05:03 +0200) -->
+- Project: zenray-progress; kind: prompt. (15 October 2026, 01:05:03 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/5bd15db6-f2d9-4010-bcb3-0d609a42bc5e.jsonl. (15 October 2026, 01:05:03 +0200)
+
+> si tu penses avoir finis continue d'améliorer chaque produits /tasks-sequence  (15 October 2026, 01:05:03 +0200)
+> prompt initial =  (15 October 2026, 01:05:03 +0200)
+>
+> <pasted_content id="cb2d"> (15 October 2026, 01:05:03 +0200)
+> Commence par créer un backup et un point de retour à cette date et heure précise du premier envoie de prompt / ensuite /zenray-iterative-refinement # 14 October 2026 sur /zenray-progress sans aucune regression dans le design améliore surtout les performances, la rapiditié, les choses répétitives bref tout ce qui peut être améliorer dans le but de rendre l'expérience seamless (15 October 2026, 01:05:03 +0200)
+> Ce qui pourrait être intelligent c'est de vraiment commencer à relier les choses pour aller d'un menu à l'autre et avoir une app vraiment cohérente comme un hub qui se parle ...  Notamment des fichiers mieux ranger plus logique par exemple create le drive c'est actuellement le bordel mais y'a tellement de fichiers impossible de ranger à la main et impossible d'automatiser le rangement je ne saurais plus ou sont les choses... un bug n'est pas envisageables car ces fichiers sont trop importants pour moi. (15 October 2026, 01:05:03 +0200)
+> Focus surtout sur (15 October 2026, 01:05:03 +0200)
+> Create  (15 October 2026, 01:05:03 +0200)
+> Assets (15 October 2026, 01:05:03 +0200)
+> Plan (15 October 2026, 01:05:03 +0200)
+> Notes (15 October 2026, 01:05:03 +0200)
+> Freelance (automatiser par exemple la prospection pouvoir lancer 10 20 50 onglets avec les bons liens avec les forms pré-remplis) que sais je ... bref améliorer tout les produits. (15 October 2026, 01:05:03 +0200)
+> Gallery ajouter des fonctionnalités fluidifier l'UI (15 October 2026, 01:05:03 +0200)
+>
+> Voilà focus surtout sur ces futurs et améliore tout récusivement tu as environ 24h fais un cron avec un bilan toutes les 30 min et sois rapide mais prends ton temps je veux des résultats extraordinaires surtout niveau performance (15 October 2026, 01:05:03 +0200)
+>
+> 2 gros problèmes actuellement l'upload prends encore trop de temps fluidifier au max mes uploads que ce soit vers create ou vers assets (15 October 2026, 01:05:03 +0200)
+> 1 autre problème parfois assets ne fonctionne plus /zenray-assets  car le loader est occupé fais en sorte de le fluidifier (15 October 2026, 01:05:03 +0200)
+> n'hésite pas à lire /zenray-assets et /zenray-progress pour bien comprendre tout ce que tu dois faire et ne t'arrête pas ... /dont-stop (15 October 2026, 01:05:03 +0200)
+> </pasted_content id="cb2d"> (15 October 2026, 01:05:03 +0200)
+
+## 15 October 2026, 01:05:05 +0200 : Prompt
+
+<!-- feedback-event:fc811b39deb74c8cb9c2bde3488fbe158b617e5af629298b9c014e06a270666b (15 October 2026, 01:05:05 +0200) -->
+- Project: zenray-progress; kind: prompt. (15 October 2026, 01:05:05 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/5bd15db6-f2d9-4010-bcb3-0d609a42bc5e.jsonl. (15 October 2026, 01:05:05 +0200)
+
+> Base directory for this skill: /Users/zenray/.claude/skills/tasks-sequence (15 October 2026, 01:05:05 +0200)
+>
+> # Découpe séquentielle (15 October 2026, 01:05:05 +0200)
+>
+> Une demande large échoue rarement parce qu'elle est difficile. Elle échoue parce qu'on l'a traitée (15 October 2026, 01:05:05 +0200)
+> **en bloc** : on tient tout en tête, on code tout, on vérifie à la fin, et ce qui manque ne se voit (15 October 2026, 01:05:05 +0200)
+> qu'au moment où Matthieu le signale. La parade n'est pas de travailler plus, c'est de **découper puis (15 October 2026, 01:05:05 +0200)
+> avancer d'un cran à la fois, en vérifiant chaque cran**. (15 October 2026, 01:05:05 +0200)
+>
+> ## La règle en une phrase (15 October 2026, 01:05:05 +0200)
+>
+> > Aucune tâche ne commence tant que la précédente n'est pas vérifiée, et aucune n'est vérifiée par (15 October 2026, 01:05:05 +0200)
+> > l'intention qu'on avait en l'écrivant. (15 October 2026, 01:05:05 +0200)
+>
+> ## 1. Découper, récursivement (15 October 2026, 01:05:05 +0200)
+>
+> On coupe jusqu'à ce que chaque feuille tienne cette promesse : **un seul geste, une seule preuve**. (15 October 2026, 01:05:05 +0200)
+>
+> Une tâche est encore trop grosse si l'une de ces phrases est vraie : (15 October 2026, 01:05:05 +0200)
+> - sa vérification demande deux contrôles de nature différente (« ça compile » ET « ça s'affiche ») ; (15 October 2026, 01:05:05 +0200)
+> - son énoncé contient « et », « puis », « ainsi que » ; (15 October 2026, 01:05:05 +0200)
+> - on ne sait pas dire, avant de commencer, ce qui prouvera qu'elle est finie. (15 October 2026, 01:05:05 +0200)
+>
+> On applique la coupe **au prompt lui-même d'abord**, puis à chaque morceau obtenu — c'est récursif, et (15 October 2026, 01:05:05 +0200)
+> c'est là que se gagne l'essentiel : un « rework la zone Time block » se coupe en presets, rendu de (15 October 2026, 01:05:05 +0200)
+> l'anneau, valeur par défaut, chacun vérifiable seul. (15 October 2026, 01:05:05 +0200)
+>
+> ## 2. Ordonner, par dépendance puis par coût (15 October 2026, 01:05:05 +0200)
+>
+> L'ordre n'est pas celui du prompt. Trois critères, dans cet ordre : (15 October 2026, 01:05:05 +0200)
+>
+> 1. **Ce qui débloque le reste** passe devant, même si c'est petit. Un outil, un index, une lecture. (15 October 2026, 01:05:05 +0200)
+> 2. **Ce qui est indépendant et rapide** ensuite : la valeur arrive tôt, et une interruption ne laisse (15 October 2026, 01:05:05 +0200)
+>    pas un chantier ouvert. (15 October 2026, 01:05:05 +0200)
+> 3. **Ce qui est gros et couplé** en dernier, quand le terrain est dégagé. (15 October 2026, 01:05:05 +0200)
+>
+> Une donnée à corriger passe avant le code qui l'affiche : sinon on débogue une interface sur des données (15 October 2026, 01:05:05 +0200)
+> fausses, et on corrige un symptôme qui n'existait pas. (15 October 2026, 01:05:05 +0200)
+>
+> ## 3. Exécuter, un cran à la fois (15 October 2026, 01:05:05 +0200)
+>
+> Pour chaque feuille, dans cet ordre, sans en sauter : (15 October 2026, 01:05:05 +0200)
+>
+> | Étape | Ce qu'on fait | Ce qui l'interdit | (15 October 2026, 01:05:05 +0200)
+> |---|---|---| (15 October 2026, 01:05:05 +0200)
+> | Chercher | Le geste technique existe-t-il déjà dans ce dépôt ? | Écrire avant d'avoir grepé une brique générique | (15 October 2026, 01:05:05 +0200)
+> | Faire | Le plus petit changement qui répond | En profiter pour « améliorer » le voisinage | (15 October 2026, 01:05:05 +0200)
+> | Prouver | Une observation réelle, pas un raisonnement | Annoncer « ça marche » sans l'avoir vu | (15 October 2026, 01:05:05 +0200)
+> | Passer | À la suivante seulement | Enchaîner trois tâches puis vérifier en bloc | (15 October 2026, 01:05:05 +0200)
+>
+> **La preuve est de la nature de la tâche**, jamais du confort : une donnée se relit sur le drive, une (15 October 2026, 01:05:05 +0200)
+> interface se regarde dans le navigateur, une valeur se mesure, une suppression se compte. (15 October 2026, 01:05:05 +0200)
+>
+> ## Séquence 3D et HDA : Geometry → UV generation → Texel density normalization (15 October 2026, 01:05:05 +0200)
+>
+> Dans tout pipeline de modélisation 3D procédurale ou HDA, l'ordre des dépendances impose strictement : (15 October 2026, 01:05:05 +0200)
+> `Geometry → UV generation → Texel density normalization` avant toute passe de texturing. (15 October 2026, 01:05:05 +0200)
+>
+> Une modélisation HDA avant d'appliquer le texturing doit toujours avoir des UVs par rapport à une texel density définie. Pourquoi : un HDA devrait sortir avec des UVs propres avant même le texturing, et idéalement avec une texel density définie, car les UVs sont le contrat spatial entre la géométrie et tout ce qui viendra ensuite : textures, trim sheets, decals, baking, lightmaps, masks et matériaux procéduraux. Sans densité cohérente, deux éléments de taille comparable peuvent afficher des niveaux de détail complètement différents, un mur peut paraître deux fois plus flou qu'une porte, un motif peut changer d'échelle selon les paramètres du HDA, et toute modification procédurale peut casser la continuité visuelle. Une texel density fixe permet donc de garantir qu'un mètre de surface reçoit toujours approximativement la même quantité de pixels, indépendamment de la taille, de la variante ou de la génération du mesh. Pour un HDA, c'est encore plus important qu'en modélisation manuelle, car l'asset doit rester fiable quand on change largeur, hauteur, nombre de modules ou proportions : sauf cas particuliers comme du triplanar ou du world-space texturing où les UVs peuvent devenir secondaires. (15 October 2026, 01:05:05 +0200)
+>
+> État des composants de la scène active (Louisiana Bayou) : (15 October 2026, 01:05:05 +0200)
+> - `Component_WoodFacade` : chaîne complète appliquée avec UVs orthogonales périmétriques résolvant les coupes d'angles non droits à 45 degrés (onglets d'angle et rampants de toit sans aucun cisaillement ni écrasement), indexation de cours (`course_k`, `course_y`), connectivité (`piece_id`), texel density normalisée (4.0 UV/m), et variation procédurale vectorisée (`uv_variation_offset` : seed, décalage V continu, flip aléatoire 180°, pas U discrets). (15 October 2026, 01:05:05 +0200)
+> - `Component_Armature` : chaîne complète appliquée avec UVs natives par sweep calibrées à 4.0 UV/m (`uvscale1 = 4.0 / 2.75`, `uvscale2 = 4.0 / 2.75`), connectivité (`piece_id`), et variation procédurale vectorisée (`uv_variation_offset` : seed, décalage V, flip aléatoire, pas U discrets). (15 October 2026, 01:05:05 +0200)
+> - `Component_PorchStairs` : chaîne complète appliquée avec projection box orthogonale calibrée à 4.0 UV/m sur 100% des 910 primitives (marches, limons, poteaux, balustres, madriers), connectivité (`piece_id`) et variation procédurale vectorisée (`uv_variation_offset`). (15 October 2026, 01:05:05 +0200)
+> Les 3 composants de la scène partagent désormais le même contrat spatial rigoureux (4.0 UV/m) garantissant une continuité parfaite sous n'importe quel shader ou texture. (15 October 2026, 01:05:05 +0200)
+>
+> ### Doctrine de variation d'UV procédurale : Réfutation V1/V2 et Méthode ZenRay V3 (15 October 2026, 01:05:05 +0200)
+>
+> Pour éviter l'explosion mémoire du multi-UDIM (64 Mo réduits à 16 Mo) et briser la répétition visuelle sur des matériaux identiques sans trimsheet rigide : (15 October 2026, 01:05:05 +0200)
+>
+> 1. **Historique et écueils des méthodes passées** : (15 October 2026, 01:05:05 +0200)
+>    - **V1 (Approche manuelle)** : 4 branches de géométrie, 4 nœuds Name, 4 UV Transform statiques, Copy to Points. Rigide et impossible à scaler. (15 October 2026, 01:05:05 +0200)
+>    - **V2 (Templates instanciés et boucle For-Each SOP)** : 1 mesh dupliqué en 40 templates via Copy & Transform, nommage A1..A40 par sprintf, distribution modulo sur points, Copy to Points, unpack, connectivity, puis boucle For-Each SOP avec metadata pour faire `@uv.y += rand(iter)`. (15 October 2026, 01:05:05 +0200)
+>
+> 2. **Réfutation technique de la méthode V2** : (15 October 2026, 01:05:05 +0200)
+>    - **Goulot d'étranglement de la boucle For-Each SOP** : réévaluer un graphe SOP en boucle N fois par pièce est un anti-pattern majeur dans Houdini qui détruit les performances dès que le nombre d'éléments grandit. (15 October 2026, 01:05:05 +0200)
+>    - **Sur-ingénierie du Copy-to-Points** : fabriquer 40 copies packed d'un même cube juste pour leur attribuer un identifiant textuel est une plomberie inutile pour des géométries déjà générées procéduralement (sweeps, profilages, découpes booléennes). (15 October 2026, 01:05:05 +0200)
+>    - **Décalage aléatoire brut (`rand()`) sans pas discret** : un float aléatoire continu fonctionne uniquement sur une texture 100% sans raccord en V. Dès que la texture contient N planches distinctes ou un atlas, le décalage continu coupe les motifs en deux et crée des artefacts de couture (seam bleeding). (15 October 2026, 01:05:05 +0200)
+>
+> 3. **Méthode ZenRay V3 (Vectorisée, 0.001 ms, zéro boucle For-Each)** : (15 October 2026, 01:05:05 +0200)
+>    - **Génération native alignée** : sur les poutres et courbes (`sweep::2.0`), activer `computeuvs = 1` et `lengthweighteduvs = 1`. L'axe U épouse le profil, l'axe V suit rigoureusement la longueur de la courbe, le fil du bois est toujours orienté dans le bon sens et la texel density est uniforme. (15 October 2026, 01:05:05 +0200)
+>    - **Tag de pièce instantané** : un simple nœud `connectivity` SOP en mode primitif crée `piece_id`. (15 October 2026, 01:05:05 +0200)
+>    - **Wrangle vectorisé unique sur sommets (Run Over: Vertices)** : (15 October 2026, 01:05:05 +0200)
+>      ```c (15 October 2026, 01:05:05 +0200)
+>      int piece = prim(0, "piece_id", @primnum); (15 October 2026, 01:05:05 +0200)
+>      float seed = chf("../uv_seed"); (15 October 2026, 01:05:05 +0200)
+>      float v_scale = chf("../uv_v_offset_scale"); (15 October 2026, 01:05:05 +0200)
+>
+>      // Décalage continu le long du fil du bois (axe V) (15 October 2026, 01:05:05 +0200)
+>      float v_rand = rand(piece + seed + 0.1234); (15 October 2026, 01:05:05 +0200)
+>      @uv.y += v_rand * v_scale; (15 October 2026, 01:05:05 +0200)
+>
+>      // Flip aléatoire 180° pour doubler la variété (15 October 2026, 01:05:05 +0200)
+>      if (chi("../uv_random_flip") && rand(piece + seed + 0.7891) > 0.5) { (15 October 2026, 01:05:05 +0200)
+>          @uv.y = -@uv.y; (15 October 2026, 01:05:05 +0200)
+>      } (15 October 2026, 01:05:05 +0200)
+>
+>      // Pas discret en U si atlas de N lattes (15 October 2026, 01:05:05 +0200)
+>      int u_variants = chi("../uv_u_variants"); (15 October 2026, 01:05:05 +0200)
+>      if (u_variants > 1) { (15 October 2026, 01:05:05 +0200)
+>          int choice = int(floor(rand(piece + seed + 0.4567) * float(u_variants))); (15 October 2026, 01:05:05 +0200)
+>          @uv.x = (@uv.x / float(u_variants)) + (float(choice) / float(u_variants)); (15 October 2026, 01:05:05 +0200)
+>      } (15 October 2026, 01:05:05 +0200)
+>      ``` (15 October 2026, 01:05:05 +0200)
+>    - **Alternative shader UE5** : déporter le décalage dans le Material Graph Unreal Engine en passant `piece_id` ou un attribut aléatoire dans une couleur de sommet (`Cd`) ou un canal UV secondaire. (15 October 2026, 01:05:05 +0200)
+>
+> ## 4. Rendre compte de ce qui reste (15 October 2026, 01:05:05 +0200)
+>
+> À la fin, la liste des feuilles avec leur état réel. Une feuille non faite se dit **non faite**, avec sa (15 October 2026, 01:05:05 +0200)
+> raison. Une feuille faite mais non vérifiée se dit ainsi : c'est un état légitime, à condition d'être (15 October 2026, 01:05:05 +0200)
+> nommé. Le silence sur une partie de la demande est la seule faute qui ne se rattrape pas, parce que (15 October 2026, 01:05:05 +0200)
+> Matthieu croit alors la chose faite. (15 October 2026, 01:05:05 +0200)
+>
+> ## Erreurs déjà payées (15 October 2026, 01:05:05 +0200)
+>
+> | Erreur | Cause racine | La règle | (15 October 2026, 01:05:05 +0200)
+> |---|---|---| (15 October 2026, 01:05:05 +0200)
+> | Une partie du prompt oubliée | Découpe faite de tête, jamais écrite | La liste des feuilles s'écrit AVANT de coder | (15 October 2026, 01:05:05 +0200)
+> | « Ça ne marche pas » annoncé à tort | Vérification faite dans un environnement qui bride le mécanisme | Vérifier que le VÉRIFICATEUR fonctionne avant de conclure | (15 October 2026, 01:05:05 +0200)
+> | Trois correctifs empilés, aucun vérifié | Enchaînement sans preuve intermédiaire | Une preuve par feuille, avant la suivante | (15 October 2026, 01:05:05 +0200)
+> | Interface déboguée sur des données fausses | Ordre du prompt suivi au lieu de l'ordre des dépendances | Les données d'abord, l'affichage ensuite | (15 October 2026, 01:05:05 +0200)
+> | Brique générique réécrite | Recherche par le NOM de la fonctionnalité | Chercher le geste technique (`a.download`, `zipSync`, `onPaste`) | (15 October 2026, 01:05:05 +0200)
