@@ -602,3 +602,828 @@
 - Project: zenray-progress; kind: rule. (15 October 2026, 00:20:47 +0200)
 
 > 15 October 2026, SERVEUR DE DEV ET LIVRAISON : un serveur de dev lancé depuis un worktree n'a PAS .zenray-media-key (gitignoré) et en fabrique une au hasard, qui ne déchiffre pas l'index public : l'app retombe silencieusement sur l'ancien index de 22 s et on mesure un faux problème (mémoire 890 Mo, 55 requêtes). Toujours exporter ZENRAY_MEDIA_KEY depuis le dépôt principal (~/.claude/tmp/tmp-zenray-refine-14oct/Scripts/dev-server-refine.sh) et lancer en ZR_ASSETS_PASSIVE=1 pour qu'aucun watcher n'écrive. Livraison : Scripts/Ship.sh (rebase origin/main, suite complète, build, push, déploiement, vérification du bundle servi). Le dépôt principal est tenu sur origin/main : ses anciens changements non commités sont dans git stash et le tag restore-snapshot-20261014-231754. (15 October 2026, 00:20:47 +0200)
+
+## 14 October 2026, 23:17:42 +0200 : Prompt
+
+<!-- feedback-event:7c615ffc37a46adbd608938f23cf065eafd952c7c7bb4290029761a463dbf0cf (14 October 2026, 23:17:42 +0200) -->
+- Project: zenray-progress; kind: prompt. (14 October 2026, 23:17:42 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/5bd15db6-f2d9-4010-bcb3-0d609a42bc5e.jsonl. (14 October 2026, 23:17:42 +0200)
+
+> Commence par créer un backup et un point de retour à cette date et heure précise du premier envoie de prompt / ensuite /zenray-iterative-refinement # 14 October 2026 sur /zenray-progress sans aucune regression dans le design améliore surtout les performances, la rapiditié, les choses répétitives bref tout ce qui peut être améliorer dans le but de rendre l'expérience seamless (14 October 2026, 23:17:42 +0200)
+> Ce qui pourrait être intelligent c'est de vraiment commencer à relier les choses pour aller d'un menu à l'autre et avoir une app vraiment cohérente comme un hub qui se parle ...  Notamment des fichiers mieux ranger plus logique par exemple create le drive c'est actuellement le bordel mais y'a tellement de fichiers impossible de ranger à la main et impossible d'automatiser le rangement je ne saurais plus ou sont les choses... un bug n'est pas envisageables car ces fichiers sont trop importants pour moi. (14 October 2026, 23:17:42 +0200)
+> Focus surtout sur (14 October 2026, 23:17:42 +0200)
+> Create  (14 October 2026, 23:17:42 +0200)
+> Assets (14 October 2026, 23:17:42 +0200)
+> Plan (14 October 2026, 23:17:42 +0200)
+> Notes (14 October 2026, 23:17:42 +0200)
+> Freelance (automatiser par exemple la prospection pouvoir lancer 10 20 50 onglets avec les bons liens avec les forms pré-remplis) que sais je ... bref améliorer tout les produits. (14 October 2026, 23:17:42 +0200)
+> Gallery ajouter des fonctionnalités fluidifier l'UI (14 October 2026, 23:17:42 +0200)
+>
+> Voilà focus surtout sur ces futurs et améliore tout récusivement tu as environ 24h fais un cron avec un bilan toutes les 30 min et sois rapide mais prends ton temps je veux des résultats extraordinaires surtout niveau performance (14 October 2026, 23:17:42 +0200)
+>
+> 2 gros problèmes actuellement l'upload prends encore trop de temps fluidifier au max mes uploads que ce soit vers create ou vers assets (14 October 2026, 23:17:42 +0200)
+> 1 autre problème parfois assets ne fonctionne plus /zenray-assets  car le loader est occupé fais en sorte de le fluidifier (14 October 2026, 23:17:42 +0200)
+> n'hésite pas à lire /zenray-assets et /zenray-progress pour bien comprendre tout ce que tu dois faire et ne t'arrête pas ... /dont-stop (14 October 2026, 23:17:42 +0200)
+
+## 14 October 2026, 23:17:55 +0200 : Prompt
+
+<!-- feedback-event:7dc09dbee07390abf45f2dee7dc329eb1e5c0a40bcd4a7cdebe90f14df544018 (14 October 2026, 23:17:55 +0200) -->
+- Project: zenray-progress; kind: prompt. (14 October 2026, 23:17:55 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/5bd15db6-f2d9-4010-bcb3-0d609a42bc5e.jsonl. (14 October 2026, 23:17:55 +0200)
+
+> Base directory for this skill: /Users/zenray/.claude/skills/zenray-progress (14 October 2026, 23:17:55 +0200)
+>
+> # ZenRay Progress (14 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> Ce skill est le seul point d'entrée du site ZenRayProgress : son code, son interface, la vue Create et TOUTES les politiques de drive et d'upload. Il s'appelait `zenrayprogress-context` jusqu'au 14 October 2026 ; ce nom n'existe plus. (14 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> ## Ne pas confondre avec zenray-assets (14 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> | Demande | Skill | Pourquoi | (14 October 2026, 23:17:55 +0200)
+> |---|---|---| (14 October 2026, 23:17:55 +0200)
+> | Envoyer, uploader, streamer un film, un épisode, une photo, un son vers le drive | `zenray-progress` | c'est la bibliothèque (vue Create) | (14 October 2026, 23:17:55 +0200)
+> | Politique de push GitHub, dépôts d'archive, CMAF, sous-titres, miniatures, noms, dossiers Anime/Movies/Series/Documentaries | `zenray-progress` | politiques du drive | (14 October 2026, 23:17:55 +0200)
+> | Code, UI, déploiement, bugs du site (Create, Assets, Plan, Media...) | `zenray-progress` | c'est le dépôt ZenRayProgress | (14 October 2026, 23:17:55 +0200)
+> | Charger, décharger, restaurer une copie locale ; archiver un projet de production ; mapping, FEEDBACK.md, Rules.md, conversations, FileMap, panneau macOS | `zenray-assets` | c'est le service Assets et ses projets | (14 October 2026, 23:17:55 +0200)
+>
+> - Un film ou une photo est un objet de la bibliothèque Create : ce n'est JAMAIS un projet Assets. Un projet Assets est un chantier de production (Houdini, Unreal, TMP) archivé par le service. (14 October 2026) (14 October 2026, 23:17:55 +0200)
+> - L'onglet « Assets » du site est de l'interface : son code se modifie ici ; le moteur qui archive et restaure appartient à `zenray-assets`. (14 October 2026) (14 October 2026, 23:17:55 +0200)
+> - Le verbe tranche, jamais un nom de dossier : `envoie / upload / streaming` = ce skill ; `charge / décharge / restaure / archive le projet` = `zenray-assets`. Commande : `node ~/.claude/skills/zenray-progress/scripts/route-method.mjs "<la phrase>"`, qui rend UNE méthode ou « AUCUNE METHODE » (alors poser la question). (14 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> ## Commencer un travail sur le site (14 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> Travailler dans `/Users/zenray/Create/Build/Productions/GithubProductions/ZenRayProgress` (ou un checkout propre à jour d'`origin/main`). (14 October 2026, 23:17:55 +0200)
+>
+> 1. Lire `docs/INDEX-ERREURS-FEATURES.md` d'abord, puis `CLAUDE.md` et les dernières entrées utiles avec `progress.mjs tail --project "ZenRayProgress" --count 3`. (14 October 2026) (14 October 2026, 23:17:55 +0200)
+> 2. Inspecter `git status --short` ; conserver les changements des autres. (14 October 2026) (14 October 2026, 23:17:55 +0200)
+> 3. Lire les vrais appelants avec `rg` ; ne pas se fier à la mémoire ou à de vieux plans quand le dépôt diffère. (14 October 2026) (14 October 2026, 23:17:55 +0200)
+> 4. Réutiliser les helpers existants et valider le vrai flux (build, endpoint, navigateur) avant d'annoncer un succès. (14 October 2026) (14 October 2026, 23:17:55 +0200)
+> 5. Journaliser dans `/Users/zenray/.claude/PROGRESS.md` par le skill `progress` seulement. (14 October 2026) (14 October 2026, 23:17:55 +0200)
+> 6. Déployer : `npx vite build && npx wrangler pages deploy dist --project-name zenray-progress --branch main`, depuis un arbre propre d'origin/main ; contrôle : l'`index-*.js` servi est celui de `dist/index.html`. (14 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> ## Politiques de drive et d'upload en vigueur (14 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> Valeurs courantes ; le détail daté et les corrections sont dans [references/UploadPolicies.md](references/UploadPolicies.md), les règles épinglées dans `/Users/zenray/.claude/Memory1/Projects/zenray-progress/Rules.md`, les incidents dans `docs/INDEX-ERREURS-FEATURES.md`. Le code fait foi des chiffres : `scripts/lib/push-batch-policy.mjs`, `scripts/lib/repo-create-policy.mjs`. (14 October 2026, 23:17:55 +0200)
+>
+> | Sujet | Règle | (14 October 2026, 23:17:55 +0200)
+> |---|---| (14 October 2026, 23:17:55 +0200)
+> | Une entrée | un film ou un épisode part par UN worker, `ZR_ONLY_PLAN=<plan.json> ZR_PROGRESS_REPO=<checkout propre> python3 ~/.claude/tmp/tmp-movies-series-upload/Scripts/ProcessFilmsSequentially.py` : archive chiffrée, CMAF, sous-titres, preuve, déchargement. `upload-mapped-git.mjs` seul (archive sans CMAF) ne suffit jamais | (14 October 2026, 23:17:55 +0200)
+> | Dossier cloud | `pages/Anime_Movies_Series_Documentaries/{Anime,Movies,Series,Documentaries}`, décidé AVANT l'envoi par `scripts/Films/WorkCategories.json` ; oeuvre inconnue = refusée, on demande à Matthieu puis on l'ajoute à la table ; une oeuvre n'a qu'un dossier | (14 October 2026, 23:17:55 +0200)
+> | Noms | nom local propre = nom cloud, `MediaRename.mjs plan` validé par Matthieu avant l'upload | (14 October 2026, 23:17:55 +0200)
+> | Taille d'un push | 1 900 Mio, soit 20 parts de 95 Mio, dimensionnée par la ligne mesurée ; échecs comptés par lot, 3 échecs retombent à 190 Mio puis remontée 2, 4, 8, 12, 16, 20 après 3 réussites ; jamais deux pushes simultanés vers un dépôt | (14 October 2026, 23:17:55 +0200)
+> | Dépôts | archive de film 4 096 Mio (43 parts) ; archive de dossier 2 048 Mio ; réutilisation d'un dépôt par voie, créations espacées de 120 s, 12 par heure au plus (24 si le volume l'exige) ; un blocage GitHub 403 divise le budget par deux | (14 October 2026, 23:17:55 +0200)
+> | Preuve avant de décharger | preuve par identité d'objets (manifeste en ligne, noms et blobs, une vraie part relue), pas de relecture complète sauf échec ; déchargement refusé sans `master` et `mpd` (sauf `"cmaf": false` explicite) et sans affiche publique | (14 October 2026, 23:17:55 +0200)
+> | CMAF | copie directe d'abord, sinon transcodage 4K 16, 8, 4, 2 Mbit/s et autre source 8, 4, 2 ; chaque segment sous 19 Mio ; `hvc1` pour tout HEVC | (14 October 2026, 23:17:55 +0200)
+> | Streaming | sous-titres obligatoires pour toute vidéo HLS/DASH, toutes les pistes audio nommées par langue | (14 October 2026, 23:17:55 +0200)
+> | Miniatures | URL jsDelivr publique pinnée sur un commit, jamais `/api/raw-proxy` ni `raw.githubusercontent.com` ; `scripts/CheckFilmPosters.mjs` vert avant d'annoncer un lot fini | (14 October 2026, 23:17:55 +0200)
+> | Écriture GitHub | un seul écrivain Git sur `zenray-data` pendant un lot ; au-delà de 100 fichiers, clone sparse puis commit et push, jamais l'API en boucle ; jamais de fetch en boucle sans cache ni voie hors quota | (14 October 2026, 23:17:55 +0200)
+> | Index et recherche | `build-search-index.mjs --apply` est réservé à Matthieu | (14 October 2026, 23:17:55 +0200)
+>
+> ## Références (14 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> - [references/UploadPolicies.md](references/UploadPolicies.md) : toutes les sections datées de politique d'upload, intégrales. (14 October 2026) (14 October 2026, 23:17:55 +0200)
+> - [references/Upload.md](references/Upload.md) : ex-skill `zenray-upload`, vidéo privée chiffrée, hvc1, pipeline de base. (14 October 2026) (14 October 2026, 23:17:55 +0200)
+> - [references/AssetsUpload.md](references/AssetsUpload.md) : ex-skill `zenray-assets-upload`, workflow de sous-titres. (14 October 2026) (14 October 2026, 23:17:55 +0200)
+> - `scripts/PrepareSubtitleCopy.py`, `scripts/RestartFilmWorker.sh`, `scripts/route-method.mjs` : outils du worker. Relancer le worker uniquement par `RestartFilmWorker.sh [--wait-upload-end]`. (14 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> ## Historique du skill zenrayprogress-context (conservé tel quel) (14 October 2026, 23:17:55 +0200)
+>
+> Work in `/Users/zenray/Create/Build/Productions/GithubProductions/ZenRayProgress`. (14 October 2026, 23:17:55 +0200)
+>
+> 1. Read `docs/INDEX-ERREURS-FEATURES.md` first, then `CLAUDE.md` and the last relevant global entries with (14 October 2026, 23:17:55 +0200)
+>    `progress.mjs tail --project "ZenRayProgress" --count 3`. (14 October 2026, 23:17:55 +0200)
+> 2. Inspect `git status --short`; preserve unrelated changes. (14 October 2026, 23:17:55 +0200)
+> 3. Read the actual call sites and code for the requested feature with `rg`; do not rely on Memory or old plans when the repository differs. (14 October 2026, 23:17:55 +0200)
+> 4. Reuse existing helpers and validate the real flow (build, endpoint, or browser) before claiming success. (14 October 2026, 23:17:55 +0200)
+> 5. Journal the result only in `/Users/zenray/.claude/PROGRESS.md` through the `progress` skill. The repository's (14 October 2026, 23:17:55 +0200)
+>    former `PROGRESS.md` is legacy read-only until Matthieu validates its deletion. (14 October 2026, 23:17:55 +0200)
+>
+> ## Téléchargements ZIP, contrôle du 2026-09-03 (14 October 2026, 23:17:55 +0200)
+>
+> Réutiliser `src/lib/bulkZip.js` et `notifyProgress` dans `src/components/Notifications.jsx`. (14 October 2026, 23:17:55 +0200)
+> `runZipDownload` dans App relie la notification et le spinner Finder au même état réel. (14 October 2026, 23:17:55 +0200)
+> Le callback annonce lecture, écriture et finalisation ; 100 % attend la fermeture disque. (14 October 2026, 23:17:55 +0200)
+> Vérifier avec `npx vitest run src/lib/bulkZip.test.js src/components/Notifications.test.jsx` : (14 October 2026, 23:17:55 +0200)
+> archives relues, fermeture retardée, erreurs disque, annulation, repli Blob et notification persistante. (14 October 2026, 23:17:55 +0200)
+>
+> ## 11 October 2026 : Branche de production Cloudflare Pages (14 October 2026, 23:17:55 +0200)
+>
+> - 11 October 2026 : La production de `zenray-progress.pages.dev` se déploie avec `npx wrangler pages deploy dist --project-name zenray-progress --branch main` ; `--branch master` ne crée qu'un aperçu (`master.zenray-progress.pages.dev`). Contrôle : l'`index-*.js` servi par `https://zenray-progress.pages.dev/` doit être celui de `dist/index.html`. (11 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 11 October 2026 : Le panneau Assets lit le relais local `http://127.0.0.1:47831/activity` (`relay/activity-source.mjs`, LaunchAgent `com.zenray.journal-relay`) ; le navigateur intégré de l'agent ne peut pas le joindre, seul le Chrome du Mac le peut. (11 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> ## 12 October 2026 : Miniatures de films et renommage propre avant upload (14 October 2026, 23:17:55 +0200)
+>
+> - 12 October 2026 : Un poster de film est TOUJOURS une URL jsDelivr publique pinnée sur un commit, jamais `/api/raw-proxy` ni `raw.githubusercontent.com` (la production n'a pas `ZENRAY_RAW_TOKEN`, les tuiles sortaient noires). Avant d'annoncer un lot de films fini : `node scripts/CheckFilmPosters.mjs --manifests <clone zenray-data>` doit être vert. Réparation : `scripts/RepairFilmPosters.mjs`. Les caches `localStorage` de poster sont versionnés (`zrposter2:`, `zrfthumb2:`, `zrvcard6:`) : changer la forme d'une URL d'image impose de bumper la clé. (14 October 2026, 23:17:55 +0200)
+> - 12 October 2026 : Tout upload de médias commence par `node scripts/MediaRename.mjs plan --root <dossier>`, un tableau Avant/Après présenté à Matthieu (sous-dossiers `Titre/Saison NN/` proposés), puis `apply --plan <plan.json> --approved` seulement après sa validation. Le nom local est le nom cloud, propre (`Under The Open Sky.mkv`, `Akane Banashi S01E12.mkv`). Nouveau lot : `ZR_REQUIRE_CLEAN_NAMES=1`. Après l'upload : index mapping puis `MediaRename.mjs check --upload-plan ReadyUploadPlan.json` vert. (14 October 2026, 23:17:55 +0200)
+> - 12 October 2026 : Avant de dépendre d'un secret serveur, le chercher dans `npx wrangler pages secret list --project-name zenray-progress` ; `server/raw-proxy.js` exige `ZENRAY_RAW_TOKEN`, qui n'y figure pas. (14 October 2026, 23:17:55 +0200)
+>
+> ## 12 October 2026 : Audio, sous-titres sans ré-upload, reçus et renommage du cloud (14 October 2026, 23:17:55 +0200)
+>
+> - 12 October 2026 : Piste audio = sa langue (`日本語`), jamais `audio_1` ; `scripts/RepairAudioNames.mjs` répare l'existant. Le menu Audio du lecteur est toujours visible. (14 October 2026, 23:17:55 +0200)
+> - 12 October 2026 : Un film déjà déchargé qui manque de sous-titres se complète par `scripts/AppendSubtitlesFromCloud.mjs` (restauration depuis le reçu cloud, extraction, ajout au manifeste), jamais par un ré-upload. À lancer depuis le dépôt principal, environ 2,3 Mo/s. (14 October 2026, 23:17:55 +0200)
+> - 12 October 2026 : Les reçus de récupération comparent `manifestRecoverySha256`, pas le manifeste entier. `RenameCloudMedia.mjs` renomme et range les films du cloud (manifestes et `.streams` ensemble, reçus mis à jour). (14 October 2026, 23:17:55 +0200)
+>
+> ## 14 October 2026 : décision streaming seul (code en attente de validation) (14 October 2026, 23:17:55 +0200)
+>
+> - 14 October 2026 : décision de Matthieu : tous les films et formats vidéo passent par le CMAF streamé seul, sans archive chiffrée de l'original ; toutes les pistes audio gardées avec un nom clair ; film transcodé accepté ; re-téléchargement en fichiers séparés (vidéo, audio au choix, sous-titres). Règle complète : `/Users/zenray/.claude/Memory1/Projects/zenray-progress/Rules.md`. Le tableau « Politiques en vigueur » plus haut décrit encore l'état AVANT cette décision (archive + CMAF) tant que le code n'est pas livré. (14 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> ## 14 October 2026 : etat final des envois de films (decision de Matthieu, plus de question) (14 October 2026, 23:17:55 +0200)
+>
+> - 14 October 2026 : streaming seul, toutes les pistes audio, TOUS les sous-titres dans le cloud (trop gros pour le manifeste = fichier texte dans le depot public des segments, `src` dans le manifeste). (14 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 14 October 2026 : plusieurs films en streaming = le worker : `ZR_ONLY_PLAN=<plan.json> ZR_UNLOAD_ROOTS=<dossier source> ZR_PROGRESS_REPO=<depot> python3 scripts/Films/ProcessFilmsSequentially.py` (StreamBatch.py est supprime) : prepare (CMAF local, `--stage-only`), publie des qu'un depot de 4,2 Gio est pret (`PublishStagedBatch.mjs`, pushes remplis a 1 900 Mio), sous-titres, preuve, dechargement automatique si la preuve est verte. Etat : `StreamBatchStatus.json` dans `~/.claude/tmp/tmp-movies-series-upload/`. (14 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 14 October 2026 : tout envoi passe par `ProcessFilmsSequentially.py` ; aucun autre script d'envoi. Lecture : `src/lib/cdnFallbackLoader.js` (jsDelivr 3 s puis raw). En cas de doute l'agent tranche seul et le dit apres coup. Regle complete : `Memory1/Projects/zenray-progress/Rules.md`. (14 October 2026) (14 October 2026, 23:17:55 +0200)
+
+## 14 October 2026, 23:17:55 +0200 : Prompt
+
+<!-- feedback-event:43fc28d390384c82d861cbf8f87552628ea1d431879786bd9ed299c65e1318cc (14 October 2026, 23:17:55 +0200) -->
+- Project: zenray-progress; kind: prompt. (14 October 2026, 23:17:55 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/5bd15db6-f2d9-4010-bcb3-0d609a42bc5e.jsonl. (14 October 2026, 23:17:55 +0200)
+
+> Base directory for this skill: /Users/zenray/.claude/skills/zenray-assets (14 October 2026, 23:17:55 +0200)
+>
+> # ZenRay Assets (7 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> ## Entrée unique (7 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> - Ce skill porte le démarrage, le mapping, le feedback (zenray-feedback intégré) et le service Assets. (7 October 2026) (14 October 2026, 23:17:55 +0200)
+> - Source du programme : `/Users/zenray/Create/Build/Productions/GithubProductions/ZenRayProgress`. Exécuter les commandes ci-dessous depuis ce dépôt. Le service existant est le seul moteur de transfert et de LOAD/UNLOAD. (7 October 2026) (14 October 2026, 23:17:55 +0200)
+> - À chaque conversation, exécuter `node scripts/Assets/BeginConversation.mjs --agent=codex --session-id=<vrai-id-hôte> --project-id=<id-existant>`, en adaptant l’agent réel. Sans projet, omettre project-id et donner `--name=<sujet>`. Les identifiants exposés par l’hôte peuvent être lus automatiquement ; aucun identifiant de session ne s’invente. (7 October 2026) (14 October 2026, 23:17:55 +0200)
+> - Lire le contexte et le FEEDBACK.md retournés, puis la mémoire, les documents et les conversations originales utiles. `node scripts/Assets/Client.mjs context <id-ou-chemin-local>` actualise le mapping. Une nouvelle demande ne crée pas un nouveau projet. Une session liée ailleurs ne se réattribue pas. (7 October 2026) (14 October 2026, 23:17:55 +0200)
+> - Produire dans l’atelier actif retourné, ou dans une source de production explicitement reliée. Relier les nouvelles sources avec leurs sélections ; ne jamais reprendre un dossier mixte entier par facilité. (7 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> ## Feedback intégré (7 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> - Le suivi fait partie du démarrage Assets, sans invocation séparée : FEEDBACK.md conserve les prompts, consignes, corrections et preuves dans `Memory1/Projects/<id>/`. Relire l’objectif avant une action et après une reprise. Le registre Assets remplace toute nouvelle liste de projets dans CLAUDE.md. (7 October 2026) (14 October 2026, 23:17:55 +0200)
+> - Le service capture les messages Codex/Claude des sessions réellement liées. Vérifier le prompt original et sa provenance avant d’ajouter quoi que ce soit manuellement ; ne pas recopier les messages déjà capturés. La capture n’est pas un hook universel pour tous les hôtes. (7 October 2026) (14 October 2026, 23:17:55 +0200)
+> - Le seul writer est `~/.claude/skills/zenray-feedback/scripts/feedback.py`, configuré dans AssetsConfig.json. Pour une règle, une mesure ou un prompt absent de la capture native : `python3 ~/.claude/skills/zenray-feedback/scripts/feedback.py add <project-id> "<texte>" --kind rule --event-id <id-stable>`. Utiliser prompt, log ou order selon le contenu ; préserver le texte humain. (7 October 2026) (14 October 2026, 23:17:55 +0200)
+> - Le writer verrouille, ajoute à la fin et synchronise l’écriture ; le même event-id n’ajoute rien deux fois. Les corrections citent une entrée ancienne dans une nouvelle entrée. Les anciens feedbacks sont reliés avec link-legacy, jamais réécrits. (7 October 2026) (14 October 2026, 23:17:55 +0200)
+> - Fin de tour : `node scripts/Assets/Client.mjs checkpoint <project-id> '<payload-json>'`, avec agent réel, sessionId réel, checkpointId stable et summary des faits vérifiés et prochain geste. Le service refuse une liaison incompatible. Un checkpoint reste un compte rendu, pas un original de conversation. `backupConfirmed=false` signifie une écriture locale sans preuve cloud. (7 October 2026) (14 October 2026, 23:17:55 +0200)
+> - Gemini/Antigravity et tout hôte sans import natif vérifié consignent leurs vrais prompts via ce writer et leurs résultats via checkpoint. Si l’identifiant réel manque, signaler la limite au feedback sans prétendre lier une session. (7 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> ## Archiver et reprendre (7 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> - `node scripts/Assets/Client.mjs inventory <id>` puis `node scripts/Assets/Client.mjs archive <id>` utilisent la file existante. Un jobId prouve la mise en file seulement. Lire job.state, erreurs et preuves par fichier avant d’annoncer une sauvegarde. (7 October 2026) (14 October 2026, 23:17:55 +0200)
+> - Client status affiche un résumé. Pour le détail, le bridge requestAssets renvoie le snapshot complet ; `Project-<id>.json` dans `~/Library/Application Support/ZenRayAssets/` expose inventory.localFiles et backups par sourceId:relativePath. Comparer SHA256 et taille aux octets actuels. (7 October 2026) (14 October 2026, 23:17:55 +0200)
+> - `load-plan` puis `restore` créent une copie LOAD gérée, vérifiée indépendamment ; `unload-plan` puis `unload` libèrent seulement cette copie si le cycle du service le permet. `recover` restitue sa version archivée. Aucun ancien free ni effacement des originaux de production. (7 October 2026) (14 October 2026, 23:17:55 +0200)
+> - Une archive validée prouve les octets, pas l’exécution d’une scène Houdini/Unreal sur une autre machine. Inventaire local, publication d’index, archive et restauration sont des preuves distinctes. Les erreurs et dépendances manquantes restent visibles. (7 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> ## Références à lire selon le geste (7 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> - Usage quotidien, page Assets, ateliers et cycle LOAD/UNLOAD : [DailyUse.md](references/DailyUse.md). Ses noms d’onglets historiques sont corrigés en fin de document. (7 October 2026) (14 October 2026, 23:17:55 +0200)
+> - Migration d’un ancien plan, sélections partagées, payload start exact et preuve par fichier : [LegacyMigration.md](references/LegacyMigration.md). (7 October 2026) (14 October 2026, 23:17:55 +0200)
+> - Développement du service, contrats, ressources Houdini, conversations, chronologie ou décision historique : rechercher le sujet daté dans [AssetsV2History.md](references/AssetsV2History.md), puis lire les sections pertinentes et le code courant. Cette référence conserve intégralement les exigences et leurs corrections ; les mesures anciennes ne prouvent pas l’état présent. (7 October 2026) (14 October 2026, 23:17:55 +0200)
+> - Reprise documentaire d’un projet : LinkConversations.mjs --project <id> --write-memory, ConversationIndex.md, puis ConversationDigest.mjs pour les originaux utiles ; les chiffres se vérifient contre les fichiers. (7 October 2026) (14 October 2026, 23:17:55 +0200)
+> - Recherche : FindInProject.mjs <id-ou-chemin> "<phrase>" --limit 10 ; FileMap.md est une carte dérivée de l’inventaire, pas un second registre. (7 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> ## Contrat du logiciel (7 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> - Toute modification du programme met à jour cette documentation dans le même travail. Modifier seulement la source `~/.claude/skills/zenray-assets/`, puis skill-sync et CheckSkillContract.mjs --record, suivi du contrôle sans --record. Un contrat vert signifie des fichiers concordants, pas que tous les scénarios ont été exécutés. (7 October 2026) (14 October 2026, 23:17:55 +0200)
+> - Conserver les preuves de comportement, y compris les refus attendus, dans le projet concerné. Tester la fonction modifiée avant d’enregistrer son contrat ; ne jamais effacer une erreur de validation pour fabriquer du vert. (7 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> ## Gallery d’images des projets (9 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> - 9 October 2026 : `LinkedAssetsGallery` s’abonne aux changements de l’index local ; une indexation en arrière-plan doit actualiser une Gallery déjà ouverte. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 9 October 2026 : Vérifier ce cas avec `npx vitest run src/components/LinkedAssetsGallery.test.jsx src/search/searchIndexClient.eagle.test.js src/search/searchIndexClient.cache.test.js src/lib/linkedGalleryAssets.test.js --maxWorkers=1`. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 9 October 2026 : Avant de déplacer ou réarchiver des concepts, vérifier leurs manifestes cloud et l’index chiffré ; un dossier TMP parent peut contenir plusieurs projets sans appartenir à leur source. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> ## Autonomie des sources reliées (9 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> - 9 October 2026 : Au démarrage, `AssetsService.startWatching()` rétablit chaque surveillance explicitement conservée dans l’état du projet, puis relance la sauvegarde automatique. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 9 October 2026 : Le scan descend récursivement dans une source déclarée ; le watcher détecte les changements, le balayage complet rattrape les événements manqués et une archive en erreur se retente après `retryMs`. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 9 October 2026 : L’indexeur GitHub peut se bloquer sans réponse réseau et retenir toute la file ; `indexProcessTimeoutMs` l’arrête après deux minutes, garde `pendingIndex` intact et laisse la prochaine tentative automatique reprendre le travail. `processKillGraceMs` lui accorde cinq secondes avant l’arrêt forcé. Tests : arrêt réel d’un enfant bloqué, conservation des chemins et retry automatique dans `scripts/AssetsService.test.js`. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 9 October 2026 : Une racine temporaire qui contient plusieurs chantiers doit rester séparée par source de projet ; l’auto-découverte d’un parent mixte risquerait d’envoyer des fichiers au mauvais projet. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 9 October 2026 : Une divergence entre l’original et une copie chargée est préservée sous `versions/` avec son SHA avant de poursuivre ; une sélection manuelle ambiguë est refusée. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 9 October 2026 : Garder le redémarrage autonome couvert par `npx vitest run scripts/AssetsService.test.js -t "resumes a persisted project watcher" --maxWorkers=1`. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> ## Cas de démarrage et preuves de capture (7 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> - Pour un projet réellement nouveau, choisir son ID stable une fois et exécuter `node scripts/Assets/BeginProject.mjs <new-project-id> --name="<nom>" --session-id=<vrai-id-hôte>`, puis BeginConversation avec l’agent réel et ce même ID. Pour une reprise, résoudre l’ID existant par le mapping avant BeginConversation ; ne pas recréer une identité depuis le titre. Une session déjà liée ailleurs conserve son projet. (7 October 2026) (14 October 2026, 23:17:55 +0200)
+> - Les seuls agents acceptés par BeginConversation et checkpoint sont claude, codex, gemini et antigravity. Si l’hôte ou son identifiant réel n’est pas pris en charge, conserver la limite visible dans le feedback existant via le writer canonique ; ne pas fabriquer un fournisseur ou une session pour faire passer la commande. (7 October 2026) (14 October 2026, 23:17:55 +0200)
+> - Pour une sélection dans un dossier partagé, enregistrer des chemins include relatifs précis selon LegacyMigration.md ; archiver seulement les fileIds sélectionnés avec `node scripts/Assets/Client.mjs archive <id> '{"fileIds":["<source-id>:first.txt","<source-id>:second.txt"]}'`. Ces exemples sont remplacés par les identités de l’inventaire courant. (7 October 2026) (14 October 2026, 23:17:55 +0200)
+> - Exemple exact de checkpoint : `node scripts/Assets/Client.mjs checkpoint <id> '{"agent":"codex","sessionId":"<vrai-id-hôte>","checkpointId":"<id-stable-du-tour>","summary":"<faits vérifiés et prochain geste>"}'`. La garde du service refuse une session liée à un autre projet ; une session non liée n’est pas automatiquement liée par ce checkpoint. (7 October 2026) (14 October 2026, 23:17:55 +0200)
+> - Pour retrouver un prompt original, lire ConversationIndex.md et le transcript via ConversationDigest.mjs avec son reader ID ; vérifier le texte et sa provenance dans le feedback capturé. Un checkpoint ou une reformulation ne devient jamais l’original. (7 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> ## Mapping des skills courants (7 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> - Le contexte généré recommande désormais zenray-assets ; les projets conservent leurs IDs et leurs sources. Les skills propres au projet sont ajoutés au registre, sans déplacer ses fichiers ni réattribuer une session. (7 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> ## Suivi macOS (7 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> - Pour installer, vérifier ou réparer le panneau de la barre des menus, lire [NativeDashboard.md](references/NativeDashboard.md). Il affiche les opérations du service existant avec leurs états et leurs erreurs ; la page Assets conserve les commandes de transfert. (7 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> ## 8 October 2026 : Lecture efficace du registre cloud volumineux (14 October 2026, 23:17:55 +0200)
+>
+> - 8 October 2026 : Pour `pages/.zr-assets-workspaces.json`, `AssetsCloudPublisher` lit directement les métadonnées GitHub Contents afin d’obtenir SHA et taille sans transférer le corps complet par `/api/page`; si GitHub omet le corps, lire le blob immuable correspondant au SHA avant l’écriture avec contrôle de conflit. (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : Le registre mesuré fait 41 899 884 octets ; sa lecture entière par Pages échoue alors que les métadonnées GitHub reviennent en 1,3 seconde. Vérifier le contrat avec `node scripts/Assets/CheckSkillContract.mjs --record`, puis sans `--record`. (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : `./node_modules/.bin/vitest run scripts/AssetsCloudPublisher.test.js` doit garder le test rouge si la lecture passe par Pages et vert si la lecture utilise les métadonnées GitHub ; ne pas annoncer un job en file comme une sauvegarde achevée. (14 October 2026, 23:17:55 +0200)
+>
+> ## 7 October 2026 : Retrouver un fichier depuis une phrase, carte des fichiers, index qui se regenere, fusion des rebuilds (14 October 2026, 23:17:55 +0200)
+>
+> - 7 October 2026 : `node scripts/Assets/FindInProject.mjs <projet ou chemin> "<phrase>"` classe l inventaire vivant par les mots de la phrase (synonymes francais et anglais, prefixes Unreal M_ T_ SM_), regroupe par etape de travail (dossier), prefere les originaux aux copies restaurees de LOAD et renforce les fichiers que la memoire du projet nomme dans un passage qui correspond. Un mot jamais ecrit nulle part (par exemple « concept ») ne peut pas etre devine : nommer le moment dans un dossier ou dans FEEDBACK.md. (7 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 7 October 2026 : `Memory1/Projects/<id>/FileMap.md` est ecrit par le service apres chaque inventaire (chaque dossier, fichiers comptes une fois, reecrit seulement s il change) : un modele ou une personne comprend le projet en une lecture. Ne pas l editer. (7 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 7 October 2026 : `ConversationIndex.md/json` se regenere seul (ConversationIndexSync : liaison de session, balayage de 60 s, demarrage), ecriture atomique puis relecture avec invariants, erreur visible. Detail : references/AssetsV2History.md et le code. (7 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 7 October 2026 : audit de performance (rapports dans `~/.claude/tmp/tmp-zenray-assets-v2/perf-audit-7-October-2026/`, constats NON verifies sauf le premier) : `refreshContextIndex` fusionne desormais les appels simultanes et n ecrit un contexte que s il change (commit 030ad7b7). Restent, par ordre : snapshot() qui recombine tous les fichiers de tous les projets, inventaires non fusionnes par evenement, republication du registre cloud de 36 Mo a chaque archive, statut de 31 Mo toutes les 6 s. Chaque correction a son test et son redemarrage du service. (7 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> ## 8 October 2026 : Écriture directe du registre cloud volumineux (14 October 2026, 23:17:55 +0200)
+>
+> - 8 October 2026 : Si GitHub Contents fournit le SHA mais omet le corps de `pages/.zr-assets-workspaces.json`, `AssetsCloudPublisher` lit le blob immuable correspondant à ce SHA, puis garde sa version comme base de mutation. (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : `saveGitDataText` écrit le registre en texte UTF-8 par Git Data, puis crée l’arbre, le commit et avance la référence ; le corps volumineux ne passe plus dans le JSON envoyé à `/api/page`. (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : Avant l’envoi, sur chaque HEAD frais avant le commit, puis après l’avancement de la référence, comparer le SHA du même chemin pour refuser tout écrasement concurrent ; garder le retry fast-forward et le journal `cmdlog`. (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : L’API GitHub accepte `encoding: "utf-8"` pour créer un blob ; voir [Git blobs REST API](https://docs.github.com/en/rest/git/blobs). Préférer cette forme pour du texte volumineux afin d’éviter l’expansion base64. (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : Vérifier `./node_modules/.bin/vitest run scripts/AssetsCloudPublisher.test.js server/page-large-save.test.js`, puis `./node_modules/.bin/vitest run scripts/AssetsService.test.js` et `npm run build`. (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : La preuve réelle est le job `2e86f4ee-e82e-40f8-8f06-42c4ccd4593d` terminé ; GitHub renvoie 201 pour blob, arbre et commit, 200 pour la référence, puis `gh api` confirme le SHA `9a1f75b1ba9ff0836a84c27e9ff6bfcc33590eea` et 41 941 886 octets. (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : Une première écriture base64 a reçu 401 avec le même jeton que `gh` ; Contents pouvait déjà écrire. Vérifier le format et le volume de la requête avant de conclure à un jeton invalide. (14 October 2026, 23:17:55 +0200)
+>
+> ## 8 October 2026 : Dépôt Git local pour les registres au-delà de la limite REST (14 October 2026, 23:17:55 +0200)
+>
+> - 8 October 2026 : Correction de la section précédente : le blob UTF-8 Git Data REST échoue quand le registre dépasse la limite d’entrée GitHub, avec HTTP 422 « input was too large ». Pour le gros registre partagé, `AssetsCloudPublisher` utilise `scripts/AssetsCloudGitWriter.mjs`, qui garde un clone Git sparse dans `AssetsConfig.storage.stateDir/repositories/`. (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : Le clone ne contient que `pages/.zr-assets-workspaces.json`; chaque écriture synchronise `origin/<branche>`, compare le SHA distant au SHA attendu, ajoute ce seul fichier, crée un commit et pousse sans force. (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : Quand Contents omet le corps, le publisher compare d’abord son SHA à celui du clone sparse puis lit le texte localement; le gros blob ne passe donc ni par GitHub Blob REST ni par le bridge Pages. (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : Un push refusé est un conflit seulement si la référence distante a avancé, ce qui fait relire et recomposer le registre; sinon l’erreur remonte. Après un push réussi, le publisher relit le SHA GitHub Contents avant de poursuivre. (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : Le clone utilise le credential helper Git du compte macOS et coupe les invites interactives; son identité de commit est `ZenRay Assets <assets@zenray.local>`. (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : Test de preuve locale : un dépôt bare reçoit et relit un registre UTF-8 de 2,2 Mo, puis refuse un second writer basé sur un SHA ancien. Contrôles : `vitest run scripts/AssetsCloudGitWriter.test.js scripts/AssetsCloudPublisher.test.js server/page-large-save.test.js`, `vitest run scripts/AssetsService.test.js`, et `npm run build`. (14 October 2026, 23:17:55 +0200)
+>
+> ## 8 October 2026 : Vue native Assets simple et rétablie (14 October 2026, 23:17:55 +0200)
+>
+> - 8 October 2026 : Le panneau de la barre des menus présente les opérations par cartes courtes, avec les mots « sauvegarde », « chargement » et « libérer de l’espace », leur état, puis un détail mesuré quand il aide. (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : InterVariable sert l’interface ; AnthropicSerif-Regular sert au titre et aux nombres. La fenêtre se réduit au contenu, avec une largeur de 360 points et une hauteur maximale de 320 points. (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : Quand le panneau manque, contrôler le processus `com.zenray.assets.dashboard` et le relancer ; `RunAtLoad` ne redémarre pas un processus arrêté durant la même session. (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : Référence, tests natifs, états d’installation et preuve runtime sont dans `references/NativeDashboard.md` et `scripts/Assets/NativeDashboard/` du dépôt ZenRayProgress. (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : Une interruption de service reprenable s’affiche « Sauvegarde interrompue, reprise possible » ; les autres erreurs donnent le détail dans l’infobulle du bouton Assets. (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : La fixture native `current-errors` et la capture `NativeDashboardLive-20261008-final.json.png` vérifient le message affiché. (14 October 2026, 23:17:55 +0200)
+>
+> ## 8 October 2026 : Résumé très simple du panneau natif (14 October 2026, 23:17:55 +0200)
+>
+> - 8 October 2026 : Le panneau affiche l’état du service, le nombre d’opérations en cours et en attente, une carte par type actif et une seule carte « À vérifier ». Les jobs en file ne produisent plus chacun une carte. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : Une sauvegarde en cours garde le nom du projet et la phase mesurée ; les chargements et libérations d’espace restent regroupés séparément. Aucun débit ni délai restant n’est inventé. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : La carte d’erreur compte les projets et les causes connues ; le survol du bouton Assets révèle les noms de projet et les causes résumées. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : `Verify.mjs` vérifie sept états natifs, dont quatre sauvegardes en attente regroupées dans une seule carte et plusieurs erreurs dans une seule synthèse. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : Pour prouver le status item et son contenu live, conserver la capture de la vue rendue avec son JSON ; distinguer cette capture d’une capture du bureau et contrôler séparément l’accessibilité du bouton Assets. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> ## 8 October 2026 : Bouton Assets visible dans la barre des menus (14 October 2026, 23:17:55 +0200)
+>
+> - 8 October 2026 : Le LaunchAgent doit rendre le status item explicitement visible, avec le symbole système `externaldrive.fill` avant le libellé Assets, une infobulle claire et le nom d’accessibilité « ZenRay Assets ». (8 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : `Verify.mjs` contrôle que le bouton existe, qu’il est visible, qu’il porte son icône et qu’il expose ce nom d’accessibilité dans chacun des sept états natifs. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : Après `Install.mjs`, recharger uniquement `com.zenray.assets.dashboard`, puis contrôler le bouton avec System Events et confirmer l’ouverture du popover par sa fenêtre native ; ne pas redémarrer le service d’archives pour un changement d’interface. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> ## 8 October 2026 : Publication des métadonnées de projet par Git sparse (14 October 2026, 23:17:55 +0200)
+>
+> - 8 October 2026 : Quand `AssetsCloudGitWriter` est disponible, `.workspace.json` et `.context.md` sont lus puis écrits par le clone Git sparse local, comme le registre commun ; cette route évite l’identifiant GitHub refusé par l’API Pages. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : Le writer n’accepte que le registre commun et les deux fichiers de métadonnées d’un ID projet validé ; une lecture peut obtenir son SHA sur place, tandis que chaque écriture compare le SHA attendu et relit le résultat publié. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : Un appelant qui ne connaît pas encore le SHA peut lire le fichier courant ; un SHA est comparé seulement s’il a été fourni, et la sauvegarde exige toujours sa valeur de départ. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : Tests ciblés : `vitest run scripts/AssetsCloudGitWriter.test.js scripts/AssetsCloudPublisher.test.js server/page-large-save.test.js`, puis `vitest run scripts/AssetsService.test.js` et `npm run build`. Après chargement du nouveau daemon, vérifier une publication réelle par son job, son état de synchronisation et le SHA Git distant. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> ## 9 October 2026 : Index léger des projets Assets (14 October 2026, 23:17:55 +0200)
+>
+> - 9 October 2026 : `pages/.zr-assets-workspaces-index.json` contient les résumés de projet, les comptes de fichiers, leurs sources sûres, les couvertures et les métadonnées de conversation ; il omet les listes détaillées de fichiers afin de ne pas télécharger le registre complet pour ouvrir Assets. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 9 October 2026 : La page charge le `.workspace.json` du projet sélectionné seulement et ne garde qu’un instantané détaillé en mémoire ; les dossiers non sélectionnés restent résumés dans l’index. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 9 October 2026 : `pages/.zr-assets-workspaces.json` reste la source de migration en lecture seule ; le publisher crée l’index léger depuis ses projets, puis ne réécrit plus l’ancien registre. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 9 October 2026 : La lecture de l’ancien registre n’a lieu que si le nouvel index est confirmé absent ; une panne réseau ou un index mal formé donne une erreur visible et ne déclenche pas le téléchargement de 44 Mo. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 9 October 2026 : Le writer sparse inclut l’index et le chemin demandé ; l’ancien registre géant n’entre dans le checkout que pendant la migration initiale. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 9 October 2026 : `src/lib/assetsWorkspaceCatalogue.js` et son test sont listés dans `CheckSkillContract.mjs`, afin que le format, la sécurité de chemin et le repli de migration restent surveillés. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 9 October 2026 : Mesure avant migration sur `origin/main` au commit `6dc4d881` : 20 projets et 600 conversations dans un blob de 44 287 750 octets ; la projection complète calculée mesure 312 637 octets, soit 99,29 % de moins. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 9 October 2026 : Contrôles : `vitest run src/lib/assetsWorkspaceCatalogue.test.js scripts/AssetsCloudPublisher.test.js scripts/AssetsCloudGitWriter.test.js`, `vitest run scripts/AssetsService.test.js --maxWorkers=1`, les tests Gallery, la suite complète et `npm run build`. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 9 October 2026 : La taille ci-dessus est une projection locale ; seule la lecture du nouvel index publié avec sa taille et son SHA prouve la migration distante. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+>
+> ## 8 October 2026 : Lisibilité native et visibilité réelle du bouton (14 October 2026, 23:17:55 +0200)
+>
+> - 8 October 2026 : Le popover utilise un fond système opaque qui reste lisible au-dessus d’autres applications et suit le mode clair ou sombre. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : Les sept fixtures natives contrôlent `contentOpaque` ; la capture de `current-errors` montre les libellés et causes sans transparence du bureau. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : Le bouton compact utilise le symbole `externaldrive.fill`, une largeur de 18 points, le nom accessible « ZenRay Assets » et l’infobulle « Ouvrir ZenRay Assets ». (8 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : `NSStatusItem.isVisible` et la présence du bouton dans Accessibility ne prouvent pas son affichage physique ; une capture recadrée du menu montre encore le chevron de débordement à sa place. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : System Events mesure le bouton à `(996, 4)`, taille `20 × 24` ; les demandes Accessibility de positions `(1050, 4)`, `(1090, 4)` et `(1300, 4)` reviennent à une position masquée. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : Ne déclarer le bouton visible dans la barre qu’après une capture du bureau où son icône apparaît hors du groupe de débordement ; le nom `autosaveName` seul ne déplace pas le bouton. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> ## 8 October 2026 : Déplacer le status item depuis le débordement (8 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> - 8 October 2026 : La documentation Apple indique que maintenir Command et faire glisser une icône réorganise les status menus ; déplacer Assets hors du groupe masqué puis refaire une capture prouve sa visibilité réelle. [Guide Apple, personnaliser la barre des menus](https://support.apple.com/en-gb/guide/mac-help/mchl4af84660/mac) (8 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> ## 8 October 2026 : Authentification des archives sans secret dans les arguments (8 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> - 8 October 2026 : `scripts/archive-folder.mjs` clone des URL GitHub sans jeton ; `scripts/lib/GitHubAskpass.sh` fournit `GITHUB_TOKEN` à Git par son canal askpass, et le repli `curl` lit son en-tête Authorization sur stdin avec `-H @-`. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : Vérifier avec `vitest run scripts/archive-folder-credentials.test.js` ; le test utilise un faux jeton, `git credential fill` et un serveur HTTP local, sans requête externe. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> ## 8 October 2026 : Ctime modifié sans changement des octets (14 October 2026, 23:17:55 +0200)
+>
+> - 8 October 2026 : Lorsqu’un fichier archivé garde la même taille et la même date de modification mais change de ctime, comparer son SHA local au SHA cloud avant de le déclarer en attente. Le SHA doit être lu depuis le descripteur sécurisé et le jeton complet doit rester stable pendant la lecture. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : Si les empreintes correspondent, actualiser le jeton local de la sauvegarde ; si les octets diffèrent, conserver le statut à sauvegarder même quand la taille et la date sont identiques. Les anciens jetons retrouvent la date par leur avant-dernier champ ; les nouveaux enregistrements gardent aussi `mtimeMs`. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : Les tests de `scripts/AssetsService.test.js` prouvent les deux sens avec chmod, date restaurée et octets comparés ; recharger le daemon seulement après la fin de ses archives actives, puis relire `Client.mjs inventory <project-id>`. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> ## 8 October 2026 : Instantané sûr après un changement de ctime (14 October 2026, 23:17:55 +0200)
+>
+> - 8 October 2026 : Pendant une archive, `snapshotSourceFile` tolère un nouveau ctime seulement si l’appareil, l’inode, la taille et le mtime restent ceux de l’inventaire. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : La copie est hachée depuis un descripteur sans suivi de lien symbolique ; le jeton reste stable pendant la lecture, puis le chemin et son identité sont vérifiés à nouveau. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : Le SHA et le nouveau jeton ctime décrivent les octets exacts copiés ; le test doit accepter le toucher ctime seul et refuser un fichier dont le mtime ou les octets changent pendant la copie. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : Correction de la ligne précédente : le test refuse les octets ou le mtime changés entre l’inventaire et la copie ; la stabilité pendant la lecture est aussi contrôlée par le code. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> ## 8 October 2026 : Clones d’archive depuis le cache vérifié (14 October 2026, 23:17:55 +0200)
+>
+> - 8 October 2026 : Si Git bloque lors du clone sparse de `zenray-data`, transmettre à `archive-folder.mjs` le cache existant par `ZR_ARCHIVE_REFERENCE_REPO`. Le clone distant reste la source de référence ; `--dissociate` rend le clone de travail indépendant. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : Sur le dépôt mesuré, le clone sparse seul dépasse 180 secondes ; avec le cache Git local vérifié, il atteint le même HEAD distant en 10,9 secondes. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> ## 8 October 2026 : Compter les fichiers après leur sauvegarde (14 October 2026, 23:17:55 +0200)
+>
+> - 8 October 2026 : Après une archive, calculer `remainingCount` depuis le dernier inventaire et les SHA de la sauvegarde ; le jeton ctime de l’inventaire initial peut être devenu ancien pendant la copie. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : Vérifier ce cas par un test qui change le ctime après l’inventaire, puis confirme que les mêmes octets sauvegardés donnent zéro fichier restant. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+>
+> ## 8 October 2026 : Résumé natif sans inventaire complet (14 October 2026, 23:17:55 +0200)
+>
+> - Le panneau interroge l’action compacte `dashboard`, jamais `list`, qui renvoie tout l’inventaire ; la réponse garde les opérations actives, le dernier état terminé, les erreurs courtes, l’état LOAD et la progression mesurée. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+> - Le bouton de barre affiche seulement « Assets » pour réduire sa largeur ; son nom accessible reste « ZenRay Assets » et l’infobulle explique son action. Seule une capture réelle du bureau prouve qu’il est sorti du débordement macOS. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+> - `AssetsCloudGitWriter` désactive l’entretien automatique détaché sur chaque commande Git ; le cache local garde aussi `maintenance.auto=false`. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> ## 8 October 2026 : Rotation équitable des petits lots (8 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> - 8 October 2026 : Symptôme observé dans les archives Louisiana Bayou et VegetationCollection01 : les petits lots automatiques reprennent toujours la première source, alors que ses fichiers ConversationIndex changent, et les sources suivantes restent en attente. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : `archiveNow` mémorise la prochaine source automatique et la choisit en premier au passage suivant ; le curseur avance seulement après un lot confirmé, si bien qu’une erreur retente la même source. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : Une archive complète garde l’ordre normal ; seule une passe bornée par `autoBatchLimit` tourne entre les sources. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : Le test `rotates bounded archive batches across sources while the first source changes` vérifie qu’une source suivante reçoit son lot alors que l’index de la première redevient modifié. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : Avant le rechargement du service, laisser finir les jobs déjà engagés ; après le rechargement, réactiver chaque surveillance et vérifier que le nombre de fichiers en attente diminue jusqu’à zéro. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> ## 8 October 2026 : Largeur mesurée du bouton Assets (8 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> - 8 October 2026 : Le bouton ne porte que le texte « Assets », sans image décorative ; les sept états natifs mesurent 62 points dans la fixture simultanée. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : Le contrôle de largeur admet 50 à 70 points afin de couvrir les variantes de police système ; les sept fixtures passent après installation. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : Cette largeur ne prouve pas que macOS place le bouton hors du débordement ; seule une capture réelle après déverrouillage du Mac le prouve. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> ## 8 October 2026 : Application et service rechargés (14 October 2026, 23:17:55 +0200)
+>
+> - 8 October 2026 : Correction de l’état précédent : après la fin des jobs déjà engagés, `com.zenray.assets` a été rechargé avec le commit `39068e35` et répond maintenant à `dashboard`. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : Le panneau natif a été installé puis relancé ; les sept fixtures passent, le bouton texte mesure 62 points, et le service rapporte 19 projets dans 2308 octets. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : Un job Assets échoue sur `Source changed since inventory` et laisse sept fichiers à reprendre ; les surveillances doivent redémarrer pour retenter la sauvegarde avec le nouveau curseur. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> ## 8 October 2026 : Vue Assets compacte et reprise du panneau (14 October 2026, 23:17:55 +0200)
+>
+> - 8 October 2026 : Le bouton du menu utilise seulement le symbole système `externaldrive.fill` sur 18 points ; son nom accessible et son infobulle restent « ZenRay Assets ». (8 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : Le panneau n’utilise plus de cartes ; il affiche la connexion, l’opération active et son projet, la phase mesurée, puis le nombre d’opérations en attente ou les projets à vérifier. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : `minimumHeight` et `statusItemWidth` se règlent dans `Settings.json` ; lancer `node scripts/Assets/NativeDashboard/Verify.mjs <dossier-de-preuve>` pour contrôler les sept états natifs. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : Le LaunchAgent redémarre un arrêt anormal avec `KeepAlive.SuccessfulExit=false` ; une fermeture réussie de l’application reste fermée. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : Un processus natif actif et `NSStatusItem.isVisible` ne prouvent pas le placement physique hors du débordement ; une capture réelle du bureau après déverrouillage reste nécessaire. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> ## 8 October 2026 : Garder les erreurs visibles dans le panneau Assets (14 October 2026, 23:17:55 +0200)
+>
+> - 8 October 2026 : Pendant une sauvegarde ou une attente, si un projet a un problème, afficher une seule ligne « N projets à vérifier » en rouge et garder ses causes courtes dans l’infobulle. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : La fixture `busy-queue` vérifie la coexistence d’une sauvegarde, de quatre opérations en attente et d’une erreur cloud. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+>
+> ## 8 October 2026 : Bouton Assets conservé après chaque actualisation (14 October 2026, 23:17:55 +0200)
+>
+> - 8 October 2026 : Le panneau garde un bouton `externaldrive.fill` nommé « Assets » à largeur variable ; chaque lecture du service rétablit ce titre au lieu de le vider. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : Le nouvel `autosaveName` repart de l’emplacement mémorisé pour le bouton nommé ; les sept fixtures contrôlent le titre, le nom accessible et la largeur mesurée. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : Une capture réelle après déverrouillage reste nécessaire pour prouver que macOS ne range pas le bouton derrière son débordement. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : Le détail d’implémentation et les preuves vivent dans `references/NativeDashboard.md`. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+>
+> ## 8 October 2026 : Largeur du bouton gérée par AppKit (14 October 2026, 23:17:55 +0200)
+>
+> - 8 October 2026 : `statusItemWidth` est retiré des réglages ; `NSStatusItem.variableLength` mesure la place requise par `externaldrive.fill` et « Assets ». (8 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : Les fixtures natives contrôlent un titre « Assets » sur 50 à 100 points ; le rendu mesuré est de 82 points et System Events lit 84 points. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> ## 8 October 2026 : Panneau Assets réduit à l’essentiel (14 October 2026, 23:17:55 +0200)
+>
+> - 8 October 2026 : Le bouton de barre garde seulement le texte « Assets », son nom accessible et son infobulle ; retirer l’image le ramène à 62 points et lui laisse plus de place dans la barre. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : Le panneau normal n’affiche que l’action utile, le projet, l’étape, l’attente et un problème éventuel ; il retire le titre, la connexion verte et l’heure de contrôle répétitifs. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : L’état vide mesure 64 points ; le service indisponible s’annonce sur une seule ligne, et une ancienne lecture n’apparaît que si elle existe. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : Les sept fixtures natives passent après installation ; une capture de fixture prouve le rendu du panneau, mais seul un bureau déverrouillé prouve que macOS place le bouton hors du débordement. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : Garder cette preuve et les commandes dans `references/NativeDashboard.md`. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> ## 8 October 2026 : Popover centré sur l’action (14 October 2026, 23:17:55 +0200)
+>
+> - 8 October 2026 : Le popover ne répète plus le titre « Assets » ni « Connecté » quand le service fonctionne ; il commence directement par l’opération ou par « Tout est à jour ». (8 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : La connexion n’apparaît en première ligne qu’au démarrage ou quand le service est indisponible ; les opérations, leur projet, leur étape, l’attente et les erreurs restent visibles. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : La phase de vérification dit « Vérification des fichiers » pour préciser ce qui se passe. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : Les sept fixtures natives et leur capture rendue vérifient le nouvel ordre ; l’emplacement réel du bouton attend le déverrouillage du Mac. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> ## 8 October 2026 : Sources facultatives absentes (14 October 2026, 23:17:55 +0200)
+>
+> - 8 October 2026, 20:06 CEST : Si une source marquée `optional` n’existe pas, `setWatch` ne la passe pas au watcher ; l’erreur ENOENT ne tourne donc plus en boucle. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026, 20:06 CEST : Les balayages périodiques gardent l’inventaire et découvrent la source si son dossier est créé plus tard. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026, 20:06 CEST : Le test `does not watch a missing optional source` doit rougir avant le correctif et verdir après ; toute source présente conserve sa surveillance. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026, 20:11 CEST : Les deux branches sont testées : un dossier facultatif absent n’est pas surveillé, un dossier facultatif présent l’est ; la suite `AssetsService.test.js` passe à 82 tests. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> ## 8 October 2026 : Reprendre une archive après un refus permanent (8 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> - 8 October 2026 : Un refus définitif du dépôt déclenchait un événement `rollover`, mais le lot suivant reprenait le même dépôt et échouait encore. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : `AssetsService` conserve le suffixe de dépôt par source et transmet `ZR_ARCHIVE_REPO_SUFFIX` à `archive-folder.mjs` ; les nouveaux dépôts sont nommés `-r02`, puis `-r03` après un autre refus définitif. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : Une panne réseau temporaire garde le suffixe actuel, car elle ne prouve pas que le dépôt doit tourner. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : La vérification locale passe sur les deux suites complètes : 90 tests de `AssetsService.test.js` et `archive-route.test.js`. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : Recharger le daemon seulement après la fin des écritures actives, puis vérifier le nouveau dépôt et les SHA des fichiers dans le cloud. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> ## 8 October 2026 : Reconnaître le refus dans l’erreur enveloppée (8 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> - 8 October 2026 : Le daemon préfixe les erreurs du processus enfant par `Asset engine failed` ; le marqueur `push-refus-definitif` se trouve plus loin dans sa pile. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : Vérifier le marqueur `Error: push-refus-definitif <dépôt>` et le comparer au dépôt de l’événement `rollover`, pour que seule la vraie destination refusée change de route. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : Le test de régression emploie cette erreur enveloppée ; les erreurs réseau gardent l’ancienne route, et les deux suites passent à 90 tests. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : Après le redémarrage réel, lire le suffixe conservé, confirmer l’archive distante par SHA et taille, puis reprendre les autres surveillances. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> ## 8 October 2026 : Diagnostic sûr d’un refus d’archive GitHub (14 October 2026, 23:17:55 +0200)
+>
+> - 8 October 2026 : Avant de relancer une source après un refus permanent GitHub, examiner uniquement ses fichiers texte en attente avec `node scripts/Assets/ScanGithubTokenShapes.mjs <project-id>`. Le rapport contient les chemins et les nombres, jamais les valeurs détectées. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : Ajouter les résultats aux exclusions de la source avec `--apply` seulement après arrêt de sa surveillance et fin de ses archives actives ; les fichiers locaux originaux restent intacts. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : `archive-folder.mjs` classe un refus permanent, par exemple protection de secrets ou règles du dépôt, sans écrire le diagnostic brut du serveur dans le journal du job. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : `ScanGithubTokenShapes.test.mjs`, `archive-route.test.js` et `AssetsService.test.js` couvrent le rapport privé, les exclusions gardées, le classement du refus et la rotation de dépôt. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : Le contrôle Conversations mesure 859 fichiers texte en attente et 6 505 571 543 octets, sans motif de jeton ; les 18 chemins trouvés auparavant restent exclus localement. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : Un fichier sûr archivé dans `-r03` est téléchargé de GitHub ; ses 3 321 octets et son SHA256 concordent avec le fichier local et son manifeste. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> ## 8 October 2026 : Résumé compact du menu natif (14 October 2026, 23:17:55 +0200)
+>
+> - 8 October 2026, 21:40 CEST : Le panneau natif regroupe une opération en trois lignes : action et projet, étape, puis attente et problèmes. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026, 21:40 CEST : Après un changement Swift, reconstruire avec `node scripts/Assets/NativeDashboard/Install.mjs`, relancer le LaunchAgent, puis vérifier les sept états avec `node scripts/Assets/NativeDashboard/Verify.mjs <dossier-de-preuve>`. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026, 21:40 CEST : Une fixture prouve le contenu dessiné, pas la place réelle dans la barre ; demander une capture seulement après le déverrouillage du Mac. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> ## 8 October 2026 : Capture transcript non bloquante au démarrage (14 October 2026, 23:17:55 +0200)
+>
+> - 8 October 2026 : Un balayage complet peut occuper `drain()` pendant plusieurs secondes ; `replay(sessionId)` met alors la session en file au lieu de faire échouer `bind-session`. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : La prochaine passe remet son curseur à zéro et le writer canonique déduplique par identifiant d’événement ; la réponse `transcriptCapture: queued` confirme la mise en file, pas encore la capture terminée. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : `AssetsService` termine `start` dès que la liaison est enregistrée et la capture mise en file ; le détail apparaît dans `setup.transcriptCapture`. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : Vérifier séparément avec `./node_modules/.bin/vitest run scripts/AssetsFeedbackCapture.test.js` puis `./node_modules/.bin/vitest run scripts/AssetsService.test.js --maxWorkers=1` ; lancer les suites séquentiellement pour éviter les délais de nettoyage. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : Recharger le daemon après l’arrêt de toutes les archives actives ; ensuite, lancer un vrai démarrage avec un ID de session fourni par l’hôte et vérifier le retour `transcriptCapture`. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> ## 8 October 2026 : Une erreur de replay ne peut plus annuler un démarrage (14 October 2026, 23:17:55 +0200)
+>
+> - 8 October 2026, 23:31 CEST : `bind-session` conserve la liaison déjà écrite même si `replay(sessionId)` échoue ; une capture déjà active renvoie `queued`, une autre panne renvoie `unavailable`. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026, 23:31 CEST : La session liée reste visible par le balayage périodique ; un événement local sans diagnostic brut indique que la capture sera retentée. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026, 23:31 CEST : Le test `keeps a new project ready after active replay` et son cas de panne inattendue doivent vérifier le dossier, le feedback, la surveillance et la liaison après l’erreur. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026, 23:31 CEST : Vérifier séquentiellement la suite `scripts/AssetsService.test.js`, puis `scripts/AssetsFeedbackCapture.test.js` ; recharger le daemon seulement après la fin des archives actives. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> ## 8 October 2026 : Le démarrage ne doit jamais attendre le replay (14 October 2026, 23:17:55 +0200)
+>
+> - 8 October 2026, 23:37 CEST : Correction de la section précédente : même entouré d’un `try/catch`, `await replay()` bloque sans fin si le worker ne règle jamais sa promesse. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026, 23:37 CEST : `bind-session` déclenche maintenant le replay sans l’attendre ; la liaison persistée rend la session éligible au balayage périodique, qui reste la voie de reprise. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026, 23:37 CEST : `transcriptCapture: queued` signifie que la session est liée et éligible à la capture ; cela ne prétend pas que le replay est terminé. Les erreurs asynchrones produisent seulement un événement local sans diagnostic brut. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026, 23:37 CEST : `finishes project startup when transcript replay never settles` doit prouver la fin du démarrage avec une promesse volontairement pendante. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026, 23:37 CEST : Vérifier séquentiellement les 88 tests de `scripts/AssetsService.test.js` et les 5 tests de `scripts/AssetsFeedbackCapture.test.js`, puis recharger après la file d’archives. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> ## 8 October 2026 : Inventaire Assets lisible par projets (14 October 2026, 23:17:55 +0200)
+>
+> - 8 October 2026 : La barre de projets de `ProjectWorkspace.jsx` affiche le total de projets et la somme des fichiers suivis, avec une mosaïque de briques comme repère visuel. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : Chaque projet montre son propre nombre de fichiers ; la recherche et le choix de collection ne réduisent pas le total général. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : Le compte d’un projet retient la plus grande mesure disponible entre la liste de fichiers, `sync.count` et `inventory.count`, afin qu’un snapshot cloud sans détails n’apparaisse pas vide. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : Pendant le premier chargement, les nombres affichent une attente explicite plutôt qu’un zéro qui ferait croire à un espace vide. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 8 October 2026 : Vérifier avec `./node_modules/.bin/vitest run src/components/assets/ProjectWorkspace.test.jsx` puis `npx vite build` ; le test couvre les totaux, le fallback de comptage et une brique de conversation. (8 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> ## 9 October 2026 : Démarrage transcript et arrêt sûr des archives automatiques (14 October 2026, 23:17:55 +0200)
+>
+> - 9 October 2026 : `transcriptCapture: queued` signifie que le projet et la liaison de session sont prêts ; la capture reste indépendante du replay, même si le balayage est actif, échoue ou ne répond jamais. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 9 October 2026 : `BeginProject.mjs` relancé avec la vraie session déjà liée répond en 1,67 seconde ; les tests couvrent aussi un nouvel identifiant de projet isolé sans créer de projet factice dans le registre réel. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 9 October 2026 : Vérifier séquentiellement `npx vitest run scripts/AssetsFeedbackCapture.test.js --maxWorkers=1`, puis `npx vitest run scripts/AssetsService.test.js --maxWorkers=1` ; mesures du contrôle courant : 5 tests de capture et 89 tests de service. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 9 October 2026 : La priorité de file `background` ne signifie pas que le job dépend d’un watcher ; seul `scheduleBackup` passe aussi `requireWatched: true`, contrôlé avant et après le verrou global du writer. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 9 October 2026 : Un job automatique en attente devient `interrupted` si la surveillance s’arrête avant son démarrage ; les archives d’arrière-plan explicites gardent leur comportement. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 9 October 2026 : Le contrôle de contrat doit être enregistré puis vérifié avec `node scripts/Assets/CheckSkillContract.mjs --record` et `node scripts/Assets/CheckSkillContract.mjs`. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> ## 9 October 2026 : Comprendre Assets depuis le panneau macOS (14 October 2026, 23:17:55 +0200)
+>
+> - 9 October 2026 : Le panneau natif affiche les projets et fichiers connus, une brique par projet, le nombre de fichiers Mac et Cloud, et les débits mesurés en KB/s ou MB/s entiers. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 9 October 2026 : Ses filtres « Tout », « Mac » et « Cloud » séparent les emplacements ; le panneau garde « ? » lorsqu’un inventaire manque et ne fabrique pas un zéro. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 9 October 2026 : Les actions « Sauvegarder », « Charger sur Mac » / « Ajouter au Mac » et « Décharger du Mac » passent par le service Assets, avec plans vérifiés et aucune suppression cloud. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 9 October 2026 : Lire `references/NativeDashboard.md` pour l’architecture, les tests, l’installation et les preuves ; `scripts/Assets/NativeDashboard/README.md` porte les commandes opératoires du dépôt. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 9 October 2026 : Le panneau natif peut être reconstruit et relancé séparément ; ne recharger le daemon d’archives qu’après la fin des écritures actives. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> - 9 October 2026 : Dans la vue native, les actions du projet sélectionné restent intégrées à sa brique Lego afin de garder son nom et ses comptes uniques. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> - 9 October 2026 : L’entrée native emploie l’icône SF Symbol `externaldrive.fill` sur 18 points, avec le nom accessible « ZenRay Assets » ; `isVisible` seul ne prouve pas qu’elle échappe au débordement macOS. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> - 9 October 2026 : La vérification native ouvre le vrai popover et son mode `live-dashboard` vérifie l’application contre le daemon en service ; le bouton compact garde le nom accessible « ZenRay Assets ». (9 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 9 October 2026 : `secret-protection` devient « Protection des secrets » dans le panneau pour que le refus et les fichiers à envoyer soient compréhensibles. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> ## 9 October 2026 : Images cloud Assets dans les Galeries ZenRayProgress (9 October 2026, 01:48 CEST) (14 October 2026, 23:17:55 +0200)
+>
+> - 9 October 2026 : Pour afficher les images déjà sauvegardées d’un projet Assets dans une Gallery, ajouter `assetsProjects: [{ id: '<project-id>', name: '<display-name>' }]` à l’entrée correspondante de `src/config/pointerGalleries.js`. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 9 October 2026 : L’identifiant doit être celui d’un projet existant dans le registre Assets ; `name` ne sert qu’au titre affiché. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 9 October 2026 : La Gallery lit les images indexées déjà présentes dans le cloud, y compris les images archivées comme fichiers ; elle ne copie, n’envoie, ne déplace et ne renomme aucun fichier. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 9 October 2026 : Les filtres par source et dossier, la recherche et Quick Look ne modifient que l’affichage ; la procédure complète et les limites de prévisualisation sont dans `docs/PROJECT-GALLERY-CLOUD-IMAGES.md` du dépôt ZenRayProgress. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> ## 9 October 2026 : Références Gallery séparées des fichiers cloud (9 October 2026, 01:55 CEST) (14 October 2026, 23:17:55 +0200)
+>
+> - 9 October 2026 : La Gallery garde deux vues explicites : `Mes références` contient les images et groupes rangés manuellement ; `Fichiers cloud` parcourt les images déjà sauvegardées dans Assets. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 9 October 2026 : Le tri, les groupes, les dossiers et les dispositions existants restent dans `Mes références` ; changer de vue ne modifie pas leur ordre ni leur contenu. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 9 October 2026 : La vue cloud expose les sources comme dossiers, ouvre les sous-dossiers et fournit un fil d’Ariane cliquable ; les filtres et la recherche ne font que réduire les résultats visibles. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 9 October 2026 : La mention antérieure du filtre par dossier décrit l’ancienne interface ; la navigation par dossiers et fil d’Ariane la remplace, tandis que le filtre par source reste disponible. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 9 October 2026 : Si plusieurs projets Assets sont liés à une Gallery, un sélecteur n’affiche qu’un projet à la fois pour éviter de mêler leurs fichiers. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 9 October 2026 : Tests de référence : `src/components/GalleryView.test.jsx`, `src/components/LinkedAssetsGallery.test.jsx` et `src/lib/linkedGalleryAssets.test.js` dans ZenRayProgress. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> ## 9 October 2026 : Empreinte FileMap actualisée avant l’archive (9 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> - 9 October 2026 : `inventory()` peut modifier `FileMap.md` après le scan des sources, puisque son contenu dépend du nouvel inventaire. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 9 October 2026 : Si la carte existait et change, le service relit son `lstat`, actualise taille, dates et `changeToken`, invalide l’ancien SHA, puis ajuste les octets de la source. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 9 October 2026 : Le test `refreshes the generated file-map fingerprint before an archive snapshot` prouve que le prochain snapshot lit les octets après écriture. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 9 October 2026 : Contrôle complet : `./node_modules/.bin/vitest run scripts/AssetsService.test.js --maxWorkers=1`. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> ## 9 October 2026 : Limite des lots d’archives (14 October 2026, 23:17:55 +0200)
+>
+> - 9 October 2026 : `scripts/AssetsConfig.json` fixe `storage.batchBytes` à 268435456 octets (256 MiB) et garde `storage.batchFiles` à 200. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 9 October 2026 : Avant un redémarrage du daemon après ce réglage, vérifier que la file d’archives est inactive afin de ne pas interrompre un transfert. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 9 October 2026 : Après le redémarrage mesuré, contrôler les 20 projets, les 19 surveillances attendues, la pause volontaire de `agent-conversations` et l’absence d’erreur du service. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+>
+> ## 9 October 2026: Antigravity prompts in FEEDBACK (14 October 2026, 23:17:55 +0200)
+>
+> - 9 October 2026: `AssetsFeedbackCapture.mjs` reads bound conversations from `.gemini/antigravity/conversations/<session-id>.db` through `ReadGeminiConversation.py` and sends visible prompts and responses to the configured canonical FEEDBACK writer. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 9 October 2026: The reader paginates backward by native step index; the capture cursor records the last imported step and a change token for the database and its WAL file. A replay scans again, while stable event IDs let the writer skip duplicates. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 9 October 2026: Only a session bound to a project is appended; the source database is read through the snapshot reader and is never edited by FEEDBACK capture. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 9 October 2026: Verify with `./node_modules/.bin/vitest run scripts/AssetsFeedbackCapture.test.js --maxWorkers=1`, `python3 scripts/Assets/ReadGeminiConversation.test.py`, and an isolated scratch capture whose original database SHA remains unchanged. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 9 October 2026: The native Antigravity database path is covered; the Gemini web application and a universal host capture hook remain outside this reader. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 9 October 2026: Paginated messages spool to a private 0600 file in Assets state and replay oldest page first; the scratch spool is removed in `finally`, and a page cursor that does not move backward fails visibly. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+>
+> ## 9 October 2026 : Registre partagé des extensions de nœuds (14 October 2026, 23:17:55 +0200)
+>
+> - 9 October 2026 : `server/extensionsNoeuds.js` porte la liste canonique des suffixes et des jumeaux de page, dont `.comment.json` ; les opérations de déplacement simple et groupé utilisent ce même contrat. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 9 October 2026 : L’arbre, les enfants de dossier et l’index de recherche partagent le même filtre ; l’API conserve `truncated`, puis la recherche globale complète l’arbre frais avec l’index entier. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 9 October 2026 : Pour ajouter un type, étendre le registre et ses tests au lieu de dupliquer des expressions régulières ; `delete` supprime le chemin exact, tandis que l’interface gère explicitement les jumeaux pour la corbeille, la restauration et la purge. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 9 October 2026 : Le commit `73b2a452` passe 1 995 tests, avec un test ignoré, 52 tests ciblés et `npm run build` ; le déploiement Pages et ses deux bundles ont été comparés au build local. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+>
+> ## 9 October 2026 : Correction des décomptes de test Assets (14 October 2026, 23:17:55 +0200)
+>
+> - 9 October 2026 : Les contrôles séquentiels du 9 October 2026 à 08:29 CEST passent avec six tests `AssetsFeedbackCapture.test.js` et 91 tests `AssetsService.test.js`. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 9 October 2026 : Cette mesure corrige les anciens totaux de cinq et 89 tests, qui décrivaient les versions précédentes des suites ; les deux commandes et leurs résultats restent consultables dans l’historique du projet. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> ## 9 October 2026 : Harmonisation du nom Assets (14 October 2026, 23:17:55 +0200)
+>
+> - Pour tout nouveau travail et toute reprise, `zenray-assets` est le seul workflow actif ; il porte le démarrage, le mapping, le feedback et le développement du service. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> ## 9 October 2026 : Chargement frais du détail sélectionné (14 October 2026, 23:17:55 +0200)
+>
+> - Le petit index des projets est relu sans cache ; le détail `.workspace.json` du projet sélectionné utilise aussi `fresh=1`, car le CDN brut garde sinon son ancienne version cinq minutes. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+> - `workspaceSnapshotRequest` valide le dossier du projet et associe toujours `fresh: true` à cette seule lecture ; son test couvre le chemin valide et le refus d’un chemin traversant. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+> - Vérifier avec `npx vitest run src/lib/assetsWorkspaceViewModel.test.js src/lib/assetsWorkspaceCatalogue.test.js`, puis `npm run build`. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> ## 9 October 2026 : Apparence claire et sombre du panneau macOS (14 October 2026, 23:17:55 +0200)
+>
+> - 9 October 2026 : Pour vérifier le thème du panneau natif, lire [NativeDashboard.md](references/NativeDashboard.md) ; le popover, ses briques et les compteurs suivent l’apparence Aqua ou Dark Aqua. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 9 October 2026 : Après installation, exécuter `node scripts/Assets/NativeDashboard/Verify.mjs <workshop-path>` ; les contrôles vérifient le thème hérité et la luminance mesurée des briques. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> ## 9 October 2026 : Une réponse finale Codex, une seule entrée (14 October 2026, 23:17:55 +0200)
+>
+> - 9 October 2026 : Les transcripts Codex peuvent écrire la réponse finale dans `response_item` puis la répéter dans `event_msg` `task_complete`. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 9 October 2026 : Le captureur FEEDBACK et le lecteur comparent le `turn_id`, le type et le texte ; deux réponses identiques de tours distincts restent visibles. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 9 October 2026 : L’historique dérivé réunit aussi les anciens doublons Codex quand source, seconde et texte correspondent ; `duplicateCount` compte les blocs bruts conservés. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 9 October 2026 : Les doublons déjà archivés ne se suppriment pas ; ajouter une correction append-only qui cite les événements concernés. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 9 October 2026 : Contrôler avec les tests `AssetsFeedbackCapture` et `ConversationCatalog`, puis enregistrer et vérifier `SkillContract.json`. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> ## 9 October 2026 : Lecture initiale au-delà des fenêtres techniques (14 October 2026, 23:17:55 +0200)
+>
+> - 9 October 2026 : La fin d’un transcript peut contenir seulement des outils ; à l’ouverture, le lecteur traverse jusqu’à `emptyPageScanLimit` fenêtres avant de montrer l’état vide. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 9 October 2026 : Il s’arrête dès qu’une fenêtre contient des messages visibles ; s’il n’en trouve aucun, `emptyPagesScanned` et `nextBefore` permettent à l’interface d’indiquer l’avancée et de continuer dans la même limite. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 9 October 2026 : Vérifier avec `vitest run scripts/Assets/ConversationCatalog.test.js src/components/assets/ConversationView.test.jsx`, puis les suites de capture, d’historique et AssetsService ainsi que `npm run build`. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> ## 9 October 2026 : Relier le dernier prompt à sa réponse (14 October 2026, 23:17:55 +0200)
+>
+> - 9 October 2026 : À l’ouverture d’un transcript Codex, le lecteur balaie au plus 72 fenêtres de 2 MiB pour afficher le dernier prompt disponible avec la réponse qui le suit. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 9 October 2026 : La session réelle a nécessité 56 fenêtres, soit 117 MiB ; la lecture locale rend trois messages lisibles, dont un prompt et deux réponses, en 203 ms, sans modifier l’original. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 9 October 2026 : Si le dernier échange n’a pas encore de réponse, l’ouverture s’arrête aux messages récents ; si la limite est atteinte avant le prompt, l’interface le dit et garde le curseur pour continuer. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 9 October 2026 : Les pages suivantes gardent leur budget de 24 fenêtres ; vérifier les scénarios avec `vitest run scripts/Assets/ConversationCatalog.test.js src/components/assets/ConversationView.test.jsx`. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 9 October 2026 : Ne pas recharger `com.zenray.assets` tant que la file des archives contient des éléments ; le lecteur du daemon ne prend le nouveau code qu’au prochain lancement sûr. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+>
+> ## 9 October 2026 : Correction après mesure du lecteur Codex réel (14 October 2026, 23:17:55 +0200)
+>
+> - 9 October 2026, 16:24 CEST : La session Codex réelle demande 92 fenêtres de 2 MiB pour retrouver son dernier prompt texte ; la limite précédente de 72 affiche des réponses récentes mais manque ce prompt. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 9 October 2026, 16:24 CEST : Le budget initial passe à 128 fenêtres au maximum ; le test reproduit l’échec à 72 puis vérifie que le prompt et la réponse apparaissent ensemble à 128. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 9 October 2026, 16:24 CEST : Vérifier avec `npx vitest run scripts/Assets/ConversationCatalog.test.js src/components/assets/ConversationView.test.jsx`. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> ## 9 October 2026, 22:30 CEST : Reprises automatiques bornées (14 October 2026, 23:17:55 +0200)
+>
+> - 9 October 2026, 22:30 CEST : `storage.archiveProcessTimeoutMs` limite chaque lot cloud à 900000 ms ; à l’échéance le service arrête le groupe de processus, attend `processKillGraceMs` puis force l’arrêt, et `scheduleBackup` retente l’archive après `retryMs`. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 9 October 2026, 22:30 CEST : `storage.indexProcessTimeoutMs` garde l’indexation limitée à 120000 ms ; `pendingIndex` reste sauvegardé si l’index distant échoue, puis le prochain passage reprend les mêmes chemins. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 9 October 2026, 22:30 CEST : L’arrêt vise aussi les processus descendants, par exemple Git lancé par l’indexeur, afin qu’un enfant bloqué ne continue pas après la reprise automatique. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 9 October 2026, 22:30 CEST : Vérifier les délais, la conservation des chemins, l’arrêt d’un processus bloqué et la reprise automatique avec `npx vitest run scripts/AssetsService.test.js --maxWorkers=1`. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 9 October 2026, 22:37 CEST : Le délai `processKillGraceMs` reste actif si le parent ferme ses flux après `SIGTERM` ; il envoie ensuite `SIGKILL` au groupe complet, même si un enfant ignore le premier signal. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 9 October 2026, 22:37 CEST : Les tests `kills child workers with the timed-out asset process group` et `kills child workers when an asset process is cancelled` gardent un enfant qui ignore `SIGTERM`, puis prouvent qu’aucun marqueur n’est écrit après l’arrêt forcé. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 9 October 2026, 22:39 CEST : `startWatching()` traite chaque projet séparément ; si une surveillance échoue au démarrage, l’erreur reste visible et le service réessaie après `retryMs` sans empêcher les autres projets de démarrer. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 9 October 2026, 22:39 CEST : Le test `continues watcher startup and retries an isolated project setup failure` prouve qu’un second projet se rétablit malgré l’échec du premier, puis que le premier est surveillé et sauvegardé au passage automatique suivant. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 9 October 2026, 22:41 CEST : Avant l’arrêt forcé, le helper vérifie que le groupe de processus existe encore ; il n’envoie donc pas un signal tardif à un identifiant de processus réutilisé. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> ## 9 October 2026 : Veille pendant les transferts cloud (14 October 2026, 23:17:55 +0200)
+>
+> - 9 October 2026 : `storage.preventIdleSleepDuringTransfers` vaut `true` par défaut ; le service lance `/usr/bin/caffeinate -i` seulement tant qu’un job `archive`, `restore` ou `recover` tourne, lié au PID du daemon pour disparaître aussi si le daemon tombe. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 9 October 2026 : Le service arrête l’assertion après succès, erreur ou fermeture ; si le helper quitte pendant le transfert, il signale l’incident et réessaie après `retryMs`. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 9 October 2026 : `caffeinate -i` bloque la veille due à l’inactivité, sans empêcher l’écran de s’éteindre ; la fermeture du capot, la perte d’alimentation ou l’arrêt du Mac restent des limites système. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 9 October 2026 : Vérifier le cycle actif et sa libération avec `npx vitest run scripts/AssetsService.test.js -t 'holds idle sleep only during active cloud transfers|starts and stops the macOS idle-sleep helper' --maxWorkers=1`, puis vérifier l’assertion réelle avec `pmset -g assertions`. (9 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> ## 10 October 2026 : Déchargement conservateur du disque (14 October 2026, 23:17:55 +0200)
+>
+> - 10 October 2026 : Le plan UNLOAD porte uniquement sur les copies LOAD ; keep protège les originaux de production, sans bloquer leur copie. Les ajouts sauvegardés passent encore la restauration cloud indépendante avant suppression. (10 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 10 October 2026 : UNLOAD refuse les fichiers ouverts par une application sur macOS ; un échec de lsof bloque la suppression. La suppression retire chaque fichier après nouvelle vérification SHA-256 et supprime uniquement les dossiers vides, sans effacement récursif du LOAD. Un ajout ou changement concurrent reste local et le déchargement signale son interruption. (10 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 10 October 2026 : Vérifier scripts/AssetsWorkspaceLifecycle.test.js et scripts/AssetsService.test.js ; les fichiers nouveaux, modifiés, ouverts, les liens et les restaurations cloud échouées doivent rester protégés. Les octets alloués APFS ne garantissent pas le même gain disque, qui se mesure après opération. (10 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 10 October 2026 : Validation supplémentaire : le plan ne bloque pas une copie LOAD au motif que son original est protégé par keep ; le service conserve cette protection pour les originaux. (10 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 10 October 2026 : Les .DS_Store imprévus sont déplacés par rename dans retained-metadata/<release-id>, vérifiés SHA-256 et répertoriés dans la preuve de déchargement ; RECOVER les copie sans écraser ni consommer leur version conservée. Aucun autre fichier imprévu ne bénéficie de cette exception. (10 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 10 October 2026 : VerifyLifecycle.mjs revalide les octets du témoin avant de rattacher son token local à la preuve cloud ; le cycle réel LOAD, UNLOAD et RECOVER confirme la même empreinte et conserve l’original. (10 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 10 October 2026 : prepareUnloadProof est partagé par le plan et UNLOAD : fichiers initiaux de Current.json, ajouts inventoriés, hash exact, fichiers imprévus et .DS_Store conservés. Le panneau macOS demande le plan complet sans réduire la sélection aux seules sources de travail. (10 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 10 October 2026 : Après un arrêt au milieu du déplacement des .DS_Store, RECOVER cherche leurs octets conservés dans retained-metadata ou dans releases/<release-id> ; il vérifie chemin, taille et SHA-256 avant de les copier sans écraser, et conserve les deux emplacements de preuve. (10 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 10 October 2026 : La source historique v2-alias du registre est optional=true après suppression du skill ; ses archives restent accessibles, la surveillance ignore son chemin absent et ne recrée aucun ancien skill. Le workflow canonique conserve sa propre source surveillée. (10 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> ## 10 October 2026 : Ouvrir les projets Assets historiques sans identifiant de source (14 October 2026, 23:17:55 +0200)
+>
+> - 10 October 2026 : Certains projets de l’ancien registre décrivent une source avec `localPath` et `target`, mais sans `id` ; leurs fiches cloud peuvent aussi omettre `sourceId`. (10 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 10 October 2026 : Pour afficher un fichier cloud historique, ne cherche jamais une source avec `source.id === file.sourceId` avant d’avoir validé les deux identifiants. Deux valeurs absentes sont égales en JavaScript et peuvent sélectionner à tort une source incomplète. (10 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 10 October 2026 : `assetsFileLocations` accepte uniquement un identifiant conforme au schéma et une correspondance exacte avec un identifiant source valide ; il conserve le chemin d’archive connu et n’invente pas de chemin Mac ou cloud attendu. (10 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 10 October 2026 : Garde `sourceCloudFolder` strict pour les sources de workspace nouvelles ou mutables ; le lecteur historique doit ignorer la source non mappée au lieu d’affaiblir ce validateur. (10 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 10 October 2026 : Vérifier le clic et le rendu de fichier avec `npx vitest run src/lib/assetsFileLocations.test.js src/components/assets/ProjectWorkspace.test.jsx --maxWorkers=1`. (10 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> ## 12 October 2026 : Rules.md, les règles épinglées de chaque projet (14 October 2026, 23:17:55 +0200)
+>
+> - Chaque projet Assets a, à côté de son `FEEDBACK.md`, un `Rules.md` dans `/Users/zenray/.claude/Memory1/Projects/<id>/Rules.md` : une ligne datée par règle permanente, append only. Le FEEDBACK est le journal complet ; Rules.md en est le condensé lisible, chargé automatiquement. (12 October 2026) (14 October 2026, 23:17:55 +0200)
+> - Écrire une règle : `python3 ~/.claude/skills/zenray-feedback/scripts/feedback.py add <project-id> "<règle>" --kind rule`. La même commande écrit le bloc dans FEEDBACK.md ET la ligne dans Rules.md, une seule fois par événement. Ne jamais éditer Rules.md à la main ; une règle qui change reçoit une nouvelle ligne qui cite l ancienne. (12 October 2026) (14 October 2026, 23:17:55 +0200)
+> - Lire : `feedback.py rules <project-id>`. Recopier les règles déjà présentes dans les FEEDBACK : `feedback.py promote all` (idempotent ; le 12 October 2026 il a créé 28 Rules.md et recopié 21 règles). (12 October 2026) (14 October 2026, 23:17:55 +0200)
+> - Chargement automatique : hook SessionStart de `~/.claude/settings.json`, `feedback.py hook`, qui lit le `cwd` de la session, trouve le projet dont une source enregistrée contient ce dossier, et imprime son Rules.md ; il se tait sur toute erreur. Un dépôt qui n est pas une source enregistrée importe ses règles dans son CLAUDE.md par `@/Users/zenray/.claude/Memory1/Projects/<id>/Rules.md` (ZenRayProgress : zenray-progress). Les nouveaux ateliers reçoivent cet import à leur création. (12 October 2026) (14 October 2026, 23:17:55 +0200)
+> - Codex, Gemini et Antigravity n ont pas ce hook : en début de travail sur un projet, lancer `feedback.py rules <project-id>`. (12 October 2026) (14 October 2026, 23:17:55 +0200)
+> - Quand Matthieu dit « note le feedback de <projet> », « règle <projet> : … » ou « pour ne plus jamais faire l erreur » : corriger le code, puis `--kind rule`, puis, si possible, un test qui échoue quand l erreur revient. Les règles du projet vont dans Rules.md, la méthode générale reste dans le skill, la règle valable partout va dans le CLAUDE.md global. (12 October 2026) (14 October 2026, 23:17:55 +0200)
+> - Contrôle : `python3 -m unittest ~/.claude/skills/zenray-feedback/Tests/TestFeedback.py` (test `test_rules_promote_and_hook`, déduplication et résolution par dossier). (12 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> ## 12 October 2026 : Vue Tube par défaut, Classique conservée (14 October 2026, 23:17:55 +0200)
+>
+> - 12 October 2026 : la page Assets s'ouvre en « Tube » (`src/components/assets/AssetsTube.jsx` et `AssetsTube.css`, branchés dans `ProjectWorkspace.jsx`). Le bouton Classique / Tube de la barre du haut rend l'ancienne vue sans rien perdre ; le choix est dans `localStorage` (`assets.layout`). (12 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 12 October 2026 : accueil = grille de couvertures (titre et une ligne). Page projet = anneau et barre d'espace en haut, barre latérale « Emplacements », vues Icônes, Liste, Colonnes, Galerie (`assets.tubeView`), feuille « Télécharger » (carte du ZIP puis arbre). La feuille nomme le dossier `tmp-<id du projet>` ; l'arborescence réelle du ZIP reste `namespace/sourceId/chemin`. (12 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 12 October 2026 : noms des emplacements, bascule Simples / Techniques (`assets.sourceNames`, défaut Simples) : TMP = Brouillons, Memory = Notes, Houdini = Scènes Houdini, Unreal = Jeu, Cloud = Archive ; table unique `SOURCE_DEFS`. Une source absente du projet est grisée. (12 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 12 October 2026 : police de la vue Tube : Inter seulement, titres en Inter Bold par `--tube-title-weight` (décision de Matthieu : le serif fatigue dans une interface utilisée toute la journée). Les variables serif retombent sur le sans dans `.assets-workspace[data-layout="tube"]`. (12 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 12 October 2026 : un projet de l'ancien registre n'a ni `namespace`, ni `sourceId`, ni taille par fichier : il apparaît entièrement en « Archive », et le total de l'anneau retombe sur la somme de `sources[].bytes`. Le panneau d'uploads de films est masqué en Tube (à déplacer dans Create). (12 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 12 October 2026 : tests : `npx vitest run src/components/assets` (section « Tube layout » de `ProjectWorkspace.test.jsx`) ; preuve visuelle sur Ceramic Tiles, 4 419 fichiers, 51,96 Go répartis entre quatre sources. (12 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> ## Offline recovery of ZenRay Japanese (12 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> - If the HTTP bridge repeatedly times out, the existing AssetsService archive engine can run alone after stopping its daemon, with no other service writer running. Workshop script: /Users/zenray/.claude/tmp/tmp-zenray-japanese/Scripts/ArchiveProject.mjs ; parameters: BackupSettings.json. This is a recovery path, not a second backup system. (12 October 2026) (14 October 2026, 23:17:55 +0200)
+> - The measured pass initializes immediately and inventories 29371 admitted files; batches use 2000 files or 256 MiB, configurable without changing global settings. Progress and the final job are preserved. Pending files and failed jobs never count as backed up. (12 October 2026) (14 October 2026, 23:17:55 +0200)
+> - After completion, publish the same project metadata through Scripts/PublishProject.mjs, compare current byte hashes with receipts, then restore com.zenray.assets through launchctl bootstrap. The daemon plist uses the installed runtime selected by Daemon.mjs install. (12 October 2026) (14 October 2026, 23:17:55 +0200)
+> - The earlier HTTP failure's exact root cause remains unproved; changing Node runtime alone does not fix it. Do not present the recovery pass as proof that the bridge is repaired. (12 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> ## Failed verification diagnostics (12 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> - AssetsService retains the child stderr diagnostics even when the archive process exits zero with verifyKo greater than zero. The service still refuses that lot; the error now includes the observed HTTP status or size mismatch. The zero-exit diagnostic test covers this exact failure. (12 October 2026) (14 October 2026, 23:17:55 +0200)
+> - Two immutable chunks from the refused Japanese lot return HTTP 200 when probed later. This does not prove the full refused lot; repeat complete verification before counting it. (12 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> ## 12 October 2026 : Miniatures de projet, ordre par dernière modification, commutateur aligné (14 October 2026, 23:17:55 +0200)
+>
+> - 12 October 2026 : clic droit sur une image en vue Tube : « Définir comme miniature du projet » ou « Retirer cette miniature ». Le choix vit dans `pages/.zr-assets-covers.json` (entrée par projet : `file`, `choice` manual ou auto, `reason`), recopié dans `localStorage` (`assets.covers`). Un choix manuel prime toujours ; sans choix, un fichier nommé thumbnail, cover, poster, icon, miniature (ou dans un dossier Thumbnail) est adopté à l'ouverture du projet. (12 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 12 October 2026 : la référence porte une vignette recadrée 360 x 203 WebP en data URI (`src/lib/coverThumbnail.js`) car un fichier archivé en `.file.json` n'a pas de vignette dans son manifeste. Limite connue : les tuiles de fichiers restent sans aperçu tant que le service n'écrit pas une vignette dans chaque manifeste à l'archivage. (12 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 12 October 2026 : `node scripts/Assets/ScanProjectCovers.mjs [--apply] [--only=a,b]` liste, pour chaque projet, la dernière modification réelle et la miniature trouvée par nom ; `--apply` écrit `lastActivityAt` dans l'index léger et les miniatures dans le fichier des couvertures. Mesuré : 8 projets sur 31 avaient un fichier nommé thumbnail. (12 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 12 October 2026 : l'accueil Tube trie par la dernière vraie modification (`lastActivityAt`, sinon `mtimeMs` des fichiers) ; les fichiers générés ne comptent pas. Le résumé d'index publié par le service porte désormais `lastActivityAt` (`summarizeWorkspaceProject`). (12 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> ## Exact text archive indexing (13 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> - `scripts/index-add-paths.mjs` accepts environment parameter `ZR_INDEX_SKIP_THUMBNAILS=1`. It still adds every supplied committed path to the public search delta, but skips thumbnail lookups. Default behavior stays unchanged. Use this only for an exact non-media archive with no thumbnail content, as in ZenRay Japanese text, JSON, SQLite and SVG sources. (13 October 2026) (14 October 2026, 23:17:55 +0200)
+> - The Japanese offline recovery script sets this option for its child indexer. Earlier lots timed out at120000ms while resolving thumbnail metadata for thousands of file manifests. Paths-only indexing removes those needless thumbnail requests; pendingIndex remains durable until the index command actually succeeds. Tests: scripts/index-add-paths.test.js, both explicit paths-only mode and the normal thumbnail mode pass. (13 October 2026) (14 October 2026, 23:17:55 +0200)
+> - Scripts/ArchiveProject.mjs supports `--source=<registered-source-id>` and `--no-report`. A source-scoped pass can archive stable corpus files while review reports are still changing; a successful pass alone does not prove a fresh whole-project archive. Finish with a complete new inventory and compare all current bytes to receipts and pinned cloud objects. (13 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> - Per-project parameter `indexThumbnailMode` accepts `resolve` (normal behavior) or `paths-only` (exact non-media content). AssetsService validates the value and sets the child indexer flag only for the chosen project. ZenRay Japanese uses paths-only; neighboring projects keep their existing thumbnail behavior. Scripts/AssetsIndexMode.test.js tests both modes and rejects unknown values. (13 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> ## 13 October 2026 : Reprise agnostique du modèle par RESUME.md (14 October 2026, 23:17:55 +0200)
+>
+> - 13 October 2026 : Pour reprendre un projet depuis les dernières choses dites, quel que soit le modèle (Claude, Codex, Gemini, Antigravity, ou ChatGPT par copier-coller), lire `Memory1/Projects/<id>/RESUME.md`. Il nomme la dernière conversation liée, les derniers prompts datés de Matthieu, les dernières itérations ou checkpoints et le dernier ordre de travail, chaque ligne avec sa date. Le PROGRESS.md global n'est pas nécessaire pour cela. (13 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 13 October 2026 : `BeginConversation.mjs` renvoie désormais `resume` (chemin, dernière conversation, markdown) et régénère RESUME.md à chaque démarrage. Si le service est déchargé, la commande échoue toujours (code 1, `sessionBound: false`) mais imprime quand même le brief : la reprise ne dépend plus du daemon. (13 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 13 October 2026 : Commande manuelle, sans daemon : `node scripts/Assets/Resume.mjs <id> [--prompts 6] [--iterations 3] [--orders 1] [--conversations 3] [--max-chars 700] [--json] [--write]`. Tous les réglages vivent dans `RESUME_SETTINGS` en tête de `scripts/Assets/ResumeBrief.mjs`. RESUME.md est dérivé : ne jamais l'éditer, ne jamais le citer comme original ; les textes sont coupés avec le compte exact des caractères retirés, jamais reformulés. (13 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 13 October 2026 : La dernière conversation est la plus récente entre les sources de FEEDBACK.md (transcript Codex, Claude, Antigravity, ou `checkpoint:<agent>:<session>`) et les sessions liées de ConversationIndex.json. Un hôte sans capture native devient visible dès son premier checkpoint. (13 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 13 October 2026 : Correctif : `memoryFolder` prenait la première source mémoire du projet ; pour louisiana-bayou c'était un dossier de post social, et ConversationIndex.md s'écrivait dans `SocialMedia/Posts/short-02-louisiana-bayou-hda/` au lieu de `Projects/louisiana-bayou/`. Il préfère maintenant `project-notes`, puis `/Projects/<id>`, comme `AssetsService`. Mêmes victimes : japanese-environment, zenray-assets-v2, zenray-dictate, zenray-edit, zenray-freelance, zenray-japanese, ceramic-tiles. Les anciens fichiers mal placés restent en place (rien supprimé). (13 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 13 October 2026 : Limite connue : une session reste liée à un seul projet ; si une conversation dérive vers un autre sujet, ses prompts continuent d'entrer dans le FEEDBACK.md du premier projet (cas mesuré : codex 01a11aa4, prompts du 12 October 2026 sur la doctrine design et les dossiers « scan deep », capturés dans louisiana-bayou). Ouvrir une conversation neuve par projet. (13 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 13 October 2026 : Tests : `./node_modules/.bin/vitest run scripts/Assets/ResumeBrief.test.js scripts/Assets/ConversationIndexSync.test.js`. Le correctif de dossier ne s'applique au balayage automatique qu'après rechargement de `com.zenray.assets`, déchargé volontairement depuis le 12 October 2026 jusqu'à demande explicite de Matthieu. (13 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 13 October 2026 : Le skill léger zenray-resume est la porte d'entrée recommandée depuis une conversation vierge pour reprendre instantanément un projet sans charger les 650 lignes de documentation d'atelier de zenray-assets. (13 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> ## 14 October 2026 : l'upload média et les politiques de drive ont quitté ce skill (14 October 2026, 23:17:55 +0200)
+>
+> - 14 October 2026 : tout ce qui concerne Create (films, séries, photos, audio, streaming CMAF, sous-titres, miniatures, renommage, worker d'upload, politique de push GitHub, dossiers Anime/Movies/Series/Documentaries) est dans le skill `zenray-progress` : `/Users/zenray/.claude/skills/zenray-progress/SKILL.md` et `/Users/zenray/.claude/skills/zenray-progress/references/UploadPolicies.md`. Les sections datées du 11 au 14 October 2026 qui étaient ici y sont, intégrales. (14 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 14 October 2026 : ce skill garde les projets de production (Assets) : registre, mapping, feedback, Rules.md, conversations, FileMap, LOAD/UNLOAD, panneau macOS. Un film n'est jamais un projet Assets. Les verbes `charge`, `décharge`, `restaure`, `archive le projet` viennent ici ; `envoie`, `upload`, `streaming` vont à `zenray-progress` (`node /Users/zenray/.claude/skills/zenray-progress/scripts/route-method.mjs "<phrase>"`). (14 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 14 October 2026 : `Upload.md`, `AssetsUpload.md`, `PrepareSubtitleCopy.py`, `RestartFilmWorker.sh` et `route-method.mjs` ont été déplacés vers `zenray-progress`. (14 October 2026) (14 October 2026, 23:17:55 +0200)
+>
+> ## 14 October 2026 : politique GitHub appliquée aux archives et au déchargement Assets (vérification de Matthieu) (14 October 2026, 23:17:55 +0200)
+>
+> - 14 October 2026 : constat de la vérification : ce skill ne portait aucune valeur de la nouvelle politique GitHub (elle vit dans `zenray-progress`) et la section du 10 October ci-dessus décrivait encore une restauration SHA-256 complète comme autorité de déchargement. Cette section comble l'écart pour ce qui touche le service Assets ; les films restent dans `/Users/zenray/.claude/skills/zenray-progress/SKILL.md`. (14 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 14 October 2026 : les archives de dossiers du service passent par `scripts/archive-folder.mjs`, routé vers le moteur `scripts/lib/push-batch-policy.mjs` (`sharedBatchAdapter`) : jamais deux pushes simultanés vers un dépôt, échecs comptés par lot, un blocage ou un refus définitif passe sur un nouveau dépôt (`-r02`, `-r03`). Les valeurs propres aux dossiers sont des paramètres de ce fichier : premier push 20 Mio, plafond 150 Mio, facteur de montée 1,8, 40 tentatives par push, dépôt d'archive de dossier 2 048 Mio. (14 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 14 October 2026 : les 1 900 Mio (20 parts de 95 Mio) et le dépôt de 4 096 Mio (43 parts) concernent les FILMS seulement, jamais les archives de dossiers Assets ; ne pas les appliquer ici. La limite de GitHub reste 2 Gio par push et 100 Mo par fichier. (14 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 14 October 2026 : l'autorité de déchargement d'un original est la preuve par identité d'objets (`scripts/lib/archive-identity-proof.mjs`, `scripts/lib/video-identity-proof.mjs`, utilisés par `AssetsService.mjs`) : manifeste en ligne, noms et blobs rederivés, une vraie part relue. La relecture complète SHA-256 n'a lieu qu'en cas d'échec distant ; l'échantillon « 1 sur N » vaut 0 par défaut (`fullReadBackEvery`). Le panneau compte séparément les preuves par identité. La section du 10 October ci-dessus sur la restauration indépendante est de l'historique pour ce point. (14 October 2026) (14 October 2026, 23:17:55 +0200)
+> - 14 October 2026 : `storage.batchBytes` de `scripts/AssetsConfig.json` (256 Mio) et `batchFiles` (200) bornent la mise en lots du SERVICE avant l'archive ; ce n'est pas la taille d'un push GitHub. (14 October 2026) (14 October 2026, 23:17:55 +0200)
+
+## 14 October 2026, 23:18:03 +0200 : Prompt
+
+<!-- feedback-event:51a248f27008c853d289a5ac50b66a59934f40d409c39032d0110a4e1338f997 (14 October 2026, 23:18:03 +0200) -->
+- Project: zenray-progress; kind: prompt. (14 October 2026, 23:18:03 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/5bd15db6-f2d9-4010-bcb3-0d609a42bc5e.jsonl. (14 October 2026, 23:18:03 +0200)
+
+> Base directory for this skill: /Users/zenray/.claude/skills/zenray-iterative-refinement (14 October 2026, 23:18:03 +0200)
+>
+> # ZenRay Iterative Refinement (14 October 2026, 23:18:03 +0200)
+>
+> ## 14 October 2026 : Boucle de raffinement continu (14 October 2026) (14 October 2026, 23:18:03 +0200)
+>
+> Analyse ce projet dans sa globalité avec pour objectif de l'amener à son meilleur niveau possible sur quatre dimensions : la solidité de l'existant, la rapidité d'exécution, l'ajout de fonctionnalités pertinentes et la qualité du design. (14 October 2026) (14 October 2026, 23:18:03 +0200)
+>
+> Tu as l'interdiction de te contenter d'une réponse en une seule passe ou d'un simple diagnostic de surface. Découpe plutôt le système en éléments logiques et applique sur chacun une boucle d'amélioration continue : (14 October 2026) (14 October 2026, 23:18:03 +0200)
+>
+> 1. Observe précisément ce qui fonctionne mal, ce qui ralentit l'ensemble ou ce qui complique la vie de l'utilisateur. (14 October 2026) (14 October 2026, 23:18:03 +0200)
+> 2. Remets en question l'existant ainsi que tes propres idées initiales en cherchant activement leurs limites et leurs angles morts. (14 October 2026) (14 October 2026, 23:18:03 +0200)
+> 3. À partir de cette critique, construis et applique directement les améliorations concrètes pour fiabiliser la logique actuelle, accélérer les performances, créer les outils ou options qui manquent pour couvrir tout le besoin, et épurer l'interface comme l'expérience globale. (14 October 2026) (14 October 2026, 23:18:03 +0200)
+> 4. Dès qu'une version améliorée est produite, évalue-la avec la même exigence qu'au départ : tant que tu détectes une friction, une lenteur ou une opportunité d'amélioration supplémentaire, reprends ce nouveau résultat comme point de départ et relance immédiatement un cycle complet d'analyse et de perfectionnement jusqu'à ce que le système atteigne un état optimal. (14 October 2026) (14 October 2026, 23:18:03 +0200)
+
+## 14 October 2026, 23:18:03 +0200 : Prompt
+
+<!-- feedback-event:a0757fa195ae9acf094eff1eea9fd2513f11eaeed579699c6288585630ab256f (14 October 2026, 23:18:03 +0200) -->
+- Project: zenray-progress; kind: prompt. (14 October 2026, 23:18:03 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/5bd15db6-f2d9-4010-bcb3-0d609a42bc5e.jsonl. (14 October 2026, 23:18:03 +0200)
+
+> Base directory for this skill: /Users/zenray/.claude/skills/dont-stop (14 October 2026, 23:18:03 +0200)
+>
+> # Dont stop (30 September 2026) (14 October 2026, 23:18:03 +0200)
+>
+> Continue jusqu’à ce que ce soit parfait par rapport à la contrainte `X` donnée par l’utilisateur. Ne t’arrête pas à un résultat partiel. (30 September 2026) (14 October 2026, 23:18:03 +0200)
+>
+> Corrige, vérifie contre `X`, puis recommence tant qu’un écart subsiste. Termine quand `X` est satisfaite, avec une preuve. (30 September 2026) (14 October 2026, 23:18:03 +0200)
+>
+> Si `X` manque, demande-la. Si un obstacle réel empêche de continuer, précise ce qui manque pour reprendre. (30 September 2026) (14 October 2026, 23:18:03 +0200)
+
+## 14 October 2026, 23:26:32 +0200 : Iteration
+
+<!-- feedback-event:395a1ee99f3b31a2288ea450695847fdacad9fba960444d92adfaed487c4bae4 (14 October 2026, 23:26:32 +0200) -->
+- Project: zenray-progress; kind: iteration. (14 October 2026, 23:26:32 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/5bd15db6-f2d9-4010-bcb3-0d609a42bc5e.jsonl. (14 October 2026, 23:26:32 +0200)
+
+> Now I fix the retry path and pin the test baselines, then add tests for the new behaviours. (14 October 2026, 23:26:32 +0200)
+
+## 14 October 2026, 23:28:45 +0200 : Iteration
+
+<!-- feedback-event:9a72d1d8f83dc3821a1b5e6d6da3842fd5797986337ec2a451bcf88744820e1d (14 October 2026, 23:28:45 +0200) -->
+- Project: zenray-progress; kind: iteration. (14 October 2026, 23:28:45 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/5bd15db6-f2d9-4010-bcb3-0d609a42bc5e.jsonl. (14 October 2026, 23:28:45 +0200)
+
+> Le test existant commence par `// @vitest-environment node` ; je l'ajoute (sed a échoué à cause de `$TMPDIR`/BSD), via Python. (14 October 2026, 23:28:45 +0200)
+
+## 14 October 2026, 23:30:50 +0200 : Iteration
+
+<!-- feedback-event:dc8b02b2c29edf795db719c13421ba0b320af0804c69a5d676c72e5674ea17c9 (14 October 2026, 23:30:50 +0200) -->
+- Project: zenray-progress; kind: iteration. (14 October 2026, 23:30:50 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/5bd15db6-f2d9-4010-bcb3-0d609a42bc5e.jsonl. (14 October 2026, 23:30:50 +0200)
+
+> Je regarde la modification non commitée de `ProjectWorkspace.jsx` dans le dépôt principal (autre session) avant de toucher à l'interface, pour éviter un conflit. (14 October 2026, 23:30:50 +0200)
+
+## 14 October 2026, 23:33:35 +0200 : Iteration
+
+<!-- feedback-event:ca979215fead031c7d2aea1c2ca5d76254747683b0f35cc18567a9048b658568 (14 October 2026, 23:33:35 +0200) -->
+- Project: zenray-progress; kind: iteration. (14 October 2026, 23:33:35 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/5bd15db6-f2d9-4010-bcb3-0d609a42bc5e.jsonl. (14 October 2026, 23:33:35 +0200)
+
+> Now tests: service open-links (validation, no private hosts, opener called), plus UI behaviours. (14 October 2026, 23:33:35 +0200)
+
+## 14 October 2026, 23:34:23 +0200 : Iteration
+
+<!-- feedback-event:e395b5332451f1fe65ac72860a6a5635ac85f9130a5c50ccf5ed33a66d3108bf (14 October 2026, 23:34:23 +0200) -->
+- Project: zenray-progress; kind: iteration. (14 October 2026, 23:34:23 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/5bd15db6-f2d9-4010-bcb3-0d609a42bc5e.jsonl. (14 October 2026, 23:34:23 +0200)
+
+> Je mesure ce qui pèse dans le bundle d'entrée de 1,1 Mo (premier affichage de l'app) ; la commande n'a rien imprimé, je relance en voyant la sortie complète. (14 October 2026, 23:34:23 +0200)
+
+## 14 October 2026, 23:35:06 +0200 : Iteration
+
+<!-- feedback-event:f33dfad357ceb01c168e55bb772ffaecb28b2cdd8f941a576ae0a7733ff9eb0f (14 October 2026, 23:35:06 +0200) -->
+- Project: zenray-progress; kind: iteration. (14 October 2026, 23:35:06 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/5bd15db6-f2d9-4010-bcb3-0d609a42bc5e.jsonl. (14 October 2026, 23:35:06 +0200)
+
+> Statut : je prépare un serveur de développement isolé (depuis mon worktree propre) pour mesurer l'app réelle dans le navigateur intégré ; je lis les scripts existants pour les réutiliser. (14 October 2026, 23:35:06 +0200)
+
+## 14 October 2026, 23:36:57 +0200 : Iteration
+
+<!-- feedback-event:dc0c0e58d7cb05d5ade21bb9f51f7992ced8e0968ddc06584ac7d7a6650acf53 (14 October 2026, 23:36:57 +0200) -->
+- Project: zenray-progress; kind: iteration. (14 October 2026, 23:36:57 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/5bd15db6-f2d9-4010-bcb3-0d609a42bc5e.jsonl. (14 October 2026, 23:36:57 +0200)
+
+> Je cherche pourquoi l'app relit l'arbre complet (3 Mo, 9 s) en boucle : c'est le suspect des « long tasks » de 300 ms et des 890 Mo de mémoire constatés. (14 October 2026, 23:36:57 +0200)
+
+## 14 October 2026, 23:38:53 +0200 : Iteration
+
+<!-- feedback-event:007eafbd794441d02a6599eaa0ab11235adfb1b999d3f4ac0d59bff9b8f52fbd (14 October 2026, 23:38:53 +0200) -->
+- Project: zenray-progress; kind: iteration. (14 October 2026, 23:38:53 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/5bd15db6-f2d9-4010-bcb3-0d609a42bc5e.jsonl. (14 October 2026, 23:38:53 +0200)
+
+> Je mesure le démarrage à froid réel (rechargement de page, cache IndexedDB présent) : combien de requêtes d'index et combien de temps avant que l'app soit réactive. (14 October 2026, 23:38:53 +0200)
+
+## 14 October 2026, 23:53:00 +0200 : Iteration
+
+<!-- feedback-event:5cc84c5ca52e3859e0575902c6a86c79dd3175f10d99c9c0394c2c7ca527b19b (14 October 2026, 23:53:00 +0200) -->
+- Project: zenray-progress; kind: iteration. (14 October 2026, 23:53:00 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/5bd15db6-f2d9-4010-bcb3-0d609a42bc5e.jsonl. (14 October 2026, 23:53:00 +0200)
+
+> Maintenant j'implémente la transaction Git (un seul fetch et un seul push par publication) et ses tests. (14 October 2026, 23:53:00 +0200)
+
+## 15 October 2026, 00:04:30 +0200 : Iteration
+
+<!-- feedback-event:3073f3871e0ff353504caea4f1198d2d087ffab2a5f218c3d33ad40a728979d8 (15 October 2026, 00:04:30 +0200) -->
+- Project: zenray-progress; kind: iteration. (15 October 2026, 00:04:30 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/5bd15db6-f2d9-4010-bcb3-0d609a42bc5e.jsonl. (15 October 2026, 00:04:30 +0200)
+
+> Je remplace l'icône par `chevron.right` (existante), puis je monte la palette à la racine et je retire l'ancienne montée dans Create. (15 October 2026, 00:04:30 +0200)
+
+## 15 October 2026, 00:05:30 +0200 : Iteration
+
+<!-- feedback-event:4fd1367e392039e6d351ef4f6ad6b07a1fbcfbf63ec03ad5669235a9312e7d0e (15 October 2026, 00:05:30 +0200) -->
+- Project: zenray-progress; kind: iteration. (15 October 2026, 00:05:30 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/5bd15db6-f2d9-4010-bcb3-0d609a42bc5e.jsonl. (15 October 2026, 00:05:30 +0200)
+
+> Je teste la palette réelle dans le navigateur : ouverture depuis la vue Assets, filtrage « free », navigation. (15 October 2026, 00:05:30 +0200)
+
+## 15 October 2026, 00:06:38 +0200 : Iteration
+
+<!-- feedback-event:b5a85cf13e7d0b0a6e3ece706d8bb446ecbb6982500e7bbef8a6b04fa037acf6 (15 October 2026, 00:06:38 +0200) -->
+- Project: zenray-progress; kind: iteration. (15 October 2026, 00:06:38 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/5bd15db6-f2d9-4010-bcb3-0d609a42bc5e.jsonl. (15 October 2026, 00:06:38 +0200)
+
+> Je termine le filtre Gallery avec un test (filtre visuel seulement, l'ordre sauvegardé reste intact), puis je livre le tout. (15 October 2026, 00:06:38 +0200)

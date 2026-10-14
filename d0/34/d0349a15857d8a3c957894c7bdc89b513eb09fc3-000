@@ -1,14 +1,14 @@
-# Resume zenray-progress (14 October 2026 at 23:18)
+# Resume zenray-progress (15 October 2026 at 00:49)
 
-- Generated from FEEDBACK.md, Rules.md and ConversationIndex.json; derived, never edited by hand, never a substitute for the originals. (14 October 2026 at 23:18)
-- Pinned rules, read first: [Rules.md](/Users/zenray/.claude/Memory1/Projects/zenray-progress/Rules.md) (22 rules). (14 October 2026 at 23:18)
-- Canonical feedback: [FEEDBACK.md](/Users/zenray/.claude/Memory1/Projects/zenray-progress/FEEDBACK.md), 76 entries, last Standing rule at 14 October 2026, 20:50:25 +0200. (14 October 2026 at 23:18)
+- Generated from FEEDBACK.md, Rules.md and ConversationIndex.json; derived, never edited by hand, never a substitute for the originals. (15 October 2026 at 00:49)
+- Pinned rules, read first: [Rules.md](/Users/zenray/.claude/Memory1/Projects/zenray-progress/Rules.md) (24 rules). (15 October 2026 at 00:49)
+- Canonical feedback: [FEEDBACK.md](/Users/zenray/.claude/Memory1/Projects/zenray-progress/FEEDBACK.md), 78 entries, last Standing rule at 15 October 2026, 00:20:47 +0200. (15 October 2026 at 00:49)
 
-## Latest conversations (14 October 2026 at 23:18)
+## Latest conversations (15 October 2026 at 00:49)
 
-- LATEST codex:01a100e2-32f9-7a43-8b5f-ef21c5f96d4d, « Conversation codex 01a100e2 », last activity 3 October 2026 at 10:39 Paris (from feedback). Original: `node scripts/Assets/ConversationDigest.mjs codex:01a100e2-32f9-7a43-8b5f-ef21c5f96d4d --out <file.md>`. (14 October 2026 at 23:18)
+- LATEST codex:01a100e2-32f9-7a43-8b5f-ef21c5f96d4d, « 01a100e2-32f9-7a43-8b5f-ef21c5f96d4d », last activity 3 October 2026 at 10:39 Paris (from feedback). Original: `node scripts/Assets/ConversationDigest.mjs codex:01a100e2-32f9-7a43-8b5f-ef21c5f96d4d --out <file.md>`. (15 October 2026 at 00:49)
 
-## Last 6 prompts of Matthieu, oldest first (14 October 2026 at 23:18)
+## Last 6 prompts of Matthieu, oldest first (15 October 2026 at 00:49)
 
 ### 12 October 2026, 00:24:00 +0200 · Prompt · manual
 
@@ -35,7 +35,7 @@
 > Est-ce que tu peux encore améliorer au maximum la vitesse d'upload pour que les films se upload le plus rapidement possible ? Je suis sûr qu'il y a moyen de rendre le code de Zenrai Assets et Zenrai Progress le plus rapide possible. ON VEUT AUGMENTER AU MAX LA VITESSE A LAQUELLE LES CHOSES S'UPLOAD UTILISE UN WORKFLOW OU QUELQUES AGENTS POUR FAIRE DES RECHERCHES ET POUSSER AU PAROXISME LA VITESSE D'UPLOAD DES FICHIERS EN PENSANT À TOUT /zenray-methodology /think-of-everything
 
 
-## Last 3 iterations or checkpoints (14 October 2026 at 23:18)
+## Last 3 iterations or checkpoints (15 October 2026 at 00:49)
 
 ### 3 October 2026, 10:39:13 +0200 · Iteration · codex:01a100e2
 
@@ -74,11 +74,11 @@
 > | Vérification visuelle | Non | Pas vérifiée dans le navigateur |
 
 
-## Last order of work (14 October 2026 at 23:18)
+## Last order of work (15 October 2026 at 00:49)
 
 ### 10 October 2026, 18:03:28 +0200 · Order of work · manual
 
 > stop l'upload ...pause
 
 
-Next step: reread the latest prompt above, check it against Rules.md, then continue; append through feedback.py and close the turn with Client.mjs checkpoint. (14 October 2026 at 23:18)
+Next step: reread the latest prompt above, check it against Rules.md, then continue; append through feedback.py and close the turn with Client.mjs checkpoint. (15 October 2026 at 00:49)
