@@ -1913,3 +1913,94 @@
 - Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/5bd15db6-f2d9-4010-bcb3-0d609a42bc5e.jsonl. (15 October 2026, 01:28:26 +0200)
 
 > Pas de boucle : une seule erreur à 23:22 puis une nouvelle passe en file, avec des passes normales avant. Le projet motion-design est un dossier vivant (un logiciel y écrit), ce qui provoque ce message occasionnel, et la reprise est automatique. Aucune action. (15 October 2026, 01:28:26 +0200)
+
+## 15 October 2026, 01:29:19 +0200 : Prompt
+
+<!-- feedback-event:15d584645538edecbcbc6918e143445f924f9c600673167042944fa279f98a3e (15 October 2026, 01:29:19 +0200) -->
+- Project: zenray-progress; kind: prompt. (15 October 2026, 01:29:19 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/5bd15db6-f2d9-4010-bcb3-0d609a42bc5e.jsonl. (15 October 2026, 01:29:19 +0200)
+
+> <task-notification> (15 October 2026, 01:29:19 +0200)
+> <task-id>biycdrny9</task-id> (15 October 2026, 01:29:19 +0200)
+> <summary>Monitor event: "Archive Japanese : progression, erreurs, fin (réarmé)"</summary> (15 October 2026, 01:29:19 +0200)
+> <event>japanese pending=29788 ERRORS zenray-motion-design: Source changed since inventory</event> (15 October 2026, 01:29:19 +0200)
+> If this event is something the user would act on now, send a PushNotification. Routine or benign output doesn't need one. (15 October 2026, 01:29:19 +0200)
+> </task-notification> (15 October 2026, 01:29:19 +0200)
+
+## 15 October 2026, 01:29:21 +0200 : Iteration
+
+<!-- feedback-event:2379922515e7d9ca865ab4410d311dc9b8cee3fde8b59e4923b1b12cc9ca2651 (15 October 2026, 01:29:21 +0200) -->
+- Project: zenray-progress; kind: iteration. (15 October 2026, 01:29:21 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/5bd15db6-f2d9-4010-bcb3-0d609a42bc5e.jsonl. (15 October 2026, 01:29:21 +0200)
+
+> Japanese : 29 788 restants (−2 000 en 8 min). Tendance stable. Je continue d'attendre sans intervenir. (15 October 2026, 01:29:21 +0200)
+
+## 15 October 2026, 01:30:20 +0200 : Prompt
+
+<!-- feedback-event:ccf42eb4911f48244c665edf786f870d4e3100012605b07cf79e100a24b86a91 (15 October 2026, 01:30:20 +0200) -->
+- Project: zenray-progress; kind: prompt. (15 October 2026, 01:30:20 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/5bd15db6-f2d9-4010-bcb3-0d609a42bc5e.jsonl. (15 October 2026, 01:30:20 +0200)
+
+> <task-notification> (15 October 2026, 01:30:20 +0200)
+> <task-id>biycdrny9</task-id> (15 October 2026, 01:30:20 +0200)
+> <summary>Monitor event: "Archive Japanese : progression, erreurs, fin (réarmé)"</summary> (15 October 2026, 01:30:20 +0200)
+> <event>japanese pending=29788 ERRORS zenray-motion-design: Source changed since inventory</event> (15 October 2026, 01:30:20 +0200)
+> If this event is something the user would act on now, send a PushNotification. Routine or benign output doesn't need one. (15 October 2026, 01:30:20 +0200)
+> </task-notification> (15 October 2026, 01:30:20 +0200)
+
+## 15 October 2026, 01:30:22 +0200 : Iteration
+
+<!-- feedback-event:a9b6b87e1cded6976dd5c0fbe4e51417218557b99b28f40c7abbc38bf6197bff (15 October 2026, 01:30:22 +0200) -->
+- Project: zenray-progress; kind: iteration. (15 October 2026, 01:30:22 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/5bd15db6-f2d9-4010-bcb3-0d609a42bc5e.jsonl. (15 October 2026, 01:30:22 +0200)
+
+> Rien de nouveau (29 788 restants, même message motion-design). J'attends l'événement suivant ; le bilan de 30 min du cron suivra. (15 October 2026, 01:30:22 +0200)
+
+## 15 October 2026, 01:31:20 +0200 : Prompt
+
+<!-- feedback-event:cdd24c5f86fe7fb470896af57c3a3429e03e47ff4b7eed0e59d8d2d850b24541 (15 October 2026, 01:31:20 +0200) -->
+- Project: zenray-progress; kind: prompt. (15 October 2026, 01:31:20 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/5bd15db6-f2d9-4010-bcb3-0d609a42bc5e.jsonl. (15 October 2026, 01:31:20 +0200)
+
+> <task-notification> (15 October 2026, 01:31:20 +0200)
+> <task-id>biycdrny9</task-id> (15 October 2026, 01:31:20 +0200)
+> <summary>Monitor event: "Archive Japanese : progression, erreurs, fin (réarmé)"</summary> (15 October 2026, 01:31:20 +0200)
+> <event>japanese pending=29788 ERRORS zenray-motion-design: Source changed since inventory</event> (15 October 2026, 01:31:20 +0200)
+> If this event is something the user would act on now, send a PushNotification. Routine or benign output doesn't need one. (15 October 2026, 01:31:20 +0200)
+> </task-notification> (15 October 2026, 01:31:20 +0200)
+
+## 15 October 2026, 01:31:26 +0200 : Iteration
+
+<!-- feedback-event:682e125c80a5481995deed374141618f2fcdf704043878857fce349b548c9a99 (15 October 2026, 01:31:26 +0200) -->
+- Project: zenray-progress; kind: iteration. (15 October 2026, 01:31:26 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/5bd15db6-f2d9-4010-bcb3-0d609a42bc5e.jsonl. (15 October 2026, 01:31:26 +0200)
+
+> J'ai arrêté le moniteur de progression Japanese : il répétait le même état toutes les 8 minutes et me réveillait pour rien. Restent actifs le moniteur de pics de latence (silencieux tant que tout va bien) et le bilan de 30 min du cron, qui vérifiera la fin de l'archive. (15 October 2026, 01:31:26 +0200)
+
+## 15 October 2026, 01:36:45 +0200 : Prompt
+
+<!-- feedback-event:551be363558ec005c340264572c54ad0dc85bb051b809e0387dd9b57ffbcce15 (15 October 2026, 01:36:45 +0200) -->
+- Project: zenray-progress; kind: prompt. (15 October 2026, 01:36:45 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/5bd15db6-f2d9-4010-bcb3-0d609a42bc5e.jsonl. (15 October 2026, 01:36:45 +0200)
+
+> <task-notification> (15 October 2026, 01:36:45 +0200)
+> <task-id>biaza8ubk</task-id> (15 October 2026, 01:36:45 +0200)
+> <summary>Monitor event: "Pics de latence du bridge Assets (&gt;3 s) et phase en cours"</summary> (15 October 2026, 01:36:45 +0200)
+> <event>[Monitor expired after 30m with 2 events delivered. Re-arm it if you still need the watch.]</event> (15 October 2026, 01:36:45 +0200)
+> </task-notification> (15 October 2026, 01:36:45 +0200)
+
+## 15 October 2026, 01:36:48 +0200 : Iteration
+
+<!-- feedback-event:c00a7b328ba44d69c7e0c376c28c1aaef735660505f4b2009fdb008456074ac3 (15 October 2026, 01:36:48 +0200) -->
+- Project: zenray-progress; kind: iteration. (15 October 2026, 01:36:48 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/5bd15db6-f2d9-4010-bcb3-0d609a42bc5e.jsonl. (15 October 2026, 01:36:48 +0200)
+
+> Le moniteur de pics a expiré après 30 min avec seulement les deux événements déjà analysés (le pic de 25 s corrigé et le redémarrage). Je le réarme pour confirmer l'absence de nouveau blocage. (15 October 2026, 01:36:48 +0200)
+
+## 15 October 2026, 01:36:51 +0200 : Iteration
+
+<!-- feedback-event:40b142c3a8463b166a3346a1cdc946ce7f6266f97ab9cf9bf8a155eeed3abce7 (15 October 2026, 01:36:51 +0200) -->
+- Project: zenray-progress; kind: iteration. (15 October 2026, 01:36:51 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/5bd15db6-f2d9-4010-bcb3-0d609a42bc5e.jsonl. (15 October 2026, 01:36:51 +0200)
+
+> Moniteur de pics réarmé. J'attends le bilan automatique du cron ou un pic éventuel. (15 October 2026, 01:36:51 +0200)
