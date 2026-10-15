@@ -2348,3 +2348,25 @@
 > - **Garde-fou** : `Ship.sh` reconstruit désormais ce dist à chaque livraison, pour que le local ne reste plus en retard sur la production. (15 October 2026, 06:23:32 +0200)
 > - **Prochain** : parcourir Plan, Freelance et Gallery sur ce build local à la recherche d'autres frictions. (15 October 2026, 06:23:32 +0200)
 > - **En attente de ton go** : le plan `TEMP` (dry-run) et `--apply` de l'index. Entrée ajoutée dans PROGRESS.md. (15 October 2026, 06:23:32 +0200)
+
+## 15 October 2026, 06:52:26 +0200 : Prompt
+
+<!-- feedback-event:9e72c15802c070aae7b891c0fb3214a3f1d4cb9ee0ad712dda5a6d1e7f35fcb0 (15 October 2026, 06:52:26 +0200) -->
+- Project: zenray-progress; kind: prompt. (15 October 2026, 06:52:26 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/5bd15db6-f2d9-4010-bcb3-0d609a42bc5e.jsonl. (15 October 2026, 06:52:26 +0200)
+
+> BILAN 30 MIN (ZenRayProgress, refinement 14 octobre): en 5 lignes max dis ce qui est fait depuis le dernier bilan (avec preuve mesuree), ce qui est en cours, le prochain geste; puis append une entree PROGRESS.md via le skill progress; puis continue le travail sans t'arreter (dont-stop). Rappel: aucune regression design, aucun bug sur les donnees, deploiement uniquement depuis un arbre propre d'origin/main. (15 October 2026, 06:52:26 +0200)
+
+## 15 October 2026, 06:53:25 +0200 : Iteration
+
+<!-- feedback-event:73598c9223f6bc210881129a9885bb69d522c9adbf8aef77e7cb0465130e5642 (15 October 2026, 06:53:25 +0200) -->
+- Project: zenray-progress; kind: iteration. (15 October 2026, 06:53:25 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/5bd15db6-f2d9-4010-bcb3-0d609a42bc5e.jsonl. (15 October 2026, 06:53:25 +0200)
+
+> Bilan 06:55. (15 October 2026, 06:53:25 +0200)
+>
+> - **Fait** : parcours du build local dans le navigateur intégré, avec un hook d'erreurs installé avant les clics. Plan, Freelance, Assets, Audio, Shelf, Goals et Notes s'ouvrent sans erreur applicative. (15 October 2026, 06:53:25 +0200)
+> - **Preuve** : une seule erreur capturée (`script.js` renvoyant du HTML), qui vient du panneau navigateur et n'existe pas dans les sources. Le titre d'onglet suit bien `libelleDeVue(view)`. (15 October 2026, 06:53:25 +0200)
+> - **Non vérifié** : Gallery par un clic réel dans la barre latérale (mon clic scripté a visé le mauvais élément), et le lot Freelance 10/20/50 sur ce build. (15 October 2026, 06:53:25 +0200)
+> - **Prochain** : tester ces deux points avec des clics réels. Le plan `TEMP` (dry-run) et `--apply` de l'index attendent toujours ton go. (15 October 2026, 06:53:25 +0200)
+> - **Journal** : entrée ajoutée dans PROGRESS.md. (15 October 2026, 06:53:25 +0200)
