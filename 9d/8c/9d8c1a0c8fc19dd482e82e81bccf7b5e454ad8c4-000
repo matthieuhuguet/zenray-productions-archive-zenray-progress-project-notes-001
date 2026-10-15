@@ -2114,3 +2114,25 @@
 > - **En cours** : l'essai à blanc de l'index public (clone et lecture de 141 000 manifestes d'images, ne pousse rien). (15 October 2026, 03:23:06 +0200)
 > - **Prochain geste** : te donner son résultat (taille finale de l'index, gain attendu), puis un avertissement quand un snapshot approche 90 Mo ; le plan de déplacement de TEMP attend toujours ton accord. (15 October 2026, 03:23:06 +0200)
 > - **Journal** : entrée ajoutée à `PROGRESS.md`. (15 October 2026, 03:23:06 +0200)
+
+## 15 October 2026, 03:52:26 +0200 : Prompt
+
+<!-- feedback-event:ff5c56231bb0eb0d9d50f82304bbe4c4ccb304c5e3db3608e7bec572982bb5fb (15 October 2026, 03:52:26 +0200) -->
+- Project: zenray-progress; kind: prompt. (15 October 2026, 03:52:26 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/5bd15db6-f2d9-4010-bcb3-0d609a42bc5e.jsonl. (15 October 2026, 03:52:26 +0200)
+
+> BILAN 30 MIN (ZenRayProgress, refinement 14 octobre): en 5 lignes max dis ce qui est fait depuis le dernier bilan (avec preuve mesuree), ce qui est en cours, le prochain geste; puis append une entree PROGRESS.md via le skill progress; puis continue le travail sans t'arreter (dont-stop). Rappel: aucune regression design, aucun bug sur les donnees, deploiement uniquement depuis un arbre propre d'origin/main. (15 October 2026, 03:52:26 +0200)
+
+## 15 October 2026, 03:52:40 +0200 : Iteration
+
+<!-- feedback-event:811c92ec60acb7d58ad08d8a2cd59e0455a6c105c8a4c44a19fa673113002b4b (15 October 2026, 03:52:40 +0200) -->
+- Project: zenray-progress; kind: iteration. (15 October 2026, 03:52:40 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/5bd15db6-f2d9-4010-bcb3-0d609a42bc5e.jsonl. (15 October 2026, 03:52:40 +0200)
+
+> Bilan 03:55 : (15 October 2026, 03:52:40 +0200)
+>
+> - **Fait (mesuré)** : essai à blanc de l'index public terminé, rien poussé : 348 167 nœuds, 142 084 images dont 142 083 avec vignette, index v2 de 156,4 Mo en clair, construit en 2 min 36 s pour l'arbre. (15 October 2026, 03:52:40 +0200)
+> - **Ce que ça change pour toi** : `--apply` replierait le delta de 22 Mo (114 536 chemins) dans les shards. Chaque indexation Assets (7 à 60 s aujourd'hui) redeviendrait quasi instantanée, et le téléchargement complet du delta à chaque changement disparaîtrait. La commande reste la tienne : `cd /Users/zenray/Create/Build/Productions/GithubProductions/ZenRayProgress && GITHUB_TOKEN=$(gh auth token) node scripts/build-search-index.mjs --apply`. (15 October 2026, 03:52:40 +0200)
+> - **Service** : 5 jobs en file (24 terminés), bridge 113 ms, aucune erreur. (15 October 2026, 03:52:40 +0200)
+> - **En attente** : plan de déplacement de TEMP (sans exécution), ton accord. (15 October 2026, 03:52:40 +0200)
+> - **Journal** : entrée ajoutée à `PROGRESS.md`. (15 October 2026, 03:52:40 +0200)
