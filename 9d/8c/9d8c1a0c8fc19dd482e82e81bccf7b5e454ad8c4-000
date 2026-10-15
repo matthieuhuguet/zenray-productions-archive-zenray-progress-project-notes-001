@@ -2236,3 +2236,25 @@
 > | Aucune régression ni bug sur les données | Oui | 2558 tests passés, `verify ko=0` sur la dernière sauvegarde | (15 October 2026, 04:27:05 +0200)
 > | Site en production à jour | Oui | bundle servi = bundle construit (`index-C3I-bkSZ.js`) | (15 October 2026, 04:27:05 +0200)
 > | Reprise des deux sauvegardes redémarrées | Pas encore vérifié | à contrôler au prochain bilan | (15 October 2026, 04:27:05 +0200)
+
+## 15 October 2026, 04:52:26 +0200 : Prompt
+
+<!-- feedback-event:913fdaeb8fa6f62a38dc7208d1847b1c9e15d69f5add2e602ed474be49d4e49f (15 October 2026, 04:52:26 +0200) -->
+- Project: zenray-progress; kind: prompt. (15 October 2026, 04:52:26 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/5bd15db6-f2d9-4010-bcb3-0d609a42bc5e.jsonl. (15 October 2026, 04:52:26 +0200)
+
+> BILAN 30 MIN (ZenRayProgress, refinement 14 octobre): en 5 lignes max dis ce qui est fait depuis le dernier bilan (avec preuve mesuree), ce qui est en cours, le prochain geste; puis append une entree PROGRESS.md via le skill progress; puis continue le travail sans t'arreter (dont-stop). Rappel: aucune regression design, aucun bug sur les donnees, deploiement uniquement depuis un arbre propre d'origin/main. (15 October 2026, 04:52:26 +0200)
+
+## 15 October 2026, 04:52:46 +0200 : Iteration
+
+<!-- feedback-event:366b6acfad4c4dc592c7e512a0135764eab1e095439c9da36efcbc758b3cd3ad (15 October 2026, 04:52:46 +0200) -->
+- Project: zenray-progress; kind: iteration. (15 October 2026, 04:52:46 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/5bd15db6-f2d9-4010-bcb3-0d609a42bc5e.jsonl. (15 October 2026, 04:52:46 +0200)
+
+> Bilan 04:55. (15 October 2026, 04:52:46 +0200)
+>
+> - **Fait** : les sauvegardes interrompues par le redémarrage ont repris seules. `zenray-motion-design` s'est terminée à 04:45 et `zenray-progress` vérifie à `ko=0`. (15 October 2026, 04:52:46 +0200)
+> - **Preuve** : une seule erreur sur les 400 derniers événements (« operation aborted » à 04:26, c'est le redémarrage lui-même), aucune autre. (15 October 2026, 04:52:46 +0200)
+> - **En cours** : 3 projets avec 2 fichiers vivants en attente, remis en file normalement. Rien d'anormal côté service ni côté données. (15 October 2026, 04:52:46 +0200)
+> - **Prochain** : continuer le raffinement (Create, Plan, Notes, Gallery). Ton go reste attendu pour le plan `TEMP` (dry-run) et pour `--apply` de l'index. (15 October 2026, 04:52:46 +0200)
+> - **Journal** : entrée ajoutée dans PROGRESS.md. (15 October 2026, 04:52:46 +0200)
