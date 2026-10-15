@@ -2400,3 +2400,33 @@
 > - **Non testé** : le bouton « Ouvrir les pages », parce qu'il ouvrirait de vrais onglets. (15 October 2026, 07:22:56 +0200)
 > - **Prochain** : couvrir par test les cas limites du lot Freelance (liste vide, doublons). Le plan `TEMP` (dry-run) et `--apply` de l'index attendent toujours ton go. (15 October 2026, 07:22:56 +0200)
 > - **Journal** : entrée ajoutée dans PROGRESS.md. (15 October 2026, 07:22:56 +0200)
+
+## 15 October 2026, 07:52:26 +0200 : Prompt
+
+<!-- feedback-event:254887de9164844932dc1ef92d284e3728dbc2b0bc26a16a7146adb92985172e (15 October 2026, 07:52:26 +0200) -->
+- Project: zenray-progress; kind: prompt. (15 October 2026, 07:52:26 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/5bd15db6-f2d9-4010-bcb3-0d609a42bc5e.jsonl. (15 October 2026, 07:52:26 +0200)
+
+> BILAN 30 MIN (ZenRayProgress, refinement 14 octobre): en 5 lignes max dis ce qui est fait depuis le dernier bilan (avec preuve mesuree), ce qui est en cours, le prochain geste; puis append une entree PROGRESS.md via le skill progress; puis continue le travail sans t'arreter (dont-stop). Rappel: aucune regression design, aucun bug sur les donnees, deploiement uniquement depuis un arbre propre d'origin/main. (15 October 2026, 07:52:26 +0200)
+
+## 15 October 2026, 07:55:13 +0200 : Iteration
+
+<!-- feedback-event:34264b870140c5c91022c2d58ccd7f69ef5e57216ea3c0df31cdf14c8f1bb878 (15 October 2026, 07:55:13 +0200) -->
+- Project: zenray-progress; kind: iteration. (15 October 2026, 07:55:13 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/5bd15db6-f2d9-4010-bcb3-0d609a42bc5e.jsonl. (15 October 2026, 07:55:13 +0200)
+
+> Déploiement terminé mais le bundle servi est encore l'ancien : je revérifie après propagation. (15 October 2026, 07:55:13 +0200)
+
+## 15 October 2026, 07:55:27 +0200 : Iteration
+
+<!-- feedback-event:168480700b6e2d5962bb671cb4185aa1dd361201afec0e121b0c7c250efd7420 (15 October 2026, 07:55:27 +0200) -->
+- Project: zenray-progress; kind: iteration. (15 October 2026, 07:55:27 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/5bd15db6-f2d9-4010-bcb3-0d609a42bc5e.jsonl. (15 October 2026, 07:55:27 +0200)
+
+> Bilan 07:58. (15 October 2026, 07:55:27 +0200)
+>
+> - **Fait** : un vrai défaut corrigé dans le lot du jour Freelance. À score, pays, statut freelance et nom égaux, l'ordre dépendait de l'ordre reçu du serveur, donc le lot pouvait changer d'un rafraîchissement à l'autre. Un départage par rôle puis id a été ajouté, avec 2 tests de cas limites (liste vide, taille supérieure aux candidats). (15 October 2026, 07:55:27 +0200)
+> - **Preuve** : le test d'ordre inversé était rouge avant le correctif (`['d','c','a']` contre `['d','b','a']`) et vert après. La suite complète passe via `Ship.sh`, commit `b47604c5` sur `origin/main`. (15 October 2026, 07:55:27 +0200)
+> - **En cours** : le déploiement se propage. 3 requêtes sur 4 servent déjà `index-DEzn4DnI`, une renvoie encore l'ancien bundle (cache de bord). (15 October 2026, 07:55:27 +0200)
+> - **Prochain** : recontrôler que le bundle servi converge, puis poursuivre la chasse aux frictions. (15 October 2026, 07:55:27 +0200)
+> - **En attente de ton go** : le plan `TEMP` (dry-run) et `--apply` de l'index. Entrée ajoutée dans PROGRESS.md. (15 October 2026, 07:55:27 +0200)
