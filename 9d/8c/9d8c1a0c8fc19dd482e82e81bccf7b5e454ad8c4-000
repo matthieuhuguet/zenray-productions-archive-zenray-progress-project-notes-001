@@ -2136,3 +2136,82 @@
 > - **Service** : 5 jobs en file (24 terminés), bridge 113 ms, aucune erreur. (15 October 2026, 03:52:40 +0200)
 > - **En attente** : plan de déplacement de TEMP (sans exécution), ton accord. (15 October 2026, 03:52:40 +0200)
 > - **Journal** : entrée ajoutée à `PROGRESS.md`. (15 October 2026, 03:52:40 +0200)
+
+## 15 October 2026, 04:22:25 +0200 : Prompt
+
+<!-- feedback-event:fe9656f6ddb84bda905a5121f9864a245855321d225eee4db7474109c7a10ea8 (15 October 2026, 04:22:25 +0200) -->
+- Project: zenray-progress; kind: prompt. (15 October 2026, 04:22:25 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/5bd15db6-f2d9-4010-bcb3-0d609a42bc5e.jsonl. (15 October 2026, 04:22:25 +0200)
+
+> BILAN 30 MIN (ZenRayProgress, refinement 14 octobre): en 5 lignes max dis ce qui est fait depuis le dernier bilan (avec preuve mesuree), ce qui est en cours, le prochain geste; puis append une entree PROGRESS.md via le skill progress; puis continue le travail sans t'arreter (dont-stop). Rappel: aucune regression design, aucun bug sur les donnees, deploiement uniquement depuis un arbre propre d'origin/main. (15 October 2026, 04:22:25 +0200)
+
+## 15 October 2026, 04:24:15 +0200 : Prompt
+
+<!-- feedback-event:25f6f81fefe494b638a0dff45f8c1c7f817256e162c63ddacf8407c0c84ab014 (15 October 2026, 04:24:15 +0200) -->
+- Project: zenray-progress; kind: prompt. (15 October 2026, 04:24:15 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/5bd15db6-f2d9-4010-bcb3-0d609a42bc5e.jsonl. (15 October 2026, 04:24:15 +0200)
+
+> This session is being continued from a previous conversation that ran out of context. The summary below covers the earlier portion of the conversation. (15 October 2026, 04:24:15 +0200)
+>
+> Summary: (15 October 2026, 04:24:15 +0200)
+> 1. Primary Request and Intent: (15 October 2026, 04:24:15 +0200)
+>    Matthieu (French, runs ZenRay products) asked, at 14 Oct 2026 ~23:17 CEST: (a) first create a backup and restore point at the exact time of the first prompt; (b) then apply /zenray-iterative-refinement to /zenray-progress (the site at zenray-progress.pages.dev, repo `/Users/zenray/Create/Build/Productions/GithubProductions/ZenRayProgress`) with NO design regression, improving performance, speed, repetitive tasks, to make the experience seamless; (c) make the app a coherent "hub" linking menus; (d) the Create drive is a mess and cannot be tidied by hand, so improve organization, but "un bug n'est pas envisageable car ces fichiers sont trop importants"; (e) focus on Create, Assets, Plan, Notes, Freelance (automate prospecting: launch 10/20/50 tabs with prefilled forms), Gallery (add features, fluid UI); (f) a cron with a bilan every 30 min, ~24 h, extraordinary performance results; (g) two big problems: uploads too slow (to Create and to Assets) and Assets sometimes unusable because "le loader est occupé"; (h) read /zenray-assets and /zenray-progress; /dont-stop. Second message: "si tu penses avoir finis continue d'améliorer chaque produits /tasks-sequence" (repeating the initial prompt). Since then only automatic cron prompts: "BILAN 30 MIN (ZenRayProgress, refinement 14 octobre): en 5 lignes max dis ce qui est fait depuis le dernier bilan (avec preuve mesuree), ce qui est en cours, le prochain geste; puis append une entree PROGRESS.md via le skill progress; puis continue le travail sans t'arreter (dont-stop). Rappel: aucune regression design, aucun bug sur les donnees, deploiement uniquement depuis un arbre propre d'origin/main." (15 October 2026, 04:24:15 +0200)
+>    Standing global rules to keep: no em-dash anywhere; brief answers; full absolute paths as links; dates in English month format; closing 3-column table (what he wanted / done / how I know) for non-trivial tasks; workflows banned (no Workflow tool without double confirmation); never use Matthieu's personal browser (built-in browser pane is allowed); deployment only from clean origin/main; PROGRESS.md append-only via skill `progress`; `build-search-index.mjs --apply` is reserved to Matthieu; no personal data in URLs; never move/delete Create files without his validated plan. (15 October 2026, 04:24:15 +0200)
+>
+> 2. Key Technical Concepts: (15 October 2026, 04:24:15 +0200)
+>    - ZenRay Assets service (`com.zenray.assets`, LaunchAgent, node from ~/.hermes/node/bin/node, port 3100, embedded in scripts/local-server.mjs; bridge POST /api/assets-workspace with header `x-zr-assets-client: 2`), single global writer lock `writer.lock`, per-project lifecycle queues (LOAD/UNLOAD independent of writer). (15 October 2026, 04:24:15 +0200)
+>    - Archive engine `scripts/archive-folder.mjs` (fixed ~35 s cost per batch: sparse clone of zenray-data, drive tree survey, push, verify), index step `scripts/index-add-paths.mjs` rewriting a 22 MB encrypted `delta.json` in repo zenray-index-public (appendPublicDelta), publication of `.workspace.json`/catalogue/`.context.md` to zenray-data via sparse Git writer (now one transaction). (15 October 2026, 04:24:15 +0200)
+>    - Event-loop stalls diagnosed with CPU profiles, latency probes, per-pass `timing` events in `~/Library/Application Support/ZenRayAssets/Events.jsonl`. (15 October 2026, 04:24:15 +0200)
+>    - GitHub limits: 100 MiB per file (pre-receive hook declined), 2 GiB per push; undici connect timeout showed as "fetch failed" during stalls. (15 October 2026, 04:24:15 +0200)
+>    - Hardware encoder (VideoToolbox) saturates ~20x realtime at 2 flows, so film packaging is encoder-bound. (15 October 2026, 04:24:15 +0200)
+>    - Cloudflare Pages deploy: `npx vite build && npx wrangler pages deploy dist --project-name zenray-progress --branch main`; verify served `index-*.js` equals built one. (15 October 2026, 04:24:15 +0200)
+>    - Dev preview needs real `ZENRAY_MEDIA_KEY` (gitignored `.zenray-media-key` of main checkout) and `ZR_ASSETS_PASSIVE=1`. (15 October 2026, 04:24:15 +0200)
+>    - Cross-view navigation via mailbox `poserDemandePages` (Pages.jsx `pagesMonte`, `demandePages`), custom events `zr:create-folder`, `zr:open-page`, etc. (15 October 2026, 04:24:15 +0200)
+>    - Search index client: IndexedDB cache, head.json + delta.json + 27 encrypted shards, combined token `head|delta`. (15 October 2026, 04:24:15 +0200)
+>
+> 3. Files and Code Sections: (15 October 2026, 04:24:15 +0200)
+>    - `/Users/zenray/Create/Build/Productions/GithubProductions/ZenRayProgress/scripts/AssetsService.mjs` (core service): memoised `combinedFiles(id)`, coalesced `save()`, `touch()`, `mapLimit`, `scheduleBackup(id,{continuation})`, yield at batch boundary, `publishSafely`, timing events, Set-based selection, card lookup `cardsByRel` Map, stale `.tmp` cleanup, cloud snapshot projection dropping `manifestPath, relativeManifest, sourceFolder`. (15 October 2026, 04:24:15 +0200)
+>    - `scripts/AssetsCloudGitWriter.mjs` / `scripts/AssetsCloudPublisher.mjs`: `transaction()` and `transact()` (one fetch/commit/push; unchanged catalogue not rewritten). (15 October 2026, 04:24:15 +0200)
+>    - `scripts/AssetsConfig.json`: batchFiles 2000, batchBytes 536870912, autoBatchLimit 4, snapshotConcurrency 6, watch.backupMinIntervalSeconds 240, storage.publishHeartbeatMs 21600000, indexMinIntervalMs 300000, additionalRoots tmp includes ZenRayMotionDesign. (15 October 2026, 04:24:15 +0200)
+>    - Tests added: `scripts/AssetsFluidity.test.js` (mapLimit, save coalescing, memo, scheduling, yield, tmp cleanup, snapshot size/publish failure), `scripts/AssetsPublishTransaction.test.js`, `src/search/searchIndexPeek.test.js`, `src/search/searchIndexClient.shardBase.test.js`, `src/components/SpotlightSearch.test.jsx`, `src/capture/folderVisibility.test.js`, `src/create/poserDemandePages.test.jsx`, `src/create/crossViewLinks.test.jsx`, `scripts/Freelance/Service.test.js` additions, FreelanceBatch/FreelanceView/GalleryView/ProjectWorkspace test additions, `scripts/Films/tests/test_finish_parallel.py`. (15 October 2026, 04:24:15 +0200)
+>    - UI: `src/components/assets/ProjectWorkspace.jsx`, `AssetsTube.jsx`, `src/components/freelance/FreelanceBatch.jsx`, `src/components/FreelanceView.jsx`, `src/lib/freelanceBatch.js` (BATCH.sizes [3,5,10,20,50]), `src/lib/freelanceBridge.js`, `scripts/Freelance/Service.mjs`, `src/components/GalleryView.jsx` (filter + Lightbox keyboard), `src/components/SpotlightSearch.jsx`, `src/App.jsx` (palette, forwarder, import of poserDemandePages/pagesMonte), `src/create/Pages.jsx`, `src/capture/folderVisibility.js`, `src/search/searchIndexClient.js`, `scripts/local-server.mjs`, `scripts/Films/ProcessFilmsSequentially.py`, `tests/hebergement.test.js`. (15 October 2026, 04:24:15 +0200)
+>    - Atelier `/Users/zenray/.claude/tmp/tmp-zenray-refine-14oct/`: `Scripts/Ship.sh [--restart-assets] [--restart-freelance] [--no-deploy]`, `Scripts/dev-server-refine.sh`, `Scripts/FetchIndex.mjs`, `AnalyzeTree.mjs`, `AnalyzeJunk.mjs`, `PlanTemp.mjs`, `REPORT-create-organisation.md`, `data/index.json`, `data/Plan-TEMP.json`, `backup/`. (15 October 2026, 04:24:15 +0200)
+>    - Docs/memory: `docs/INDEX-ERREURS-FEATURES.md`, `docs/FREELANCE-ENGINE.md`, `~/.claude/skills/zenray-assets/SKILL.md`, `~/.claude/skills/zenray-progress/SKILL.md`, `/Users/zenray/.claude/Memory1/Projects/zenray-progress/{Rules.md,FEEDBACK.md,Project1.md}`, `scripts/Assets/SkillContract.json`. (15 October 2026, 04:24:15 +0200)
+>
+> 4. Errors and fixes: (15 October 2026, 04:24:15 +0200)
+>    - Dev server generated a random media key (index undecryptable, fake 22 s/890 MB problem): export real key from main checkout; run passive. (15 October 2026, 04:24:15 +0200)
+>    - New vitest files need `// @vitest-environment node` (parse error "Expected ident"). (15 October 2026, 04:24:15 +0200)
+>    - ZenRayMotionDesign root missing from origin config (service refused to start): added to AssetsConfig.json. (15 October 2026, 04:24:15 +0200)
+>    - Existing tests broke with new config values: fixture pins `autoBatchLimit=1`, `backupMinIntervalSeconds=0`. (15 October 2026, 04:24:15 +0200)
+>    - Hebergement guard failure (test file with import.meta.url): guard excludes test files. (15 October 2026, 04:24:15 +0200)
+>    - `demandePages is not defined` (App.jsx copy of mailbox): export `poserDemandePages` from Pages.jsx. (15 October 2026, 04:24:15 +0200)
+>    - 25 s service freeze per 2000-file batch (linear `find` with NFC normalise): Map lookup. (15 October 2026, 04:24:15 +0200)
+>    - GitHub rejected Japanese `.workspace.json` (104.7 MB > 100 MiB): drop 3 unread fields (80.8 MB) and make publication failure non-fatal. (15 October 2026, 04:24:15 +0200)
+>    - Misdiagnosis avoided: reference repo repack experiment (git ops are fast) abandoned and copy deleted. (15 October 2026, 04:24:15 +0200)
+>    - Flaky full suite once: Ship.sh now retries once and prints failing names. (15 October 2026, 04:24:15 +0200)
+>    - Periodic monitors repeating same state woke me repeatedly: progress monitor stopped (TaskStop). (15 October 2026, 04:24:15 +0200)
+>
+> 5. Problem Solving: (15 October 2026, 04:24:15 +0200)
+>    Solved: loader-busy root causes, upload slowness for Assets (passes, batches, publication, indexing), Japanese archive completion (51,309 → 0 pending), Freelance multi-tab automation, hub navigation, Gallery features, Create performance verified (20k-item folder first tiles 250 ms). Ongoing/open: delta.json 22 MB fold needs Matthieu's `--apply`; Create TEMP triage plan awaits his go; snapshot-size warning (>90 MB) not yet coded; film packaging bound by encoder; Japanese snapshot margin ~23% under 100 MiB. (15 October 2026, 04:24:15 +0200)
+>
+> 6. All user messages: (15 October 2026, 04:24:15 +0200)
+>    - Initial prompt (backup + /zenray-iterative-refinement on /zenray-progress, hub, Create mess, focus Create/Assets/Plan/Notes/Freelance/Gallery, cron bilan every 30 min, ~24 h, upload speed, Assets loader busy, /dont-stop). (15 October 2026, 04:24:15 +0200)
+>    - "si tu penses avoir finis continue d'améliorer chaque produits /tasks-sequence prompt initial = <pasted initial prompt>". (15 October 2026, 04:24:15 +0200)
+>    - Recurring automatic cron prompts "BILAN 30 MIN (ZenRayProgress, refinement 14 octobre) ..." (several; each answered with a 5-line bilan + PROGRESS.md entry). The last one (this turn) also carried the summary request. (15 October 2026, 04:24:15 +0200)
+>    (System notifications from background monitors were not user messages.) (15 October 2026, 04:24:15 +0200)
+>
+> 7. Pending Tasks: (15 October 2026, 04:24:15 +0200)
+>    - Answer current 30-min bilan: check queue/errors/latency, append PROGRESS.md entry via skill `progress`, continue improving without stopping. (15 October 2026, 04:24:15 +0200)
+>    - Optional: warn when a published snapshot exceeds ~90 MB; re-arm spike monitor if needed. (15 October 2026, 04:24:15 +0200)
+>    - Await Matthieu: go for TEMP move plan (`data/Plan-TEMP.json`, dry-run only), and his own run of `GITHUB_TOKEN=$(gh auth token) node scripts/build-search-index.mjs --apply` in the main checkout. (15 October 2026, 04:24:15 +0200)
+>
+> 8. Current Work: (15 October 2026, 04:24:15 +0200)
+>    Immediately before this summary request, the last completed work was the 03:55 bilan: the index public dry-run finished (index v2 156.4 MB, 142,083 thumbs, 348,167 nodes, DRY-RUN no push), PROGRESS.md entry appended, and a French bilan given. Japanese archive was complete (0 pending), service healthy (5 jobs queued, 24 done, bridge ~113 ms, no errors). The new bilan prompt (~04:25) arrived together with this summary instruction and has not been answered. (15 October 2026, 04:24:15 +0200)
+>
+> 9. Optional Next Step: (15 October 2026, 04:24:15 +0200)
+>    Answer the pending cron prompt: "BILAN 30 MIN (ZenRayProgress, refinement 14 octobre): en 5 lignes max dis ce qui est fait depuis le dernier bilan ... puis append une entree PROGRESS.md via le skill progress; puis continue le travail sans t'arreter". Concretely: probe the Assets dashboard (queue, errors, latency), append a PROGRESS.md entry, then continue refinement (e.g., implement the >90 MB snapshot warning with a test, ship via `Scripts/Ship.sh`), without executing the TEMP move or `--apply` without Matthieu's explicit go. (15 October 2026, 04:24:15 +0200)
+>
+> If you need specific details from before compaction (like exact code snippets, error messages, or content you generated), read the full transcript at: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/5bd15db6-f2d9-4010-bcb3-0d609a42bc5e.jsonl (15 October 2026, 04:24:15 +0200)
+> Continue the conversation from where it left off without asking the user any further questions. Resume directly — do not acknowledge the summary, do not recap what was happening, do not preface with "I'll continue" or similar. Pick up the last task as if the break never happened. (15 October 2026, 04:24:15 +0200)
+>
+> The messages after this summary are the most recent messages from before compaction, kept verbatim. The summary was written without seeing them, so something it says has not happened yet may already have happened in them. (15 October 2026, 04:24:15 +0200)
