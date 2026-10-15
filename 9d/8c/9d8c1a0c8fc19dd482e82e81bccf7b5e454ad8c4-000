@@ -2370,3 +2370,33 @@
 > - **Non vérifié** : Gallery par un clic réel dans la barre latérale (mon clic scripté a visé le mauvais élément), et le lot Freelance 10/20/50 sur ce build. (15 October 2026, 06:53:25 +0200)
 > - **Prochain** : tester ces deux points avec des clics réels. Le plan `TEMP` (dry-run) et `--apply` de l'index attendent toujours ton go. (15 October 2026, 06:53:25 +0200)
 > - **Journal** : entrée ajoutée dans PROGRESS.md. (15 October 2026, 06:53:25 +0200)
+
+## 15 October 2026, 07:22:25 +0200 : Prompt
+
+<!-- feedback-event:edd684a5ed99688a581515913e852f0e82f22f1089646190f10926c660be4824 (15 October 2026, 07:22:25 +0200) -->
+- Project: zenray-progress; kind: prompt. (15 October 2026, 07:22:25 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/5bd15db6-f2d9-4010-bcb3-0d609a42bc5e.jsonl. (15 October 2026, 07:22:25 +0200)
+
+> BILAN 30 MIN (ZenRayProgress, refinement 14 octobre): en 5 lignes max dis ce qui est fait depuis le dernier bilan (avec preuve mesuree), ce qui est en cours, le prochain geste; puis append une entree PROGRESS.md via le skill progress; puis continue le travail sans t'arreter (dont-stop). Rappel: aucune regression design, aucun bug sur les donnees, deploiement uniquement depuis un arbre propre d'origin/main. (15 October 2026, 07:22:25 +0200)
+
+## 15 October 2026, 07:22:28 +0200 : Iteration
+
+<!-- feedback-event:8432c677329907d0f96d71e74b8d344e0c492193e3ddd70972b97c1b0b50854c (15 October 2026, 07:22:28 +0200) -->
+- Project: zenray-progress; kind: iteration. (15 October 2026, 07:22:28 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/5bd15db6-f2d9-4010-bcb3-0d609a42bc5e.jsonl. (15 October 2026, 07:22:28 +0200)
+
+> Je fais les deux vérifications laissées en suspens, avec des clics réels. (15 October 2026, 07:22:28 +0200)
+
+## 15 October 2026, 07:22:56 +0200 : Iteration
+
+<!-- feedback-event:db529aef5458159e6a7379af0c28634efc3e349000713d5c7936cebd4eb3b05a (15 October 2026, 07:22:56 +0200) -->
+- Project: zenray-progress; kind: iteration. (15 October 2026, 07:22:56 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/5bd15db6-f2d9-4010-bcb3-0d609a42bc5e.jsonl. (15 October 2026, 07:22:56 +0200)
+
+> Bilan 07:25. (15 October 2026, 07:22:56 +0200)
+>
+> - **Fait** : vérifications par clics réels sur le build local (`localhost:3100`). « Gallery » est un titre de groupe de la barre latérale (Design, Characters, Environments…), pas une vue, donc aucun défaut. (15 October 2026, 07:22:56 +0200)
+> - **Preuve** : Freelance charge en 3 s avec le lot du jour 3/5/10/20/50 et le bouton « Ouvrir les N pages ». L'en-tête affiche 609 à contacter et le filtre 618, l'écart venant des 9 offres fermées proposées en « Périmé ». (15 October 2026, 07:22:56 +0200)
+> - **Non testé** : le bouton « Ouvrir les pages », parce qu'il ouvrirait de vrais onglets. (15 October 2026, 07:22:56 +0200)
+> - **Prochain** : couvrir par test les cas limites du lot Freelance (liste vide, doublons). Le plan `TEMP` (dry-run) et `--apply` de l'index attendent toujours ton go. (15 October 2026, 07:22:56 +0200)
+> - **Journal** : entrée ajoutée dans PROGRESS.md. (15 October 2026, 07:22:56 +0200)
