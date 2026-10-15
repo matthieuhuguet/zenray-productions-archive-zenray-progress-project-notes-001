@@ -2302,3 +2302,49 @@
 > - **En cours** : rien de bloquant, les sauvegardes tournent normalement. (15 October 2026, 05:52:44 +0200)
 > - **Prochain** : parcourir Plan et Notes dans le navigateur intégré sur le build de production pour trouver une friction mesurable, avant de modifier quoi que ce soit. (15 October 2026, 05:52:44 +0200)
 > - **En attente de ton go** : le plan `TEMP` en dry-run et `--apply` de l'index. Entrée ajoutée dans PROGRESS.md. (15 October 2026, 05:52:44 +0200)
+
+## 15 October 2026, 06:22:26 +0200 : Prompt
+
+<!-- feedback-event:44a11d91a8afa03a45c50dc2acb094d04c48d9f643647b67d98dd3c564c734fd (15 October 2026, 06:22:26 +0200) -->
+- Project: zenray-progress; kind: prompt. (15 October 2026, 06:22:26 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/5bd15db6-f2d9-4010-bcb3-0d609a42bc5e.jsonl. (15 October 2026, 06:22:26 +0200)
+
+> BILAN 30 MIN (ZenRayProgress, refinement 14 octobre): en 5 lignes max dis ce qui est fait depuis le dernier bilan (avec preuve mesuree), ce qui est en cours, le prochain geste; puis append une entree PROGRESS.md via le skill progress; puis continue le travail sans t'arreter (dont-stop). Rappel: aucune regression design, aucun bug sur les donnees, deploiement uniquement depuis un arbre propre d'origin/main. (15 October 2026, 06:22:26 +0200)
+
+## 15 October 2026, 06:22:59 +0200 : Iteration
+
+<!-- feedback-event:45b0849fb9abffc790df3a0425efd73b77ef4cc1b7f1af0949d4d471cf9df186 (15 October 2026, 06:22:59 +0200) -->
+- Project: zenray-progress; kind: iteration. (15 October 2026, 06:22:59 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/5bd15db6-f2d9-4010-bcb3-0d609a42bc5e.jsonl. (15 October 2026, 06:22:59 +0200)
+
+> Je viens de trouver que `localhost:3100` servait un vieux build (12 octobre) avec le bug `demandePages` déjà corrigé en production. Je l'ai reconstruit, je vérifie. (15 October 2026, 06:22:59 +0200)
+
+## 15 October 2026, 06:23:22 +0200 : Iteration
+
+<!-- feedback-event:d56b74c613c727dbad6240c83d04b2a7add0a4d2959c78828dd96572fab1add3 (15 October 2026, 06:23:22 +0200) -->
+- Project: zenray-progress; kind: iteration. (15 October 2026, 06:23:22 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/5bd15db6-f2d9-4010-bcb3-0d609a42bc5e.jsonl. (15 October 2026, 06:23:22 +0200)
+
+> Je vérifie que la page Notes s'ouvre sans erreur avec le nouveau build local, puis je consigne le bilan. (15 October 2026, 06:23:22 +0200)
+
+## 15 October 2026, 06:23:26 +0200 : Iteration
+
+<!-- feedback-event:8643a347becddfc649117ba29969c95944fc3e03beac1706785626f9e5bce17b (15 October 2026, 06:23:26 +0200) -->
+- Project: zenray-progress; kind: iteration. (15 October 2026, 06:23:26 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/5bd15db6-f2d9-4010-bcb3-0d609a42bc5e.jsonl. (15 October 2026, 06:23:26 +0200)
+
+> Notes ouvre bien la note du jour (15 Octobre 2026) avec le nouveau build. Je consigne. (15 October 2026, 06:23:26 +0200)
+
+## 15 October 2026, 06:23:32 +0200 : Iteration
+
+<!-- feedback-event:d743171e5d4a016ab903be8739ff56edd996f3a5f55b9a040c8d7e0a6caaa25e (15 October 2026, 06:23:32 +0200) -->
+- Project: zenray-progress; kind: iteration. (15 October 2026, 06:23:32 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/5bd15db6-f2d9-4010-bcb3-0d609a42bc5e.jsonl. (15 October 2026, 06:23:32 +0200)
+
+> Bilan 06:25. (15 October 2026, 06:23:32 +0200)
+>
+> - **Fait** : `localhost:3100` servait un build périmé du 12 octobre, avec le bug `demandePages is not defined` à l'ouverture de la note du jour, déjà corrigé en production. J'ai reconstruit le build du checkout principal (`index-DTN8w2Gr`). (15 October 2026, 06:23:32 +0200)
+> - **Preuve** : dans le navigateur intégré, le clic sur Notes ouvre la note du 15 octobre 2026 sans erreur. Le `script.js` qui renvoyait du HTML n'existe pas dans les sources, il vient du panneau navigateur. (15 October 2026, 06:23:32 +0200)
+> - **Garde-fou** : `Ship.sh` reconstruit désormais ce dist à chaque livraison, pour que le local ne reste plus en retard sur la production. (15 October 2026, 06:23:32 +0200)
+> - **Prochain** : parcourir Plan, Freelance et Gallery sur ce build local à la recherche d'autres frictions. (15 October 2026, 06:23:32 +0200)
+> - **En attente de ton go** : le plan `TEMP` (dry-run) et `--apply` de l'index. Entrée ajoutée dans PROGRESS.md. (15 October 2026, 06:23:32 +0200)
