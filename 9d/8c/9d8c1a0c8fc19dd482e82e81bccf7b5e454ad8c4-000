@@ -2280,3 +2280,25 @@
 > - **En cours** : rien de bloquant, les sauvegardes tournent normalement. (15 October 2026, 05:22:40 +0200)
 > - **Prochain** : chercher la prochaine friction mesurable sur Plan, Notes ou Gallery, puis la corriger avec un test avant de livrer. (15 October 2026, 05:22:40 +0200)
 > - **En attente de ton go** : le plan `TEMP` en dry-run et `--apply` de l'index. Entrée ajoutée dans PROGRESS.md. (15 October 2026, 05:22:40 +0200)
+
+## 15 October 2026, 05:52:26 +0200 : Prompt
+
+<!-- feedback-event:35df542e72a1ac84c06fd170cabbfcc24ef67e5a07233209ad0fa34928a2b508 (15 October 2026, 05:52:26 +0200) -->
+- Project: zenray-progress; kind: prompt. (15 October 2026, 05:52:26 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/5bd15db6-f2d9-4010-bcb3-0d609a42bc5e.jsonl. (15 October 2026, 05:52:26 +0200)
+
+> BILAN 30 MIN (ZenRayProgress, refinement 14 octobre): en 5 lignes max dis ce qui est fait depuis le dernier bilan (avec preuve mesuree), ce qui est en cours, le prochain geste; puis append une entree PROGRESS.md via le skill progress; puis continue le travail sans t'arreter (dont-stop). Rappel: aucune regression design, aucun bug sur les donnees, deploiement uniquement depuis un arbre propre d'origin/main. (15 October 2026, 05:52:26 +0200)
+
+## 15 October 2026, 05:52:44 +0200 : Iteration
+
+<!-- feedback-event:6911060b23c88d0a8b136017be95b9f024cb3dec56d190a4820432a99b9989c2 (15 October 2026, 05:52:44 +0200) -->
+- Project: zenray-progress; kind: iteration. (15 October 2026, 05:52:44 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/5bd15db6-f2d9-4010-bcb3-0d609a42bc5e.jsonl. (15 October 2026, 05:52:44 +0200)
+
+> Bilan 05:55. (15 October 2026, 05:52:44 +0200)
+>
+> - **Fait** : aucun changement de code depuis le dernier bilan, seulement des contrôles. (15 October 2026, 05:52:44 +0200)
+> - **Preuve** : la production répond 200 en 0,10 s avec le bundle `index-C3I-bkSZ.js` déployé à 04:30. Le service Assets compte 0 erreur sur 300 événements, et la branche de travail est égale à `origin/main` (`4738db17`). (15 October 2026, 05:52:44 +0200)
+> - **En cours** : rien de bloquant, les sauvegardes tournent normalement. (15 October 2026, 05:52:44 +0200)
+> - **Prochain** : parcourir Plan et Notes dans le navigateur intégré sur le build de production pour trouver une friction mesurable, avant de modifier quoi que ce soit. (15 October 2026, 05:52:44 +0200)
+> - **En attente de ton go** : le plan `TEMP` en dry-run et `--apply` de l'index. Entrée ajoutée dans PROGRESS.md. (15 October 2026, 05:52:44 +0200)
