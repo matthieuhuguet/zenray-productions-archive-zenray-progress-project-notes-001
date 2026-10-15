@@ -2474,3 +2474,71 @@
 > - **En cours** : rien de bloquant, les sauvegardes Assets tournent normalement. (15 October 2026, 08:53:01 +0200)
 > - **Prochain** : tester la vue Gallery (filtre, lightbox au clavier) sur des données réelles, déjà couverte par tests unitaires. (15 October 2026, 08:53:01 +0200)
 > - **En attente de ton go** : le plan `TEMP` (dry-run) et `--apply` de l'index. Entrée ajoutée dans PROGRESS.md. (15 October 2026, 08:53:01 +0200)
+
+## 15 October 2026, 08:55:19 +0200 : Prompt
+
+<!-- feedback-event:d039c81b9bc8b37aaaec00d8d12b6e48a3596c9f7410632f409100603c453b28 (15 October 2026, 08:55:19 +0200) -->
+- Project: zenray-progress; kind: prompt. (15 October 2026, 08:55:19 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/5bd15db6-f2d9-4010-bcb3-0d609a42bc5e.jsonl. (15 October 2026, 08:55:19 +0200)
+
+> Tu va delete le cron finir proprement et m'expliquer toutes les modifications que tu as faites, fini proprement update la documentation du code via commentaires et résumé. (15 October 2026, 08:55:19 +0200)
+
+## 15 October 2026, 08:55:40 +0200 : Iteration
+
+<!-- feedback-event:cd531d1b70eb620903a9fc71c6047492d47e72e60089d292b19546e0f4c190b2 (15 October 2026, 08:55:40 +0200) -->
+- Project: zenray-progress; kind: iteration. (15 October 2026, 08:55:40 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/5bd15db6-f2d9-4010-bcb3-0d609a42bc5e.jsonl. (15 October 2026, 08:55:40 +0200)
+
+> J'ai supprimé le cron et arrêté le serveur de prévisualisation. J'écris maintenant la documentation (commentaires de code, document de synthèse, index des erreurs). (15 October 2026, 08:55:40 +0200)
+
+## 15 October 2026, 08:58:55 +0200 : Iteration
+
+<!-- feedback-event:fb93ccfa3b8cee7596fe937061d360169050c8778fdbe0b838691836fcd6af41 (15 October 2026, 08:58:55 +0200) -->
+- Project: zenray-progress; kind: iteration. (15 October 2026, 08:58:55 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/5bd15db6-f2d9-4010-bcb3-0d609a42bc5e.jsonl. (15 October 2026, 08:58:55 +0200)
+
+> Le cron de bilan est supprimé, il n'y a plus de serveur de prévisualisation, et tout est sur `origin/main`. (15 October 2026, 08:58:55 +0200)
+>
+> ## Ce que j'ai modifié (15 October 2026, 08:58:55 +0200)
+>
+> **Assets (le « loader occupé » et les envois lents)** (15 October 2026, 08:58:55 +0200)
+> - Le service ne recompose plus tout à chaque appel : listes mémoïsées, sauvegardes d'état fusionnées, passes automatiques fusionnées (240 s), cession du writer aux actions interactives. (15 October 2026, 08:58:55 +0200)
+> - Une publication est une seule transaction Git (3 sauvegardes et 9 fetch deviennent 1 fetch et 1 push). (15 October 2026, 08:58:55 +0200)
+> - Les lots font 2 000 fichiers (le moteur paie environ 35 s fixes par lot). (15 October 2026, 08:58:55 +0200)
+> - Recherche de carte par table : 25 s de gel par lot supprimées. (15 October 2026, 08:58:55 +0200)
+> - Le snapshot japonais (104,7 Mo, refusé par GitHub) tombe à 80,8 Mo ; une alerte part dès 90 Mo ; un échec de métadonnées ne casse plus une passe vérifiée. (15 October 2026, 08:58:55 +0200)
+> - Le bouton Sauvegarder n'est plus grisé par une passe automatique. (15 October 2026, 08:58:55 +0200)
+>
+> **Create et hub** (15 October 2026, 08:58:55 +0200)
+> - Le sondage de l'arbre saute le parsing quand l'ETag est inchangé, et les marqueurs de visibilité ne mettent plus un échec en cache. (15 October 2026, 08:58:55 +0200)
+> - Une palette Cmd/Ctrl+K au niveau de l'application, et les liens « ouvrir dans Create » fonctionnent depuis toutes les vues (bug `demandePages` corrigé). (15 October 2026, 08:58:55 +0200)
+> - L'index de recherche ne retélécharge plus 22 Mo à chaque changement de vue. (15 October 2026, 08:58:55 +0200)
+>
+> **Freelance et Gallery** (15 October 2026, 08:58:55 +0200)
+> - Le lot 3/5/10/20/50 ouvre les onglets via le service local, copie une lettre par carte et enregistre un lot en un clic confirmé. (15 October 2026, 08:58:55 +0200)
+> - Les groupes affichent 72 cartes puis paginent (10 000 nœuds DOM avant). (15 October 2026, 08:58:55 +0200)
+> - Le lot du jour est déterministe : un départage par rôle puis id manquait. (15 October 2026, 08:58:55 +0200)
+> - Gallery : filtre texte, lightbox avec Échap et flèches, position affichée. (15 October 2026, 08:58:55 +0200)
+>
+> **Films et livraison** (15 October 2026, 08:58:55 +0200)
+> - Sous-titres, preuve et déchargement tournent 4 films à la fois. (15 October 2026, 08:58:55 +0200)
+> - `Ship.sh` reconstruit aussi le `dist/` local, qui servait un build périmé du 12 octobre. (15 October 2026, 08:58:55 +0200)
+>
+> ## Documentation écrite (15 October 2026, 08:58:55 +0200)
+> - [docs/REFINEMENT-2026-10-14.md](/Users/zenray/Create/Build/Productions/GithubProductions/ZenRayProgress/docs/REFINEMENT-2026-10-14.md) : synthèse par produit, limites connues, commande de livraison. (15 October 2026, 08:58:55 +0200)
+> - [docs/INDEX-ERREURS-FEATURES.md](/Users/zenray/Create/Build/Productions/GithubProductions/ZenRayProgress/docs/INDEX-ERREURS-FEATURES.md) : 4 lignes datées (snapshot, gel, lot non déterministe, dist périmé). (15 October 2026, 08:58:55 +0200)
+> - Commentaires de code (anglais puis français) sur le départage du lot et l'alerte de snapshot. (15 October 2026, 08:58:55 +0200)
+> - Skill `zenray-assets` : section datée, synchronisée, contrat enregistré et vérifié. (15 October 2026, 08:58:55 +0200)
+>
+> ## Ce qui reste à toi (15 October 2026, 08:58:55 +0200)
+> - `GITHUB_TOKEN=$(gh auth token) node scripts/build-search-index.mjs --apply` pour replier le `delta.json` de 22 Mo. (15 October 2026, 08:58:55 +0200)
+> - Ton go sur le plan `TEMP` ([Plan-TEMP.json](/Users/zenray/.claude/tmp/tmp-zenray-refine-14oct/data/Plan-TEMP.json), dry-run, rien n'a été déplacé), décrit dans [REPORT-create-organisation.md](/Users/zenray/.claude/tmp/tmp-zenray-refine-14oct/REPORT-create-organisation.md). (15 October 2026, 08:58:55 +0200)
+>
+> | Ce que tu voulais | Fait ? | Comment je le sais | (15 October 2026, 08:58:55 +0200)
+> |---|---|---| (15 October 2026, 08:58:55 +0200)
+> | Supprimer le cron | Oui | `CronList` listait un seul job (`c30f3043`), « Cancelled job » | (15 October 2026, 08:58:55 +0200)
+> | Finir proprement | Oui | serveur :3300 arrêté, checkout principal égal à `origin/main`, suite complète verte | (15 October 2026, 08:58:55 +0200)
+> | Expliquer les modifications | Oui | liste ci-dessus et document de synthèse | (15 October 2026, 08:58:55 +0200)
+> | Documentation par commentaires et résumé | Oui | commit `81f9ef17`, contrat du skill `ok` sans changement | (15 October 2026, 08:58:55 +0200)
+> | Aucune régression design ni donnée | Oui, d'après mes contrôles | 2558 tests, 7 vues parcourues sans erreur applicative, production sur le bundle `DEzn4DnI` | (15 October 2026, 08:58:55 +0200)
+> | Uploads très rapides vers Create | Pas mesuré de bout en bout | seul le chemin Assets l'est ; l'envoi de films reste borné par l'encodeur matériel (environ 20x le temps réel) | (15 October 2026, 08:58:55 +0200)
