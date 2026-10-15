@@ -2452,3 +2452,25 @@
 > - **En cours** : rien de bloquant, les sauvegardes tournent normalement. (15 October 2026, 08:22:41 +0200)
 > - **Prochain** : chercher une friction mesurable côté Plan (lecture du code puis test), avant toute modification. (15 October 2026, 08:22:41 +0200)
 > - **En attente de ton go** : le plan `TEMP` (dry-run) et `--apply` de l'index. Entrée ajoutée dans PROGRESS.md. (15 October 2026, 08:22:41 +0200)
+
+## 15 October 2026, 08:52:26 +0200 : Prompt
+
+<!-- feedback-event:cf076cb4e90ca232c02ac23ee62e74bd58f3b2196c8c3a5db8194740068c0647 (15 October 2026, 08:52:26 +0200) -->
+- Project: zenray-progress; kind: prompt. (15 October 2026, 08:52:26 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/5bd15db6-f2d9-4010-bcb3-0d609a42bc5e.jsonl. (15 October 2026, 08:52:26 +0200)
+
+> BILAN 30 MIN (ZenRayProgress, refinement 14 octobre): en 5 lignes max dis ce qui est fait depuis le dernier bilan (avec preuve mesuree), ce qui est en cours, le prochain geste; puis append une entree PROGRESS.md via le skill progress; puis continue le travail sans t'arreter (dont-stop). Rappel: aucune regression design, aucun bug sur les donnees, deploiement uniquement depuis un arbre propre d'origin/main. (15 October 2026, 08:52:26 +0200)
+
+## 15 October 2026, 08:53:01 +0200 : Iteration
+
+<!-- feedback-event:661e4b9ab106604732c5b35296cf7fb43db345abb598c99eddefd5a51f8488da (15 October 2026, 08:53:01 +0200) -->
+- Project: zenray-progress; kind: iteration. (15 October 2026, 08:53:01 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/5bd15db6-f2d9-4010-bcb3-0d609a42bc5e.jsonl. (15 October 2026, 08:53:01 +0200)
+
+> Bilan 08:55. (15 October 2026, 08:53:01 +0200)
+>
+> - **Fait** : contrôle de Plan dans le navigateur intégré sur le build local. La vue s'ouvre sans erreur (hook d'erreurs vide), affiche la bibliothèque Matthieu2026 (215 objectifs, 110 en retard) et un titre d'onglet correct. (15 October 2026, 08:53:01 +0200)
+> - **Preuve** : texte de la vue lu directement, aucune exception ni rejet de promesse capturé. Aucun changement de code sur cette période. (15 October 2026, 08:53:01 +0200)
+> - **En cours** : rien de bloquant, les sauvegardes Assets tournent normalement. (15 October 2026, 08:53:01 +0200)
+> - **Prochain** : tester la vue Gallery (filtre, lightbox au clavier) sur des données réelles, déjà couverte par tests unitaires. (15 October 2026, 08:53:01 +0200)
+> - **En attente de ton go** : le plan `TEMP` (dry-run) et `--apply` de l'index. Entrée ajoutée dans PROGRESS.md. (15 October 2026, 08:53:01 +0200)
