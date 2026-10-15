@@ -2542,3 +2542,35 @@
 > | Documentation par commentaires et résumé | Oui | commit `81f9ef17`, contrat du skill `ok` sans changement | (15 October 2026, 08:58:55 +0200)
 > | Aucune régression design ni donnée | Oui, d'après mes contrôles | 2558 tests, 7 vues parcourues sans erreur applicative, production sur le bundle `DEzn4DnI` | (15 October 2026, 08:58:55 +0200)
 > | Uploads très rapides vers Create | Pas mesuré de bout en bout | seul le chemin Assets l'est ; l'envoi de films reste borné par l'encodeur matériel (environ 20x le temps réel) | (15 October 2026, 08:58:55 +0200)
+
+## 15 October 2026, 09:02:00 +0200 : Prompt
+
+<!-- feedback-event:53f82c91ec8f3a42b86464cebed9f03f4a0e030e94e9a69c0e55bad917285472 (15 October 2026, 09:02:00 +0200) -->
+- Project: zenray-progress; kind: prompt. (15 October 2026, 09:02:00 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/5bd15db6-f2d9-4010-bcb3-0d609a42bc5e.jsonl. (15 October 2026, 09:02:00 +0200)
+
+> est ce que tu as amélioré la vitesse des transferts upload assets et progress car c'était surtout ça le but ? (15 October 2026, 09:02:00 +0200)
+
+## 15 October 2026, 09:02:19 +0200 : Iteration
+
+<!-- feedback-event:024cee5c054692ba5b6df401c0284059a120b2a9264d8a7f43a3fe798db3d8d5 (15 October 2026, 09:02:19 +0200) -->
+- Project: zenray-progress; kind: iteration. (15 October 2026, 09:02:19 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/5bd15db6-f2d9-4010-bcb3-0d609a42bc5e.jsonl. (15 October 2026, 09:02:19 +0200)
+
+> Partiellement, et je n'ai pas mesuré le débit brut en Mo/s : ce n'est donc pas à moi de dire que c'est réglé. (15 October 2026, 09:02:19 +0200)
+>
+> **Ce qui est amélioré, avec preuve (événements `timing` du service)** (15 October 2026, 09:02:19 +0200)
+> - Le coût fixe par passe a baissé : la publication Git passe de 26-30 s à 10-16 s en moyenne. (15 October 2026, 09:02:19 +0200)
+> - Les gros lots de petits fichiers vont vite : 153 000 fichiers en 1 h entre 22h et 23h, soit environ 44 fichiers/s. Le corpus japonais (51 309 fichiers en attente) a été vidé. (15 October 2026, 09:02:19 +0200)
+> - Les lots de 2 000 fichiers et la suppression du gel de 25 s par lot y contribuent. (15 October 2026, 09:02:19 +0200)
+>
+> **Ce qui n'est pas amélioré, ou pas prouvé** (15 October 2026, 09:02:19 +0200)
+> - **Octets par seconde vers GitHub** : je n'y ai pas touché. La politique de push existait déjà (lots de 1 900 Mio, environ 11 Mo/s mesurés par un autre travail). (15 October 2026, 09:02:19 +0200)
+> - **Envoi de films vers Create** : j'ai seulement parallélisé la fin du pipeline (sous-titres, preuve, déchargement, 4 films à la fois). L'encodage reste limité par l'encodeur matériel (environ 20x le temps réel), et je n'ai mesuré aucun envoi de bout en bout. (15 October 2026, 09:02:19 +0200)
+> - **Petites passes** : sur les dernières heures, 40 à 90 passes par heure portent 1 à 3 fichiers, à environ 40 s chacune. Le service reste occupé 55 à 80 % de chaque heure pour presque rien. C'est le défaut qui reste le plus visible, et il vient surtout des projets de conversation qui se réarchivent à chaque message. (15 October 2026, 09:02:19 +0200)
+>
+> **Ce que je propose** (15 October 2026, 09:02:19 +0200)
+> 1. Mesurer un vrai envoi (un film de 1 Go vers Create, un dossier de 1 Go vers Assets) pour avoir des Mo/s avant et après. (15 October 2026, 09:02:19 +0200)
+> 2. Réduire ces petites passes (délai plus long et fusion des projets de conversation), puisque c'est là que le temps part. (15 October 2026, 09:02:19 +0200)
+>
+> Dis-moi si je lance ces deux points. Je n'ai rien lancé, le cron est supprimé. (15 October 2026, 09:02:19 +0200)
