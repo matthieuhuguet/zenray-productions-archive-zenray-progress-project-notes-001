@@ -2070,3 +2070,25 @@
 - Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/5bd15db6-f2d9-4010-bcb3-0d609a42bc5e.jsonl. (15 October 2026, 02:27:49 +0200)
 
 > Constat du 02:20 : la publication Japanese était refusée par GitHub depuis 00:04. Le fichier d'état du projet (104,7 Mo) dépassait la limite de 100 Mio par fichier, et chaque passe retombait en erreur toutes les minutes. Corrigé et livré : trois champs inutilisés retirés de la copie cloud (106,9 → 80,8 Mo mesuré), et un échec de publication des métadonnées n'invalide plus une passe dont les fichiers sont déjà archivés et vérifiés (deux tests ajoutés). Service relancé ; je vérifie au prochain passage que la publication Japanese aboutit. (15 October 2026, 02:27:49 +0200)
+
+## 15 October 2026, 02:52:26 +0200 : Prompt
+
+<!-- feedback-event:4eb3513db1c0ba047953b65577433127ca2f2443e8c2cf38aab1a6ce58243a74 (15 October 2026, 02:52:26 +0200) -->
+- Project: zenray-progress; kind: prompt. (15 October 2026, 02:52:26 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/5bd15db6-f2d9-4010-bcb3-0d609a42bc5e.jsonl. (15 October 2026, 02:52:26 +0200)
+
+> BILAN 30 MIN (ZenRayProgress, refinement 14 octobre): en 5 lignes max dis ce qui est fait depuis le dernier bilan (avec preuve mesuree), ce qui est en cours, le prochain geste; puis append une entree PROGRESS.md via le skill progress; puis continue le travail sans t'arreter (dont-stop). Rappel: aucune regression design, aucun bug sur les donnees, deploiement uniquement depuis un arbre propre d'origin/main. (15 October 2026, 02:52:26 +0200)
+
+## 15 October 2026, 02:52:39 +0200 : Iteration
+
+<!-- feedback-event:3e5c71a3023be31277b198691532e2f9c8be68e99d57e6b5d1c16c429ee4c3ac (15 October 2026, 02:52:39 +0200) -->
+- Project: zenray-progress; kind: iteration. (15 October 2026, 02:52:39 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/5bd15db6-f2d9-4010-bcb3-0d609a42bc5e.jsonl. (15 October 2026, 02:52:39 +0200)
+
+> Bilan 02:55 : (15 October 2026, 02:52:39 +0200)
+>
+> - **Fait (mesuré)** : la publication Japanese, refusée depuis 00:04 par la limite GitHub de 100 Mio, repasse ; une passe de 12 140 fichiers (4 lots, 371 s dont 65 s de publication) s'est terminée sans erreur et le tableau de bord n'en affiche plus. (15 October 2026, 02:52:39 +0200)
+> - **Progression** : Japanese est passé de 19 351 à 6 921 fichiers restants en 45 minutes. (15 October 2026, 02:52:39 +0200)
+> - **En cours** : la dernière tranche de Japanese (environ 10 minutes). (15 October 2026, 02:52:39 +0200)
+> - **Prochain geste** : redémarrage du service (nettoyage des temporaires), essai à blanc de l'index public, et un avertissement quand un snapshot dépasse 90 Mo. (15 October 2026, 02:52:39 +0200)
+> - **Journal** : entrée ajoutée à `PROGRESS.md`. (15 October 2026, 02:52:39 +0200)
