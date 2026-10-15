@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-10-15T21:15:51.174Z",
+ "scannedAt": "2026-10-15T21:43:51.173Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -399,8 +399,8 @@
    "provider": "claude",
    "sessionId": "111d68e0-b7ba-43d9-b13a-faa853975fdc",
    "title": "Renommer et organiser fichiers médias",
-   "updatedAt": "2026-10-15T21:15:01.627Z",
-   "bytes": 34560,
+   "updatedAt": "2026-10-15T21:43:30.314Z",
+   "bytes": 34474,
    "boundProject": null
   },
   {
