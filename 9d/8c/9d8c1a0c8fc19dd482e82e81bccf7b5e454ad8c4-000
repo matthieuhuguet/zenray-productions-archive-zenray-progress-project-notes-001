@@ -2574,3 +2574,10 @@
 > 2. Réduire ces petites passes (délai plus long et fusion des projets de conversation), puisque c'est là que le temps part. (15 October 2026, 09:02:19 +0200)
 >
 > Dis-moi si je lance ces deux points. Je n'ai rien lancé, le cron est supprimé. (15 October 2026, 09:02:19 +0200)
+
+## 15 October 2026, 20:30:35 +0200 : Standing rule
+
+<!-- feedback-event:d13d019aa12ae096d1f587a58d7bc06144629486e6246e43b88a47200d0e9d59 (15 October 2026, 20:30:35 +0200) -->
+- Project: zenray-progress; kind: rule. (15 October 2026, 20:30:35 +0200)
+
+> 15 October 2026 : Motion Design > Studio affiche l'app ZenRay Motion Design du Mac (http://127.0.0.1:3104/, sonde GET /api/embed/status autorisée pour les origines server.embedOrigins de params/orchestrator.json du dépôt ZenRayMotionDesign) ; une nouvelle origine du site (port, domaine) doit y être ajoutée, sinon l'entrée affiche « l'app ne répond pas ». Les vidéos publiées restent dans Accueil (catalogue pages/ZenRayMotionDesign). (15 October 2026) (15 October 2026, 20:30:35 +0200)
