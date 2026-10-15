@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-10-15T11:32:48.710Z",
+ "scannedAt": "2026-10-15T11:39:48.749Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -111,8 +111,8 @@
    "provider": "claude",
    "sessionId": "d2f26016-25dd-4bcc-a6d8-122d50d3f383",
    "title": "Motion Design Vector and Music",
-   "updatedAt": "2026-10-15T11:32:09.384Z",
-   "bytes": 42805388,
+   "updatedAt": "2026-10-15T11:39:46.589Z",
+   "bytes": 42870484,
    "boundProject": null
   },
   {
@@ -513,6 +513,22 @@
    "title": "Mail transfert dossier auto-école",
    "updatedAt": "2026-10-02T14:38:28.892Z",
    "bytes": 23040,
+   "boundProject": null
+  },
+  {
+   "projectId": "zenray-progress",
+   "lines": 2,
+   "work": 0,
+   "prompts": 1,
+   "first": "2026-10-15T11:34:13.340Z",
+   "last": "2026-10-15T11:34:13.360Z",
+   "strength": "weak",
+   "conversationId": "claude:fa37c224-b0f7-4ffe-b1d9-73121293ef45",
+   "provider": "claude",
+   "sessionId": "fa37c224-b0f7-4ffe-b1d9-73121293ef45",
+   "title": "Shelf miniatures loading performance",
+   "updatedAt": "2026-10-15T11:38:35.407Z",
+   "bytes": 1706388,
    "boundProject": null
   },
   {
