@@ -2430,3 +2430,25 @@
 > - **En cours** : le déploiement se propage. 3 requêtes sur 4 servent déjà `index-DEzn4DnI`, une renvoie encore l'ancien bundle (cache de bord). (15 October 2026, 07:55:27 +0200)
 > - **Prochain** : recontrôler que le bundle servi converge, puis poursuivre la chasse aux frictions. (15 October 2026, 07:55:27 +0200)
 > - **En attente de ton go** : le plan `TEMP` (dry-run) et `--apply` de l'index. Entrée ajoutée dans PROGRESS.md. (15 October 2026, 07:55:27 +0200)
+
+## 15 October 2026, 08:22:26 +0200 : Prompt
+
+<!-- feedback-event:2a92092db5f29eeb7488eaf8439cc230e317b6d303e72dae4fada64114191671 (15 October 2026, 08:22:26 +0200) -->
+- Project: zenray-progress; kind: prompt. (15 October 2026, 08:22:26 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/5bd15db6-f2d9-4010-bcb3-0d609a42bc5e.jsonl. (15 October 2026, 08:22:26 +0200)
+
+> BILAN 30 MIN (ZenRayProgress, refinement 14 octobre): en 5 lignes max dis ce qui est fait depuis le dernier bilan (avec preuve mesuree), ce qui est en cours, le prochain geste; puis append une entree PROGRESS.md via le skill progress; puis continue le travail sans t'arreter (dont-stop). Rappel: aucune regression design, aucun bug sur les donnees, deploiement uniquement depuis un arbre propre d'origin/main. (15 October 2026, 08:22:26 +0200)
+
+## 15 October 2026, 08:22:41 +0200 : Iteration
+
+<!-- feedback-event:4744817203d7bd9bf0cfee906af6e982d3fcd2da349758c421498d07a36b4122 (15 October 2026, 08:22:41 +0200) -->
+- Project: zenray-progress; kind: iteration. (15 October 2026, 08:22:41 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/5bd15db6-f2d9-4010-bcb3-0d609a42bc5e.jsonl. (15 October 2026, 08:22:41 +0200)
+
+> Bilan 08:25. (15 October 2026, 08:22:41 +0200)
+>
+> - **Fait** : le déploiement `b47604c5` a convergé, les 6 requêtes sur 6 servent `index-DEzn4DnI`. Aucun changement de code sur cette période. (15 October 2026, 08:22:41 +0200)
+> - **Preuve** : 0 erreur sur les 400 derniers événements du service Assets, 31 projets sans erreur de synchronisation, branche de travail égale à `origin/main`. (15 October 2026, 08:22:41 +0200)
+> - **En cours** : rien de bloquant, les sauvegardes tournent normalement. (15 October 2026, 08:22:41 +0200)
+> - **Prochain** : chercher une friction mesurable côté Plan (lecture du code puis test), avant toute modification. (15 October 2026, 08:22:41 +0200)
+> - **En attente de ton go** : le plan `TEMP` (dry-run) et `--apply` de l'index. Entrée ajoutée dans PROGRESS.md. (15 October 2026, 08:22:41 +0200)
