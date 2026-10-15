@@ -2062,3 +2062,11 @@
 - Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/5bd15db6-f2d9-4010-bcb3-0d609a42bc5e.jsonl. (15 October 2026, 02:25:35 +0200)
 
 > Je livre ce correctif (le service refuse sa publication Japanese depuis 00:04 : le fichier dépasse la limite GitHub de 100 Mio) puis je vérifie que la publication repasse. (15 October 2026, 02:25:35 +0200)
+
+## 15 October 2026, 02:27:49 +0200 : Iteration
+
+<!-- feedback-event:12f7d2736de54830d7b6bc8cb46db3fdf468705ff9cad043fb643cb55fc22670 (15 October 2026, 02:27:49 +0200) -->
+- Project: zenray-progress; kind: iteration. (15 October 2026, 02:27:49 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/5bd15db6-f2d9-4010-bcb3-0d609a42bc5e.jsonl. (15 October 2026, 02:27:49 +0200)
+
+> Constat du 02:20 : la publication Japanese était refusée par GitHub depuis 00:04. Le fichier d'état du projet (104,7 Mo) dépassait la limite de 100 Mio par fichier, et chaque passe retombait en erreur toutes les minutes. Corrigé et livré : trois champs inutilisés retirés de la copie cloud (106,9 → 80,8 Mo mesuré), et un échec de publication des métadonnées n'invalide plus une passe dont les fichiers sont déjà archivés et vérifiés (deux tests ajoutés). Service relancé ; je vérifie au prochain passage que la publication Japanese aboutit. (15 October 2026, 02:27:49 +0200)

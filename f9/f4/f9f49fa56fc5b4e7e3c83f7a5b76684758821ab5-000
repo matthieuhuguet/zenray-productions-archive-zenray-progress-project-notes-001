@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-10-15T00:26:36.685Z",
+ "scannedAt": "2026-10-15T00:38:11.803Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -111,8 +111,8 @@
    "provider": "claude",
    "sessionId": "d2f26016-25dd-4bcc-a6d8-122d50d3f383",
    "title": "Motion Design Vector and Music",
-   "updatedAt": "2026-10-15T00:18:00.485Z",
-   "bytes": 23791569,
+   "updatedAt": "2026-10-15T00:37:19.584Z",
+   "bytes": 23833309,
    "boundProject": null
   },
   {
@@ -255,8 +255,8 @@
    "provider": "claude",
    "sessionId": "5bd15db6-f2d9-4010-bcb3-0d609a42bc5e",
    "title": "performance assets and drive",
-   "updatedAt": "2026-10-15T00:25:37.463Z",
-   "bytes": 7016150,
+   "updatedAt": "2026-10-15T00:27:51.791Z",
+   "bytes": 34518,
    "boundProject": "zenray-progress"
   },
   {
