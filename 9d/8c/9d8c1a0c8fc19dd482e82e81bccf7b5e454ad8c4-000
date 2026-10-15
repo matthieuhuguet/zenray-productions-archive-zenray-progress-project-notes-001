@@ -2046,3 +2046,19 @@
 > - **En cours** : fin de l'archive Japanese (~40 min). (15 October 2026, 02:07:09 +0200)
 > - **Prochain geste** : redémarrer le service (nettoyage des temporaires), puis l'essai à blanc de l'index public ; le plan de déplacement de TEMP attend ton accord. (15 October 2026, 02:07:09 +0200)
 > - **Journal** : entrée ajoutée à `PROGRESS.md`. (15 October 2026, 02:07:09 +0200)
+
+## 15 October 2026, 02:22:26 +0200 : Prompt
+
+<!-- feedback-event:f6c61c4505d15980ac718cb86849869970305264bf35e0e0c291edb2244c4ae0 (15 October 2026, 02:22:26 +0200) -->
+- Project: zenray-progress; kind: prompt. (15 October 2026, 02:22:26 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/5bd15db6-f2d9-4010-bcb3-0d609a42bc5e.jsonl. (15 October 2026, 02:22:26 +0200)
+
+> BILAN 30 MIN (ZenRayProgress, refinement 14 octobre): en 5 lignes max dis ce qui est fait depuis le dernier bilan (avec preuve mesuree), ce qui est en cours, le prochain geste; puis append une entree PROGRESS.md via le skill progress; puis continue le travail sans t'arreter (dont-stop). Rappel: aucune regression design, aucun bug sur les donnees, deploiement uniquement depuis un arbre propre d'origin/main. (15 October 2026, 02:22:26 +0200)
+
+## 15 October 2026, 02:25:35 +0200 : Iteration
+
+<!-- feedback-event:8917a470edb7aad6f8e684c1a6115212127c250e151709301c2e0cdda9c0f32a (15 October 2026, 02:25:35 +0200) -->
+- Project: zenray-progress; kind: iteration. (15 October 2026, 02:25:35 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/5bd15db6-f2d9-4010-bcb3-0d609a42bc5e.jsonl. (15 October 2026, 02:25:35 +0200)
+
+> Je livre ce correctif (le service refuse sa publication Japanese depuis 00:04 : le fichier dépasse la limite GitHub de 100 Mio) puis je vérifie que la publication repasse. (15 October 2026, 02:25:35 +0200)
