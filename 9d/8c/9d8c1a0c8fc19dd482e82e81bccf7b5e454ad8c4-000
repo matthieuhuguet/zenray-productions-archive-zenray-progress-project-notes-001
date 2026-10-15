@@ -2215,3 +2215,24 @@
 > Continue the conversation from where it left off without asking the user any further questions. Resume directly — do not acknowledge the summary, do not recap what was happening, do not preface with "I'll continue" or similar. Pick up the last task as if the break never happened. (15 October 2026, 04:24:15 +0200)
 >
 > The messages after this summary are the most recent messages from before compaction, kept verbatim. The summary was written without seeing them, so something it says has not happened yet may already have happened in them. (15 October 2026, 04:24:15 +0200)
+
+## 15 October 2026, 04:27:05 +0200 : Iteration
+
+<!-- feedback-event:94a52d046e496bad9a1f4570d607cd55efc77601f97d738ff4ef6d4210a61fe6 (15 October 2026, 04:27:05 +0200) -->
+- Project: zenray-progress; kind: iteration. (15 October 2026, 04:27:05 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/5bd15db6-f2d9-4010-bcb3-0d609a42bc5e.jsonl. (15 October 2026, 04:27:05 +0200)
+
+> Bilan 04:35, 15 October 2026. (15 October 2026, 04:27:05 +0200)
+>
+> - **Fait** : alerte dans le service Assets quand le snapshot d'un projet dépasse 90 Mo (la limite GitHub est 100 MiB, le projet japonais avait atteint 104,7 Mo). 2558 tests verts, déployé depuis origin/main (commit `4738db17`), le bundle servi est celui qui vient d'être construit, service Assets redémarré. (15 October 2026, 04:27:05 +0200)
+> - **En cours** : deux sauvegardes interrompues par le redémarrage (zenray-dictate, zenray-motion-design) reprennent seules, car le service les marque reprenables. (15 October 2026, 04:27:05 +0200)
+> - **Prochain** : vérifier cette reprise au prochain bilan, puis continuer à raffiner Create, Plan, Notes, Freelance et Gallery. (15 October 2026, 04:27:05 +0200)
+> - **En attente de ton go** : le plan de déplacement de `Cloud/Downloads/TEMP` (dry-run seulement) et `build-search-index.mjs --apply` pour replier le `delta.json` de 22 Mo. (15 October 2026, 04:27:05 +0200)
+> - **Journal** : entrée ajoutée dans PROGRESS.md. (15 October 2026, 04:27:05 +0200)
+>
+> | Ce que tu voulais | Fait ? | Comment je le sais | (15 October 2026, 04:27:05 +0200)
+> |---|---|---| (15 October 2026, 04:27:05 +0200)
+> | Qu'Assets ne bloque plus sans prévenir | Oui, alerte de taille ajoutée | tests verts, événement émis dans le service | (15 October 2026, 04:27:05 +0200)
+> | Aucune régression ni bug sur les données | Oui | 2558 tests passés, `verify ko=0` sur la dernière sauvegarde | (15 October 2026, 04:27:05 +0200)
+> | Site en production à jour | Oui | bundle servi = bundle construit (`index-C3I-bkSZ.js`) | (15 October 2026, 04:27:05 +0200)
+> | Reprise des deux sauvegardes redémarrées | Pas encore vérifié | à contrôler au prochain bilan | (15 October 2026, 04:27:05 +0200)
