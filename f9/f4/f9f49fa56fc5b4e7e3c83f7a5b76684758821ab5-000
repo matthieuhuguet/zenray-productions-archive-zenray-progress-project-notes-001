@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-10-15T19:04:50.613Z",
+ "scannedAt": "2026-10-15T21:15:51.174Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -111,8 +111,8 @@
    "provider": "claude",
    "sessionId": "d2f26016-25dd-4bcc-a6d8-122d50d3f383",
    "title": "Motion Design Vector and Music",
-   "updatedAt": "2026-10-15T19:04:20.616Z",
-   "bytes": 81962268,
+   "updatedAt": "2026-10-15T21:11:51.862Z",
+   "bytes": 24132,
    "boundProject": null
   },
   {
@@ -385,6 +385,22 @@
    "title": "Conversation codex 01a1301e",
    "updatedAt": "2026-10-12T22:16:07.776Z",
    "bytes": 5990285,
+   "boundProject": null
+  },
+  {
+   "projectId": "zenray-progress",
+   "lines": 4,
+   "work": 1,
+   "prompts": 0,
+   "first": "2026-10-15T21:06:09.282Z",
+   "last": "2026-10-15T21:07:28.949Z",
+   "strength": "weak",
+   "conversationId": "claude:111d68e0-b7ba-43d9-b13a-faa853975fdc",
+   "provider": "claude",
+   "sessionId": "111d68e0-b7ba-43d9-b13a-faa853975fdc",
+   "title": "Renommer et organiser fichiers médias",
+   "updatedAt": "2026-10-15T21:15:01.627Z",
+   "bytes": 34560,
    "boundProject": null
   },
   {
