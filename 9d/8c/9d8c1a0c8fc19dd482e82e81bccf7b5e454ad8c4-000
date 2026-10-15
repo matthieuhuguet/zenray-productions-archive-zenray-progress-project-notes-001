@@ -2092,3 +2092,25 @@
 > - **En cours** : la dernière tranche de Japanese (environ 10 minutes). (15 October 2026, 02:52:39 +0200)
 > - **Prochain geste** : redémarrage du service (nettoyage des temporaires), essai à blanc de l'index public, et un avertissement quand un snapshot dépasse 90 Mo. (15 October 2026, 02:52:39 +0200)
 > - **Journal** : entrée ajoutée à `PROGRESS.md`. (15 October 2026, 02:52:39 +0200)
+
+## 15 October 2026, 03:22:26 +0200 : Prompt
+
+<!-- feedback-event:0fec49930c6fd3ba5e321df7707671fdcc9cb3f046ae58e2dfb2494f68756ab1 (15 October 2026, 03:22:26 +0200) -->
+- Project: zenray-progress; kind: prompt. (15 October 2026, 03:22:26 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/5bd15db6-f2d9-4010-bcb3-0d609a42bc5e.jsonl. (15 October 2026, 03:22:26 +0200)
+
+> BILAN 30 MIN (ZenRayProgress, refinement 14 octobre): en 5 lignes max dis ce qui est fait depuis le dernier bilan (avec preuve mesuree), ce qui est en cours, le prochain geste; puis append une entree PROGRESS.md via le skill progress; puis continue le travail sans t'arreter (dont-stop). Rappel: aucune regression design, aucun bug sur les donnees, deploiement uniquement depuis un arbre propre d'origin/main. (15 October 2026, 03:22:26 +0200)
+
+## 15 October 2026, 03:23:06 +0200 : Iteration
+
+<!-- feedback-event:ce55dfe7f3e2cf6723c5e23e173096ec0212c8cbe75cc727e9a42cad36729cf7 (15 October 2026, 03:23:06 +0200) -->
+- Project: zenray-progress; kind: iteration. (15 October 2026, 03:23:06 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/5bd15db6-f2d9-4010-bcb3-0d609a42bc5e.jsonl. (15 October 2026, 03:23:06 +0200)
+
+> Bilan 03:25 : (15 October 2026, 03:23:06 +0200)
+>
+> - **Fait (mesuré)** : l'archive Japanese est terminée, 51 309 → 0 fichier en attente en 3 h 15 sans intervention (14 h projetées au rythme initial) ; aucune erreur au tableau de bord, bridge à 130 ms, aucun pic de latence supérieur à 3 s sur 60 minutes de surveillance. (15 October 2026, 03:23:06 +0200)
+> - **Nettoyage** : les fichiers temporaires d'écriture interrompue ont disparu du dossier d'état. (15 October 2026, 03:23:06 +0200)
+> - **En cours** : l'essai à blanc de l'index public (clone et lecture de 141 000 manifestes d'images, ne pousse rien). (15 October 2026, 03:23:06 +0200)
+> - **Prochain geste** : te donner son résultat (taille finale de l'index, gain attendu), puis un avertissement quand un snapshot approche 90 Mo ; le plan de déplacement de TEMP attend toujours ton accord. (15 October 2026, 03:23:06 +0200)
+> - **Journal** : entrée ajoutée à `PROGRESS.md`. (15 October 2026, 03:23:06 +0200)
