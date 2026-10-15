@@ -2258,3 +2258,25 @@
 > - **En cours** : 3 projets avec 2 fichiers vivants en attente, remis en file normalement. Rien d'anormal côté service ni côté données. (15 October 2026, 04:52:46 +0200)
 > - **Prochain** : continuer le raffinement (Create, Plan, Notes, Gallery). Ton go reste attendu pour le plan `TEMP` (dry-run) et pour `--apply` de l'index. (15 October 2026, 04:52:46 +0200)
 > - **Journal** : entrée ajoutée dans PROGRESS.md. (15 October 2026, 04:52:46 +0200)
+
+## 15 October 2026, 05:22:26 +0200 : Prompt
+
+<!-- feedback-event:85b59044172afb5cd39bef4f0d3b1bc2acbdcfc392f40d6524c685ffa9034c2c (15 October 2026, 05:22:26 +0200) -->
+- Project: zenray-progress; kind: prompt. (15 October 2026, 05:22:26 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/5bd15db6-f2d9-4010-bcb3-0d609a42bc5e.jsonl. (15 October 2026, 05:22:26 +0200)
+
+> BILAN 30 MIN (ZenRayProgress, refinement 14 octobre): en 5 lignes max dis ce qui est fait depuis le dernier bilan (avec preuve mesuree), ce qui est en cours, le prochain geste; puis append une entree PROGRESS.md via le skill progress; puis continue le travail sans t'arreter (dont-stop). Rappel: aucune regression design, aucun bug sur les donnees, deploiement uniquement depuis un arbre propre d'origin/main. (15 October 2026, 05:22:26 +0200)
+
+## 15 October 2026, 05:22:40 +0200 : Iteration
+
+<!-- feedback-event:be02087ec6d4d31dfdc9630ac3168b5602f4b76d2a9797c8fc1fd9b97dfc5b17 (15 October 2026, 05:22:40 +0200) -->
+- Project: zenray-progress; kind: iteration. (15 October 2026, 05:22:40 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/5bd15db6-f2d9-4010-bcb3-0d609a42bc5e.jsonl. (15 October 2026, 05:22:40 +0200)
+
+> Bilan 05:25. (15 October 2026, 05:22:40 +0200)
+>
+> - **Fait** : aucun changement de code depuis le dernier bilan, seulement des contrôles. (15 October 2026, 05:22:40 +0200)
+> - **Preuve** : 0 erreur sur les 300 derniers événements du service Assets, arbre de travail propre. Le bundle principal fait 1,1 Mo (356 Ko gzip) et aucun chunk lourd (`heic2any`, `RefBoardHost`, `MediaApp`) n'est préchargé. (15 October 2026, 05:22:40 +0200)
+> - **En cours** : rien de bloquant, les sauvegardes tournent normalement. (15 October 2026, 05:22:40 +0200)
+> - **Prochain** : chercher la prochaine friction mesurable sur Plan, Notes ou Gallery, puis la corriger avec un test avant de livrer. (15 October 2026, 05:22:40 +0200)
+> - **En attente de ton go** : le plan `TEMP` en dry-run et `--apply` de l'index. Entrée ajoutée dans PROGRESS.md. (15 October 2026, 05:22:40 +0200)
