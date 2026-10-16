@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-10-16T06:38:05.032Z",
+ "scannedAt": "2026-10-16T10:16:07.598Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -111,8 +111,8 @@
    "provider": "claude",
    "sessionId": "d2f26016-25dd-4bcc-a6d8-122d50d3f383",
    "title": "Motion Design Vector and Music",
-   "updatedAt": "2026-10-16T06:37:47.278Z",
-   "bytes": 22397,
+   "updatedAt": "2026-10-16T10:15:59.196Z",
+   "bytes": 94020285,
    "boundProject": null
   },
   {
@@ -1264,7 +1264,7 @@
    "sessionId": "d955fbe0-b2a6-4fd7-a4d4-b73cb0f18add",
    "title": "malware",
    "updatedAt": "2026-10-07T07:12:42.561Z",
-   "bytes": 19226,
+   "bytes": 19200,
    "boundProject": null
   },
   {
