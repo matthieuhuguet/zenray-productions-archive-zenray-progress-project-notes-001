@@ -3305,3 +3305,213 @@
 - Project: zenray-progress; kind: prompt. (16 October 2026, 15:24:46 +0200)
 
 > Oui, intègre la section Sport dans ZenRayProgress, branchée sur Plan et la note du jour. (16 October 2026, 15:24:46 +0200)
+
+## 16 October 2026, 15:30:21 +0200 : Prompt
+
+<!-- feedback-event:11ef5f96bf3d08ab9756fe8782a4298f7c152d9d623212aa264efe7a4ecf840e (16 October 2026, 15:30:21 +0200) -->
+- Project: zenray-progress; kind: prompt. (16 October 2026, 15:30:21 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/d3327e82-5a7e-46d8-b6f6-bc0447663c2b.jsonl. (16 October 2026, 15:30:21 +0200)
+
+> Je vois pas la section sport dans la section de gauche sidebar c'est ou ? (16 October 2026, 15:30:21 +0200)
+
+## 16 October 2026, 15:30:21 +0200 : Prompt
+
+<!-- feedback-event:9f950ca2a8b229248117817eaf365d3fe87286fa965196586e5e9cf6f64b739d (16 October 2026, 15:30:21 +0200) -->
+- Project: zenray-progress; kind: prompt. (16 October 2026, 15:30:21 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/d3327e82-5a7e-46d8-b6f6-bc0447663c2b.jsonl. (16 October 2026, 15:30:21 +0200)
+
+> [Image: source: /private/tmp/claude-501/-Users-zenray--claude-Memory1/d3327e82-5a7e-46d8-b6f6-bc0447663c2b/images/7.webp] (16 October 2026, 15:30:21 +0200)
+
+## 16 October 2026, 15:30:30 +0200 : Iteration
+
+<!-- feedback-event:fe7cd65688707479fb042b9746c43aed1e29b46cfc54295a73777a9447aa3cee (16 October 2026, 15:30:30 +0200) -->
+- Project: zenray-progress; kind: iteration. (16 October 2026, 15:30:30 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/d3327e82-5a7e-46d8-b6f6-bc0447663c2b.jsonl. (16 October 2026, 15:30:30 +0200)
+
+> Elle est déjà dans ta capture, dans le groupe **QUICKTOOLS**, entre **Goals** et **Skills** (le « Sport » juste au-dessus de « Skills »). Un clic dessus ouvre la vue. (16 October 2026, 15:30:30 +0200)
+>
+> Je l'avais rangée là, avec Timer et Goals, mais tu la voudras peut-être plus visible, dans CRAFT à côté de Plan par exemple, puisqu'elle écrit dedans. Dis-moi si tu veux que je la déplace. (16 October 2026, 15:30:30 +0200)
+
+## 16 October 2026, 15:32:02 +0200 : Prompt
+
+<!-- feedback-event:3e024f4a1623a0b207a4e9d2538bbb6e82f720c4c39b97e444c6a8482fc08ded (16 October 2026, 15:32:02 +0200) -->
+- Project: zenray-progress; kind: prompt. (16 October 2026, 15:32:02 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/d3327e82-5a7e-46d8-b6f6-bc0447663c2b.jsonl. (16 October 2026, 15:32:02 +0200)
+
+> ouais en dessous de plan (16 October 2026, 15:32:02 +0200)
+
+## 16 October 2026, 15:33:12 +0200 : Prompt
+
+<!-- feedback-event:0e787b658b26684bc763c2867df89717a7ecbb16838158326905ecbe954e059b (16 October 2026, 15:33:12 +0200) -->
+- Project: zenray-progress; kind: prompt. (16 October 2026, 15:33:12 +0200)
+
+> Ouais, en dessous de Plan (Sport dans la sidebar). (16 October 2026, 15:33:12 +0200)
+
+## 16 October 2026, 15:33:33 +0200 : Iteration
+
+<!-- feedback-event:a02ff6865ade8a693b9ae037834a8c66740df63b282dab6b27286dde9881ed5d (16 October 2026, 15:33:33 +0200) -->
+- Project: zenray-progress; kind: iteration. (16 October 2026, 15:33:33 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/d3327e82-5a7e-46d8-b6f6-bc0447663c2b.jsonl. (16 October 2026, 15:33:33 +0200)
+
+> Sport est maintenant dans le groupe **Craft** de la sidebar, juste sous **Plan**. Recharge la page pour le voir. (16 October 2026, 15:33:33 +0200)
+>
+> C'est commité, poussé sur main et déployé. J'ai vérifié que `zenray-progress.pages.dev` sert bien le même bundle que mon build local (`index-DoO5WMdx.js`) et qu'il contient l'entrée Sport rangée dans Craft. Ma première comparaison disait le contraire, parce que le site mettait quelques secondes à basculer sur le nouveau bundle. (16 October 2026, 15:33:33 +0200)
+>
+> Le build et les 28 tests concernés passent. La vérification dans le navigateur reste de ton côté, selon la règle du projet. (16 October 2026, 15:33:33 +0200)
+>
+> | Ce que tu voulais | Fait ? | Comment je le sais | (16 October 2026, 15:33:33 +0200)
+> |---|---|---| (16 October 2026, 15:33:33 +0200)
+> | Sport sous Plan dans la sidebar | oui | l'entrée est en Craft juste après Plan dans le bundle servi en production | (16 October 2026, 15:33:33 +0200)
+
+## 16 October 2026, 15:33:38 +0200 : Prompt
+
+<!-- feedback-event:3f04d0dd33b354850fcca25cc75d2e7fc7bf030abc31e4ecc3a54621e2eebbf4 (16 October 2026, 15:33:38 +0200) -->
+- Project: zenray-progress; kind: prompt. (16 October 2026, 15:33:38 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/d3327e82-5a7e-46d8-b6f6-bc0447663c2b.jsonl. (16 October 2026, 15:33:38 +0200)
+
+> /Users/zenray/Downloads/exercices_musculation_3_images/curl_biceps_debout.png /Users/zenray/Downloads/exercices_musculation_3_images/developpe_couche_halteres.png /Users/zenray/Downloads/exercices_musculation_3_images/pompes_surelevees.png (16 October 2026, 15:33:38 +0200)
+>
+> pareil sheet de validation pour découpage de ces exos tu as les noms à append dans la liste sport ensuite et supprime tout ceux qui n'ont pas d'images pour l'instant (16 October 2026, 15:33:38 +0200)
+>
+> Seulement trois exos à ajouter après avoir ajouté et découpé les images attends ma validation. (16 October 2026, 15:33:38 +0200)
+
+## 16 October 2026, 15:34:50 +0200 : Prompt
+
+<!-- feedback-event:9575e72da2fff0a7eef03cb5ea19a1f77a02bbad90c236adc9546f0f5e11979f (16 October 2026, 15:34:50 +0200) -->
+- Project: zenray-progress; kind: prompt. (16 October 2026, 15:34:50 +0200)
+
+> Même chose, une sheet de validation pour le découpage de ces trois images (curl biceps debout, développé couché haltères, pompes surélevées). Tu as les noms à ajouter ensuite dans la liste Sport, puis tu supprimes tous ceux qui n'ont pas d'images pour l'instant. Seulement trois exos à ajouter, après avoir ajouté et découpé les images : attends ma validation. (16 October 2026, 15:34:50 +0200)
+
+## 16 October 2026, 15:37:32 +0200 : Prompt
+
+<!-- feedback-event:a0aa9375bf9c5b483fe77fe01f8de4d5118c9406b01c2810e8c60d65e3857c4f (16 October 2026, 15:37:32 +0200) -->
+- Project: zenray-progress; kind: prompt. (16 October 2026, 15:37:32 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/d3327e82-5a7e-46d8-b6f6-bc0447663c2b.jsonl. (16 October 2026, 15:37:32 +0200)
+
+> 09:A, 10:A, 11:A et les exos maintenant sur sport (16 October 2026, 15:37:32 +0200)
+
+## 16 October 2026, 15:38:38 +0200 : Iteration
+
+<!-- feedback-event:38fd5755a5e28ac4eeb47270a14bda923e79002de445d65513c384d24a0f0b7e (16 October 2026, 15:38:38 +0200) -->
+- Project: zenray-progress; kind: iteration. (16 October 2026, 15:38:38 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/d3327e82-5a7e-46d8-b6f6-bc0447663c2b.jsonl. (16 October 2026, 15:38:38 +0200)
+
+> Les trois découpes sont rangées dans le dossier d'input. Je commite, pousse et déploie maintenant les trois exercices et la suppression des exos sans image. (16 October 2026, 15:38:38 +0200)
+
+## 16 October 2026, 15:39:39 +0200 : Prompt
+
+<!-- feedback-event:1a8ab2c72aed1732f78f088098a40409514c9bf020e6a7b09d6ac8a92a40f6cb (16 October 2026, 15:39:39 +0200) -->
+- Project: zenray-progress; kind: prompt. (16 October 2026, 15:39:39 +0200)
+
+> 09:A, 10:A, 11:A et les exos maintenant sur Sport. (16 October 2026, 15:39:39 +0200)
+
+## 16 October 2026, 15:39:39 +0200 : Prompt
+
+<!-- feedback-event:2604b30def640f8e5ca5036f3b211546f4d183f3429db288ff308f5377f893c1 (16 October 2026, 15:39:39 +0200) -->
+- Project: zenray-progress; kind: prompt. (16 October 2026, 15:39:39 +0200)
+
+> Redonne-moi le découpage des 3 images et je veux les images dans le dossier d'input, dans un sous-dossier crop. /prompt-stacking seulement quand tu as fini. (16 October 2026, 15:39:39 +0200)
+
+## 16 October 2026, 15:39:39 +0200 : Standing rule
+
+<!-- feedback-event:fa509c1ea9229a49773eb80ce0926d706f27e0a8fbecdccbb23150434468c76a (16 October 2026, 15:39:39 +0200) -->
+- Project: zenray-progress; kind: rule. (16 October 2026, 15:39:39 +0200)
+
+> 16 October 2026, décision de Matthieu : images 09 (curl biceps debout), 10 (développé couché aux haltères) et 11 (pompes surélevées) = découpe A, image principale seule ; ces trois exercices rejoignent la liste Sport (program 9 à 11) ; tout exercice sans image est retiré de la base pour l'instant. Découpes livrées dans Downloads/exercices_musculation_3_images/crop. (16 October 2026, 15:39:39 +0200)
+
+## 16 October 2026, 15:39:39 +0200 : Prompt
+
+<!-- feedback-event:b2364b153475a36ed43642556b371a087763f8e032da40d6ca1ab646de62c0d0 (16 October 2026, 15:39:39 +0200) -->
+- Project: zenray-progress; kind: prompt. (16 October 2026, 15:39:39 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/d3327e82-5a7e-46d8-b6f6-bc0447663c2b.jsonl. (16 October 2026, 15:39:39 +0200)
+
+> Base directory for this skill: /Users/zenray/.claude/skills/prompt-stacking (16 October 2026, 15:39:39 +0200)
+>
+> # Continuité des tâches (16 October 2026, 15:39:39 +0200)
+>
+> **Un nouveau prompt change le focus, pas l'historique des obligations.** (16 October 2026, 15:39:39 +0200)
+>
+> **Une tâche ne disparaît que par `DONE` ou `CANCEL`.** (16 October 2026, 15:39:39 +0200)
+>
+> ## État unique par session (16 October 2026, 15:39:39 +0200)
+>
+> Résoudre le dossier depuis l'identifiant opaque fourni par l'hôte, jamais depuis le texte littéral (16 October 2026, 15:39:39 +0200)
+> `<CurrentSessionName>` ni depuis une date, un nom de projet ou une valeur aléatoire : (16 October 2026, 15:39:39 +0200)
+>
+> - Claude Code : `/Users/zenray/.claude/$CLAUDE_SESSION_ID/prompt-stacking.md` (16 October 2026, 15:39:39 +0200)
+> - Codex : `/Users/zenray/.codex/$CODEX_SESSION_ID/prompt-stacking.md` (16 October 2026, 15:39:39 +0200)
+> - Antigravity : `/Users/zenray/.gemini/antigravity/$ANTIGRAVITY_CONVERSATION_ID/prompt-stacking.md` (16 October 2026, 15:39:39 +0200)
+>
+> Le dossier est global à l'hôte, hors de l'espace de travail et ne se versionne pas. Si l'identifiant standard manque, (16 October 2026, 15:39:39 +0200)
+> utiliser seulement l'identifiant de conversation exposé par l'hôte. Ne jamais créer de repli partagé. (16 October 2026, 15:39:39 +0200)
+>
+> Créer automatiquement le dossier et le fichier s'ils n'existent pas. Ce fichier est le seul état de (16 October 2026, 15:39:39 +0200)
+> tâches : ne pas créer de dashboard, JSON, base de données, rapport, journal d'événements ou second (16 October 2026, 15:39:39 +0200)
+> fichier de suivi. (16 October 2026, 15:39:39 +0200)
+>
+> ```md (16 October 2026, 15:39:39 +0200)
+> # OPEN (16 October 2026, 15:39:39 +0200)
+>
+> - [>] T1 Tâche actuelle (16 October 2026, 15:39:39 +0200)
+> - [ ] T0 Tâche interrompue (16 October 2026, 15:39:39 +0200)
+>
+> # DONE (16 October 2026, 15:39:39 +0200)
+>
+> - [x] T-1 Tâche vérifiée (16 October 2026, 15:39:39 +0200)
+>
+> # CANCELED (16 October 2026, 15:39:39 +0200)
+>
+> - [!] T-2 Tâche explicitement annulée (16 October 2026, 15:39:39 +0200)
+> ``` (16 October 2026, 15:39:39 +0200)
+>
+> `[>]` signifie active, `[ ]` en attente, `[x]` terminée et `[!]` annulée. Les descriptions tiennent (16 October 2026, 15:39:39 +0200)
+> sur une ligne. Les tâches les plus récentes viennent en premier dans chaque section. (16 October 2026, 15:39:39 +0200)
+>
+> ## À chaque prompt (16 October 2026, 15:39:39 +0200)
+>
+> Pour chaque demande conséquente et toute tâche de code, avant le travail : (16 October 2026, 15:39:39 +0200)
+>
+> 1. Lire seulement `OPEN`. (16 October 2026, 15:39:39 +0200)
+> 2. Classer l'intention : `CONTINUE`, `NEW` ou `CANCEL`. (16 October 2026, 15:39:39 +0200)
+> 3. Mettre l'état à jour avant l'exécution. (16 October 2026, 15:39:39 +0200)
+>
+> `CONTINUE` conserve l'unique tâche active et affine sa description si nécessaire. Une précision ou une (16 October 2026, 15:39:39 +0200)
+> suite logique reste un `CONTINUE`. (16 October 2026, 15:39:39 +0200)
+>
+> `NEW` commence par déplacer l'ancienne tâche active, si elle n'est pas finie, vers `OPEN` en attente, (16 October 2026, 15:39:39 +0200)
+> puis place la nouvelle tâche active en tête. Ne créer aucune tâche à partir d'un détail accessoire. (16 October 2026, 15:39:39 +0200)
+>
+> `CANCEL` exige une annulation, un remplacement ou une obsolescence explicite de la part de l'utilisateur. (16 October 2026, 15:39:39 +0200)
+> Déplacer alors la tâche dans `CANCELED`, avec le motif sur la même ligne. Ne jamais l'appeler `DONE`. (16 October 2026, 15:39:39 +0200)
+>
+> Lorsque le résultat est réellement complet et vérifié, déplacer la tâche dans `DONE`. Une tentative, (16 October 2026, 15:39:39 +0200)
+> une tâche partielle, un blocage ou un résultat non vérifié reste dans `OPEN`. (16 October 2026, 15:39:39 +0200)
+>
+> L'état est lossless, plutôt que littéralement append-only : aucune tâche n'est supprimée. Comme chaque (16 October 2026, 15:39:39 +0200)
+> section doit garder les tâches les plus récentes en tête et refléter leur statut courant, une ligne peut (16 October 2026, 15:39:39 +0200)
+> changer de section ou de marqueur. N'ajouter aucun historique parallèle pour simuler un append-only. (16 October 2026, 15:39:39 +0200)
+>
+> Un seul élément peut être `[>]`. Toute tâche non terminée reste dans `OPEN`. Ne lire `DONE` ou `CANCELED` (16 October 2026, 15:39:39 +0200)
+> que lorsqu'un contexte historique précis est nécessaire. Le suivi reste silencieux et ne doit ni (16 October 2026, 15:39:39 +0200)
+> interrompre ni alourdir la réponse réelle. (16 October 2026, 15:39:39 +0200)
+
+## 16 October 2026, 15:39:54 +0200 : Iteration
+
+<!-- feedback-event:ca33d917d260d5c911fc3c3e59dd17477f3c4297a7559d0837e4f57ee937b26b (16 October 2026, 15:39:54 +0200) -->
+- Project: zenray-progress; kind: iteration. (16 October 2026, 15:39:54 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/d3327e82-5a7e-46d8-b6f6-bc0447663c2b.jsonl. (16 October 2026, 15:39:54 +0200)
+
+> Les trois exercices sont dans Sport avec leur image : curl biceps debout, développé couché aux haltères et pompes surélevées, en découpe A (image principale seule). La production sert le nouveau bundle et les trois images en 200. Les 8 exercices sans image sont retirés : militaire, tractions simples, squat bulgare, relevés de jambes, rowing, tirage bras tendus, hyperextensions et good morning. Il reste 11 exercices, tous avec image, numérotés de 1 à 11. J'ai aussi ajouté le groupe Bras aux filtres. (16 October 2026, 15:39:54 +0200)
+>
+> Les trois découpes sont dans `/Users/zenray/Downloads/exercices_musculation_3_images/crop/` (`curl_biceps_debout.png`, `developpe_couche_halteres.png`, `pompes_surelevees.png`). Le suivi de tâches `prompt-stacking` est écrit, comme demandé une fois fini. (16 October 2026, 15:39:54 +0200)
+>
+> **Pas encore vérifié :** je n'ai fait aucune écriture réelle dans ton vrai Plan ni dans ta vraie note du jour. Seuls les 23 tests, avec écritures simulées, l'ont éprouvée. Ton premier ajout dans Sport en sera la vraie vérification. (16 October 2026, 15:39:54 +0200)
+>
+> | Ce que tu voulais | Fait ? | Comment je le sais | (16 October 2026, 15:39:54 +0200)
+> |---|---|---| (16 October 2026, 15:39:54 +0200)
+> | 09, 10 et 11 en découpe A | oui | les trois images sont servies en production (200) | (16 October 2026, 15:39:54 +0200)
+> | Les 3 exos dans la liste Sport | oui | « Curl biceps debout » est dans le code servi | (16 October 2026, 15:39:54 +0200)
+> | Supprimer ceux sans image | oui | « Rowing haltère » n'est plus dans le code servi | (16 October 2026, 15:39:54 +0200)
+> | Les 3 découpes dans le sous-dossier `crop` | oui | 3 fichiers de 548 px de haut dans `crop/` | (16 October 2026, 15:39:54 +0200)
+> | prompt-stacking à la fin | oui | fichier d'état écrit | (16 October 2026, 15:39:54 +0200)
+> | Écriture réelle dans Plan et la note | pas vérifié | seulement des écritures simulées | (16 October 2026, 15:39:54 +0200)
