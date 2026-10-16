@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-10-16T06:37:05.081Z",
+ "scannedAt": "2026-10-16T06:38:05.032Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -111,8 +111,8 @@
    "provider": "claude",
    "sessionId": "d2f26016-25dd-4bcc-a6d8-122d50d3f383",
    "title": "Motion Design Vector and Music",
-   "updatedAt": "2026-10-16T06:36:50.932Z",
-   "bytes": 93773853,
+   "updatedAt": "2026-10-16T06:37:47.278Z",
+   "bytes": 22397,
    "boundProject": null
   },
   {
