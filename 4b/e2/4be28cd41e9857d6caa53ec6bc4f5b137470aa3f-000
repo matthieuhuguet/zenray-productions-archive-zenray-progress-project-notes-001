@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="fr"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sport I Tuiles propres</title>
+<link rel="stylesheet" href="sport-shared.css">
+<style>
+/* I: Gestalt rebuild of H. Tiles are only image + name; ALL controls live in ONE sheet (common region).
+   Spacing only from --e0..--e4: 8px inside a group (label + control), 28px between groups, 44px between regions. 16 October 2026 */
+.sportc{position:relative;padding:0 var(--e3) var(--e2);gap:var(--e3)}
+.mob .sportc{padding:0 var(--e2) var(--e1);gap:var(--e2)}
+.hd2{display:flex;align-items:flex-end;gap:var(--e2);padding-top:var(--e2)}.hd2 h1{margin:0;font:350 calc(var(--sp-ui)*2)/1 var(--sp-serif)}.hd2 .sp{flex:1}
+.hd2 small{color:var(--sp-muted);display:block;margin-top:var(--e0);white-space:nowrap}.seg button{white-space:nowrap}
+.dp{position:relative;display:inline-flex;align-items:center;gap:var(--e1);margin-top:var(--e0);color:var(--sp-muted);white-space:nowrap;cursor:pointer;font-size:var(--sp-ui);border-radius:999px;padding:0 var(--e1) 0 0}
+.dp:hover{color:var(--sp-fg)}.dp .chev{font-size:.9em;opacity:.7}.dp input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer}
+.dp .pastb{padding:0 var(--e1);border-radius:999px;background:var(--sp-accent-soft);color:var(--sp-accent);font-size:calc(var(--sp-ui)*.8)}
+.dp.past{color:var(--sp-fg)}
+.find2{display:flex;flex-direction:column;gap:var(--e1)}
+.chips2{display:flex;gap:var(--e1);overflow-x:auto;scrollbar-width:none}.chips2::-webkit-scrollbar{display:none}
+.chips2 .chip{flex:none;margin:0}
+.grid2{flex:1;min-height:0;overflow:auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(calc(var(--sp-img) + 24px),1fr));grid-auto-rows:max-content;gap:var(--e2);align-content:start;padding:var(--e0) var(--e0) var(--e4)}
+.mob .grid2{grid-template-columns:1fr 1fr}
+.t3{position:relative;aspect-ratio:1/1.08;border:0;padding:0;border-radius:var(--sp-r);overflow:hidden;background:#222;text-align:left}
+.t3 .thumb{width:100%!important;height:100%!important;border-radius:0}
+.t3 .cap{position:absolute;left:0;right:0;bottom:0;padding:var(--e3) var(--e2) var(--e1);background:linear-gradient(transparent,rgba(0,0,0,.62));color:#fff;font-weight:500;font-size:calc(var(--sp-ui)*.95);line-height:1.25}
+.t3 .bd{position:absolute;top:var(--e1);right:var(--e1);padding:var(--e0) var(--e1);border-radius:999px;background:hsl(142 60% 36%);color:#fff;font:400 calc(var(--sp-ui)*.82) var(--sp-serif)}
+.t3.sel{box-shadow:0 0 0 2px var(--sp-bg),0 0 0 4px var(--sp-accent)}
+.t3:hover .thumb{filter:brightness(1.06)}
+/* the one common region where every control lives */
+.sheet2{position:absolute;left:var(--e2);right:var(--e2);bottom:var(--e2);z-index:8;padding:var(--e2) var(--e3) var(--e2);border-radius:calc(var(--sp-r) + 6px);background:var(--sp-bg);
+  box-shadow:0 18px 60px rgba(0,0,0,.24),0 0 0 .5px var(--sp-line);display:flex;flex-direction:column;gap:var(--e2);animation:up2 .25s cubic-bezier(.2,.7,.3,1)}
+.mob .sheet2{left:0;right:0;bottom:0;border-radius:22px 22px 0 0;padding:var(--e2) var(--e2) calc(var(--e3) + env(safe-area-inset-bottom))}
+@keyframes up2{from{transform:translateY(24px);opacity:0}to{transform:none;opacity:1}}
+.sh-top{display:flex;align-items:center;gap:var(--e2)}
+.sh-top .thumb{width:56px!important;height:56px!important}
+.sh-top h2{margin:0;font:350 calc(var(--sp-ui)*1.5)/1.15 var(--sp-serif)}.sh-top small{color:var(--sp-muted)}
+.sh-top .tt{flex:1;min-width:0}.sh-top .x{align-self:flex-start}
+.flds{display:flex;gap:var(--e3);flex-wrap:wrap}
+.mob .flds{gap:var(--e2)}
+.fld{display:flex;flex-direction:column;gap:var(--e1)}
+.fld > label{font-size:calc(var(--sp-ui)*.8);color:var(--sp-muted);letter-spacing:.04em;text-transform:uppercase}
+.pills{display:flex;gap:var(--e1);align-items:center}
+.pill2{height:36px;min-width:38px;padding:0 var(--e1);border-radius:999px;border:.5px solid var(--sp-line);background:transparent;font:400 calc(var(--sp-ui)*1.15) var(--sp-serif);display:inline-flex;align-items:center;justify-content:center;gap:var(--e0)}
+.pill2.on{background:var(--sp-accent);border-color:transparent;color:#fff}
+input.pill2{width:46px;padding:0;text-align:center;outline:0;-moz-appearance:textfield}input.pill2::-webkit-inner-spin-button{display:none}
+input.pill2:focus{border-color:var(--sp-accent)}input.pill2::placeholder{color:var(--sp-muted)}
+.kgp{display:inline-flex;align-items:center;height:36px;border-radius:999px;border:.5px solid var(--sp-line)}
+.kgp button{width:34px;height:36px;border:0;background:transparent;font-size:1.2em;border-radius:50%}.kgp button:hover{background:rgba(128,128,128,.14)}
+.kgp span{min-width:58px;text-align:center;font:400 calc(var(--sp-ui)*1.15) var(--sp-serif)}
+/* tile C (chosen 16 October 2026): each setting is ONE bordered line, label inside, cells split by hairlines */
+.form{display:flex;flex-direction:column;gap:var(--e2)}
+.seg3{display:grid;grid-template-columns:72px repeat(3,1fr);height:46px;border-radius:calc(var(--sp-r) - 2px);border:.5px solid var(--sp-line);overflow:hidden}
+.seg3 > *{border:0;border-left:.5px solid var(--sp-line);border-radius:0;height:100%;width:100%;min-width:0;background:transparent;padding:0}
+.seg3 > label{border-left:0;display:flex;align-items:center;padding-left:var(--e2);color:var(--sp-muted);font-size:calc(var(--sp-ui)*.88);background:rgba(128,128,128,.07);text-transform:none;letter-spacing:0}
+.seg3 > input.pill2{width:100%}
+.seg3 .pill2.on{background:var(--sp-accent);color:#fff}
+.seg3 .pill2.val{font-size:calc(var(--sp-ui)*1.05)}
+.act{display:grid;grid-template-columns:1fr 2fr;gap:var(--e1)}.act .btn{height:42px;padding:0}.act .btn.ghost{background:rgba(128,128,128,.14)}.act.solo{grid-template-columns:1fr}
+.st2{color:hsl(142 60% 30%);font-weight:500}.zr-dark .st2{color:hsl(142 55% 60%)}
+.ib{border:0;background:transparent;color:var(--sp-muted);font-size:1.15em;width:38px;height:38px;border-radius:50%}.ib:hover{background:rgba(128,128,128,.14)}
+.foot{display:flex;align-items:center;gap:var(--e2)}.foot .sp{flex:1}
+.lnk{border:0;background:transparent;color:var(--sp-muted);padding:0;text-decoration:underline;text-underline-offset:3px}
+.foot .btn{height:42px;padding:0 var(--e3)}
+.foot .btn.ghost{padding:0 var(--e2)}
+.sheet2 .info{padding:0}
+/* Plan column on the same scale */
+.planc{padding:var(--e3) var(--e2);gap:var(--e2);flex:.7;min-width:230px}.mob .planc{flex:1;min-width:0}.tl{gap:var(--e1)}.tile{padding:var(--e2);gap:var(--e2)}.tile .sl{margin-top:var(--e2)!important;gap:var(--e1)!important}.sr{padding:var(--e0) var(--e1)}
+.mob .seg button{padding:var(--e0) var(--e1)}.mob .hd2{gap:var(--e1)}.mob .hd2 h1{font-size:calc(var(--sp-ui)*1.7)}.mob .foot .lnk{font-size:calc(var(--sp-ui)*.85)}
+/* Objectif visuel: photo tiles */
+.goal{flex:1;min-height:0;overflow:auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(calc(var(--sp-img) + 24px),1fr));grid-auto-rows:max-content;gap:var(--e2);align-content:start;padding:var(--e0) var(--e0) var(--e4)}
+.mob .goal{grid-template-columns:1fr 1fr}
+.gt{position:relative;aspect-ratio:3/4;border:0;padding:0;border-radius:var(--sp-r);overflow:hidden;background:#222;cursor:zoom-in;display:block;text-align:left}
+.gt img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}.gt:hover img{transform:scale(1.04)}
+.gt span{position:absolute;left:0;right:0;bottom:0;padding:var(--e3) var(--e2) var(--e1);color:#fff;font-size:calc(var(--sp-ui)*.85);background:linear-gradient(transparent,rgba(0,0,0,.62));text-transform:capitalize}
+.gt.add{display:grid;place-items:center;background:rgba(128,128,128,.08);border:1px dashed var(--sp-line);color:var(--sp-muted);cursor:pointer}.gt.add input{display:none}
+.lb{position:absolute;inset:0;z-index:30;background:rgba(0,0,0,.88);display:grid;place-items:center;padding:var(--e2);cursor:zoom-out}.lb img{max-width:100%;max-height:100%;border-radius:10px}
+.shade2{position:absolute;inset:0;z-index:7;background:rgba(0,0,0,.14)}
+</style>
+<body><script src="exercises.js"></script><script src="goal.js"></script><script>window.SPORT_PLAN_MODE = 'session'</script><script src="sport-shared.js"></script><script>
+const {h,thumb,grep,GROUPS,forDay,addEntry,patchEntry,dropEntry,byId,today,fmt,autoSend,refreshPlan,infoBlock,twoPane,notify} = SPORT;
+const st = { date: today(), view: 'session', q: '', group: 'Tous', sel: null, desc: false, tab: 'sport', vals: {}, lb: null };
+const PR = window.SPORT_PRESETS || { sets: [3, 4], reps: [6, 8] };
+const GK = 'zr-sport-goal-v1'; const extra = () => { try { return JSON.parse(localStorage.getItem(GK)) || []; } catch { return []; } };
+SPORT.boot((main, ctx) => {
+  const R = ctx.rerender; window.SPORT_DAY = st.date; const day = forDay(st.date);
+  const rr = () => { const g = main.querySelector('.grid2'), y = g ? g.scrollTop : 0, ks = [...main.querySelectorAll('.toast')]; R(); const g2 = main.querySelector('.grid2'); if (g2) g2.scrollTop = y; ks.forEach(k => main.append(k)); };
+  const summary = e => `${e.sets} × ${e.reps}${e.kg ? ` · ${e.kg} kg` : ''}`;
+  const sheet = () => { const x = byId(st.sel), e = day.find(t => t.ex === x.id), v = st.vals[x.id] || (st.vals[x.id] = { sets: e ? e.sets : x.sets, reps: e ? e.reps : x.reps, kg: e ? e.kg : x.kg });
+    const set = (p) => { Object.assign(v, p); if (e) { patchEntry(e.id, p); autoSend(main, e.id); } rr(); };
+    // preset pills + one free number pill: the free pill shows the value when it is not a preset
+    const pick = (label, key, presets) => h('div', { class: 'seg3' }, h('label', {}, label),
+      ...presets.map(n => h('button', { class: 'pill2' + (v[key] === n ? ' on' : ''), onclick: () => set({ [key]: n }) }, String(n))),
+      h('input', { class: 'pill2' + (!presets.includes(v[key]) ? ' on' : ''), type: 'number', min: 1, inputmode: 'numeric', placeholder: '…', value: presets.includes(v[key]) ? '' : v[key], onchange: ev => { const n = Math.max(1, +ev.target.value || 0); if (n) set({ [key]: n }); } }));
+    const kg = h('div', { class: 'seg3' }, h('label', {}, 'Charge'), h('button', { class: 'pill2', onclick: () => set({ kg: Math.max(0, +(v.kg - 2.5).toFixed(1)) }) }, '−'), h('span', { class: 'pill2 val' }, `${v.kg} kg`), h('button', { class: 'pill2', onclick: () => set({ kg: +(v.kg + 2.5).toFixed(1) }) }, '+'));
+    const add = () => { let en = e; if (!en) en = addEntry(x.id, st.date, { sets: v.sets, reps: v.reps, kg: v.kg }); else patchEntry(en.id, { sets: v.sets, reps: v.reps, kg: v.kg }); autoSend(main, en.id); st.sel = null; st.desc = false; rr(); };
+    const close = () => { st.sel = null; st.desc = false; rr(); };
+    return [h('div', { class: 'shade2', onclick: close }),
+      h('aside', { class: 'sheet2' }, h('div', { class: 'sh-top' }, thumb(x, '56px'), h('div', { class: 'tt' }, h('h2', {}, x.name), e ? h('small', { class: 'st2' }, `✓ dans la séance · ${summary(e)}`) : h('small', {}, x.group)),
+          h('button', { class: 'ib', title: 'Description et prompt image', onclick: () => { st.desc = !st.desc; rr(); } }, 'ⓘ'), h('button', { class: 'ib', onclick: close }, '×')),
+        h('div', { class: 'form' }, pick('Séries', 'sets', PR.sets), pick('Reps', 'reps', PR.reps), kg), st.desc && infoBlock(x),
+        h('div', { class: 'act' + (e ? '' : ' solo') }, e && h('button', { class: 'btn ghost', onclick: () => { dropEntry(e.id); notify(main, 'Plan · séance mise à jour', `${x.name} retiré`); refreshPlan(main); st.sel = null; rr(); } }, 'Retirer'),
+          h('button', { class: 'btn', onclick: add }, e ? 'Mettre à jour' : 'Ajouter à la séance')))]; };
+  // Light-emphasis date control: reads like a caption, opens the native day picker. FR : se lit comme une légende, ouvre le sélecteur de jour natif.
+  const datePick = () => h('label', { class: 'dp' + (st.date !== today() ? ' past' : '') }, `${SPORT.weekday(st.date)} · ${fmt(st.date)}`, h('span', { class: 'chev' }, '⌄'),
+    st.date !== today() && h('span', { class: 'pastb' }, 'séance passée'),
+    h('input', { type: 'date', value: st.date, max: today(), onchange: ev => { if (ev.target.value) { st.date = ev.target.value; st.sel = null; R(); } } }));
+  const q = h('input', { placeholder: "Chercher dans toute la base d'exercices…", value: st.q, oninput: e => { st.q = e.target.value; R(); const i = main.querySelector('.find2 input'); i.focus(); i.setSelectionRange(99, 99); } });
+  const tile = x => { const e = day.find(t => t.ex === x.id);
+    return h('button', { class: 't3' + (st.sel === x.id ? ' sel' : ''), onclick: () => { st.sel = x.id; st.desc = false; rr(); } }, thumb(x, '100%'), e && h('span', { class: 'bd' }, summary(e)), h('span', { class: 'cap' }, x.name)); };
+  const session = [h('div', { class: 'find2' }, h('div', { class: 'search-in' }, '⌕', q), h('div', { class: 'chips2' }, GROUPS.map(g => h('button', { class: 'chip' + (st.group === g ? ' on' : ''), onclick: () => { st.group = g; rr(); } }, g)))),
+    h('div', { class: 'grid2' }, grep(st.q, st.group).map(tile)), st.sel && sheet()];
+  const photos = [...(window.SPORT_GOAL || []), ...extra()];
+  const goal = [h('div', { class: 'auto' }, `${photos.length} photos`), h('div', { class: 'goal' }, photos.map(p => h('button', { class: 'gt', onclick: () => { st.lb = p.src; R(); } }, h('img', { src: p.src, alt: p.title }), p.title && h('span', {}, p.title))),
+    h('label', { class: 'gt add' }, '＋ Ajouter une photo', h('input', { type: 'file', accept: 'image/*', multiple: true, onchange: ev => { [...ev.target.files].forEach(f => { const r = new FileReader(); r.onload = () => { try { localStorage.setItem(GK, JSON.stringify([...extra(), { src: r.result, title: f.name.replace(/\.[a-z]+$/i, '') }])); } catch {} R(); }; r.readAsDataURL(f); }); } })))];
+  const sport = h('section', { class: 'sportc' }, h('div', { class: 'hd2' }, h('div', {}, h('h1', {}, 'Sport'), datePick()), h('div', { class: 'sp' }),
+      h('div', { class: 'seg' }, h('button', { class: st.view === 'session' ? 'on' : '', onclick: () => { st.view = 'session'; R(); } }, 'Séance'), h('button', { class: st.view === 'goal' ? 'on' : '', onclick: () => { st.view = 'goal'; R(); } }, 'Objectif visuel'))),
+    ...(st.view === 'session' ? session : goal));
+  twoPane(main, ctx, sport, st);
+  if (st.lb) main.append(h('div', { class: 'lb', onclick: () => { st.lb = null; R(); } }, h('img', { src: st.lb })));
+});
+</script></body></html>

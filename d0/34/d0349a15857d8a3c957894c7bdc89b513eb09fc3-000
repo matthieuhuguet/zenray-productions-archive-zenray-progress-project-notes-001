@@ -1,84 +1,80 @@
-# Resume zenray-progress (15 October 2026 at 00:49)
+# Resume zenray-progress (16 October 2026 at 13:41)
 
-- Generated from FEEDBACK.md, Rules.md and ConversationIndex.json; derived, never edited by hand, never a substitute for the originals. (15 October 2026 at 00:49)
-- Pinned rules, read first: [Rules.md](/Users/zenray/.claude/Memory1/Projects/zenray-progress/Rules.md) (24 rules). (15 October 2026 at 00:49)
-- Canonical feedback: [FEEDBACK.md](/Users/zenray/.claude/Memory1/Projects/zenray-progress/FEEDBACK.md), 78 entries, last Standing rule at 15 October 2026, 00:20:47 +0200. (15 October 2026 at 00:49)
+- Generated from FEEDBACK.md, Rules.md and ConversationIndex.json; derived, never edited by hand, never a substitute for the originals. (16 October 2026 at 13:41)
+- Pinned rules, read first: [Rules.md](/Users/zenray/.claude/Memory1/Projects/zenray-progress/Rules.md) (25 rules). (16 October 2026 at 13:41)
+- Canonical feedback: [FEEDBACK.md](/Users/zenray/.claude/Memory1/Projects/zenray-progress/FEEDBACK.md), 180 entries, last Standing rule at 15 October 2026, 20:30:35 +0200. (16 October 2026 at 13:41)
 
-## Latest conversations (15 October 2026 at 00:49)
+## Latest conversations (16 October 2026 at 13:41)
 
-- LATEST codex:01a100e2-32f9-7a43-8b5f-ef21c5f96d4d, « 01a100e2-32f9-7a43-8b5f-ef21c5f96d4d », last activity 3 October 2026 at 10:39 Paris (from feedback). Original: `node scripts/Assets/ConversationDigest.mjs codex:01a100e2-32f9-7a43-8b5f-ef21c5f96d4d --out <file.md>`. (15 October 2026 at 00:49)
+- LATEST claude:5bd15db6-f2d9-4010-bcb3-0d609a42bc5e, « performance assets and drive », last activity 15 October 2026 at 09:02 Paris (from feedback). Original: `node scripts/Assets/ConversationDigest.mjs claude:5bd15db6-f2d9-4010-bcb3-0d609a42bc5e --out <file.md>`. (16 October 2026 at 13:41)
+- codex:01a100e2-32f9-7a43-8b5f-ef21c5f96d4d, « 01a100e2-32f9-7a43-8b5f-ef21c5f96d4d », last activity 3 October 2026 at 10:39 Paris (from feedback). Original: `node scripts/Assets/ConversationDigest.mjs codex:01a100e2-32f9-7a43-8b5f-ef21c5f96d4d --out <file.md>`. (16 October 2026 at 13:41)
 
-## Last 6 prompts of Matthieu, oldest first (15 October 2026 at 00:49)
+## Last 6 prompts of Matthieu, oldest first (16 October 2026 at 13:41)
 
-### 12 October 2026, 00:24:00 +0200 · Prompt · manual
+### 15 October 2026, 07:22:25 +0200 · Prompt · claude:5bd15db6
 
-> Est-ce que tu peux me donner un film / VIDEOS qui a deux pistes audio, comme ça je peux vérifier que ça fonctionne bien.?
+> BILAN 30 MIN (ZenRayProgress, refinement 14 octobre): en 5 lignes max dis ce qui est fait depuis le dernier bilan (avec preuve mesuree), ce qui est en cours, le prochain geste; puis append une entree PROGRESS.md via le skill progress; puis continue le travail sans t'arreter (dont-stop). Rappel: aucune regression design, aucun bug sur les donnees, deploiement uniquement depuis un arbre propre d'origin/main.
 
-### 12 October 2026, 00:24:00 +0200 · Prompt · manual
+### 15 October 2026, 07:52:26 +0200 · Prompt · claude:5bd15db6
 
-> (capture du lecteur, film Le Rakugo ou la vie S01E05, menu sans option de piste audio) JE VOIS PAS L'OPTION POUR CHANGER LA PISTE SONORE ... GROS PROBLÈME HARD FIX IT
+> BILAN 30 MIN (ZenRayProgress, refinement 14 octobre): en 5 lignes max dis ce qui est fait depuis le dernier bilan (avec preuve mesuree), ce qui est en cours, le prochain geste; puis append une entree PROGRESS.md via le skill progress; puis continue le travail sans t'arreter (dont-stop). Rappel: aucune regression design, aucun bug sur les donnees, deploiement uniquement depuis un arbre propre d'origin/main.
 
-### 12 October 2026, 00:24:00 +0200 · Prompt · manual
+### 15 October 2026, 08:22:26 +0200 · Prompt · claude:5bd15db6
 
-> en fait simplement les films / vidéos restantes doivent simplement avoir toutes leurs pistes audio et toute leur pistes sous titres si la deuxième ou n(ième) piste audio existe pas code le et ensuite redeploie et continue de monitorer l'upload
+> BILAN 30 MIN (ZenRayProgress, refinement 14 octobre): en 5 lignes max dis ce qui est fait depuis le dernier bilan (avec preuve mesuree), ce qui est en cours, le prochain geste; puis append une entree PROGRESS.md via le skill progress; puis continue le travail sans t'arreter (dont-stop). Rappel: aucune regression design, aucun bug sur les donnees, deploiement uniquement depuis un arbre propre d'origin/main.
 
-### 12 October 2026, 00:24:00 +0200 · Prompt · manual
+### 15 October 2026, 08:52:26 +0200 · Prompt · claude:5bd15db6
 
-> (résumé de la session du 11 October 2026, reconstitué depuis le résumé de compaction, pas le texte original) Reprendre et monitorer l'upload des films HLS/DASH en boucle de 15 s jusqu'à 100 % ; barre de progression toujours visible dans Assets ; vue simple avec le toggle « Nouveaux médias · 24 h » ouvrant le média exact par un lien-pointeur ; fusionner zenray-upload et zenray-assets-upload dans zenray-assets puis les supprimer ; noter le WORKFLOW des sous-titres (pas la preuve) dans les skills ; supprimer tous les épisodes de Natsume's Book of Friends (local et cloud) ; faire marcher la capture ⌘5 OCR ; tous les films restants doivent avoir tous leurs sous-titres.
+> BILAN 30 MIN (ZenRayProgress, refinement 14 octobre): en 5 lignes max dis ce qui est fait depuis le dernier bilan (avec preuve mesuree), ce qui est en cours, le prochain geste; puis append une entree PROGRESS.md via le skill progress; puis continue le travail sans t'arreter (dont-stop). Rappel: aucune regression design, aucun bug sur les donnees, deploiement uniquement depuis un arbre propre d'origin/main.
 
-### 12 October 2026, 01:11:50 +0200 · Prompt · manual
+### 15 October 2026, 08:55:19 +0200 · Prompt · claude:5bd15db6
 
-> Prompt du 12 October 2026 (capture d'un speedtest Google : 68,7 Mbps en descente, 67,7 Mbps en montée) : « tu as mis le worker et l'upload en pause ? ... est-ce que tu peux augmenter la cadence de l'upload par rapport à ma co max ? ». Réponse : le worker n'était pas en pause (193/230) ; l'envoi et la vérification ne se chevauchaient pas ; le worker passe en pipeline (vérification du film N pendant l'envoi du film N+1), voir la section du 12 October 2026 du skill zenray-assets.
+> Tu va delete le cron finir proprement et m'expliquer toutes les modifications que tu as faites, fini proprement update la documentation du code via commentaires et résumé.
 
-### 12 October 2026, 01:19:22 +0200 · Prompt · manual
+### 15 October 2026, 09:02:00 +0200 · Prompt · claude:5bd15db6
 
-> Est-ce que tu peux encore améliorer au maximum la vitesse d'upload pour que les films se upload le plus rapidement possible ? Je suis sûr qu'il y a moyen de rendre le code de Zenrai Assets et Zenrai Progress le plus rapide possible. ON VEUT AUGMENTER AU MAX LA VITESSE A LAQUELLE LES CHOSES S'UPLOAD UTILISE UN WORKFLOW OU QUELQUES AGENTS POUR FAIRE DES RECHERCHES ET POUSSER AU PAROXISME LA VITESSE D'UPLOAD DES FICHIERS EN PENSANT À TOUT /zenray-methodology /think-of-everything
+> est ce que tu as amélioré la vitesse des transferts upload assets et progress car c'était surtout ça le but ?
 
 
-## Last 3 iterations or checkpoints (15 October 2026 at 00:49)
+## Last 3 iterations or checkpoints (16 October 2026 at 13:41)
 
-### 3 October 2026, 10:39:13 +0200 · Iteration · codex:01a100e2
+### 15 October 2026, 08:55:40 +0200 · Iteration · claude:5bd15db6
 
-> 3 October 2026 : codé et [déployé](https://zenray-progress.pages.dev) dans les six galeries.
+> J'ai supprimé le cron et arrêté le serveur de prévisualisation. J'écris maintenant la documentation (commentaires de code, document de synthèse, index des erreurs).
+
+### 15 October 2026, 08:58:55 +0200 · Iteration · claude:5bd15db6
+
+> Le cron de bilan est supprimé, il n'y a plus de serveur de prévisualisation, et tout est sur `origin/main`.
 > 
-> En vue alignée, glisse une image au centre d’une autre pour créer un groupe, ou sur un groupe pour l’y ajouter. Les bords permettent toujours de changer l’ordre.
+> ## Ce que j'ai modifié
 > 
-> | Ce que tu voulais | Fait | Preuve |
-> |---|---|---|
-> | Grouper en vue alignée partout | Oui | 9 tests passent |
-> | Déployer | Oui | Fichier de production identique au build |
-> | Vérification visuelle | Non | Pas vérifiée dans le navigateur |
+> **Assets (le « loader occupé » et les envois lents)**
+> - Le service ne recompose plus tout à chaque appel : listes mémoïsées, sauvegardes d'état fusionnées, passes automatiques fusionnées (240 s), cession du writer aux actions interactives.
+> - Une publication est une seule transaction Git (3 sauvegardes et 9 fetch deviennent 1 fetch et 1 push).
+> - Les lots font 2 000 fichiers (le moteur paie environ 35 s fixes par lot).
+> - Recherche de carte par table : 25 s de gel par lot supprimées.
+> - Le snapshot japonais (104,7 Mo, refusé par GitHub) tombe à 80,8 Mo ; une alerte
+> [... 2930 more characters in FEEDBACK.md]
 
-### 3 October 2026, 10:39:14 +0200 · Iteration · codex:01a100e2
+### 15 October 2026, 09:02:19 +0200 · Iteration · claude:5bd15db6
 
-> 3 October 2026 : codé et [déployé](https://zenray-progress.pages.dev) dans les six galeries.
+> Partiellement, et je n'ai pas mesuré le débit brut en Mo/s : ce n'est donc pas à moi de dire que c'est réglé.
 > 
-> En vue alignée, glisse une image au centre d’une autre pour créer un groupe, ou sur un groupe pour l’y ajouter. Les bords permettent toujours de changer l’ordre.
+> **Ce qui est amélioré, avec preuve (événements `timing` du service)**
+> - Le coût fixe par passe a baissé : la publication Git passe de 26-30 s à 10-16 s en moyenne.
+> - Les gros lots de petits fichiers vont vite : 153 000 fichiers en 1 h entre 22h et 23h, soit environ 44 fichiers/s. Le corpus japonais (51 309 fichiers en attente) a été vidé.
+> - Les lots de 2 000 fichiers et la suppression du gel de 25 s par lot y contribuent.
 > 
-> | Ce que tu voulais | Fait | Preuve |
-> |---|---|---|
-> | Grouper en vue alignée partout | Oui | 9 tests passent |
-> | Déployer | Oui | Fichier de production identique au build |
-> | Vérification visuelle | Non | Pas vérifiée dans le navigateur |
-
-### 3 October 2026, 10:39:13 +0200 · Iteration · codex:01a100e2
-
-> 3 October 2026 : codé et [déployé](https://zenray-progress.pages.dev) dans les six galeries.
-> 
-> En vue alignée, glisse une image au centre d’une autre pour créer un groupe, ou sur un groupe pour l’y ajouter. Les bords permettent toujours de changer l’ordre.
-> 
-> | Ce que tu voulais | Fait | Preuve |
-> |---|---|---|
-> | Grouper en vue alignée partout | Oui | 9 tests passent |
-> | Déployer | Oui | Fichier de production identique au build |
-> | Vérification visuelle | Non | Pas vérifiée dans le navigateur |
+> **Ce qui n'est pas amélioré, ou pas prouvé**
+> - **Octets par seconde vers GitHub** : je n'y ai pas touché. La politique de push existait déjà (lots de 1 900 Mio, e
+> [... 974 more characters in FEEDBACK.md]
 
 
-## Last order of work (15 October 2026 at 00:49)
+## Last order of work (16 October 2026 at 13:41)
 
 ### 10 October 2026, 18:03:28 +0200 · Order of work · manual
 
 > stop l'upload ...pause
 
 
-Next step: reread the latest prompt above, check it against Rules.md, then continue; append through feedback.py and close the turn with Client.mjs checkpoint. (15 October 2026 at 00:49)
+Next step: reread the latest prompt above, check it against Rules.md, then continue; append through feedback.py and close the turn with Client.mjs checkpoint. (16 October 2026 at 13:41)

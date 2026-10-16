@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="fr"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sport F Tableau</title>
+<link rel="stylesheet" href="sport-shared.css">
+<style>
+/* F: a clean table, every cell editable, a row reaches Plan the moment series and reps are filled. 16 October 2026 */
+.tbl{display:flex;flex-direction:column;border:.5px solid var(--sp-line);border-radius:var(--sp-r);overflow:hidden}
+.tr{display:grid;grid-template-columns:44px minmax(120px,1.6fr) 70px 70px 70px minmax(80px,1fr) 92px 26px;gap:10px;align-items:center;padding:8px 12px;border-top:.5px solid var(--sp-line)}
+.tr.head{border-top:0;background:rgba(128,128,128,.07);font-size:calc(var(--sp-ui)*.75);text-transform:uppercase;letter-spacing:.06em;color:var(--sp-muted)}
+.tr .nm b{font-weight:500;display:block}.tr .nm small{color:var(--sp-muted)}
+.tr input{width:100%;border:0;border-bottom:1px solid transparent;background:transparent;padding:6px 0;outline:0;text-align:center;font-family:var(--sp-serif);font-size:calc(var(--sp-ui)*1.15)}
+.tr input.note{text-align:left;font:inherit;font-size:calc(var(--sp-ui)*.9)}
+.tr input:hover{border-bottom-color:var(--sp-line)}.tr input:focus{border-bottom-color:var(--sp-accent)}
+.tr input::placeholder{color:var(--sp-muted);opacity:.6}
+.fill{display:contents}.sportc{container-type:inline-size}
+@container (max-width:640px){.tr{grid-template-columns:44px minmax(90px,1.4fr) 54px 54px 54px 84px 20px}.tr input.note,.tr.head span:nth-child(6){display:none}}
+.st{font-size:calc(var(--sp-ui)*.82);color:var(--sp-muted)}.st.ok{color:hsl(142 60% 32%)}
+.tr .x{padding:0}
+.th{cursor:pointer}
+.sub{padding:4px 12px 10px 68px;border-top:0}
+.add-row{position:relative;padding:8px 12px;border-top:.5px solid var(--sp-line)}
+.add-row input{width:100%;border:0;outline:0;background:transparent;padding:6px 0}
+.mob .tr.head{display:none}
+.mob .tr{grid-template-columns:44px 1fr 26px;row-gap:4px}
+.mob .tr .fill{grid-column:1/4;display:grid;grid-template-columns:repeat(3,1fr) 1.2fr;gap:8px}
+.mob .sub{padding-left:12px}
+</style>
+<body><script src="exercises.js"></script><script src="sport-shared.js"></script><script>
+const {h,thumb,grep,forDay,addEntry,patchEntry,dropEntry,byId,today,fmt,notify,autoSend,refreshPlan,summary,infoBlock,twoPane,complete} = SPORT;
+const st = { q: '', hl: 0, info: null, tab: 'sport' };
+SPORT.boot((main, ctx) => {
+  const R = ctx.rerender, day = forDay(today());
+  // numeric cell: patch, then try to send (sends only once series AND reps are both above 0)
+  const cell = (e, key, ph) => h('input', { type: 'number', inputmode: 'decimal', min: 0, step: key === 'kg' ? 2.5 : 1, placeholder: ph, value: e[key] || '',
+    onchange: ev => { const v = +ev.target.value || 0; e[key] = v; patchEntry(e.id, { [key]: v }); const sent = autoSend(main, e.id);
+      const s = main.querySelector(`[data-s="${e.id}"]`); const live = SPORT.load().find(x => x.id === e.id); if (s) { s.textContent = live.sent ? `✓ Plan ${live.time}` : 'à compléter'; s.className = 'st' + (live.sent ? ' ok' : ''); } } });
+  const row = e => { const x = byId(e.ex);
+    return [h('div', { class: 'tr' }, h('div', { class: 'th', onclick: () => { st.info = st.info === e.id ? null : e.id; R(); } }, thumb(x, '40px')), h('div', { class: 'nm n' }, h('b', {}, x.name), h('small', {}, x.group)),
+      h('div', { class: 'fill' }, cell(e, 'sets', 'séries'), cell(e, 'reps', 'reps'), cell(e, 'kg', 'kg'), h('input', { class: 'note', placeholder: 'note…', value: e.note || '', onchange: ev => patchEntry(e.id, { note: ev.target.value }) }),
+        h('span', { class: 'st' + (e.sent ? ' ok' : ''), 'data-s': e.id }, e.sent ? `✓ Plan ${e.time}` : 'à compléter')),
+      h('button', { class: 'x', onclick: () => { dropEntry(e.id); if (e.sent) notify(main, 'Plan', `Tâche retirée : ${x.name}`); const k = main.querySelector('.toast'); R(); k && main.append(k); } }, '×')),
+      st.info === e.id && h('div', { class: 'sub' }, infoBlock(x))]; };
+  const res = h('div', { class: 'res' }); const fill = () => { const r = st.q ? grep(st.q, 'Tous').slice(0, 6) : [];
+    res.replaceChildren(...r.map((x, i) => h('button', { class: i === st.hl ? 'hl' : '', onclick: () => pick(x) }, thumb(x, '34px'), h('span', {}, x.name, h('br'), h('small', {}, x.group))))); res.style.display = r.length ? '' : 'none'; return r; };
+  const pick = x => { addEntry(x.id, today(), { sets: 0, reps: 0, kg: x.kg }); st.q = ''; R(); setTimeout(() => main.querySelector('.tbl .tr:last-of-type input')?.focus()); };
+  const inp = h('input', { placeholder: '＋ Ajouter un exercice, tape pour chercher (grep)…', value: st.q, oninput: e => { st.q = e.target.value; st.hl = 0; fill(); },
+    onkeydown: e => { const r = fill(); if (e.key === 'ArrowDown') { st.hl = Math.min(st.hl + 1, r.length - 1); fill(); } if (e.key === 'ArrowUp') { st.hl = Math.max(st.hl - 1, 0); fill(); } if (e.key === 'Enter' && r[st.hl]) pick(r[st.hl]); } });
+  fill();
+  const table = h('div', { class: 'tbl' }, h('div', { class: 'tr head' }, h('span'), h('span', {}, 'Exercice'), h('span', {}, 'Séries'), h('span', {}, 'Reps'), h('span', {}, 'Kg'), h('span', {}, 'Note'), h('span', {}, 'Plan'), h('span')),
+    day.flatMap(row), h('div', { class: 'add-row find' }, inp, res));
+  const sport = h('section', { class: 'sportc' }, h('div', { class: 'top', style: 'padding:16px 0 0' }, h('h1', {}, 'Sport'), h('div', { class: 'sp' }), h('span', { class: 'auto' }, `${SPORT.weekday(today())} · ${fmt(today())} · date automatique`)),
+    h('div', { class: 'scroll', style: 'flex:1' }, table, !day.length && h('div', { class: 'hint' }, 'Ajoute un exercice : renseigne séries et reps, il part dans Plan tout seul.')));
+  twoPane(main, ctx, sport, st);
+});
+</script></body></html>

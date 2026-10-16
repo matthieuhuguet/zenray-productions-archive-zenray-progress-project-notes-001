@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="fr"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sport G Tuiles</title>
+<link rel="stylesheet" href="sport-shared.css">
+<style>
+/* G: today's program as image tiles, one tap = one set done, Plan updates as you go. 16 October 2026 */
+.bar{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.bar .search-in{flex:1;min-width:160px}
+.grid{flex:1;overflow:auto;display:grid;grid-auto-rows:max-content;min-height:0;grid-template-columns:repeat(auto-fill,minmax(calc(var(--sp-img) + 46px),1fr));gap:var(--sp-gap);align-content:start;padding-bottom:6px}
+.mob .grid{grid-template-columns:1fr 1fr}
+.tl2{display:flex;flex-direction:column;border-radius:var(--sp-r);border:.5px solid var(--sp-line);overflow:hidden;background:var(--sp-bg)}
+.tl2.done{border-color:hsl(142 60% 40% / .5);box-shadow:0 0 0 2px hsl(142 60% 45% / .18)}
+.tl2 .thumb{width:100%!important;height:calc(var(--sp-img)*.85)!important;border-radius:0;cursor:pointer}
+.tl2 .t{padding:8px 11px 11px;display:flex;flex-direction:column;gap:8px}
+.tl2 .t b{font-weight:500;display:flex;gap:6px;align-items:center}.tl2 .t b span{flex:1}
+.i{border:0;background:transparent;color:var(--sp-muted);padding:0}
+.dots{display:flex;gap:6px}
+.dots button{flex:1;height:10px;border-radius:5px;border:0;background:rgba(128,128,128,.25);padding:0}
+.dots button.d{background:hsl(142 60% 42%)}
+.mini{display:flex;gap:8px;justify-content:space-between;align-items:center;color:var(--sp-muted);font-size:calc(var(--sp-ui)*.85)}
+.mini .step label{display:none}.mini .step .row button{width:26px;height:28px}
+.mini{flex-wrap:wrap}.mini > span{flex-basis:100%}.mini .step .row .num{min-width:24px}
+.tap{border:0;border-radius:calc(var(--sp-r) - 3px);background:var(--sp-accent);color:#fff;padding:11px;font-weight:500}
+.tl2.done .tap{background:hsl(142 60% 38%)}
+.tl2 .info{padding:0 11px 10px}
+</style>
+<body><script src="exercises.js"></script><script src="sport-shared.js"></script><script>
+const {h,thumb,stepper,grep,forDay,addEntry,patchEntry,byId,today,fmt,autoSend,infoBlock,twoPane,load,summary} = SPORT;
+// Provisional programs until Matthieu sends his own. FR : programmes provisoires en attendant le sien.
+const PROGRAMS = { 'Séance A': ['incline-db', 'lat-raise', 'military', 'pushup-elev', 'dips'], 'Séance B': ['pullup', 'db-row', 'straight-pd', 'hyperext'], 'Séance C': ['bulgarian', 'good-morning', 'leg-raise'] };
+const st = { prog: 'Séance A', q: '', info: null, tab: 'sport', vals: {} };
+SPORT.boot((main, ctx) => {
+  const R = ctx.rerender, day = forDay(today());
+  const ids = st.q ? grep(st.q, 'Tous').map(e => e.id) : PROGRAMS[st.prog];
+  const tile = id => { const x = byId(id), e = day.find(t => t.ex === id), v = st.vals[id] || (st.vals[id] = { reps: x.reps, kg: x.kg });
+    const n = e ? e.sets : 0, goal = x.sets;
+    const bump = d => { const cur = day.find(t => t.ex === id) || load().find(t => t.ex === id && t.date === today());
+      let en = cur; if (!en) en = addEntry(id, today(), { sets: 0, reps: v.reps, kg: v.kg });
+      patchEntry(en.id, { sets: Math.max(0, Math.min(goal, (cur ? cur.sets : 0) + d)), reps: v.reps, kg: v.kg }); autoSend(main, en.id); const k = main.querySelector('.toast'); R(); k && main.append(k); };
+    const edit = p => { Object.assign(v, p); if (e) { patchEntry(e.id, p); autoSend(main, e.id); } };
+    return h('div', { class: 'tl2' + (n >= goal ? ' done' : '') }, h('div', { onclick: () => { st.info = st.info === id ? null : id; R(); } }, thumb(x, '100%')),
+      h('div', { class: 't' }, h('b', {}, h('span', {}, x.name), h('button', { class: 'i', onclick: () => { st.info = st.info === id ? null : id; R(); } }, 'ⓘ')),
+        h('div', { class: 'dots' }, Array.from({ length: goal }, (_, k) => h('button', { class: k < n ? 'd' : '', 'aria-label': `série ${k + 1}`, onclick: () => bump(k + 1 - n) }))),
+        h('div', { class: 'mini' }, h('span', { class: 'num' }, `${n}/${goal} séries`), stepper({ label: 'Reps', value: v.reps, min: 1, onChange: r => edit({ reps: r }) }), stepper({ label: 'kg', value: v.kg, step: 2.5, onChange: k => edit({ kg: k }) })),
+        h('button', { class: 'tap', onclick: () => bump(1) }, n >= goal ? '✓ Terminé' : `Série ${n + 1} faite`)),
+      st.info === id && infoBlock(x)); };
+  const q = h('input', { placeholder: 'Chercher dans tous les exercices…', value: st.q, oninput: e => { st.q = e.target.value; R(); const i = main.querySelector('.bar input'); i.focus(); i.setSelectionRange(99, 99); } });
+  const sport = h('section', { class: 'sportc' }, h('div', { class: 'top', style: 'padding:16px 0 0' }, h('h1', {}, 'Sport'), h('div', { class: 'sp' }), h('span', { class: 'auto' }, `${SPORT.weekday(today())} · ${fmt(today())}`)),
+    h('div', { class: 'bar' }, Object.keys(PROGRAMS).map(k => h('button', { class: 'chip' + (!st.q && st.prog === k ? ' on' : ''), onclick: () => { st.prog = k; st.q = ''; R(); } }, k)), h('div', { class: 'search-in' }, '⌕', q)),
+    h('div', { class: 'grid' }, ids.map(tile)));
+  twoPane(main, ctx, sport, st);
+});
+</script></body></html>

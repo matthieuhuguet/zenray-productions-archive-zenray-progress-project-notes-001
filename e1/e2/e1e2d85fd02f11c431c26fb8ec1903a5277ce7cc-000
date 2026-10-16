@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="fr"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sport A Journal</title>
+<link rel="stylesheet" href="sport-shared.css">
+<style>
+/* A: two columns, library on the left (grep), day log on the right. 16 October 2026 */
+.cols{display:grid;grid-template-columns:minmax(260px,.9fr) 1.25fr;gap:var(--sp-gap);flex:1;min-height:0;padding:0 20px 20px}
+.mob .cols{display:block;padding:0 16px}
+.lib,.log{display:flex;flex-direction:column;min-height:0}
+.lib .list,.log .list{flex:1;overflow:auto;display:flex;flex-direction:column;gap:8px;padding:2px}
+.row{display:flex;align-items:center;gap:12px;padding:8px 10px}
+.row .nm{flex:1;min-width:0}.row .nm b{font-weight:500;display:block}
+.row .nm small{color:var(--sp-muted)}
+.add{width:32px;height:32px;border-radius:50%;border:0;background:var(--sp-accent-soft);color:var(--sp-accent);font-size:20px;line-height:1}
+.add.ok{background:var(--sp-accent);color:#fff}
+.entry{padding:12px;display:grid;grid-template-columns:auto 1fr;gap:8px 12px}
+.entry .steps{display:flex;gap:10px;flex-wrap:wrap;grid-column:1/3}
+.entry .hd{display:flex;align-items:flex-start;gap:8px}.entry .hd b{font-weight:500;flex:1}
+.entry input{width:100%;border:0;border-bottom:.5px solid var(--sp-line);background:transparent;padding:4px 0;outline:0;grid-column:1/3}
+.x{border:0;background:transparent;color:var(--sp-muted);font-size:18px}
+.sum{display:flex;gap:18px;padding:10px 2px;color:var(--sp-muted)}.sum b{color:var(--sp-fg);font-weight:500}
+.empty{margin:auto;color:var(--sp-muted);text-align:center;padding:30px}
+</style>
+<body><script src="exercises.js"></script><script src="sport-shared.js"></script><script>
+const {h,thumb,stepper,dateBar,grep,GROUPS,forDay,addEntry,patchEntry,dropEntry,lastOf,fmt,byId,today} = SPORT;
+const st = { date: today(), q: '', group: 'Tous', tab: 'log' };
+SPORT.boot((main, ctx) => {
+  const R = ctx.rerender, mob = ctx.mobile;
+  const day = forDay(st.date);
+  const top = h('div', { class: 'top' }, h('h1', {}, 'Sport'), h('div', { class: 'sp' }), dateBar(st, R));
+  const library = () => {
+    const q = h('input', { placeholder: 'Chercher : "épaules", "incliné", "haltère"…', value: st.q, oninput: e => { st.q = e.target.value; fill(); } });
+    const list = h('div', { class: 'list' });
+    const fill = () => { list.replaceChildren(...grep(st.q, st.group).map(ex => { const l = lastOf(ex.id), b = h('button', { class: 'add', 'aria-label': 'Ajouter', onclick: () => { addEntry(ex.id, st.date); b.classList.add('ok'); b.textContent = '✓'; setTimeout(R, 350); } }, '+');
+      return h('div', { class: 'card row' }, thumb(ex, '46px'), h('div', { class: 'nm' }, h('b', {}, ex.name), h('small', {}, `${ex.group} · ${l ? `dernière : ${l.sets}×${l.reps} le ${fmt(l.date)}` : `défaut ${ex.sets}×${ex.reps}`}`)), b); })); };
+    fill();
+    return h('section', { class: 'lib' }, h('div', { class: 'search-in' }, '⌕', q),
+      h('div', { class: 'chips' }, GROUPS.map(g => h('button', { class: 'chip' + (st.group === g ? ' on' : ''), onclick: () => { st.group = g; R(); } }, g))), list);
+  };
+  const log = () => {
+    const sets = day.reduce((a, e) => a + e.sets, 0), reps = day.reduce((a, e) => a + e.sets * e.reps, 0);
+    return h('section', { class: 'log' }, h('div', { class: 'auto' }, `Date inscrite automatiquement : ${fmt(st.date)}`),
+      h('div', { class: 'list', style: 'margin-top:8px' }, day.length ? day.map(e => { const ex = byId(e.ex);
+        return h('div', { class: 'card entry' }, thumb(ex, 'calc(var(--sp-img)*.55)'), h('div', {}, h('div', { class: 'hd' }, h('b', {}, ex.name), h('button', { class: 'x', onclick: () => { dropEntry(e.id); R(); } }, '×')), h('small', { style: 'color:var(--sp-muted)' }, ex.group)),
+          h('div', { class: 'steps' }, stepper({ label: 'Séries', value: e.sets, min: 1, onChange: v => patchEntry(e.id, { sets: v }) }), stepper({ label: 'Reps', value: e.reps, min: 1, onChange: v => patchEntry(e.id, { reps: v }) }), stepper({ label: 'Charge kg', value: e.kg, step: 2.5, onChange: v => patchEntry(e.id, { kg: v }) })),
+          h('input', { placeholder: 'Description, ressenti…', value: e.note, onchange: ev => patchEntry(e.id, { note: ev.target.value }) })); })
+        : h('div', { class: 'empty' }, 'Aucun exercice ce jour.', h('br'), 'Ajoute-en depuis la bibliothèque.')),
+      h('div', { class: 'sum' }, h('span', {}, h('b', { class: 'num' }, day.length), ' exercices'), h('span', {}, h('b', { class: 'num' }, sets), ' séries'), h('span', {}, h('b', { class: 'num' }, reps), ' répétitions')));
+  };
+  if (mob) {
+    main.append(top, h('div', { class: 'cols', style: 'display:flex;flex-direction:column;flex:1;min-height:0' }, st.tab === 'log' ? log() : library()),
+      h('div', { class: 'tabbar' }, h('button', { class: st.tab === 'log' ? 'on' : '', onclick: () => { st.tab = 'log'; R(); } }, h('span', {}, '☰'), 'Séance'), h('button', { class: st.tab === 'lib' ? 'on' : '', onclick: () => { st.tab = 'lib'; R(); } }, h('span', {}, '＋'), 'Exercices')));
+  } else main.append(top, h('div', { class: 'cols' }, library(), log()));
+});
+</script></body></html>

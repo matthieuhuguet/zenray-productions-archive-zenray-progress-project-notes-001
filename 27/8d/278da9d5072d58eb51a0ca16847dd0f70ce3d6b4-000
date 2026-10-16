@@ -1,0 +1,19 @@
+{
+  "date": "16 October 2026",
+  "slug": "sport-round-9",
+  "folder": "2026-10-16-sport-round-9",
+  "version": 1,
+  "title": "Sport : ronde 9, design final avec date de séance modifiable (séance passée)",
+  "module": "sport",
+  "project": "zenray-progress",
+  "status": "pending",
+  "atelier": "/Users/zenray/.claude/tmp/tmp-zenray-sport/mockups",
+  "files": [
+    "index.html",
+    "fond.webp",
+    "sport-shared.css"
+  ],
+  "indexSha256": "8f5b3ffb610242842c2f543379339483da36905e0e61dec5d588da47f34a2b68",
+  "filedAt": "2026-10-16T13:10:02.982Z",
+  "note": null
+}

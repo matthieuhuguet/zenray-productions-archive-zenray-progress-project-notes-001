@@ -1,0 +1,19 @@
+{
+  "date": "16 October 2026",
+  "slug": "sport-round-8",
+  "folder": "2026-10-16-sport-round-8",
+  "version": 1,
+  "title": "Sport : ronde 8, objectif visuel corrigé en mobile et notification Note du jour",
+  "module": "sport",
+  "project": "zenray-progress",
+  "status": "pending",
+  "atelier": "/Users/zenray/.claude/tmp/tmp-zenray-sport/mockups",
+  "files": [
+    "index.html",
+    "fond.webp",
+    "sport-shared.css"
+  ],
+  "indexSha256": "418cbb25bdde54927f6e38b1f4ec4270fa34c58a0cf52b4f197f2ee215a8415f",
+  "filedAt": "2026-10-16T13:08:14.241Z",
+  "note": null
+}

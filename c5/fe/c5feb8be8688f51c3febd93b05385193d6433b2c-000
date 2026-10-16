@@ -1,0 +1,19 @@
+{
+  "date": "16 October 2026",
+  "slug": "sport-round-6",
+  "folder": "2026-10-16-sport-round-6",
+  "version": 1,
+  "title": "Sport : ronde 6, page complète avec la tuile C retenue",
+  "module": "sport",
+  "project": "zenray-progress",
+  "status": "pending",
+  "atelier": "/Users/zenray/.claude/tmp/tmp-zenray-sport/mockups",
+  "files": [
+    "index.html",
+    "fond.webp",
+    "sport-shared.css"
+  ],
+  "indexSha256": "04381b321ab8b2098b4697efdc1644e316fa071bc9fc2dc0df10736194344173",
+  "filedAt": "2026-10-16T12:41:08.729Z",
+  "note": null
+}

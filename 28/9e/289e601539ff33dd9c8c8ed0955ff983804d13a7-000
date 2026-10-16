@@ -1,0 +1,19 @@
+{
+  "date": "16 October 2026",
+  "slug": "sport-round-4",
+  "folder": "2026-10-16-sport-round-4",
+  "version": 1,
+  "title": "Sport : ronde 4, proposition I refonte Gestalt (tuiles propres, une seule feuille de réglages)",
+  "module": "sport",
+  "project": "zenray-progress",
+  "status": "pending",
+  "atelier": "/Users/zenray/.claude/tmp/tmp-zenray-sport/mockups",
+  "files": [
+    "index.html",
+    "fond.webp",
+    "sport-shared.css"
+  ],
+  "indexSha256": "082c6d8efb6455222caa02335442830944e227c72c539154067084ba4c79bf8f",
+  "filedAt": "2026-10-16T12:32:29.416Z",
+  "note": null
+}

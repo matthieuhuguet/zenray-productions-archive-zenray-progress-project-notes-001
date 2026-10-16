@@ -1,0 +1,19 @@
+{
+  "date": "16 October 2026",
+  "slug": "sport-round-5",
+  "folder": "2026-10-16-sport-round-5",
+  "version": 1,
+  "title": "Sport : ronde 5, la tuile exercice seule, trois propositions A B C alignées",
+  "module": "sport",
+  "project": "zenray-progress",
+  "status": "pending",
+  "atelier": "/Users/zenray/.claude/tmp/tmp-zenray-sport/mockups",
+  "files": [
+    "index.html",
+    "fond.webp",
+    "sport-shared.css"
+  ],
+  "indexSha256": "9298de64452c3ea4351cd4830b9dd41d3a9dba8f173fe78564536ff7879dcd76",
+  "filedAt": "2026-10-16T12:38:36.927Z",
+  "note": null
+}

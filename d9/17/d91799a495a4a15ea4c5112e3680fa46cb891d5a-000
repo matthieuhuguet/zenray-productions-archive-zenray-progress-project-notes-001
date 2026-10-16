@@ -1,0 +1,19 @@
+{
+  "date": "16 October 2026",
+  "slug": "sport-round-2",
+  "folder": "2026-10-16-sport-round-2",
+  "version": 1,
+  "title": "Sport : ronde 2, trois propositions E F G (ligne, tableau, tuiles) avec envoi automatique vers Plan",
+  "module": "sport",
+  "project": "zenray-progress",
+  "status": "pending",
+  "atelier": "/Users/zenray/.claude/tmp/tmp-zenray-sport/mockups",
+  "files": [
+    "index.html",
+    "fond.webp",
+    "sport-shared.css"
+  ],
+  "indexSha256": "7f8644fc6f035fe0072c3f922f73c996500181bb84bfb7eefc59a52fda9f7628",
+  "filedAt": "2026-10-16T12:02:56.211Z",
+  "note": null
+}

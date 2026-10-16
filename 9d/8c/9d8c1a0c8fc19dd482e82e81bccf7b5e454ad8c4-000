@@ -2581,3 +2581,727 @@
 - Project: zenray-progress; kind: rule. (15 October 2026, 20:30:35 +0200)
 
 > 15 October 2026 : Motion Design > Studio affiche l'app ZenRay Motion Design du Mac (http://127.0.0.1:3104/, sonde GET /api/embed/status autorisée pour les origines server.embedOrigins de params/orchestrator.json du dépôt ZenRayMotionDesign) ; une nouvelle origine du site (port, domaine) doit y être ajoutée, sinon l'entrée affiche « l'app ne répond pas ». Les vidéos publiées restent dans Accueil (catalogue pages/ZenRayMotionDesign). (15 October 2026) (15 October 2026, 20:30:35 +0200)
+
+## 16 October 2026, 13:40:57 +0200 : Prompt
+
+<!-- feedback-event:f7496bfab5fd5aec2e504244db6451f7b76d2f87e2fa01e72c0de3cce9556072 (16 October 2026, 13:40:57 +0200) -->
+- Project: zenray-progress; kind: prompt. (16 October 2026, 13:40:57 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/d3327e82-5a7e-46d8-b6f6-bc0447663c2b.jsonl. (16 October 2026, 13:40:57 +0200)
+
+> Ce que j'aimerais faire sur Zen Ray Progress, ce serait une section dans la sidebar de gauche qui s'appellerait Sport. J'aimerais mettre tous les exos que j'ai déjà faits et que quand je note une entrée, notamment sur mon mobile ou même sur mon desktop, je puisse noter le nombre de répétitions que j'ai fait et le nombre de séries. Et que ça m'inscrive la date automatiquement et qu'il y ait une image qui décrive exactement ce qu'est l'exercice. Je peux te donner la banque d'images, mais il faut que tu me donnes une description précise pour chaque image. Et enfin, je vais te donner mon programme et le but, c'est de faire une interface très clean pour que je puisse renseigner les informations sur chaque exercice et je puisse aussi dire par exemple tel jour, je puisse grep la database d'exercices et que je puisse les mettre directement. Et ensuite, je peux consigner par exemple aussi une description, etc. Commence à me faire trois mockups différents et je choisirai la base de design que je veux garder. /edit-text  /progress (16 October 2026, 13:40:57 +0200)
+
+## 16 October 2026, 13:41:09 +0200 : Prompt
+
+<!-- feedback-event:0a65dee991e1b070ad23029fca09516e75bcf67cfbc6865fdfb3f9a3e4916eba (16 October 2026, 13:41:09 +0200) -->
+- Project: zenray-progress; kind: prompt. (16 October 2026, 13:41:09 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/d3327e82-5a7e-46d8-b6f6-bc0447663c2b.jsonl. (16 October 2026, 13:41:09 +0200)
+
+> Base directory for this skill: /Users/zenray/.claude/skills/progress (16 October 2026, 13:41:09 +0200)
+>
+> # Progress global (16 October 2026, 13:41:09 +0200)
+>
+> Ce skill gère une seule chronologie pour toutes les sessions : (16 October 2026, 13:41:09 +0200)
+>
+> `/Users/zenray/.claude/PROGRESS.md` (16 October 2026, 13:41:09 +0200)
+>
+> Il ne remplace pas les bases de contexte de Memory. Les rôles restent séparés : (16 October 2026, 13:41:09 +0200)
+>
+> - `~/.claude/PROGRESS.md` raconte **quand et quoi** à travers tous les projets ; (16 October 2026, 13:41:09 +0200)
+> - `Memory/<domaine>/<Nom>1.md` conserve **ce que le projet sait durablement** ; (16 October 2026, 13:41:09 +0200)
+> - un skill routeur indique quelle source `*1.md` lire ou compléter ; (16 October 2026, 13:41:09 +0200)
+> - `CLAUDE.md` porte les lois ; le code et ses commentaires portent l’implémentation. (16 October 2026, 13:41:09 +0200)
+>
+> Une même session peut donc produire deux écritures sans duplication : le détail durable s’ajoute au bon (16 October 2026, 13:41:09 +0200)
+> `*1.md`, puis le journal global en garde une ligne courte et le chemin de cette source. (16 October 2026, 13:41:09 +0200)
+>
+> ## Écrire (16 October 2026, 13:41:09 +0200)
+>
+> Passer toujours par le script, car Claude Code et Codex peuvent écrire au même instant : (16 October 2026, 13:41:09 +0200)
+>
+> ```zsh (16 October 2026, 13:41:09 +0200)
+> node /Users/zenray/.claude/skills/progress/scripts/progress.mjs append \ (16 October 2026, 13:41:09 +0200)
+>   --project "Nom du projet" \ (16 October 2026, 13:41:09 +0200)
+>   --fait "Résultat factuel" \ (16 October 2026, 13:41:09 +0200)
+>   --verifie "Commande ou preuve" \ (16 October 2026, 13:41:09 +0200)
+>   --source-durable "/chemin/vers/Projet1.md" \ (16 October 2026, 13:41:09 +0200)
+>   --prochain "Action suivante" (16 October 2026, 13:41:09 +0200)
+> ``` (16 October 2026, 13:41:09 +0200)
+>
+> Champs facultatifs : `--mesure`, `--decision`, `--echoue`, `--ecarte`, `--apprentissage`, `--blocage`. (16 October 2026, 13:41:09 +0200)
+> `--project` et `--fait` sont obligatoires. Ne jamais construire l’entrée à la main. (16 October 2026, 13:41:09 +0200)
+>
+> Le script : (16 October 2026, 13:41:09 +0200)
+>
+> - prend un verrou interprocessus, puis écrit toute l’entrée en un seul append ; (16 October 2026, 13:41:09 +0200)
+> - identifie Codex depuis le transcript de la session et relève le modèle et l’effort réellement utilisés ; (16 October 2026, 13:41:09 +0200)
+> - identifie Claude Code depuis son environnement, mais écrit `non exposé par l’hôte` si le modèle courant (16 October 2026, 13:41:09 +0200)
+>   n’est pas démontrable ; (16 October 2026, 13:41:09 +0200)
+> - masque toute valeur qui ressemble à un secret ; (16 October 2026, 13:41:09 +0200)
+> - refuse un agent inconnu au lieu d’en inventer un. (16 October 2026, 13:41:09 +0200)
+>
+> ## 9 October 2026, 12:45 CEST : Transcripts Codex longs (16 October 2026, 13:41:09 +0200)
+>
+> - Le détecteur lit les 8 Mio finaux du transcript pour retrouver le modèle courant sans charger un fichier entier qui peut dépasser la limite de chaîne de Node. (9 October 2026) (16 October 2026, 13:41:09 +0200)
+> - Il retire la première ligne si la lecture commence au milieu d’un événement JSONL. (9 October 2026) (16 October 2026, 13:41:09 +0200)
+>
+> Pour Claude Code, passer `--model` et `--effort` seulement si les métadonnées de la session les exposent (16 October 2026, 13:41:09 +0200)
+> réellement. Le nom que le modèle donne de lui-même n’est pas une preuve ; l’hôte ou le transcript le sont. (16 October 2026, 13:41:09 +0200)
+>
+> ## Relire (16 October 2026, 13:41:09 +0200)
+>
+> Au début d’une session, lire seulement les dernières entrées utiles, jamais le fichier entier : (16 October 2026, 13:41:09 +0200)
+>
+> ```zsh (16 October 2026, 13:41:09 +0200)
+> node /Users/zenray/.claude/skills/progress/scripts/progress.mjs tail --count 3 (16 October 2026, 13:41:09 +0200)
+> node /Users/zenray/.claude/skills/progress/scripts/progress.mjs tail --project "ZenRayShards" --count 3 (16 October 2026, 13:41:09 +0200)
+> ``` (16 October 2026, 13:41:09 +0200)
+>
+> Donner ensuite en trois lignes maximum les trois derniers faits pertinents et la dernière étape `Prochain`. (16 October 2026, 13:41:09 +0200)
+>
+> ## Router vers Memory (16 October 2026, 13:41:09 +0200)
+>
+> Quand le fait change la connaissance durable d’un domaine, utiliser son routeur avant l’entrée globale : (16 October 2026, 13:41:09 +0200)
+>
+> - `matthieu-context` vers `Identity/Matthieu1.md` ; (16 October 2026, 13:41:09 +0200)
+> - `japanese-context` vers `Japanese/Japanese1.md` ; (16 October 2026, 13:41:09 +0200)
+> - `zenrayshards-context` vers `ZenRayShards/ZenRayShards1.md` ; (16 October 2026, 13:41:09 +0200)
+> - les autres domaines suivent le même contrat : un `*1.md` unique et un skill routeur court. (16 October 2026, 13:41:09 +0200)
+>
+> Ne jamais transformer le journal global en base de projet. L’entrée cite la source durable, elle ne la copie pas. (16 October 2026, 13:41:09 +0200)
+>
+> ## Journaux historiques (16 October 2026, 13:41:09 +0200)
+>
+> La migration des sept anciens `PROGRESS.md` est close le 2026-08-22 : 1 540 entrées sur 1 540 ont été reconnues (16 October 2026, 13:41:09 +0200)
+> dans le global, puis les sources ont été supprimées avec la validation explicite de Matthieu. Ne jamais les (16 October 2026, 13:41:09 +0200)
+> recréer. Si un autre journal legacy apparaît plus tard, l’importer de manière idempotente avant de le retirer : (16 October 2026, 13:41:09 +0200)
+>
+> ```zsh (16 October 2026, 13:41:09 +0200)
+> node /Users/zenray/.claude/skills/progress/scripts/progress.mjs import-legacy \ (16 October 2026, 13:41:09 +0200)
+>   --source /chemin/ancien/PROGRESS.md (16 October 2026, 13:41:09 +0200)
+> ``` (16 October 2026, 13:41:09 +0200)
+>
+> Le script ajoute un identifiant par entrée, ignore les doublons et masque les secrets dans la copie globale. (16 October 2026, 13:41:09 +0200)
+> Conserver l’original jusqu’à ce que l’import rende zéro ajout à la seconde passe et qu’une suppression soit (16 October 2026, 13:41:09 +0200)
+> explicitement autorisée. (16 October 2026, 13:41:09 +0200)
+>
+> ## Déclencheurs (16 October 2026, 13:41:09 +0200)
+>
+> Écrire automatiquement après une tâche finie, une décision, une mesure, une piste échouée ou écartée, un (16 October 2026, 13:41:09 +0200)
+> blocage rencontré ou levé, une modification structurelle, un apprentissage notable, une pause, une compaction, (16 October 2026, 13:41:09 +0200)
+> ou une demande explicite de sauvegarde. Une action triviale sans information durable ne mérite pas une entrée. (16 October 2026, 13:41:09 +0200)
+>
+> ## Horodatage : heure locale et décalage explicite (2026-09-23) (16 October 2026, 13:41:09 +0200)
+>
+> Chaque entrée commence par `YYYY-MM-DD HH:MM +HH:MM`, l'heure locale du Mac suivie de son décalage (16 October 2026, 13:41:09 +0200)
+> UTC. Du 2026-08-20 au 2026-09-23, le script écrivait l'heure de Tokyo SANS décalage : ces entrées se (16 October 2026, 13:41:09 +0200)
+> lisent donc en `Asia/Tokyo`, et les entrées importées d'anciens journaux (`legacy-id`) gardent l'heure (16 October 2026, 13:41:09 +0200)
+> murale du lieu où elles ont été écrites (Paris avant le 2026-06-12, Tokyo ensuite). La vue Progress de (16 October 2026, 13:41:09 +0200)
+> ZenRayProgress applique exactement cette règle. (16 October 2026, 13:41:09 +0200)
+
+## 16 October 2026, 13:41:09 +0200 : Prompt
+
+<!-- feedback-event:b88e198c9f3cdfbede88045532e8acfe6f42702ebaff923e34fdf4b3d1e3ce91 (16 October 2026, 13:41:09 +0200) -->
+- Project: zenray-progress; kind: prompt. (16 October 2026, 13:41:09 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/d3327e82-5a7e-46d8-b6f6-bc0447663c2b.jsonl. (16 October 2026, 13:41:09 +0200)
+
+> Base directory for this skill: /Users/zenray/.claude/skills/edit-text (16 October 2026, 13:41:09 +0200)
+>
+> # Correction de texte via ZenRay Edit (7 October 2026) (16 October 2026, 13:41:09 +0200)
+>
+> - Lire `/Users/zenray/.claude/skills/zenray-edit/references/TextEditing.md`, puis suivre le contrat actif du skill zenray-edit. (7 October 2026) (16 October 2026, 13:41:09 +0200)
+> - Corriger uniquement les fautes ; conserver vocabulaire, ordre, rythme, répétitions et idées. Réorganisation, variantes, raccourcissement et traduction ne s’activent que dans le périmètre explicitement demandé. (7 October 2026) (16 October 2026, 13:41:09 +0200)
+> - Le protocole original est conservé intégralement dans `zenray-edit/references/legacy/EditText.md` et dans l’archive de migration du projet zenray-edit. (7 October 2026) (16 October 2026, 13:41:09 +0200)
+
+## 16 October 2026, 13:42:36 +0200 : Prompt
+
+<!-- feedback-event:4a0a2579d57f4f6391775c329299237c6c31bb5e3da3744dc19513b2b91f0ec7 (16 October 2026, 13:42:36 +0200) -->
+- Project: zenray-progress; kind: prompt. (16 October 2026, 13:42:36 +0200)
+
+> Ce que j'aimerais faire sur ZenRayProgress, ce serait une section dans la sidebar de gauche qui s'appellerait Sport. J'aimerais mettre tous les exos que j'ai déjà faits, et que, quand je note une entrée, notamment sur mon mobile ou même sur mon desktop, je puisse noter le nombre de répétitions que j'ai faites et le nombre de séries. Et que ça m'inscrive la date automatiquement et qu'il y ait une image qui décrive exactement ce qu'est l'exercice. Je peux te donner la banque d'images, mais il faut que tu me donnes une description précise pour chaque image. Et enfin, je vais te donner mon programme. Le but, c'est de faire une interface très clean pour que je puisse renseigner les informations sur chaque exercice, et que je puisse aussi dire, par exemple, tel jour, je puisse grep la database d'exercices et les mettre directement. Ensuite, je peux consigner aussi une description, etc. Commence par me faire trois mockups différents et je choisirai la base de design que je veux garder. (16 October 2026, 13:42:36 +0200)
+
+## 16 October 2026, 13:43:59 +0200 : Iteration
+
+<!-- feedback-event:7813dadd10063341994a89ca5538faf7679b942aff355b18678207242aa38fa3 (16 October 2026, 13:43:59 +0200) -->
+- Project: zenray-progress; kind: iteration. (16 October 2026, 13:43:59 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/d3327e82-5a7e-46d8-b6f6-bc0447663c2b.jsonl. (16 October 2026, 13:43:59 +0200)
+
+> Je viens d'écrire le mockup A (le journal en deux colonnes). J'écris maintenant le B (galerie avec volet de saisie) et le C (séance guidée), puis je vérifie les trois dans le navigateur. (16 October 2026, 13:43:59 +0200)
+
+## 16 October 2026, 13:45:21 +0200 : Iteration
+
+<!-- feedback-event:87ec8a4dfaa119d6e436351442db134487f0550b270edd875e9df8babe5cd5bf (16 October 2026, 13:45:21 +0200) -->
+- Project: zenray-progress; kind: iteration. (16 October 2026, 13:45:21 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/d3327e82-5a7e-46d8-b6f6-bc0447663c2b.jsonl. (16 October 2026, 13:45:21 +0200)
+
+> Le mockup C fonctionne (validation de série, minuteur de repos). Le volet du B reste translucide, donc je regarde son style calculé. (16 October 2026, 13:45:21 +0200)
+
+## 16 October 2026, 13:54:45 +0200 : Prompt
+
+<!-- feedback-event:2fb3dafcb92cd826f117d183b2f82295cb5d89816484be59a72cc7da4165c139 (16 October 2026, 13:54:45 +0200) -->
+- Project: zenray-progress; kind: prompt. (16 October 2026, 13:54:45 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/d3327e82-5a7e-46d8-b6f6-bc0447663c2b.jsonl. (16 October 2026, 13:54:45 +0200)
+
+> Dans ton app, est beaucoup trop complexe et dans le mockup, je veux que ça l'envoie et que ça montre dans Plan exactement comme si ça envoyait une notification dans Plan une fois que j'ai renseigné au fur et a mesure dans la section sport et il me manque la description pour mon image gen (16 October 2026, 13:54:45 +0200)
+
+## 16 October 2026, 13:54:54 +0200 : Prompt
+
+<!-- feedback-event:ade0312d6ec5108aea3495f61ba417ffab138d20bdaa2872add959f0d04c6bb5 (16 October 2026, 13:54:54 +0200) -->
+- Project: zenray-progress; kind: prompt. (16 October 2026, 13:54:54 +0200)
+
+> Dans ton app, c'est beaucoup trop complexe. Et dans le mockup, je veux que ça l'envoie et que ça montre dans Plan exactement comme si ça envoyait une notification dans Plan, une fois que j'ai renseigné au fur et à mesure dans la section Sport. Et il me manque la description pour mon image gen. (16 October 2026, 13:54:54 +0200)
+
+## 16 October 2026, 13:56:38 +0200 : Iteration
+
+<!-- feedback-event:da8dcd745314715402676a23c8da26c981f39914dcffebc2c781ed16b9746616 (16 October 2026, 13:56:38 +0200) -->
+- Project: zenray-progress; kind: iteration. (16 October 2026, 13:56:38 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/d3327e82-5a7e-46d8-b6f6-bc0447663c2b.jsonl. (16 October 2026, 13:56:38 +0200)
+
+> La version simple D fonctionne : l'envoi ajoute une tâche dans Plan avec une notification. Je vérifie le rendu mobile, puis je termine. (16 October 2026, 13:56:38 +0200)
+
+## 16 October 2026, 13:58:28 +0200 : Prompt
+
+<!-- feedback-event:3ec6d4be5dccc44cdb9993f1c8bf359eb9c749d2a35bd1d9b215b69cbd375e3d (16 October 2026, 13:58:28 +0200) -->
+- Project: zenray-progress; kind: prompt. (16 October 2026, 13:58:28 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/d3327e82-5a7e-46d8-b6f6-bc0447663c2b.jsonl. (16 October 2026, 13:58:28 +0200)
+
+> append ces design à /zenray-edit et recommence je trouve que c'est pas encore ça 3 propals stp (16 October 2026, 13:58:28 +0200)
+
+## 16 October 2026, 13:58:31 +0200 : Prompt
+
+<!-- feedback-event:a9612da3722736392b2100780b2e3c37299d1a0c4b8898d9c2df25e7feac3768 (16 October 2026, 13:58:31 +0200) -->
+- Project: zenray-progress; kind: prompt. (16 October 2026, 13:58:31 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/d3327e82-5a7e-46d8-b6f6-bc0447663c2b.jsonl. (16 October 2026, 13:58:31 +0200)
+
+> Base directory for this skill: /Users/zenray/.claude/skills/zenray-edit (16 October 2026, 13:58:31 +0200)
+>
+> # ZenRay Edit (7 October 2026) (16 October 2026, 13:58:31 +0200)
+>
+> Atelier de création et d’édition, de la demande à un média vérifié et modifiable. Lire [ActiveContract.md](references/ActiveContract.md), puis seulement les références du mode utile. (7 October 2026) (16 October 2026, 13:58:31 +0200)
+>
+> - Reprendre l’identité Assets existante, son contexte et son feedback avec zenray-assets ; travailler dans l’atelier ou les sources effectivement liées. Une conversation ne se réattribue jamais implicitement. (7 October 2026) (16 October 2026, 13:58:31 +0200)
+> - Pour un texte de Matthieu, corriger uniquement grammaire, orthographe, conjugaison et transcription manifestement erronée. Conserver vocabulaire, rythme, ordre, répétitions et contenu ; réécriture, réorganisation et traduction exigent une demande explicite. Lire [TextEditing.md](references/TextEditing.md). (7 October 2026) (16 October 2026, 13:58:31 +0200)
+> - Chercher un gabarit avant de construire : `node scripts/zr-design.mjs list`, puis `get <id>`. Instancier la définition existante ; paramètres globaux, de famille et d’instance distincts. (7 October 2026) (16 October 2026, 13:58:31 +0200)
+> - Images et post : `python3 scripts/zr-hda-instance.py <source> --dest <atelier/instance> --mode light --post <draft>`. Heavy sert une URL locale pour WebGL ; ouvrir cette URL uniquement dans le navigateur interne. `--force` conserve textes, réglages et sorties, avec historique de code. (7 October 2026) (16 October 2026, 13:58:31 +0200)
+> - Composition : `scripts/new-project.sh <name> <atelier>` puis `<instance>/render.sh`. Le fichier export.json centralise dimensions, facteur, format et limites ; un facteur absent atteint au moins 3840 pixels sur le grand côté. Les sources et le master sont conservés même si une livraison échoue. (7 October 2026) (16 October 2026, 13:58:31 +0200)
+> - Avant traitement média lourd, appliquer ffmpeg-hardware-check ; utiliser PDF, Houdini ou téléchargement seulement si le mode le nécessite. Aucun script historique externe absent ne vaut capacité vérifiée. (7 October 2026) (16 October 2026, 13:58:31 +0200)
+> - Vérifier dimensions, poids, codec/durée et alpha selon le média, regarder le rendu réel en navigateur isolé ; fournir sources et exports identifiés. Archiver via Assets et vérifier le cloud avant de l’annoncer ; publication publique seulement dans le périmètre autorisé. (7 October 2026) (16 October 2026, 13:58:31 +0200)
+>
+> ## Montage / motion design (10 October 2026) (16 October 2026, 13:58:31 +0200)
+>
+> - Une vidéo de motion design se reproduit depuis une référence mesurée : analyse, storyboard, paramètres HDA, composition HyperFrames, rendu, contrat de vérification. Méthode complète : `~/.claude/skills/zenray-motion-design/SKILL.md`. (10 October 2026) (16 October 2026, 13:58:31 +0200)
+> - Référence de premier jet : `zenray-motion-design-01` (OneKey Pro 2, 68,05 s), vérifiée par `Verify.py` avec tous les contrôles réussis en v3. (10 October 2026) (16 October 2026, 13:58:31 +0200)
+> - Chaque valeur de marque vit dans `params/tokens.json` ; chaque plan et chaque légende dans `params/timeline.json` ; la chorégraphie dans `params/choreography.json`. Ne jamais recopier une valeur dans le gabarit. (10 October 2026) (16 October 2026, 13:58:31 +0200)
+> - Une référence téléchargée reste dans le scratchpad, sans archivage ni publication ; seul le rendu produit part vers l'atelier. (10 October 2026) (16 October 2026, 13:58:31 +0200)
+> - Rendu : `HYPERFRAMES_BROWSER_PATH` sur le shell géré par HyperFrames, jamais le Chrome personnel. (10 October 2026) (16 October 2026, 13:58:31 +0200)
+> - 11 October 2026 : passe 2, l'animatique : le montage reprend la structure mesurée (coupes, caméra, tempo) et chaque asset manquant devient un emplacement nommé et animé ; les assets faisables en code sont faits, les autres reçoivent un prompt validé avant toute génération. Méthode : section « Passe 2 » de `~/.claude/skills/zenray-motion-design/SKILL.md`. (11 October 2026) (16 October 2026, 13:58:31 +0200)
+> - 11 October 2026 : génération d'assets : Google Flow n'a pas d'API ; la voie conseillée est l'API Gemini (Veo 3.1, images, Lyria) avec une clé rangée par Matthieu dans le trousseau macOS ; rien ne part avant la validation de la fiche A00 et des prompts. (11 October 2026) (16 October 2026, 13:58:31 +0200)
+>
+> ## Modes et références ciblées (7 October 2026) (16 October 2026, 13:58:31 +0200)
+>
+> | Mode | Références | Date | (16 October 2026, 13:58:31 +0200)
+> |---|---|---| (16 October 2026, 13:58:31 +0200)
+> | Correction et rédaction | TextEditing.md ; legacy/EditText.md pour historique | 7 October 2026 | (16 October 2026, 13:58:31 +0200)
+> | Photo et cadrage | legacy/PhotoWorkflow.md ; legacy/EditorCorrections.md ; post-editor.md | 7 October 2026 | (16 October 2026, 13:58:31 +0200)
+> | Composition et carrousel | legacy/CompositionFoundation.md ; legacy/CompositionRecipes.md | 7 October 2026 | (16 October 2026, 13:58:31 +0200)
+> | Template depuis référence | template-creator.md ; legacy/DesignLibrary.md | 7 October 2026 | (16 October 2026, 13:58:31 +0200)
+> | PDF | legacy/PdfEditing.md, puis skill PDF si nécessaire | 7 October 2026 | (16 October 2026, 13:58:31 +0200)
+> | Reel et short | legacy/ShortsPipeline.md ; legacy/ShortsCorrections.md | 7 October 2026 | (16 October 2026, 13:58:31 +0200)
+> | UI paramétrique | legacy/ParameterPanels.md ; legacy/UiContract.md ; legacy/NativeUiReference.md si besoin natif | 7 October 2026 | (16 October 2026, 13:58:31 +0200)
+> | Post social et vignette | legacy/SocialText.md ; legacy/VignetteWorkflow.md ; legacy/PostEditorContract.md | 7 October 2026 | (16 October 2026, 13:58:31 +0200)
+> | Montage et motion design | ~/.claude/skills/zenray-motion-design/SKILL.md (analyse, storyboard, HyperFrames, contrat de vérification) | 10 October 2026 | (16 October 2026, 13:58:31 +0200)
+> | Animatique et inventaire d'assets | ~/.claude/skills/zenray-motion-design/SKILL.md, section Passe 2 (caméra mesurée, emplacements nommés, prompts, son, fiche) | 11 October 2026 | (16 October 2026, 13:58:31 +0200)
+> | Titre animé Vogun jaune ou blanc | templates/vogun-yellow-title/README.md (gabarit paramétrique, rendu `RenderTitle.cjs`, preuve) ; règles dans ~/.claude/skills/zenray-houdini/references/shorts/VogunTitles.md | 14 October 2026 | (16 October 2026, 13:58:31 +0200)
+>
+> Les 15 blocs historiques, les corpus d’origine et leur provenance restent consultables par [INDEX.md](references/INDEX.md). Les anciennes consignes sont des recettes historiques ; ActiveContract.md gouverne les commandes actuelles et tranche leurs contradictions. (7 October 2026) (16 October 2026, 13:58:31 +0200)
+>
+> ## Preuves et contrôles (7 October 2026) (16 October 2026, 13:58:31 +0200)
+>
+> - `python3 scripts/index-skill.py --verify-only` vérifie les archives historiques et leurs empreintes ; `python3 scripts/CheckContract.py` vérifie les empreintes du bundle courant, routes, catalogue, entrées actives et configuration d’export. (7 October 2026) (16 October 2026, 13:58:31 +0200)
+> - `python3 scripts/verify-post-instance.py <images> <fixture-neuve>` vérifie la reprise sans perte. Les vérificateurs navigateur exigent Playwright disponible dans le runtime, tournent isolés et produisent leurs captures dans la fixture. (7 October 2026) (16 October 2026, 13:58:31 +0200)
+> - Distinguer contrôles structurels, rendu réellement mesuré et cloud réellement vérifié ; une preuve ne couvre que ce qu’elle inspecte. (7 October 2026) (16 October 2026, 13:58:31 +0200)
+>
+> ## 8 October 2026 : Vitesse de rotation uniforme depuis une prise de vue réelle (16 October 2026, 13:58:31 +0200)
+>
+> - 8 October 2026 (demande de Matthieu) : un plateau tournant filmé à la main tourne à vitesse variable (départ à l'arrêt, ralentissement, nouvelle poussée). `python3 scripts/UniformTurn.py <src> <out.mp4> --seconds 5 --fps 24 --size 1080x1920 --k 3` rend un tour à vitesse angulaire constante pour la durée voulue. (8 October 2026) (16 October 2026, 13:58:31 +0200)
+> - 8 October 2026 : méthode mesurée, jamais devinée : corrélation de phase image par image sur une fenêtre centrale (`--win y0,y1,x0,x1` en fractions) donne le décalage horizontal de la surface ; sa somme cumulée est l'angle ; on coupe le début et la fin à l'arrêt (lissage sur 4 images, seuil `--thr`) ; minterpolate mci ×K ; chaque image de sortie prend l'image interpolée dont l'angle tombe sur la droite. Écart-type de vitesse mesuré 2,5 px par image avant, 0,88 après (pot de poterie, 8 October 2026). (8 October 2026) (16 October 2026, 13:58:31 +0200)
+> - 8 October 2026 : limites : une caméra qui bouge ajoute son décalage à la mesure ; le fond de la fenêtre doit être le pot ; sortie sans audio ; la qualité est celle de la source (une source 1024×576 est agrandie en lanczos). Vérifier en remesurant la sortie avec le même script. (8 October 2026) (16 October 2026, 13:58:31 +0200)
+> - 8 October 2026 : titre Vogun jaune : recette dans `zenray-houdini/references/shorts/VogunTitles.md` ; exemple de montage complet (grade, titre trois lignes Vogun et Yu Mincho, easeOutBack d'entrée, rendu alpha ProRes 4444) : projet Assets `poisson-gloss-matthieu-poterie-aix-8-octobre-2026`, `Scripts/Montage.py`. (8 October 2026) (16 October 2026, 13:58:31 +0200)
+>
+> ## 8 October 2026 : Sound Design / Edit Sound (16 October 2026, 13:58:31 +0200)
+>
+> - 8 October 2026 : mode son : transformer un effet sonore court (interface, jeu) en restant proche de la source ; recette validée `python3 scripts/SoundF1.py <source.flac> <sortie.wav>` (gonflement inversé de 1,2 s, corps une octave plus bas déclenché à −20 ms, réverbération douce), résultat de référence `assets/sound/F1_Trigger_minus20ms.flac`. Protocole complet, mesures et limites : [SoundDesign.md](references/SoundDesign.md). (8 October 2026) (16 October 2026, 13:58:31 +0200)
+> - 8 October 2026 : ajouter ici seulement ce que Matthieu a validé à l'oreille ; les essais non retenus ne se consignent pas. (8 October 2026) (16 October 2026, 13:58:31 +0200)
+>
+>
+> ## 9 October 2026 : tour uniforme SANS fantômes (remplace l'interpolation minterpolate) (16 October 2026, 13:58:31 +0200)
+>
+> - 9 October 2026 : cause des bandes blanches qui apparaissent et disparaissent dans un tour de plateau : `minterpolate` (UniformTurn.py) ne suit pas une surface texturée qui tourne ; il mélange deux positions et des lignes blanches se dédoublent dans une partie des images. Utiliser `python3 scripts/UniformTurnWarp.py <src> <out.mp4> --seconds 12.5` : angle mesuré par corrélation de phase, champ de déplacement horizontal mesuré sur 10 bandes verticales, et l'image source la plus proche est déplacée du reste (au plus une demi-image), sans mélange de deux images. (9 October 2026) (16 October 2026, 13:58:31 +0200)
+> - 9 October 2026 : mesuré sur le pot de poterie : netteté de A 2,56 (source 2,91, ancienne méthode 2,49), irrégularité de netteté d'image à image 0,063 (ancienne méthode 0,121, source 0,104) ; B 0,085 contre 0,119. Une première version qui mélangeait deux images déplacées était plus floue (0,162) : ne jamais mélanger. (9 October 2026) (16 October 2026, 13:58:31 +0200)
+> - 9 October 2026 : limites : un mouvement de caméra à la main reste mesuré avec le pot ; la vitesse d'angle vient d'une fenêtre centrale. Les anciens scripts restent pour comparaison. (9 October 2026) (16 October 2026, 13:58:31 +0200)
+> - 9 October 2026 : montage motion design complet de référence (sous-titres lettre par lettre calés sur le tempo détecté, zooms sur les temps forts, zoom au raccord, SFX calés sur l'attaque mesurée) : projet Assets `poisson-gloss-matthieu-poterie-aix-8-octobre-2026`, `Scripts/FinalMontage3.py`. (9 October 2026) (16 October 2026, 13:58:31 +0200)
+>
+> ## 9 October 2026 : Leçons HTML illustrées et calculateurs procéduraux (16 October 2026, 13:58:31 +0200)
+>
+> - 9 October 2026 (demande de Matthieu) : une leçon se fait en HTML autonome, niveau 12 ans, pas à pas, avec images réelles, schémas SVG, glossaire, quiz et SIMULATIONS interactives (curseurs) plutôt que du texte seul. Exemple de référence : `/Users/zenray/.claude/tmp/tmp-houdini-september-2026/tmp-bayou-louisiana/03_work/lesson-roof-tiles/index.html`. Polices embarquées (InterVariable, AnthropicSerif, AnthropicMono en woff2 copiés depuis `ZenRayProgress/public/fonts`), thème clair et sombre par `:root`. (9 October 2026) (16 October 2026, 13:58:31 +0200)
+> - 9 October 2026 : toute leçon se vérifie dans le navigateur interne sur un serveur local, largeur étroite comprise (aucun débordement horizontal, tables dans un bloc défilant), et ses nombres se recalculent à la main : une erreur de tuiles de 340 px (6 × 340 + 7 × 8 dépasse 2048) a été trouvée en écrivant la leçon. (9 October 2026) (16 October 2026, 13:58:31 +0200)
+> - 9 October 2026 : pour tout système procédural, le calculateur HTML de test est dans le skill `zenray-houdini` : `templates/roof-tile-calculator/index.html`. L'adapter (champs, règle, sorties) à un autre système avant de toucher Houdini. (9 October 2026) (16 October 2026, 13:58:31 +0200)
+>
+> ## 12 October 2026 : Effacer une marque d'une texture (logo, silhouette d'échelle) par greffe de texture (16 October 2026, 13:58:31 +0200)
+>
+> - 12 October 2026 : `python3 scripts/PatchFill.py <in> <out> --crop x,y,w,h --rect x,y,w,h [--rect ...] --search 700 --search-y 12 --ring 18 --feather 16`. Le `--crop` s'applique d'abord (garder la moitié height d'une planche), les rectangles sont en coordonnées après recadrage. Numpy et Pillow seulement, environ 1 s. (12 October 2026) (16 October 2026, 13:58:31 +0200)
+> - 12 October 2026 : méthode : l'anneau de pixels autour du trou est comparé à chaque place candidate par corrélation normalisée plus une pénalité de contraste ; la meilleure place est recopiée dans le trou, sa luminosité calée par un plan ajusté sur l'anneau, puis fondue sur le bord. Rien n'est inventé, la texture vient de la même image. (12 October 2026) (16 October 2026, 13:58:31 +0200)
+> - 12 October 2026 : pièges payés : un simple écart au carré choisit des zones plates et bouche le trou d'une tache lisse ; un calage de luminosité constant laisse un rectangle plus clair ; sur une roche en strates, chercher dans les mêmes rangées (`--search-y` petit) garde les lignes alignées. Vérifier toujours sur un zoom avant/après. (12 October 2026) (16 October 2026, 13:58:31 +0200)
+> - 12 October 2026 : exemple : planche de Javier Perez, moitié droite, silhouette `--rect 126,866,48,96` et logo `--rect 850,910,102,44`, atelier `/Users/zenray/.claude/tmp/tmp-height-javier-perez-clean/`. Un aperçu ombré en gris n'est pas une height linéaire : il sert de référence de mesure, pas de carte finale. (12 October 2026) (16 October 2026, 13:58:31 +0200)
+>
+> ## 14 October 2026 : maquettes du rework Assets et titre Vogun rangés ici (16 October 2026, 13:58:31 +0200)
+>
+> - 14 October 2026 : les trois maquettes du rework ZenRay Assets (Tube, détails, page projet) et leurs décisions sont dans `templates/zenray-assets-mockups/rework-12-october-2026/` ; son README donne les choix de Matthieu et le code de production correspondant. (14 October 2026) (16 October 2026, 13:58:31 +0200)
+> - 14 October 2026 : le titre animé Vogun jaune `#FFFF00` de Vegetation Collection 01 est un gabarit paramétrique dans `templates/vogun-yellow-title/` (durées, lignes, couleur et ombre dans un JSON, rendu 4K transparent par `RenderTitle.cjs`). (14 October 2026) (16 October 2026, 13:58:31 +0200)
+>
+> ## 14 October 2026 : tout index de design est rangé automatiquement (16 October 2026, 13:58:31 +0200)
+>
+> - 14 October 2026 : dès qu'un index de design (galerie de propositions) est créé pour Matthieu, la dernière étape est `node ~/.claude/skills/zenray-edit/scripts/file-design.mjs <atelier> --slug <slug> --title "<titre>" --module <module> --project <id-assets>`. Il copie l'index dans `designs/<date>-<slug>/` (polices partagées), ajoute une ligne au registre `designs/INDEX.md` et, avec `--project`, copie l'index dans `Memory1/Projects/<id>/Designs/`. Sans cette étape le design n'est pas fini. (14 October 2026) (16 October 2026, 13:58:31 +0200)
+> - 14 October 2026 : son choix s'ajoute par `file-design.mjs --decide <slug> --choice <A|B|C>`, jamais en réécrivant une ligne. `designs/` est un registre vivant, hors du lot attesté par `CheckContract.py`. (14 October 2026) (16 October 2026, 13:58:31 +0200)
+> - 14 October 2026 : la lecture du registre par projet dans `zenray-assets` n'existe pas encore ; aujourd'hui seule la copie dans la mémoire du projet est faite (colonne « Projet Assets » du registre). (14 October 2026) (16 October 2026, 13:58:31 +0200)
+
+## 16 October 2026, 14:01:46 +0200 : Iteration
+
+<!-- feedback-event:aec83361d939cf785de96df5d2d24725a1de095ae15d90c55d2fc39ab839d79d (16 October 2026, 14:01:46 +0200) -->
+- Project: zenray-progress; kind: iteration. (16 October 2026, 14:01:46 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/d3327e82-5a7e-46d8-b6f6-bc0447663c2b.jsonl. (16 October 2026, 14:01:46 +0200)
+
+> BSD sed a refusé la substitution, donc je corrige avec Python. (16 October 2026, 14:01:46 +0200)
+
+## 16 October 2026, 14:03:01 +0200 : Prompt
+
+<!-- feedback-event:ced80bfc22d8e96ff2ea1df12beff56fb122930a38b4287892b4bc55eb9d1642 (16 October 2026, 14:03:01 +0200) -->
+- Project: zenray-progress; kind: prompt. (16 October 2026, 14:03:01 +0200)
+
+> Append ces designs à /zenray-edit et recommence, je trouve que ce n'est pas encore ça : trois propositions, s'il te plaît. (16 October 2026, 14:03:01 +0200)
+
+## 16 October 2026, 14:08:32 +0200 : Prompt
+
+<!-- feedback-event:8be152b457d3851a0668d44eb81f484584348f2b5617586460043280c8186942 (16 October 2026, 14:08:32 +0200) -->
+- Project: zenray-progress; kind: prompt. (16 October 2026, 14:08:32 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/d3327e82-5a7e-46d8-b6f6-bc0447663c2b.jsonl. (16 October 2026, 14:08:32 +0200)
+
+> ajoute photo de l'objectif physique  (16 October 2026, 14:08:32 +0200)
+> blob:https://claude.ai/503c523a-5df6-4842-bf22-8cc6cb0a5dc4 (16 October 2026, 14:08:32 +0200)
+> blob:https://claude.ai/68b124ab-e2ba-46a7-94f3-4cddc4252bb3 (16 October 2026, 14:08:32 +0200)
+> blob:https://claude.ai/6c734020-7b3f-4022-9a71-fc6bf7a738c8 (16 October 2026, 14:08:32 +0200)
+> En fait, le tuile est pas mal du tout, mais le problème c'est qu'il faut que, en fait, ça tu fasses pas genre séance A ou B ou C, mais que tu fasses plutôt un append par rapport à un exercice que j'aurais fait. C'est-à-dire, il y a une database d'exercices, je cherche dans tous les exercices et ça append dans la session du jour en fait. Quand je mets série en fait et que je mets le nombre de répétitions et le nombre de machin, ça append directement dans Plan la séance, mais ça crée pas une nouvelle case, tu vois. Ça append dans une seule case de plan, mais avec toute la liste des choses qui ont déjà été faites. Donc, fais-moi une proposition qui itère sur mon idée et qui est facile à avoir. go itération sur. le mockup et  (16 October 2026, 14:08:32 +0200)
+> chaque photos doit être fit sous forme de tuile dans une section objectif visuelle et je te appendrai d'autres photos (16 October 2026, 14:08:32 +0200)
+
+## 16 October 2026, 14:08:32 +0200 : Prompt
+
+<!-- feedback-event:52d22e1820db54b75a36ea77cca3b69f84aae95390b9683366300410242e3ca6 (16 October 2026, 14:08:32 +0200) -->
+- Project: zenray-progress; kind: prompt. (16 October 2026, 14:08:32 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/d3327e82-5a7e-46d8-b6f6-bc0447663c2b.jsonl. (16 October 2026, 14:08:32 +0200)
+
+> [Image: source: /private/tmp/claude-501/-Users-zenray--claude-Memory1/d3327e82-5a7e-46d8-b6f6-bc0447663c2b/images/1.png] (16 October 2026, 14:08:32 +0200)
+> [Image: source: /private/tmp/claude-501/-Users-zenray--claude-Memory1/d3327e82-5a7e-46d8-b6f6-bc0447663c2b/images/2.png] (16 October 2026, 14:08:32 +0200)
+> [Image: source: /private/tmp/claude-501/-Users-zenray--claude-Memory1/d3327e82-5a7e-46d8-b6f6-bc0447663c2b/images/3.webp] (16 October 2026, 14:08:32 +0200)
+
+## 16 October 2026, 14:09:06 +0200 : Prompt
+
+<!-- feedback-event:dba41912fed83a02998d02c030e1365ce9aa16b2d3f3d4c716680cdd487172d5 (16 October 2026, 14:09:06 +0200) -->
+- Project: zenray-progress; kind: prompt. (16 October 2026, 14:09:06 +0200)
+
+> Ajoute les photos de l'objectif physique (trois images du David de Michelangelo). En fait, la tuile est pas mal du tout, mais il ne faut pas faire Séance A, B ou C : il faut plutôt un append par rapport à un exercice que j'aurais fait. Il y a une database d'exercices, je cherche dans tous les exercices et ça s'append dans la session du jour. Quand je mets série, nombre de répétitions, etc., ça s'append directement dans Plan, mais sans créer une nouvelle case : ça s'append dans une seule case de Plan, avec toute la liste de ce qui a déjà été fait. Fais-moi une proposition qui itère sur mon idée et qui est facile à avoir. Chaque photo doit être sous forme de tuile dans une section objectif visuel, et je t'appendrai d'autres photos. (16 October 2026, 14:09:06 +0200)
+
+## 16 October 2026, 14:28:25 +0200 : Prompt
+
+<!-- feedback-event:6bddcd1022c1d7f5082082ba3feb5a3d66ba90a7d1ae22bae081749ab1d5f7d9 (16 October 2026, 14:28:25 +0200) -->
+- Project: zenray-progress; kind: prompt. (16 October 2026, 14:28:25 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/d3327e82-5a7e-46d8-b6f6-bc0447663c2b.jsonl. (16 October 2026, 14:28:25 +0200)
+
+> Pour les valeurs numériques type int, il faut que tu ajoutes kilo lorsqu'il s'agit des kilos. Et pour les répétitions, c'est plutôt entre 6 et 8, donc mets ces deux valeurs par défaut cliquables, plus pour le nombre de séries, c'est entre 3 et 4. pour tout les exos. go (16 October 2026, 14:28:25 +0200)
+
+## 16 October 2026, 14:29:19 +0200 : Prompt
+
+<!-- feedback-event:b399de4585838e1b13ec75f952be7099455c1c8298ef538da2e7a465450399a5 (16 October 2026, 14:29:19 +0200) -->
+- Project: zenray-progress; kind: prompt. (16 October 2026, 14:29:19 +0200)
+
+> Pour les valeurs numériques, il faut que tu ajoutes « kg » lorsqu'il s'agit des kilos. Et pour les répétitions, c'est plutôt entre 6 et 8, donc mets ces deux valeurs par défaut, cliquables ; pour le nombre de séries, c'est entre 3 et 4, pour tous les exos. Go. (16 October 2026, 14:29:19 +0200)
+
+## 16 October 2026, 14:30:15 +0200 : Prompt
+
+<!-- feedback-event:78d568fd5efd93e5b03008e67de7ae0b0eb98c7322e7c349b1fb7ee36be3ddbe (16 October 2026, 14:30:15 +0200) -->
+- Project: zenray-progress; kind: prompt. (16 October 2026, 14:30:15 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/d3327e82-5a7e-46d8-b6f6-bc0447663c2b.jsonl. (16 October 2026, 14:30:15 +0200)
+
+> C'EST ULTRA MOCHE L'UI MAINTENANT RECOMMENCE loi de gestalt etc (16 October 2026, 14:30:15 +0200)
+
+## 16 October 2026, 14:30:15 +0200 : Prompt
+
+<!-- feedback-event:48ff7350d9cb67d8b0c479bb29c23585234d831b5f15af54b0c18ee222103928 (16 October 2026, 14:30:15 +0200) -->
+- Project: zenray-progress; kind: prompt. (16 October 2026, 14:30:15 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/d3327e82-5a7e-46d8-b6f6-bc0447663c2b.jsonl. (16 October 2026, 14:30:15 +0200)
+
+> [Image: source: /private/tmp/claude-501/-Users-zenray--claude-Memory1/d3327e82-5a7e-46d8-b6f6-bc0447663c2b/images/4.webp] (16 October 2026, 14:30:15 +0200)
+
+## 16 October 2026, 14:30:33 +0200 : Prompt
+
+<!-- feedback-event:c3b40f859e7cfda5300410ae9615a94595e4a8c226dae319866e9a1a50f8686b (16 October 2026, 14:30:33 +0200) -->
+- Project: zenray-progress; kind: prompt. (16 October 2026, 14:30:33 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/d3327e82-5a7e-46d8-b6f6-bc0447663c2b.jsonl. (16 October 2026, 14:30:33 +0200)
+
+> Base directory for this skill: /Users/zenray/.claude/skills/ui-espacement-gestalt (16 October 2026, 14:30:33 +0200)
+>
+> # Espacement et Gestalt (16 October 2026, 14:30:33 +0200)
+>
+> ## La phrase à retenir avant tout le reste (16 October 2026, 14:30:33 +0200)
+>
+> > **Un espacement n'est pas une question de goût, c'est une affirmation sur ce qui va ensemble.** (16 October 2026, 14:30:33 +0200)
+>
+> L'œil ne lit pas des marges, il lit des groupes. La loi de proximité de Gestalt dit qu'il rassemble (16 October 2026, 14:30:33 +0200)
+> ce qui est proche et sépare ce qui est loin, avant même que la conscience s'en mêle. Deux éléments (16 October 2026, 14:30:33 +0200)
+> également espacés paraissent donc également liés, quel que soit leur rapport réel, et une interface (16 October 2026, 14:30:33 +0200)
+> « moche » est presque toujours une interface qui affirme un groupement faux. (16 October 2026, 14:30:33 +0200)
+>
+> C'est pourquoi « ajouter de l'air » ne suffit jamais. Ajouter partout la même quantité d'air laisse (16 October 2026, 14:30:33 +0200)
+> le groupement exactement aussi ambigu qu'avant, en plus grand. (16 October 2026, 14:30:33 +0200)
+>
+> ## 1. Mesurer AVANT de toucher (16 October 2026, 14:30:33 +0200)
+>
+> La faute la plus coûteuse est de régler à l'œil ce qui se mesure en dix secondes. Ce contrôle se (16 October 2026, 14:30:33 +0200)
+> colle dans la console du navigateur et rend le verdict : (16 October 2026, 14:30:33 +0200)
+>
+> ```js (16 October 2026, 14:30:33 +0200)
+> // Remplacer les deux sélecteurs : l'objet, et ce qui le commente. (16 October 2026, 14:30:33 +0200)
+> const objets = [...document.querySelectorAll('.mon-objet')] (16 October 2026, 14:30:33 +0200)
+> const suites = [...document.querySelectorAll('.son-commentaire')] (16 October 2026, 14:30:33 +0200)
+> const dedans = objets.map((o, i) => Math.round(suites[i].getBoundingClientRect().top - o.getBoundingClientRect().bottom)) (16 October 2026, 14:30:33 +0200)
+> const dehors = suites.slice(0, -1).map((c, i) => Math.round(objets[i+1].getBoundingClientRect().top - c.getBoundingClientRect().bottom)) (16 October 2026, 14:30:33 +0200)
+> const moy = (a) => a.reduce((s, x) => s + x, 0) / a.length (16 October 2026, 14:30:33 +0200)
+> console.log({ dedans, dehors, ratio: (moy(dehors) / moy(dedans)).toFixed(2) }) (16 October 2026, 14:30:33 +0200)
+> ``` (16 October 2026, 14:30:33 +0200)
+>
+> **Le nombre qui décide, et il n'y en a qu'un :** (16 October 2026, 14:30:33 +0200)
+>
+> | Ratio dehors / dedans | Ce que l'œil comprend | (16 October 2026, 14:30:33 +0200)
+> |---|---| (16 October 2026, 14:30:33 +0200)
+> | **< 1** | Groupement **inversé**. Le commentaire d'un objet se rattache visuellement au SUIVANT. Défaut grave, et le plus fréquent. | (16 October 2026, 14:30:33 +0200)
+> | **1 à 1,5** | Ambigu. Rien ne se lit comme un groupe, tout se lit comme une liste plate. | (16 October 2026, 14:30:33 +0200)
+> | **≥ 2** | Lisible. C'est le plancher, pas la cible. | (16 October 2026, 14:30:33 +0200)
+> | **≥ 3** | Confortable pour une page qu'on parcourt longtemps. | (16 October 2026, 14:30:33 +0200)
+>
+> Mesurer d'abord évite le diagnostic paresseux. Sur ZenRayJapanese le 2026-08-27, le symptôme était (16 October 2026, 14:30:33 +0200)
+> « tout semble collé » ; la mesure a rendu 36 px dedans contre 19 px dehors, soit un ratio de **0,53**. (16 October 2026, 14:30:33 +0200)
+> Le vrai défaut n'était pas un manque d'air, c'était un groupement retourné, et ajouter des marges (16 October 2026, 14:30:33 +0200)
+> partout ne l'aurait pas corrigé. (16 October 2026, 14:30:33 +0200)
+>
+> ## 2. Poser une échelle, jamais des nombres (16 October 2026, 14:30:33 +0200)
+>
+> Une page qui porte onze espacements choisis au jugé (7, 10, 12, 13, 14, 15, 16, 18, 20, 22, 26) n'a (16 October 2026, 14:30:33 +0200)
+> aucun vocabulaire : chaque valeur est une opinion isolée, et rien ne dit laquelle sépare un objet (16 October 2026, 14:30:33 +0200)
+> d'un autre. Cinq jetons suffisent, et cinq est un maximum, pas une suggestion. (16 October 2026, 14:30:33 +0200)
+>
+> ```css (16 October 2026, 14:30:33 +0200)
+> :root { (16 October 2026, 14:30:33 +0200)
+>   --e0: 4px;    /* soudé   : deux parties d'un même objet (un nombre et son signe pour cent) */ (16 October 2026, 14:30:33 +0200)
+>   --e1: 8px;    /* lié     : un objet et ce qui le commente (une barre et ses compteurs) */ (16 October 2026, 14:30:33 +0200)
+>   --e2: 16px;   /* voisin  : deux objets d'un même groupe (deux cartes, deux pastilles) */ (16 October 2026, 14:30:33 +0200)
+>   --e3: 28px;   /* groupe  : deux groupes d'une même région (deux niveaux d'une jauge) */ (16 October 2026, 14:30:33 +0200)
+>   --e4: 44px;   /* région  : deux régions de la page (un tableau de bord et une liste) */ (16 October 2026, 14:30:33 +0200)
+> } (16 October 2026, 14:30:33 +0200)
+> ``` (16 October 2026, 14:30:33 +0200)
+>
+> Les noms comptent autant que les valeurs. `--e2` ne veut rien dire seul ; « voisin » se choisit en une (16 October 2026, 14:30:33 +0200)
+> seconde et se relit dans six mois. Ce sont les jetons de la loi HDA appliqués à l'espace : une (16 October 2026, 14:30:33 +0200)
+> définition, autant d'instances qu'on veut, et agrandir toute la page devient cinq nombres à changer. (16 October 2026, 14:30:33 +0200)
+>
+> **Les jetons vivent au `:root`, jamais sur la classe du composant.** Un panneau porté vers (16 October 2026, 14:30:33 +0200)
+> `document.body` par un portail (popover, feuille modale, infobulle) sort de l'arbre du composant : une (16 October 2026, 14:30:33 +0200)
+> variable déclarée sur lui ne l'atteindrait pas, il retomberait en silence sur la valeur de repli, et (16 October 2026, 14:30:33 +0200)
+> la moitié de l'interface cesserait d'obéir à l'échelle sans qu'aucune erreur ne le signale. (16 October 2026, 14:30:33 +0200)
+>
+> ## 3. Le couple qui produit deux distances avec un seul réglage (16 October 2026, 14:30:33 +0200)
+>
+> Dans une grille qui empile des groupes, on ne peut pas donner deux `row-gap` différents. La parade (16 October 2026, 14:30:33 +0200)
+> tient en deux lignes, et elle vaut pour n'importe quel nombre de groupes : (16 October 2026, 14:30:33 +0200)
+>
+> ```css (16 October 2026, 14:30:33 +0200)
+> .grille  { row-gap: var(--e1); }              /* règle l'intérieur d'un groupe */ (16 October 2026, 14:30:33 +0200)
+> .derniere-ligne-du-groupe { margin-bottom: 20px; }   /* s'AJOUTE au gap pour séparer les groupes */ (16 October 2026, 14:30:33 +0200)
+> .grille > .derniere-ligne-du-groupe:last-child { margin-bottom: 0; } (16 October 2026, 14:30:33 +0200)
+> ``` (16 October 2026, 14:30:33 +0200)
+>
+> Résultat : 8 px dedans, 28 px dehors, ratio 3,5, et le rapport reste vrai quel que soit le nombre de (16 October 2026, 14:30:33 +0200)
+> groupes ou la largeur de l'écran. La dernière ligne se remet à zéro, sinon le panneau porte un vide (16 October 2026, 14:30:33 +0200)
+> en bas que personne ne comprend. (16 October 2026, 14:30:33 +0200)
+>
+> ## 4. Les six lois, par rendement décroissant (16 October 2026, 14:30:33 +0200)
+>
+> **Proximité.** Elle porte quatre-vingts pour cent du résultat, et c'est la seule qui se mesure. Tout (16 October 2026, 14:30:33 +0200)
+> ce qui précède ne parle que d'elle. (16 October 2026, 14:30:33 +0200)
+>
+> **Région commune.** Un fond partagé regroupe plus fort que n'importe quelle distance, et il l'emporte (16 October 2026, 14:30:33 +0200)
+> même sur la proximité. D'où la règle : un fond par région, jamais un fond par élément. Trois fonds (16 October 2026, 14:30:33 +0200)
+> imbriqués ne créent pas trois niveaux de lecture, ils créent du bruit. (16 October 2026, 14:30:33 +0200)
+>
+> **Connexion uniforme, la parade quand l'espace manque.** Elle l'emporte sur la proximité, et c'est (16 October 2026, 14:30:33 +0200)
+> ce qui la rend précieuse : un filet d'un pixel sépare deux groupes plus sûrement que n'importe quelle (16 October 2026, 14:30:33 +0200)
+> distance. Sur un écran étroit, un groupe gagne souvent une rangée (une ligne qui passait à droite (16 October 2026, 14:30:33 +0200)
+> descend en dessous), si bien qu'il grandit plus vite que sa séparation et que le ratio retombe sous 1 (16 October 2026, 14:30:33 +0200)
+> sans qu'on ait rien changé. Mesuré le 2026-08-27 sous 720 px : 38 px dedans contre 36 dehors, alors (16 October 2026, 14:30:33 +0200)
+> que le même écran donnait 2,25 en large. Revenir à 2 aurait demandé 76 px entre chaque groupe, ce (16 October 2026, 14:30:33 +0200)
+> qu'un téléphone n'a pas à donner. Le filet coûte un pixel et règle le cas. (16 October 2026, 14:30:33 +0200)
+>
+> Deux conditions, sans quoi il se retourne contre soi. Il ne s'emploie **que** là où la place manque, (16 October 2026, 14:30:33 +0200)
+> donc sous un point de rupture, faute de quoi une page large finit quadrillée de traits qui ne servent (16 October 2026, 14:30:33 +0200)
+> plus à rien. Et le **dernier groupe n'en porte pas** : un filet en bas de panneau se lit comme une (16 October 2026, 14:30:33 +0200)
+> rangée manquante. (16 October 2026, 14:30:33 +0200)
+>
+> ```css (16 October 2026, 14:30:33 +0200)
+> @media (max-width: 720px) { (16 October 2026, 14:30:33 +0200)
+>   .derniere-ligne-du-groupe { (16 October 2026, 14:30:33 +0200)
+>     margin-bottom: var(--e2); padding-bottom: var(--e2); (16 October 2026, 14:30:33 +0200)
+>     border-bottom: 1px solid color-mix(in srgb, var(--fg) 9%, transparent); (16 October 2026, 14:30:33 +0200)
+>   } (16 October 2026, 14:30:33 +0200)
+>   .grille > .derniere-ligne-du-groupe:last-child { border-bottom: 0; padding-bottom: 0; margin-bottom: 0; } (16 October 2026, 14:30:33 +0200)
+> } (16 October 2026, 14:30:33 +0200)
+> ``` (16 October 2026, 14:30:33 +0200)
+>
+> La preuve change alors de nature : on ne mesure plus une distance, on vérifie une STRUCTURE, un filet (16 October 2026, 14:30:33 +0200)
+> entre chaque groupe et aucun après le dernier. (16 October 2026, 14:30:33 +0200)
+>
+> ```js (16 October 2026, 14:30:33 +0200)
+> const filets = [...document.querySelectorAll('.derniere-ligne-du-groupe')].map((c) => getComputedStyle(c).borderBottomWidth) (16 October 2026, 14:30:33 +0200)
+> console.log(filets.slice(0, -1).every((f) => f !== '0px') && filets.at(-1) === '0px') (16 October 2026, 14:30:33 +0200)
+> ``` (16 October 2026, 14:30:33 +0200)
+>
+> **Similarité.** Des objets de même forme se lisent comme une série, ce qui autorise à les serrer sans (16 October 2026, 14:30:33 +0200)
+> les confondre. Cinq niveaux de jauge dessinés à l'identique se lisent comme une progression ; les (16 October 2026, 14:30:33 +0200)
+> mêmes dessinés différemment demanderaient deux fois plus d'espace pour rester lisibles. (16 October 2026, 14:30:33 +0200)
+>
+> **Continuité et alignement.** Une colonne alignée au pixel se lit comme une colonne ; à trois pixels (16 October 2026, 14:30:33 +0200)
+> près, elle se lit comme un défaut. Le contrôle est une ligne : `new Set(xs).size === 1`. Pour les (16 October 2026, 14:30:33 +0200)
+> centres plutôt que les bords, comparer `y + height / 2`, sinon deux boîtes de hauteurs différentes (16 October 2026, 14:30:33 +0200)
+> paraissent désalignées alors qu'elles sont parfaitement centrées. (16 October 2026, 14:30:33 +0200)
+>
+> **Figure et fond.** Un panneau se détache par son fond, pas par un cadre. Un contraste de cinq à huit (16 October 2026, 14:30:33 +0200)
+> pour cent suffit ; au delà, le panneau devient l'objet principal et vole la vedette à son contenu. (16 October 2026, 14:30:33 +0200)
+>
+> **Prägnanz, la loi de simplicité.** Entre deux mises en page qui disent la même chose, l'œil retient (16 October 2026, 14:30:33 +0200)
+> la plus régulière. Une échelle de cinq valeurs bat toujours onze valeurs justifiées une par une. (16 October 2026, 14:30:33 +0200)
+>
+> ## 5. Contrôle avant de rendre (16 October 2026, 14:30:33 +0200)
+>
+> 1. Le ratio dehors / dedans est mesuré et vaut au moins 2, **aux deux largeurs**, ou bien un filet (16 October 2026, 14:30:33 +0200)
+>    assure le groupement là où l'espace manque. (16 October 2026, 14:30:33 +0200)
+> 2. Aucun nombre en dur ne subsiste dans les marges, gaps et paddings : uniquement des jetons. (16 October 2026, 14:30:33 +0200)
+> 3. Les jetons sont au `:root`, donc atteignables depuis un portail. (16 October 2026, 14:30:33 +0200)
+> 4. La dernière ligne d'un groupe ne laisse pas de vide en bas. (16 October 2026, 14:30:33 +0200)
+> 5. Les régions de la page ont toutes le même écart entre elles, et il est le plus grand de la page. (16 October 2026, 14:30:33 +0200)
+> 6. Le rendu est regardé à deux largeurs au moins, dont une sous 720 px. (16 October 2026, 14:30:33 +0200)
+>
+> ## Erreurs déjà payées (16 October 2026, 14:30:33 +0200)
+>
+> | Erreur | Cause racine | La règle | (16 October 2026, 14:30:33 +0200)
+> |---|---|---| (16 October 2026, 14:30:33 +0200)
+> | « Tout est collé » traité en ajoutant de l'air partout | Symptôme pris pour le diagnostic | Mesurer le ratio : c'est presque toujours un groupement faux, pas un manque d'espace | (16 October 2026, 14:30:33 +0200)
+> | Ratio à 0,53, groupement inversé | Un `row-gap` unique dans une grille qui empile des groupes | Le couple `row-gap` plus marge basse du dernier élément du groupe | (16 October 2026, 14:30:33 +0200)
+> | Zéro pixel entre deux régions | Chaque bloc réglait sa marge haute, aucun ne réglait la basse | Une région pousse ses voisines par le BAS, toujours dans le même sens | (16 October 2026, 14:30:33 +0200)
+> | Jetons ignorés par la moitié de l'interface | Déclarés sur la classe du composant, invisibles depuis un portail | Les jetons vivent au `:root` | (16 October 2026, 14:30:33 +0200)
+> | Alignement jugé faux alors qu'il était juste | Comparaison des bords `y` de boîtes de hauteurs différentes | Comparer les CENTRES, `y + height / 2` | (16 October 2026, 14:30:33 +0200)
+> | Ratio bon en large, cassé en étroit | Un groupe gagne une rangée sous le point de rupture et grandit plus vite que sa séparation | Remesurer sous 720 px, et poser un filet plutôt que de réclamer une distance que l'écran n'a pas | (16 October 2026, 14:30:33 +0200)
+> | Mesure faussée dans le volet d'inspection | Le volet tourne caché, ce qui gèle les animations CSS sur leur première image, et `getBoundingClientRect` inclut la transformation | Mesurer `offsetWidth` et `offsetHeight`, ou neutraliser l'animation avant de mesurer | (16 October 2026, 14:30:33 +0200)
+>
+> ## Où la méthode est déjà appliquée (16 October 2026, 14:30:33 +0200)
+>
+> `ZenRayProgress/src/learn/ZenRayJapanese.css`, en tête de fichier : l'échelle, le couple qui produit (16 October 2026, 14:30:33 +0200)
+> les deux distances, et le commentaire qui donne la mesure d'avant. Sert de modèle copiable. (16 October 2026, 14:30:33 +0200)
+>
+> Voisins à ne pas confondre : `design-sliders` sert à TROUVER une valeur à l'œil avec un curseur, (16 October 2026, 14:30:33 +0200)
+> `ui-atlas` à découper une interface en composants, `design-ux-ui-curves-liquidglass` à traiter le (16 October 2026, 14:30:33 +0200)
+> verre et la typographie. Ce skill traite uniquement l'espace et le groupement. (16 October 2026, 14:30:33 +0200)
+
+## 16 October 2026, 14:32:29 +0200 : Prompt
+
+<!-- feedback-event:83a3c0fd10d5f4da0b7b200d3bf76050a50f70181ebe77feb94bb34a41136077 (16 October 2026, 14:32:29 +0200) -->
+- Project: zenray-progress; kind: prompt. (16 October 2026, 14:32:29 +0200)
+
+> C'est ultra moche, l'UI maintenant. Recommence, loi de Gestalt, etc. (16 October 2026, 14:32:29 +0200)
+
+## 16 October 2026, 14:36:52 +0200 : Prompt
+
+<!-- feedback-event:0f56a86c0c6684ebe783555b79de16859120400b8ad1279d7e28518f23d01279 (16 October 2026, 14:36:52 +0200) -->
+- Project: zenray-progress; kind: prompt. (16 October 2026, 14:36:52 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/d3327e82-5a7e-46d8-b6f6-bc0447663c2b.jsonl. (16 October 2026, 14:36:52 +0200)
+
+> Le problème, c'est que le design de chaque tuile n'est pas aligné. Fais-moi trois propositions du design avec toutes les informations et je te valide ça. uniquement pour le design de tuile (16 October 2026, 14:36:52 +0200)
+
+## 16 October 2026, 14:36:52 +0200 : Prompt
+
+<!-- feedback-event:995b4e9c75e6cc972894f9eeb045bfe4427725ca526422b4db5d86d179798165 (16 October 2026, 14:36:52 +0200) -->
+- Project: zenray-progress; kind: prompt. (16 October 2026, 14:36:52 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/d3327e82-5a7e-46d8-b6f6-bc0447663c2b.jsonl. (16 October 2026, 14:36:52 +0200)
+
+> [Image: source: /private/tmp/claude-501/-Users-zenray--claude-Memory1/d3327e82-5a7e-46d8-b6f6-bc0447663c2b/images/5.png] (16 October 2026, 14:36:52 +0200)
+
+## 16 October 2026, 14:38:36 +0200 : Prompt
+
+<!-- feedback-event:db521677a3a3ad061d0b2b6337479843f3a5d643b4108969c861825209c17a05 (16 October 2026, 14:38:36 +0200) -->
+- Project: zenray-progress; kind: prompt. (16 October 2026, 14:38:36 +0200)
+
+> Le problème, c'est que le design de chaque tuile n'est pas aligné. Fais-moi trois propositions du design avec toutes les informations et je te valide ça, uniquement pour le design de tuile. (16 October 2026, 14:38:36 +0200)
+
+## 16 October 2026, 14:40:25 +0200 : Prompt
+
+<!-- feedback-event:18562218e4f686b1f47f5364d4d7870548f8913fea708dcf6507110014ace870 (16 October 2026, 14:40:25 +0200) -->
+- Project: zenray-progress; kind: prompt. (16 October 2026, 14:40:25 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/d3327e82-5a7e-46d8-b6f6-bc0447663c2b.jsonl. (16 October 2026, 14:40:25 +0200)
+
+> C · Formulaire compact (16 October 2026, 14:40:25 +0200)
+> parfait (16 October 2026, 14:40:25 +0200)
+
+## 16 October 2026, 14:41:08 +0200 : Prompt
+
+<!-- feedback-event:94d75ff7d62081a56fdc1b8e605192d7048b214e90910f35b9c45f76ef102407 (16 October 2026, 14:41:08 +0200) -->
+- Project: zenray-progress; kind: prompt. (16 October 2026, 14:41:08 +0200)
+
+> C · Formulaire compact : parfait. (16 October 2026, 14:41:08 +0200)
+
+## 16 October 2026, 14:41:08 +0200 : Standing rule
+
+<!-- feedback-event:515b05a09cf1cb26b7d68385cb3876f251471205c164d5b2cc552b4e75033b2c (16 October 2026, 14:41:08 +0200) -->
+- Project: zenray-progress; kind: rule. (16 October 2026, 14:41:08 +0200)
+
+> 16 October 2026, décision de Matthieu : la tuile d'exercice Sport est le design C (formulaire compact) : chaque réglage est une seule ligne encadrée, étiquette comprise, découpée par des filets ; séries 3 | 4 | libre, reps 6 | 8 | libre, charge en kg ; défauts 3 séries et 8 reps ; Plan garde une seule carte qui s'allonge. Maquettes : zenray-edit/designs/2026-10-16-sport-round-5 et round-6. (16 October 2026, 14:41:08 +0200)
+
+## 16 October 2026, 14:50:21 +0200 : Prompt
+
+<!-- feedback-event:dd797bf50e13a30eedc059f0d677b27c08902a1a01c6d29a6a142a7afffcab37 (16 October 2026, 14:50:21 +0200) -->
+- Project: zenray-progress; kind: prompt. (16 October 2026, 14:50:21 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/d3327e82-5a7e-46d8-b6f6-bc0447663c2b.jsonl. (16 October 2026, 14:50:21 +0200)
+
+> Montre moi le design final et il manque les images je te les donnes et tu les découpe parfaitement Il n'y a pas de format global parce qu'il s'agit d'images générées par IA, mais par contre tu dois découper uniquement ce qui illustre l'image. Je vais te passer les images et je veux que tu me sur une sheet, tu me découpes toutes les images proprement et ensuite tu me montres et ensuite je t'enregistrerai ce que je garde. Tu peux aussi faire plusieurs découpes via un bord rouge et je te dis via une sheet laquelle je confirme. Il y a trois propositions. (16 October 2026, 14:50:21 +0200)
+> Dans la sheet montre moi l'attribution index mapping avec les images (16 October 2026, 14:50:21 +0200)
+> voici les exos à consigner dans la data base  (16 October 2026, 14:50:21 +0200)
+>
+> <pasted_content id="fed1"> (16 October 2026, 14:50:21 +0200)
+> Non je t'ai demandé 1 images INDIVIDUELLES PAS UNE GRILLES pour chaque exo et 1 images avec un slash horizontal quand y'a un ou ... recommence (16 October 2026, 14:50:21 +0200)
+>
+> Recommence via une barre horizontal quand je met 2 exos ou un "ou" tu dois mettre les 2 dans l'images. go Tractions pronation ou prise neutre (lestées) — Largeur du dos en V, biceps et poigne/avant-bras (16 October 2026, 14:50:21 +0200)
+>
+> 1. Développé incliné aux haltères (banc à 30°–45°) — Remplissage du haut des pectoraux sous la clavicule    (16 October 2026, 14:50:21 +0200)
+> 2. Front Squat à la barre (ou Squat Bulgare) — Galbe des quadriceps et gainage du tronc droit sans épaissir la taille    (16 October 2026, 14:50:21 +0200)
+> 3. Soulevé de terre roumain à la barre — Chaîne postérieure (ischios, fessiers), densité du dos et avant-bras    (16 October 2026, 14:50:21 +0200)
+> 4. Développé militaire debout à la barre (OHP) — Épaules 3D, trapèzes et gainage abdominal debout    (16 October 2026, 14:50:21 +0200)
+> 5. Dips aux barres parallèles (buste penché, lestés) — Découpe nette du bas/extérieur des pectoraux et triceps    (16 October 2026, 14:50:21 +0200)
+> 6. Élévations latérales à la poulie basse (ou haltères) — Galbe externe de l'épaule pour le ratio 1,618    (16 October 2026, 14:50:21 +0200)
+> 7. Relevés de jambes tendues suspendu à la barre + Marche du fermier / Cou — Grand dentelé, obliques, V d'Adonis, avant-bras et cou    (16 October 2026, 14:50:21 +0200)
+>
+>
+> Pour chacun de ces exercices, tu crées un seul image par rapport à mon nombre N d'exercices dans le style Réaliste statue grec : Style le david à marseille (16 October 2026, 14:50:21 +0200)
+> </pasted_content id="fed1"> (16 October 2026, 14:50:21 +0200)
+>
+> """ ATTENTION CES CONSIGNES C ETAIT POUR LIMG GEN AI TOI TU FAIS PAS ÇA  (16 October 2026, 14:50:21 +0200)
+>
+>
+> /Users/zenray/Downloads/Statues_Grecques_8_Exercices_Individuels/01_tractions_pronation_prise_neutre.png /Users/zenray/Downloads/Statues_Grecques_8_Exercices_Individuels/02_developpe_incline_halteres.png /Users/zenray/Downloads/Statues_Grecques_8_Exercices_Individuels/03_front_squat_squat_bulgare.png /Users/zenray/Downloads/Statues_Grecques_8_Exercices_Individuels/04_souleve_de_terre_roumain.png /Users/zenray/Downloads/Statues_Grecques_8_Exercices_Individuels/05_developpe_militaire.png /Users/zenray/Downloads/Statues_Grecques_8_Exercices_Individuels/06_dips_lestes.png /Users/zenray/Downloads/Statues_Grecques_8_Exercices_Individuels/07_elevations_laterales_poulie_halteres.png /Users/zenray/Downloads/Statues_Grecques_8_Exercices_Individuels/08_releves_jambes_marche_fermier_cou.png (16 October 2026, 14:50:21 +0200)
+>
+> FAUT QUE TU PRENNES UNIQUEMENT LE DÉCOUPAGE DE L'IMG PAS LE TEXTE GO (16 October 2026, 14:50:21 +0200)
+
+## 16 October 2026, 14:51:27 +0200 : Iteration
+
+<!-- feedback-event:bcbe5120d76920531f02fc16c4b91c6bc00e2a050c48d99a44018dfc8b806589 (16 October 2026, 14:51:27 +0200) -->
+- Project: zenray-progress; kind: iteration. (16 October 2026, 14:51:27 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/d3327e82-5a7e-46d8-b6f6-bc0447663c2b.jsonl. (16 October 2026, 14:51:27 +0200)
+
+> Je vérifie les deux dernières images (07 et 08) avant de calculer les découpes. (16 October 2026, 14:51:27 +0200)
+
+## 16 October 2026, 14:55:57 +0200 : Prompt
+
+<!-- feedback-event:95eb0ef539c1a5aa00276539522b11fd4a9242767e24bebc024f900e2cfd42e2 (16 October 2026, 14:55:57 +0200) -->
+- Project: zenray-progress; kind: prompt. (16 October 2026, 14:55:57 +0200)
+
+> Montre-moi le design final. Il manque les images : je te les donne et tu les découpes parfaitement. Il n'y a pas de format global parce que ce sont des images générées par IA, mais tu dois découper uniquement ce qui illustre l'image, pas le texte (ni titre, ni panneau, ni légende). Sur une sheet, tu me découpes toutes les images proprement, tu me montres, et ensuite je t'enregistre ce que je garde. Tu peux faire plusieurs découpes via un bord rouge et je te dis via une sheet laquelle je confirme : trois propositions. Dans la sheet, montre-moi l'attribution (index mapping) avec les images. Exos à consigner dans la database : tractions lestées, développé incliné aux haltères, front squat ou squat bulgare, soulevé de terre roumain, développé militaire OHP, dips lestés, élévations latérales poulie basse ou haltères, relevés de jambes + marche du fermier + cou. Quand il y a un « ou » ou deux exos, une barre horizontale sépare les deux illustrations dans la même image. Les consignes d'image gen collées n'étaient pas pour moi. (16 October 2026, 14:55:57 +0200)
+
+## 16 October 2026, 15:00:03 +0200 : Prompt
+
+<!-- feedback-event:f32ae9ce09361c69f259af7b6fd300053f03f2a7cd93b2307f622a534d670c4a (16 October 2026, 15:00:03 +0200) -->
+- Project: zenray-progress; kind: prompt. (16 October 2026, 15:00:03 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/d3327e82-5a7e-46d8-b6f6-bc0447663c2b.jsonl. (16 October 2026, 15:00:03 +0200)
+
+> 01 tu garde uniquement prise pronation / discard prise neutre (16 October 2026, 15:00:03 +0200)
+>
+> 08 enlève cou  (16 October 2026, 15:00:03 +0200)
+>
+> 01:A, 02:B, 03:B, 04:B, 05:B, 06:B, 07:B, 08:B (16 October 2026, 15:00:03 +0200)
+
+## 16 October 2026, 15:00:49 +0200 : Iteration
+
+<!-- feedback-event:d016906735469774a3f728edc9255494459cdc0f17838262adb5c8cd5e7f60fa (16 October 2026, 15:00:49 +0200) -->
+- Project: zenray-progress; kind: iteration. (16 October 2026, 15:00:49 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/d3327e82-5a7e-46d8-b6f6-bc0447663c2b.jsonl. (16 October 2026, 15:00:49 +0200)
+
+> Les serveurs répondent, je relance la navigation avec le navigateur intégré. (16 October 2026, 15:00:49 +0200)
+
+## 16 October 2026, 15:01:11 +0200 : Prompt
+
+<!-- feedback-event:c7d503113950e9784145d68829570a6f258e8e83582f043db55e2dcfb583e3a9 (16 October 2026, 15:01:11 +0200) -->
+- Project: zenray-progress; kind: prompt. (16 October 2026, 15:01:11 +0200)
+
+> Sélection des découpes (feuille) : 01:A, 02:B, 03:B, 04:B, 05:B, 06:B, 07:B, 08:B. Pour 01, garder uniquement prise pronation et écarter prise neutre. Pour 08, enlever le cou. (16 October 2026, 15:01:11 +0200)
+
+## 16 October 2026, 15:01:12 +0200 : Standing rule
+
+<!-- feedback-event:828472b09d9acaf1595ed2de94af4c24bc606638d8763a488e210e59503d645a (16 October 2026, 15:01:12 +0200) -->
+- Project: zenray-progress; kind: rule. (16 October 2026, 15:01:12 +0200)
+
+> 16 October 2026, décision de Matthieu : images Sport finales = découpes 01 A (prise pronation seule, prise neutre écartée), 02 à 08 B (sans texte, recadrées) ; 08 sans le cou (relevés de jambes tendues + marche du fermier) ; plusieurs variantes d'un exercice sont empilées dans UNE image avec une barre horizontale dorée ; on découpe uniquement l'illustration, jamais le titre, le panneau ni la légende. Masters : tmp-zenray-sport/crop/final, WebP : mockups/img, correspondance : crop/images-map.json. (16 October 2026, 15:01:12 +0200)
+
+## 16 October 2026, 15:07:13 +0200 : Prompt
+
+<!-- feedback-event:8bc239027e871409014498a6352620f74a16fdd2716ba1a6ac777b1d997ba0ed (16 October 2026, 15:07:13 +0200) -->
+- Project: zenray-progress; kind: prompt. (16 October 2026, 15:07:13 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/d3327e82-5a7e-46d8-b6f6-bc0447663c2b.jsonl. (16 October 2026, 15:07:13 +0200)
+
+> objectif visuel est mal fait dans la vue mobile corrige faut que ça append aussi dans la note du jour via une notifications mais j'ai pas besoin de le voir ça (enfin juste la notif faudra plug au code existant) (16 October 2026, 15:07:13 +0200)
+
+## 16 October 2026, 15:07:13 +0200 : Prompt
+
+<!-- feedback-event:3b6baf499df74b548ccfb0e612ae42963b21e36edc0ea10e9a66a44c0c4d5620 (16 October 2026, 15:07:13 +0200) -->
+- Project: zenray-progress; kind: prompt. (16 October 2026, 15:07:13 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/d3327e82-5a7e-46d8-b6f6-bc0447663c2b.jsonl. (16 October 2026, 15:07:13 +0200)
+
+> [Image: source: /private/tmp/claude-501/-Users-zenray--claude-Memory1/d3327e82-5a7e-46d8-b6f6-bc0447663c2b/images/6.webp] (16 October 2026, 15:07:13 +0200)
+
+## 16 October 2026, 15:08:14 +0200 : Prompt
+
+<!-- feedback-event:3a4e213cdb8b7f6ad00090d2e5fc85ef5bbdefe5d5c2b60469646972b6f96c13 (16 October 2026, 15:08:14 +0200) -->
+- Project: zenray-progress; kind: prompt. (16 October 2026, 15:08:14 +0200)
+
+> L'objectif visuel est mal fait dans la vue mobile : corrige. Il faut aussi que ça s'append dans la note du jour via une notification ; je n'ai pas besoin de le voir, juste la notification (il faudra brancher sur le code existant). (16 October 2026, 15:08:14 +0200)
+
+## 16 October 2026, 15:09:09 +0200 : Prompt
+
+<!-- feedback-event:13f86f310f7d764c1daeb793b6f9e21a693b29b4be2850507e937650e4379190 (16 October 2026, 15:09:09 +0200) -->
+- Project: zenray-progress; kind: prompt. (16 October 2026, 15:09:09 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/d3327e82-5a7e-46d8-b6f6-bc0447663c2b.jsonl. (16 October 2026, 15:09:09 +0200)
+
+> Et dernier truc faut que je puisse consigner une séance que j'aurai fait dans le passé donc permet moi d'edit la date de plan go (pas besoin de changer l'heure enfin ça doit être possible je veux juste pouvoir changer le jour donc emphase légère sur l'UI) (16 October 2026, 15:09:09 +0200)
+
+## 16 October 2026, 15:10:15 +0200 : Prompt
+
+<!-- feedback-event:812b829b8b81dedfc29c24b695517bd8a9b302b5cac3be5caae349432a53371f (16 October 2026, 15:10:15 +0200) -->
+- Project: zenray-progress; kind: prompt. (16 October 2026, 15:10:15 +0200)
+
+> Et dernier truc : il faut que je puisse consigner une séance que j'aurai faite dans le passé, donc permets-moi d'éditer la date de Plan. Pas besoin de changer l'heure (enfin, ça doit être possible), je veux juste pouvoir changer le jour. Donc emphase légère sur l'UI. (16 October 2026, 15:10:15 +0200)
+
+## 16 October 2026, 15:12:46 +0200 : Prompt
+
+<!-- feedback-event:281a9bea0a3b62b532e220bd8a9146da3b725a5c9e4eb4221d03da5a9cf974cd (16 October 2026, 15:12:46 +0200) -->
+- Project: zenray-progress; kind: prompt. (16 October 2026, 15:12:46 +0200)
+- Source: /Users/zenray/.claude/projects/-Users-zenray--claude-Memory1/d3327e82-5a7e-46d8-b6f6-bc0447663c2b.jsonl. (16 October 2026, 15:12:46 +0200)
+
+> Oui, intègre la section Sport dans ZenRayProgress, branchée sur Plan et la note du jour. (16 October 2026, 15:12:46 +0200)
+
+## 16 October 2026, 15:24:46 +0200 : Prompt
+
+<!-- feedback-event:9f82d0384e67199f9aa3e5d110a6b96d92dbbf91c5affc70e9c2aaac995c9bc9 (16 October 2026, 15:24:46 +0200) -->
+- Project: zenray-progress; kind: prompt. (16 October 2026, 15:24:46 +0200)
+
+> Oui, intègre la section Sport dans ZenRayProgress, branchée sur Plan et la note du jour. (16 October 2026, 15:24:46 +0200)

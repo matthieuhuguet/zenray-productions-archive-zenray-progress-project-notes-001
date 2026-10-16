@@ -1,0 +1,101 @@
+// ZenRay Sport mockups: shared data, store, helpers, settings panel. Written 16 October 2026.
+// EN: exercises + log live here once; the three designs only differ by layout.
+// FR : la base d'exercices et le journal vivent ici une seule fois ; les trois designs ne diffèrent que par la mise en page.
+(() => {
+  // Data comes from exercises.js (built from exercises.json by Scripts/BuildExercises.mjs).
+  const EX = window.SPORT_EX;
+  const GROUPS = ['Tous', ...new Set(EX.map(e => e.group))];
+  const GROUP_HUE = { 'Épaules': 28, 'Pectoraux': 346, 'Dos': 205, 'Jambes': 142, 'Abdos': 268 };
+
+  const iso = d => d.toISOString().slice(0, 10);
+  const today = () => iso(new Date());
+  const shift = (day, n) => { const d = new Date(day + 'T12:00:00'); d.setDate(d.getDate() + n); return iso(d); };
+  // Dates written in English with the month spelled out, same rule as the rest of the system.
+  const fmt = day => new Date(day + 'T12:00:00').toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+  const weekday = day => new Date(day + 'T12:00:00').toLocaleDateString('en-GB', { weekday: 'long' });
+
+  const KEY = 'zr-sport-log-v2';
+  const seed = () => [
+    { id: 's1', ex: 'lat-raise', date: today(), sets: 4, reps: 15, kg: 6, note: 'Épaules fraîches' },
+    { id: 's2', ex: 'incline-db', date: today(), sets: 3, reps: 10, kg: 10, note: '' },
+    { id: 's3', ex: 'bulgarian', date: shift(today(), -4), sets: 3, reps: 10, kg: 8, note: 'Jambe gauche plus faible' },
+    { id: 's4', ex: 'pullup', date: shift(today(), -4), sets: 3, reps: 5, kg: 0, note: '' },
+  ];
+  let mem = null;
+  const load = () => { try { return JSON.parse(localStorage.getItem(KEY)) || (mem = mem || seed()); } catch { return mem = mem || seed(); } };
+  const save = l => { mem = l; try { localStorage.setItem(KEY, JSON.stringify(l)); } catch {} };
+
+  const byId = id => EX.find(e => e.id === id);
+  const forDay = day => load().filter(e => e.date === day);
+  // Last time an exercise was done, shown as « last time » on the card.
+  const lastOf = id => load().filter(e => e.ex === id).sort((a, b) => b.date.localeCompare(a.date))[0];
+  const addEntry = (ex, day, patch = {}) => {
+    const e = byId(ex); const l = load();
+    const entry = { id: 'e' + Date.now() + Math.random().toString(36).slice(2, 5), ex, date: day, sets: e.sets, reps: e.reps, kg: e.kg, note: '', ...patch };
+    l.push(entry); save(l); return entry;
+  };
+  const patchEntry = (id, patch) => { const l = load(); const e = l.find(x => x.id === id); if (e) Object.assign(e, patch); save(l); };
+  const dropEntry = id => save(load().filter(e => e.id !== id));
+  // « grep » over name, group and description, every word must match.
+  const grep = (q, group) => { const w = q.toLowerCase().split(/\s+/).filter(Boolean);
+    return EX.filter(e => (group === 'Tous' || !group || e.group === group) && w.every(x => (e.name + ' ' + e.group + ' ' + e.desc).toLowerCase().includes(x))); };
+
+  const h = (t, a = {}, ...k) => { const e = document.createElement(t);
+    for (const [n, v] of Object.entries(a || {})) { if (n === 'class') e.className = v; else if (n === 'style') e.style.cssText = v;
+      else if (n.startsWith('on')) e.addEventListener(n.slice(2), v); else if (v !== false && v != null) e.setAttribute(n, v === true ? '' : v); }
+    for (const c of k.flat()) if (c != null && c !== false) e.append(c.nodeType ? c : document.createTextNode(c)); return e; };
+
+  const thumb = (ex, size) => h('div', { class: 'thumb', style: `width:${size};height:${size};--gh:${GROUP_HUE[ex.group] || 210}` },
+    ex.image ? h('img', { src: ex.image, alt: ex.name }) : [h('span', { class: 'ini' }, ex.name.split(' ').slice(0, 2).map(w => w[0]).join('')), h('span', { class: 'soon' }, 'image à venir')]);
+
+  const stepper = ({ label, value, min = 0, max = 99, step = 1, onChange }) => {
+    const n = h('span', { class: 'num' }, String(value)); let v = value;
+    const set = d => { v = Math.max(min, Math.min(max, +(v + d).toFixed(2))); n.textContent = String(v); onChange && onChange(v); };
+    return h('div', { class: 'step' }, h('label', {}, label), h('div', { class: 'row' }, h('button', { onclick: () => set(-step), 'aria-label': 'moins' }, '−'), n, h('button', { onclick: () => set(step), 'aria-label': 'plus' }, '+')));
+  };
+
+  const dateBar = (state, rerender) => h('div', { class: 'date' },
+    h('button', { onclick: () => { state.date = shift(state.date, -1); rerender(); } }, '‹'),
+    h('b', {}, state.date === today() ? `Today · ${fmt(state.date)}` : `${weekday(state.date)} · ${fmt(state.date)}`),
+    h('button', { onclick: () => { state.date = shift(state.date, 1); rerender(); } }, '›'));
+
+  // Settings panel: 8 parameters max, writes CSS variables only. Workshop only, never goes to production.
+  const PARAMS = [
+    { v: '--sp-hue', label: 'Teinte accent', min: 0, max: 360, step: 1, def: 211, unit: '' },
+    { v: '--sp-r', label: 'Arrondi', min: 4, max: 26, step: 1, def: 14, unit: 'px' },
+    { v: '--sp-gap', label: 'Espacement', min: 6, max: 28, step: 1, def: 14, unit: 'px' },
+    { v: '--sp-img', label: 'Taille image', min: 72, max: 220, step: 2, def: 132, unit: 'px' },
+    { v: '--sp-ui', label: 'Taille interface', min: 12, max: 18, step: .5, def: 14, unit: 'px' },
+    { v: '--sp-glass', label: 'Opacité du verre', min: .3, max: .95, step: .01, def: .62, unit: '' },
+    { v: '--sp-side', label: 'Largeur sidebar', min: 190, max: 300, step: 2, def: 232, unit: 'px' },
+    { v: '--sp-blur', label: 'Flou du verre', min: 0, max: 48, step: 1, def: 28, unit: 'px' },
+  ];
+  const panel = () => {
+    const PK = 'zr-sport-params-v1'; let saved = {}; try { saved = JSON.parse(localStorage.getItem(PK)) || {}; } catch {}
+    const cur = {}; const apply = (p, x) => { cur[p.v] = x; document.documentElement.style.setProperty(p.v, x + p.unit); try { localStorage.setItem(PK, JSON.stringify(cur)); } catch {} };
+    const rows = PARAMS.map(p => { const x = saved[p.v] ?? p.def; apply(p, x); const out = h('span', { class: 'num' }, String(x));
+      return [h('div', {}, p.label), out, h('input', { type: 'range', min: p.min, max: p.max, step: p.step, value: x, oninput: e => { out.textContent = e.target.value; apply(p, +e.target.value); } })]; });
+    const copy = h('button', { onclick: () => navigator.clipboard?.writeText(PARAMS.map(p => `${p.v}: ${cur[p.v]}${p.unit}`).join('; ')) .then(() => copy.textContent = 'Copié') }, 'Copier les valeurs');
+    document.body.append(h('details', { class: 'panel' }, h('summary', {}, 'Réglages (atelier)'), h('div', { class: 'p' }, rows.flat()),
+      h('div', { class: 'acts' }, copy, h('button', { onclick: () => document.documentElement.classList.toggle('zr-dark') }, 'Clair / sombre'))));
+  };
+
+  const NAV = [['Create'], ['Progress'], ['Assets'], ['Plan'], ['Timer'], ['Goals'], ['Sport', true], ['Skills'], ['Freelance']];
+  const sidebar = () => h('aside', { class: 'side' }, h('div', { class: 'search' }, 'Search'), h('h4', {}, 'Create'),
+    NAV.map(([n, on]) => h('button', { class: 'it' + (on ? ' on' : '') }, n)), h('h4', {}, 'Learn'), h('button', { class: 'it' }, 'Japanese'));
+
+  // Boot: desktop = sidebar + main + phone (same page in an iframe, ?m=1). Embed = mobile layout only.
+  const boot = render => {
+    const embed = new URLSearchParams(location.search).has('m');
+    const root = h('div', { class: embed ? 'mob' : 'win' });
+    const main = h('main', { class: 'main' });
+    const ctx = { mobile: embed, rerender: () => { main.replaceChildren(); render(main, ctx); } };
+    if (embed) { document.documentElement.classList.add('embed'); root.append(main); document.body.append(root); }
+    else { root.append(sidebar(), main); document.body.append(h('div', { class: 'stage' }, root, h('div', { class: 'phone' }, h('iframe', { src: location.pathname + '?m=1' }))));
+      panel(); }
+    ctx.rerender();
+    addEventListener('storage', e => { if (e.key === KEY) ctx.rerender(); });
+    return ctx;
+  };
+  window.SPORT = { EX, GROUPS, GROUP_HUE, today, shift, fmt, weekday, load, save, forDay, lastOf, addEntry, patchEntry, dropEntry, byId, grep, h, thumb, stepper, dateBar, boot };
+})();

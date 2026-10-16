@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="fr"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sport C Seance</title>
+<link rel="stylesheet" href="sport-shared.css">
+<style>
+/* C: guided session, one exercise at a time, big touch targets, rest timer. 16 October 2026 */
+.split{display:grid;grid-template-columns:240px 1fr;gap:var(--sp-gap);flex:1;min-height:0;padding:0 20px 20px}
+.mob .split{display:flex;flex-direction:column;padding:0 16px 10px;gap:10px;overflow:auto}
+.plan{display:flex;flex-direction:column;gap:6px;overflow:auto}
+.mob .plan{flex-direction:row;flex:none}
+.pl{display:flex;align-items:center;gap:8px;padding:8px 10px;border-radius:calc(var(--sp-r) - 3px);border:.5px solid var(--sp-line);background:transparent;text-align:left;flex:none}
+.pl.on{background:var(--sp-accent-soft);border-color:transparent;color:var(--sp-accent)}
+.pl .dots{display:flex;gap:3px;margin-left:auto}.pl i{width:7px;height:7px;border-radius:50%;background:rgba(128,128,128,.3)}.pl i.d{background:var(--sp-accent)}
+.focus{display:flex;flex-direction:column;gap:var(--sp-gap);overflow:auto}
+.hero{display:grid;grid-template-columns:auto 1fr;gap:16px}.mob .hero{grid-template-columns:1fr}
+.hero h2{margin:0;font:350 calc(var(--sp-ui)*2)/1.1 var(--sp-serif)}.hero p{color:var(--sp-muted);margin:6px 0 0}
+.mob .hero .thumb{width:100%!important;height:calc(var(--sp-img)*1.3)!important}
+.setchips{display:flex;gap:8px;flex-wrap:wrap}
+.sc{width:54px;height:54px;border-radius:calc(var(--sp-r) - 2px);border:.5px solid var(--sp-line);background:transparent;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:11px;color:var(--sp-muted)}
+.sc b{font:400 18px var(--sp-serif);color:var(--sp-fg)}.sc.d{background:var(--sp-accent);color:#fff;border-color:transparent}.sc.d b{color:#fff}.sc.now{border:1.5px solid var(--sp-accent)}
+.big{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.big .step .num{font-size:calc(var(--sp-ui)*2)!important}.big .step .row button{width:46px;height:50px;font-size:1.4em}
+.go{flex:1;min-width:150px;padding:16px;font-size:calc(var(--sp-ui)*1.1)}
+.rest{display:flex;align-items:center;gap:10px;color:var(--sp-muted)}.rest b{font:400 calc(var(--sp-ui)*1.6) var(--sp-serif);color:var(--sp-accent)}
+.palette{position:absolute;inset:0;background:rgba(0,0,0,.2);display:flex;justify-content:center;padding-top:70px;z-index:5}
+.pal{width:min(480px,92%);max-height:80%;display:flex;flex-direction:column;padding:12px;background:var(--sp-bg)}
+.pal .list{overflow:auto;margin-top:8px;display:flex;flex-direction:column}
+.pal button.r{display:flex;gap:10px;align-items:center;border:0;background:transparent;padding:7px;border-radius:9px;text-align:left}.pal button.r:hover{background:var(--sp-accent-soft)}
+</style>
+<body><script src="exercises.js"></script><script src="sport-shared.js"></script><script>
+const {h,thumb,stepper,dateBar,grep,forDay,addEntry,patchEntry,dropEntry,fmt,byId,today} = SPORT;
+// Per-set progress is kept in memory for the mockup; the real build stores sets as an array on the entry.
+const st = { date: today(), idx: 0, done: {}, pal: false, q: '', rest: 0, timer: null, cur: {} };
+const REST = 60;
+SPORT.boot((main, ctx) => {
+  const R = ctx.rerender, day = forDay(st.date); st.idx = Math.min(st.idx, Math.max(day.length - 1, 0));
+  const e = day[st.idx], ex = e && byId(e.ex), dn = e ? (st.done[e.id] || []) : [];
+  const startRest = () => { clearInterval(st.timer); st.rest = REST; st.timer = setInterval(() => { st.rest--; const n = main.querySelector('.rest b'); if (n) n.textContent = st.rest + 's'; if (st.rest <= 0) { clearInterval(st.timer); R(); } }, 1000); };
+  const plan = h('div', { class: 'plan' }, day.map((x, i) => { const d = (st.done[x.id] || []).length; return h('button', { class: 'pl' + (i === st.idx ? ' on' : ''), onclick: () => { st.idx = i; R(); } }, byId(x.ex).name, h('span', { class: 'dots' }, Array.from({ length: x.sets }, (_, k) => h('i', { class: k < d ? 'd' : '' })))); }),
+    h('button', { class: 'pl', style: 'color:var(--sp-accent)', onclick: () => { st.pal = true; R(); } }, '＋ Ajouter (chercher)'));
+  let focus;
+  if (!e) focus = h('div', { class: 'focus', style: 'margin:auto;text-align:center;color:var(--sp-muted)' }, `Aucun exercice le ${fmt(st.date)}.`, h('br'), h('button', { class: 'btn', style: 'margin-top:12px', onclick: () => { st.pal = true; R(); } }, 'Chercher un exercice'));
+  else { const now = Math.min(dn.length, e.sets - 1), cur = st.cur[e.id] || (st.cur[e.id] = { reps: e.reps, kg: e.kg });
+    focus = h('div', { class: 'focus' },
+      h('div', { class: 'hero' }, thumb(ex, 'var(--sp-img)'), h('div', {}, h('h2', {}, ex.name), h('p', {}, ex.desc))),
+      h('div', { class: 'setchips' }, Array.from({ length: e.sets }, (_, k) => h('div', { class: 'sc' + (k < dn.length ? ' d' : k === now ? ' now' : '') }, h('span', {}, `Série ${k + 1}`), h('b', {}, k < dn.length ? dn[k] : '·')))),
+      dn.length >= e.sets ? h('div', { class: 'card', style: 'padding:14px' }, `Terminé : ${e.sets} séries, ${dn.join(' + ')} reps.`, h('button', { class: 'btn ghost', style: 'margin-left:10px', onclick: () => { st.done[e.id] = []; R(); } }, 'Refaire'), h('button', { class: 'btn', style: 'margin-left:8px', onclick: () => { st.idx = (st.idx + 1) % day.length; R(); } }, 'Suivant'))
+      : h('div', { class: 'big' }, stepper({ label: 'Reps', value: cur.reps, min: 1, onChange: v => cur.reps = v }), stepper({ label: 'Charge kg', value: cur.kg, step: 2.5, onChange: v => cur.kg = v }),
+          h('button', { class: 'btn go', onclick: () => { (st.done[e.id] = st.done[e.id] || []).push(cur.reps); patchEntry(e.id, { reps: cur.reps, kg: cur.kg }); startRest(); R(); } }, `Valider la série ${now + 1}`)),
+      st.rest > 0 && h('div', { class: 'rest' }, 'Repos', h('b', { class: 'num' }, st.rest + 's'), h('button', { class: 'btn ghost', onclick: () => { clearInterval(st.timer); st.rest = 0; R(); } }, 'Passer')),
+      h('input', { placeholder: 'Description, ressenti…', value: e.note, style: 'border:0;border-bottom:.5px solid var(--sp-line);background:transparent;padding:6px 0;outline:0', onchange: ev => patchEntry(e.id, { note: ev.target.value }) }),
+      h('div', { class: 'auto' }, `Date inscrite automatiquement : ${fmt(st.date)}`)); }
+  main.append(h('div', { class: 'top' }, h('h1', {}, 'Sport'), h('div', { class: 'sp' }), dateBar(st, R)), h('div', { class: 'split' }, plan, focus));
+  if (st.pal) { const list = h('div', { class: 'list' }); const fill = q => list.replaceChildren(...grep(q, 'Tous').map(x => h('button', { class: 'r', onclick: () => { addEntry(x.id, st.date); st.pal = false; st.idx = forDay(st.date).length - 1; R(); } }, thumb(x, '38px'), h('span', {}, h('b', { style: 'font-weight:500;display:block' }, x.name), h('small', { style: 'color:var(--sp-muted)' }, x.group + ` · ${x.sets}×${x.reps}`)))));
+    const inp = h('input', { placeholder: 'Grep la base d\'exercices…', oninput: ev => fill(ev.target.value) }); fill('');
+    main.append(h('div', { class: 'palette', onclick: ev => { if (ev.target.classList.contains('palette')) { st.pal = false; R(); } } }, h('div', { class: 'card pal' }, h('div', { class: 'search-in' }, '⌕', inp), list)));
+    setTimeout(() => inp.focus()); }
+});
+</script></body></html>

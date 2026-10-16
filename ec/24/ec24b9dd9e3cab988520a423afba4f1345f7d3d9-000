@@ -1,0 +1,19 @@
+{
+  "date": "16 October 2026",
+  "slug": "sport-round-3",
+  "folder": "2026-10-16-sport-round-3-v2",
+  "version": 2,
+  "title": "Sport : ronde 3 v2, proposition H avec presets cliquables (séries 3 ou 4, reps 6 ou 8) et unité kg",
+  "module": "sport",
+  "project": "zenray-progress",
+  "status": "pending",
+  "atelier": "/Users/zenray/.claude/tmp/tmp-zenray-sport/mockups",
+  "files": [
+    "index.html",
+    "fond.webp",
+    "sport-shared.css"
+  ],
+  "indexSha256": "694841249d620a0783ec65c688d2a04bafeee18b88d996850bd4b83310d5c9b9",
+  "filedAt": "2026-10-16T12:29:19.280Z",
+  "note": null
+}

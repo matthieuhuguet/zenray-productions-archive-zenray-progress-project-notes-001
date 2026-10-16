@@ -1,0 +1,19 @@
+{
+  "date": "16 October 2026",
+  "slug": "sport-round-7",
+  "folder": "2026-10-16-sport-round-7",
+  "version": 1,
+  "title": "Sport : ronde 7, design final avec les 8 images découpées confirmées",
+  "module": "sport",
+  "project": "zenray-progress",
+  "status": "pending",
+  "atelier": "/Users/zenray/.claude/tmp/tmp-zenray-sport/mockups",
+  "files": [
+    "index.html",
+    "fond.webp",
+    "sport-shared.css"
+  ],
+  "indexSha256": "61bab31efd0f64f1ec96e69c446f42e4a79165ff849c9c57a3bd0ab5150371f5",
+  "filedAt": "2026-10-16T13:01:11.844Z",
+  "note": null
+}

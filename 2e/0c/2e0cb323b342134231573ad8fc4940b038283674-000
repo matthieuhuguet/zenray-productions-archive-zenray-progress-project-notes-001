@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="fr"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sport H Base</title>
+<link rel="stylesheet" href="sport-shared.css">
+<style>
+.opt{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.opt>label{width:50px;font-size:calc(var(--sp-ui)*.82);color:var(--sp-muted)}.pr{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.pc{min-width:36px;height:32px;border-radius:calc(var(--sp-r) - 4px);border:.5px solid var(--sp-line);background:transparent;font-size:calc(var(--sp-ui)*1.15)}.pc.on{background:var(--sp-accent);border-color:transparent;color:#fff}
+.opt .step label{display:none}.opt .step .row button{width:26px;height:30px}
+/* H: iteration on G. No A/B/C programs: grep the whole exercise base, every set is appended to today's session,
+   and Plan keeps ONE card that grows. Plus the "Objectif visuel" photo tiles. 16 October 2026 */
+.bar{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.bar .search-in{flex:1;min-width:160px}
+.grid{flex:1;overflow:auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(calc(var(--sp-img) + 46px),1fr));grid-auto-rows:max-content;gap:var(--sp-gap);align-content:start;min-height:0;padding-bottom:6px}
+.mob .grid{grid-template-columns:1fr 1fr}
+.tl2{display:flex;flex-direction:column;border-radius:var(--sp-r);border:.5px solid var(--sp-line);overflow:hidden;background:var(--sp-bg)}
+.tl2.in{border-color:hsl(142 60% 40% / .5);box-shadow:0 0 0 2px hsl(142 60% 45% / .18)}
+.tl2 .thumb{width:100%!important;height:calc(var(--sp-img)*.8)!important;border-radius:0;cursor:pointer}
+.tl2 .t{padding:8px 11px 11px;display:flex;flex-direction:column;gap:8px}
+.tl2 .t b{font-weight:500;display:flex;gap:6px;align-items:center}.tl2 .t b span{flex:1}
+.i{border:0;background:transparent;color:var(--sp-muted);padding:0}
+.done-line{font-size:calc(var(--sp-ui)*.88);color:hsl(142 60% 30%);font-weight:500}
+.mini{display:flex;gap:8px;justify-content:space-between;align-items:center;flex-wrap:wrap}
+.mini .step label{display:none}.mini .step .row button{width:26px;height:28px}.mini .step .row .num{min-width:24px}
+.acts{display:flex;gap:6px}.undo{border:0;border-radius:calc(var(--sp-r) - 3px);background:rgba(128,128,128,.16);padding:0 12px}
+.tap{flex:1;border:0;border-radius:calc(var(--sp-r) - 3px);background:var(--sp-accent);color:#fff;padding:11px;font-weight:500}
+.tl2.in .tap{background:hsl(142 60% 38%)}
+.tl2 .info{padding:0 11px 10px}
+.empty-g{margin:auto;color:var(--sp-muted);text-align:center;padding:30px}
+/* objective photos */
+.goal{flex:1;overflow:auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));grid-auto-rows:max-content;gap:var(--sp-gap);align-content:start}
+.mob .goal{grid-template-columns:1fr 1fr}
+.gt{position:relative;aspect-ratio:3/4;border-radius:var(--sp-r);overflow:hidden;border:.5px solid var(--sp-line);background:#222;padding:0;cursor:zoom-in}
+.gt img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}.gt:hover img{transform:scale(1.04)}
+.gt span{position:absolute;left:0;right:0;bottom:0;padding:18px 10px 8px;color:#fff;font-size:calc(var(--sp-ui)*.82);text-align:left;background:linear-gradient(transparent,rgba(0,0,0,.6));text-transform:capitalize}
+.gt.add{display:grid;place-items:center;background:rgba(128,128,128,.08);border-style:dashed;color:var(--sp-muted);cursor:pointer;aspect-ratio:3/4}
+.gt.add input{display:none}
+.lb{position:absolute;inset:0;z-index:30;background:rgba(0,0,0,.86);display:grid;place-items:center;padding:20px;cursor:zoom-out}.lb img{max-width:100%;max-height:100%;border-radius:10px}
+</style>
+<body><script src="exercises.js"></script><script src="goal.js"></script><script>window.SPORT_PLAN_MODE = 'session'</script><script src="sport-shared.js"></script><script>
+const {h,thumb,stepper,grep,GROUPS,forDay,addEntry,patchEntry,dropEntry,byId,today,fmt,autoSend,refreshPlan,infoBlock,twoPane,load,notify} = SPORT;
+const st = { view: 'session', q: '', group: 'Tous', info: null, tab: 'sport', vals: {}, lb: null };
+const GK = 'zr-sport-goal-v1';
+const extra = () => { try { return JSON.parse(localStorage.getItem(GK)) || []; } catch { return []; } };
+SPORT.boot((main, ctx) => {
+  const R = ctx.rerender, keep = fn => { const k = main.querySelector('.toast'); fn(); k && main.append(k); };
+  const day = forDay(today());
+  // ---- exercise base (grep across everything, no program)
+  const PR = window.SPORT_PRESETS || { sets: [3, 4], reps: [6, 8] };
+  // keep scroll position and the toast across a rebuild. FR : on garde le défilement et la notification.
+  const rr = () => { const g = main.querySelector('.grid'), y = g ? g.scrollTop : 0, k = main.querySelector('.toast'); R(); const g2 = main.querySelector('.grid'); if (g2) g2.scrollTop = y; k && main.append(k); };
+  const tile = x => { const e = day.find(t => t.ex === x.id), v = st.vals[x.id] || (st.vals[x.id] = { sets: e ? e.sets : x.sets, reps: e ? e.reps : x.reps, kg: e ? e.kg : x.kg });
+    // "Add to session" appends sets x reps x kg to today's session; Plan keeps ONE card that grows. FR : une seule carte Plan qui s'allonge.
+    const edit = (p, redraw) => { Object.assign(v, p); if (e) { patchEntry(e.id, p); autoSend(main, e.id); } if (redraw) rr(); };
+    const add = () => { let en = e; if (!en) en = addEntry(x.id, today(), { sets: v.sets, reps: v.reps, kg: v.kg }); else patchEntry(en.id, { sets: v.sets, reps: v.reps, kg: v.kg }); autoSend(main, en.id); rr(); };
+    const opt = (label, key, presets) => h('div', { class: 'opt' }, h('label', {}, label), h('div', { class: 'pr' },
+      presets.map(n => h('button', { class: 'pc num' + (v[key] === n ? ' on' : ''), onclick: () => edit({ [key]: n }, true) }, String(n))),
+      stepper({ label: '', value: v[key], min: 1, onChange: n => edit({ [key]: n }, true) })));
+    return h('div', { class: 'tl2' + (e ? ' in' : '') }, h('div', { onclick: () => { st.info = st.info === x.id ? null : x.id; R(); } }, thumb(x, '100%')),
+      h('div', { class: 't' }, h('b', {}, h('span', {}, x.name), h('button', { class: 'i', onclick: () => { st.info = st.info === x.id ? null : x.id; R(); } }, 'ⓘ')),
+        e && h('div', { class: 'done-line' }, `✓ dans la séance · ${e.sets} × ${e.reps}${e.kg ? ` · ${e.kg} kg` : ''}`),
+        opt('Séries', 'sets', PR.sets), opt('Reps', 'reps', PR.reps),
+        h('div', { class: 'opt' }, h('label', {}, 'Charge'), stepper({ label: '', value: v.kg, step: 2.5, unit: 'kg', onChange: k => edit({ kg: k }) })),
+        h('div', { class: 'acts' }, e && h('button', { class: 'undo', onclick: () => { dropEntry(e.id); notify(main, 'Plan · séance mise à jour', `${x.name} retiré`); refreshPlan(main); rr(); } }, 'Retirer'), h('button', { class: 'tap', onclick: add }, e ? 'Mettre à jour' : 'Ajouter à la séance'))),
+      st.info === x.id && infoBlock(x)); };
+  const q = h('input', { placeholder: 'Chercher dans toute la base d\'exercices…', value: st.q, oninput: e => { st.q = e.target.value; R(); const i = main.querySelector('.bar input'); i.focus(); i.setSelectionRange(99, 99); } });
+  const found = grep(st.q, st.group);
+  const session = [
+    h('div', { class: 'bar' }, h('div', { class: 'search-in' }, '⌕', q)),
+    h('div', { class: 'chips', style: 'margin:0' }, GROUPS.map(g => h('button', { class: 'chip' + (st.group === g ? ' on' : ''), onclick: () => { st.group = g; R(); } }, g))),
+    found.length ? h('div', { class: 'grid' }, found.map(tile)) : h('div', { class: 'empty-g' }, 'Aucun exercice ne correspond.')];
+  // ---- objective visuel
+  const photos = [...(window.SPORT_GOAL || []), ...extra()];
+  const goal = [h('div', { class: 'auto' }, `${photos.length} photos · tu en ajoutes d'autres quand tu veux`),
+    h('div', { class: 'goal' }, photos.map(p => h('button', { class: 'gt', onclick: () => { st.lb = p.src; R(); } }, h('img', { src: p.src, alt: p.title }), p.title && h('span', {}, p.title))),
+      h('label', { class: 'gt add' }, '＋ Ajouter une photo', h('input', { type: 'file', accept: 'image/*', multiple: true, onchange: ev => { [...ev.target.files].forEach(f => { const r = new FileReader(); r.onload = () => { try { localStorage.setItem(GK, JSON.stringify([...extra(), { src: r.result, title: f.name.replace(/\.[a-z]+$/i, '') }])); } catch {} R(); }; r.readAsDataURL(f); }); } })))];
+  const sport = h('section', { class: 'sportc' }, h('div', { class: 'top', style: 'padding:16px 0 0' }, h('h1', {}, 'Sport'), h('div', { class: 'sp' }),
+      h('div', { class: 'seg' }, h('button', { class: st.view === 'session' ? 'on' : '', onclick: () => { st.view = 'session'; R(); } }, 'Séance'), h('button', { class: st.view === 'goal' ? 'on' : '', onclick: () => { st.view = 'goal'; R(); } }, 'Objectif visuel'))),
+    h('div', { class: 'auto' }, `${SPORT.weekday(today())} · ${fmt(today())} · date automatique`), ...(st.view === 'session' ? session : goal));
+  twoPane(main, ctx, sport, st);
+  if (st.lb) main.append(h('div', { class: 'lb', onclick: () => { st.lb = null; R(); } }, h('img', { src: st.lb })));
+});
+</script></body></html>

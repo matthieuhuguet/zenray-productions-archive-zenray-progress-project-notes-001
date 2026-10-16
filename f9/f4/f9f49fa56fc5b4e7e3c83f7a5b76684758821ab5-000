@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-10-16T11:31:06.727Z",
+ "scannedAt": "2026-10-16T13:25:08.939Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -101,18 +101,18 @@
   },
   {
    "projectId": "zenray-progress",
-   "lines": 44,
+   "lines": 46,
    "work": 10,
    "prompts": 3,
    "first": "2026-10-14T11:34:59.327Z",
-   "last": "2026-10-16T10:20:21.965Z",
+   "last": "2026-10-16T11:34:23.994Z",
    "strength": "strong",
    "conversationId": "claude:d2f26016-25dd-4bcc-a6d8-122d50d3f383",
    "provider": "claude",
    "sessionId": "d2f26016-25dd-4bcc-a6d8-122d50d3f383",
-   "title": "Motion Design Vector and Music",
-   "updatedAt": "2026-10-16T11:31:06.215Z",
-   "bytes": 144168043,
+   "title": "3 motion design and editing video",
+   "updatedAt": "2026-10-16T13:10:15.314Z",
+   "bytes": 22321,
    "boundProject": null
   },
   {
@@ -130,6 +130,22 @@
    "updatedAt": "2026-10-15T18:45:10.638Z",
    "bytes": 30695,
    "boundProject": null
+  },
+  {
+   "projectId": "zenray-progress",
+   "lines": 35,
+   "work": 4,
+   "prompts": 13,
+   "first": "2026-10-12T12:35:23.765Z",
+   "last": "2026-10-16T11:45:20.084Z",
+   "strength": "strong",
+   "conversationId": "codex:01a1301b-f199-7773-863c-b2a78d50b909",
+   "provider": "codex",
+   "sessionId": "01a1301b-f199-7773-863c-b2a78d50b909",
+   "title": "Conversation codex 01a1301b",
+   "updatedAt": "2026-10-16T12:40:09.850Z",
+   "bytes": 38928540,
+   "boundProject": "zenray-japanese"
   },
   {
    "projectId": "zenray-progress",
@@ -162,22 +178,6 @@
    "updatedAt": "2026-10-10T20:15:57.087Z",
    "bytes": 23177,
    "boundProject": null
-  },
-  {
-   "projectId": "zenray-progress",
-   "lines": 33,
-   "work": 3,
-   "prompts": 13,
-   "first": "2026-10-12T12:35:23.765Z",
-   "last": "2026-10-15T09:09:45.664Z",
-   "strength": "strong",
-   "conversationId": "codex:01a1301b-f199-7773-863c-b2a78d50b909",
-   "provider": "codex",
-   "sessionId": "01a1301b-f199-7773-863c-b2a78d50b909",
-   "title": "Conversation codex 01a1301b",
-   "updatedAt": "2026-10-15T09:10:50.536Z",
-   "bytes": 35218006,
-   "boundProject": "zenray-japanese"
   },
   {
    "projectId": "zenray-progress",
@@ -421,6 +421,22 @@
   },
   {
    "projectId": "zenray-progress",
+   "lines": 24,
+   "work": 0,
+   "prompts": 0,
+   "first": "2026-10-16T11:40:57.498Z",
+   "last": "2026-10-16T13:24:46.882Z",
+   "strength": "weak",
+   "conversationId": "claude:d3327e82-5a7e-46d8-b6f6-bc0447663c2b",
+   "provider": "claude",
+   "sessionId": "d3327e82-5a7e-46d8-b6f6-bc0447663c2b",
+   "title": "4 sport section",
+   "updatedAt": "2026-10-16T13:24:46.910Z",
+   "bytes": 36563,
+   "boundProject": "zenray-progress"
+  },
+  {
+   "projectId": "zenray-progress",
    "lines": 12,
    "work": 0,
    "prompts": 0,
@@ -551,16 +567,16 @@
    "projectId": "zenray-progress",
    "lines": 2,
    "work": 0,
-   "prompts": 1,
-   "first": "2026-10-15T11:34:13.340Z",
-   "last": "2026-10-15T11:34:13.360Z",
+   "prompts": 0,
+   "first": "2026-10-16T11:49:21.085Z",
+   "last": "2026-10-16T11:49:40.747Z",
    "strength": "weak",
-   "conversationId": "claude:fa37c224-b0f7-4ffe-b1d9-73121293ef45",
+   "conversationId": "claude:6770fb4c-3c30-4bc8-939a-b209ab0ddb1b",
    "provider": "claude",
-   "sessionId": "fa37c224-b0f7-4ffe-b1d9-73121293ef45",
-   "title": "Shelf miniatures loading performance",
-   "updatedAt": "2026-10-15T11:53:20.686Z",
-   "bytes": 34546,
+   "sessionId": "6770fb4c-3c30-4bc8-939a-b209ab0ddb1b",
+   "title": "1 zenray freelance",
+   "updatedAt": "2026-10-16T13:07:13.892Z",
+   "bytes": 36866,
    "boundProject": null
   },
   {
@@ -575,8 +591,24 @@
    "provider": "codex",
    "sessionId": "01a13ecc-751b-7bd3-8d67-6eaa5aaa5ed6",
    "title": "Conversation codex 01a13ecc",
-   "updatedAt": "2026-10-15T09:10:55.358Z",
-   "bytes": 962533,
+   "updatedAt": "2026-10-16T12:19:54.013Z",
+   "bytes": 2860545,
+   "boundProject": null
+  },
+  {
+   "projectId": "zenray-progress",
+   "lines": 2,
+   "work": 0,
+   "prompts": 1,
+   "first": "2026-10-15T11:34:13.340Z",
+   "last": "2026-10-15T11:34:13.360Z",
+   "strength": "weak",
+   "conversationId": "claude:fa37c224-b0f7-4ffe-b1d9-73121293ef45",
+   "provider": "claude",
+   "sessionId": "fa37c224-b0f7-4ffe-b1d9-73121293ef45",
+   "title": "Shelf miniatures loading performance",
+   "updatedAt": "2026-10-15T11:53:20.686Z",
+   "bytes": 34546,
    "boundProject": null
   },
   {
@@ -1105,6 +1137,22 @@
    "title": "Organisation dossier Downloads",
    "updatedAt": "2026-09-30T10:58:03.807Z",
    "bytes": 22075,
+   "boundProject": null
+  },
+  {
+   "projectId": "zenray-progress",
+   "lines": 1,
+   "work": 0,
+   "prompts": 0,
+   "first": "2026-10-16T11:43:19.042Z",
+   "last": "2026-10-16T11:43:19.042Z",
+   "strength": "weak",
+   "conversationId": "claude:a3f20b1d-27ed-48e1-a0d1-5fe182c0e423",
+   "provider": "claude",
+   "sessionId": "a3f20b1d-27ed-48e1-a0d1-5fe182c0e423",
+   "title": "2 louisiana bayou video",
+   "updatedAt": "2026-10-16T13:19:01.943Z",
+   "bytes": 37055,
    "boundProject": null
   },
   {

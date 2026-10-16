@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="fr"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sport B Galerie</title>
+<link rel="stylesheet" href="sport-shared.css">
+<style>
+/* B: image-first gallery, a side drawer (desktop) or bottom sheet (mobile) to log. 16 October 2026 */
+.strip{display:flex;gap:8px;overflow:auto;padding:0 20px 10px}.mob .strip{padding:0 16px 10px}
+.pill{flex:none;display:flex;gap:8px;align-items:center;padding:6px 12px;border-radius:999px;background:var(--sp-accent-soft);color:var(--sp-accent);border:0;font-size:calc(var(--sp-ui)*.9)}
+.pill.none{background:rgba(128,128,128,.1);color:var(--sp-muted)}
+.tools{padding:0 20px}.mob .tools{padding:0 16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(calc(var(--sp-img) + 56px),1fr));gap:var(--sp-gap);padding:0 20px 20px}
+.mob .grid{grid-template-columns:1fr 1fr;padding:0 16px 14px}
+.gc{padding:0;overflow:hidden;text-align:left;display:flex;flex-direction:column;border:.5px solid var(--sp-line);background:var(--sp-bg);border-radius:var(--sp-r)}
+.gc:hover{box-shadow:0 8px 24px rgba(0,0,0,.12);transform:translateY(-1px)}
+.gc .thumb{width:100%!important;height:calc(var(--sp-img)*.9)!important;border-radius:0}
+.gc .t{padding:9px 11px 11px}.gc .t b{font-weight:500;display:block}.gc .t small{color:var(--sp-muted)}
+.gc .done{position:absolute;top:8px;right:8px;background:var(--sp-accent);color:#fff;border-radius:999px;padding:2px 9px;font-size:11px}
+.sheet{position:absolute;right:0;top:0;bottom:0;width:min(400px,100%);background:color-mix(in srgb,var(--sp-bg) 94%,transparent);z-index:6;backdrop-filter:blur(var(--sp-blur)) saturate(200%);
+  box-shadow:-12px 0 40px rgba(0,0,0,.14),0 0 0 .5px var(--sp-line);padding:18px;display:flex;flex-direction:column;gap:12px;overflow:auto;animation:in .25s cubic-bezier(.2,.7,.3,1)}
+.mob .sheet{top:auto;left:0;width:100%;max-height:88%;border-radius:22px 22px 0 0}
+@keyframes in{from{transform:translateX(30px);opacity:0}to{transform:none;opacity:1}}
+.mob .sheet{animation-name:up}@keyframes up{from{transform:translateY(40px);opacity:0}to{transform:none;opacity:1}}
+.sheet h2{margin:0;font:350 calc(var(--sp-ui)*1.6)/1.15 var(--sp-serif)}
+.sheet .big{width:100%!important;height:calc(var(--sp-img)*1.5)!important}
+.sheet p{margin:0;color:var(--sp-muted)}
+.sheet .steps{display:flex;gap:12px;justify-content:space-between}
+.sheet textarea{width:100%;min-height:62px;border-radius:calc(var(--sp-r) - 4px);border:.5px solid var(--sp-line);background:rgba(128,128,128,.08);padding:8px 10px;resize:vertical}
+.sheet .acts{display:flex;gap:8px}.sheet .acts .btn{flex:1}
+.shade{position:absolute;inset:0;z-index:5;background:rgba(0,0,0,.16)}
+</style>
+<body><script src="exercises.js"></script><script src="sport-shared.js"></script><script>
+const {h,thumb,stepper,dateBar,grep,GROUPS,forDay,addEntry,patchEntry,dropEntry,lastOf,fmt,byId,today} = SPORT;
+const st = { date: today(), q: '', group: 'Tous', open: null };
+SPORT.boot((main, ctx) => {
+  const R = ctx.rerender, day = forDay(st.date);
+  const q = h('input', { placeholder: 'Grep : exercice, groupe, mot de la description…', value: st.q, oninput: e => { st.q = e.target.value; R(); setTimeout(() => { const i = main.querySelector('.tools input'); i.focus(); i.setSelectionRange(99, 99); }); } });
+  const strip = h('div', { class: 'strip' }, day.length ? day.map(e => h('button', { class: 'pill', onclick: () => { st.open = e.ex; R(); } }, byId(e.ex).name, h('span', { class: 'num' }, `${e.sets}×${e.reps}`))) : h('span', { class: 'pill none' }, `Rien d'inscrit le ${fmt(st.date)}`));
+  const grid = h('div', { class: 'grid' }, grep(st.q, st.group).map(ex => { const done = day.find(e => e.ex === ex.id), l = lastOf(ex.id);
+    return h('button', { class: 'gc', onclick: () => { st.open = ex.id; R(); } }, h('div', { style: 'position:relative' }, thumb(ex, '100%'), done && h('span', { class: 'done num' }, `${done.sets}×${done.reps}`)),
+      h('div', { class: 't' }, h('b', {}, ex.name), h('small', {}, l ? `dernière : ${l.sets}×${l.reps} · ${fmt(l.date)}` : ex.group))); }));
+  main.append(h('div', { class: 'top' }, h('h1', {}, 'Sport'), h('div', { class: 'sp' }), dateBar(st, R)), strip,
+    h('div', { class: 'tools' }, h('div', { class: 'search-in' }, '⌕', q), h('div', { class: 'chips' }, GROUPS.map(g => h('button', { class: 'chip' + (st.group === g ? ' on' : ''), onclick: () => { st.group = g; R(); } }, g)))),
+    h('div', { class: 'scroll', style: 'flex:1' }, grid));
+  if (st.open) { const ex = byId(st.open), ex0 = day.find(e => e.ex === ex.id) || { sets: ex.sets, reps: ex.reps, kg: ex.kg, note: '' }; const v = { ...ex0 };
+    main.append(h('div', { class: 'shade', onclick: () => { st.open = null; R(); } }), h('aside', { class: 'sheet' },
+      h('div', { style: 'display:flex;align-items:center' }, h('h2', { style: 'flex:1' }, ex.name), h('button', { class: 'x', onclick: () => { st.open = null; R(); } }, '×')),
+      h('div', { class: 'thumb big', style: `--gh:${SPORT.GROUP_HUE[ex.group]}`, 'data-slot': '' }, ...thumb(ex, '0').childNodes), h('p', {}, ex.desc),
+      h('div', { class: 'steps' }, stepper({ label: 'Séries', value: v.sets, min: 1, onChange: x => v.sets = x }), stepper({ label: 'Reps', value: v.reps, min: 1, onChange: x => v.reps = x }), stepper({ label: 'Charge kg', value: v.kg, step: 2.5, onChange: x => v.kg = x })),
+      h('textarea', { placeholder: 'Description, ressenti…', oninput: e => v.note = e.target.value }, v.note),
+      h('div', { class: 'auto' }, `Date inscrite automatiquement : ${fmt(st.date)}`),
+      h('div', { class: 'acts' }, day.find(e => e.ex === ex.id) && h('button', { class: 'btn ghost', onclick: () => { dropEntry(day.find(e => e.ex === ex.id).id); st.open = null; R(); } }, 'Retirer'),
+        h('button', { class: 'btn', onclick: () => { const e = day.find(e => e.ex === ex.id); e ? patchEntry(e.id, v) : addEntry(ex.id, st.date, v); st.open = null; R(); } }, 'Enregistrer'))));
+  }
+});
+</script></body></html>

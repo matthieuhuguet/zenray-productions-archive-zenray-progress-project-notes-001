@@ -1,0 +1,19 @@
+{
+  "date": "16 October 2026",
+  "slug": "sport-round-1",
+  "folder": "2026-10-16-sport-round-1",
+  "version": 1,
+  "title": "Sport : ronde 1, quatre propositions A B C D (journal, galerie, séance, simple)",
+  "module": "sport",
+  "project": "zenray-progress",
+  "status": "pending",
+  "atelier": "/Users/zenray/.claude/tmp/tmp-zenray-sport/mockups",
+  "files": [
+    "index.html",
+    "fond.webp",
+    "sport-shared.css"
+  ],
+  "indexSha256": "3d9db970854b3e84b2af75ff0bc4813b11e00aee1a775c79cb7f129a75318adb",
+  "filedAt": "2026-10-16T11:59:26.838Z",
+  "note": null
+}

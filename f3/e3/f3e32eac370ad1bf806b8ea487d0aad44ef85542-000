@@ -1,0 +1,10 @@
+<!doctype html>
+<html lang="fr"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sport ronde 2</title>
+<link rel="stylesheet" href="sport-shared.css">
+<style>.g{max-width:760px;margin:40px auto;padding:0 20px}.g h1{font:350 32px var(--sp-serif)}.g a{display:block;padding:14px 16px;margin:10px 0;border-radius:14px;background:var(--sp-bg);border:.5px solid var(--sp-line);color:inherit;text-decoration:none}.g small{color:var(--sp-muted);display:block}</style>
+<body><div class="g"><h1>Sport, ronde 2 (16 October 2026)</h1>
+<p>Tout part dans Plan automatiquement dès que séries et reps sont renseignés. Prompt image et description accessibles sur chaque exercice.</p>
+<a href="E-ligne.html"><b>E Ligne</b><small>tu tapes « tractions 3x6 4kg », Entrée : c'est enregistré et dans Plan</small></a>
+<a href="F-tableau.html"><b>F Tableau</b><small>un tableau propre, cellules modifiables, la ligne part dans Plan quand séries et reps sont remplis</small></a>
+<a href="G-tuiles.html"><b>G Tuiles</b><small>le programme du jour en tuiles image, un tap = une série faite, Plan se met à jour au fil de la séance</small></a></div></body></html>

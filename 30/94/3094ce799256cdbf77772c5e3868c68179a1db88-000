@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="fr"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sport Tuile</title>
+<link rel="stylesheet" href="sport-shared.css">
+<style>
+/* Tile lab: three layouts of ONE exercise tile, same data, same controls, everything on a shared grid. 16 October 2026
+   Rule: every control is one --ctl high and lives in a 3-slot grid (--slot wide), so label, 3 | 4 | free, and − value + line up. */
+:root{--slot:60px;--ctl:38px}
+body{padding:var(--e3) var(--e3) var(--e4)}
+.lab-top{display:flex;align-items:center;gap:var(--e2);flex-wrap:wrap;max-width:1180px;margin:0 auto var(--e3)}
+.lab-top h1{margin:0;font:350 calc(var(--sp-ui)*2) var(--sp-serif)}.lab-top .sp{flex:1}
+.lab-top label{display:flex;gap:var(--e1);align-items:center;color:var(--sp-muted)}
+.props{max-width:1180px;margin:0 auto;display:flex;gap:var(--e4);flex-wrap:wrap;align-items:flex-start}
+.prop{display:flex;flex-direction:column;gap:var(--e2)}
+.prop h2{margin:0;font:600 calc(var(--sp-ui)*1.05) var(--sp-sans)}.prop p{margin:0;color:var(--sp-muted);max-width:340px}
+.card2{background:var(--sp-bg);border-radius:calc(var(--sp-r) + 4px);box-shadow:0 12px 40px rgba(0,0,0,.14),0 0 0 .5px var(--sp-line);overflow:hidden}
+.card2 .nm{display:flex;align-items:center;gap:var(--e1)}.card2 .nm h3{margin:0;flex:1;font:350 calc(var(--sp-ui)*1.4)/1.15 var(--sp-serif)}
+.i{border:0;background:transparent;color:var(--sp-muted);font-size:1.15em;padding:0;width:var(--ctl);height:var(--ctl);border-radius:50%}.i:hover{background:rgba(128,128,128,.14)}
+.st{color:hsl(142 60% 30%);font-weight:500}
+.zr-dark .st{color:hsl(142 55% 60%)}
+.bd{position:absolute;top:var(--e1);right:var(--e1);padding:var(--e0) var(--e1);border-radius:999px;background:hsl(142 60% 36%);color:#fff;font-size:calc(var(--sp-ui)*.82)}
+/* the shared grid: three equal slots */
+.slots{display:grid;grid-template-columns:repeat(3,var(--slot));gap:var(--e1)}
+.pill2{height:var(--ctl);width:100%;padding:0;border-radius:999px;border:.5px solid var(--sp-line);background:transparent;font:400 calc(var(--sp-ui)*1.15) var(--sp-serif);display:inline-flex;align-items:center;justify-content:center;text-align:center;min-width:0}
+.pill2.on{background:var(--sp-accent);border-color:transparent;color:#fff}
+.pill2.val{border-color:transparent;font-size:calc(var(--sp-ui)*1.05)}
+input.pill2{outline:0;-moz-appearance:textfield}input.pill2::-webkit-inner-spin-button{display:none}input.pill2::placeholder{color:var(--sp-muted)}input.pill2:focus{border-color:var(--sp-accent)}
+button.pill2:hover:not(.on){background:rgba(128,128,128,.12)}
+.act{display:grid;gap:var(--e1)}.act .btn{height:calc(var(--ctl) + 4px);padding:0}.act .btn.ghost{background:rgba(128,128,128,.14)}
+.info{padding:0}
+.guides .slots > *,.guides .rowA > label,.guides .fld > label,.guides .nm,.guides .act > *{outline:1px dashed rgba(255,0,60,.55);outline-offset:-1px}
+/* A: portrait, label column then slots */
+.tA{width:calc(var(--slot)*3 + var(--e1)*2 + 64px + var(--e2) + var(--e3)*2)}
+.tA .img{position:relative;aspect-ratio:16/9}.tA .img .thumb{width:100%!important;height:100%!important;border-radius:0}
+.tA .body{padding:var(--e2) var(--e3) var(--e3);display:flex;flex-direction:column;gap:var(--e2)}
+.tA .act{grid-template-columns:1fr 2fr}
+.rowA{display:grid;grid-template-columns:64px auto;gap:var(--e2);align-items:center}
+.rowA > label{color:var(--sp-muted);font-size:calc(var(--sp-ui)*.88)}
+/* B: landscape, label above each of three equal columns */
+.tB{display:grid;grid-template-columns:150px 1fr;width:calc(150px + var(--slot)*9 + var(--e1)*6 + var(--e3)*4)}
+.tB{--slot:48px}
+.tB .img{position:relative}.tB .img .thumb{width:100%!important;height:100%!important;border-radius:0;min-height:100%}
+.tB .body{padding:var(--e2) var(--e3) var(--e3) var(--e3);display:flex;flex-direction:column;gap:var(--e3)}
+.tB .cols{display:grid;grid-template-columns:repeat(3,auto);gap:var(--e3);justify-content:space-between}
+.fld{display:flex;flex-direction:column;gap:var(--e1)}.fld > label{color:var(--sp-muted);font-size:calc(var(--sp-ui)*.8);text-transform:uppercase;letter-spacing:.04em}
+.tB .act{grid-template-columns:1fr 1.6fr}
+/* C: compact form, thumbnail in the header, each row ONE bordered region split by hairlines */
+.tC{width:calc(var(--slot)*3 + var(--e1)*2 + 64px + var(--e2) + var(--e2)*2 + var(--e3))}
+.tC .body{padding:var(--e2);display:flex;flex-direction:column;gap:var(--e2)}
+.tC .head{display:flex;gap:var(--e2);align-items:center}.tC .head .thumb{width:56px!important;height:56px!important}.tC .head .tt{flex:1;min-width:0;display:flex;flex-direction:column;gap:var(--e0)}
+.seg3{display:grid;grid-template-columns:64px repeat(3,1fr);height:calc(var(--ctl) + var(--e1));border-radius:calc(var(--sp-r) - 2px);border:.5px solid var(--sp-line);overflow:hidden}
+.seg3 > *{border:0;border-left:.5px solid var(--sp-line);border-radius:0;height:100%;background:transparent;min-width:0}
+.seg3 > label{border-left:0;display:flex;align-items:center;padding-left:var(--e2);color:var(--sp-muted);font-size:calc(var(--sp-ui)*.88);background:rgba(128,128,128,.07)}
+.seg3 .pill2.on{background:var(--sp-accent);color:#fff}
+.seg3 .pill2.val{border-left:.5px solid var(--sp-line)}
+.tC .act{grid-template-columns:1fr 2fr}
+</style>
+<body><script src="exercises.js"></script><script src="sport-shared.js"></script><script>
+const { h, thumb, byId, infoBlock, panel } = SPORT;
+const ex = byId('lat-raise'), PR = window.SPORT_PRESETS;
+const mkState = () => ({ sets: 3, reps: 9, kg: 6, inS: true, desc: false });
+// preset pills + one free number pill = exactly three slots. FR : deux préréglages et une pastille libre = trois cases.
+const field = (s, key, redraw) => [...PR[key].map(n => h('button', { class: 'pill2' + (s[key] === n ? ' on' : ''), onclick: () => { s[key] = n; redraw(); } }, String(n))),
+  h('input', { class: 'pill2' + (!PR[key].includes(s[key]) ? ' on' : ''), type: 'number', min: 1, inputmode: 'numeric', placeholder: '…', value: PR[key].includes(s[key]) ? '' : s[key], onchange: e => { const n = Math.max(1, +e.target.value || 0); if (n) { s[key] = n; redraw(); } } })];
+const kgSlots = (s, redraw) => [h('button', { class: 'pill2', onclick: () => { s.kg = Math.max(0, +(s.kg - 2.5).toFixed(1)); redraw(); } }, '−'), h('span', { class: 'pill2 val' }, `${s.kg} kg`), h('button', { class: 'pill2', onclick: () => { s.kg = +(s.kg + 2.5).toFixed(1); redraw(); } }, '+')];
+const status = s => s.inS && h('div', { class: 'st' }, `✓ dans la séance · ${s.sets} × ${s.reps} · ${s.kg} kg`);
+const info = (s, redraw) => h('button', { class: 'i', title: 'Description et prompt image', onclick: () => { s.desc = !s.desc; redraw(); } }, 'ⓘ');
+const actions = (s, redraw) => h('div', { class: 'act', style: s.inS ? '' : 'grid-template-columns:1fr' }, s.inS && h('button', { class: 'btn ghost', onclick: () => { s.inS = false; redraw(); } }, 'Retirer'),
+  h('button', { class: 'btn', onclick: () => { s.inS = true; redraw(); } }, s.inS ? 'Mettre à jour' : 'Ajouter à la séance'));
+const mount = build => { const s = mkState(), box = h('div'); const redraw = () => box.replaceChildren(build(s, redraw)); redraw(); return box; };
+
+const A = (s, r) => h('article', { class: 'card2 tA' }, h('div', { class: 'img' }, thumb(ex, '100%'), s.inS && h('span', { class: 'bd' }, '✓ dans la séance')),
+  h('div', { class: 'body' }, h('div', { class: 'nm' }, h('h3', {}, ex.name), info(s, r)), status(s),
+    h('div', { class: 'rowA' }, h('label', {}, 'Séries'), h('div', { class: 'slots' }, field(s, 'sets', r))),
+    h('div', { class: 'rowA' }, h('label', {}, 'Reps'), h('div', { class: 'slots' }, field(s, 'reps', r))),
+    h('div', { class: 'rowA' }, h('label', {}, 'Charge'), h('div', { class: 'slots' }, kgSlots(s, r))),
+    s.desc && infoBlock(ex), actions(s, r)));
+const B = (s, r) => h('article', { class: 'card2 tB' }, h('div', { class: 'img' }, thumb(ex, '100%')),
+  h('div', { class: 'body' }, h('div', {}, h('div', { class: 'nm' }, h('h3', {}, ex.name), info(s, r)), status(s)),
+    h('div', { class: 'cols' }, h('div', { class: 'fld' }, h('label', {}, 'Séries'), h('div', { class: 'slots' }, field(s, 'sets', r))), h('div', { class: 'fld' }, h('label', {}, 'Reps'), h('div', { class: 'slots' }, field(s, 'reps', r))), h('div', { class: 'fld' }, h('label', {}, 'Charge'), h('div', { class: 'slots' }, kgSlots(s, r)))),
+    s.desc && infoBlock(ex), actions(s, r)));
+const C = (s, r) => h('article', { class: 'card2 tC' }, h('div', { class: 'body' },
+  h('div', { class: 'head' }, thumb(ex, '56px'), h('div', { class: 'tt' }, h('div', { class: 'nm' }, h('h3', {}, ex.name), info(s, r)), s.inS ? h('div', { class: 'st' }, `${s.sets} × ${s.reps} · ${s.kg} kg`) : h('small', { style: 'color:var(--sp-muted)' }, ex.group))),
+  h('div', { class: 'seg3' }, h('label', {}, 'Séries'), ...field(s, 'sets', r)), h('div', { class: 'seg3' }, h('label', {}, 'Reps'), ...field(s, 'reps', r)), h('div', { class: 'seg3' }, h('label', {}, 'Charge'), ...kgSlots(s, r)),
+  s.desc && infoBlock(ex), actions(s, r)));
+const P = (t, why, el) => h('section', { class: 'prop' }, h('h2', {}, t), h('p', {}, why), mount(el));
+const guides = h('input', { type: 'checkbox', onchange: e => document.body.classList.toggle('guides', e.target.checked) });
+document.body.append(h('div', { class: 'lab-top' }, h('h1', {}, 'Tuile exercice'), h('div', { class: 'sp' }), h('label', {}, guides, 'Afficher les repères d\'alignement')),
+  h('div', { class: 'props' },
+    P('A · Grille à étiquettes', 'Portrait. Une colonne d\'étiquettes, puis trois cases égales : 3 | 4 | libre et − valeur +, alignées sur les mêmes colonnes.', A),
+    P('B · Paysage, trois colonnes', 'Image à gauche, trois blocs égaux (Séries, Reps, Charge) sur une seule ligne, étiquette au-dessus. Dense, idéal sur grand écran.', B),
+    P('C · Formulaire compact', 'Portrait étroit. Chaque réglage est une seule ligne encadrée, étiquette comprise, découpée par des filets : une région par réglage.', C)));
+panel();
+</script></body></html>
