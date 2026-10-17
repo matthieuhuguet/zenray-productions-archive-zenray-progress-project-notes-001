@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-10-17T14:58:33.796Z",
+ "scannedAt": "2026-10-17T15:10:34.156Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -206,8 +206,8 @@
    "conversationId": "gemini:dad216b8-610b-4279-a532-56e02644714d",
    "provider": "gemini",
    "sessionId": "dad216b8-610b-4279-a532-56e02644714d",
-   "title": "Conversation Gemini dad216b8",
-   "updatedAt": "2026-10-14T21:13:27.597Z",
+   "title": "zenray progress les fichiers n'ont pas de sous titres pourquoi ? bleach ? until grep -qE \"STAGE FAILED|Traceback|PROOF RED|FINISH FAILED|pub",
+   "updatedAt": "2026-10-14T21:12:45.577735+00:00",
    "bytes": 11730944,
    "boundProject": null
   },
@@ -1087,9 +1087,9 @@
    "provider": "claude",
    "sessionId": "2ce02bbc-dad5-488e-9ffc-51313c488339",
    "title": "StudioPhoto",
-   "updatedAt": "2026-10-17T14:57:33.934Z",
-   "bytes": 36723,
-   "boundProject": null
+   "updatedAt": "2026-10-17T15:10:17.191Z",
+   "bytes": 15235977,
+   "boundProject": "studiophoto-matthieu-17-october-2026"
   },
   {
    "projectId": "zenray-progress",
@@ -1406,8 +1406,8 @@
    "conversationId": "gemini:3e22a918-b7a6-4b1f-99ea-e50907f40d44",
    "provider": "gemini",
    "sessionId": "3e22a918-b7a6-4b1f-99ea-e50907f40d44",
-   "title": "Conversation Gemini 3e22a918",
-   "updatedAt": "2026-09-15T20:06:00.494Z",
+   "title": "'/Users/zenray/Movies/2026-09-15 20-36-50.mkv' to mov et speed jusqu'à ce que ça fasse 30 secondes speed ajusté à la longueur initial. go da",
+   "updatedAt": "2026-09-15T20:05:24.351772+00:00",
    "bytes": 3629056,
    "boundProject": null
   },
