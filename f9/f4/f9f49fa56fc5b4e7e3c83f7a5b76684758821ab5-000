@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-10-17T20:52:36.425Z",
+ "scannedAt": "2026-10-17T21:02:22.329Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -79,8 +79,8 @@
    "provider": "claude",
    "sessionId": "d2f26016-25dd-4bcc-a6d8-122d50d3f383",
    "title": "3 motion design and editing video",
-   "updatedAt": "2026-10-17T20:51:27.803Z",
-   "bytes": 22057,
+   "updatedAt": "2026-10-17T21:00:51.107Z",
+   "bytes": 22321,
    "boundProject": null
   },
   {
@@ -174,8 +174,8 @@
    "conversationId": "gemini:dad216b8-610b-4279-a532-56e02644714d",
    "provider": "gemini",
    "sessionId": "dad216b8-610b-4279-a532-56e02644714d",
-   "title": "zenray progress les fichiers n'ont pas de sous titres pourquoi ? bleach ? until grep -qE \"STAGE FAILED|Traceback|PROOF RED|FINISH FAILED|pub",
-   "updatedAt": "2026-10-14T21:12:45.577735+00:00",
+   "title": "Conversation Gemini dad216b8",
+   "updatedAt": "2026-10-14T21:13:27.597Z",
    "bytes": 11730944,
    "boundProject": null
   },
@@ -551,6 +551,22 @@
    "projectId": "zenray-progress",
    "lines": 2,
    "work": 0,
+   "prompts": 1,
+   "first": "2026-10-17T13:32:54.286Z",
+   "last": "2026-10-17T20:59:51.394Z",
+   "strength": "weak",
+   "conversationId": "claude:dc58fe08-d3b3-4c2a-a4af-b00e77409ca3",
+   "provider": "claude",
+   "sessionId": "dc58fe08-d3b3-4c2a-a4af-b00e77409ca3",
+   "title": "Plan to Google Calendar",
+   "updatedAt": "2026-10-17T21:01:58.926Z",
+   "bytes": 5520652,
+   "boundProject": null
+  },
+  {
+   "projectId": "zenray-progress",
+   "lines": 2,
+   "work": 0,
    "prompts": 0,
    "first": "2026-10-16T11:49:21.085Z",
    "last": "2026-10-16T11:49:40.747Z",
@@ -560,7 +576,7 @@
    "sessionId": "6770fb4c-3c30-4bc8-939a-b209ab0ddb1b",
    "title": "1 zenray freelance",
    "updatedAt": "2026-10-17T13:47:05.186Z",
-   "bytes": 40181,
+   "bytes": 40199,
    "boundProject": null
   },
   {
@@ -1016,22 +1032,6 @@
    "lines": 1,
    "work": 0,
    "prompts": 0,
-   "first": "2026-10-17T13:32:54.286Z",
-   "last": "2026-10-17T13:32:54.286Z",
-   "strength": "weak",
-   "conversationId": "claude:dc58fe08-d3b3-4c2a-a4af-b00e77409ca3",
-   "provider": "claude",
-   "sessionId": "dc58fe08-d3b3-4c2a-a4af-b00e77409ca3",
-   "title": "Plan to Google Calendar",
-   "updatedAt": "2026-10-17T20:47:44.129Z",
-   "bytes": 39594,
-   "boundProject": null
-  },
-  {
-   "projectId": "zenray-progress",
-   "lines": 1,
-   "work": 0,
-   "prompts": 0,
    "first": "2026-10-17T14:21:27.442Z",
    "last": "2026-10-17T14:21:27.442Z",
    "strength": "weak",
@@ -1342,8 +1342,8 @@
    "conversationId": "gemini:3e22a918-b7a6-4b1f-99ea-e50907f40d44",
    "provider": "gemini",
    "sessionId": "3e22a918-b7a6-4b1f-99ea-e50907f40d44",
-   "title": "'/Users/zenray/Movies/2026-09-15 20-36-50.mkv' to mov et speed jusqu'à ce que ça fasse 30 secondes speed ajusté à la longueur initial. go da",
-   "updatedAt": "2026-09-15T20:05:24.351772+00:00",
+   "title": "Conversation Gemini 3e22a918",
+   "updatedAt": "2026-09-15T20:06:00.494Z",
    "bytes": 3629056,
    "boundProject": null
   },
