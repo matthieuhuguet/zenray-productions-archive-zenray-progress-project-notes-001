@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-10-17T18:52:35.442Z",
+ "scannedAt": "2026-10-17T19:51:36.265Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -520,6 +520,22 @@
    "lines": 3,
    "work": 0,
    "prompts": 0,
+   "first": "2026-10-17T19:13:58.896Z",
+   "last": "2026-10-17T19:36:56.563Z",
+   "strength": "weak",
+   "conversationId": "claude:459b59c9-87e8-4e32-8bd7-b1348b362772",
+   "provider": "claude",
+   "sessionId": "459b59c9-87e8-4e32-8bd7-b1348b362772",
+   "title": "Vérifier upload et renommage fichiers",
+   "updatedAt": "2026-10-17T19:50:43.982Z",
+   "bytes": 3808982,
+   "boundProject": null
+  },
+  {
+   "projectId": "zenray-progress",
+   "lines": 3,
+   "work": 0,
+   "prompts": 0,
    "first": "2026-10-12T08:37:20.686Z",
    "last": "2026-10-12T08:44:21.442Z",
    "strength": "weak",
@@ -576,7 +592,7 @@
    "sessionId": "6770fb4c-3c30-4bc8-939a-b209ab0ddb1b",
    "title": "1 zenray freelance",
    "updatedAt": "2026-10-17T13:47:05.186Z",
-   "bytes": 39945,
+   "bytes": 40181,
    "boundProject": null
   },
   {
@@ -1087,8 +1103,8 @@
    "provider": "claude",
    "sessionId": "dc58fe08-d3b3-4c2a-a4af-b00e77409ca3",
    "title": "Plan to Google Calendar",
-   "updatedAt": "2026-10-17T18:52:19.850Z",
-   "bytes": 39835,
+   "updatedAt": "2026-10-17T19:42:23.900Z",
+   "bytes": 39601,
    "boundProject": null
   },
   {
