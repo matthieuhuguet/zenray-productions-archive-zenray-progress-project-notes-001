@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-10-17T20:15:36.367Z",
+ "scannedAt": "2026-10-17T20:26:36.283Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -37,22 +37,6 @@
   },
   {
    "projectId": "zenray-progress",
-   "lines": 565,
-   "work": 132,
-   "prompts": 150,
-   "first": "2026-10-07T12:25:29.615Z",
-   "last": "2026-10-10T18:43:43.662Z",
-   "strength": "strong",
-   "conversationId": "codex:01a11653-69f5-7492-b80e-dbcc6a785d87",
-   "provider": "codex",
-   "sessionId": "01a11653-69f5-7492-b80e-dbcc6a785d87",
-   "title": "Conversation codex 01a11653",
-   "updatedAt": "2026-10-10T18:43:51.851Z",
-   "bytes": 1030623008,
-   "boundProject": "zenray-assets-v2"
-  },
-  {
-   "projectId": "zenray-progress",
    "lines": 486,
    "work": 86,
    "prompts": 6,
@@ -65,22 +49,6 @@
    "title": "DRIVE evolution",
    "updatedAt": "2026-10-14T09:54:43.918Z",
    "bytes": 20819,
-   "boundProject": null
-  },
-  {
-   "projectId": "zenray-progress",
-   "lines": 31,
-   "work": 16,
-   "prompts": 1,
-   "first": "2026-10-10T17:33:40.054Z",
-   "last": "2026-10-10T17:40:55.754Z",
-   "strength": "strong",
-   "conversationId": "codex:01a126e0-9d59-7541-ac24-f9836b624ac7",
-   "provider": "codex",
-   "sessionId": "01a126e0-9d59-7541-ac24-f9836b624ac7",
-   "title": "Conversation codex 01a126e0",
-   "updatedAt": "2026-10-10T17:41:19.785Z",
-   "bytes": 2579131,
    "boundProject": null
   },
   {
@@ -111,8 +79,8 @@
    "provider": "claude",
    "sessionId": "d2f26016-25dd-4bcc-a6d8-122d50d3f383",
    "title": "3 motion design and editing video",
-   "updatedAt": "2026-10-17T20:15:29.762Z",
-   "bytes": 251615183,
+   "updatedAt": "2026-10-17T20:26:28.102Z",
+   "bytes": 259541755,
    "boundProject": null
   },
   {
@@ -143,8 +111,8 @@
    "provider": "codex",
    "sessionId": "01a1301b-f199-7773-863c-b2a78d50b909",
    "title": "Conversation codex 01a1301b",
-   "updatedAt": "2026-10-16T12:40:09.850Z",
-   "bytes": 38928540,
+   "updatedAt": "2026-10-17T20:24:20.808Z",
+   "bytes": 39628303,
    "boundProject": "zenray-japanese"
   },
   {
@@ -1026,54 +994,6 @@
    "updatedAt": "2026-10-11T11:57:48.734Z",
    "bytes": 760044,
    "boundProject": "conversation-codex-bda04145d7f792b08c0d8f03"
-  },
-  {
-   "projectId": "zenray-progress",
-   "lines": 2,
-   "work": 0,
-   "prompts": 1,
-   "first": "2026-10-10T16:19:49.951Z",
-   "last": "2026-10-10T16:19:49.952Z",
-   "strength": "weak",
-   "conversationId": "codex:01a1269d-08fb-7161-8cf4-610ff8acf5b4",
-   "provider": "codex",
-   "sessionId": "01a1269d-08fb-7161-8cf4-610ff8acf5b4",
-   "title": "Conversation codex 01a1269d",
-   "updatedAt": "2026-10-10T16:21:29.815Z",
-   "bytes": 501640,
-   "boundProject": null
-  },
-  {
-   "projectId": "zenray-progress",
-   "lines": 2,
-   "work": 0,
-   "prompts": 1,
-   "first": "2026-10-09T14:34:54.428Z",
-   "last": "2026-10-09T14:34:54.429Z",
-   "strength": "weak",
-   "conversationId": "codex:01a12115-ab1b-7262-9039-00c41e82a05c",
-   "provider": "codex",
-   "sessionId": "01a12115-ab1b-7262-9039-00c41e82a05c",
-   "title": "Conversation codex 01a12115",
-   "updatedAt": "2026-10-10T16:02:35.070Z",
-   "bytes": 8951680,
-   "boundProject": "louisiana-bayou"
-  },
-  {
-   "projectId": "zenray-progress",
-   "lines": 2,
-   "work": 0,
-   "prompts": 1,
-   "first": "2026-10-10T14:34:14.653Z",
-   "last": "2026-10-10T14:34:14.655Z",
-   "strength": "weak",
-   "conversationId": "codex:01a1263c-64da-7021-b0c0-8b0179e79e1f",
-   "provider": "codex",
-   "sessionId": "01a1263c-64da-7021-b0c0-8b0179e79e1f",
-   "title": "Conversation codex 01a1263c",
-   "updatedAt": "2026-10-10T14:36:26.679Z",
-   "bytes": 5843011,
-   "boundProject": null
   },
   {
    "projectId": "zenray-progress",
