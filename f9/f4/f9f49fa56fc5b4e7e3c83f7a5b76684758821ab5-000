@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-10-17T14:25:33.085Z",
+ "scannedAt": "2026-10-17T14:35:33.153Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -576,7 +576,7 @@
    "sessionId": "6770fb4c-3c30-4bc8-939a-b209ab0ddb1b",
    "title": "1 zenray freelance",
    "updatedAt": "2026-10-17T13:47:05.186Z",
-   "bytes": 40193,
+   "bytes": 39888,
    "boundProject": null
   },
   {
@@ -1080,15 +1080,15 @@
    "lines": 1,
    "work": 0,
    "prompts": 0,
-   "first": "2026-10-17T13:32:54.286Z",
-   "last": "2026-10-17T13:32:54.286Z",
+   "first": "2026-10-17T14:21:27.442Z",
+   "last": "2026-10-17T14:21:27.442Z",
    "strength": "weak",
-   "conversationId": "claude:dc58fe08-d3b3-4c2a-a4af-b00e77409ca3",
+   "conversationId": "claude:2ce02bbc-dad5-488e-9ffc-51313c488339",
    "provider": "claude",
-   "sessionId": "dc58fe08-d3b3-4c2a-a4af-b00e77409ca3",
-   "title": "Plan to Google Calendar",
-   "updatedAt": "2026-10-17T14:25:31.410Z",
-   "bytes": 3764124,
+   "sessionId": "2ce02bbc-dad5-488e-9ffc-51313c488339",
+   "title": "StudioPhoto",
+   "updatedAt": "2026-10-17T14:35:04.514Z",
+   "bytes": 10008146,
    "boundProject": null
   },
   {
@@ -1096,15 +1096,15 @@
    "lines": 1,
    "work": 0,
    "prompts": 0,
-   "first": "2026-10-17T14:21:27.442Z",
-   "last": "2026-10-17T14:21:27.442Z",
+   "first": "2026-10-17T13:32:54.286Z",
+   "last": "2026-10-17T13:32:54.286Z",
    "strength": "weak",
-   "conversationId": "claude:2ce02bbc-dad5-488e-9ffc-51313c488339",
+   "conversationId": "claude:dc58fe08-d3b3-4c2a-a4af-b00e77409ca3",
    "provider": "claude",
-   "sessionId": "2ce02bbc-dad5-488e-9ffc-51313c488339",
-   "title": "Grille comparaison images haute résolution",
-   "updatedAt": "2026-10-17T14:24:49.311Z",
-   "bytes": 36501,
+   "sessionId": "dc58fe08-d3b3-4c2a-a4af-b00e77409ca3",
+   "title": "Plan to Google Calendar",
+   "updatedAt": "2026-10-17T14:34:42.708Z",
+   "bytes": 39541,
    "boundProject": null
   },
   {
