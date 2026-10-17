@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-10-17T16:07:34.257Z",
+ "scannedAt": "2026-10-17T16:28:34.571Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -1080,6 +1080,22 @@
    "lines": 1,
    "work": 0,
    "prompts": 0,
+   "first": "2026-10-17T13:32:54.286Z",
+   "last": "2026-10-17T13:32:54.286Z",
+   "strength": "weak",
+   "conversationId": "claude:dc58fe08-d3b3-4c2a-a4af-b00e77409ca3",
+   "provider": "claude",
+   "sessionId": "dc58fe08-d3b3-4c2a-a4af-b00e77409ca3",
+   "title": "Plan to Google Calendar",
+   "updatedAt": "2026-10-17T16:28:31.211Z",
+   "bytes": 39683,
+   "boundProject": null
+  },
+  {
+   "projectId": "zenray-progress",
+   "lines": 1,
+   "work": 0,
+   "prompts": 0,
    "first": "2026-10-17T14:21:27.442Z",
    "last": "2026-10-17T14:21:27.442Z",
    "strength": "weak",
@@ -1090,22 +1106,6 @@
    "updatedAt": "2026-10-17T16:07:12.377Z",
    "bytes": 36743,
    "boundProject": "studiophoto-matthieu-17-october-2026"
-  },
-  {
-   "projectId": "zenray-progress",
-   "lines": 1,
-   "work": 0,
-   "prompts": 0,
-   "first": "2026-10-17T13:32:54.286Z",
-   "last": "2026-10-17T13:32:54.286Z",
-   "strength": "weak",
-   "conversationId": "claude:dc58fe08-d3b3-4c2a-a4af-b00e77409ca3",
-   "provider": "claude",
-   "sessionId": "dc58fe08-d3b3-4c2a-a4af-b00e77409ca3",
-   "title": "Plan to Google Calendar",
-   "updatedAt": "2026-10-17T14:57:09.256Z",
-   "bytes": 4435346,
-   "boundProject": null
   },
   {
    "projectId": "zenray-progress",
