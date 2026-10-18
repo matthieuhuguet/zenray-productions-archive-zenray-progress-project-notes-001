@@ -3515,3 +3515,72 @@
 > | Les 3 découpes dans le sous-dossier `crop` | oui | 3 fichiers de 548 px de haut dans `crop/` | (16 October 2026, 15:39:54 +0200)
 > | prompt-stacking à la fin | oui | fichier d'état écrit | (16 October 2026, 15:39:54 +0200)
 > | Écriture réelle dans Plan et la note | pas vérifié | seulement des écritures simulées | (16 October 2026, 15:39:54 +0200)
+
+## 19 October 2026, 00:26:31 +0200 : Prompt
+
+<!-- feedback-event:bb59b5ce74453ad6b224b6815c5267dca80a8f2d99c5ca5c879d6d6225f039d9 (19 October 2026, 00:26:31 +0200) -->
+- Project: zenray-progress; kind: prompt. (19 October 2026, 00:26:31 +0200)
+- Source: /Users/zenray/.codex/sessions/2026/10/19/rollout-2026-10-19T00-26-29-01a1511f-9f4c-7410-a6eb-d2e93353fa70.jsonl. (19 October 2026, 00:26:31 +0200)
+
+> [$zenray-resume-coordinator](/Users/zenray/.codex/skills/zenray-resume-coordinator/SKILL.md) zenray progress lis le code localise plan et code le fait de pouvoir parse des pièces jointes avec un lien téléchargeable convertit pour le google calendar et host sur mon Create ... par exemple crée une nouvelle note pour aujourd'hui après avoir codé et déployé et associe ce fichier : /Users/zenray/Downloads/manifesto-audio-book-1.m4a Le but en fait, c'est que sur mon Google Calendar, je puisse télécharger directement le fichier via un lien de téléchargement car c'est lié. mais host sur mon Create (Drive) il y a sans doute des manières simple de le faire (19 October 2026, 00:26:31 +0200)
+>
+> Donc dans Zenray Plan, je dois pouvoir mettre des pièces jointes. (19 October 2026, 00:26:31 +0200)
+
+## 19 October 2026, 00:27:04 +0200 : Prompt
+
+<!-- feedback-event:247a763c9653fb66790fa50c5be2eb05a8b4a10fcc4e21cb2e4a80ad4aa611f4 (19 October 2026, 00:27:04 +0200) -->
+- Project: zenray-progress; kind: prompt. (19 October 2026, 00:27:04 +0200)
+
+> Dans ZenRay Plan, pouvoir mettre des pièces jointes hébergées sur Create avec lien téléchargeable dans Google Calendar. Coder, déployer puis créer une note aujourd’hui avec /Users/zenray/Downloads/manifesto-audio-book-1.m4a. (19 October 2026, 00:27:04 +0200)
+
+## 19 October 2026, 00:41:18 +0200 : Iteration
+
+<!-- feedback-event:231ec7e156c85c922d5e2bd89606915f181166051ce261238525651ccae1994c (19 October 2026, 00:41:18 +0200) -->
+- Project: zenray-progress; kind: iteration. (19 October 2026, 00:41:18 +0200)
+
+> Pièces jointes Plan déployées avec fichiers originaux Create et liens signés permanents révocables dans Calendar. Carte manifesto-audio-book-1 créée le 19 October 2026. Fichier téléchargé anonymement : 7299017 octets, SHA-256 identique à la source. Première version Cloudflare renvoyait 0 octet : setAuthTag devait précéder update, corrigé et vérifié dans workerd et en production. Preuve PlanAttachmentDownloadProof.json. (19 October 2026, 00:41:18 +0200)
+
+## 19 October 2026, 00:42:18 +0200 : Iteration
+
+<!-- feedback-event:17a5de9e0df1fdaf4101e2d4c33bcc626bd07e96d26a0b84e8f19e8dbc31ed23 (19 October 2026, 00:42:18 +0200) -->
+- Project: zenray-progress; kind: iteration. (19 October 2026, 00:42:18 +0200)
+- Source: checkpoint:codex:01a1511f-9f4c-7410-a6eb-d2e93353fa70. (19 October 2026, 00:42:18 +0200)
+
+> Plan attachments coded and deployed on main (3cafee8e, 785a21a5). Originals are stored encrypted in Create, with permanent revocable signed file download links appended to Google Calendar descriptions. The card manifesto-audio-book-1 exists on 19 October 2026, Google event plan4d632c19e5a2a74409101b5c6a65061a. Anonymous production download read back: 7299017 bytes, SHA256 a1a741bccdcd5e4dbc44e85ab97fc2042ec130d6520ac9fbac640e5f7bdb7473 exactly matches local audio. Initial workerd GCM tag ordering failure was diagnosed and fixed, verified with the exact handler in workerd and production. First full suite 2682 tests passed; final full suite running after the fix. Next: use Add attachments in a Plan task. Proof: /Users/zenray/.claude/tmp/tmp-zenray-progress/PlanAttachmentDownloadProof.json. (19 October 2026, 00:42:18 +0200)
+
+## 19 October 2026, 00:44:19 +0200 : Iteration
+
+<!-- feedback-event:e08db0afd4a76c86e190f62f04b8c376b9f5128097e8aec5bfbf6889e856c508 (19 October 2026, 00:44:19 +0200) -->
+- Project: zenray-progress; kind: iteration. (19 October 2026, 00:44:19 +0200)
+- Source: checkpoint:codex:01a1511f-9f4c-7410-a6eb-d2e93353fa70. (19 October 2026, 00:44:19 +0200)
+
+> Completed: Plan attachments deployed (main 785a21a5, Pages af05e164, Calendar Worker 6d7ce8f8). Card manifesto-audio-book-1 dated 19 October 2026 exists in Plan and Google Calendar with a working Create download link. Verified anonymous download twice: 7299017 bytes, exact SHA256 match a1a741bccdcd5e4dbc44e85ab97fc2042ec130d6520ac9fbac640e5f7bdb7473. Permanent scoped sharing and revocation tested against production: revoked link returns HTTP 410. Final full suite: 2686 pass, one Freelance timeout, one skipped; all 13 Freelance tests pass on isolated retry, for 2687 passed overall. 244 Plan tasks preserved. Source audio retained. Next: open a Plan task and Add attachments. Proofs and reusable verification scripts are in /Users/zenray/.claude/tmp/tmp-zenray-progress/. (19 October 2026, 00:44:19 +0200)
+
+## 19 October 2026, 00:44:24 +0200 : Iteration
+
+<!-- feedback-event:78bc86fca0775f35ca5ebf65284fa2730f28e28d6c58b6aa86152f84cfa17d91 (19 October 2026, 00:44:24 +0200) -->
+- Project: zenray-progress; kind: iteration. (19 October 2026, 00:44:24 +0200)
+- Source: /Users/zenray/.codex/sessions/2026/10/19/rollout-2026-10-19T00-26-29-01a1511f-9f4c-7410-a6eb-d2e93353fa70.jsonl. (19 October 2026, 00:44:24 +0200)
+
+> C’est déployé. Dans une tâche **Plan**, clique sur **Add attachments** : les fichiers restent dans Create et leurs liens apparaissent dans la description Google Calendar. (19 October 2026, 00:44:24 +0200)
+>
+> | Ce que tu voulais | Fait | Comment je le sais | (19 October 2026, 00:44:24 +0200)
+> |---|---|---| (19 October 2026, 00:44:24 +0200)
+> | Pièces jointes dans Plan | Fait | Ajout, téléchargement et retrait testés | (19 October 2026, 00:44:24 +0200)
+> | Ton audio aujourd’hui | Fait | [Carte du 19 October 2026 dans Calendar](https://www.google.com/calendar/event?eid=cGxhbjRkNjMyYzE5ZTVhMmE3NDQwOTEwMWI1YzZhNjUwNjFhIG1hdHRoLmh1Z3VldEBt), lien relu | (19 October 2026, 00:44:24 +0200)
+> | Télécharger l’original | Fait | 7 299 017 octets téléchargés, empreinte identique à ton fichier | (19 October 2026, 00:44:24 +0200)
+
+## 19 October 2026, 00:44:24 +0200 : Prompt
+
+<!-- feedback-event:60c4c68ba020c7e28d8e7af6b0355f57908a26bd081eaf6afb5222591f9d9a6c (19 October 2026, 00:44:24 +0200) -->
+- Project: zenray-progress; kind: prompt. (19 October 2026, 00:44:24 +0200)
+- Source: /Users/zenray/.codex/sessions/2026/10/19/rollout-2026-10-19T00-26-29-01a1511f-9f4c-7410-a6eb-d2e93353fa70.jsonl. (19 October 2026, 00:44:24 +0200)
+
+> J'aimerai juste savoir quel est la limite d'une pièce jointe et si c'est long ajouter une barre de progression ainsi qu'un loader apple pour que l'utilisateur comprennent le délai en terme d'UI est ce que tu ajoutes bien les protocoles github et la politique existantes ... bref vérifie et continue [$prompt-stacking](/Users/zenray/.codex/skills/prompt-stacking/SKILL.md) (19 October 2026, 00:44:24 +0200)
+
+## 19 October 2026, 00:44:50 +0200 : Prompt
+
+<!-- feedback-event:136491f8d8b5c0f6cd82d16d2ecf25cb79ce341c7a066ed153c5a003fc2c657b (19 October 2026, 00:44:50 +0200) -->
+- Project: zenray-progress; kind: prompt. (19 October 2026, 00:44:50 +0200)
+
+> Vérifier la limite des pièces jointes et le respect des protocoles et politiques GitHub existants. Ajouter une barre de progression et un loader Apple pour comprendre le délai. Vérifie et continue, prompt-stacking. (19 October 2026, 00:44:50 +0200)

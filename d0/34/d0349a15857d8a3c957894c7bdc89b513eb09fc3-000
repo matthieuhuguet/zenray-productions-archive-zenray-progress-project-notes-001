@@ -1,80 +1,96 @@
-# Resume zenray-progress (16 October 2026 at 13:41)
+# Resume zenray-progress (19 October 2026 at 00:26)
 
-- Generated from FEEDBACK.md, Rules.md and ConversationIndex.json; derived, never edited by hand, never a substitute for the originals. (16 October 2026 at 13:41)
-- Pinned rules, read first: [Rules.md](/Users/zenray/.claude/Memory1/Projects/zenray-progress/Rules.md) (25 rules). (16 October 2026 at 13:41)
-- Canonical feedback: [FEEDBACK.md](/Users/zenray/.claude/Memory1/Projects/zenray-progress/FEEDBACK.md), 180 entries, last Standing rule at 15 October 2026, 20:30:35 +0200. (16 October 2026 at 13:41)
+- Generated from FEEDBACK.md, Rules.md and ConversationIndex.json; derived, never edited by hand, never a substitute for the originals. (19 October 2026 at 00:26)
+- Pinned rules, read first: [Rules.md](/Users/zenray/.claude/Memory1/Projects/zenray-progress/Rules.md) (28 rules). (19 October 2026 at 00:26)
+- Canonical feedback: [FEEDBACK.md](/Users/zenray/.claude/Memory1/Projects/zenray-progress/FEEDBACK.md), 237 entries, last Iteration at 16 October 2026, 15:39:54 +0200. (19 October 2026 at 00:26)
 
-## Latest conversations (16 October 2026 at 13:41)
+## Latest conversations (19 October 2026 at 00:26)
 
-- LATEST claude:5bd15db6-f2d9-4010-bcb3-0d609a42bc5e, « performance assets and drive », last activity 15 October 2026 at 09:02 Paris (from feedback). Original: `node scripts/Assets/ConversationDigest.mjs claude:5bd15db6-f2d9-4010-bcb3-0d609a42bc5e --out <file.md>`. (16 October 2026 at 13:41)
-- codex:01a100e2-32f9-7a43-8b5f-ef21c5f96d4d, « 01a100e2-32f9-7a43-8b5f-ef21c5f96d4d », last activity 3 October 2026 at 10:39 Paris (from feedback). Original: `node scripts/Assets/ConversationDigest.mjs codex:01a100e2-32f9-7a43-8b5f-ef21c5f96d4d --out <file.md>`. (16 October 2026 at 13:41)
+- LATEST claude:d3327e82-5a7e-46d8-b6f6-bc0447663c2b, « 4 sport section », last activity 16 October 2026 at 15:39 Paris (from feedback). Original: `node scripts/Assets/ConversationDigest.mjs claude:d3327e82-5a7e-46d8-b6f6-bc0447663c2b --out <file.md>`. (19 October 2026 at 00:26)
+- claude:5bd15db6-f2d9-4010-bcb3-0d609a42bc5e, « performance assets and drive », last activity 15 October 2026 at 09:02 Paris (from feedback). Original: `node scripts/Assets/ConversationDigest.mjs claude:5bd15db6-f2d9-4010-bcb3-0d609a42bc5e --out <file.md>`. (19 October 2026 at 00:26)
+- codex:01a100e2-32f9-7a43-8b5f-ef21c5f96d4d, « 01a100e2-32f9-7a43-8b5f-ef21c5f96d4d », last activity 3 October 2026 at 10:39 Paris (from feedback). Original: `node scripts/Assets/ConversationDigest.mjs codex:01a100e2-32f9-7a43-8b5f-ef21c5f96d4d --out <file.md>`. (19 October 2026 at 00:26)
 
-## Last 6 prompts of Matthieu, oldest first (16 October 2026 at 13:41)
+## Last 6 prompts of Matthieu, oldest first (19 October 2026 at 00:26)
 
-### 15 October 2026, 07:22:25 +0200 · Prompt · claude:5bd15db6
+### 16 October 2026, 15:33:38 +0200 · Prompt · claude:d3327e82
 
-> BILAN 30 MIN (ZenRayProgress, refinement 14 octobre): en 5 lignes max dis ce qui est fait depuis le dernier bilan (avec preuve mesuree), ce qui est en cours, le prochain geste; puis append une entree PROGRESS.md via le skill progress; puis continue le travail sans t'arreter (dont-stop). Rappel: aucune regression design, aucun bug sur les donnees, deploiement uniquement depuis un arbre propre d'origin/main.
-
-### 15 October 2026, 07:52:26 +0200 · Prompt · claude:5bd15db6
-
-> BILAN 30 MIN (ZenRayProgress, refinement 14 octobre): en 5 lignes max dis ce qui est fait depuis le dernier bilan (avec preuve mesuree), ce qui est en cours, le prochain geste; puis append une entree PROGRESS.md via le skill progress; puis continue le travail sans t'arreter (dont-stop). Rappel: aucune regression design, aucun bug sur les donnees, deploiement uniquement depuis un arbre propre d'origin/main.
-
-### 15 October 2026, 08:22:26 +0200 · Prompt · claude:5bd15db6
-
-> BILAN 30 MIN (ZenRayProgress, refinement 14 octobre): en 5 lignes max dis ce qui est fait depuis le dernier bilan (avec preuve mesuree), ce qui est en cours, le prochain geste; puis append une entree PROGRESS.md via le skill progress; puis continue le travail sans t'arreter (dont-stop). Rappel: aucune regression design, aucun bug sur les donnees, deploiement uniquement depuis un arbre propre d'origin/main.
-
-### 15 October 2026, 08:52:26 +0200 · Prompt · claude:5bd15db6
-
-> BILAN 30 MIN (ZenRayProgress, refinement 14 octobre): en 5 lignes max dis ce qui est fait depuis le dernier bilan (avec preuve mesuree), ce qui est en cours, le prochain geste; puis append une entree PROGRESS.md via le skill progress; puis continue le travail sans t'arreter (dont-stop). Rappel: aucune regression design, aucun bug sur les donnees, deploiement uniquement depuis un arbre propre d'origin/main.
-
-### 15 October 2026, 08:55:19 +0200 · Prompt · claude:5bd15db6
-
-> Tu va delete le cron finir proprement et m'expliquer toutes les modifications que tu as faites, fini proprement update la documentation du code via commentaires et résumé.
-
-### 15 October 2026, 09:02:00 +0200 · Prompt · claude:5bd15db6
-
-> est ce que tu as amélioré la vitesse des transferts upload assets et progress car c'était surtout ça le but ?
-
-
-## Last 3 iterations or checkpoints (16 October 2026 at 13:41)
-
-### 15 October 2026, 08:55:40 +0200 · Iteration · claude:5bd15db6
-
-> J'ai supprimé le cron et arrêté le serveur de prévisualisation. J'écris maintenant la documentation (commentaires de code, document de synthèse, index des erreurs).
-
-### 15 October 2026, 08:58:55 +0200 · Iteration · claude:5bd15db6
-
-> Le cron de bilan est supprimé, il n'y a plus de serveur de prévisualisation, et tout est sur `origin/main`.
+> /Users/zenray/Downloads/exercices_musculation_3_images/curl_biceps_debout.png /Users/zenray/Downloads/exercices_musculation_3_images/developpe_couche_halteres.png /Users/zenray/Downloads/exercices_musculation_3_images/pompes_surelevees.png
 > 
-> ## Ce que j'ai modifié
+> pareil sheet de validation pour découpage de ces exos tu as les noms à append dans la liste sport ensuite et supprime tout ceux qui n'ont pas d'images pour l'instant
 > 
-> **Assets (le « loader occupé » et les envois lents)**
-> - Le service ne recompose plus tout à chaque appel : listes mémoïsées, sauvegardes d'état fusionnées, passes automatiques fusionnées (240 s), cession du writer aux actions interactives.
-> - Une publication est une seule transaction Git (3 sauvegardes et 9 fetch deviennent 1 fetch et 1 push).
-> - Les lots font 2 000 fichiers (le moteur paie environ 35 s fixes par lot).
-> - Recherche de carte par table : 25 s de gel par lot supprimées.
-> - Le snapshot japonais (104,7 Mo, refusé par GitHub) tombe à 80,8 Mo ; une alerte
-> [... 2930 more characters in FEEDBACK.md]
+> Seulement trois exos à ajouter après avoir ajouté et découpé les images attends ma validation.
 
-### 15 October 2026, 09:02:19 +0200 · Iteration · claude:5bd15db6
+### 16 October 2026, 15:34:50 +0200 · Prompt · manual
 
-> Partiellement, et je n'ai pas mesuré le débit brut en Mo/s : ce n'est donc pas à moi de dire que c'est réglé.
+> Même chose, une sheet de validation pour le découpage de ces trois images (curl biceps debout, développé couché haltères, pompes surélevées). Tu as les noms à ajouter ensuite dans la liste Sport, puis tu supprimes tous ceux qui n'ont pas d'images pour l'instant. Seulement trois exos à ajouter, après avoir ajouté et découpé les images : attends ma validation.
+
+### 16 October 2026, 15:37:32 +0200 · Prompt · claude:d3327e82
+
+> 09:A, 10:A, 11:A et les exos maintenant sur sport
+
+### 16 October 2026, 15:39:39 +0200 · Prompt · manual
+
+> 09:A, 10:A, 11:A et les exos maintenant sur Sport.
+
+### 16 October 2026, 15:39:39 +0200 · Prompt · manual
+
+> Redonne-moi le découpage des 3 images et je veux les images dans le dossier d'input, dans un sous-dossier crop. /prompt-stacking seulement quand tu as fini.
+
+### 16 October 2026, 15:39:39 +0200 · Prompt · claude:d3327e82
+
+> Base directory for this skill: /Users/zenray/.claude/skills/prompt-stacking
 > 
-> **Ce qui est amélioré, avec preuve (événements `timing` du service)**
-> - Le coût fixe par passe a baissé : la publication Git passe de 26-30 s à 10-16 s en moyenne.
-> - Les gros lots de petits fichiers vont vite : 153 000 fichiers en 1 h entre 22h et 23h, soit environ 44 fichiers/s. Le corpus japonais (51 309 fichiers en attente) a été vidé.
-> - Les lots de 2 000 fichiers et la suppression du gel de 25 s par lot y contribuent.
+> # Continuité des tâches
 > 
-> **Ce qui n'est pas amélioré, ou pas prouvé**
-> - **Octets par seconde vers GitHub** : je n'y ai pas touché. La politique de push existait déjà (lots de 1 900 Mio, e
-> [... 974 more characters in FEEDBACK.md]
+> **Un nouveau prompt change le focus, pas l'historique des obligations.**
+> 
+> **Une tâche ne disparaît que par `DONE` ou `CANCEL`.**
+> 
+> ## État unique par session
+> 
+> Résoudre le dossier depuis l'identifiant opaque fourni par l'hôte, jamais depuis le texte littéral
+> `<CurrentSessionName>` ni depuis une date, un nom de projet ou une valeur aléatoire :
+> 
+> - Claude Code : `/Users/zenray/.claude/$CLAUDE_SESSION_ID/prompt-stacking.md`
+> - Codex : `/Users/zenray/.codex/$CODEX_SESSION_ID/prompt-stacking.md`
+> - Antigravity : `/Users/zenray/.gemini/antigravity/$ANTIGRAVITY_CONVERSATION_ID/prompt-stacking.md`
+> 
+> Le do
+> [... 2283 more characters in FEEDBACK.md]
 
 
-## Last order of work (16 October 2026 at 13:41)
+## Last 3 iterations or checkpoints (19 October 2026 at 00:26)
+
+### 16 October 2026, 15:33:33 +0200 · Iteration · claude:d3327e82
+
+> Sport est maintenant dans le groupe **Craft** de la sidebar, juste sous **Plan**. Recharge la page pour le voir.
+> 
+> C'est commité, poussé sur main et déployé. J'ai vérifié que `zenray-progress.pages.dev` sert bien le même bundle que mon build local (`index-DoO5WMdx.js`) et qu'il contient l'entrée Sport rangée dans Craft. Ma première comparaison disait le contraire, parce que le site mettait quelques secondes à basculer sur le nouveau bundle.
+> 
+> Le build et les 28 tests concernés passent. La vérification dans le navigateur reste de ton côté, selon la règle du projet.
+> 
+> | Ce que tu voulais | Fait ? | Comment je le sais |
+> |---|---|---|
+> | Sport sous Plan dans la sidebar | oui | l'entrée est en Craft 
+> [... 53 more characters in FEEDBACK.md]
+
+### 16 October 2026, 15:38:38 +0200 · Iteration · claude:d3327e82
+
+> Les trois découpes sont rangées dans le dossier d'input. Je commite, pousse et déploie maintenant les trois exercices et la suppression des exos sans image.
+
+### 16 October 2026, 15:39:54 +0200 · Iteration · claude:d3327e82
+
+> Les trois exercices sont dans Sport avec leur image : curl biceps debout, développé couché aux haltères et pompes surélevées, en découpe A (image principale seule). La production sert le nouveau bundle et les trois images en 200. Les 8 exercices sans image sont retirés : militaire, tractions simples, squat bulgare, relevés de jambes, rowing, tirage bras tendus, hyperextensions et good morning. Il reste 11 exercices, tous avec image, numérotés de 1 à 11. J'ai aussi ajouté le groupe Bras aux filtres.
+> 
+> Les trois découpes sont dans `/Users/zenray/Downloads/exercices_musculation_3_images/crop/` (`curl_biceps_debout.png`, `developpe_couche_halteres.png`, `pompes_surelevees.png`). Le suivi de tâche
+> [... 868 more characters in FEEDBACK.md]
+
+
+## Last order of work (19 October 2026 at 00:26)
 
 ### 10 October 2026, 18:03:28 +0200 · Order of work · manual
 
 > stop l'upload ...pause
 
 
-Next step: reread the latest prompt above, check it against Rules.md, then continue; append through feedback.py and close the turn with Client.mjs checkpoint. (16 October 2026 at 13:41)
+Next step: reread the latest prompt above, check it against Rules.md, then continue; append through feedback.py and close the turn with Client.mjs checkpoint. (19 October 2026 at 00:26)
