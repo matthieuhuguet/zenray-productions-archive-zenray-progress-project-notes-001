@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-10-18T17:25:59.261Z",
+ "scannedAt": "2026-10-18T18:01:54.536Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -69,18 +69,18 @@
   },
   {
    "projectId": "zenray-progress",
-   "lines": 48,
+   "lines": 50,
    "work": 10,
    "prompts": 3,
    "first": "2026-10-14T11:34:59.327Z",
-   "last": "2026-10-17T14:05:32.257Z",
+   "last": "2026-10-18T17:55:21.104Z",
    "strength": "strong",
    "conversationId": "claude:d2f26016-25dd-4bcc-a6d8-122d50d3f383",
    "provider": "claude",
    "sessionId": "d2f26016-25dd-4bcc-a6d8-122d50d3f383",
    "title": "3 motion design and editing video",
-   "updatedAt": "2026-10-18T10:02:02.400Z",
-   "bytes": 22324,
+   "updatedAt": "2026-10-18T18:01:23.381Z",
+   "bytes": 338005844,
    "boundProject": null
   },
   {
@@ -174,8 +174,8 @@
    "conversationId": "gemini:dad216b8-610b-4279-a532-56e02644714d",
    "provider": "gemini",
    "sessionId": "dad216b8-610b-4279-a532-56e02644714d",
-   "title": "Conversation Gemini dad216b8",
-   "updatedAt": "2026-10-14T21:13:27.597Z",
+   "title": "zenray progress les fichiers n'ont pas de sous titres pourquoi ? bleach ? until grep -qE \"STAGE FAILED|Traceback|PROOF RED|FINISH FAILED|pub",
+   "updatedAt": "2026-10-14T21:12:45.577735+00:00",
    "bytes": 11730944,
    "boundProject": null
   },
@@ -999,22 +999,6 @@
    "projectId": "zenray-progress",
    "lines": 2,
    "work": 0,
-   "prompts": 1,
-   "first": "2026-10-11T11:56:32.733Z",
-   "last": "2026-10-11T11:56:32.734Z",
-   "strength": "weak",
-   "conversationId": "codex:01a12ad2-5a97-7ce2-9df7-044b2c43bb67",
-   "provider": "codex",
-   "sessionId": "01a12ad2-5a97-7ce2-9df7-044b2c43bb67",
-   "title": "Conversation codex 01a12ad2",
-   "updatedAt": "2026-10-11T11:57:48.734Z",
-   "bytes": 760044,
-   "boundProject": "conversation-codex-bda04145d7f792b08c0d8f03"
-  },
-  {
-   "projectId": "zenray-progress",
-   "lines": 2,
-   "work": 0,
    "prompts": 0,
    "first": "2026-09-30T07:51:31.257Z",
    "last": "2026-09-30T10:53:13.614Z",
@@ -1039,8 +1023,8 @@
    "provider": "claude",
    "sessionId": "a3f20b1d-27ed-48e1-a0d1-5fe182c0e423",
    "title": "2 louisiana bayou video",
-   "updatedAt": "2026-10-18T17:25:34.130Z",
-   "bytes": 36752,
+   "updatedAt": "2026-10-18T17:42:58.191Z",
+   "bytes": 36767,
    "boundProject": null
   },
   {
@@ -1374,8 +1358,8 @@
    "conversationId": "gemini:3e22a918-b7a6-4b1f-99ea-e50907f40d44",
    "provider": "gemini",
    "sessionId": "3e22a918-b7a6-4b1f-99ea-e50907f40d44",
-   "title": "Conversation Gemini 3e22a918",
-   "updatedAt": "2026-09-15T20:06:00.494Z",
+   "title": "'/Users/zenray/Movies/2026-09-15 20-36-50.mkv' to mov et speed jusqu'à ce que ça fasse 30 secondes speed ajusté à la longueur initial. go da",
+   "updatedAt": "2026-09-15T20:05:24.351772+00:00",
    "bytes": 3629056,
    "boundProject": null
   },
