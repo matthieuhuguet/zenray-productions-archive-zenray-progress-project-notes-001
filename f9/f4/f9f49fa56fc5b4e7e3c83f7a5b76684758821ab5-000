@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-10-18T18:56:54.833Z",
+ "scannedAt": "2026-10-18T19:17:54.933Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -79,8 +79,8 @@
    "provider": "claude",
    "sessionId": "d2f26016-25dd-4bcc-a6d8-122d50d3f383",
    "title": "3 motion design and editing video",
-   "updatedAt": "2026-10-18T18:56:42.631Z",
-   "bytes": 368520604,
+   "updatedAt": "2026-10-18T19:14:04.040Z",
+   "bytes": 22439,
    "boundProject": null
   },
   {
@@ -546,6 +546,22 @@
    "updatedAt": "2026-10-02T14:38:28.892Z",
    "bytes": 23040,
    "boundProject": null
+  },
+  {
+   "projectId": "zenray-progress",
+   "lines": 2,
+   "work": 0,
+   "prompts": 0,
+   "first": "2026-10-17T14:21:27.442Z",
+   "last": "2026-10-18T19:00:34.400Z",
+   "strength": "weak",
+   "conversationId": "claude:2ce02bbc-dad5-488e-9ffc-51313c488339",
+   "provider": "claude",
+   "sessionId": "2ce02bbc-dad5-488e-9ffc-51313c488339",
+   "title": "StudioPhoto",
+   "updatedAt": "2026-10-18T19:16:57.413Z",
+   "bytes": 16634097,
+   "boundProject": "studiophoto-matthieu-17-october-2026"
   },
   {
    "projectId": "zenray-progress",
@@ -1074,22 +1090,6 @@
    "updatedAt": "2026-10-17T21:12:01.653Z",
    "bytes": 36785,
    "boundProject": null
-  },
-  {
-   "projectId": "zenray-progress",
-   "lines": 1,
-   "work": 0,
-   "prompts": 0,
-   "first": "2026-10-17T14:21:27.442Z",
-   "last": "2026-10-17T14:21:27.442Z",
-   "strength": "weak",
-   "conversationId": "claude:2ce02bbc-dad5-488e-9ffc-51313c488339",
-   "provider": "claude",
-   "sessionId": "2ce02bbc-dad5-488e-9ffc-51313c488339",
-   "title": "StudioPhoto",
-   "updatedAt": "2026-10-17T16:07:12.377Z",
-   "bytes": 36743,
-   "boundProject": "studiophoto-matthieu-17-october-2026"
   },
   {
    "projectId": "zenray-progress",
