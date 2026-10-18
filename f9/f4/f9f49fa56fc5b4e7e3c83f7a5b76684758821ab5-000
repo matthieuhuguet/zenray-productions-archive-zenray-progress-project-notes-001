@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-10-18T19:30:55.791Z",
+ "scannedAt": "2026-10-18T19:47:55.369Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -69,18 +69,18 @@
   },
   {
    "projectId": "zenray-progress",
-   "lines": 50,
+   "lines": 52,
    "work": 10,
    "prompts": 3,
    "first": "2026-10-14T11:34:59.327Z",
-   "last": "2026-10-18T17:55:21.104Z",
+   "last": "2026-10-18T19:42:08.345Z",
    "strength": "strong",
    "conversationId": "claude:d2f26016-25dd-4bcc-a6d8-122d50d3f383",
    "provider": "claude",
    "sessionId": "d2f26016-25dd-4bcc-a6d8-122d50d3f383",
    "title": "3 motion design and editing video",
-   "updatedAt": "2026-10-18T19:30:31.277Z",
-   "bytes": 371057158,
+   "updatedAt": "2026-10-18T19:47:00.172Z",
+   "bytes": 376351704,
    "boundProject": null
   },
   {
@@ -559,8 +559,8 @@
    "provider": "claude",
    "sessionId": "2ce02bbc-dad5-488e-9ffc-51313c488339",
    "title": "StudioPhoto",
-   "updatedAt": "2026-10-18T19:30:11.666Z",
-   "bytes": 20910189,
+   "updatedAt": "2026-10-18T19:37:53.737Z",
+   "bytes": 36716,
    "boundProject": "studiophoto-matthieu-17-october-2026"
   },
   {
