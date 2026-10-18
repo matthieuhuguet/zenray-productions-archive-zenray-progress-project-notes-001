@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-10-17T21:33:37.378Z",
+ "scannedAt": "2026-10-18T08:13:56.500Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -79,7 +79,7 @@
    "provider": "claude",
    "sessionId": "d2f26016-25dd-4bcc-a6d8-122d50d3f383",
    "title": "3 motion design and editing video",
-   "updatedAt": "2026-10-17T21:30:33.705Z",
+   "updatedAt": "2026-10-18T08:12:49.626Z",
    "bytes": 22375,
    "boundProject": null
   },
@@ -174,8 +174,8 @@
    "conversationId": "gemini:dad216b8-610b-4279-a532-56e02644714d",
    "provider": "gemini",
    "sessionId": "dad216b8-610b-4279-a532-56e02644714d",
-   "title": "zenray progress les fichiers n'ont pas de sous titres pourquoi ? bleach ? until grep -qE \"STAGE FAILED|Traceback|PROOF RED|FINISH FAILED|pub",
-   "updatedAt": "2026-10-14T21:12:45.577735+00:00",
+   "title": "Conversation Gemini dad216b8",
+   "updatedAt": "2026-10-14T21:13:27.597Z",
    "bytes": 11730944,
    "boundProject": null
   },
@@ -576,7 +576,7 @@
    "sessionId": "6770fb4c-3c30-4bc8-939a-b209ab0ddb1b",
    "title": "1 zenray freelance",
    "updatedAt": "2026-10-17T13:47:05.186Z",
-   "bytes": 40199,
+   "bytes": 40211,
    "boundProject": null
   },
   {
@@ -1374,8 +1374,8 @@
    "conversationId": "gemini:3e22a918-b7a6-4b1f-99ea-e50907f40d44",
    "provider": "gemini",
    "sessionId": "3e22a918-b7a6-4b1f-99ea-e50907f40d44",
-   "title": "'/Users/zenray/Movies/2026-09-15 20-36-50.mkv' to mov et speed jusqu'à ce que ça fasse 30 secondes speed ajusté à la longueur initial. go da",
-   "updatedAt": "2026-09-15T20:05:24.351772+00:00",
+   "title": "Conversation Gemini 3e22a918",
+   "updatedAt": "2026-09-15T20:06:00.494Z",
    "bytes": 3629056,
    "boundProject": null
   },
