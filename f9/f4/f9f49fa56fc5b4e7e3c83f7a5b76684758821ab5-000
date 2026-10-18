@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-10-18T22:47:36.437Z",
+ "scannedAt": "2026-10-18T23:01:37.183Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -37,6 +37,22 @@
   },
   {
    "projectId": "zenray-progress",
+   "lines": 194,
+   "work": 90,
+   "prompts": 1,
+   "first": "2026-10-18T22:26:31.459Z",
+   "last": "2026-10-18T22:55:42.592Z",
+   "strength": "strong",
+   "conversationId": "codex:01a1511f-9f4c-7410-a6eb-d2e93353fa70",
+   "provider": "codex",
+   "sessionId": "01a1511f-9f4c-7410-a6eb-d2e93353fa70",
+   "title": "Conversation codex 01a1511f",
+   "updatedAt": "2026-10-18T22:55:47.240Z",
+   "bytes": 3419085,
+   "boundProject": "zenray-progress"
+  },
+  {
+   "projectId": "zenray-progress",
    "lines": 486,
    "work": 86,
    "prompts": 6,
@@ -50,22 +66,6 @@
    "updatedAt": "2026-10-14T09:54:43.918Z",
    "bytes": 20819,
    "boundProject": null
-  },
-  {
-   "projectId": "zenray-progress",
-   "lines": 155,
-   "work": 74,
-   "prompts": 1,
-   "first": "2026-10-18T22:26:31.459Z",
-   "last": "2026-10-18T22:44:50.985Z",
-   "strength": "strong",
-   "conversationId": "codex:01a1511f-9f4c-7410-a6eb-d2e93353fa70",
-   "provider": "codex",
-   "sessionId": "01a1511f-9f4c-7410-a6eb-d2e93353fa70",
-   "title": "Conversation codex 01a1511f",
-   "updatedAt": "2026-10-18T22:47:33.573Z",
-   "bytes": 2952365,
-   "boundProject": "zenray-progress"
   },
   {
    "projectId": "zenray-progress",
@@ -95,8 +95,8 @@
    "provider": "claude",
    "sessionId": "d2f26016-25dd-4bcc-a6d8-122d50d3f383",
    "title": "3 motion design and editing video",
-   "updatedAt": "2026-10-18T22:47:35.132Z",
-   "bytes": 391671003,
+   "updatedAt": "2026-10-18T22:52:07.963Z",
+   "bytes": 22320,
    "boundProject": null
   },
   {
@@ -511,8 +511,8 @@
    "provider": "claude",
    "sessionId": "a3f20b1d-27ed-48e1-a0d1-5fe182c0e423",
    "title": "2 louisiana bayou video",
-   "updatedAt": "2026-10-18T22:46:47.476Z",
-   "bytes": 70979332,
+   "updatedAt": "2026-10-18T23:01:26.847Z",
+   "bytes": 72655457,
    "boundProject": null
   },
   {

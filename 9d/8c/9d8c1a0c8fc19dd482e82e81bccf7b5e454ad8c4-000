@@ -3584,3 +3584,27 @@
 - Project: zenray-progress; kind: prompt. (19 October 2026, 00:44:50 +0200)
 
 > Vérifier la limite des pièces jointes et le respect des protocoles et politiques GitHub existants. Ajouter une barre de progression et un loader Apple pour comprendre le délai. Vérifie et continue, prompt-stacking. (19 October 2026, 00:44:50 +0200)
+
+## 19 October 2026, 00:55:39 +0200 : Iteration
+
+<!-- feedback-event:7d4198bcd0ab3603fa12cc3e8e0264774bbb530c98264bfdf730572bdb873447 (19 October 2026, 00:55:39 +0200) -->
+- Project: zenray-progress; kind: iteration. (19 October 2026, 00:55:39 +0200)
+- Source: checkpoint:codex:01a1511f-9f4c-7410-a6eb-d2e93353fa70. (19 October 2026, 00:55:39 +0200)
+
+> Done: 95 MiB Plan browser attachment limit derives from shared RAW_THRESHOLD; empty/oversized files fail before network. Batches of 100+ files are redirected to existing Create bulk Git import. Existing Create encryption/chunking/REST retries/semaphore/rollover are reused; 1900 MiB Git push batches do not apply to the browser REST route. Progress now counts accepted 3 MiB transport fragments, uses existing SpinnerApple, shows real phases and elapsed seconds, and reaches 100% only after the drive confirms Plan save. Late callbacks after failure cannot revive progress. Main commits 9cea9017 and 2a003b86, deployed Pages bf478212; served index-DiAVKXAv.js and PlanBoard-C3nZ-ltk.js verified. Full suite: 2692 pass and 3 unrelated MediaApp timeouts; the 3 pass on isolated retry. Final targeted 12 tests pass. Existing audio, Plan and Calendar rechecked with unchanged exact 7299017 bytes. Next: reload Plan and use Add attachments. (19 October 2026, 00:55:39 +0200)
+
+## 19 October 2026, 00:55:47 +0200 : Iteration
+
+<!-- feedback-event:3dd9fd37a480539b1aa5413887cf9691ca9bf94ba9e60eac9ffcb645d32a31a6 (19 October 2026, 00:55:47 +0200) -->
+- Project: zenray-progress; kind: iteration. (19 October 2026, 00:55:47 +0200)
+- Source: /Users/zenray/.codex/sessions/2026/10/19/rollout-2026-10-19T00-26-29-01a1511f-9f4c-7410-a6eb-d2e93353fa70.jsonl. (19 October 2026, 00:55:47 +0200)
+
+> La limite dans **Plan est désormais de 95 Mio par fichier, environ 100 Mo**, affichée et vérifiée avant l’envoi. (19 October 2026, 00:55:47 +0200)
+>
+> C’est déployé. Recharge la page. (19 October 2026, 00:55:47 +0200)
+>
+> | Ce que tu voulais | Fait | Comment je le sais | (19 October 2026, 00:55:47 +0200)
+> |---|---|---| (19 October 2026, 00:55:47 +0200)
+> | Barre et loader Apple | Fait | Progression par fragments acceptés, étapes et temps écoulé ; 100 % après sauvegarde confirmée | (19 October 2026, 00:55:47 +0200)
+> | Politiques GitHub existantes | Fait | Moteur Create réutilisé : chiffrement, découpage, reprises ; lots de 100 fichiers ou plus réservés à l’import Git | (19 October 2026, 00:55:47 +0200)
+> | Conserver le téléchargement Calendar | Fait | Ton audio est retéléchargé après déploiement : 7 299 017 octets identiques | (19 October 2026, 00:55:47 +0200)
