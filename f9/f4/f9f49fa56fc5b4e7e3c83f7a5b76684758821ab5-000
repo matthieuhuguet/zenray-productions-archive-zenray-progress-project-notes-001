@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-10-18T21:02:57.470Z",
+ "scannedAt": "2026-10-18T21:27:58.462Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -80,7 +80,7 @@
    "sessionId": "d2f26016-25dd-4bcc-a6d8-122d50d3f383",
    "title": "3 motion design and editing video",
    "updatedAt": "2026-10-18T21:00:53.656Z",
-   "bytes": 22312,
+   "bytes": 22313,
    "boundProject": null
   },
   {
@@ -482,6 +482,22 @@
    "updatedAt": "2026-10-07T09:05:28.740Z",
    "bytes": 23255,
    "boundProject": "zenray-freelance"
+  },
+  {
+   "projectId": "zenray-progress",
+   "lines": 3,
+   "work": 0,
+   "prompts": 0,
+   "first": "2026-10-16T11:43:19.042Z",
+   "last": "2026-10-18T21:19:04.005Z",
+   "strength": "weak",
+   "conversationId": "claude:a3f20b1d-27ed-48e1-a0d1-5fe182c0e423",
+   "provider": "claude",
+   "sessionId": "a3f20b1d-27ed-48e1-a0d1-5fe182c0e423",
+   "title": "2 louisiana bayou video",
+   "updatedAt": "2026-10-18T21:27:49.920Z",
+   "bytes": 54711415,
+   "boundProject": null
   },
   {
    "projectId": "zenray-progress",
@@ -1041,22 +1057,6 @@
    "title": "Organisation dossier Downloads",
    "updatedAt": "2026-09-30T10:58:03.807Z",
    "bytes": 22075,
-   "boundProject": null
-  },
-  {
-   "projectId": "zenray-progress",
-   "lines": 1,
-   "work": 0,
-   "prompts": 0,
-   "first": "2026-10-16T11:43:19.042Z",
-   "last": "2026-10-16T11:43:19.042Z",
-   "strength": "weak",
-   "conversationId": "claude:a3f20b1d-27ed-48e1-a0d1-5fe182c0e423",
-   "provider": "claude",
-   "sessionId": "a3f20b1d-27ed-48e1-a0d1-5fe182c0e423",
-   "title": "2 louisiana bayou video",
-   "updatedAt": "2026-10-18T21:02:54.928Z",
-   "bytes": 37543952,
    "boundProject": null
   },
   {
