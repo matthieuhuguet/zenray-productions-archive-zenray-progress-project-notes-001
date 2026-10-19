@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-10-19T15:45:06.468Z",
+ "scannedAt": "2026-10-19T15:52:06.930Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -447,8 +447,8 @@
    "provider": "claude",
    "sessionId": "a3f20b1d-27ed-48e1-a0d1-5fe182c0e423",
    "title": "2 louisiana bayou video",
-   "updatedAt": "2026-10-19T15:45:04.259Z",
-   "bytes": 128965522,
+   "updatedAt": "2026-10-19T15:52:02.449Z",
+   "bytes": 129543543,
    "boundProject": null
   },
   {
@@ -591,9 +591,9 @@
    "provider": "codex",
    "sessionId": "01a154d2-fe4e-7183-a7ec-0172b2eb4323",
    "title": "Conversation codex 01a154d2",
-   "updatedAt": "2026-10-19T15:45:04.893Z",
-   "bytes": 773300,
-   "boundProject": null
+   "updatedAt": "2026-10-19T15:52:06.479Z",
+   "bytes": 1813205,
+   "boundProject": "conversation-codex-6f000a4ba4839084eb9eaaad"
   },
   {
    "projectId": "zenray-progress",
