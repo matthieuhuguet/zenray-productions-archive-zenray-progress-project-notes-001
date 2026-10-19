@@ -3663,3 +3663,21 @@
 > | Déposer un fichier ou choisir dans Create | Fait | Les deux parcours de création sont testés | (19 October 2026, 01:19:33 +0200)
 > | Ouvrir le film depuis Calendar | Fait | [Événement Kamikaze Girls](https://www.google.com/calendar/event?eid=cGxhbjRlNmI4MjlkNTBlZGEzNTJlZWQ3NDYzMjNhODViMzY0IG1hdHRoLmh1Z3VldEBt), lecteur accessible sans connexion | (19 October 2026, 01:19:33 +0200)
 > | Vérifier avant de livrer | Fait | 2 704 tests réussis, build et déploiement vérifiés | (19 October 2026, 01:19:33 +0200)
+
+## 19 October 2026, 11:00:39 +0200 : Prompt
+
+<!-- feedback-event:ae593bb27aabf6768a05ca5a9cabd957845cf110c48217cf1a97e1b9ea0dd0f8 (19 October 2026, 11:00:39 +0200) -->
+- Project: zenray-progress; kind: prompt. (19 October 2026, 11:00:39 +0200)
+- Source: /Users/zenray/.codex/sessions/2026/10/19/rollout-2026-10-19T00-26-29-01a1511f-9f4c-7410-a6eb-d2e93353fa70.jsonl. (19 October 2026, 11:00:39 +0200)
+
+> Crée un skill zenray-parametric-knowledge sans la phase 2 et zenray-parametric-knowledge-websearch avec la phase 2 (19 October 2026, 11:00:39 +0200)
+> puis sync partout [$skill-sync](/Users/zenray/.codex/skills/skill-sync/SKILL.md) et vérifie. (19 October 2026, 11:00:39 +0200)
+> Travaille en deux phases. Phase 1, parametric knowledge : sans aucun outil, recherche web ni RAG, mobilise ton effort de raisonnement maximal pour réciter tout ce que tu sais sur le sujet à partir de tes connaissances paramétriques internes (parametric knowledge) (faits, dates, noms, sources dont tu te souviens, y compris les données de niche), puis raisonne par premiers principes en examinant plusieurs hypothèses, et donne une réponse via cette data, en allouant un temps de réflexion maximal pour explorer ton espace latent. Phase 2, web search : ensuite seulement, fais des recherches web pour vérifier, corriger et compléter cette réponse, en particulier tout ce qui pourrait être postérieur à ta date de coupure. Dans la réponse finale, marque chaque affirmation selon son origine (parametric knowledge, déduction, ou web avec la source en lien), indique ton niveau de confiance, signale les points où le web contredit ta mémoire, et n’invente rien. (19 October 2026, 11:00:39 +0200)
+
+## 19 October 2026, 11:02:39 +0200 : Iteration
+
+<!-- feedback-event:360c7036735412241f378cca9e2250d1765d1af0ec1658e8fb1da7e34a10f63e (19 October 2026, 11:02:39 +0200) -->
+- Project: zenray-progress; kind: iteration. (19 October 2026, 11:02:39 +0200)
+- Source: checkpoint:codex:01a1511f-9f4c-7410-a6eb-d2e93353fa70. (19 October 2026, 11:02:39 +0200)
+
+> Nouvelle demande de cette conversation : création des skills zenray-parametric-knowledge (phase interne seule) et zenray-parametric-knowledge-websearch (phase interne puis vérification web). Sources canoniques dans ~/.claude/skills, versions Codex et Memory identiques, lien Gemini/Antigravity vérifié, deux validations quick_validate réussies et index à jour. Commit source 695625ef. Aucun sujet de recherche à exécuter : la demande porte uniquement sur les skills. (19 October 2026, 11:02:39 +0200)
