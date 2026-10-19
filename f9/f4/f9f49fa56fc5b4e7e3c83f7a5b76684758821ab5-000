@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-10-19T22:37:25.830Z",
+ "scannedAt": "2026-10-19T22:48:25.897Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -431,8 +431,8 @@
    "provider": "claude",
    "sessionId": "a3f20b1d-27ed-48e1-a0d1-5fe182c0e423",
    "title": "2 louisiana bayou video",
-   "updatedAt": "2026-10-19T22:37:14.395Z",
-   "bytes": 167280094,
+   "updatedAt": "2026-10-19T22:48:15.503Z",
+   "bytes": 167543214,
    "boundProject": null
   },
   {
@@ -1119,8 +1119,8 @@
    "provider": "claude",
    "sessionId": "8e5e976b-267a-433f-8e7f-c138fcf9f1da",
    "title": "Capture Switch input via MacBook HDMI",
-   "updatedAt": "2026-10-19T22:36:52.026Z",
-   "bytes": 36708,
+   "updatedAt": "2026-10-19T22:41:15.710Z",
+   "bytes": 36657,
    "boundProject": null
   },
   {
