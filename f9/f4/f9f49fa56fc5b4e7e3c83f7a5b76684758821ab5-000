@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-10-19T09:03:04.060Z",
+ "scannedAt": "2026-10-19T09:13:04.118Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -472,6 +472,22 @@
    "lines": 6,
    "work": 0,
    "prompts": 0,
+   "first": "2026-10-16T11:43:19.042Z",
+   "last": "2026-10-19T09:09:10.856Z",
+   "strength": "weak",
+   "conversationId": "claude:a3f20b1d-27ed-48e1-a0d1-5fe182c0e423",
+   "provider": "claude",
+   "sessionId": "a3f20b1d-27ed-48e1-a0d1-5fe182c0e423",
+   "title": "2 louisiana bayou video",
+   "updatedAt": "2026-10-19T09:12:00.555Z",
+   "bytes": 89440709,
+   "boundProject": null
+  },
+  {
+   "projectId": "zenray-progress",
+   "lines": 6,
+   "work": 0,
+   "prompts": 0,
    "first": "2026-10-12T00:43:49.456Z",
    "last": "2026-10-12T10:19:36.916Z",
    "strength": "weak",
@@ -498,22 +514,6 @@
    "updatedAt": "2026-10-07T09:05:28.740Z",
    "bytes": 23255,
    "boundProject": "zenray-freelance"
-  },
-  {
-   "projectId": "zenray-progress",
-   "lines": 5,
-   "work": 0,
-   "prompts": 0,
-   "first": "2026-10-16T11:43:19.042Z",
-   "last": "2026-10-18T23:42:54.000Z",
-   "strength": "weak",
-   "conversationId": "claude:a3f20b1d-27ed-48e1-a0d1-5fe182c0e423",
-   "provider": "claude",
-   "sessionId": "a3f20b1d-27ed-48e1-a0d1-5fe182c0e423",
-   "title": "2 louisiana bayou video",
-   "updatedAt": "2026-10-19T08:42:50.578Z",
-   "bytes": 36937,
-   "boundProject": null
   },
   {
    "projectId": "zenray-progress",
