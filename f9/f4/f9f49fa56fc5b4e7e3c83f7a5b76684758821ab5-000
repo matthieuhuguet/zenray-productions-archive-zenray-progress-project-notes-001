@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-10-19T16:59:11.669Z",
+ "scannedAt": "2026-10-19T17:38:11.782Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -431,8 +431,8 @@
    "provider": "claude",
    "sessionId": "a3f20b1d-27ed-48e1-a0d1-5fe182c0e423",
    "title": "2 louisiana bayou video",
-   "updatedAt": "2026-10-19T16:58:47.930Z",
-   "bytes": 40879,
+   "updatedAt": "2026-10-19T17:37:45.859Z",
+   "bytes": 137816174,
    "boundProject": null
   },
   {
