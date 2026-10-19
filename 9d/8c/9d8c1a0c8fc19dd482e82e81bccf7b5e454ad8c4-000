@@ -3714,3 +3714,11 @@
 - Source: checkpoint:codex:01a1511f-9f4c-7410-a6eb-d2e93353fa70. (19 October 2026, 13:07:30 +0200)
 
 > Deux skills parametric knowledge modifiés selon le nouveau feedback : garder les critères de provenance et confiance en interne, ne pas afficher les étiquettes, citer directement une source fiable disponible. Même nombre de lignes et toutes les sections conservées. Deux validations et empreintes des quatre chemins réussies ; source 534ca997 et Memory 30f4f349d. (19 October 2026, 13:07:30 +0200)
+
+## 19 October 2026, 13:07:33 +0200 : Iteration
+
+<!-- feedback-event:482cb6da871d24bc83049efd8293cb084e1ed6350478c87a7a37cd8acdfb69eb (19 October 2026, 13:07:33 +0200) -->
+- Project: zenray-progress; kind: iteration. (19 October 2026, 13:07:33 +0200)
+- Source: /Users/zenray/.codex/sessions/2026/10/19/rollout-2026-10-19T00-26-29-01a1511f-9f4c-7410-a6eb-d2e93353fa70.jsonl. (19 October 2026, 13:07:33 +0200)
+
+> Les deux skills sont modifiés sans retirer de section : origine et confiance restent évaluées en interne, sans étiquettes visibles ; la réponse pointe vers une source fiable lorsqu’elle existe. Copies mises à jour et vérifiées partout. (19 October 2026, 13:07:33 +0200)
