@@ -3696,3 +3696,21 @@
 > | [zenray-parametric-knowledge-websearch](/Users/zenray/.claude/skills/zenray-parametric-knowledge-websearch/SKILL.md) | Prêt | Phase interne puis vérification web, sources, confiance et contradictions | (19 October 2026, 11:02:49 +0200)
 >
 > Validation réussie ; empreintes identiques dans Claude, Codex, Gemini/Antigravity et Memory. (19 October 2026, 11:02:49 +0200)
+
+## 19 October 2026, 13:06:43 +0200 : Prompt
+
+<!-- feedback-event:e1585d23135ab6684849014b60773cfe0c4d80527f1147214511ba93241c26a6 (19 October 2026, 13:06:43 +0200) -->
+- Project: zenray-progress; kind: prompt. (19 October 2026, 13:06:43 +0200)
+- Source: /Users/zenray/.codex/sessions/2026/10/19/rollout-2026-10-19T00-26-29-01a1511f-9f4c-7410-a6eb-d2e93353fa70.jsonl. (19 October 2026, 13:06:43 +0200)
+
+> remplace cette section c'est chiant dans le formattage des réponses dis plutôt de pointer la source si elle existe ... le but c'est de toute manière recherche une source de confiance haute, garde le texte mais ne le formatte pas dans la réponse : Marquer chaque affirmation substantielle par son origine et sa confiance : `[parametric knowledge ; confiance élevée|moyenne|faible]`, `[déduction ; confiance élevée|moyenne|faible]` ou `[web ; confiance élevée|moyenne|faible]` (19 October 2026, 13:06:43 +0200)
+>
+> ne supprime rien modifie simplement les 2 skills edit (19 October 2026, 13:06:43 +0200)
+
+## 19 October 2026, 13:07:30 +0200 : Iteration
+
+<!-- feedback-event:b9aa60b06103d0b1a19b260bb7945522bd8058036ae4b7c5d4e207ddf706808d (19 October 2026, 13:07:30 +0200) -->
+- Project: zenray-progress; kind: iteration. (19 October 2026, 13:07:30 +0200)
+- Source: checkpoint:codex:01a1511f-9f4c-7410-a6eb-d2e93353fa70. (19 October 2026, 13:07:30 +0200)
+
+> Deux skills parametric knowledge modifiés selon le nouveau feedback : garder les critères de provenance et confiance en interne, ne pas afficher les étiquettes, citer directement une source fiable disponible. Même nombre de lignes et toutes les sections conservées. Deux validations et empreintes des quatre chemins réussies ; source 534ca997 et Memory 30f4f349d. (19 October 2026, 13:07:30 +0200)
