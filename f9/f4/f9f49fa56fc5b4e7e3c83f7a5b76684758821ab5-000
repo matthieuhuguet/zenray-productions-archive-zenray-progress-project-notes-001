@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-10-20T12:01:34.535Z",
+ "scannedAt": "2026-10-20T12:10:34.806Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -294,6 +294,22 @@
   {
    "projectId": "zenray-progress",
    "lines": 4,
+   "work": 0,
+   "prompts": 2,
+   "first": "2026-10-20T11:49:30.168Z",
+   "last": "2026-10-20T12:03:02.292Z",
+   "strength": "strong",
+   "conversationId": "codex:01a15924-aa22-7300-9533-52fc3fd3f30f",
+   "provider": "codex",
+   "sessionId": "01a15924-aa22-7300-9533-52fc3fd3f30f",
+   "title": "Conversation codex 01a15924",
+   "updatedAt": "2026-10-20T12:08:41.798Z",
+   "bytes": 9830871,
+   "boundProject": null
+  },
+  {
+   "projectId": "zenray-progress",
+   "lines": 4,
    "work": 1,
    "prompts": 0,
    "first": "2026-10-15T21:06:09.282Z",
@@ -335,8 +351,8 @@
    "provider": "claude",
    "sessionId": "a3f20b1d-27ed-48e1-a0d1-5fe182c0e423",
    "title": "UV Methodology",
-   "updatedAt": "2026-10-20T12:00:45.502Z",
-   "bytes": 241981598,
+   "updatedAt": "2026-10-20T12:10:30.965Z",
+   "bytes": 243263296,
    "boundProject": null
   },
   {
@@ -497,22 +513,6 @@
    "title": "Mail transfert dossier auto-école",
    "updatedAt": "2026-10-02T14:38:28.892Z",
    "bytes": 23040,
-   "boundProject": null
-  },
-  {
-   "projectId": "zenray-progress",
-   "lines": 2,
-   "work": 0,
-   "prompts": 1,
-   "first": "2026-10-20T11:49:30.168Z",
-   "last": "2026-10-20T11:49:30.169Z",
-   "strength": "weak",
-   "conversationId": "codex:01a15924-aa22-7300-9533-52fc3fd3f30f",
-   "provider": "codex",
-   "sessionId": "01a15924-aa22-7300-9533-52fc3fd3f30f",
-   "title": "Conversation codex 01a15924",
-   "updatedAt": "2026-10-20T11:51:34.670Z",
-   "bytes": 993729,
    "boundProject": null
   },
   {
