@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-10-20T12:43:34.264Z",
+ "scannedAt": "2026-10-20T12:59:41.840Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -191,9 +191,9 @@
    "provider": "codex",
    "sessionId": "01a15924-aa22-7300-9533-52fc3fd3f30f",
    "title": "Conversation codex 01a15924",
-   "updatedAt": "2026-10-20T12:43:31.903Z",
-   "bytes": 13465004,
-   "boundProject": null
+   "updatedAt": "2026-10-20T12:59:06.149Z",
+   "bytes": 15713204,
+   "boundProject": "uv-match-height-20-october-2026"
   },
   {
    "projectId": "zenray-progress",
@@ -351,8 +351,8 @@
    "provider": "claude",
    "sessionId": "a3f20b1d-27ed-48e1-a0d1-5fe182c0e423",
    "title": "UV Methodology",
-   "updatedAt": "2026-10-20T12:43:14.553Z",
-   "bytes": 247748052,
+   "updatedAt": "2026-10-20T12:59:37.883Z",
+   "bytes": 249693244,
    "boundProject": null
   },
   {
