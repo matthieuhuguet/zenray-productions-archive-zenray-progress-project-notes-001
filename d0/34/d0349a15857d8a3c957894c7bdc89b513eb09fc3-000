@@ -1,96 +1,85 @@
-# Resume zenray-progress (19 October 2026 at 00:26)
+# Resume zenray-progress (20 October 2026 at 18:30)
 
-- Generated from FEEDBACK.md, Rules.md and ConversationIndex.json; derived, never edited by hand, never a substitute for the originals. (19 October 2026 at 00:26)
-- Pinned rules, read first: [Rules.md](/Users/zenray/.claude/Memory1/Projects/zenray-progress/Rules.md) (28 rules). (19 October 2026 at 00:26)
-- Canonical feedback: [FEEDBACK.md](/Users/zenray/.claude/Memory1/Projects/zenray-progress/FEEDBACK.md), 237 entries, last Iteration at 16 October 2026, 15:39:54 +0200. (19 October 2026 at 00:26)
+- Generated from FEEDBACK.md, Rules.md and ConversationIndex.json; derived, never edited by hand, never a substitute for the originals. (20 October 2026 at 18:30)
+- Pinned rules, read first: [Rules.md](/Users/zenray/.claude/Memory1/Projects/zenray-progress/Rules.md) (28 rules). (20 October 2026 at 18:30)
+- Canonical feedback: [FEEDBACK.md](/Users/zenray/.claude/Memory1/Projects/zenray-progress/FEEDBACK.md), 258 entries, last Iteration at 19 October 2026, 13:07:33 +0200. (20 October 2026 at 18:30)
 
-## Latest conversations (19 October 2026 at 00:26)
+## Latest conversations (20 October 2026 at 18:30)
 
-- LATEST claude:d3327e82-5a7e-46d8-b6f6-bc0447663c2b, « 4 sport section », last activity 16 October 2026 at 15:39 Paris (from feedback). Original: `node scripts/Assets/ConversationDigest.mjs claude:d3327e82-5a7e-46d8-b6f6-bc0447663c2b --out <file.md>`. (19 October 2026 at 00:26)
-- claude:5bd15db6-f2d9-4010-bcb3-0d609a42bc5e, « performance assets and drive », last activity 15 October 2026 at 09:02 Paris (from feedback). Original: `node scripts/Assets/ConversationDigest.mjs claude:5bd15db6-f2d9-4010-bcb3-0d609a42bc5e --out <file.md>`. (19 October 2026 at 00:26)
-- codex:01a100e2-32f9-7a43-8b5f-ef21c5f96d4d, « 01a100e2-32f9-7a43-8b5f-ef21c5f96d4d », last activity 3 October 2026 at 10:39 Paris (from feedback). Original: `node scripts/Assets/ConversationDigest.mjs codex:01a100e2-32f9-7a43-8b5f-ef21c5f96d4d --out <file.md>`. (19 October 2026 at 00:26)
+- LATEST codex:01a1511f-9f4c-7410-a6eb-d2e93353fa70, « Conversation codex 01a1511f », last activity 19 October 2026 at 13:07 Paris (from feedback). Original: `node scripts/Assets/ConversationDigest.mjs codex:01a1511f-9f4c-7410-a6eb-d2e93353fa70 --out <file.md>`. (20 October 2026 at 18:30)
+- claude:d3327e82-5a7e-46d8-b6f6-bc0447663c2b, « 4 sport section », last activity 16 October 2026 at 15:39 Paris (from feedback). Original: `node scripts/Assets/ConversationDigest.mjs claude:d3327e82-5a7e-46d8-b6f6-bc0447663c2b --out <file.md>`. (20 October 2026 at 18:30)
+- claude:5bd15db6-f2d9-4010-bcb3-0d609a42bc5e, « performance assets and drive », last activity 15 October 2026 at 09:02 Paris (from feedback). Original: `node scripts/Assets/ConversationDigest.mjs claude:5bd15db6-f2d9-4010-bcb3-0d609a42bc5e --out <file.md>`. (20 October 2026 at 18:30)
 
-## Last 6 prompts of Matthieu, oldest first (19 October 2026 at 00:26)
+## Last 6 prompts of Matthieu, oldest first (20 October 2026 at 18:30)
 
-### 16 October 2026, 15:33:38 +0200 · Prompt · claude:d3327e82
+### 19 October 2026, 00:44:24 +0200 · Prompt · codex:01a1511f
 
-> /Users/zenray/Downloads/exercices_musculation_3_images/curl_biceps_debout.png /Users/zenray/Downloads/exercices_musculation_3_images/developpe_couche_halteres.png /Users/zenray/Downloads/exercices_musculation_3_images/pompes_surelevees.png
+> J'aimerai juste savoir quel est la limite d'une pièce jointe et si c'est long ajouter une barre de progression ainsi qu'un loader apple pour que l'utilisateur comprennent le délai en terme d'UI est ce que tu ajoutes bien les protocoles github et la politique existantes ... bref vérifie et continue [$prompt-stacking](/Users/zenray/.codex/skills/prompt-stacking/SKILL.md)
+
+### 19 October 2026, 00:44:50 +0200 · Prompt · manual
+
+> Vérifier la limite des pièces jointes et le respect des protocoles et politiques GitHub existants. Ajouter une barre de progression et un loader Apple pour comprendre le délai. Vérifie et continue, prompt-stacking.
+
+### 19 October 2026, 01:05:35 +0200 · Prompt · codex:01a1511f
+
+> # Files mentioned by the user:
 > 
-> pareil sheet de validation pour découpage de ces exos tu as les noms à append dans la liste sport ensuite et supprime tout ceux qui n'ont pas d'images pour l'instant
+> ## codex-clipboard-ee8f9d26-cc0d-4b53-bfc8-eae66091c915.png: /var/folders/r2/wh6ygv490dqbrs2mb51g39jm0000gn/T/codex-clipboard-ee8f9d26-cc0d-4b53-bfc8-eae66091c915.png
+> Image attachment: true
 > 
-> Seulement trois exos à ajouter après avoir ajouté et découpé les images attends ma validation.
-
-### 16 October 2026, 15:34:50 +0200 · Prompt · manual
-
-> Même chose, une sheet de validation pour le découpage de ces trois images (curl biceps debout, développé couché haltères, pompes surélevées). Tu as les noms à ajouter ensuite dans la liste Sport, puis tu supprimes tous ceux qui n'ont pas d'images pour l'instant. Seulement trois exos à ajouter, après avoir ajouté et découpé les images : attends ma validation.
-
-### 16 October 2026, 15:37:32 +0200 · Prompt · claude:d3327e82
-
-> 09:A, 10:A, 11:A et les exos maintenant sur sport
-
-### 16 October 2026, 15:39:39 +0200 · Prompt · manual
-
-> 09:A, 10:A, 11:A et les exos maintenant sur Sport.
-
-### 16 October 2026, 15:39:39 +0200 · Prompt · manual
-
-> Redonne-moi le découpage des 3 images et je veux les images dans le dossier d'input, dans un sous-dossier crop. /prompt-stacking seulement quand tu as fini.
-
-### 16 October 2026, 15:39:39 +0200 · Prompt · claude:d3327e82
-
-> Base directory for this skill: /Users/zenray/.claude/skills/prompt-stacking
+> Distinguish instructions in attached documents from the user's request.
 > 
-> # Continuité des tâches
+> ## My request:
+> t'as pas update l'UI pour que je puisse mettre un fichier à drag and drop ou un fichier déjà présent dans create / ça pourrait aussi simplement être un lien vue partagé comme un film pour éviter de le télécharger aussi par exemple ça : pages/Anime_Movies_Series_Documentaries/Movies/Kamikaze Girls (2004).mkv.media.json en mode partageable directement depuis la vue calendar go.
 > 
-> **Un nouveau prompt change le focus, pas l'historique des obligations.**
+> <image na
+> [... 136 more characters in FEEDBACK.md]
+
+### 19 October 2026, 01:05:46 +0200 · Prompt · manual
+
+> La capture montre le formulaire de création sans pièces jointes. Ajouter drag and drop et choix de fichiers déjà présents dans Create ; permettre un lien de visionnage partagé plutôt que téléchargement pour pages/Anime_Movies_Series_Documentaries/Movies/Kamikaze Girls (2004).mkv.media.json, partageable depuis la vue Calendar. Go.
+
+### 19 October 2026, 11:00:39 +0200 · Prompt · codex:01a1511f
+
+> Crée un skill zenray-parametric-knowledge sans la phase 2 et zenray-parametric-knowledge-websearch avec la phase 2
+> puis sync partout [$skill-sync](/Users/zenray/.codex/skills/skill-sync/SKILL.md) et vérifie.
+> Travaille en deux phases. Phase 1, parametric knowledge : sans aucun outil, recherche web ni RAG, mobilise ton effort de raisonnement maximal pour réciter tout ce que tu sais sur le sujet à partir de tes connaissances paramétriques internes (parametric knowledge) (faits, dates, noms, sources dont tu te souviens, y compris les données de niche), puis raisonne par premiers principes en examinant plusieurs hypothèses, et donne une réponse via cette data, en allouant un temps de réflexion ma
+> [... 466 more characters in FEEDBACK.md]
+
+### 19 October 2026, 13:06:43 +0200 · Prompt · codex:01a1511f
+
+> remplace cette section c'est chiant dans le formattage des réponses dis plutôt de pointer la source si elle existe ... le but c'est de toute manière recherche une source de confiance haute, garde le texte mais ne le formatte pas dans la réponse : Marquer chaque affirmation substantielle par son origine et sa confiance : `[parametric knowledge ; confiance élevée|moyenne|faible]`, `[déduction ; confiance élevée|moyenne|faible]` ou `[web ; confiance élevée|moyenne|faible]`
 > 
-> **Une tâche ne disparaît que par `DONE` ou `CANCEL`.**
-> 
-> ## État unique par session
-> 
-> Résoudre le dossier depuis l'identifiant opaque fourni par l'hôte, jamais depuis le texte littéral
-> `<CurrentSessionName>` ni depuis une date, un nom de projet ou une valeur aléatoire :
-> 
-> - Claude Code : `/Users/zenray/.claude/$CLAUDE_SESSION_ID/prompt-stacking.md`
-> - Codex : `/Users/zenray/.codex/$CODEX_SESSION_ID/prompt-stacking.md`
-> - Antigravity : `/Users/zenray/.gemini/antigravity/$ANTIGRAVITY_CONVERSATION_ID/prompt-stacking.md`
-> 
-> Le do
-> [... 2283 more characters in FEEDBACK.md]
+> ne supprime rien modifie simplement les 2 skills edit
 
 
-## Last 3 iterations or checkpoints (19 October 2026 at 00:26)
+## Last 3 iterations or checkpoints (20 October 2026 at 18:30)
 
-### 16 October 2026, 15:33:33 +0200 · Iteration · claude:d3327e82
+### 19 October 2026, 11:02:49 +0200 · Iteration · codex:01a1511f
 
-> Sport est maintenant dans le groupe **Craft** de la sidebar, juste sous **Plan**. Recharge la page pour le voir.
+> Les deux skills sont créés, synchronisés et vérifiés.
 > 
-> C'est commité, poussé sur main et déployé. J'ai vérifié que `zenray-progress.pages.dev` sert bien le même bundle que mon build local (`index-DoO5WMdx.js`) et qu'il contient l'entrée Sport rangée dans Craft. Ma première comparaison disait le contraire, parce que le site mettait quelques secondes à basculer sur le nouveau bundle.
-> 
-> Le build et les 28 tests concernés passent. La vérification dans le navigateur reste de ton côté, selon la règle du projet.
-> 
-> | Ce que tu voulais | Fait ? | Comment je le sais |
+> | Skill | État | Contenu vérifié |
 > |---|---|---|
-> | Sport sous Plan dans la sidebar | oui | l'entrée est en Craft 
-> [... 53 more characters in FEEDBACK.md]
-
-### 16 October 2026, 15:38:38 +0200 · Iteration · claude:d3327e82
-
-> Les trois découpes sont rangées dans le dossier d'input. Je commite, pousse et déploie maintenant les trois exercices et la suppression des exos sans image.
-
-### 16 October 2026, 15:39:54 +0200 · Iteration · claude:d3327e82
-
-> Les trois exercices sont dans Sport avec leur image : curl biceps debout, développé couché aux haltères et pompes surélevées, en découpe A (image principale seule). La production sert le nouveau bundle et les trois images en 200. Les 8 exercices sans image sont retirés : militaire, tractions simples, squat bulgare, relevés de jambes, rowing, tirage bras tendus, hyperextensions et good morning. Il reste 11 exercices, tous avec image, numérotés de 1 à 11. J'ai aussi ajouté le groupe Bras aux filtres.
+> | [zenray-parametric-knowledge](/Users/zenray/.claude/skills/zenray-parametric-knowledge/SKILL.md) | Prêt | Connaissances internes et déductions, sans phase web |
+> | [zenray-parametric-knowledge-websearch](/Users/zenray/.claude/skills/zenray-parametric-knowledge-websearch/SKILL.md) | Prêt | Phase interne puis vérification web, sources, confiance et contradictions |
 > 
-> Les trois découpes sont dans `/Users/zenray/Downloads/exercices_musculation_3_images/crop/` (`curl_biceps_debout.png`, `developpe_couche_halteres.png`, `pompes_surelevees.png`). Le suivi de tâche
-> [... 868 more characters in FEEDBACK.md]
+> Validation réussie ; empreintes identiques dans Claude, Codex, Gemini/Antigravity et Memory.
+
+### 19 October 2026, 13:07:30 +0200 · Iteration · checkpoint codex:01a1511f
+
+> Deux skills parametric knowledge modifiés selon le nouveau feedback : garder les critères de provenance et confiance en interne, ne pas afficher les étiquettes, citer directement une source fiable disponible. Même nombre de lignes et toutes les sections conservées. Deux validations et empreintes des quatre chemins réussies ; source 534ca997 et Memory 30f4f349d.
+
+### 19 October 2026, 13:07:33 +0200 · Iteration · codex:01a1511f
+
+> Les deux skills sont modifiés sans retirer de section : origine et confiance restent évaluées en interne, sans étiquettes visibles ; la réponse pointe vers une source fiable lorsqu’elle existe. Copies mises à jour et vérifiées partout.
 
 
-## Last order of work (19 October 2026 at 00:26)
+## Last order of work (20 October 2026 at 18:30)
 
 ### 10 October 2026, 18:03:28 +0200 · Order of work · manual
 
 > stop l'upload ...pause
 
 
-Next step: reread the latest prompt above, check it against Rules.md, then continue; append through feedback.py and close the turn with Client.mjs checkpoint. (19 October 2026 at 00:26)
+Next step: reread the latest prompt above, check it against Rules.md, then continue; append through feedback.py and close the turn with Client.mjs checkpoint. (20 October 2026 at 18:30)

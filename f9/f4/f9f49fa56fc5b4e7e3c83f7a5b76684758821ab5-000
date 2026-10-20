@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-10-20T16:16:40.276Z",
+ "scannedAt": "2026-10-20T17:07:17.522Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -49,6 +49,22 @@
    "title": "Conversation codex 01a1511f",
    "updatedAt": "2026-10-19T11:07:33.061Z",
    "bytes": 10359412,
+   "boundProject": "zenray-progress"
+  },
+  {
+   "projectId": "zenray-progress",
+   "lines": 221,
+   "work": 117,
+   "prompts": 2,
+   "first": "2026-10-20T16:30:25.542Z",
+   "last": "2026-10-20T17:03:35.201Z",
+   "strength": "strong",
+   "conversationId": "codex:01a15a23-1157-7ef3-83c9-9ce9461c3247",
+   "provider": "codex",
+   "sessionId": "01a15a23-1157-7ef3-83c9-9ce9461c3247",
+   "title": "Conversation codex 01a15a23",
+   "updatedAt": "2026-10-20T17:03:35.895Z",
+   "bytes": 12414838,
    "boundProject": "zenray-progress"
   },
   {
@@ -117,18 +133,18 @@
   },
   {
    "projectId": "zenray-progress",
-   "lines": 18,
-   "work": 5,
+   "lines": 25,
+   "work": 9,
    "prompts": 3,
    "first": "2026-10-20T11:49:30.168Z",
-   "last": "2026-10-20T13:10:45.525Z",
+   "last": "2026-10-20T16:39:52.263Z",
    "strength": "strong",
    "conversationId": "codex:01a15924-aa22-7300-9533-52fc3fd3f30f",
    "provider": "codex",
    "sessionId": "01a15924-aa22-7300-9533-52fc3fd3f30f",
    "title": "Conversation codex 01a15924",
-   "updatedAt": "2026-10-20T13:22:40.432Z",
-   "bytes": 29438914,
+   "updatedAt": "2026-10-20T17:03:29.777Z",
+   "bytes": 32231598,
    "boundProject": "uv-match-height-20-october-2026"
   },
   {
@@ -206,8 +222,8 @@
    "conversationId": "gemini:dad216b8-610b-4279-a532-56e02644714d",
    "provider": "gemini",
    "sessionId": "dad216b8-610b-4279-a532-56e02644714d",
-   "title": "zenray progress les fichiers n'ont pas de sous titres pourquoi ? bleach ? until grep -qE \"STAGE FAILED|Traceback|PROOF RED|FINISH FAILED|pub",
-   "updatedAt": "2026-10-14T21:12:45.577735+00:00",
+   "title": "Conversation Gemini dad216b8",
+   "updatedAt": "2026-10-14T21:13:27.597Z",
    "bytes": 11730944,
    "boundProject": null
   },
@@ -325,18 +341,18 @@
   },
   {
    "projectId": "zenray-progress",
-   "lines": 30,
+   "lines": 34,
    "work": 0,
    "prompts": 0,
    "first": "2026-10-16T11:43:19.042Z",
-   "last": "2026-10-20T16:08:48.818Z",
+   "last": "2026-10-20T16:39:35.413Z",
    "strength": "weak",
    "conversationId": "claude:a3f20b1d-27ed-48e1-a0d1-5fe182c0e423",
    "provider": "claude",
    "sessionId": "a3f20b1d-27ed-48e1-a0d1-5fe182c0e423",
    "title": "UV Methodology",
-   "updatedAt": "2026-10-20T16:16:22.676Z",
-   "bytes": 260186890,
+   "updatedAt": "2026-10-20T17:07:09.354Z",
+   "bytes": 265240859,
    "boundProject": null
   },
   {
@@ -1342,8 +1358,8 @@
    "conversationId": "gemini:3e22a918-b7a6-4b1f-99ea-e50907f40d44",
    "provider": "gemini",
    "sessionId": "3e22a918-b7a6-4b1f-99ea-e50907f40d44",
-   "title": "'/Users/zenray/Movies/2026-09-15 20-36-50.mkv' to mov et speed jusqu'à ce que ça fasse 30 secondes speed ajusté à la longueur initial. go da",
-   "updatedAt": "2026-09-15T20:05:24.351772+00:00",
+   "title": "Conversation Gemini 3e22a918",
+   "updatedAt": "2026-09-15T20:06:00.494Z",
    "bytes": 3629056,
    "boundProject": null
   },
