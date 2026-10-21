@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-10-20T18:15:19.743Z",
+ "scannedAt": "2026-10-21T10:21:56.495Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -37,6 +37,22 @@
   },
   {
    "projectId": "zenray-progress",
+   "lines": 290,
+   "work": 149,
+   "prompts": 2,
+   "first": "2026-10-20T16:30:25.542Z",
+   "last": "2026-10-20T22:31:45.528Z",
+   "strength": "strong",
+   "conversationId": "codex:01a15a23-1157-7ef3-83c9-9ce9461c3247",
+   "provider": "codex",
+   "sessionId": "01a15a23-1157-7ef3-83c9-9ce9461c3247",
+   "title": "Conversation codex 01a15a23",
+   "updatedAt": "2026-10-20T22:31:45.528Z",
+   "bytes": 38921120,
+   "boundProject": "zenray-progress"
+  },
+  {
+   "projectId": "zenray-progress",
    "lines": 281,
    "work": 135,
    "prompts": 1,
@@ -49,22 +65,6 @@
    "title": "Conversation codex 01a1511f",
    "updatedAt": "2026-10-19T11:07:33.061Z",
    "bytes": 10359412,
-   "boundProject": "zenray-progress"
-  },
-  {
-   "projectId": "zenray-progress",
-   "lines": 221,
-   "work": 117,
-   "prompts": 2,
-   "first": "2026-10-20T16:30:25.542Z",
-   "last": "2026-10-20T17:03:35.201Z",
-   "strength": "strong",
-   "conversationId": "codex:01a15a23-1157-7ef3-83c9-9ce9461c3247",
-   "provider": "codex",
-   "sessionId": "01a15a23-1157-7ef3-83c9-9ce9461c3247",
-   "title": "Conversation codex 01a15a23",
-   "updatedAt": "2026-10-20T17:03:35.895Z",
-   "bytes": 12414838,
    "boundProject": "zenray-progress"
   },
   {
@@ -133,18 +133,18 @@
   },
   {
    "projectId": "zenray-progress",
-   "lines": 25,
-   "work": 9,
+   "lines": 27,
+   "work": 10,
    "prompts": 3,
    "first": "2026-10-20T11:49:30.168Z",
-   "last": "2026-10-20T16:39:52.263Z",
+   "last": "2026-10-20T21:33:12.414Z",
    "strength": "strong",
    "conversationId": "codex:01a15924-aa22-7300-9533-52fc3fd3f30f",
    "provider": "codex",
    "sessionId": "01a15924-aa22-7300-9533-52fc3fd3f30f",
    "title": "Conversation codex 01a15924",
-   "updatedAt": "2026-10-20T17:03:29.777Z",
-   "bytes": 32231598,
+   "updatedAt": "2026-10-21T01:15:31.612Z",
+   "bytes": 44441169,
    "boundProject": "uv-match-height-20-october-2026"
   },
   {
@@ -341,6 +341,22 @@
   },
   {
    "projectId": "zenray-progress",
+   "lines": 49,
+   "work": 0,
+   "prompts": 0,
+   "first": "2026-10-16T11:43:19.042Z",
+   "last": "2026-10-21T03:41:38.312Z",
+   "strength": "weak",
+   "conversationId": "claude:beb9938e-4434-4925-8d13-137bb7940fc0",
+   "provider": "claude",
+   "sessionId": "beb9938e-4434-4925-8d13-137bb7940fc0",
+   "title": "UV Methodology (fork)",
+   "updatedAt": "2026-10-21T10:20:06.900Z",
+   "bytes": 322410279,
+   "boundProject": null
+  },
+  {
+   "projectId": "zenray-progress",
    "lines": 37,
    "work": 0,
    "prompts": 0,
@@ -350,9 +366,9 @@
    "conversationId": "claude:a3f20b1d-27ed-48e1-a0d1-5fe182c0e423",
    "provider": "claude",
    "sessionId": "a3f20b1d-27ed-48e1-a0d1-5fe182c0e423",
-   "title": "UV Methodology",
-   "updatedAt": "2026-10-20T18:14:20.732Z",
-   "bytes": 42870,
+   "title": "UV Methodology (original /mhzenray)",
+   "updatedAt": "2026-10-20T19:18:11.914Z",
+   "bytes": 45482,
    "boundProject": null
   },
   {
@@ -424,6 +440,22 @@
    "lines": 9,
    "work": 0,
    "prompts": 0,
+   "first": "2026-10-17T14:21:27.442Z",
+   "last": "2026-10-21T09:58:10.163Z",
+   "strength": "weak",
+   "conversationId": "claude:2ce02bbc-dad5-488e-9ffc-51313c488339",
+   "provider": "claude",
+   "sessionId": "2ce02bbc-dad5-488e-9ffc-51313c488339",
+   "title": "StudioPhoto Enhancing Assets",
+   "updatedAt": "2026-10-21T10:21:17.824Z",
+   "bytes": 29665430,
+   "boundProject": "studiophoto-matthieu-17-october-2026"
+  },
+  {
+   "projectId": "zenray-progress",
+   "lines": 9,
+   "work": 0,
+   "prompts": 0,
    "first": "2026-10-12T09:52:06.211Z",
    "last": "2026-10-14T10:29:29.564Z",
    "strength": "weak",
@@ -466,6 +498,22 @@
    "updatedAt": "2026-10-07T09:05:28.740Z",
    "bytes": 23255,
    "boundProject": "zenray-freelance"
+  },
+  {
+   "projectId": "zenray-progress",
+   "lines": 4,
+   "work": 0,
+   "prompts": 0,
+   "first": "2026-10-20T11:46:59.545Z",
+   "last": "2026-10-20T22:43:13.885Z",
+   "strength": "weak",
+   "conversationId": "claude:e404b8fe-5771-41e1-b7bb-5f6111652bf6",
+   "provider": "claude",
+   "sessionId": "e404b8fe-5771-41e1-b7bb-5f6111652bf6",
+   "title": "CONSIGNER LE SHARINGAN",
+   "updatedAt": "2026-10-21T10:06:45.761Z",
+   "bytes": 33539,
+   "boundProject": "conversation-claude-f636b9060f04a23ee355c148"
   },
   {
    "projectId": "zenray-progress",
@@ -594,22 +642,6 @@
    "updatedAt": "2026-10-19T11:09:20.236Z",
    "bytes": 977270,
    "boundProject": null
-  },
-  {
-   "projectId": "zenray-progress",
-   "lines": 2,
-   "work": 0,
-   "prompts": 0,
-   "first": "2026-10-17T14:21:27.442Z",
-   "last": "2026-10-18T19:00:34.400Z",
-   "strength": "weak",
-   "conversationId": "claude:2ce02bbc-dad5-488e-9ffc-51313c488339",
-   "provider": "claude",
-   "sessionId": "2ce02bbc-dad5-488e-9ffc-51313c488339",
-   "title": "StudioPhoto",
-   "updatedAt": "2026-10-18T19:37:53.737Z",
-   "bytes": 36716,
-   "boundProject": "studiophoto-matthieu-17-october-2026"
   },
   {
    "projectId": "zenray-progress",
@@ -994,22 +1026,6 @@
    "updatedAt": "2026-09-30T10:58:03.807Z",
    "bytes": 22075,
    "boundProject": null
-  },
-  {
-   "projectId": "zenray-progress",
-   "lines": 1,
-   "work": 0,
-   "prompts": 0,
-   "first": "2026-10-20T11:46:59.545Z",
-   "last": "2026-10-20T11:46:59.545Z",
-   "strength": "weak",
-   "conversationId": "claude:e404b8fe-5771-41e1-b7bb-5f6111652bf6",
-   "provider": "claude",
-   "sessionId": "e404b8fe-5771-41e1-b7bb-5f6111652bf6",
-   "title": "CONSIGNER LE SHARINGAN",
-   "updatedAt": "2026-10-20T12:00:22.702Z",
-   "bytes": 32034,
-   "boundProject": "conversation-claude-f636b9060f04a23ee355c148"
   },
   {
    "projectId": "zenray-progress",

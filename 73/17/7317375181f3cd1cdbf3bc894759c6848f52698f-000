@@ -1,0 +1,33 @@
+{
+  "date": "21 October 2026",
+  "slug": "design-gallery-three-directions",
+  "folder": "2026-10-21-design-gallery-three-directions",
+  "version": 1,
+  "title": "Design et ArtStation, trois directions",
+  "module": "Design",
+  "assetsProject": "zenray-edit",
+  "project": "zenray-progress",
+  "status": "pending",
+  "atelier": "/Users/zenray/.claude/tmp/tmp-zenray-progress/DesignMockups-21-October-2026",
+  "files": [
+    "index.html",
+    "BrowserProof.json",
+    "CollectionsA.png",
+    "CollectionsB.png",
+    "CollectionsC.png",
+    "Comparison.png",
+    "FixtureProof.json",
+    "MobileA.png",
+    "MobileB.png",
+    "MobileC.png",
+    "PreviewA.png",
+    "PreviewB.png",
+    "PreviewC.png",
+    "ProjectA.png",
+    "ProjectB.png",
+    "ProjectC.png"
+  ],
+  "indexSha256": "6b87df1a90ed5813dcfb122deb8fad52be9cca88071a4640d41db945cd9f1c9c",
+  "filedAt": "2026-10-20T22:30:03.812Z",
+  "note": null
+}
