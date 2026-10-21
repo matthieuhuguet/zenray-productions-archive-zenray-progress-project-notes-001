@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-10-21T12:29:57.383Z",
+ "scannedAt": "2026-10-21T12:41:57.379Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -351,8 +351,8 @@
    "provider": "claude",
    "sessionId": "beb9938e-4434-4925-8d13-137bb7940fc0",
    "title": "UV Methodology (fork)",
-   "updatedAt": "2026-10-21T12:28:49.154Z",
-   "bytes": 40071,
+   "updatedAt": "2026-10-21T12:40:43.513Z",
+   "bytes": 40344,
    "boundProject": null
   },
   {
@@ -368,7 +368,7 @@
    "sessionId": "a3f20b1d-27ed-48e1-a0d1-5fe182c0e423",
    "title": "UV Methodology (original /mhzenray)",
    "updatedAt": "2026-10-20T19:18:11.914Z",
-   "bytes": 44380,
+   "bytes": 45455,
    "boundProject": null
   },
   {
@@ -405,6 +405,22 @@
   },
   {
    "projectId": "zenray-progress",
+   "lines": 13,
+   "work": 0,
+   "prompts": 0,
+   "first": "2026-10-17T14:21:27.442Z",
+   "last": "2026-10-21T12:36:22.306Z",
+   "strength": "weak",
+   "conversationId": "claude:2ce02bbc-dad5-488e-9ffc-51313c488339",
+   "provider": "claude",
+   "sessionId": "2ce02bbc-dad5-488e-9ffc-51313c488339",
+   "title": "StudioPhoto Enhancing Assets",
+   "updatedAt": "2026-10-21T12:37:55.823Z",
+   "bytes": 38681,
+   "boundProject": "studiophoto-matthieu-17-october-2026"
+  },
+  {
+   "projectId": "zenray-progress",
    "lines": 12,
    "work": 0,
    "prompts": 0,
@@ -418,22 +434,6 @@
    "updatedAt": "2026-10-11T21:28:15.851Z",
    "bytes": 21082,
    "boundProject": "zenray-height"
-  },
-  {
-   "projectId": "zenray-progress",
-   "lines": 11,
-   "work": 0,
-   "prompts": 0,
-   "first": "2026-10-17T14:21:27.442Z",
-   "last": "2026-10-21T10:24:50.826Z",
-   "strength": "weak",
-   "conversationId": "claude:2ce02bbc-dad5-488e-9ffc-51313c488339",
-   "provider": "claude",
-   "sessionId": "2ce02bbc-dad5-488e-9ffc-51313c488339",
-   "title": "StudioPhoto Enhancing Assets",
-   "updatedAt": "2026-10-21T10:53:53.859Z",
-   "bytes": 38631,
-   "boundProject": "studiophoto-matthieu-17-october-2026"
   },
   {
    "projectId": "zenray-progress",
