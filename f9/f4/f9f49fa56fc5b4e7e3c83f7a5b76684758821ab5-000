@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-10-21T10:21:56.495Z",
+ "scannedAt": "2026-10-21T10:45:10.207Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -351,8 +351,8 @@
    "provider": "claude",
    "sessionId": "beb9938e-4434-4925-8d13-137bb7940fc0",
    "title": "UV Methodology (fork)",
-   "updatedAt": "2026-10-21T10:20:06.900Z",
-   "bytes": 322410279,
+   "updatedAt": "2026-10-21T10:44:03.335Z",
+   "bytes": 322872495,
    "boundProject": null
   },
   {
@@ -424,6 +424,22 @@
    "lines": 11,
    "work": 0,
    "prompts": 0,
+   "first": "2026-10-17T14:21:27.442Z",
+   "last": "2026-10-21T10:24:50.826Z",
+   "strength": "weak",
+   "conversationId": "claude:2ce02bbc-dad5-488e-9ffc-51313c488339",
+   "provider": "claude",
+   "sessionId": "2ce02bbc-dad5-488e-9ffc-51313c488339",
+   "title": "StudioPhoto Enhancing Assets",
+   "updatedAt": "2026-10-21T10:45:08.096Z",
+   "bytes": 32835733,
+   "boundProject": "studiophoto-matthieu-17-october-2026"
+  },
+  {
+   "projectId": "zenray-progress",
+   "lines": 11,
+   "work": 0,
+   "prompts": 0,
    "first": "2026-10-12T00:43:49.456Z",
    "last": "2026-10-14T11:34:59.327Z",
    "strength": "weak",
@@ -434,22 +450,6 @@
    "updatedAt": "2026-10-14T13:36:42.695Z",
    "bytes": 46514632,
    "boundProject": "zenray-motion-design"
-  },
-  {
-   "projectId": "zenray-progress",
-   "lines": 9,
-   "work": 0,
-   "prompts": 0,
-   "first": "2026-10-17T14:21:27.442Z",
-   "last": "2026-10-21T09:58:10.163Z",
-   "strength": "weak",
-   "conversationId": "claude:2ce02bbc-dad5-488e-9ffc-51313c488339",
-   "provider": "claude",
-   "sessionId": "2ce02bbc-dad5-488e-9ffc-51313c488339",
-   "title": "StudioPhoto Enhancing Assets",
-   "updatedAt": "2026-10-21T10:21:17.824Z",
-   "bytes": 29665430,
-   "boundProject": "studiophoto-matthieu-17-october-2026"
   },
   {
    "projectId": "zenray-progress",
