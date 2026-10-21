@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-10-21T15:07:35.999Z",
+ "scannedAt": "2026-10-21T15:22:36.088Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -21,6 +21,22 @@
   },
   {
    "projectId": "zenray-progress",
+   "lines": 369,
+   "work": 183,
+   "prompts": 6,
+   "first": "2026-10-20T16:30:25.542Z",
+   "last": "2026-10-21T15:21:57.760Z",
+   "strength": "strong",
+   "conversationId": "codex:01a15a23-1157-7ef3-83c9-9ce9461c3247",
+   "provider": "codex",
+   "sessionId": "01a15a23-1157-7ef3-83c9-9ce9461c3247",
+   "title": "Conversation codex 01a15a23",
+   "updatedAt": "2026-10-21T15:21:57.760Z",
+   "bytes": 41810712,
+   "boundProject": "zenray-progress"
+  },
+  {
+   "projectId": "zenray-progress",
    "lines": 787,
    "work": 158,
    "prompts": 8,
@@ -34,22 +50,6 @@
    "updatedAt": "2026-10-14T13:45:00.698Z",
    "bytes": 21122,
    "boundProject": null
-  },
-  {
-   "projectId": "zenray-progress",
-   "lines": 307,
-   "work": 157,
-   "prompts": 3,
-   "first": "2026-10-20T16:30:25.542Z",
-   "last": "2026-10-21T15:07:32.505Z",
-   "strength": "strong",
-   "conversationId": "codex:01a15a23-1157-7ef3-83c9-9ce9461c3247",
-   "provider": "codex",
-   "sessionId": "01a15a23-1157-7ef3-83c9-9ce9461c3247",
-   "title": "Conversation codex 01a15a23",
-   "updatedAt": "2026-10-21T15:07:32.610Z",
-   "bytes": 39634404,
-   "boundProject": "zenray-progress"
   },
   {
    "projectId": "zenray-progress",
