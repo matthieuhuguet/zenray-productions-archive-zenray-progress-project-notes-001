@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-10-21T17:24:36.697Z",
+ "scannedAt": "2026-10-21T17:32:36.680Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -111,8 +111,8 @@
    "provider": "claude",
    "sessionId": "d2f26016-25dd-4bcc-a6d8-122d50d3f383",
    "title": "3 motion design and editing video",
-   "updatedAt": "2026-10-21T17:24:33.370Z",
-   "bytes": 397958198,
+   "updatedAt": "2026-10-21T17:32:31.999Z",
+   "bytes": 398781399,
    "boundProject": null
   },
   {
@@ -239,8 +239,8 @@
    "provider": "claude",
    "sessionId": "beb9938e-4434-4925-8d13-137bb7940fc0",
    "title": "UV Methodology (fork)",
-   "updatedAt": "2026-10-21T17:24:22.068Z",
-   "bytes": 348571677,
+   "updatedAt": "2026-10-21T17:32:31.853Z",
+   "bytes": 348905329,
    "boundProject": "louisiana-bayou"
   },
   {
