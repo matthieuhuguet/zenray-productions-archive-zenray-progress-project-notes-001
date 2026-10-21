@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-10-21T14:22:58.447Z",
+ "scannedAt": "2026-10-21T14:36:35.435Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -239,8 +239,8 @@
    "provider": "claude",
    "sessionId": "beb9938e-4434-4925-8d13-137bb7940fc0",
    "title": "UV Methodology (fork)",
-   "updatedAt": "2026-10-21T14:17:50.545Z",
-   "bytes": 40531,
+   "updatedAt": "2026-10-21T14:35:48.141Z",
+   "bytes": 40589,
    "boundProject": "louisiana-bayou"
   },
   {
@@ -415,8 +415,8 @@
    "provider": "claude",
    "sessionId": "2ce02bbc-dad5-488e-9ffc-51313c488339",
    "title": "StudioPhoto Enhancing Assets",
-   "updatedAt": "2026-10-21T14:22:19.333Z",
-   "bytes": 38711,
+   "updatedAt": "2026-10-21T14:34:21.281Z",
+   "bytes": 33801182,
    "boundProject": "studiophoto-matthieu-17-october-2026"
   },
   {
