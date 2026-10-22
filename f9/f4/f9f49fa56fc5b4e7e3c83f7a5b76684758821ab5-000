@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-10-22T13:21:52.575Z",
+ "scannedAt": "2026-10-22T13:35:18.493Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -239,8 +239,8 @@
    "provider": "claude",
    "sessionId": "beb9938e-4434-4925-8d13-137bb7940fc0",
    "title": "UV Methodology (fork)",
-   "updatedAt": "2026-10-22T13:21:04.258Z",
-   "bytes": 388339184,
+   "updatedAt": "2026-10-22T13:34:15.866Z",
+   "bytes": 40080,
    "boundProject": "louisiana-bayou"
   },
   {
@@ -479,7 +479,7 @@
    "provider": "claude",
    "sessionId": "c599a27c-4ba9-4fbc-b29f-9cf95d1bbcb6",
    "title": "Iphone Photos",
-   "updatedAt": "2026-10-22T12:13:20.659Z",
+   "updatedAt": "2026-10-22T13:34:27.084Z",
    "bytes": 38239,
    "boundProject": null
   },
