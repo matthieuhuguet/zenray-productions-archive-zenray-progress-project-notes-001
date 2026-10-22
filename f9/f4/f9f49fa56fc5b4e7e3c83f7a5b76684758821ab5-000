@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-10-22T17:05:44.646Z",
+ "scannedAt": "2026-10-22T17:56:44.734Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -455,6 +455,22 @@
    "projectId": "zenray-progress",
    "lines": 9,
    "work": 0,
+   "prompts": 1,
+   "first": "2026-10-22T10:36:25.328Z",
+   "last": "2026-10-22T17:55:52.346Z",
+   "strength": "weak",
+   "conversationId": "claude:c599a27c-4ba9-4fbc-b29f-9cf95d1bbcb6",
+   "provider": "claude",
+   "sessionId": "c599a27c-4ba9-4fbc-b29f-9cf95d1bbcb6",
+   "title": "Iphone Photos",
+   "updatedAt": "2026-10-22T17:56:28.314Z",
+   "bytes": 4023108,
+   "boundProject": null
+  },
+  {
+   "projectId": "zenray-progress",
+   "lines": 9,
+   "work": 0,
    "prompts": 0,
    "first": "2026-10-12T09:52:06.211Z",
    "last": "2026-10-14T10:29:29.564Z",
@@ -466,22 +482,6 @@
    "updatedAt": "2026-10-14T10:45:04.320Z",
    "bytes": 21342,
    "boundProject": "zenray-assets-tube-view"
-  },
-  {
-   "projectId": "zenray-progress",
-   "lines": 7,
-   "work": 0,
-   "prompts": 1,
-   "first": "2026-10-22T10:36:25.328Z",
-   "last": "2026-10-22T11:59:43.721Z",
-   "strength": "weak",
-   "conversationId": "claude:c599a27c-4ba9-4fbc-b29f-9cf95d1bbcb6",
-   "provider": "claude",
-   "sessionId": "c599a27c-4ba9-4fbc-b29f-9cf95d1bbcb6",
-   "title": "Iphone Photos",
-   "updatedAt": "2026-10-22T17:04:32.946Z",
-   "bytes": 38245,
-   "boundProject": null
   },
   {
    "projectId": "zenray-progress",
