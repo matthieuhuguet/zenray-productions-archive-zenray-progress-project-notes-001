@@ -3887,3 +3887,36 @@
 > Note aussi dans [$claude-md-global](/Users/zenray/.codex/skills/claude-md-global/SKILL.md) le changement typographique enlève le medium pour Anthropic Serif. (21 October 2026, 17:02:48 +0200)
 >
 > [$dont-stop](/Users/zenray/.codex/skills/dont-stop/SKILL.md) et déploie directement (21 October 2026, 17:02:48 +0200)
+
+## 22 October 2026, 12:46:25 +0200 : Prompt
+
+<!-- feedback-event:7ca2b4ef1ca3e2f9ebc0031a29d76db48ebe84de898da8f55ad23db5aaf3a8c5 (22 October 2026, 12:46:25 +0200) -->
+- Project: zenray-progress; kind: prompt. (22 October 2026, 12:46:25 +0200)
+- Source: /Users/zenray/.codex/sessions/2026/10/20/rollout-2026-10-20T18-26-50-01a15a23-1157-7ef3-83c9-9ce9461c3247.jsonl. (22 October 2026, 12:46:25 +0200)
+
+> tu as fini ? sinon fini proprement (22 October 2026, 12:46:25 +0200)
+
+## 22 October 2026, 12:47:04 +0200 : Iteration
+
+<!-- feedback-event:ed4ec7de32650d6aa91f4fd951bdfcb405cd860b542752309e38133f82ea6182 (22 October 2026, 12:47:04 +0200) -->
+- Project: zenray-progress; kind: iteration. (22 October 2026, 12:47:04 +0200)
+- Source: checkpoint:codex:01a15a23-1157-7ef3-83c9-9ce9461c3247. (22 October 2026, 12:47:04 +0200)
+
+> 22 October 2026 : clôture vérifiée. B clair déployé sur main 1125a554 ; images contain et bandes noires, GT Sectra Regular Italic pour les titres, Anthropic Serif Regular 400 pour le corps. Paramètres communs dans galleryPresentation.js. 2762 tests complets et 20 régressions ciblées réussis. Relecture finale du domaine : index-CLinLEm2.js toujours identique au build, plus de dix minutes après publication. Doctrine modifiée et synchronisée, sources et preuves conservées. Travail terminé, aucune suite automatique. (22 October 2026, 12:47:04 +0200)
+
+## 22 October 2026, 12:47:27 +0200 : Iteration
+
+<!-- feedback-event:4f35ae40be287f4b87b4a0d4f8abddc6c1e518d63912f17b654ad44ea987cb8d (22 October 2026, 12:47:27 +0200) -->
+- Project: zenray-progress; kind: iteration. (22 October 2026, 12:47:27 +0200)
+- Source: /Users/zenray/.codex/sessions/2026/10/20/rollout-2026-10-20T18-26-50-01a15a23-1157-7ef3-83c9-9ce9461c3247.jsonl. (22 October 2026, 12:47:27 +0200)
+
+> Oui, terminé et [déployé](https://zenray-progress.pages.dev/). (22 October 2026, 12:47:27 +0200)
+>
+> | Demande | Fait | Vérification | (22 October 2026, 12:47:27 +0200)
+> |---|---|---| (22 October 2026, 12:47:27 +0200)
+> | B clair, images entières | Oui | Bandes noires, aucun recadrage | (22 October 2026, 12:47:27 +0200)
+> | GT Sectra uniquement aux titres | Oui | Corps Anthropic Serif Regular 400 | (22 October 2026, 12:47:27 +0200)
+> | Paramètres HDA et doctrine | Oui | Centralisés, synchronisés et consignés | (22 October 2026, 12:47:27 +0200)
+> | Déploiement propre | Oui | 2 762 tests réussis, site revérifié aujourd’hui | (22 October 2026, 12:47:27 +0200)
+>
+> Tout est sauvegardé et poussé. (22 October 2026, 12:47:27 +0200)
