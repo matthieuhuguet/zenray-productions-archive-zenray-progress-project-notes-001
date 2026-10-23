@@ -1,0 +1,1648 @@
+<!doctype html>
+<!-- 23 October 2026: Sport - Last Sessions & Comparatif typographique GT Sectra (3 fontes, 3 designs A B C) -->
+<!-- FR : Section Sport, onglet Last Sessions avec capsules de séances, charges et unités, et banc d'essai des 3 fontes GT Sectra en italique. -->
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sport : Last Sessions & GT Sectra Italic (23 October 2026)</title>
+<style>
+/* 23 October 2026 : Déclaration des trois fontes GT Sectra LCG en italique et des fontes système */
+@font-face {
+  font-family: 'InterVariable';
+  src: url('file:///Users/zenray/.claude/skills/zenray-edit/designs/_shared/fonts/InterVariable.woff2') format('woff2');
+  font-weight: 100 900;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'AnthropicSerif';
+  src: url('file:///Users/zenray/.claude/skills/zenray-edit/designs/_shared/fonts/AnthropicSerif-Romans.woff2') format('woff2');
+  font-weight: 300 800;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'AnthropicSerif';
+  src: url('file:///Users/zenray/.claude/skills/zenray-edit/designs/_shared/fonts/AnthropicSerif-Italics.woff2') format('woff2');
+  font-style: italic;
+  font-weight: 300 800;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'GTSectra-Normal-Italic';
+  src: url('file:///Users/zenray/.claude/skills/zenray-edit/designs/_shared/fonts/GT-Sectra-LCGV-Regular-Italic.woff2') format('woff2');
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'GTSectra-Fine-Italic';
+  src: url('file:///Users/zenray/.claude/skills/zenray-edit/designs/_shared/fonts/GT-Sectra-LCGV-Fine-Regular-Italic.woff2') format('woff2');
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'GTSectra-Display-Italic';
+  src: url('file:///Users/zenray/.claude/skills/zenray-edit/designs/_shared/fonts/GT-Sectra-LCGV-Display-Regular-Italic.woff2') format('woff2');
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+}
+
+:root {
+  /* Typographie de référence (Typography1.md, 23 October 2026) */
+  --zr-police-sans: 'InterVariable', -apple-system, BlinkMacSystemFont, sans-serif;
+  --zr-police-serif: 'AnthropicSerif', Georgia, serif;
+  
+  /* Fontes GT Sectra pour les titres (paramétrable en direct) */
+  --zr-police-titres-sport: 'GTSectra-Normal-Italic', var(--zr-police-serif);
+  --zr-style-titres-sport: italic;
+  --zr-poids-titres-sport: 400;
+
+  /* Nombres et chiffres selon doctrine (toujours Anthropic Serif droit) */
+  --zr-police-nombres: 'AnthropicSerif', Georgia, serif;
+  --zr-style-nombres: normal;
+  --zr-poids-nombres: 400;
+
+  /* Variables paramétriques HDA */
+  --capsule-radius: 14px;
+  --capsule-pad: 18px;
+  --title-size: 26px;
+  --gap-size: 14px;
+  --accent-color: #4295f7;
+  --accent-soft: rgba(66, 149, 247, 0.16);
+  --green-badge: #34c759;
+  --green-soft: rgba(52, 199, 89, 0.16);
+  --orange-badge: #ff9500;
+  --orange-soft: rgba(255, 149, 0, 0.16);
+
+  /* Couleurs de thème sombre par défaut (Sport ZenRayProgress) */
+  --bg: #161618;
+  --bg-deep: #0e0e10;
+  --surface: #1f1f23;
+  --surface-hover: #26262b;
+  --surface-glass: rgba(31, 31, 35, 0.72);
+  --border: rgba(255, 255, 255, 0.12);
+  --border-subtle: rgba(255, 255, 255, 0.06);
+  --ink: #f5f5f7;
+  --ink-secondary: rgba(245, 245, 247, 0.65);
+  --ink-muted: rgba(245, 245, 247, 0.42);
+}
+
+:root[data-theme="light"] {
+  --bg: #f5f5f7;
+  --bg-deep: #e8e8ed;
+  --surface: #ffffff;
+  --surface-hover: #f0f0f4;
+  --surface-glass: rgba(255, 255, 255, 0.82);
+  --border: rgba(0, 0, 0, 0.12);
+  --border-subtle: rgba(0, 0, 0, 0.05);
+  --ink: #191b1f;
+  --ink-secondary: rgba(25, 27, 31, 0.7);
+  --ink-muted: rgba(25, 27, 31, 0.45);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--zr-police-sans);
+  font-size: 13.5px;
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Nombres en Anthropic Serif droit systématique */
+.num, .unit-num {
+  font-family: var(--zr-police-nombres) !important;
+  font-style: var(--zr-style-nombres) !important;
+  font-weight: var(--zr-poids-nombres) !important;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Titres en GT Sectra Italic */
+.sport-title, h1, h2, h3, .ex-name-sectra {
+  font-family: var(--zr-police-titres-sport);
+  font-style: var(--zr-style-titres-sport);
+  font-weight: var(--zr-poids-titres-sport);
+  letter-spacing: -0.01em;
+}
+
+/* Barre supérieure de navigation et commandes HDA */
+.zr-topbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--surface-glass);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-bottom: 1px solid var(--border);
+  padding: 10px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.zr-brand-group {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+.zr-brand-title {
+  font-family: var(--zr-police-titres-sport);
+  font-style: italic;
+  font-size: 20px;
+  color: var(--ink);
+}
+.zr-brand-meta {
+  font-size: 12px;
+  color: var(--ink-muted);
+}
+.zr-nav-pills {
+  display: inline-flex;
+  background: rgba(128, 128, 128, 0.16);
+  padding: 3px;
+  border-radius: 999px;
+  gap: 2px;
+}
+.zr-nav-pill {
+  border: 0;
+  background: transparent;
+  color: var(--ink-secondary);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.14s ease;
+  white-space: nowrap;
+}
+.zr-nav-pill:hover {
+  color: var(--ink);
+}
+.zr-nav-pill.is-active {
+  background: var(--accent-color);
+  color: #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+.zr-nav-pill.is-specimen {
+  background: transparent;
+  color: var(--orange-badge);
+}
+.zr-nav-pill.is-specimen.is-active {
+  background: var(--orange-badge);
+  color: #fff;
+}
+
+.zr-controls-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.zr-btn {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--ink);
+  font-size: 12px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.12s ease;
+}
+.zr-btn:hover {
+  background: var(--surface-hover);
+  border-color: var(--ink-secondary);
+}
+.zr-select {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--ink);
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  outline: none;
+}
+
+/* Panneau de réglages HDA déroulant */
+.zr-hda-panel {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  font-size: 12px;
+  color: var(--ink-secondary);
+}
+.zr-hda-panel.is-collapsed {
+  display: none;
+}
+.zr-hda-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.zr-hda-item input[type="range"] {
+  accent-color: var(--accent-color);
+  cursor: pointer;
+}
+
+/* Zone principale */
+.zr-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 24px;
+  flex: 1;
+  width: 100%;
+}
+
+/* Vues */
+.view-section {
+  display: none;
+}
+.view-section.is-visible {
+  display: block;
+}
+
+/* ==========================================================================
+   PARTIE 1 : BANC D'ESSAI DES 3 FONTES GT SECTRA EN ITALIQUE
+   ========================================================================== */
+.specimen-hero {
+  text-align: center;
+  padding: 30px 20px 40px;
+}
+.specimen-hero h1 {
+  font-size: 38px;
+  margin-bottom: 8px;
+}
+.specimen-hero p {
+  color: var(--ink-secondary);
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 14px;
+}
+
+.specimen-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 40px;
+}
+@media (max-width: 1024px) {
+  .specimen-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.specimen-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+.specimen-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--accent-color);
+  opacity: 0.7;
+}
+.specimen-card.is-fine::before {
+  background: #bf5af2;
+}
+.specimen-card.is-display::before {
+  background: #ff9f0a;
+}
+
+.specimen-header {
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 14px;
+}
+.specimen-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+.specimen-file {
+  font-family: var(--zr-police-sans);
+  font-size: 11px;
+  color: var(--ink-muted);
+}
+.specimen-verdict {
+  margin-top: 6px;
+  font-size: 11.5px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  display: inline-block;
+  background: rgba(128, 128, 128, 0.12);
+  color: var(--ink-secondary);
+}
+
+/* Échantillons */
+.sample-huge {
+  font-size: 64px;
+  line-height: 1;
+  color: var(--ink);
+}
+.sample-large {
+  font-size: 32px;
+  line-height: 1.15;
+  color: var(--ink);
+}
+.sample-medium {
+  font-size: 20px;
+  line-height: 1.25;
+  color: var(--ink);
+}
+.sample-body {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--ink-secondary);
+}
+
+.font-normal { font-family: 'GTSectra-Normal-Italic', serif; font-style: italic; }
+.font-fine { font-family: 'GTSectra-Fine-Italic', serif; font-style: italic; }
+.font-display { font-family: 'GTSectra-Display-Italic', serif; font-style: italic; }
+
+.specimen-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.specimen-label {
+  font-size: 10.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ink-muted);
+  font-weight: 600;
+}
+
+.specimen-comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 24px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+}
+.specimen-comparison-table th, .specimen-comparison-table td {
+  padding: 14px 18px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-subtle);
+}
+.specimen-comparison-table th {
+  background: rgba(128, 128, 128, 0.08);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ink-secondary);
+}
+.specimen-comparison-table tr:last-child td {
+  border-bottom: 0;
+}
+
+/* ==========================================================================
+   PARTIE 2 : SIMULATION SPORT AVEC TOGGLE LAST SESSIONS (3 DESIGNS)
+   ========================================================================== */
+.sport-mockup-frame {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.16);
+  margin-bottom: 40px;
+}
+.sport-mockup-top {
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.sport-mockup-title-area {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.sport-mockup-main-title {
+  font-size: var(--title-size);
+  color: var(--ink);
+  line-height: 1;
+}
+.sport-mockup-date {
+  font-size: 12.5px;
+  color: var(--ink-muted);
+}
+.sport-mockup-toggles {
+  display: inline-flex;
+  background: rgba(128, 128, 128, 0.14);
+  padding: 3px;
+  border-radius: 999px;
+  gap: 2px;
+}
+.sport-mockup-toggle-btn {
+  border: 0;
+  background: transparent;
+  color: var(--ink-secondary);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 6px 16px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.14s ease;
+}
+.sport-mockup-toggle-btn:hover {
+  color: var(--ink);
+}
+.sport-mockup-toggle-btn.is-active {
+  background: var(--accent-color);
+  color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+.sport-mockup-body {
+  padding: 24px;
+}
+
+/* --------------------------------------------------------------------------
+   DESIGN A : CAPSULES MINIMALES & CHRONOLOGIE FLOTTANTE
+   -------------------------------------------------------------------------- */
+.design-banner {
+  margin-bottom: 20px;
+  padding: 12px 18px;
+  border-radius: 10px;
+  background: var(--accent-soft);
+  border: 1px solid rgba(66, 149, 247, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+}
+.design-banner b {
+  color: var(--accent-color);
+  font-size: 14px;
+}
+.capsule-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.capsule-session-card {
+  background: var(--surface-glass);
+  border: 1px solid var(--border);
+  border-radius: var(--capsule-radius);
+  padding: var(--capsule-pad);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  transition: border-color 0.15s ease;
+}
+.capsule-session-card:hover {
+  border-color: rgba(66, 149, 247, 0.4);
+}
+.capsule-session-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 12px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.capsule-session-title {
+  font-size: 20px;
+  color: var(--ink);
+}
+.capsule-session-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 12px;
+  color: var(--ink-secondary);
+}
+.capsule-badge-pill {
+  padding: 3px 9px;
+  border-radius: 999px;
+  background: rgba(128, 128, 128, 0.14);
+  color: var(--ink-secondary);
+  font-size: 11.5px;
+}
+.capsule-badge-pill.is-highlight {
+  background: var(--green-soft);
+  color: var(--green-badge);
+}
+
+.capsule-exercise-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 12px;
+}
+.capsule-ex-item {
+  background: rgba(128, 128, 128, 0.06);
+  border: 1px solid var(--border-subtle);
+  border-radius: 10px;
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.capsule-ex-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.capsule-ex-name {
+  font-size: 14.5px;
+  color: var(--ink);
+}
+.capsule-ex-group {
+  font-size: 10.5px;
+  color: var(--ink-muted);
+  text-transform: uppercase;
+}
+.capsule-ex-data {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-top: 4px;
+}
+.capsule-ex-formula {
+  font-size: 13px;
+  color: var(--ink-secondary);
+}
+.capsule-ex-weight {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--accent-color);
+  background: var(--accent-soft);
+  padding: 3px 8px;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 2px;
+}
+.capsule-ex-diff {
+  font-size: 11px;
+  color: var(--green-badge);
+}
+
+/* --------------------------------------------------------------------------
+   DESIGN B : DOSSIER D'ATELIER & PLANCHES D'EXERCICES
+   -------------------------------------------------------------------------- */
+.board-split-layout {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 24px;
+}
+@media (max-width: 900px) {
+  .board-split-layout {
+    grid-template-columns: 1fr;
+  }
+}
+.board-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.board-sidebar-item {
+  background: rgba(128, 128, 128, 0.06);
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  padding: 14px;
+  cursor: pointer;
+  transition: all 0.12s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.board-sidebar-item:hover {
+  background: rgba(128, 128, 128, 0.12);
+  border-color: var(--border);
+}
+.board-sidebar-item.is-selected {
+  background: var(--surface);
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 1px var(--accent-color);
+}
+.board-main-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.board-header-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 12px;
+}
+.board-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+.board-tile-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+}
+.board-tile-thumb {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background: #111;
+  overflow: hidden;
+}
+.board-tile-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.board-tile-thumb-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 24px 10px 8px;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  color: #fff;
+  font-size: 13px;
+  line-height: 1.2;
+}
+.board-tile-body {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.board-tile-weight-tag {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  background: rgba(128, 128, 128, 0.08);
+  padding: 6px 10px;
+  border-radius: 8px;
+}
+.board-tile-bubbles {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+.board-bubble {
+  font-size: 10.5px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: rgba(128, 128, 128, 0.14);
+  color: var(--ink-secondary);
+}
+
+/* --------------------------------------------------------------------------
+   DESIGN C : LIQUID GLASS COCKPIT & MONITEUR HAUTE PRECISION
+   -------------------------------------------------------------------------- */
+.cockpit-view {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+.cockpit-hero-banner {
+  background: linear-gradient(135deg, rgba(66, 149, 247, 0.12), rgba(191, 90, 242, 0.08));
+  border: 1px solid rgba(66, 149, 247, 0.25);
+  border-radius: 16px;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.cockpit-hero-stats {
+  display: flex;
+  gap: 28px;
+}
+.cockpit-stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.cockpit-stat-val {
+  font-size: 26px;
+  color: var(--ink);
+  line-height: 1;
+}
+.cockpit-stat-label {
+  font-size: 11px;
+  color: var(--ink-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.cockpit-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+@media (max-width: 900px) {
+  .cockpit-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.cockpit-glass-card {
+  background: var(--surface-glass);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+}
+.cockpit-card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 10px;
+}
+.cockpit-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.06);
+}
+.cockpit-row:last-child {
+  border-bottom: 0;
+}
+.cockpit-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.cockpit-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent-color);
+}
+.cockpit-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.cockpit-pill-sets {
+  font-size: 12px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: rgba(128, 128, 128, 0.1);
+  color: var(--ink-secondary);
+}
+.cockpit-pill-load {
+  font-size: 13.5px;
+  font-weight: 500;
+  padding: 3px 10px;
+  border-radius: 6px;
+  background: var(--accent-color);
+  color: #fff;
+  letter-spacing: 0.02em;
+}
+
+/* Pied de page informatif */
+.zr-footer {
+  border-top: 1px solid var(--border);
+  padding: 16px 24px;
+  text-align: center;
+  font-size: 12px;
+  color: var(--ink-muted);
+}
+</style>
+</head>
+<body>
+
+<!-- Barre supérieure de commandes & bascules -->
+<header class="zr-topbar">
+  <div class="zr-brand-group">
+    <div class="zr-brand-title sport-title">Sport</div>
+    <div class="zr-brand-meta">Last Sessions · 3 Fontes GT Sectra & 3 Designs (23 October 2026)</div>
+  </div>
+
+  <div class="zr-nav-pills" role="tablist">
+    <button type="button" class="zr-nav-pill is-specimen is-active" onclick="switchMainTab('specimen', this)">1. Banc 3 Fontes GT Sectra</button>
+    <button type="button" class="zr-nav-pill" onclick="switchMainTab('designA', this)">Design A : Capsules Minimales</button>
+    <button type="button" class="zr-nav-pill" onclick="switchMainTab('designB', this)">Design B : Dossier d'Atelier</button>
+    <button type="button" class="zr-nav-pill" onclick="switchMainTab('designC', this)">Design C : Liquid Glass Cockpit</button>
+    <button type="button" class="zr-nav-pill" onclick="switchMainTab('sportReplica', this)">Simulation Vue Sport Réelle</button>
+  </div>
+
+  <div class="zr-controls-group">
+    <select class="zr-select" id="fontPicker" onchange="changeGlobalFont(this.value)" title="Choisir la fonte GT Sectra active pour tous les titres">
+      <option value="GTSectra-Normal-Italic">GT Sectra Normal (Regular Italic)</option>
+      <option value="GTSectra-Fine-Italic">GT Sectra Fine (Regular Italic)</option>
+      <option value="GTSectra-Display-Italic">GT Sectra Display (Regular Italic)</option>
+    </select>
+    <button type="button" class="zr-btn" onclick="toggleTheme()" title="Basculer thème clair ou sombre">◐ Thème</button>
+    <button type="button" class="zr-btn" onclick="toggleHda()" title="Afficher les curseurs paramétriques HDA">⚙ Paramètres</button>
+  </div>
+</header>
+
+<!-- Panneau de curseurs HDA paramétriques (Loi HDA Priorité 0) -->
+<div class="zr-hda-panel is-collapsed" id="hdaPanel">
+  <div class="zr-hda-item">
+    <label>Rayon capsule : <span id="valRadius" class="num">14</span>px</label>
+    <input type="range" min="6" max="28" value="14" oninput="updateCssVar('--capsule-radius', this.value + 'px', 'valRadius')">
+  </div>
+  <div class="zr-hda-item">
+    <label>Padding capsule : <span id="valPad" class="num">18</span>px</label>
+    <input type="range" min="10" max="32" value="18" oninput="updateCssVar('--capsule-pad', this.value + 'px', 'valPad')">
+  </div>
+  <div class="zr-hda-item">
+    <label>Taille titre : <span id="valTitle" class="num">26</span>px</label>
+    <input type="range" min="20" max="38" value="26" oninput="updateCssVar('--title-size', this.value + 'px', 'valTitle')">
+  </div>
+  <div class="zr-hda-item">
+    <button type="button" class="zr-btn" onclick="copyHdaValues()">Copier les valeurs pour le prompt</button>
+  </div>
+</div>
+
+<main class="zr-container">
+
+  <!-- ====================================================================
+       VUE 1 : BANC D'ESSAI DES TROIS FONTES GT SECTRA EN ITALIQUE
+       ==================================================================== -->
+  <section class="view-section is-visible" id="view-specimen">
+    <div class="specimen-hero">
+      <h1 class="sport-title">Banc d'Essai Typographique : Les 3 Fontes GT Sectra en Italique</h1>
+      <p>Comparaison directe des trois coupes GT Sectra disponibles sur macOS, toutes composées en italique à 400. Les chiffres restent droits en Anthropic Serif selon la doctrine du 23 October 2026.</p>
+    </div>
+
+    <div class="specimen-grid">
+      <!-- Fonte 1 : GT Sectra Normal Regular Italic -->
+      <article class="specimen-card">
+        <div class="specimen-header">
+          <div class="specimen-name font-normal">1. GT Sectra Normal</div>
+          <div class="specimen-file">GT-Sectra-LCGV-Regular-Italic.woff2</div>
+          <div class="specimen-verdict">Coupe Texte · Idéale pour les titres de capsules et interfaces denses</div>
+        </div>
+        <div class="specimen-row">
+          <span class="specimen-label">Mot-clé principal (64px)</span>
+          <div class="sample-huge font-normal">Sport</div>
+        </div>
+        <div class="specimen-row">
+          <span class="specimen-label">Exercices réels avec charges (chiffres Anthropic Serif droits)</span>
+          <div class="sample-medium font-normal">Tractions lestées <span class="num">(+17.5 kg)</span></div>
+          <div class="sample-medium font-normal">Développé incliné aux haltères <span class="num">(28 kg)</span></div>
+          <div class="sample-medium font-normal">Front squat ou squat bulgare <span class="num">(60 kg)</span></div>
+        </div>
+        <div class="specimen-row">
+          <span class="specimen-label">Phrase de synthèse</span>
+          <div class="sample-body font-normal">Séance B complète du <span class="num">21 October 2026</span> : 4 exercices, 15 séries, volume total 1 840 kg.</div>
+        </div>
+        <div class="specimen-row">
+          <span class="specimen-label">Texte Lorem Ipsum (Italique complet)</span>
+          <p class="sample-body font-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+      </article>
+
+      <!-- Fonte 2 : GT Sectra Fine Regular Italic -->
+      <article class="specimen-card is-fine">
+        <div class="specimen-header">
+          <div class="specimen-name font-fine">2. GT Sectra Fine</div>
+          <div class="specimen-file">GT-Sectra-LCGV-Fine-Regular-Italic.woff2</div>
+          <div class="specimen-verdict">Coupe Fine · Déliés acérés, grand raffinement éditorial</div>
+        </div>
+        <div class="specimen-row">
+          <span class="specimen-label">Mot-clé principal (64px)</span>
+          <div class="sample-huge font-fine">Sport</div>
+        </div>
+        <div class="specimen-row">
+          <span class="specimen-label">Exercices réels avec charges (chiffres Anthropic Serif droits)</span>
+          <div class="sample-medium font-fine">Tractions lestées <span class="num">(+17.5 kg)</span></div>
+          <div class="sample-medium font-fine">Développé incliné aux haltères <span class="num">(28 kg)</span></div>
+          <div class="sample-medium font-fine">Front squat ou squat bulgare <span class="num">(60 kg)</span></div>
+        </div>
+        <div class="specimen-row">
+          <span class="specimen-label">Phrase de synthèse</span>
+          <div class="sample-body font-fine">Séance B complète du <span class="num">21 October 2026</span> : 4 exercices, 15 séries, volume total 1 840 kg.</div>
+        </div>
+        <div class="specimen-row">
+          <span class="specimen-label">Texte Lorem Ipsum (Italique complet)</span>
+          <p class="sample-body font-fine">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+      </article>
+
+      <!-- Fonte 3 : GT Sectra Display Regular Italic -->
+      <article class="specimen-card is-display">
+        <div class="specimen-header">
+          <div class="specimen-name font-display">3. GT Sectra Display</div>
+          <div class="specimen-file">GT-Sectra-LCGV-Display-Regular-Italic.woff2</div>
+          <div class="specimen-verdict">Coupe Display · Fort contraste, impact visuel puissant à grande taille</div>
+        </div>
+        <div class="specimen-row">
+          <span class="specimen-label">Mot-clé principal (64px)</span>
+          <div class="sample-huge font-display">Sport</div>
+        </div>
+        <div class="specimen-row">
+          <span class="specimen-label">Exercices réels avec charges (chiffres Anthropic Serif droits)</span>
+          <div class="sample-medium font-display">Tractions lestées <span class="num">(+17.5 kg)</span></div>
+          <div class="sample-medium font-display">Développé incliné aux haltères <span class="num">(28 kg)</span></div>
+          <div class="sample-medium font-display">Front squat ou squat bulgare <span class="num">(60 kg)</span></div>
+        </div>
+        <div class="specimen-row">
+          <span class="specimen-label">Phrase de synthèse</span>
+          <div class="sample-body font-display">Séance B complète du <span class="num">21 October 2026</span> : 4 exercices, 15 séries, volume total 1 840 kg.</div>
+        </div>
+        <div class="specimen-row">
+          <span class="specimen-label">Texte Lorem Ipsum (Italique complet)</span>
+          <p class="sample-body font-display">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+      </article>
+    </div>
+
+    <!-- Tableau analytique des caractéristiques -->
+    <table class="specimen-comparison-table">
+      <thead>
+        <tr>
+          <th>Caractéristique</th>
+          <th>GT Sectra Normal (Text)</th>
+          <th>GT Sectra Fine</th>
+          <th>GT Sectra Display</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><b>Rapport Pleins / Déliés</b></td>
+          <td>Modéré (préservé pour lecture fluide)</td>
+          <td>Très élevé (déliés tranchants comme un rasoir)</td>
+          <td>Élevé avec empattements compacts</td>
+        </tr>
+        <tr>
+          <td><b>Lisibilité aux petites tailles (&lt; 18px)</b></td>
+          <td>Excellente, ne scintille pas</td>
+          <td>Délicate sur écran standard, exige un écran Retina</td>
+          <td>Bonne si le titrage reste court</td>
+        </tr>
+        <tr>
+          <td><b>Meilleur cas d'usage dans Sport</b></td>
+          <td>Noms des exercices dans les tuiles et capsules</td>
+          <td>Grand titre de séance et sous-titres raffinés</td>
+          <td>Grand mot « Sport » en en-tête et nombres d'impact</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ====================================================================
+       VUE 2 : DESIGN A (CAPSULES MINIMALES & CHRONOLOGIE FLOTTANTE)
+       ==================================================================== -->
+  <section class="view-section" id="view-designA">
+    <div class="design-banner">
+      <div><b>Design A : Capsules Minimales & Chronologie Flottante</b> : chaque séance est condensée dans une capsule propre avec horodatage, liste d'exercices, poids avec unités et progression vs séance précédente.</div>
+      <span class="capsule-badge-pill">Fonte active : GT Sectra Italic</span>
+    </div>
+
+    <div class="sport-mockup-frame">
+      <div class="sport-mockup-top">
+        <div class="sport-mockup-title-area">
+          <h2 class="sport-mockup-main-title sport-title">Sport</h2>
+          <span class="sport-mockup-date">Friday · <span class="num">23 October 2026</span></span>
+        </div>
+        <div class="sport-mockup-toggles">
+          <button type="button" class="sport-mockup-toggle-btn" onclick="switchMainTab('sportReplica')">Séance</button>
+          <button type="button" class="sport-mockup-toggle-btn is-active">Last Sessions</button>
+          <button type="button" class="sport-mockup-toggle-btn">Objectif visuel</button>
+        </div>
+      </div>
+
+      <div class="sport-mockup-body">
+        <div class="capsule-timeline">
+          <!-- Capsule Séance 1 (Dernière séance) -->
+          <article class="capsule-session-card">
+            <div class="capsule-session-head">
+              <div>
+                <h3 class="capsule-session-title sport-title">Séance B · Dos, Biceps & Abdos</h3>
+                <span class="capsule-session-meta">Mercredi · <span class="num">21 October 2026</span> à <span class="num">18:45</span></span>
+              </div>
+              <div class="capsule-session-meta">
+                <span class="capsule-badge-pill"><span class="num">4</span> exercices</span>
+                <span class="capsule-badge-pill"><span class="num">15</span> séries</span>
+                <span class="capsule-badge-pill is-highlight">Progression <span class="num">+2.5 kg</span></span>
+              </div>
+            </div>
+
+            <div class="capsule-exercise-list">
+              <div class="capsule-ex-item">
+                <div class="capsule-ex-header">
+                  <span class="capsule-ex-name sport-title">Tractions lestées (pronation)</span>
+                  <span class="capsule-ex-group">Dos</span>
+                </div>
+                <div class="capsule-ex-data">
+                  <span class="capsule-ex-formula"><span class="num">4</span> séries × <span class="num">8</span> reps</span>
+                  <span class="capsule-ex-weight">+<span class="num">17.5</span> kg</span>
+                </div>
+                <div class="capsule-ex-diff">✓ <span class="num">+2.5 kg</span> vs séance du <span class="num">14 October</span></div>
+              </div>
+
+              <div class="capsule-ex-item">
+                <div class="capsule-ex-header">
+                  <span class="capsule-ex-name sport-title">Curl biceps debout</span>
+                  <span class="capsule-ex-group">Bras</span>
+                </div>
+                <div class="capsule-ex-data">
+                  <span class="capsule-ex-formula"><span class="num">4</span> séries × <span class="num">10</span> reps</span>
+                  <span class="capsule-ex-weight"><span class="num">16.0</span> kg / haltère</span>
+                </div>
+                <div class="capsule-ex-diff">✓ Stable, mouvement strict</div>
+              </div>
+
+              <div class="capsule-ex-item">
+                <div class="capsule-ex-header">
+                  <span class="capsule-ex-name sport-title">Soulevé de terre roumain</span>
+                  <span class="capsule-ex-group">Jambes</span>
+                </div>
+                <div class="capsule-ex-data">
+                  <span class="capsule-ex-formula"><span class="num">3</span> séries × <span class="num">8</span> reps</span>
+                  <span class="capsule-ex-weight"><span class="num">85.0</span> kg</span>
+                </div>
+                <div class="capsule-ex-diff">✓ <span class="num">+5.0 kg</span> vs séance du <span class="num">12 October</span></div>
+              </div>
+
+              <div class="capsule-ex-item">
+                <div class="capsule-ex-header">
+                  <span class="capsule-ex-name sport-title">Abdominaux et poigne</span>
+                  <span class="capsule-ex-group">Abdos</span>
+                </div>
+                <div class="capsule-ex-data">
+                  <span class="capsule-ex-formula"><span class="num">4</span> séries × <span class="num">15</span> reps</span>
+                  <span class="capsule-ex-weight"><span class="num">25.0</span> kg</span>
+                </div>
+                <div class="capsule-ex-diff">✓ Poulie haute contrôlée</div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Capsule Séance 2 (Avant-dernière séance) -->
+          <article class="capsule-session-card">
+            <div class="capsule-session-head">
+              <div>
+                <h3 class="capsule-session-title sport-title">Séance A · Pectoraux, Épaules & Triceps</h3>
+                <span class="capsule-session-meta">Lundi · <span class="num">19 October 2026</span> à <span class="num">19:10</span></span>
+              </div>
+              <div class="capsule-session-meta">
+                <span class="capsule-badge-pill"><span class="num">4</span> exercices</span>
+                <span class="capsule-badge-pill"><span class="num">14</span> séries</span>
+                <span class="capsule-badge-pill is-highlight">Progression <span class="num">+2.0 kg</span></span>
+              </div>
+            </div>
+
+            <div class="capsule-exercise-list">
+              <div class="capsule-ex-item">
+                <div class="capsule-ex-header">
+                  <span class="capsule-ex-name sport-title">Développé incliné aux haltères</span>
+                  <span class="capsule-ex-group">Pectoraux</span>
+                </div>
+                <div class="capsule-ex-data">
+                  <span class="capsule-ex-formula"><span class="num">4</span> séries × <span class="num">8</span> reps</span>
+                  <span class="capsule-ex-weight"><span class="num">28.0</span> kg / haltère</span>
+                </div>
+                <div class="capsule-ex-diff">✓ Haut des pecs plein</div>
+              </div>
+
+              <div class="capsule-ex-item">
+                <div class="capsule-ex-header">
+                  <span class="capsule-ex-name sport-title">Dips lestés aux parallèles</span>
+                  <span class="capsule-ex-group">Pectoraux</span>
+                </div>
+                <div class="capsule-ex-data">
+                  <span class="capsule-ex-formula"><span class="num">4</span> séries × <span class="num">8</span> reps</span>
+                  <span class="capsule-ex-weight">+<span class="num">20.0</span> kg</span>
+                </div>
+                <div class="capsule-ex-diff">✓ Amplitude 90° propre</div>
+              </div>
+
+              <div class="capsule-ex-item">
+                <div class="capsule-ex-header">
+                  <span class="capsule-ex-name sport-title">Développé militaire debout (OHP)</span>
+                  <span class="capsule-ex-group">Épaules</span>
+                </div>
+                <div class="capsule-ex-data">
+                  <span class="capsule-ex-formula"><span class="num">3</span> séries × <span class="num">8</span> reps</span>
+                  <span class="capsule-ex-weight"><span class="num">45.0</span> kg</span>
+                </div>
+                <div class="capsule-ex-diff">✓ Gainage verrouillé</div>
+              </div>
+
+              <div class="capsule-ex-item">
+                <div class="capsule-ex-header">
+                  <span class="capsule-ex-name sport-title">Élévations latérales</span>
+                  <span class="capsule-ex-group">Épaules</span>
+                </div>
+                <div class="capsule-ex-data">
+                  <span class="capsule-ex-formula"><span class="num">3</span> séries × <span class="num">12</span> reps</span>
+                  <span class="capsule-ex-weight"><span class="num">8.0</span> kg / haltère</span>
+                </div>
+                <div class="capsule-ex-diff">✓ Ratio épaule 1.618</div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       VUE 3 : DESIGN B (DOSSIER D'ATELIER & PLANCHES D'EXERCICES)
+       ==================================================================== -->
+  <section class="view-section" id="view-designB">
+    <div class="design-banner">
+      <div><b>Design B : Dossier d'Atelier & Planches Visuelles</b> : navigation chronologique à gauche et grande planche d'exercices avec vignettes statues à droite. Titres en GT Sectra Fine Italic.</div>
+      <span class="capsule-badge-pill">Fonte : GT Sectra Fine</span>
+    </div>
+
+    <div class="sport-mockup-frame">
+      <div class="sport-mockup-top">
+        <div class="sport-mockup-title-area">
+          <h2 class="sport-mockup-main-title sport-title">Sport</h2>
+          <span class="sport-mockup-date">Friday · <span class="num">23 October 2026</span></span>
+        </div>
+        <div class="sport-mockup-toggles">
+          <button type="button" class="sport-mockup-toggle-btn" onclick="switchMainTab('sportReplica')">Séance</button>
+          <button type="button" class="sport-mockup-toggle-btn is-active">Last Sessions</button>
+          <button type="button" class="sport-mockup-toggle-btn">Objectif visuel</button>
+        </div>
+      </div>
+
+      <div class="sport-mockup-body">
+        <div class="board-split-layout">
+          <!-- Colonne gauche : liste des séances passées -->
+          <div class="board-sidebar">
+            <div class="board-sidebar-item is-selected">
+              <b class="sport-title" style="font-size: 15px;">Séance B · Dos & Biceps</b>
+              <small class="num">21 October 2026 · 18:45</small>
+              <div style="display: flex; gap: 6px; margin-top: 4px;">
+                <span class="capsule-badge-pill"><span class="num">4</span> exos</span>
+                <span class="capsule-badge-pill is-highlight">+<span class="num">17.5 kg</span> lest</span>
+              </div>
+            </div>
+
+            <div class="board-sidebar-item">
+              <b class="sport-title" style="font-size: 15px;">Séance A · Pecs & Épaules</b>
+              <small class="num">19 October 2026 · 19:10</small>
+              <div style="display: flex; gap: 6px; margin-top: 4px;">
+                <span class="capsule-badge-pill"><span class="num">4</span> exos</span>
+                <span class="capsule-badge-pill"><span class="num">28 kg</span> haltères</span>
+              </div>
+            </div>
+
+            <div class="board-sidebar-item">
+              <b class="sport-title" style="font-size: 15px;">Séance Jambes & Squat</b>
+              <small class="num">17 October 2026 · 11:30</small>
+              <div style="display: flex; gap: 6px; margin-top: 4px;">
+                <span class="capsule-badge-pill"><span class="num">3</span> exos</span>
+                <span class="capsule-badge-pill"><span class="num">60 kg</span> squat</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Colonne droite : Planche de la séance sélectionnée -->
+          <div class="board-main-panel">
+            <div class="board-header-bar">
+              <div>
+                <h3 class="sport-title" style="font-size: 24px;">Séance B · Relevé Détaillé des Charges</h3>
+                <small class="num" style="color: var(--ink-secondary);">Mercredi 21 October 2026 · Durée 45 minutes</small>
+              </div>
+              <button type="button" class="zr-btn" style="background: var(--accent-color); color: #fff; border: 0;">↻ Répéter aujourd'hui</button>
+            </div>
+
+            <div class="board-cards-grid">
+              <div class="board-tile-card">
+                <div class="board-tile-thumb">
+                  <img src="img/weighted-pullup.webp" alt="Tractions" onerror="this.src='/sport/img/weighted-pullup.webp'">
+                  <div class="board-tile-thumb-overlay sport-title">Tractions lestées</div>
+                </div>
+                <div class="board-tile-body">
+                  <div class="board-tile-weight-tag">
+                    <span style="font-size: 12px; color: var(--ink-muted);">Lest ceinture</span>
+                    <b class="num" style="font-size: 16px; color: var(--accent-color);">+17.5 kg</b>
+                  </div>
+                  <div class="board-tile-bubbles">
+                    <span class="board-bubble num">S1: 8 reps</span>
+                    <span class="board-bubble num">S2: 8 reps</span>
+                    <span class="board-bubble num">S3: 8 reps</span>
+                    <span class="board-bubble num">S4: 7 reps</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="board-tile-card">
+                <div class="board-tile-thumb">
+                  <img src="img/curl-biceps.webp" alt="Curl biceps" onerror="this.src='/sport/img/curl-biceps.webp'">
+                  <div class="board-tile-thumb-overlay sport-title">Curl biceps debout</div>
+                </div>
+                <div class="board-tile-body">
+                  <div class="board-tile-weight-tag">
+                    <span style="font-size: 12px; color: var(--ink-muted);">Par haltère</span>
+                    <b class="num" style="font-size: 16px; color: var(--accent-color);">16.0 kg</b>
+                  </div>
+                  <div class="board-tile-bubbles">
+                    <span class="board-bubble num">S1: 10 reps</span>
+                    <span class="board-bubble num">S2: 10 reps</span>
+                    <span class="board-bubble num">S3: 10 reps</span>
+                    <span class="board-bubble num">S4: 9 reps</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="board-tile-card">
+                <div class="board-tile-thumb">
+                  <img src="img/rdl.webp" alt="RDL" onerror="this.src='/sport/img/rdl.webp'">
+                  <div class="board-tile-thumb-overlay sport-title">Soulevé de terre roumain</div>
+                </div>
+                <div class="board-tile-body">
+                  <div class="board-tile-weight-tag">
+                    <span style="font-size: 12px; color: var(--ink-muted);">Barre chargée</span>
+                    <b class="num" style="font-size: 16px; color: var(--accent-color);">85.0 kg</b>
+                  </div>
+                  <div class="board-tile-bubbles">
+                    <span class="board-bubble num">S1: 8 reps</span>
+                    <span class="board-bubble num">S2: 8 reps</span>
+                    <span class="board-bubble num">S3: 8 reps</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="board-tile-card">
+                <div class="board-tile-thumb">
+                  <img src="img/core-grip.webp" alt="Abdos" onerror="this.src='/sport/img/core-grip.webp'">
+                  <div class="board-tile-thumb-overlay sport-title">Abdominaux et poigne</div>
+                </div>
+                <div class="board-tile-body">
+                  <div class="board-tile-weight-tag">
+                    <span style="font-size: 12px; color: var(--ink-muted);">Poulie haute</span>
+                    <b class="num" style="font-size: 16px; color: var(--accent-color);">25.0 kg</b>
+                  </div>
+                  <div class="board-tile-bubbles">
+                    <span class="board-bubble num">S1: 15 reps</span>
+                    <span class="board-bubble num">S2: 15 reps</span>
+                    <span class="board-bubble num">S3: 15 reps</span>
+                    <span class="board-bubble num">S4: 15 reps</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       VUE 4 : DESIGN C (LIQUID GLASS COCKPIT & MONITEUR HAUTE PRECISION)
+       ==================================================================== -->
+  <section class="view-section" id="view-designC">
+    <div class="design-banner">
+      <div><b>Design C : Liquid Glass Cockpit & Moniteur Haute Précision</b> : esthétique verre dépoli Liquid Glass, titrage GT Sectra Display Italic, télémétrie de charges et badges néo-techniques.</div>
+      <span class="capsule-badge-pill">Fonte : GT Sectra Display</span>
+    </div>
+
+    <div class="sport-mockup-frame">
+      <div class="sport-mockup-top">
+        <div class="sport-mockup-title-area">
+          <h2 class="sport-mockup-main-title sport-title">Sport</h2>
+          <span class="sport-mockup-date">Friday · <span class="num">23 October 2026</span></span>
+        </div>
+        <div class="sport-mockup-toggles">
+          <button type="button" class="sport-mockup-toggle-btn" onclick="switchMainTab('sportReplica')">Séance</button>
+          <button type="button" class="sport-mockup-toggle-btn is-active">Last Sessions</button>
+          <button type="button" class="sport-mockup-toggle-btn">Objectif visuel</button>
+        </div>
+      </div>
+
+      <div class="sport-mockup-body">
+        <div class="cockpit-view">
+          <!-- Bannière de télémétrie -->
+          <div class="cockpit-hero-banner">
+            <div>
+              <h3 class="sport-title" style="font-size: 26px;">Télémétrie des Dernières Séances</h3>
+              <p style="color: var(--ink-secondary); font-size: 13px;">Dernière séance consignée le <span class="num">21 October 2026</span>. Règle d'or : régularité &gt; intensité.</p>
+            </div>
+            <div class="cockpit-hero-stats">
+              <div class="cockpit-stat-item">
+                <span class="cockpit-stat-val num">4</span>
+                <span class="cockpit-stat-label">Séances cette semaine</span>
+              </div>
+              <div class="cockpit-stat-item">
+                <span class="cockpit-stat-val num">1 840 kg</span>
+                <span class="cockpit-stat-label">Tonnage dernière séance</span>
+              </div>
+              <div class="cockpit-stat-item">
+                <span class="cockpit-stat-val num">+17.5 kg</span>
+                <span class="cockpit-stat-label">Max lest traction</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Deux capsules de séances récentes côte à côte -->
+          <div class="cockpit-cards-grid">
+            <!-- Capsule 1 : Séance B -->
+            <div class="cockpit-glass-card">
+              <div class="cockpit-card-head">
+                <div>
+                  <h3 class="sport-title" style="font-size: 20px;">Séance B · Dos, Biceps & Gainage</h3>
+                  <small class="num" style="color: var(--ink-muted);">Mercredi 21 October 2026 · 18:45</small>
+                </div>
+                <span class="capsule-badge-pill is-highlight">Dernière en date</span>
+              </div>
+
+              <div class="cockpit-row">
+                <div class="cockpit-left">
+                  <span class="cockpit-dot" style="background: #4295f7;"></span>
+                  <span class="sport-title" style="font-size: 15px;">Tractions lestées (pronation)</span>
+                </div>
+                <div class="cockpit-right">
+                  <span class="cockpit-pill-sets num">4 × 8</span>
+                  <span class="cockpit-pill-load num">+17.5 kg</span>
+                </div>
+              </div>
+
+              <div class="cockpit-row">
+                <div class="cockpit-left">
+                  <span class="cockpit-dot" style="background: #ffd60a;"></span>
+                  <span class="sport-title" style="font-size: 15px;">Curl biceps debout</span>
+                </div>
+                <div class="cockpit-right">
+                  <span class="cockpit-pill-sets num">4 × 10</span>
+                  <span class="cockpit-pill-load num">16.0 kg</span>
+                </div>
+              </div>
+
+              <div class="cockpit-row">
+                <div class="cockpit-left">
+                  <span class="cockpit-dot" style="background: #30d158;"></span>
+                  <span class="sport-title" style="font-size: 15px;">Soulevé de terre roumain</span>
+                </div>
+                <div class="cockpit-right">
+                  <span class="cockpit-pill-sets num">3 × 8</span>
+                  <span class="cockpit-pill-load num">85.0 kg</span>
+                </div>
+              </div>
+
+              <div class="cockpit-row">
+                <div class="cockpit-left">
+                  <span class="cockpit-dot" style="background: #bf5af2;"></span>
+                  <span class="sport-title" style="font-size: 15px;">Abdominaux et poigne</span>
+                </div>
+                <div class="cockpit-right">
+                  <span class="cockpit-pill-sets num">4 × 15</span>
+                  <span class="cockpit-pill-load num">25.0 kg</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Capsule 2 : Séance A -->
+            <div class="cockpit-glass-card">
+              <div class="cockpit-card-head">
+                <div>
+                  <h3 class="sport-title" style="font-size: 20px;">Séance A · Pectoraux & Épaules</h3>
+                  <small class="num" style="color: var(--ink-muted);">Lundi 19 October 2026 · 19:10</small>
+                </div>
+                <span class="capsule-badge-pill">J - 2</span>
+              </div>
+
+              <div class="cockpit-row">
+                <div class="cockpit-left">
+                  <span class="cockpit-dot" style="background: #ff453a;"></span>
+                  <span class="sport-title" style="font-size: 15px;">Développé incliné haltères</span>
+                </div>
+                <div class="cockpit-right">
+                  <span class="cockpit-pill-sets num">4 × 8</span>
+                  <span class="cockpit-pill-load num">28.0 kg</span>
+                </div>
+              </div>
+
+              <div class="cockpit-row">
+                <div class="cockpit-left">
+                  <span class="cockpit-dot" style="background: #ff453a;"></span>
+                  <span class="sport-title" style="font-size: 15px;">Dips lestés aux barres</span>
+                </div>
+                <div class="cockpit-right">
+                  <span class="cockpit-pill-sets num">4 × 8</span>
+                  <span class="cockpit-pill-load num">+20.0 kg</span>
+                </div>
+              </div>
+
+              <div class="cockpit-row">
+                <div class="cockpit-left">
+                  <span class="cockpit-dot" style="background: #ff9f0a;"></span>
+                  <span class="sport-title" style="font-size: 15px;">Développé militaire OHP</span>
+                </div>
+                <div class="cockpit-right">
+                  <span class="cockpit-pill-sets num">3 × 8</span>
+                  <span class="cockpit-pill-load num">45.0 kg</span>
+                </div>
+              </div>
+
+              <div class="cockpit-row">
+                <div class="cockpit-left">
+                  <span class="cockpit-dot" style="background: #ff9f0a;"></span>
+                  <span class="sport-title" style="font-size: 15px;">Élévations latérales</span>
+                </div>
+                <div class="cockpit-right">
+                  <span class="cockpit-pill-sets num">3 × 12</span>
+                  <span class="cockpit-pill-load num">8.0 kg</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       VUE 5 : SIMULATION COMPLETE DE LA VUE SPORT AVEC GT SECTRA SUR TOUS LES TITRES
+       ==================================================================== -->
+  <section class="view-section" id="view-sportReplica">
+    <div class="design-banner">
+      <div><b>Simulation Vue Sport avec GT Sectra sur tous les titres</b> : telle qu'affichée sur la capture de Matthieu, avec GT Sectra en italique sur le grand titre « Sport », sur tous les noms d'exercices et sur le panneau Plan.</div>
+      <span class="capsule-badge-pill">Fonte interactive paramétrable</span>
+    </div>
+
+    <div class="sport-mockup-frame">
+      <div class="sport-mockup-top">
+        <div class="sport-mockup-title-area">
+          <h2 class="sport-mockup-main-title sport-title">Sport</h2>
+          <span class="sport-mockup-date">Friday · <span class="num">23 October 2026</span> ⌄</span>
+        </div>
+        <div class="sport-mockup-toggles">
+          <button type="button" class="sport-mockup-toggle-btn is-active">Séance</button>
+          <button type="button" class="sport-mockup-toggle-btn" onclick="switchMainTab('designA')">Last Sessions</button>
+          <button type="button" class="sport-mockup-toggle-btn">Objectif visuel</button>
+        </div>
+      </div>
+
+      <div class="sport-mockup-body" style="display: grid; grid-template-columns: 1.6fr 0.8fr; gap: 24px;">
+        <!-- Grille principale des exercices -->
+        <div>
+          <div style="margin-bottom: 16px;">
+            <input type="text" placeholder="Chercher dans toute la base d'exercices…" style="width: 100%; height: 38px; padding: 0 14px; border-radius: 10px; border: 1px solid var(--border); background: rgba(128, 128, 128, 0.08); color: var(--ink); outline: none;">
+          </div>
+          <div style="display: flex; gap: 6px; margin-bottom: 20px; flex-wrap: wrap;">
+            <span class="capsule-badge-pill" style="background: var(--accent-color); color: #fff;">Tous</span>
+            <span class="capsule-badge-pill">Programme</span>
+            <span class="capsule-badge-pill">Épaules</span>
+            <span class="capsule-badge-pill">Pectoraux</span>
+            <span class="capsule-badge-pill">Dos</span>
+            <span class="capsule-badge-pill">Bras</span>
+            <span class="capsule-badge-pill">Jambes</span>
+            <span class="capsule-badge-pill">Abdos</span>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 14px;">
+            <!-- Tuile 1 -->
+            <div class="board-tile-card">
+              <div class="board-tile-thumb">
+                <img src="img/weighted-pullup.webp" alt="Tractions" onerror="this.src='/sport/img/weighted-pullup.webp'">
+                <div class="board-tile-thumb-overlay sport-title">Tractions lestées (prise pronation)</div>
+              </div>
+            </div>
+            <!-- Tuile 2 -->
+            <div class="board-tile-card">
+              <div class="board-tile-thumb">
+                <img src="img/incline-db.webp" alt="Dvp Incline" onerror="this.src='/sport/img/incline-db.webp'">
+                <div class="board-tile-thumb-overlay sport-title">Développé incliné aux haltères</div>
+              </div>
+            </div>
+            <!-- Tuile 3 -->
+            <div class="board-tile-card">
+              <div class="board-tile-thumb">
+                <img src="img/front-squat.webp" alt="Front squat" onerror="this.src='/sport/img/front-squat.webp'">
+                <div class="board-tile-thumb-overlay sport-title">Front squat ou squat bulgare</div>
+              </div>
+            </div>
+            <!-- Tuile 4 -->
+            <div class="board-tile-card">
+              <div class="board-tile-thumb">
+                <img src="img/rdl.webp" alt="RDL" onerror="this.src='/sport/img/rdl.webp'">
+                <div class="board-tile-thumb-overlay sport-title">Soulevé de terre roumain</div>
+              </div>
+            </div>
+            <!-- Tuile 5 -->
+            <div class="board-tile-card">
+              <div class="board-tile-thumb">
+                <img src="img/ohp.webp" alt="OHP" onerror="this.src='/sport/img/ohp.webp'">
+                <div class="board-tile-thumb-overlay sport-title">Développé militaire debout</div>
+              </div>
+            </div>
+            <!-- Tuile 6 -->
+            <div class="board-tile-card">
+              <div class="board-tile-thumb">
+                <img src="img/dips.webp" alt="Dips" onerror="this.src='/sport/img/dips.webp'">
+                <div class="board-tile-thumb-overlay sport-title">Dips lestés aux parallèles</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panneau latéral Plan -->
+        <aside style="border-left: 1px solid var(--border); padding-left: 20px; display: flex; flex-direction: column; gap: 14px;">
+          <div>
+            <h3 class="sport-title" style="font-size: 18px;">Plan</h3>
+            <small class="num" style="color: var(--ink-muted);">Today · 23 October 2026</small>
+          </div>
+          <div style="background: rgba(128, 128, 128, 0.05); border: 1px dashed var(--border); border-radius: 12px; padding: 24px 16px; text-align: center; color: var(--ink-muted); font-size: 13px;">
+            Rien d'envoyé pour ce jour.<br>Chaque exercice ajouté apparaît ici, dans une seule carte de ton Plan.
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="zr-footer">
+  <div>Atelier de Design ZenRayProgress · Conforme aux doctrines de typographie du <span class="num">23 October 2026</span> (GT Sectra LCG Italic & Anthropic Serif Regular)</div>
+</footer>
+
+<script>
+// Gestion de la navigation entre onglets principaux
+function switchMainTab(viewId, btnEl) {
+  document.querySelectorAll('.view-section').forEach(el => el.classList.remove('is-visible'));
+  const target = document.getElementById('view-' + viewId);
+  if (target) target.classList.add('is-visible');
+
+  if (btnEl) {
+    document.querySelectorAll('.zr-nav-pill').forEach(el => el.classList.remove('is-active'));
+    btnEl.classList.add('is-active');
+  }
+}
+
+// Changement global de la fonte GT Sectra active
+function changeGlobalFont(fontFamilyName) {
+  document.documentElement.style.setProperty('--zr-police-titres-sport', "'" + fontFamilyName + "', serif");
+}
+
+// Bascule du thème Clair / Sombre
+function toggleTheme() {
+  const current = document.documentElement.getAttribute('data-theme');
+  const next = current === 'light' ? 'dark' : 'light';
+  document.documentElement.setAttribute('data-theme', next);
+}
+
+// Affichage du panneau HDA
+function toggleHda() {
+  document.getElementById('hdaPanel').classList.toggle('is-collapsed');
+}
+
+// Mise à jour des variables CSS via sliders
+function updateCssVar(varName, value, labelId) {
+  document.documentElement.style.setProperty(varName, value);
+  const el = document.getElementById(labelId);
+  if (el) el.textContent = parseInt(value, 10);
+}
+
+// Copie des réglages pour le prompt
+function copyHdaValues() {
+  const font = document.getElementById('fontPicker').value;
+  const radius = getComputedStyle(document.documentElement).getPropertyValue('--capsule-radius').trim();
+  const pad = getComputedStyle(document.documentElement).getPropertyValue('--capsule-pad').trim();
+  const titleSize = getComputedStyle(document.documentElement).getPropertyValue('--title-size').trim();
+  const summary = `Réglages Sport Last Sessions HDA (23 October 2026) :
+- Fonte active : ${font}
+- Rayon capsule : ${radius}
+- Padding : ${pad}
+- Taille titre : ${titleSize}`;
+  navigator.clipboard.writeText(summary).then(() => {
+    alert('Valeurs copiées dans le presse-papier !');
+  });
+}
+</script>
+</body>
+</html>

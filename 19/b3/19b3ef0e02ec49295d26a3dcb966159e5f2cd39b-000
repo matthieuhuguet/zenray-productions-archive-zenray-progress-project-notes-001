@@ -1,0 +1,18 @@
+{
+  "date": "23 October 2026",
+  "slug": "sport-last-sessions-gt-sectra",
+  "folder": "2026-10-23-sport-last-sessions-gt-sectra",
+  "version": 1,
+  "title": "Sport : Last Sessions avec charges et unites + banc d essai 3 fontes GT Sectra en italique (3 designs A B C)",
+  "module": "sport",
+  "assetsProject": "zenray-edit",
+  "project": "zenray-progress",
+  "status": "pending",
+  "atelier": "/Users/zenray/.claude/tmp/tmp-sport-last-sessions-designs",
+  "files": [
+    "index.html"
+  ],
+  "indexSha256": "9e193452f246fd0cda16e95dc9e82282d923ba0d1f9d30ce05a66f64b57c9564",
+  "filedAt": "2026-10-23T18:07:04.423Z",
+  "note": null
+}

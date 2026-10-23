@@ -1,0 +1,18 @@
+{
+  "date": "23 October 2026",
+  "slug": "sidebar-plan-first",
+  "folder": "2026-10-23-sidebar-plan-first",
+  "version": 1,
+  "title": "Barre latérale, Plan en tête, une seule famille, Tools en bas",
+  "module": "zenray-progress",
+  "assetsProject": "zenray-edit",
+  "project": "zenray-progress",
+  "status": "pending",
+  "atelier": "/Users/zenray/.claude/tmp/tmp-zenray-plan/sidebar-designs-23-October-2026",
+  "files": [
+    "index.html"
+  ],
+  "indexSha256": "0686620648384934a09237a611f2825a2d6ce928f69f7b911986a6a83d54ece3",
+  "filedAt": "2026-10-23T17:20:52.497Z",
+  "note": null
+}

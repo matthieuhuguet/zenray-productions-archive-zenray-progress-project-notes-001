@@ -3949,3 +3949,17 @@
 > Je ne peux pas confirmer une réparation : **l’outil interdit le contrôle de Chrome sur `chatgpt.com` et arrête la session**. Aucune modification n’est effectuée. (22 October 2026, 23:27:17 +0200)
 >
 > Ouvre ChatGPT en navigation privée avec **⌘⇧N** et indique si l’écran reste blanc. Ce résultat permettra de distinguer un problème du profil Chrome d’un problème plus général. (22 October 2026, 23:27:17 +0200)
+
+## 23 October 2026, 19:05:13 +0200 : Standing rule
+
+<!-- feedback-event:7a16c8d0d366a16cf3f303f2e6d5b4608e14fb6875a653581e0fbe2dc227056c (23 October 2026, 19:05:13 +0200) -->
+- Project: zenray-progress; kind: rule. (23 October 2026, 19:05:13 +0200)
+
+> 23 October 2026 : un déploiement Pages part d'un arbre qui CONTIENT origin/main (git merge-base --is-ancestor origin/main HEAD), sinon il efface en silence le travail des autres sessions ; le Focus du Plan a disparu de la production ainsi le 23 October 2026. (23 October 2026, 19:05:13 +0200)
+
+## 23 October 2026, 19:39:23 +0200 : Standing rule
+
+<!-- feedback-event:6d43ec1142115b700096f2704f64dd887cfa2dd9d77be8c0a0fcf7e2563b9881 (23 October 2026, 19:39:23 +0200) -->
+- Project: zenray-progress; kind: rule. (23 October 2026, 19:39:23 +0200)
+
+> 23 October 2026 : barre latérale = Plan puis Create dans une seule famille, sans marque ZenRay Progress, sans filets (de l'espace, jetons --zr-nav-zone-gap et --zr-nav-head-gap), titres de famille en GT Sectra LCG Regular ITALIQUE (validé), Tools en dernier après System. (23 October 2026, 19:39:23 +0200)

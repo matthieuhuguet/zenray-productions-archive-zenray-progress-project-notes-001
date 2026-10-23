@@ -1,0 +1,18 @@
+{
+  "date": "23 October 2026",
+  "slug": "sidebar-v2-italic",
+  "folder": "2026-10-23-sidebar-v2-italic",
+  "version": 1,
+  "title": "Barre latérale V2 : GT Sectra droit contre italique",
+  "module": "zenray-progress",
+  "assetsProject": "zenray-edit",
+  "project": "zenray-progress",
+  "status": "pending",
+  "atelier": "/Users/zenray/.claude/tmp/tmp-zenray-plan/sidebar-designs-v2-italic-23-October-2026",
+  "files": [
+    "index.html"
+  ],
+  "indexSha256": "2e8a0ab545192119dab6daa05f4743f93d122bba40922fc3bb6aac82a1179663",
+  "filedAt": "2026-10-23T17:33:35.100Z",
+  "note": null
+}

@@ -1,0 +1,18 @@
+{
+  "date": "23 October 2026",
+  "slug": "sport-mockup-last-sessions-simplified",
+  "folder": "2026-10-23-sport-mockup-last-sessions-simplified",
+  "version": 1,
+  "title": "Sport : Maquette design actuel avec titres GT Sectra normal x2 et Last Sessions Design B epure",
+  "module": "sport",
+  "assetsProject": "zenray-edit",
+  "project": "zenray-progress",
+  "status": "pending",
+  "atelier": "/Users/zenray/.claude/tmp/tmp-sport-last-sessions-designs",
+  "files": [
+    "index.html"
+  ],
+  "indexSha256": "7e5447f39fdda7a0a72dfd61a4d65e356813a64c83d66aac547df0c782c79bac",
+  "filedAt": "2026-10-23T18:56:59.318Z",
+  "note": null
+}

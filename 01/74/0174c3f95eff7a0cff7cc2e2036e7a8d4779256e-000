@@ -1,0 +1,18 @@
+{
+  "date": "23 October 2026",
+  "slug": "sidebar-v2-space",
+  "folder": "2026-10-23-sidebar-v2-space",
+  "version": 1,
+  "title": "Barre latérale V2 : espace sans filets, GT Sectra, minimum",
+  "module": "zenray-progress",
+  "assetsProject": "zenray-edit",
+  "project": "zenray-progress",
+  "status": "pending",
+  "atelier": "/Users/zenray/.claude/tmp/tmp-zenray-plan/sidebar-designs-v2-23-October-2026",
+  "files": [
+    "index.html"
+  ],
+  "indexSha256": "287e0c27db968d78b4b693918ac400ca0b1716c9810ef18ba6661f0143d9b80f",
+  "filedAt": "2026-10-23T17:30:25.792Z",
+  "note": null
+}
