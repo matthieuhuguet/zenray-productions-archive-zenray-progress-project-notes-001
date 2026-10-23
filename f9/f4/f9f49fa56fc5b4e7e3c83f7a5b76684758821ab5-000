@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-10-23T15:05:30.803Z",
+ "scannedAt": "2026-10-23T15:12:31.329Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -479,8 +479,8 @@
    "provider": "claude",
    "sessionId": "7e127e64-f68b-4058-b7bb-62c6b86d72ba",
    "title": "zenray meeting",
-   "updatedAt": "2026-10-23T15:05:10.313Z",
-   "bytes": 38390,
+   "updatedAt": "2026-10-23T15:12:31.099Z",
+   "bytes": 5997787,
    "boundProject": "zenray-plan"
   },
   {
