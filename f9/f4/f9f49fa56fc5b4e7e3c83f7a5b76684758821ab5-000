@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-10-23T23:23:31.577Z",
+ "scannedAt": "2026-10-23T23:35:32.044Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -375,6 +375,22 @@
    "projectId": "zenray-progress",
    "lines": 12,
    "work": 0,
+   "prompts": 1,
+   "first": "2026-10-23T11:00:00.778Z",
+   "last": "2026-10-23T23:34:33.502Z",
+   "strength": "weak",
+   "conversationId": "claude:11264bd4-8a19-4e76-b9be-dc012304e419",
+   "provider": "claude",
+   "sessionId": "11264bd4-8a19-4e76-b9be-dc012304e419",
+   "title": "zenray knowledge",
+   "updatedAt": "2026-10-23T23:34:54.386Z",
+   "bytes": 38503,
+   "boundProject": "zenray-knowledge-23-october-2026"
+  },
+  {
+   "projectId": "zenray-progress",
+   "lines": 12,
+   "work": 0,
    "prompts": 0,
    "first": "2026-10-11T14:09:59.235Z",
    "last": "2026-10-11T19:04:58.673Z",
@@ -386,22 +402,6 @@
    "updatedAt": "2026-10-11T21:28:15.851Z",
    "bytes": 21083,
    "boundProject": "zenray-height"
-  },
-  {
-   "projectId": "zenray-progress",
-   "lines": 11,
-   "work": 0,
-   "prompts": 1,
-   "first": "2026-10-23T11:00:00.778Z",
-   "last": "2026-10-23T22:21:52.369Z",
-   "strength": "weak",
-   "conversationId": "claude:11264bd4-8a19-4e76-b9be-dc012304e419",
-   "provider": "claude",
-   "sessionId": "11264bd4-8a19-4e76-b9be-dc012304e419",
-   "title": "zenray knowledge",
-   "updatedAt": "2026-10-23T23:23:11.045Z",
-   "bytes": 38274,
-   "boundProject": "zenray-knowledge-23-october-2026"
   },
   {
    "projectId": "zenray-progress",
