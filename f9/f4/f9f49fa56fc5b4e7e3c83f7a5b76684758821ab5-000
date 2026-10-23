@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-10-23T13:09:31.591Z",
+ "scannedAt": "2026-10-23T14:19:30.545Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -304,7 +304,7 @@
    "sessionId": "a3f20b1d-27ed-48e1-a0d1-5fe182c0e423",
    "title": "UV Methodology (original /mhzenray)",
    "updatedAt": "2026-10-20T19:18:11.914Z",
-   "bytes": 45190,
+   "bytes": 45229,
    "boundProject": null
   },
   {
@@ -559,8 +559,8 @@
    "provider": "claude",
    "sessionId": "7e127e64-f68b-4058-b7bb-62c6b86d72ba",
    "title": "zenray meeting",
-   "updatedAt": "2026-10-23T12:27:55.097Z",
-   "bytes": 38206,
+   "updatedAt": "2026-10-23T14:19:26.050Z",
+   "bytes": 2219131,
    "boundProject": null
   },
   {
