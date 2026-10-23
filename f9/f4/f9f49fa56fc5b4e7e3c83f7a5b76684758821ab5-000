@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-10-23T12:02:29.348Z",
+ "scannedAt": "2026-10-23T12:17:29.414Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -239,8 +239,8 @@
    "provider": "claude",
    "sessionId": "beb9938e-4434-4925-8d13-137bb7940fc0",
    "title": "zenray uv",
-   "updatedAt": "2026-10-23T12:01:48.860Z",
-   "bytes": 416427885,
+   "updatedAt": "2026-10-23T12:12:49.244Z",
+   "bytes": 417935272,
    "boundProject": "louisiana-bayou"
   },
   {
@@ -463,8 +463,8 @@
    "provider": "claude",
    "sessionId": "11264bd4-8a19-4e76-b9be-dc012304e419",
    "title": "zenray knowledge",
-   "updatedAt": "2026-10-23T11:57:01.849Z",
-   "bytes": 38419,
+   "updatedAt": "2026-10-23T12:17:05.310Z",
+   "bytes": 25712444,
    "boundProject": null
   },
   {
