@@ -1,11 +1,11 @@
 <!doctype html>
-<!-- 23 October 2026: Sport - Maquette fidele au design reel avec titres GT Sectra Normal x2 et onglet Last Sessions epure (Design B) -->
-<!-- FR : Vue Sport fidele au design actuel, titres x2 en GT Sectra Normal Italic, et Last Sessions epure au maximum avec les images et charges. -->
+<!-- 23 October 2026: Sport - Maquette fidele, capsule Liquid Glass arrondie a 999 avec poids seul, et sliders de reglage GT Sectra en direct -->
+<!-- FR : Vue Sport fidele avec capsule poids seule arrondie a 999 en haut a droite des tuiles, effet Liquid Glass discret, et sliders HDA pour ajuster la taille de police GT Sectra. -->
 <html lang="fr">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ZenRayProgress : Sport · Last Sessions (Design B Épuré) & Titres x2 (23 October 2026)</title>
+<title>ZenRayProgress : Sport · Last Sessions (Liquid Glass 999 & Sliders) · 23 October 2026</title>
 <style>
 /* 23 October 2026 : Déclaration des fontes woff2 */
 @font-face {
@@ -38,15 +38,17 @@
   --zr-style-nombres: normal;
   --zr-poids-nombres: 400;
 
-  /* HDA Parameters : taille de titre x2 par défaut (26px vs 13px ancien) */
-  --ex-title-size: 26px;
-  --ex-title-leading: 1.15;
-  --main-title-size: 46px;
+  /* HDA Parameters réglables par sliders */
+  --ex-title-size: 18px;
+  --ex-title-leading: 1.18;
+  --badge-font-size: 12.5px;
+  --glass-blur: 4px;
+  --glass-opacity: 0.06;
+  --badge-shadow-blur: 2.5px;
+  --badge-shadow-opacity: 0.9;
+  --main-title-size: 44px;
   --capsule-radius: 14px;
   --accent-color: #4295f7;
-  --accent-soft: rgba(66, 149, 247, 0.16);
-  --green-badge: #34c759;
-  --green-soft: rgba(52, 199, 89, 0.16);
 
   /* Thème Sombre ZenRayProgress (défaut de la capture écran) */
   --bg: #1c1c1e;
@@ -99,39 +101,61 @@ body {
   letter-spacing: -0.01em;
 }
 
-/* Barre de contrôles HDA discrète au sommet */
-.hda-toolbar {
+/* ==========================================================================
+   BARRE DE SLIDERS HDA DÉDIÉE (Paramétrique Loi HDA Priorité 0)
+   ========================================================================== */
+.hda-control-panel {
   background: var(--bg-deep);
   border-bottom: 1px solid var(--border);
-  padding: 8px 20px;
+  padding: 10px 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
+  gap: 20px;
   font-size: 12px;
   color: var(--ink-secondary);
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
 }
-.hda-item {
+.hda-group {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+.hda-slider-item {
   display: flex;
   align-items: center;
   gap: 8px;
 }
-.hda-item input[type="range"] {
+.hda-slider-item label {
+  white-space: nowrap;
+}
+.hda-slider-item label b {
+  color: var(--ink);
+}
+.hda-slider-item input[type="range"] {
   accent-color: var(--accent-color);
   cursor: pointer;
-  width: 140px;
+  width: 110px;
 }
 .hda-btn {
   border: 1px solid var(--border);
   background: var(--surface);
   color: var(--ink);
   font-size: 11.5px;
-  padding: 4px 10px;
+  padding: 5px 12px;
   border-radius: 6px;
   cursor: pointer;
+  transition: all 0.12s ease;
+  white-space: nowrap;
 }
 .hda-btn:hover {
   background: var(--surface-hover);
+  border-color: var(--ink-secondary);
 }
 
 /* Layout global avec Sidebar ZenRayProgress */
@@ -139,7 +163,6 @@ body {
   display: grid;
   grid-template-columns: 190px 1fr;
   flex: 1;
-  min-height: calc(100vh - 42px);
 }
 @media (max-width: 900px) {
   .zr-app-layout {
@@ -278,7 +301,7 @@ body {
   fill: currentColor;
 }
 
-/* Corps principal : Grille d'exercices à gauche (1.6fr), Plan à droite (0.8fr) */
+/* Corps principal : Grille d'exercices à gauche (1.7fr), Plan à droite (0.8fr) */
 .sport-body {
   display: grid;
   grid-template-columns: 1.7fr 0.8fr;
@@ -338,14 +361,14 @@ body {
   border-color: transparent;
 }
 
-/* Grille de tuiles d'exercices (images statues) */
+/* Grille de tuiles d'exercices */
 .sport-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   gap: 16px;
 }
 
-/* Tuile exercice avec titre x2 en GT Sectra Normal Italic */
+/* Tuile exercice */
 .sport-tile {
   position: relative;
   aspect-ratio: 1 / 1.08;
@@ -373,13 +396,13 @@ body {
   background: #0c0c0c;
 }
 
-/* Titre d'exercice x2 (au moins doublé par rapport à l'original) */
+/* Titre d'exercice en GT Sectra Normal Italic avec taille réglable par slider */
 .sport-tile-caption {
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 34px 14px 12px;
+  padding: 30px 14px 12px;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.88) 0%, rgba(0, 0, 0, 0.5) 60%, transparent 100%);
   color: #ffffff;
   font-family: var(--zr-police-titres-sport);
@@ -389,51 +412,47 @@ body {
   line-height: var(--ex-title-leading);
   letter-spacing: -0.01em;
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+  pointer-events: none;
 }
 
 /* ==========================================================================
-   MODE LAST SESSIONS : DESIGN B ÉPURÉ AU MAXIMUM AVEC IMAGES ET CHARGES
+   CAPSULE LIQUID GLASS DISCRÈTE ARRONDIE À 999 AVEC LE POIDS SEUL
    ========================================================================== */
-.last-session-badge {
+.zrs-glass-badge {
   position: absolute;
   top: 10px;
-  left: 10px;
   right: 10px;
-  background: rgba(18, 18, 20, 0.82);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  border-radius: 9px;
-  padding: 6px 10px;
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
-  z-index: 2;
-}
-.last-session-formula {
-  font-size: 11.5px;
-  color: rgba(255, 255, 255, 0.72);
-}
-.last-session-weight {
-  font-size: 14.5px;
-  font-weight: 500;
-  color: #4295f7;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, var(--glass-opacity));
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border: 0.5px solid rgba(255, 255, 255, calc(var(--glass-opacity) * 1.8 + 0.12));
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  color: #ffffff;
+  font-family: var(--zr-police-nombres);
+  font-style: normal;
+  font-weight: 400;
+  font-size: var(--badge-font-size);
+  line-height: 1;
   display: inline-flex;
   align-items: baseline;
   gap: 2px;
+  letter-spacing: 0.02em;
+  z-index: 5;
+  pointer-events: none;
+  /* 23 October 2026 : Léger drop shadow sur chiffres et lettres sans aucun stroke */
+  text-shadow: 0 1px var(--badge-shadow-blur, 2.5px) rgba(0, 0, 0, var(--badge-shadow-opacity, 0.9)),
+               0 0.5px 1px rgba(0, 0, 0, 0.95);
+  transition: all 0.15s ease;
 }
-.last-session-tag {
-  position: absolute;
-  top: 48px;
-  left: 10px;
-  background: rgba(52, 199, 89, 0.2);
-  border: 1px solid rgba(52, 199, 89, 0.35);
-  color: #34c759;
-  font-size: 10.5px;
-  padding: 2px 6px;
-  border-radius: 5px;
-  backdrop-filter: blur(10px);
+.zrs-glass-badge .badge-unit {
+  font-size: 0.82em;
+  opacity: 0.95;
+  color: #ffffff;
+  font-family: var(--zr-police-sans);
+  font-weight: 400;
+  text-shadow: inherit;
 }
 
 /* Zone droite : Panneau Plan */
@@ -470,7 +489,7 @@ body {
   line-height: 1.5;
 }
 
-/* Capsule de la dernière séance (Mode Last Sessions dans la colonne Plan) */
+/* Capsule de la dernière séance (Mode Last Sessions validé par Matthieu) */
 .plan-session-capsule {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -545,41 +564,40 @@ body {
 .plan-session-repeat-btn:hover {
   opacity: 0.9;
 }
-
-/* Bannière d'aide informative */
-.view-notice {
-  background: rgba(66, 149, 247, 0.12);
-  border: 1px solid rgba(66, 149, 247, 0.28);
-  border-radius: 10px;
-  padding: 10px 16px;
-  font-size: 12.5px;
-  color: var(--ink);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.view-notice b {
-  color: var(--accent-color);
-}
 </style>
 </head>
 <body>
 
-<!-- Barre d'outils HDA paramétrique (Loi HDA Priorité 0) -->
-<div class="hda-toolbar">
-  <div class="hda-item">
-    <b>ZenRay Sport HDA</b>
-    <span>· Fonte titres : GT Sectra Normal Regular Italic (400)</span>
+<!-- Barre de Sliders HDA directe (répond à la demande : donne-moi des sliders) -->
+<header class="hda-control-panel">
+  <div class="hda-group">
+    <div class="hda-slider-item">
+      <label>Taille police titres (GT Sectra) : <b><span id="labelTitleSize" class="num">18</span>px</b></label>
+      <input type="range" min="13" max="28" value="18" step="1" oninput="updateParam('--ex-title-size', this.value + 'px', 'labelTitleSize', this.value)">
+    </div>
+    <div class="hda-slider-item">
+      <label>Taille police poids : <b><span id="labelBadgeSize" class="num">12.5</span>px</b></label>
+      <input type="range" min="10" max="16" value="12.5" step="0.5" oninput="updateParam('--badge-font-size', this.value + 'px', 'labelBadgeSize', this.value)">
+    </div>
+    <div class="hda-slider-item">
+      <label>Flou verre (Liquid Glass) : <b><span id="labelBlur" class="num">4</span>px</b></label>
+      <input type="range" min="0" max="24" value="4" step="1" oninput="updateParam('--glass-blur', this.value + 'px', 'labelBlur', this.value)">
+    </div>
+    <div class="hda-slider-item">
+      <label>Opacité verre : <b><span id="labelOpacity" class="num">0.06</span></b></label>
+      <input type="range" min="0.01" max="0.30" value="0.06" step="0.01" oninput="updateParam('--glass-opacity', this.value, 'labelOpacity', this.value)">
+    </div>
+    <div class="hda-slider-item">
+      <label>Ombre texte (drop shadow) : <b><span id="labelShadow" class="num">2.5</span>px</b></label>
+      <input type="range" min="0" max="6" value="2.5" step="0.5" oninput="updateParam('--badge-shadow-blur', this.value + 'px', 'labelShadow', this.value)">
+    </div>
   </div>
-  <div class="hda-item">
-    <label>Taille titres exercices : <span id="valTitleSize" class="num">26</span>px (<span id="valRatio" class="num">2.0</span>x)</label>
-    <input type="range" min="14" max="36" value="26" oninput="updateTitleSize(this.value)">
-  </div>
-  <div class="hda-item">
-    <button type="button" class="hda-btn" onclick="toggleTheme()">◐ Thème Clair / Sombre</button>
+
+  <div class="hda-group">
+    <button type="button" class="hda-btn" onclick="toggleTheme()">◐ Thème</button>
     <button type="button" class="hda-btn" onclick="copyPromptValues()">Copier les valeurs pour le prompt</button>
   </div>
-</div>
+</header>
 
 <div class="zr-app-layout">
   <!-- Sidebar latérale fidèle -->
@@ -614,11 +632,6 @@ body {
 
   <!-- Zone de contenu Sport -->
   <main class="zr-sport-view">
-    <div class="view-notice">
-      <div><b>Phase de Mockup validée au 23 October 2026</b> : le design actuel est conservé à 100%, les titres d'exercices sont doublés en taille (26px) en GT Sectra Normal Italic, et l'onglet <b>Last Sessions</b> reprend le Design B épuré au maximum avec images et charges directes.</div>
-      <span style="font-size: 11.5px; color: var(--ink-muted);">Clique sur les onglets ci-dessous pour tester l'interaction</span>
-    </div>
-
     <!-- En-tête Sport -->
     <header class="sport-header">
       <div class="sport-title-group">
@@ -629,12 +642,12 @@ body {
         </div>
       </div>
 
-      <!-- Toggles avec nouvelle icône / onglet Last Sessions -->
+      <!-- Toggles : Séance | Last Sessions (actif) | Objectif visuel -->
       <div class="sport-toggles" role="tablist">
-        <button type="button" class="sport-toggle-btn is-active" id="btnTabSeance" onclick="switchSportTab('seance')">
+        <button type="button" class="sport-toggle-btn" id="btnTabSeance" onclick="switchSportTab('seance')">
           Séance
         </button>
-        <button type="button" class="sport-toggle-btn" id="btnTabLast" onclick="switchSportTab('lastSessions')">
+        <button type="button" class="sport-toggle-btn is-active" id="btnTabLast" onclick="switchSportTab('lastSessions')">
           <svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.2 3.2.8-1.3-4.5-2.7V7z"/></svg>
           Last Sessions
         </button>
@@ -663,27 +676,24 @@ body {
           <button type="button" class="sport-chip">Abdos</button>
         </div>
 
-        <!-- Grille des 11 exercices réels -->
+        <!-- Grille des 11 exercices avec capsule Liquid Glass arrondie à 999 en haut à droite -->
         <div class="sport-grid" id="exercisesGrid">
           
           <!-- Exercice 1 -->
           <div class="sport-tile" title="Tractions lestées">
             <img src="img/weighted-pullup.webp" alt="Tractions lestées" onerror="this.src='/sport/img/weighted-pullup.webp'">
-            <!-- Badge Last Sessions (masqué en mode Séance, affiché en mode Last Sessions) -->
-            <div class="last-session-badge is-last-mode" style="display: none;">
-              <span class="last-session-formula num">4 × 8</span>
-              <span class="last-session-weight"><span class="num">+17.5</span> kg</span>
+            <!-- Capsule poids seul en haut à droite, arrondie à 999 avec effet Liquid Glass discret -->
+            <div class="zrs-glass-badge is-last-mode">
+              <span>+17.5</span><span class="badge-unit">kg</span>
             </div>
-            <div class="last-session-tag is-last-mode" style="display: none;">+2.5 kg</div>
             <div class="sport-tile-caption">Tractions lestées (prise pronation)</div>
           </div>
 
           <!-- Exercice 2 -->
           <div class="sport-tile" title="Développé Incliné aux haltères">
             <img src="img/incline-db.webp" alt="Développé Incliné" onerror="this.src='/sport/img/incline-db.webp'">
-            <div class="last-session-badge is-last-mode" style="display: none;">
-              <span class="last-session-formula num">4 × 8</span>
-              <span class="last-session-weight"><span class="num">28.0</span> kg</span>
+            <div class="zrs-glass-badge is-last-mode">
+              <span>28</span><span class="badge-unit">kg</span>
             </div>
             <div class="sport-tile-caption">Développé incliné aux haltères</div>
           </div>
@@ -691,9 +701,8 @@ body {
           <!-- Exercice 3 -->
           <div class="sport-tile" title="Front squat ou squat bulgare">
             <img class="is-stack" src="img/front-squat.webp" alt="Front squat" onerror="this.src='/sport/img/front-squat.webp'">
-            <div class="last-session-badge is-last-mode" style="display: none;">
-              <span class="last-session-formula num">3 × 8</span>
-              <span class="last-session-weight"><span class="num">60.0</span> kg</span>
+            <div class="zrs-glass-badge is-last-mode">
+              <span>60</span><span class="badge-unit">kg</span>
             </div>
             <div class="sport-tile-caption">Front squat ou squat bulgare</div>
           </div>
@@ -701,20 +710,17 @@ body {
           <!-- Exercice 4 -->
           <div class="sport-tile" title="Soulevé de terre roumain">
             <img src="img/rdl.webp" alt="RDL" onerror="this.src='/sport/img/rdl.webp'">
-            <div class="last-session-badge is-last-mode" style="display: none;">
-              <span class="last-session-formula num">3 × 8</span>
-              <span class="last-session-weight"><span class="num">85.0</span> kg</span>
+            <div class="zrs-glass-badge is-last-mode">
+              <span>85</span><span class="badge-unit">kg</span>
             </div>
-            <div class="last-session-tag is-last-mode" style="display: none;">+5.0 kg</div>
             <div class="sport-tile-caption">Soulevé de terre roumain</div>
           </div>
 
           <!-- Exercice 5 -->
           <div class="sport-tile" title="Développé militaire debout (OHP)">
             <img src="img/ohp.webp" alt="OHP" onerror="this.src='/sport/img/ohp.webp'">
-            <div class="last-session-badge is-last-mode" style="display: none;">
-              <span class="last-session-formula num">3 × 8</span>
-              <span class="last-session-weight"><span class="num">45.0</span> kg</span>
+            <div class="zrs-glass-badge is-last-mode">
+              <span>45</span><span class="badge-unit">kg</span>
             </div>
             <div class="sport-tile-caption">Développé militaire debout (OHP)</div>
           </div>
@@ -722,9 +728,8 @@ body {
           <!-- Exercice 6 -->
           <div class="sport-tile" title="Dips lestés aux parallèles">
             <img src="img/dips.webp" alt="Dips" onerror="this.src='/sport/img/dips.webp'">
-            <div class="last-session-badge is-last-mode" style="display: none;">
-              <span class="last-session-formula num">4 × 8</span>
-              <span class="last-session-weight"><span class="num">+20.0</span> kg</span>
+            <div class="zrs-glass-badge is-last-mode">
+              <span>+20</span><span class="badge-unit">kg</span>
             </div>
             <div class="sport-tile-caption">Dips lestés aux parallèles</div>
           </div>
@@ -732,9 +737,8 @@ body {
           <!-- Exercice 7 -->
           <div class="sport-tile" title="Élévations latérales">
             <img class="is-stack" src="img/lat-raise.webp" alt="Élévations latérales" onerror="this.src='/sport/img/lat-raise.webp'">
-            <div class="last-session-badge is-last-mode" style="display: none;">
-              <span class="last-session-formula num">3 × 12</span>
-              <span class="last-session-weight"><span class="num">8.0</span> kg</span>
+            <div class="zrs-glass-badge is-last-mode">
+              <span>8</span><span class="badge-unit">kg</span>
             </div>
             <div class="sport-tile-caption">Élévations latérales</div>
           </div>
@@ -742,9 +746,8 @@ body {
           <!-- Exercice 8 -->
           <div class="sport-tile" title="Abdominaux et poigne">
             <img src="img/core-grip.webp" alt="Abdominaux" onerror="this.src='/sport/img/core-grip.webp'">
-            <div class="last-session-badge is-last-mode" style="display: none;">
-              <span class="last-session-formula num">4 × 15</span>
-              <span class="last-session-weight"><span class="num">25.0</span> kg</span>
+            <div class="zrs-glass-badge is-last-mode">
+              <span>25</span><span class="badge-unit">kg</span>
             </div>
             <div class="sport-tile-caption">Abdominaux et poigne</div>
           </div>
@@ -752,9 +755,8 @@ body {
           <!-- Exercice 9 -->
           <div class="sport-tile" title="Curl biceps debout">
             <img src="img/curl-biceps.webp" alt="Curl biceps" onerror="this.src='/sport/img/curl-biceps.webp'">
-            <div class="last-session-badge is-last-mode" style="display: none;">
-              <span class="last-session-formula num">4 × 10</span>
-              <span class="last-session-weight"><span class="num">16.0</span> kg</span>
+            <div class="zrs-glass-badge is-last-mode">
+              <span>16</span><span class="badge-unit">kg</span>
             </div>
             <div class="sport-tile-caption">Curl biceps debout</div>
           </div>
@@ -762,9 +764,8 @@ body {
           <!-- Exercice 10 -->
           <div class="sport-tile" title="Développé couché aux haltères">
             <img src="img/bench-db.webp" alt="Dvp couché" onerror="this.src='/sport/img/bench-db.webp'">
-            <div class="last-session-badge is-last-mode" style="display: none;">
-              <span class="last-session-formula num">4 × 8</span>
-              <span class="last-session-weight"><span class="num">30.0</span> kg</span>
+            <div class="zrs-glass-badge is-last-mode">
+              <span>30</span><span class="badge-unit">kg</span>
             </div>
             <div class="sport-tile-caption">Développé couché aux haltères</div>
           </div>
@@ -772,9 +773,8 @@ body {
           <!-- Exercice 11 -->
           <div class="sport-tile" title="Pompes surélevées">
             <img src="img/pushup-elev.webp" alt="Pompes" onerror="this.src='/sport/img/pushup-elev.webp'">
-            <div class="last-session-badge is-last-mode" style="display: none;">
-              <span class="last-session-formula num">4 × 15</span>
-              <span class="last-session-weight">PDC</span>
+            <div class="zrs-glass-badge is-last-mode">
+              <span>PDC</span>
             </div>
             <div class="sport-tile-caption">Pompes surélevées</div>
           </div>
@@ -782,21 +782,21 @@ body {
         </div>
       </div>
 
-      <!-- Colonne droite : Plan ou Capsule Last Sessions -->
+      <!-- Colonne droite : Plan ou Capsule Dernière Séance complète (validée par Matthieu) -->
       <aside class="sport-plan-col">
         <!-- En-tête Plan -->
         <div class="sport-plan-head">
-          <h3 class="sport-plan-title sport-title" id="planColTitle">Plan</h3>
-          <span class="sport-plan-date" id="planColSubtitle">Today · <span class="num">23 October 2026</span></span>
+          <h3 class="sport-plan-title sport-title" id="planColTitle">Dernière séance</h3>
+          <span class="sport-plan-date" id="planColSubtitle">Historique · <span class="num">21 October 2026</span></span>
         </div>
 
         <!-- Mode Séance : carte Plan du jour vide -->
-        <div class="plan-empty-card" id="planSeanceView">
+        <div class="plan-empty-card" id="planSeanceView" style="display: none;">
           Rien d'envoyé pour ce jour.<br>Chaque exercice ajouté apparaît ici, dans une seule carte de ton Plan.
         </div>
 
-        <!-- Mode Last Sessions : Capsule récapitulative complète épurée (Design B simplifié) -->
-        <div class="plan-session-capsule" id="planLastSessionsView" style="display: none;">
+        <!-- Mode Last Sessions : Capsule récapitulative complète (validée) -->
+        <div class="plan-session-capsule" id="planLastSessionsView">
           <div class="plan-session-capsule-head">
             <div>
               <b class="plan-session-capsule-name sport-title">Séance B · Dos & Biceps</b>
@@ -840,13 +840,20 @@ body {
 </div>
 
 <script>
+// Mise à jour réactive des variables CSS en direct par les sliders
+function updateParam(cssVar, cssVal, labelId, rawVal) {
+  document.documentElement.style.setProperty(cssVar, cssVal);
+  const el = document.getElementById(labelId);
+  if (el) el.textContent = rawVal;
+}
+
 // Bascule interactive entre onglets Séance / Last Sessions / Objectif visuel
 function switchSportTab(tabName) {
   const btnSeance = document.getElementById('btnTabSeance');
   const btnLast = document.getElementById('btnTabLast');
   const btnGoal = document.getElementById('btnTabGoal');
 
-  const lastBadges = document.querySelectorAll('.is-last-mode');
+  const lastBadges = document.querySelectorAll('.zrs-glass-badge');
   const planSeanceView = document.getElementById('planSeanceView');
   const planLastSessionsView = document.getElementById('planLastSessionsView');
   const planColTitle = document.getElementById('planColTitle');
@@ -865,7 +872,7 @@ function switchSportTab(tabName) {
     planColSubtitle.innerHTML = 'Today · <span class="num">23 October 2026</span>';
   } else if (tabName === 'lastSessions') {
     btnLast.classList.add('is-active');
-    lastBadges.forEach(el => el.style.display = 'flex');
+    lastBadges.forEach(el => el.style.display = 'inline-flex');
     planSeanceView.style.display = 'none';
     planLastSessionsView.style.display = 'flex';
     planColTitle.textContent = 'Dernière séance';
@@ -874,14 +881,6 @@ function switchSportTab(tabName) {
     btnGoal.classList.add('is-active');
     alert('Onglet Objectif visuel sélectionné.');
   }
-}
-
-// Mise à jour de la taille des titres en direct
-function updateTitleSize(val) {
-  document.documentElement.style.setProperty('--ex-title-size', val + 'px');
-  document.getElementById('valTitleSize').textContent = val;
-  const ratio = (val / 13).toFixed(1);
-  document.getElementById('valRatio').textContent = ratio;
 }
 
 // Bascule du thème clair / sombre
@@ -893,12 +892,19 @@ function toggleTheme() {
 
 // Copie des réglages HDA pour le prompt
 function copyPromptValues() {
-  const size = getComputedStyle(document.documentElement).getPropertyValue('--ex-title-size').trim();
-  const summary = `Réglages Sport (23 October 2026) :
+  const titleSize = getComputedStyle(document.documentElement).getPropertyValue('--ex-title-size').trim();
+  const badgeSize = getComputedStyle(document.documentElement).getPropertyValue('--badge-font-size').trim();
+  const blurVal = getComputedStyle(document.documentElement).getPropertyValue('--glass-blur').trim();
+  const opacityVal = getComputedStyle(document.documentElement).getPropertyValue('--glass-opacity').trim();
+  const shadowVal = getComputedStyle(document.documentElement).getPropertyValue('--badge-shadow-blur').trim();
+  const summary = `Réglages Sport HDA validés (23 October 2026) :
 - Fonte titres : GT Sectra Normal Regular Italic 400
-- Taille titres exercices : ${size} (x2 par rapport à l'original)
-- Onglet actif : Last Sessions (Design B épuré au maximum)
-- Poids et unités : affichage direct en capsule sur chaque tuile`;
+- Taille titres exercices : ${titleSize}
+- Taille police badge poids : ${badgeSize}
+- Flou Liquid Glass : ${blurVal}
+- Opacité Liquid Glass : ${opacityVal}
+- Drop shadow texte badge : ${shadowVal}
+- Capsule : arrondie à 999 en haut à droite avec poids seul et drop shadow sans stroke`;
   navigator.clipboard.writeText(summary).then(() => {
     alert('Valeurs copiées dans le presse-papier !');
   });

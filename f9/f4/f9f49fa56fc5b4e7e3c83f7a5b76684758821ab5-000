@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-10-23T19:12:35.174Z",
+ "scannedAt": "2026-10-23T19:27:28.609Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -111,8 +111,8 @@
    "provider": "claude",
    "sessionId": "d2f26016-25dd-4bcc-a6d8-122d50d3f383",
    "title": "zenray motion design",
-   "updatedAt": "2026-10-23T19:08:15.043Z",
-   "bytes": 22396,
+   "updatedAt": "2026-10-23T19:27:19.901Z",
+   "bytes": 22402,
    "boundProject": null
   },
   {
@@ -287,8 +287,8 @@
    "provider": "gemini",
    "sessionId": "fae4d3c5-109b-41fa-a03a-0a81a8c0b271",
    "title": "J'ai un bug critique sur mon application custom de picker color qui fait que parfois le clic fait que je peux plus cliquer sur la barre des ",
-   "updatedAt": "2026-10-23T19:11:28.894191+00:00",
-   "bytes": 18874368,
+   "updatedAt": "2026-10-23T19:25:24.046040+00:00",
+   "bytes": 54320848,
    "boundProject": null
   },
   {
@@ -447,8 +447,8 @@
    "provider": "claude",
    "sessionId": "11264bd4-8a19-4e76-b9be-dc012304e419",
    "title": "zenray knowledge",
-   "updatedAt": "2026-10-23T19:11:55.739Z",
-   "bytes": 38437,
+   "updatedAt": "2026-10-23T19:13:34.107Z",
+   "bytes": 38265,
    "boundProject": "zenray-knowledge-23-october-2026"
   },
   {
@@ -512,7 +512,7 @@
    "sessionId": "7e127e64-f68b-4058-b7bb-62c6b86d72ba",
    "title": "zenray sales",
    "updatedAt": "2026-10-23T19:08:40.874Z",
-   "bytes": 40321,
+   "bytes": 40322,
    "boundProject": "zenray-plan"
   },
   {
