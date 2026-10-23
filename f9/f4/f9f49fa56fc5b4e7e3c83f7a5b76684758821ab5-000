@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-10-23T12:17:29.414Z",
+ "scannedAt": "2026-10-23T12:30:29.409Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -239,8 +239,8 @@
    "provider": "claude",
    "sessionId": "beb9938e-4434-4925-8d13-137bb7940fc0",
    "title": "zenray uv",
-   "updatedAt": "2026-10-23T12:12:49.244Z",
-   "bytes": 417935272,
+   "updatedAt": "2026-10-23T12:22:17.298Z",
+   "bytes": 40593,
    "boundProject": "louisiana-bayou"
   },
   {
@@ -304,7 +304,7 @@
    "sessionId": "a3f20b1d-27ed-48e1-a0d1-5fe182c0e423",
    "title": "UV Methodology (original /mhzenray)",
    "updatedAt": "2026-10-20T19:18:11.914Z",
-   "bytes": 45445,
+   "bytes": 45453,
    "boundProject": null
   },
   {
@@ -453,18 +453,18 @@
   },
   {
    "projectId": "zenray-progress",
-   "lines": 4,
+   "lines": 5,
    "work": 0,
    "prompts": 1,
    "first": "2026-10-23T11:00:00.778Z",
-   "last": "2026-10-23T11:00:29.892Z",
+   "last": "2026-10-23T12:21:30.205Z",
    "strength": "weak",
    "conversationId": "claude:11264bd4-8a19-4e76-b9be-dc012304e419",
    "provider": "claude",
    "sessionId": "11264bd4-8a19-4e76-b9be-dc012304e419",
    "title": "zenray knowledge",
-   "updatedAt": "2026-10-23T12:17:05.310Z",
-   "bytes": 25712444,
+   "updatedAt": "2026-10-23T12:30:11.871Z",
+   "bytes": 27033505,
    "boundProject": null
   },
   {
@@ -545,6 +545,22 @@
    "title": "Mail transfert dossier auto-école",
    "updatedAt": "2026-10-02T14:38:28.892Z",
    "bytes": 23040,
+   "boundProject": null
+  },
+  {
+   "projectId": "zenray-progress",
+   "lines": 2,
+   "work": 0,
+   "prompts": 0,
+   "first": "2026-10-23T12:18:13.325Z",
+   "last": "2026-10-23T12:18:13.325Z",
+   "strength": "weak",
+   "conversationId": "claude:7e127e64-f68b-4058-b7bb-62c6b86d72ba",
+   "provider": "claude",
+   "sessionId": "7e127e64-f68b-4058-b7bb-62c6b86d72ba",
+   "title": "zenray meeting",
+   "updatedAt": "2026-10-23T12:27:55.097Z",
+   "bytes": 38206,
    "boundProject": null
   },
   {
