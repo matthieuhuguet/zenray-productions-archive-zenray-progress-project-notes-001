@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-10-23T20:01:28.927Z",
+ "scannedAt": "2026-10-23T20:29:27.265Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -111,8 +111,8 @@
    "provider": "claude",
    "sessionId": "d2f26016-25dd-4bcc-a6d8-122d50d3f383",
    "title": "zenray motion design",
-   "updatedAt": "2026-10-23T19:27:19.901Z",
-   "bytes": 22402,
+   "updatedAt": "2026-10-23T20:29:01.554Z",
+   "bytes": 22403,
    "boundProject": null
   },
   {
