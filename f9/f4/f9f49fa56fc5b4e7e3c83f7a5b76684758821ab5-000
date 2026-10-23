@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-10-23T19:27:28.609Z",
+ "scannedAt": "2026-10-23T19:32:28.851Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -288,7 +288,7 @@
    "sessionId": "fae4d3c5-109b-41fa-a03a-0a81a8c0b271",
    "title": "J'ai un bug critique sur mon application custom de picker color qui fait que parfois le clic fait que je peux plus cliquer sur la barre des ",
    "updatedAt": "2026-10-23T19:25:24.046040+00:00",
-   "bytes": 54320848,
+   "bytes": 57369784,
    "boundProject": null
   },
   {
