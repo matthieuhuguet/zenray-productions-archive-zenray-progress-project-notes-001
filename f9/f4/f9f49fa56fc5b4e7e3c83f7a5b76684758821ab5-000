@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-10-22T22:30:47.593Z",
+ "scannedAt": "2026-10-23T11:20:29.213Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -16,7 +16,7 @@
    "sessionId": "fc4febb5-8a38-4c74-8919-9a72175d0d7e",
    "title": "DRIVE evolution (fork)",
    "updatedAt": "2026-10-14T19:11:34.636Z",
-   "bytes": 21050,
+   "bytes": 21051,
    "boundProject": null
   },
   {
@@ -48,7 +48,7 @@
    "sessionId": "ff2c4a10-5024-4fbb-917a-0b2ac5886f52",
    "title": "Design Lecteur Video",
    "updatedAt": "2026-10-14T13:45:00.698Z",
-   "bytes": 21122,
+   "bytes": 21123,
    "boundProject": null
   },
   {
@@ -96,7 +96,7 @@
    "sessionId": "5be85b54-ff94-4c79-8cab-7131103e6d68",
    "title": "Zenray design view link bug",
    "updatedAt": "2026-10-10T21:32:46.778Z",
-   "bytes": 21010,
+   "bytes": 21011,
    "boundProject": null
   },
   {
@@ -110,9 +110,9 @@
    "conversationId": "claude:d2f26016-25dd-4bcc-a6d8-122d50d3f383",
    "provider": "claude",
    "sessionId": "d2f26016-25dd-4bcc-a6d8-122d50d3f383",
-   "title": "3 motion design and editing video",
+   "title": "zenray motion design",
    "updatedAt": "2026-10-22T22:09:46.176Z",
-   "bytes": 22339,
+   "bytes": 22379,
    "boundProject": null
   },
   {
@@ -128,7 +128,7 @@
    "sessionId": "700c9dbd-ebb7-4b65-85ac-543e6ec80993",
    "title": "Limite de motion design prompt de recherche",
    "updatedAt": "2026-10-15T18:45:10.638Z",
-   "bytes": 30695,
+   "bytes": 30696,
    "boundProject": null
   },
   {
@@ -176,7 +176,7 @@
    "sessionId": "2562b086-836d-49c5-80c7-0c935a98513c",
    "title": "Vegetations Creating Materials October 2026",
    "updatedAt": "2026-10-11T14:07:03.057Z",
-   "bytes": 23936,
+   "bytes": 23937,
    "boundProject": "vegetation-assets-collection-01"
   },
   {
@@ -208,7 +208,7 @@
    "sessionId": "20b28879-0c00-47e2-8e56-f2cd9a671404",
    "title": "Learn Texturing and Freelance",
    "updatedAt": "2026-09-23T17:08:49.694Z",
-   "bytes": 79105,
+   "bytes": 79106,
    "boundProject": null
   },
   {
@@ -222,25 +222,25 @@
    "conversationId": "gemini:dad216b8-610b-4279-a532-56e02644714d",
    "provider": "gemini",
    "sessionId": "dad216b8-610b-4279-a532-56e02644714d",
-   "title": "Conversation Gemini dad216b8",
-   "updatedAt": "2026-10-14T21:13:27.597Z",
+   "title": "zenray progress les fichiers n'ont pas de sous titres pourquoi ? bleach ? until grep -qE \"STAGE FAILED|Traceback|PROOF RED|FINISH FAILED|pub",
+   "updatedAt": "2026-10-14T21:12:45.577735+00:00",
    "bytes": 11730944,
    "boundProject": null
   },
   {
    "projectId": "zenray-progress",
-   "lines": 100,
+   "lines": 101,
    "work": 2,
    "prompts": 1,
    "first": "2026-10-16T11:43:19.042Z",
-   "last": "2026-10-22T17:00:52.420Z",
+   "last": "2026-10-23T11:09:29.698Z",
    "strength": "strong",
    "conversationId": "claude:beb9938e-4434-4925-8d13-137bb7940fc0",
    "provider": "claude",
    "sessionId": "beb9938e-4434-4925-8d13-137bb7940fc0",
-   "title": "UV Methodology (fork)",
-   "updatedAt": "2026-10-22T21:40:46.245Z",
-   "bytes": 40555,
+   "title": "zenray uv",
+   "updatedAt": "2026-10-23T11:19:34.172Z",
+   "bytes": 39942,
    "boundProject": "louisiana-bayou"
   },
   {
@@ -256,23 +256,7 @@
    "sessionId": "af61e9e4-17cb-46aa-b66a-922874eb123f",
    "title": "ZENRAY ASSETS",
    "updatedAt": "2026-10-11T22:51:54.267Z",
-   "bytes": 20971,
-   "boundProject": null
-  },
-  {
-   "projectId": "zenray-progress",
-   "lines": 14,
-   "work": 1,
-   "prompts": 6,
-   "first": "2026-10-13T18:50:03.988Z",
-   "last": "2026-10-13T19:01:49.382Z",
-   "strength": "strong",
-   "conversationId": "codex:01a13699-a7ed-70e1-8dec-195a33900e86",
-   "provider": "codex",
-   "sessionId": "01a13699-a7ed-70e1-8dec-195a33900e86",
-   "title": "Conversation codex 01a13699",
-   "updatedAt": "2026-10-13T22:11:29.810Z",
-   "bytes": 5648209,
+   "bytes": 20972,
    "boundProject": null
   },
   {
@@ -288,56 +272,8 @@
    "sessionId": "5bd15db6-f2d9-4010-bcb3-0d609a42bc5e",
    "title": "performance assets and drive",
    "updatedAt": "2026-10-15T07:02:22.911Z",
-   "bytes": 34516,
+   "bytes": 34517,
    "boundProject": "zenray-progress"
-  },
-  {
-   "projectId": "zenray-progress",
-   "lines": 12,
-   "work": 0,
-   "prompts": 6,
-   "first": "2026-10-13T18:54:49.959Z",
-   "last": "2026-10-13T19:01:32.844Z",
-   "strength": "strong",
-   "conversationId": "codex:01a1369c-1b16-7a40-84e4-f42bc1f2321f",
-   "provider": "codex",
-   "sessionId": "01a1369c-1b16-7a40-84e4-f42bc1f2321f",
-   "title": "Conversation codex 01a1369c",
-   "updatedAt": "2026-10-13T19:01:39.362Z",
-   "bytes": 1281691,
-   "boundProject": null
-  },
-  {
-   "projectId": "zenray-progress",
-   "lines": 6,
-   "work": 0,
-   "prompts": 3,
-   "first": "2026-10-14T10:46:16.904Z",
-   "last": "2026-10-14T10:46:16.904Z",
-   "strength": "strong",
-   "conversationId": "codex:01a13a05-2021-7ac0-8bd2-1304c104d045",
-   "provider": "codex",
-   "sessionId": "01a13a05-2021-7ac0-8bd2-1304c104d045",
-   "title": "Conversation codex 01a13a05",
-   "updatedAt": "2026-10-14T10:51:39.477Z",
-   "bytes": 1510398,
-   "boundProject": null
-  },
-  {
-   "projectId": "zenray-progress",
-   "lines": 6,
-   "work": 0,
-   "prompts": 3,
-   "first": "2026-10-14T10:38:58.370Z",
-   "last": "2026-10-14T10:38:58.371Z",
-   "strength": "strong",
-   "conversationId": "codex:01a139fe-6f18-7b63-b154-2aa8ad7d92ef",
-   "provider": "codex",
-   "sessionId": "01a139fe-6f18-7b63-b154-2aa8ad7d92ef",
-   "title": "Conversation codex 01a139fe",
-   "updatedAt": "2026-10-14T10:50:59.848Z",
-   "bytes": 1732554,
-   "boundProject": null
   },
   {
    "projectId": "zenray-progress",
@@ -368,7 +304,7 @@
    "sessionId": "a3f20b1d-27ed-48e1-a0d1-5fe182c0e423",
    "title": "UV Methodology (original /mhzenray)",
    "updatedAt": "2026-10-20T19:18:11.914Z",
-   "bytes": 45538,
+   "bytes": 44728,
    "boundProject": null
   },
   {
@@ -384,7 +320,7 @@
    "sessionId": "d3327e82-5a7e-46d8-b6f6-bc0447663c2b",
    "title": "4 sport section",
    "updatedAt": "2026-10-16T13:39:58.004Z",
-   "bytes": 36784,
+   "bytes": 36785,
    "boundProject": "zenray-progress"
   },
   {
@@ -400,23 +336,23 @@
    "sessionId": "3a9c2407-7dcc-4acd-baf2-90a94300e953",
    "title": "ZENRAY HEIGHT",
    "updatedAt": "2026-10-12T04:52:19.855Z",
-   "bytes": 21121,
+   "bytes": 21122,
    "boundProject": "zenray-height"
   },
   {
    "projectId": "zenray-progress",
-   "lines": 13,
+   "lines": 15,
    "work": 0,
    "prompts": 0,
    "first": "2026-10-17T14:21:27.442Z",
-   "last": "2026-10-21T12:36:22.306Z",
+   "last": "2026-10-23T11:06:52.036Z",
    "strength": "weak",
    "conversationId": "claude:2ce02bbc-dad5-488e-9ffc-51313c488339",
    "provider": "claude",
    "sessionId": "2ce02bbc-dad5-488e-9ffc-51313c488339",
-   "title": "StudioPhoto Enhancing Assets",
-   "updatedAt": "2026-10-21T17:14:21.465Z",
-   "bytes": 38528,
+   "title": "studio photos",
+   "updatedAt": "2026-10-23T11:17:19.759Z",
+   "bytes": 38507,
    "boundProject": "studiophoto-matthieu-17-october-2026"
   },
   {
@@ -432,7 +368,7 @@
    "sessionId": "97dafd1e-ddee-454d-997b-6216fe6d4064",
    "title": "ZENRAY HEIGHT (fork)",
    "updatedAt": "2026-10-11T21:28:15.851Z",
-   "bytes": 21082,
+   "bytes": 21083,
    "boundProject": "zenray-height"
   },
   {
@@ -464,7 +400,7 @@
    "sessionId": "c599a27c-4ba9-4fbc-b29f-9cf95d1bbcb6",
    "title": "Iphone Photos",
    "updatedAt": "2026-10-22T22:30:23.100Z",
-   "bytes": 38258,
+   "bytes": 38259,
    "boundProject": null
   },
   {
@@ -480,7 +416,7 @@
    "sessionId": "d71651de-2d57-45d0-b20d-830dd146d2ac",
    "title": "ZenRay Assets UI rework in zenray edit",
    "updatedAt": "2026-10-14T10:45:04.320Z",
-   "bytes": 21342,
+   "bytes": 21343,
    "boundProject": "zenray-assets-tube-view"
   },
   {
@@ -512,8 +448,24 @@
    "sessionId": "5fd92a10-03f3-4126-89e0-4dfe033274bd",
    "title": "Zenray Freelance automation",
    "updatedAt": "2026-10-07T09:05:28.740Z",
-   "bytes": 23255,
+   "bytes": 23256,
    "boundProject": "zenray-freelance"
+  },
+  {
+   "projectId": "zenray-progress",
+   "lines": 4,
+   "work": 0,
+   "prompts": 1,
+   "first": "2026-10-23T11:00:00.778Z",
+   "last": "2026-10-23T11:00:29.892Z",
+   "strength": "weak",
+   "conversationId": "claude:11264bd4-8a19-4e76-b9be-dc012304e419",
+   "provider": "claude",
+   "sessionId": "11264bd4-8a19-4e76-b9be-dc012304e419",
+   "title": "zenray knowledge",
+   "updatedAt": "2026-10-23T11:20:25.517Z",
+   "bytes": 6749294,
+   "boundProject": null
   },
   {
    "projectId": "zenray-progress",
@@ -528,7 +480,7 @@
    "sessionId": "e404b8fe-5771-41e1-b7bb-5f6111652bf6",
    "title": "CONSIGNER LE SHARINGAN",
    "updatedAt": "2026-10-21T10:06:45.761Z",
-   "bytes": 33539,
+   "bytes": 33540,
    "boundProject": "conversation-claude-f636b9060f04a23ee355c148"
   },
   {
@@ -544,7 +496,7 @@
    "sessionId": "459b59c9-87e8-4e32-8bd7-b1348b362772",
    "title": "Vérifier upload et renommage fichiers",
    "updatedAt": "2026-10-17T20:32:28.352Z",
-   "bytes": 36549,
+   "bytes": 36550,
    "boundProject": null
   },
   {
@@ -560,7 +512,7 @@
    "sessionId": "5eff1aab-c6ea-4a74-81cf-51380f6fc653",
    "title": "ZENRAY FREELANCE",
    "updatedAt": "2026-10-12T10:50:49.075Z",
-   "bytes": 20968,
+   "bytes": 20969,
    "boundProject": "zenray-freelance"
   },
   {
@@ -576,7 +528,7 @@
    "sessionId": "b72636b1-7699-47eb-aedc-f039428ca295",
    "title": "Photos Project",
    "updatedAt": "2026-10-04T09:10:38.483Z",
-   "bytes": 22652,
+   "bytes": 22653,
    "boundProject": null
   },
   {
@@ -593,6 +545,22 @@
    "title": "Mail transfert dossier auto-école",
    "updatedAt": "2026-10-02T14:38:28.892Z",
    "bytes": 23040,
+   "boundProject": null
+  },
+  {
+   "projectId": "zenray-progress",
+   "lines": 2,
+   "work": 0,
+   "prompts": 0,
+   "first": "2026-10-23T10:04:34.153Z",
+   "last": "2026-10-23T10:04:34.153Z",
+   "strength": "weak",
+   "conversationId": "claude:743321c6-ffde-4e63-954e-b4f593d6507b",
+   "provider": "claude",
+   "sessionId": "743321c6-ffde-4e63-954e-b4f593d6507b",
+   "title": "Écran blanc sur Chrome",
+   "updatedAt": "2026-10-23T10:09:35.038Z",
+   "bytes": 38091,
    "boundProject": null
   },
   {
@@ -672,7 +640,7 @@
    "sessionId": "dc58fe08-d3b3-4c2a-a4af-b00e77409ca3",
    "title": "Plan to Google Calendar",
    "updatedAt": "2026-10-17T21:33:27.624Z",
-   "bytes": 39606,
+   "bytes": 39607,
    "boundProject": null
   },
   {
@@ -688,7 +656,7 @@
    "sessionId": "6770fb4c-3c30-4bc8-939a-b209ab0ddb1b",
    "title": "1 zenray freelance",
    "updatedAt": "2026-10-17T13:47:05.186Z",
-   "bytes": 40211,
+   "bytes": 40212,
    "boundProject": null
   },
   {
@@ -720,279 +688,7 @@
    "sessionId": "fa37c224-b0f7-4ffe-b1d9-73121293ef45",
    "title": "Shelf miniatures loading performance",
    "updatedAt": "2026-10-15T11:53:20.686Z",
-   "bytes": 34546,
-   "boundProject": null
-  },
-  {
-   "projectId": "zenray-progress",
-   "lines": 2,
-   "work": 0,
-   "prompts": 1,
-   "first": "2026-10-15T07:55:25.370Z",
-   "last": "2026-10-15T07:55:25.371Z",
-   "strength": "weak",
-   "conversationId": "codex:01a13e8f-0972-74d2-baea-4f6fcdf5cb4a",
-   "provider": "codex",
-   "sessionId": "01a13e8f-0972-74d2-baea-4f6fcdf5cb4a",
-   "title": "Conversation codex 01a13e8f",
-   "updatedAt": "2026-10-15T07:57:56.629Z",
-   "bytes": 884712,
-   "boundProject": null
-  },
-  {
-   "projectId": "zenray-progress",
-   "lines": 2,
-   "work": 0,
-   "prompts": 1,
-   "first": "2026-10-14T21:16:58.248Z",
-   "last": "2026-10-14T21:16:58.249Z",
-   "strength": "weak",
-   "conversationId": "codex:01a13c46-84d9-7f21-a3cb-381e58b6cd6f",
-   "provider": "codex",
-   "sessionId": "01a13c46-84d9-7f21-a3cb-381e58b6cd6f",
-   "title": "Conversation codex 01a13c46",
-   "updatedAt": "2026-10-15T07:55:14.488Z",
-   "bytes": 971217,
-   "boundProject": null
-  },
-  {
-   "projectId": "zenray-progress",
-   "lines": 2,
-   "work": 0,
-   "prompts": 1,
-   "first": "2026-10-14T21:07:20.005Z",
-   "last": "2026-10-14T21:07:20.006Z",
-   "strength": "weak",
-   "conversationId": "codex:01a13c3d-b1f6-7400-9ffd-880db0b3832c",
-   "provider": "codex",
-   "sessionId": "01a13c3d-b1f6-7400-9ffd-880db0b3832c",
-   "title": "Conversation codex 01a13c3d",
-   "updatedAt": "2026-10-14T21:10:35.894Z",
-   "bytes": 989762,
-   "boundProject": null
-  },
-  {
-   "projectId": "zenray-progress",
-   "lines": 2,
-   "work": 0,
-   "prompts": 1,
-   "first": "2026-10-14T21:02:42.976Z",
-   "last": "2026-10-14T21:02:42.977Z",
-   "strength": "weak",
-   "conversationId": "codex:01a13c39-769f-7372-a26b-b619b8dd1611",
-   "provider": "codex",
-   "sessionId": "01a13c39-769f-7372-a26b-b619b8dd1611",
-   "title": "Conversation codex 01a13c39",
-   "updatedAt": "2026-10-14T21:07:07.541Z",
-   "bytes": 1169797,
-   "boundProject": null
-  },
-  {
-   "projectId": "zenray-progress",
-   "lines": 2,
-   "work": 0,
-   "prompts": 1,
-   "first": "2026-10-14T20:57:29.497Z",
-   "last": "2026-10-14T20:57:29.499Z",
-   "strength": "weak",
-   "conversationId": "codex:01a13c34-aed4-7882-a200-4f1da75c847b",
-   "provider": "codex",
-   "sessionId": "01a13c34-aed4-7882-a200-4f1da75c847b",
-   "title": "Conversation codex 01a13c34",
-   "updatedAt": "2026-10-14T21:00:19.911Z",
-   "bytes": 1011277,
-   "boundProject": null
-  },
-  {
-   "projectId": "zenray-progress",
-   "lines": 2,
-   "work": 0,
-   "prompts": 1,
-   "first": "2026-10-14T20:49:45.283Z",
-   "last": "2026-10-14T20:49:45.284Z",
-   "strength": "weak",
-   "conversationId": "codex:01a13c2d-99de-71e0-90b8-efc4f1b1d86b",
-   "provider": "codex",
-   "sessionId": "01a13c2d-99de-71e0-90b8-efc4f1b1d86b",
-   "title": "Conversation codex 01a13c2d",
-   "updatedAt": "2026-10-14T20:57:20.045Z",
-   "bytes": 890771,
-   "boundProject": null
-  },
-  {
-   "projectId": "zenray-progress",
-   "lines": 2,
-   "work": 0,
-   "prompts": 1,
-   "first": "2026-10-14T20:26:19.643Z",
-   "last": "2026-10-14T20:26:19.644Z",
-   "strength": "weak",
-   "conversationId": "codex:01a13c18-2726-7342-bab7-34fd23abacc3",
-   "provider": "codex",
-   "sessionId": "01a13c18-2726-7342-bab7-34fd23abacc3",
-   "title": "Conversation codex 01a13c18",
-   "updatedAt": "2026-10-14T20:30:31.261Z",
-   "bytes": 973814,
-   "boundProject": null
-  },
-  {
-   "projectId": "zenray-progress",
-   "lines": 2,
-   "work": 0,
-   "prompts": 1,
-   "first": "2026-10-14T20:22:00.468Z",
-   "last": "2026-10-14T20:22:00.469Z",
-   "strength": "weak",
-   "conversationId": "codex:01a13c14-3299-70d2-a261-e13086ca2630",
-   "provider": "codex",
-   "sessionId": "01a13c14-3299-70d2-a261-e13086ca2630",
-   "title": "Conversation codex 01a13c14",
-   "updatedAt": "2026-10-14T20:26:03.900Z",
-   "bytes": 1032631,
-   "boundProject": null
-  },
-  {
-   "projectId": "zenray-progress",
-   "lines": 2,
-   "work": 0,
-   "prompts": 1,
-   "first": "2026-10-14T20:09:20.749Z",
-   "last": "2026-10-14T20:09:20.750Z",
-   "strength": "weak",
-   "conversationId": "codex:01a13c08-9b1c-77a1-b9c5-1206f93b9ed2",
-   "provider": "codex",
-   "sessionId": "01a13c08-9b1c-77a1-b9c5-1206f93b9ed2",
-   "title": "Conversation codex 01a13c08",
-   "updatedAt": "2026-10-14T20:11:36.378Z",
-   "bytes": 822953,
-   "boundProject": null
-  },
-  {
-   "projectId": "zenray-progress",
-   "lines": 2,
-   "work": 0,
-   "prompts": 1,
-   "first": "2026-10-14T19:59:22.946Z",
-   "last": "2026-10-14T19:59:22.947Z",
-   "strength": "weak",
-   "conversationId": "codex:01a13bff-7a88-7123-bee3-5db2ece6d838",
-   "provider": "codex",
-   "sessionId": "01a13bff-7a88-7123-bee3-5db2ece6d838",
-   "title": "Conversation codex 01a13bff",
-   "updatedAt": "2026-10-14T20:09:02.059Z",
-   "bytes": 900734,
-   "boundProject": null
-  },
-  {
-   "projectId": "zenray-progress",
-   "lines": 2,
-   "work": 0,
-   "prompts": 1,
-   "first": "2026-10-14T19:43:52.409Z",
-   "last": "2026-10-14T19:43:52.411Z",
-   "strength": "weak",
-   "conversationId": "codex:01a13bf1-46c0-7581-8694-4ab8aaef6337",
-   "provider": "codex",
-   "sessionId": "01a13bf1-46c0-7581-8694-4ab8aaef6337",
-   "title": "Conversation codex 01a13bf1",
-   "updatedAt": "2026-10-14T19:46:06.210Z",
-   "bytes": 828547,
-   "boundProject": null
-  },
-  {
-   "projectId": "zenray-progress",
-   "lines": 2,
-   "work": 0,
-   "prompts": 1,
-   "first": "2026-10-14T19:39:02.109Z",
-   "last": "2026-10-14T19:39:02.110Z",
-   "strength": "weak",
-   "conversationId": "codex:01a13bec-d8a4-7551-a10c-18b7018f5abe",
-   "provider": "codex",
-   "sessionId": "01a13bec-d8a4-7551-a10c-18b7018f5abe",
-   "title": "Conversation codex 01a13bec",
-   "updatedAt": "2026-10-14T19:43:34.187Z",
-   "bytes": 802329,
-   "boundProject": null
-  },
-  {
-   "projectId": "zenray-progress",
-   "lines": 2,
-   "work": 0,
-   "prompts": 1,
-   "first": "2026-10-14T19:22:37.402Z",
-   "last": "2026-10-14T19:22:37.403Z",
-   "strength": "weak",
-   "conversationId": "codex:01a13bdd-d034-70a0-b559-0938ee2b7003",
-   "provider": "codex",
-   "sessionId": "01a13bdd-d034-70a0-b559-0938ee2b7003",
-   "title": "Conversation codex 01a13bdd",
-   "updatedAt": "2026-10-14T19:29:49.999Z",
-   "bytes": 1384679,
-   "boundProject": null
-  },
-  {
-   "projectId": "zenray-progress",
-   "lines": 2,
-   "work": 0,
-   "prompts": 1,
-   "first": "2026-10-14T19:17:07.740Z",
-   "last": "2026-10-14T19:17:07.742Z",
-   "strength": "weak",
-   "conversationId": "codex:01a13bd8-ca4d-7f32-bb5f-757a23b17de1",
-   "provider": "codex",
-   "sessionId": "01a13bd8-ca4d-7f32-bb5f-757a23b17de1",
-   "title": "Conversation codex 01a13bd8",
-   "updatedAt": "2026-10-14T19:22:16.767Z",
-   "bytes": 1162907,
-   "boundProject": null
-  },
-  {
-   "projectId": "zenray-progress",
-   "lines": 2,
-   "work": 0,
-   "prompts": 1,
-   "first": "2026-10-14T15:07:21.846Z",
-   "last": "2026-10-14T15:07:21.847Z",
-   "strength": "weak",
-   "conversationId": "codex:01a13af4-214b-7493-b3f5-faf49de171de",
-   "provider": "codex",
-   "sessionId": "01a13af4-214b-7493-b3f5-faf49de171de",
-   "title": "Conversation codex 01a13af4",
-   "updatedAt": "2026-10-14T15:15:08.843Z",
-   "bytes": 944874,
-   "boundProject": null
-  },
-  {
-   "projectId": "zenray-progress",
-   "lines": 2,
-   "work": 0,
-   "prompts": 1,
-   "first": "2026-10-14T15:00:55.000Z",
-   "last": "2026-10-14T15:00:55.001Z",
-   "strength": "weak",
-   "conversationId": "codex:01a13aee-3a46-72d1-b32b-c2e0cfb7a6ab",
-   "provider": "codex",
-   "sessionId": "01a13aee-3a46-72d1-b32b-c2e0cfb7a6ab",
-   "title": "Conversation codex 01a13aee",
-   "updatedAt": "2026-10-14T15:06:36.613Z",
-   "bytes": 760462,
-   "boundProject": null
-  },
-  {
-   "projectId": "zenray-progress",
-   "lines": 2,
-   "work": 0,
-   "prompts": 1,
-   "first": "2026-10-13T22:11:51.832Z",
-   "last": "2026-10-13T22:11:51.832Z",
-   "strength": "weak",
-   "conversationId": "codex:01a13752-3209-7372-90a2-cbb213b73bda",
-   "provider": "codex",
-   "sessionId": "01a13752-3209-7372-90a2-cbb213b73bda",
-   "title": "Conversation codex 01a13752",
-   "updatedAt": "2026-10-13T22:13:41.794Z",
-   "bytes": 3786902,
+   "bytes": 34547,
    "boundProject": null
   },
   {
@@ -1008,7 +704,7 @@
    "sessionId": "e067e0eb-400b-4769-9366-225560e7a0e4",
    "title": "MOTION DESIGN",
    "updatedAt": "2026-10-11T15:18:28.747Z",
-   "bytes": 21086,
+   "bytes": 21087,
    "boundProject": "zenray-motion-design-01"
   },
   {
@@ -1024,7 +720,7 @@
    "sessionId": "8152bc29-16c2-4858-828d-937ab6240571",
    "title": "LOUISIANA BAYOU",
    "updatedAt": "2026-10-11T15:13:10.697Z",
-   "bytes": 20964,
+   "bytes": 20965,
    "boundProject": "louisiana-bayou"
   },
   {
@@ -1072,7 +768,7 @@
    "sessionId": "8ef64432-15df-4091-bb15-041c25f2482d",
    "title": "vue arch 6 views",
    "updatedAt": "2026-10-19T10:09:47.194Z",
-   "bytes": 36574,
+   "bytes": 36575,
    "boundProject": "louisiana-bayou"
   },
   {
@@ -1088,7 +784,7 @@
    "sessionId": "7c5566dd-4ce2-4ed7-9035-5e45ce611a65",
    "title": "Win Without Pitching Manifesto traduction",
    "updatedAt": "2026-10-17T21:13:19.044Z",
-   "bytes": 36590,
+   "bytes": 36591,
    "boundProject": null
   },
   {
@@ -1152,7 +848,7 @@
    "sessionId": "ccab5a98-d7b2-46ff-9272-90ae7c64f6d2",
    "title": "HAIKU HEIGHT 2 JAVIER",
    "updatedAt": "2026-10-12T07:32:36.720Z",
-   "bytes": 20916,
+   "bytes": 20917,
    "boundProject": "zenray-height"
   },
   {
@@ -1168,7 +864,7 @@
    "sessionId": "38e50342-7557-4656-9c5c-06c92e6aea4d",
    "title": "HAIKU HEIGHT",
    "updatedAt": "2026-10-12T00:54:52.336Z",
-   "bytes": 20961,
+   "bytes": 20962,
    "boundProject": "zenray-height"
   },
   {
@@ -1200,7 +896,7 @@
    "sessionId": "6ab0a8c4-7fa2-46a1-b1f4-282a74f8f6f2",
    "title": "Installation Blender macOS",
    "updatedAt": "2026-10-11T11:39:10.426Z",
-   "bytes": 20865,
+   "bytes": 20866,
    "boundProject": "conversation-claude-3918c05f2e72431e7521d763"
   },
   {
@@ -1264,7 +960,7 @@
    "sessionId": "d955fbe0-b2a6-4fd7-a4d4-b73cb0f18add",
    "title": "malware",
    "updatedAt": "2026-10-07T07:12:42.561Z",
-   "bytes": 19200,
+   "bytes": 19201,
    "boundProject": null
   },
   {
@@ -1312,7 +1008,7 @@
    "sessionId": "49007c79-a3af-4601-8cec-fd77bc841f6b",
    "title": "ZenRayWebsite",
    "updatedAt": "2026-10-03T11:52:28.263Z",
-   "bytes": 22793,
+   "bytes": 22794,
    "boundProject": null
   },
   {
@@ -1390,8 +1086,8 @@
    "conversationId": "gemini:3e22a918-b7a6-4b1f-99ea-e50907f40d44",
    "provider": "gemini",
    "sessionId": "3e22a918-b7a6-4b1f-99ea-e50907f40d44",
-   "title": "Conversation Gemini 3e22a918",
-   "updatedAt": "2026-09-15T20:06:00.494Z",
+   "title": "'/Users/zenray/Movies/2026-09-15 20-36-50.mkv' to mov et speed jusqu'à ce que ça fasse 30 secondes speed ajusté à la longueur initial. go da",
+   "updatedAt": "2026-09-15T20:05:24.351772+00:00",
    "bytes": 3629056,
    "boundProject": null
   },
