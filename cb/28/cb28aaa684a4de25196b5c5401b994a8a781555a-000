@@ -1,0 +1,19 @@
+{
+  "date": "25 October 2026",
+  "slug": "abonnement-max-claude-code",
+  "folder": "2026-10-25-abonnement-max-claude-code",
+  "version": 1,
+  "title": "Claude Code, trois titres pour l'anneau",
+  "module": "zenray-progress",
+  "assetsProject": "zenray-edit",
+  "project": "zenray-progress",
+  "status": "pending",
+  "atelier": "/Users/zenray/.claude/tmp/tmp-abonnement-max-b-25-october-2026",
+  "files": [
+    "index.html",
+    "wallpaper.webp"
+  ],
+  "indexSha256": "8ad98ba86e030ae0d7b33386a4ff1dc38a49177e9385a1e574b58ba4281bf291",
+  "filedAt": "2026-10-25T13:43:33.329Z",
+  "note": null
+}

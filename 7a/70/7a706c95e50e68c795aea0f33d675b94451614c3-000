@@ -1,0 +1,112 @@
+<!doctype html>
+<!-- 25 October 2026: Abonnement Max, three proposals side by side (A big counter, B ring, C day grid), same code as ZenRayProgress src/subscription. -->
+<!-- FR : les trois propositions côte à côte ; dates dans PARAMS, jetons visuels dans :root. -->
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Abonnement Max, trois propositions</title>
+<style>
+@font-face { font-family: 'GT Sectra LCG Italic'; src: url('file:///Users/zenray/.claude/skills/zenray-edit/designs/_shared/fonts/GT-Sectra-LCGV-Regular-Italic.woff2') format('woff2'); font-style: italic; font-weight: 400; }
+@font-face { font-family: 'AnthropicSerif'; src: url('file:///Users/zenray/.claude/skills/zenray-edit/designs/_shared/fonts/AnthropicSerif-Romans-latin-400.woff2') format('woff2'); font-weight: 400; }
+@font-face { font-family: 'InterVariable'; src: url('file:///Users/zenray/.claude/skills/zenray-edit/designs/_shared/fonts/InterVariable.woff2') format('woff2'); font-weight: 100 900; }
+:root {
+  --zr-police-sans: 'InterVariable', 'Hiragino Sans W4', sans-serif;
+  --zr-police-serif: 'AnthropicSerif', 'Hiragino Mincho ProN W3', serif;
+  --titles: 'GT Sectra LCG Italic', var(--zr-police-serif);
+  --title-size: 34px; --num-size: 64px; --big-size: 84px; --sub-size: 15px; --label-size: 12px;
+  --accent: #cc7c5e; --day-size: 40px; --radius: 26px; --blur: 27px; --sat: 169%;
+  --ink: rgba(25,27,31,.92); --ink-2: rgba(25,27,31,.56); --ink-3: rgba(25,27,31,.40); --track: rgba(25,27,31,.08);
+  --glass-a: rgba(255,255,255,.76); --glass-b: rgba(229,233,239,.42); --bg: #e9ecf1;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --ink: rgba(240,241,244,.94); --ink-2: rgba(240,241,244,.62); --ink-3: rgba(240,241,244,.42); --track: rgba(240,241,244,.12);
+  --glass-a: rgba(40,42,48,.72); --glass-b: rgba(24,26,30,.48); --bg: #15171b; } }
+:root[data-theme="dark"] { --ink: rgba(240,241,244,.94); --ink-2: rgba(240,241,244,.62); --ink-3: rgba(240,241,244,.42); --track: rgba(240,241,244,.12); --glass-a: rgba(40,42,48,.72); --glass-b: rgba(24,26,30,.48); --bg: #15171b; }
+* { box-sizing: border-box; }
+html, body { margin: 0; min-height: 100%; }
+body { background: var(--bg); color: var(--ink); font-family: var(--zr-police-sans); padding: 32px 16px 60px; }
+body::before { content: ''; position: fixed; inset: 0; z-index: -1; background: url('wallpaper.webp') center / cover; }
+header { max-width: 1500px; margin: 0 auto 22px; display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+header h1 { font-family: var(--titles); font-weight: 400; font-style: italic; margin: 0; font-size: 26px; color: #fff; text-shadow: 0 1px 8px rgba(0,0,0,.25); }
+header button { font: inherit; font-size: 13px; padding: 7px 14px; border-radius: 99px; border: 0; cursor: pointer; background: rgba(255,255,255,.8); }
+.row { max-width: 1500px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(340px, 100%), 1fr)); gap: 22px; align-items: start; }
+.tag { font-size: 12px; color: #fff; margin: 0 0 8px 6px; text-shadow: 0 1px 6px rgba(0,0,0,.3); }
+.card { border-radius: var(--radius); padding: 32px; background: linear-gradient(135deg, var(--glass-a), var(--glass-b)); backdrop-filter: blur(var(--blur)) saturate(var(--sat)); -webkit-backdrop-filter: blur(var(--blur)) saturate(var(--sat)); box-shadow: inset 0 1px 0 rgb(255 255 255 / .55), 0 14px 38px rgba(62,67,78,.13), 0 3px 12px rgba(62,67,78,.08); }
+.num { font-family: var(--zr-police-serif); font-weight: 400; font-variant-numeric: tabular-nums; }
+.title { font-family: var(--titles); font-weight: 400; font-style: italic; font-size: var(--title-size); margin: 0; line-height: 1.1; }
+.sub { font-family: var(--zr-police-serif); font-size: var(--sub-size); color: var(--ink-2); margin: 8px 0 0; }
+.label { font-size: var(--label-size); color: var(--ink-3); }
+/* A */
+.a { text-align: center; }
+.units { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 28px; }
+.unit { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+.a .num { font-size: var(--num-size); line-height: 1; }
+.unit:first-child .num { color: var(--accent); }
+/* B */
+.b { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 14px; }
+.ringbox { position: relative; width: 240px; height: 240px; }
+.ringbox svg { width: 100%; height: 100%; }
+.track, .fill { fill: none; stroke-width: 14; }
+.track { stroke: var(--track); } .fill { stroke: var(--accent); stroke-linecap: round; }
+.center { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; }
+.big { font-size: var(--big-size); line-height: 1; }
+.clock { font-size: 18px; color: var(--ink-2); }
+/* C */
+.grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 6px; margin-top: 22px; }
+.day { aspect-ratio: 1; border-radius: 10px; display: flex; align-items: flex-end; justify-content: flex-end; padding: 4px 6px; font-size: 12px; }
+.day.gone { background: var(--track); color: var(--ink-3); }
+.day.today { background: var(--accent); color: #fff; }
+.day.left { box-shadow: inset 0 0 0 1.5px var(--track); color: var(--ink-2); }
+@media (max-width: 420px) { :root { --num-size: 44px; } .card { padding: 22px; } }
+</style>
+</head>
+<body>
+<header>
+  <h1>Abonnement Max, trois propositions</h1>
+  <button id="theme">Clair ou sombre</button>
+</header>
+<main class="row">
+  <div><p class="tag">A · Grand compteur</p><section class="card a"><h2 class="title">Abonnement Max</h2><p class="sub" data-endline></p>
+    <div class="units"><div class="unit"><span class="num" data-k="days"></span><span class="label">jours</span></div><div class="unit"><span class="num" data-k="hours"></span><span class="label">heures</span></div><div class="unit"><span class="num" data-k="minutes"></span><span class="label">minutes</span></div><div class="unit"><span class="num" data-k="seconds"></span><span class="label">secondes</span></div></div></section></div>
+  <div><p class="tag">B · Anneau</p><section class="card b">
+    <div class="ringbox"><svg viewBox="0 0 280 280"><circle class="track" cx="140" cy="140" r="120"/><circle class="fill" id="ring" cx="140" cy="140" r="120" transform="rotate(-90 140 140)"/></svg>
+      <div class="center"><span class="num big" data-k="days"></span><span class="label">jours restants</span><span class="num clock" data-clock></span></div></div>
+    <h2 class="title">Abonnement Max</h2><p class="sub" data-endline></p><p class="sub"><span class="num" id="pct"></span> % de la période restent</p></section></div>
+  <div><p class="tag">C · Calendrier</p><section class="card c"><h2 class="title">Abonnement Max</h2>
+    <p class="sub">Encore <span class="num" data-k="days"></span> jours, <span class="num" data-clock></span>, jusqu'au <span data-enddate></span></p><div class="grid" id="grid"></div></section></div>
+</main>
+<script>
+// 25 October 2026: parameters. FR : changer les dates ici suffit.
+const PARAMS = { endsAt: '2026-11-11T00:00:00+01:00', startsAt: '2026-10-11T00:00:00+02:00', tickMs: 1000 }
+const MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December']
+const DAY = 86400000, pad = (n) => String(n).padStart(2, '0')
+const end = new Date(PARAMS.endsAt), start = new Date(PARAMS.startsAt)
+const longDate = (d) => `${d.getDate()} ${MONTHS[d.getMonth()]} ${d.getFullYear()}`
+const midnight = (t) => { const d = new Date(t); return new Date(d.getFullYear(), d.getMonth(), d.getDate()) }
+const C = 2 * Math.PI * 120, ring = document.getElementById('ring')
+ring.setAttribute('stroke-dasharray', C)
+document.querySelectorAll('[data-endline]').forEach((e) => { e.textContent = `Se termine le ${longDate(end)}` })
+document.querySelectorAll('[data-enddate]').forEach((e) => { e.textContent = longDate(end) })
+function grid(now) {
+  // Calendar days, so the winter time switch (25 October 2026) never shows a date twice.
+  const days = Math.round((midnight(end) - midnight(start)) / DAY), gone = Math.round((midnight(now) - midnight(start)) / DAY)
+  document.getElementById('grid').innerHTML = Array.from({ length: days }, (_, i) => {
+    const d = new Date(start.getFullYear(), start.getMonth(), start.getDate() + i)
+    return `<div class="day ${i < gone ? 'gone' : i === gone ? 'today' : 'left'}" title="${longDate(d)}"><span class="num">${d.getDate()}</span></div>`
+  }).join('')
+}
+function tick() {
+  const now = Date.now(), s = Math.max(0, Math.floor((end - now) / 1000))
+  const v = { days: Math.floor(s / 86400), hours: pad(Math.floor(s / 3600) % 24), minutes: pad(Math.floor(s / 60) % 60), seconds: pad(s % 60) }
+  document.querySelectorAll('[data-k]').forEach((e) => { e.textContent = v[e.dataset.k] })
+  document.querySelectorAll('[data-clock]').forEach((e) => { e.textContent = `${v.hours}:${v.minutes}:${v.seconds}` })
+  const ratio = Math.min(1, Math.max(0, (end - now) / (end - start)))
+  ring.setAttribute('stroke-dashoffset', C * (1 - ratio))
+  document.getElementById('pct').textContent = Math.round(ratio * 100)
+}
+grid(Date.now()); tick(); setInterval(tick, PARAMS.tickMs)
+document.getElementById('theme').onclick = () => { const r = document.documentElement; r.dataset.theme = r.dataset.theme === 'dark' ? 'light' : 'dark' }
+</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "date": "25 October 2026",
+  "slug": "abonnement-max",
+  "folder": "2026-10-25-abonnement-max",
+  "version": 1,
+  "title": "Abonnement Max, trois propositions",
+  "module": "zenray-progress",
+  "assetsProject": "zenray-edit",
+  "project": "zenray-progress",
+  "status": "pending",
+  "atelier": "/Users/zenray/.claude/tmp/tmp-abonnement-max-25-october-2026",
+  "files": [
+    "index.html",
+    "wallpaper.webp"
+  ],
+  "indexSha256": "10cfe7fbf6460868ee96a16fbedb3fc5eff096d28e106c776f42d72f539ace25",
+  "filedAt": "2026-10-25T13:40:11.435Z",
+  "note": null
+}

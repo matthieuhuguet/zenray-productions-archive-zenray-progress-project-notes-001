@@ -1,0 +1,104 @@
+<!doctype html>
+<!-- 25 October 2026: Abonnement Max, proposal B (ring) chosen by Matthieu; three ways to title it « Claude Code » in GT Sectra. -->
+<!-- FR : l'anneau B retenu, trois variantes du titre Claude Code ; dates dans PARAMS, jetons dans :root. -->
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Claude Code, trois titres</title>
+<style>
+@font-face { font-family: 'GT Sectra LCG Italic'; src: url('file:///Users/zenray/.claude/skills/zenray-edit/designs/_shared/fonts/GT-Sectra-LCGV-Regular-Italic.woff2') format('woff2'); font-style: italic; font-weight: 400; }
+@font-face { font-family: 'AnthropicSerif'; src: url('file:///Users/zenray/.claude/skills/zenray-edit/designs/_shared/fonts/AnthropicSerif-Romans-latin-400.woff2') format('woff2'); font-weight: 400; }
+@font-face { font-family: 'InterVariable'; src: url('file:///Users/zenray/.claude/skills/zenray-edit/designs/_shared/fonts/InterVariable.woff2') format('woff2'); font-weight: 100 900; }
+:root {
+  --zr-police-sans: 'InterVariable', 'Hiragino Sans W4', sans-serif;
+  --zr-police-serif: 'AnthropicSerif', 'Hiragino Mincho ProN W3', serif;
+  --titles: 'GT Sectra LCG Italic', var(--zr-police-serif);
+  --brand-size: 46px; --brand-size-side: 56px; --brand-size-in: 22px; --big-size: 84px; --sub-size: 15px; --label-size: 12px;
+  --ring: 240px; --stroke: 14; --accent: #cc7c5e; --radius: 26px; --blur: 27px; --sat: 169%;
+  --ink: rgba(25,27,31,.92); --ink-2: rgba(25,27,31,.56); --ink-3: rgba(25,27,31,.40); --track: rgba(25,27,31,.08);
+  --glass-a: rgba(255,255,255,.76); --glass-b: rgba(229,233,239,.42); --bg: #e9ecf1;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --ink: rgba(240,241,244,.94); --ink-2: rgba(240,241,244,.62); --ink-3: rgba(240,241,244,.42); --track: rgba(240,241,244,.12);
+  --glass-a: rgba(40,42,48,.72); --glass-b: rgba(24,26,30,.48); --bg: #15171b; } }
+:root[data-theme="dark"] { --ink: rgba(240,241,244,.94); --ink-2: rgba(240,241,244,.62); --ink-3: rgba(240,241,244,.42); --track: rgba(240,241,244,.12); --glass-a: rgba(40,42,48,.72); --glass-b: rgba(24,26,30,.48); --bg: #15171b; }
+* { box-sizing: border-box; }
+html, body { margin: 0; min-height: 100%; }
+body { background: var(--bg); color: var(--ink); font-family: var(--zr-police-sans); padding: 32px 16px 60px; }
+body::before { content: ''; position: fixed; inset: 0; z-index: -1; background: url('wallpaper.webp') center / cover; }
+header { max-width: 1500px; margin: 0 auto 22px; display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+header h1 { font-family: var(--titles); font-weight: 400; font-style: italic; margin: 0; font-size: 26px; color: #fff; text-shadow: 0 1px 8px rgba(0,0,0,.25); }
+header button { font: inherit; font-size: 13px; padding: 7px 14px; border-radius: 99px; border: 0; cursor: pointer; background: rgba(255,255,255,.8); }
+.row { max-width: 1500px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(380px, 100%), 1fr)); gap: 22px; align-items: start; }
+.tag { font-size: 12px; color: #fff; margin: 0 0 8px 6px; text-shadow: 0 1px 6px rgba(0,0,0,.3); }
+.card { border-radius: var(--radius); padding: 32px; background: linear-gradient(135deg, var(--glass-a), var(--glass-b)); backdrop-filter: blur(var(--blur)) saturate(var(--sat)); -webkit-backdrop-filter: blur(var(--blur)) saturate(var(--sat)); box-shadow: inset 0 1px 0 rgb(255 255 255 / .55), 0 14px 38px rgba(62,67,78,.13), 0 3px 12px rgba(62,67,78,.08); }
+.num { font-family: var(--zr-police-serif); font-weight: 400; font-variant-numeric: tabular-nums; }
+.brand { font-family: var(--titles); font-weight: 400; font-style: italic; margin: 0; line-height: 1.05; font-size: var(--brand-size); }
+.plan { font-size: 13px; color: var(--ink-2); letter-spacing: .04em; }
+.sub { font-family: var(--zr-police-serif); font-size: var(--sub-size); color: var(--ink-2); margin: 6px 0 0; }
+.label { font-size: var(--label-size); color: var(--ink-3); }
+.ringbox { position: relative; width: var(--ring); height: var(--ring); flex: none; }
+.ringbox svg { width: 100%; height: 100%; }
+.track, .fill { fill: none; stroke-width: var(--stroke); }
+.track { stroke: var(--track); } .fill { stroke: var(--accent); stroke-linecap: round; }
+.center { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; }
+.big { font-size: var(--big-size); line-height: 1; }
+.clock { font-size: 18px; color: var(--ink-2); }
+/* B1: title above the ring. FR : titre au-dessus. */
+.b1 { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 18px; }
+/* B2: title inside the ring. FR : titre dans l'anneau. */
+.b2 { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 14px; }
+.b2 .brand { font-size: var(--brand-size-in); }
+.b2 .big { font-size: calc(var(--big-size) * .9); }
+/* B3: ring beside a large title. FR : anneau à côté d'un grand titre. */
+.b3 { display: flex; align-items: center; gap: 28px; flex-wrap: wrap; justify-content: center; }
+.b3 .brand { font-size: var(--brand-size-side); }
+.b3 .plan { display: inline-block; margin-top: 10px; padding: 4px 10px; border-radius: 99px; background: var(--accent); color: #fff; }
+.b3 .text { min-width: 180px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Claude Code, trois titres pour l'anneau</h1>
+  <button id="theme">Clair ou sombre</button>
+</header>
+<main class="row">
+  <div><p class="tag">B1 · Titre au-dessus</p><section class="card b1">
+    <div><h2 class="brand">Claude Code</h2><div class="plan">ABONNEMENT MAX</div></div>
+    <div class="ringbox" data-ring><div class="center"><span class="num big" data-k="days"></span><span class="label">jours restants</span><span class="num clock" data-clock></span></div></div>
+    <p class="sub" data-endline></p></section></div>
+  <div><p class="tag">B2 · Titre dans l'anneau</p><section class="card b2">
+    <div class="ringbox" data-ring style="--ring: 280px"><div class="center"><h2 class="brand">Claude Code</h2><span class="num big" data-k="days"></span><span class="label">jours restants</span><span class="num clock" data-clock></span></div></div>
+    <p class="sub">Abonnement Max · <span data-enddate></span></p><p class="sub"><span class="num" data-pct></span> % de la période restent</p></section></div>
+  <div><p class="tag">B3 · Grand titre à côté</p><section class="card b3">
+    <div class="ringbox" data-ring style="--ring: 200px"><div class="center"><span class="num big" data-k="days" style="font-size: 64px"></span><span class="label">jours</span><span class="num clock" data-clock style="font-size: 15px"></span></div></div>
+    <div class="text"><h2 class="brand">Claude<br>Code</h2><span class="plan">Max</span><p class="sub" data-endline></p><p class="sub"><span class="num" data-pct></span> % restent</p></div></section></div>
+</main>
+<script>
+// 25 October 2026: parameters. FR : changer les dates ici suffit.
+const PARAMS = { endsAt: '2026-11-11T00:00:00+01:00', startsAt: '2026-10-11T00:00:00+02:00', tickMs: 1000 }
+const MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December']
+const pad = (n) => String(n).padStart(2, '0')
+const end = new Date(PARAMS.endsAt), start = new Date(PARAMS.startsAt)
+const longDate = (d) => `${d.getDate()} ${MONTHS[d.getMonth()]} ${d.getFullYear()}`
+const R = 120, C = 2 * Math.PI * R
+// One ring definition, three instances. FR : un anneau, trois instances.
+document.querySelectorAll('[data-ring]').forEach((box) => box.insertAdjacentHTML('afterbegin',
+  `<svg viewBox="0 0 280 280"><circle class="track" cx="140" cy="140" r="${R}"/><circle class="fill" cx="140" cy="140" r="${R}" stroke-dasharray="${C}" transform="rotate(-90 140 140)"/></svg>`))
+document.querySelectorAll('[data-endline]').forEach((e) => { e.textContent = `Se termine le ${longDate(end)}` })
+document.querySelectorAll('[data-enddate]').forEach((e) => { e.textContent = longDate(end) })
+function tick() {
+  const now = Date.now(), s = Math.max(0, Math.floor((end - now) / 1000))
+  const v = { days: Math.floor(s / 86400), hours: pad(Math.floor(s / 3600) % 24), minutes: pad(Math.floor(s / 60) % 60), seconds: pad(s % 60) }
+  const ratio = Math.min(1, Math.max(0, (end - now) / (end - start)))
+  document.querySelectorAll('[data-k]').forEach((e) => { e.textContent = v[e.dataset.k] })
+  document.querySelectorAll('[data-clock]').forEach((e) => { e.textContent = `${v.hours}:${v.minutes}:${v.seconds}` })
+  document.querySelectorAll('[data-pct]').forEach((e) => { e.textContent = Math.round(ratio * 100) })
+  document.querySelectorAll('.fill').forEach((e) => e.setAttribute('stroke-dashoffset', C * (1 - ratio)))
+}
+tick(); setInterval(tick, PARAMS.tickMs)
+document.getElementById('theme').onclick = () => { const r = document.documentElement; r.dataset.theme = r.dataset.theme === 'dark' ? 'light' : 'dark' }
+</script>
+</body>
+</html>
