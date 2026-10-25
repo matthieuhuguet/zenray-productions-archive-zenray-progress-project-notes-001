@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-10-24T12:13:34.830Z",
+ "scannedAt": "2026-10-25T10:56:05.131Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -383,8 +383,8 @@
    "provider": "claude",
    "sessionId": "11264bd4-8a19-4e76-b9be-dc012304e419",
    "title": "zenray knowledge",
-   "updatedAt": "2026-10-23T23:48:13.297Z",
-   "bytes": 38265,
+   "updatedAt": "2026-10-25T10:53:29.916Z",
+   "bytes": 35671650,
    "boundProject": "zenray-knowledge-23-october-2026"
   },
   {
@@ -463,8 +463,8 @@
    "provider": "claude",
    "sessionId": "58712af3-1264-4e9c-a11d-d90fec62dce4",
    "title": "zenray calendar plan",
-   "updatedAt": "2026-10-24T12:12:38.523Z",
-   "bytes": 38215,
+   "updatedAt": "2026-10-25T10:55:45.825Z",
+   "bytes": 6002598,
    "boundProject": "zenray-calendar-plan-23-october-2026"
   },
   {
@@ -480,7 +480,7 @@
    "sessionId": "dcc7ed98-e112-48d7-b02f-91779656c66d",
    "title": "zenray plan calendar",
    "updatedAt": "2026-10-23T17:39:34.036Z",
-   "bytes": 38449,
+   "bytes": 38450,
    "boundProject": null
   },
   {
