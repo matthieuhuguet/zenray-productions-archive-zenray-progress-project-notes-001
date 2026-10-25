@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-10-25T17:01:49.636Z",
+ "scannedAt": "2026-10-25T17:07:49.438Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -527,8 +527,8 @@
    "provider": "claude",
    "sessionId": "09d15ec8-88ad-4965-a2f0-80b68515e880",
    "title": "zenray meshes",
-   "updatedAt": "2026-10-25T17:00:55.163Z",
-   "bytes": 38415,
+   "updatedAt": "2026-10-25T17:07:48.998Z",
+   "bytes": 9099350,
    "boundProject": "zenray-meshes"
   },
   {
@@ -607,8 +607,8 @@
    "provider": "claude",
    "sessionId": "b8e43d99-5824-4ddc-8444-a984b5743a04",
    "title": "zenray sfx",
-   "updatedAt": "2026-10-25T17:00:33.050Z",
-   "bytes": 37890,
+   "updatedAt": "2026-10-25T17:07:00.806Z",
+   "bytes": 9089370,
    "boundProject": null
   },
   {
