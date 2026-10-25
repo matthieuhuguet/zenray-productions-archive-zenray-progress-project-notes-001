@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-10-25T14:08:54.816Z",
+ "scannedAt": "2026-10-25T14:31:50.562Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -648,6 +648,38 @@
    "lines": 2,
    "work": 0,
    "prompts": 0,
+   "first": "2026-10-25T14:08:33.899Z",
+   "last": "2026-10-25T14:08:33.899Z",
+   "strength": "weak",
+   "conversationId": "claude:b8e43d99-5824-4ddc-8444-a984b5743a04",
+   "provider": "claude",
+   "sessionId": "b8e43d99-5824-4ddc-8444-a984b5743a04",
+   "title": "zenray sfx",
+   "updatedAt": "2026-10-25T14:31:43.784Z",
+   "bytes": 5942934,
+   "boundProject": null
+  },
+  {
+   "projectId": "zenray-progress",
+   "lines": 2,
+   "work": 0,
+   "prompts": 0,
+   "first": "2026-10-25T14:24:34.117Z",
+   "last": "2026-10-25T14:24:34.117Z",
+   "strength": "weak",
+   "conversationId": "claude:9bd97a57-f673-42be-bfdd-095696399637",
+   "provider": "claude",
+   "sessionId": "9bd97a57-f673-42be-bfdd-095696399637",
+   "title": "zenray meshes",
+   "updatedAt": "2026-10-25T14:31:28.820Z",
+   "bytes": 1953372,
+   "boundProject": null
+  },
+  {
+   "projectId": "zenray-progress",
+   "lines": 2,
+   "work": 0,
+   "prompts": 0,
    "first": "2026-10-25T13:40:53.907Z",
    "last": "2026-10-25T13:40:53.907Z",
    "strength": "weak",
@@ -655,8 +687,8 @@
    "provider": "claude",
    "sessionId": "49b7cc73-992e-4b7f-a693-9e6a0cda48b3",
    "title": "zenray argent",
-   "updatedAt": "2026-10-25T14:04:12.731Z",
-   "bytes": 38366,
+   "updatedAt": "2026-10-25T14:26:10.292Z",
+   "bytes": 38160,
    "boundProject": "qlmarkdown-designs-25-october-2026"
   },
   {
