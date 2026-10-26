@@ -1,0 +1,1399 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark" data-body-font="gtstandard">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZenRay Progress — Rework Galerie ToDo-3D (4 Vues & Font Swap)</title>
+  <style>
+    @font-face {
+      font-family: 'GT Ultra';
+      src: url('file:///Users/zenray/.claude/skills/zenray-edit/designs/_shared/fonts/GT-Ultra-Regular.woff2') format('woff2');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'GT Standard L';
+      src: url('file:///Users/zenray/.claude/skills/zenray-edit/designs/_shared/fonts/GT-Standard-L-Regular.woff2') format('woff2');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'GT Standard L';
+      src: url('file:///Users/zenray/.claude/skills/zenray-edit/designs/_shared/fonts/GT-Standard-L-Bold.woff2') format('woff2');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Literata';
+      src: url('file:///Users/zenray/.claude/skills/zenray-edit/designs/_shared/fonts/Literata-latin.woff2') format('woff2');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    :root {
+      /* Titres et chiffres TOUJOURS en GT Ultra 400 */
+      --font-title: 'GT Ultra', -apple-system, sans-serif;
+      --font-num: 'GT Ultra', -apple-system, sans-serif;
+      /* Police de corps commutable via data-body-font */
+      --font-body: 'GT Standard L', -apple-system, sans-serif;
+      --font-ui: 'GT Standard L', -apple-system, sans-serif;
+
+      --bg: #121214;
+      --surface: #1c1c20;
+      --surface-subtle: #24242a;
+      --border: rgba(255, 255, 255, 0.08);
+      --ink: #f4f4f6;
+      --muted: #9a9aa2;
+      --accent: #0a84ff;
+      --accent-soft: rgba(10, 132, 255, 0.16);
+      --letterbox: rgba(255, 255, 255, 0.03);
+
+      /* Paramètres réglables par sliders */
+      --gal-cols: 4;
+      --gal-gap: 18px;
+      --gal-radius: 8px;
+      --gal-ratio: 4 / 3;
+      --gal-fit: cover;
+    }
+
+    /* Mode Literata pour le corps */
+    html[data-body-font="literata"] {
+      --font-body: 'Literata', Georgia, serif;
+    }
+    html[data-body-font="gtstandard"] {
+      --font-body: 'GT Standard L', -apple-system, sans-serif;
+    }
+
+    [data-theme="light"] {
+      --bg: #f7f7f9;
+      --surface: #ffffff;
+      --surface-subtle: #f0f0f3;
+      --border: rgba(0, 0, 0, 0.08);
+      --ink: #16161a;
+      --muted: #6e6e76;
+      --accent: #0071e3;
+      --accent-soft: rgba(0, 113, 227, 0.12);
+      --letterbox: rgba(0, 0, 0, 0.03);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--font-body);
+      font-size: 14px;
+      line-height: 1.5;
+      padding-bottom: 90px;
+      transition: background 0.2s ease, color 0.2s ease;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Typographie */
+    .title, h1, h2, h3, .zrm-title {
+      font-family: var(--font-title) !important;
+      font-weight: 400 !important;
+      letter-spacing: -0.015em;
+    }
+    .num, .zrm-num {
+      font-family: var(--font-num) !important;
+      font-variant-numeric: tabular-nums;
+      font-weight: 400 !important;
+    }
+    .ui, button, label, input, select, .badge {
+      font-family: var(--font-ui);
+      font-size: 13px;
+    }
+    p, .note-text, .caption-note {
+      font-family: var(--font-body);
+    }
+
+    /* PANNEAU SUPÉRIEUR HDA FIXE */
+    .control-deck {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(22, 22, 26, 0.92);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.30);
+    }
+    [data-theme="light"] .control-deck {
+      background: rgba(255, 255, 255, 0.94);
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    }
+
+    .deck-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .propositions-tabs {
+      display: inline-flex;
+      background: var(--surface-subtle);
+      padding: 3px;
+      border-radius: 9px;
+      border: 1px solid var(--border);
+      gap: 3px;
+      max-width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+    .propositions-tabs::-webkit-scrollbar {
+      display: none;
+    }
+
+    .prop-tab {
+      padding: 7px 13px;
+      border-radius: 7px;
+      border: 0;
+      background: transparent;
+      color: var(--muted);
+      cursor: pointer;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      transition: all 0.16s ease;
+    }
+    .prop-tab.active {
+      background: var(--surface);
+      color: var(--ink);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+    }
+    .prop-tab .tab-idx {
+      font-family: var(--font-num);
+      font-size: 12px;
+      opacity: 0.65;
+    }
+
+    /* Contrôles droits : Font swap, Thème, Copier */
+    .deck-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .font-swap-group {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background: var(--surface-subtle);
+      padding: 3px 5px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+    .font-swap-group .label-tag {
+      font-size: 11px;
+      color: var(--muted);
+      padding: 0 5px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .font-toggle-btn {
+      padding: 4px 10px;
+      border-radius: 6px;
+      border: 0;
+      background: transparent;
+      color: var(--muted);
+      cursor: pointer;
+      font-size: 12px;
+      font-weight: 500;
+      transition: all 0.15s ease;
+    }
+    .font-toggle-btn.active {
+      background: var(--surface);
+      color: var(--ink);
+      box-shadow: 0 1px 4px rgba(0,0,0,0.16);
+      font-weight: 600;
+    }
+
+    .btn-tool {
+      background: var(--surface-subtle);
+      border: 1px solid var(--border);
+      color: var(--ink);
+      padding: 6px 12px;
+      border-radius: 7px;
+      cursor: pointer;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: background 0.15s ease, border-color 0.15s ease;
+    }
+    .btn-tool:hover {
+      background: var(--accent-soft);
+      border-color: var(--accent);
+    }
+
+    /* Sliders HDA */
+    .deck-sliders {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      font-family: var(--font-ui);
+      font-size: 12px;
+      border-top: 1px solid var(--border);
+      padding-top: 8px;
+    }
+
+    .slider-group {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .slider-group label {
+      color: var(--muted);
+      white-space: nowrap;
+    }
+    .slider-group .slider-val {
+      font-family: var(--font-num);
+      color: var(--ink);
+      min-width: 26px;
+      text-align: right;
+    }
+    .slider-group input[type="range"] {
+      width: 80px;
+      accent-color: var(--accent);
+      cursor: pointer;
+    }
+    .select-pill {
+      background: var(--surface-subtle);
+      border: 1px solid var(--border);
+      color: var(--ink);
+      padding: 3px 8px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-family: var(--font-ui);
+      font-size: 12px;
+    }
+
+    /* Conteneur */
+    .container {
+      max-width: 1680px;
+      margin: 0 auto;
+      padding: 30px 36px;
+    }
+
+    .view-hero {
+      margin-bottom: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 16px;
+    }
+    .view-hero h1 {
+      font-size: 30px;
+      color: var(--ink);
+      line-height: 1.15;
+    }
+    .view-hero .subtitle {
+      color: var(--muted);
+      font-size: 14px;
+      margin-top: 6px;
+    }
+    .hero-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--muted);
+      font-family: var(--font-ui);
+      font-size: 13px;
+    }
+
+    /* Grille principale paramétrique */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(var(--gal-cols), minmax(0, 1fr));
+      gap: var(--gal-gap);
+      align-items: start;
+    }
+
+    /* Tuiles */
+    .tile {
+      position: relative;
+      background: var(--surface);
+      border-radius: var(--gal-radius);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+    .tile:hover {
+      border-color: rgba(255, 255, 255, 0.18);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.30);
+    }
+    [data-theme="light"] .tile:hover {
+      border-color: rgba(0, 0, 0, 0.15);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.10);
+    }
+
+    .media-box {
+      width: 100%;
+      aspect-ratio: var(--gal-ratio);
+      background: var(--letterbox);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+    .media-box img, .media-box video {
+      width: 100%;
+      height: 100%;
+      object-fit: var(--gal-fit);
+      display: block;
+      transition: transform 0.25s ease;
+    }
+    .tile:hover .media-box img, .tile:hover .media-box video {
+      transform: scale(1.02);
+    }
+
+    .media-badge {
+      position: absolute;
+      bottom: 8px;
+      right: 8px;
+      padding: 3px 7px;
+      background: rgba(14, 14, 18, 0.82);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      color: #fff;
+      border-radius: 5px;
+      font-family: var(--font-ui);
+      font-weight: 700;
+      font-size: 10px;
+      letter-spacing: 0.05em;
+      pointer-events: none;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      z-index: 3;
+    }
+
+    .play-indicator {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: 28px;
+      height: 28px;
+      border-radius: 999px;
+      background: rgba(0, 0, 0, 0.65);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      backdrop-filter: blur(6px);
+      pointer-events: none;
+      transition: all 0.2s ease;
+      z-index: 3;
+    }
+    .tile.is-playing .play-indicator {
+      background: var(--accent);
+      transform: scale(0.9);
+    }
+
+    /* Mosaïque 2x2 des dossiers de projets */
+    .folder-mosaic {
+      width: 100%;
+      height: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 2px;
+      background: var(--border);
+    }
+    .folder-mosaic img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* VUE 01 : ÉPURÉE MINIMAL */
+    .prop-view[data-prop="1"] .gallery-grid {
+      --gal-gap: 16px;
+    }
+    .prop-view[data-prop="1"] .tile {
+      border: 0;
+      background: transparent;
+      box-shadow: none;
+    }
+    .prop-view[data-prop="1"] .media-box {
+      border-radius: var(--gal-radius);
+      box-shadow: 0 3px 14px rgba(0,0,0,0.18);
+    }
+    .prop-view[data-prop="1"] .caption {
+      padding: 10px 2px 4px;
+      background: transparent;
+    }
+    .prop-view[data-prop="1"] .caption-title {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 2px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .prop-view[data-prop="1"] .caption-note {
+      font-size: 12px;
+      color: var(--muted);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    /* VUE 02 : ÉPURÉE OVERLAY (Titres flottants au survol) */
+    .prop-view[data-prop="2"] .tile {
+      border: 1px solid var(--border);
+      background: var(--surface);
+    }
+    .prop-view[data-prop="2"] .floating-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(0,0,0,0.85) 100%);
+      opacity: 0;
+      transform: translateY(6px);
+      transition: opacity 0.2s ease, transform 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 16px 14px;
+      color: #fff;
+      z-index: 4;
+      pointer-events: none;
+    }
+    .prop-view[data-prop="2"] .tile:hover .floating-overlay {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .prop-view[data-prop="2"] .floating-title {
+      font-family: var(--font-title);
+      font-size: 15px;
+      font-weight: 400;
+      margin-bottom: 4px;
+      line-height: 1.25;
+    }
+    .prop-view[data-prop="2"] .floating-note {
+      font-family: var(--font-body);
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.8);
+      line-height: 1.4;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    /* VUE 03 : ÉPURÉE STUDIO (Tags & Scrubber) */
+    .prop-view[data-prop="3"] .caption {
+      padding: 12px 14px;
+      background: var(--surface);
+    }
+    .prop-view[data-prop="3"] .caption-title {
+      font-size: 15px;
+      margin-bottom: 4px;
+    }
+    .prop-view[data-prop="3"] .caption-tags {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-top: 8px;
+    }
+    .prop-view[data-prop="3"] .tag-pill {
+      font-size: 10px;
+      font-weight: 600;
+      background: var(--surface-subtle);
+      border: 1px solid var(--border);
+      color: var(--muted);
+      padding: 2px 7px;
+      border-radius: 4px;
+      letter-spacing: 0.04em;
+    }
+    .prop-view[data-prop="3"] .scrub-bar {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: rgba(255, 255, 255, 0.2);
+      z-index: 5;
+    }
+    .prop-view[data-prop="3"] .scrub-fill {
+      height: 100%;
+      width: 0%;
+      background: var(--accent);
+    }
+
+    /* ══════════════════════════════════════════════════════════
+       VUE 04 : EXISTANT PIXEL-PERFECT (ZenRayProgress Replica)
+       ══════════════════════════════════════════════════════════ */
+    .zr-reference-gallery {
+      width: 100%;
+      background: var(--bg);
+      color: var(--ink);
+    }
+    .zr-gallery-hero {
+      margin: 10px 0 24px;
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 24px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 16px;
+    }
+    .zr-gallery-hero h1 {
+      margin: 0;
+      font-size: 32px;
+      line-height: 1.15;
+    }
+    .zr-gallery-nav {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 16px;
+      font-family: var(--font-ui);
+      font-size: 13px;
+    }
+    .zr-breadcrumb-crumb {
+      background: transparent;
+      border: 0;
+      color: var(--muted);
+      cursor: pointer;
+      font-weight: 500;
+      padding: 3px 6px;
+      border-radius: 5px;
+    }
+    .zr-breadcrumb-crumb:hover {
+      background: var(--surface-subtle);
+      color: var(--ink);
+    }
+    .zr-breadcrumb-crumb.active {
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    /* Grille et tuiles de l'existant */
+    .zr-gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(var(--gal-cols), minmax(0, 1fr));
+      gap: var(--gal-gap);
+      align-items: start;
+    }
+    .zr-gallery-tile {
+      position: relative;
+    }
+    .zr-gallery-visual {
+      aspect-ratio: var(--gal-ratio);
+      border-radius: var(--gal-radius);
+      background: var(--letterbox);
+      overflow: hidden;
+      position: relative;
+      cursor: zoom-in;
+      border: 1px solid var(--border);
+    }
+    .zr-gallery-visual img, .zr-gallery-visual video {
+      width: 100%;
+      height: 100%;
+      object-fit: var(--gal-fit);
+      display: block;
+    }
+
+    /* Légende Overlay actuelle de ZenRayProgress */
+    .zr-gallery-caption {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 2;
+      padding: 40px 16px 14px;
+      background: linear-gradient(transparent, rgba(0,0,0,0.88));
+      color: #fff;
+      opacity: 0;
+      transform: translateY(4px);
+      transition: opacity 0.18s ease, transform 0.18s ease;
+      pointer-events: none;
+    }
+    .zr-gallery-visual:hover > .zr-gallery-caption {
+      opacity: 1;
+      transform: none;
+    }
+    .zr-gallery-caption h3 {
+      font-family: var(--font-title);
+      font-size: 15px;
+      line-height: 1.25;
+      margin: 0 0 4px;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+    .zr-gallery-caption a {
+      color: inherit;
+      text-decoration: none;
+      font-family: var(--font-ui);
+      font-size: 11px;
+      pointer-events: auto;
+      opacity: 0.85;
+    }
+    .zr-gallery-caption a:hover {
+      text-decoration: underline;
+      opacity: 1;
+    }
+    .zr-gallery-caption p {
+      margin: 6px 0 0;
+      font-family: var(--font-body);
+      font-size: 12px;
+      line-height: 1.4;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      opacity: 0.9;
+    }
+    .zr-gallery-count {
+      font-family: var(--font-body);
+      font-size: 11px;
+      margin-left: 8px;
+      opacity: 0.75;
+    }
+
+    /* Croix de suppression existante */
+    .zr-gallery-remove {
+      position: absolute;
+      top: 6px;
+      right: 6px;
+      width: 22px;
+      height: 22px;
+      border-radius: 999px;
+      border: 0;
+      background: rgba(0,0,0,0.60);
+      color: #fff;
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+      opacity: 0;
+      transition: opacity 0.15s ease;
+      z-index: 4;
+      font-size: 12px;
+    }
+    .zr-gallery-tile:hover .zr-gallery-remove {
+      opacity: 1;
+    }
+
+    /* Toast */
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: #10b981;
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-family: var(--font-ui);
+      font-weight: 600;
+      font-size: 13px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+      opacity: 0;
+      transform: translateY(10px);
+      transition: all 0.25s ease;
+      pointer-events: none;
+      z-index: 200;
+    }
+    .toast.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- DECK SUPÉRIEUR HDA (PROPOSITIONS, FONT SWAP & SLIDERS) -->
+  <header class="control-deck">
+    <div class="deck-top">
+      <div class="propositions-tabs ui" role="tablist">
+        <button type="button" class="prop-tab active" data-target="1">
+          <span class="tab-idx num">01</span>
+          <span>Épurée Minimal</span>
+        </button>
+        <button type="button" class="prop-tab" data-target="2">
+          <span class="tab-idx num">02</span>
+          <span>Épurée Overlay</span>
+        </button>
+        <button type="button" class="prop-tab" data-target="3">
+          <span class="tab-idx num">03</span>
+          <span>Épurée Studio</span>
+        </button>
+        <button type="button" class="prop-tab" data-target="4">
+          <span class="tab-idx num">04</span>
+          <span>Existant Pixel-Perfect</span>
+        </button>
+      </div>
+
+      <div class="deck-actions ui">
+        <!-- SWAP TYPOGRAPHIQUE DU CORPS (TITRES RESTENT EN GT ULTRA) -->
+        <div class="font-swap-group" title="Changer la police de corps (les titres restent en GT Ultra)">
+          <span class="label-tag">Corps :</span>
+          <button type="button" class="font-toggle-btn active" id="btnFontGt">GT Standard L</button>
+          <button type="button" class="font-toggle-btn" id="btnFontLiterata">Literata</button>
+        </div>
+
+        <button type="button" class="btn-tool" id="themeToggle" title="Basculer thème clair/sombre">🌓 Thème</button>
+        <button type="button" class="btn-tool" id="copyCssBtn" title="Copier les variables CSS calibrées pour le prompt">📋 Copier CSS</button>
+      </div>
+    </div>
+
+    <!-- CURSEURS PARAMÉTRIQUES EN DIRECT -->
+    <div class="deck-sliders">
+      <div class="slider-group">
+        <label for="colSlider">Colonnes :</label>
+        <input type="range" id="colSlider" min="2" max="6" value="4" step="1">
+        <span class="slider-val" id="colVal">4</span>
+      </div>
+
+      <div class="slider-group">
+        <label for="gapSlider">Espacement :</label>
+        <input type="range" id="gapSlider" min="8" max="36" value="18" step="2">
+        <span class="slider-val" id="gapVal">18px</span>
+      </div>
+
+      <div class="slider-group">
+        <label for="radiusSlider">Arrondi :</label>
+        <input type="range" id="radiusSlider" min="0" max="24" value="8" step="2">
+        <span class="slider-val" id="radiusVal">8px</span>
+      </div>
+
+      <div class="slider-group">
+        <label for="ratioSelect">Ratio :</label>
+        <select id="ratioSelect" class="select-pill">
+          <option value="4 / 3" selected>4 : 3 (Standard)</option>
+          <option value="16 / 9">16 : 9 (Panoramique)</option>
+          <option value="1 / 1">1 : 1 (Carré)</option>
+          <option value="auto">Auto</option>
+        </select>
+      </div>
+
+      <div class="slider-group">
+        <label for="fitSelect">Ajustement :</label>
+        <select id="fitSelect" class="select-pill">
+          <option value="cover" selected>Cover (Zéro bande noire)</option>
+          <option value="contain">Contain (Neutre)</option>
+        </select>
+      </div>
+
+      <div style="margin-left:auto; color:var(--muted); font-size:11px;">
+        Titres : <strong style="font-family:'GT Ultra'; color:var(--ink);">GT Ultra 400</strong> · Corps actif : <strong id="currentBodyFontName" style="color:var(--ink);">GT Standard L</strong>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- ══════════════════════════════════════════════════════════
+         VUE 01 : ÉPURÉE MINIMAL (Focus Média)
+         ══════════════════════════════════════════════════════════ -->
+    <section class="prop-view" data-prop="1">
+      <div class="view-hero">
+        <div>
+          <h1 class="title">ToDo-3D · Vue Épurée Minimal</h1>
+          <p class="subtitle">Focus immédiat sur le média. 4 colonnes régulières, zéro bande noire, titres nets et cartes allégées.</p>
+        </div>
+        <div class="hero-meta">
+          <span><span class="num">28</span> références</span>
+          <span>·</span>
+          <span>Hover Play actif</span>
+        </div>
+      </div>
+
+      <div class="gallery-grid">
+        <!-- 1. Vidéo 4K Hover Play -->
+        <article class="tile video-tile">
+          <div class="media-box">
+            <video src="media/clip.mp4" muted loop playsinline preload="metadata"></video>
+            <div class="play-indicator">▶</div>
+            <span class="media-badge num">4K MP4 · 0:03</span>
+          </div>
+          <div class="caption">
+            <div class="caption-title">Japon méconnu · Baie & Colline (Extrait 4K)</div>
+            <div class="caption-note">Plan fixe maritime continu vérifié de 16:43 à 16:46 avec @IchibanJapan.</div>
+          </div>
+        </article>
+
+        <!-- 2. GIF Hover Animé -->
+        <article class="tile gif-tile">
+          <div class="media-box">
+            <img src="media/clip.gif" alt="GIF Loop" loading="lazy">
+            <span class="media-badge num">GIF · 720p</span>
+          </div>
+          <div class="caption">
+            <div class="caption-title">Boucle Maritime Céleste (GIF)</div>
+            <div class="caption-note">Boucle infinie optimisée deux passes avec palette de 256 couleurs.</div>
+          </div>
+        </article>
+
+        <!-- 3. Dossier de projet Louisiana Bayou -->
+        <article class="tile folder-tile" style="cursor:pointer;">
+          <div class="media-box">
+            <div class="folder-mosaic">
+              <img src="media/sub_1.jpg" alt="Bayou 1">
+              <img src="media/sub_2.jpg" alt="Bayou 2">
+              <img src="media/sub_3.jpg" alt="Bayou 3">
+              <img src="media/sub_4.jpg" alt="Bayou 4">
+            </div>
+            <span class="media-badge num">📁 <span class="num">8</span> items</span>
+          </div>
+          <div class="caption">
+            <div class="caption-title">Dossier · Louisiana Bayou</div>
+            <div class="caption-note">Bardages bois, marches, armatures et texel density normalisée 4.0 UV/m.</div>
+          </div>
+        </article>
+
+        <!-- 4. Dossier GTA 6 -->
+        <article class="tile folder-tile" style="cursor:pointer;">
+          <div class="media-box">
+            <div class="folder-mosaic">
+              <img src="media/sample_1.jpg" alt="GTA 1">
+              <img src="media/sample_2.jpg" alt="GTA 2">
+              <img src="media/sample_3.jpg" alt="GTA 3">
+              <img src="media/sample_4.jpg" alt="GTA 4">
+            </div>
+            <span class="media-badge num">📁 <span class="num">18</span> items</span>
+          </div>
+          <div class="caption">
+            <div class="caption-title">Dossier · GTA 6 Captures</div>
+            <div class="caption-note">Études d'éclairage urbain et références de matériaux PBR photoréalistes.</div>
+          </div>
+        </article>
+
+        <!-- 5. Référence Image 1 -->
+        <article class="tile">
+          <div class="media-box">
+            <img src="media/ref.jpg" alt="Vérité terrain" loading="lazy">
+          </div>
+          <div class="caption">
+            <div class="caption-title">Planche Cadre Vérité Terrain</div>
+            <div class="caption-note">Géométrie de falaise et pente herbeuse pour reconstruction Houdini Meshes.</div>
+          </div>
+        </article>
+
+        <!-- 6. Référence Image 2 -->
+        <article class="tile">
+          <div class="media-box">
+            <img src="media/sample_5.png" alt="Frame 33" loading="lazy">
+          </div>
+          <div class="caption">
+            <div class="caption-title">Première Frame Validée (16:43.57)</div>
+            <div class="caption-note">Image de départ isolée avec précision sans raccord de montage.</div>
+          </div>
+        </article>
+
+        <!-- 7. Référence Image 3 -->
+        <article class="tile">
+          <div class="media-box">
+            <img src="media/sample_6.png" alt="Frame 120" loading="lazy">
+          </div>
+          <div class="caption">
+            <div class="caption-title">Dernière Frame Validée (16:46.47)</div>
+            <div class="caption-note">Image terminale du plan avant changement de cadrage.</div>
+          </div>
+        </article>
+
+        <!-- 8. Référence Image 4 -->
+        <article class="tile">
+          <div class="media-box">
+            <img src="media/sample_2.jpg" alt="Rochers" loading="lazy">
+          </div>
+          <div class="caption">
+            <div class="caption-title">Relief Côtier & Textures Roches</div>
+            <div class="caption-note">Maps de hauteur Copernicus et dispersion de bruit procédural.</div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════
+         VUE 02 : ÉPURÉE OVERLAY (Titres au survol)
+         ══════════════════════════════════════════════════════════ -->
+    <section class="prop-view" data-prop="2" style="display:none;">
+      <div class="view-hero">
+        <div>
+          <h1 class="title">ToDo-3D · Vue Épurée Overlay</h1>
+          <p class="subtitle">Image plein cadre de bord à bord. Le titre et la note n'apparaissent qu'au survol avec un dégradé doux.</p>
+        </div>
+        <div class="hero-meta">
+          <span>Plein Cadre</span>
+          <span>·</span>
+          <span>Titres Flottants</span>
+        </div>
+      </div>
+
+      <div class="gallery-grid">
+        <article class="tile video-tile">
+          <div class="media-box">
+            <video src="media/clip.mp4" muted loop playsinline preload="metadata"></video>
+            <div class="play-indicator">▶</div>
+            <span class="media-badge num">4K MP4</span>
+            <div class="floating-overlay">
+              <div class="floating-title">Japon méconnu · Baie & Colline (4K)</div>
+              <div class="floating-note">Plan fixe maritime continu vérifié de 16:43 à 16:46 avec @IchibanJapan.</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="tile gif-tile">
+          <div class="media-box">
+            <img src="media/clip.gif" alt="GIF" loading="lazy">
+            <span class="media-badge num">GIF</span>
+            <div class="floating-overlay">
+              <div class="floating-title">Boucle Maritime Céleste</div>
+              <div class="floating-note">Boucle continue optimisée deux passes palettegen.</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="tile">
+          <div class="media-box">
+            <div class="folder-mosaic">
+              <img src="media/sub_1.jpg" alt="Bayou">
+              <img src="media/sub_2.jpg" alt="Bayou">
+              <img src="media/sub_3.jpg" alt="Bayou">
+              <img src="media/sub_4.jpg" alt="Bayou">
+            </div>
+            <span class="media-badge num">📁 <span class="num">8</span> items</span>
+            <div class="floating-overlay">
+              <div class="floating-title">Louisiana Bayou</div>
+              <div class="floating-note">Projet HDA complet : façade, armature et marches avec densité texel 4.0.</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="tile">
+          <div class="media-box">
+            <img src="media/ref.jpg" alt="Ref" loading="lazy">
+            <div class="floating-overlay">
+              <div class="floating-title">Planche Référence Terrain</div>
+              <div class="floating-note">Contrôle visuel direct contre le frame original.</div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════
+         VUE 03 : ÉPURÉE STUDIO (Tags & Scrubber)
+         ══════════════════════════════════════════════════════════ -->
+    <section class="prop-view" data-prop="3" style="display:none;">
+      <div class="view-hero">
+        <div>
+          <h1 class="title">ToDo-3D · Studio Tags & Scrubber</h1>
+          <p class="subtitle">Vue technique orientée production 3D avec tags procéduraux et barre de progression interactive.</p>
+        </div>
+        <div class="hero-meta">
+          <span>Mode Studio</span>
+          <span>·</span>
+          <span>Scrub Temporel</span>
+        </div>
+      </div>
+
+      <div class="gallery-grid">
+        <article class="tile video-tile">
+          <div class="media-box">
+            <video src="media/clip.mp4" muted loop playsinline preload="metadata"></video>
+            <div class="play-indicator">▶</div>
+            <div class="scrub-bar"><div class="scrub-fill"></div></div>
+            <span class="media-badge num">4K UHD MASTER</span>
+          </div>
+          <div class="caption">
+            <div class="caption-title">Japon méconnu · Baie & Colline (Extrait 4K)</div>
+            <div class="caption-note">Clip de 88 frames (16:43.57 à 16:46.47) sans rupture de caméra.</div>
+            <div class="caption-tags ui">
+              <span class="tag-pill">3840×2160</span>
+              <span class="tag-pill">29.97 FPS</span>
+              <span class="tag-pill">CRF 16</span>
+              <span class="tag-pill">H.264</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="tile gif-tile">
+          <div class="media-box">
+            <img src="media/clip.gif" alt="GIF" loading="lazy">
+            <span class="media-badge num">GIF OPTIMISÉ</span>
+          </div>
+          <div class="caption">
+            <div class="caption-title">Boucle Animée Mer & Ciel</div>
+            <div class="caption-note">Boucle infinie fluide pour intégration rapide sans lecteur lourd.</div>
+            <div class="caption-tags ui">
+              <span class="tag-pill">720P</span>
+              <span class="tag-pill">256 COULEURS</span>
+              <span class="tag-pill">21 MO</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="tile">
+          <div class="media-box">
+            <div class="folder-mosaic">
+              <img src="media/sub_1.jpg" alt="Bayou">
+              <img src="media/sub_2.jpg" alt="Bayou">
+              <img src="media/sub_3.jpg" alt="Bayou">
+              <img src="media/sub_4.jpg" alt="Bayou">
+            </div>
+            <span class="media-badge num">DOSSIER</span>
+          </div>
+          <div class="caption">
+            <div class="caption-title">Louisiana Bayou (Projet Assets)</div>
+            <div class="caption-note">Ensemble modulaire pour Unreal Engine et Karma.</div>
+            <div class="caption-tags ui">
+              <span class="tag-pill">HOUDIN 22</span>
+              <span class="tag-pill">COPERNICUS</span>
+              <span class="tag-pill">4.0 UV/M</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="tile">
+          <div class="media-box">
+            <img src="media/ref.jpg" alt="Ref" loading="lazy">
+            <span class="media-badge num">RÉF 3D</span>
+          </div>
+          <div class="caption">
+            <div class="caption-title">Vérité Terrain Littoral</div>
+            <div class="caption-note">Pente herbeuse, sentier et bâtisse d'observation.</div>
+            <div class="caption-tags ui">
+              <span class="tag-pill">TERRAIN SOP</span>
+              <span class="tag-pill">MESH MASTER</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════
+         VUE 04 : EXISTANT PIXEL-PERFECT (ZenRayProgress Replica)
+         ══════════════════════════════════════════════════════════ -->
+    <section class="prop-view" data-prop="4" style="display:none;">
+      <div class="zr-reference-gallery">
+        <!-- Header exact de ZenRayProgress -->
+        <div class="zr-gallery-hero">
+          <div>
+            <h1 class="title">ToDo-3D</h1>
+            <p class="subtitle" style="font-family:var(--font-body);">Références 3D épinglées pour le texturing Copernicus et les HDA.</p>
+          </div>
+
+          <div style="display:flex; align-items:center; gap:8px;">
+            <!-- Switch colonnes 3 / 4 exact -->
+            <div role="group" aria-label="Colonnes" style="display:inline-flex; gap:2px; padding:2px; borderRadius:8px; background:rgba(128,128,128,.12);">
+              <button type="button" class="btn-col" data-cols="3" style="width:28px; height:22px; border-radius:6px; border:0; background:transparent; color:var(--muted); font:600 12px var(--font-ui); cursor:pointer;">3</button>
+              <button type="button" class="btn-col active" data-cols="4" style="width:28px; height:22px; border-radius:6px; border:0; background:var(--surface); color:var(--ink); font:600 12px var(--font-ui); cursor:pointer; box-shadow:0 1px 3px rgba(0,0,0,.14);">4</button>
+            </div>
+
+            <!-- Bouton Partager -->
+            <button type="button" class="btn-tool" style="padding:4px 9px; font-size:12px;">
+              <span>Partager ↗</span>
+            </button>
+
+            <!-- Bouton Options -->
+            <button type="button" class="btn-tool" style="padding:4px 9px; font-size:12px; background:var(--accent-soft); color:var(--accent); border-color:var(--accent);">
+              <span>Options actives</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Fil d'Ariane hiérarchique -->
+        <nav class="zr-gallery-nav" aria-label="Fil d’Ariane">
+          <button type="button" class="zr-breadcrumb-crumb active">ToDo-3D</button>
+          <span style="color:var(--muted);">›</span>
+          <span style="color:var(--muted); font-size:12px;">Racine (<span class="num">28</span> références)</span>
+        </nav>
+
+        <!-- Grille avec structure et classes exactes de ZenRayProgress -->
+        <div class="zr-gallery-grid">
+          <!-- Item 1 : Vidéo 4K (Nouveau, avec hover play et sans bande noire) -->
+          <div class="zr-gallery-tile">
+            <button type="button" class="zr-gallery-remove" title="Retirer">✕</button>
+            <div class="zr-gallery-visual video-tile" role="button" tabindex="0">
+              <video src="media/clip.mp4" muted loop playsinline preload="metadata"></video>
+              <div class="play-indicator">▶</div>
+              <span class="media-badge num">MP4 4K</span>
+              <div class="zr-gallery-caption">
+                <h3>On visite un Japon méconnu avec @IchibanJapan ! 🇯🇵 Amin Japania (4K MP4)</h3>
+                <a href="https://www.youtube.com/watch?v=QiRZ96ACGSE&t=1003s" target="_blank" rel="noopener">YouTube · @IchibanJapan ↗</a>
+                <p>Extrait 16:43-16:46 (88 frames, plan continu vérifié sans coupure)</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2 : GIF Haute Définition (Nouveau, sans bande noire) -->
+          <div class="zr-gallery-tile">
+            <button type="button" class="zr-gallery-remove" title="Retirer">✕</button>
+            <div class="zr-gallery-visual gif-tile" role="button" tabindex="0">
+              <img src="media/clip.gif" alt="GIF Animé" loading="lazy">
+              <span class="media-badge num">GIF</span>
+              <div class="zr-gallery-caption">
+                <h3>On visite un Japon méconnu avec @IchibanJapan ! 🇯🇵 Amin Japania (GIF)</h3>
+                <a href="https://www.youtube.com/watch?v=QiRZ96ACGSE&t=1003s" target="_blank" rel="noopener">YouTube · @IchibanJapan ↗</a>
+                <p>Extrait 16:43-16:46 (boucle continue fluide palettegen)</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3 : Dossier réel GTA 6 avec ses 18 items -->
+          <div class="zr-gallery-tile">
+            <button type="button" class="zr-gallery-remove" title="Retirer">✕</button>
+            <div class="zr-gallery-visual" role="button" tabindex="0" style="cursor:pointer;">
+              <div class="folder-mosaic">
+                <img src="media/sample_1.jpg" alt="GTA">
+                <img src="media/sample_2.jpg" alt="GTA">
+                <img src="media/sample_3.jpg" alt="GTA">
+                <img src="media/sample_4.jpg" alt="GTA">
+              </div>
+              <div class="zr-gallery-caption">
+                <h3>GTA 6</h3>
+                <span class="zr-gallery-count"><span class="num">18</span> références</span>
+                <p>Captures de paysages et ambiances urbaines</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 4 : Dossier réel Louisiana Bayou avec ses 8 items -->
+          <div class="zr-gallery-tile">
+            <button type="button" class="zr-gallery-remove" title="Retirer">✕</button>
+            <div class="zr-gallery-visual" role="button" tabindex="0" style="cursor:pointer;">
+              <div class="folder-mosaic">
+                <img src="media/sub_1.jpg" alt="Bayou">
+                <img src="media/sub_2.jpg" alt="Bayou">
+                <img src="media/sub_3.jpg" alt="Bayou">
+                <img src="media/sub_4.jpg" alt="Bayou">
+              </div>
+              <div class="zr-gallery-caption">
+                <h3>Louisiana Bayou</h3>
+                <span class="zr-gallery-count"><span class="num">8</span> références</span>
+                <p>Textures et géométries bayou pour scène Houdini</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 5 : Lion Mosaic (Existant réel de todo-3d.json) -->
+          <div class="zr-gallery-tile">
+            <button type="button" class="zr-gallery-remove" title="Retirer">✕</button>
+            <div class="zr-gallery-visual" role="button" tabindex="0">
+              <img src="media/ref.jpg" alt="Lion Mosaic" loading="lazy">
+              <div class="zr-gallery-caption">
+                <h3>Lion Mosaic · Substance Designer</h3>
+                <a href="https://www.artstation.com/artwork/JeX5OZ" target="_blank" rel="noopener">ArtStation ↗</a>
+                <p>Par Antoine Déjean</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 6 : Référence Japonaise existante -->
+          <div class="zr-gallery-tile">
+            <button type="button" class="zr-gallery-remove" title="Retirer">✕</button>
+            <div class="zr-gallery-visual" role="button" tabindex="0">
+              <img src="media/sample_3.jpg" alt="Japan Moss" loading="lazy">
+              <div class="zr-gallery-caption">
+                <h3>Moss Japan Background</h3>
+                <a href="#" target="_blank" rel="noopener">Référence · Japan ↗</a>
+                <p>Planche de mousses et roches pour environnement naturel</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 7 : Dossier vide avec initiales dégradé bleu nuit (Comportement réel) -->
+          <div class="zr-gallery-tile">
+            <button type="button" class="zr-gallery-remove" title="Retirer">✕</button>
+            <div class="zr-gallery-visual" role="button" tabindex="0" style="cursor:pointer;">
+              <div style="width:100%; height:100%; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:6px; background:radial-gradient(circle at 30% 25%, rgba(10,132,255,.22), rgba(18,18,22,.92) 75%);">
+                <span style="font:400 34px/1 var(--font-title); color:rgba(255,255,255,.78); letter-spacing:.03em;">EB</span>
+                <span style="font:400 11px var(--font-ui); color:rgba(255,255,255,.5);">Nouveau groupe</span>
+              </div>
+              <div class="zr-gallery-caption">
+                <h3>Eucalyptus Biome</h3>
+                <span class="zr-gallery-count"><span class="num">0</span> référence</span>
+                <p>Dossier vide en attente de références</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 8 : Image 16:9 existante adaptée sans bande noire -->
+          <div class="zr-gallery-tile">
+            <button type="button" class="zr-gallery-remove" title="Retirer">✕</button>
+            <div class="zr-gallery-visual" role="button" tabindex="0">
+              <img src="media/sample_4.jpg" alt="Terrain" loading="lazy">
+              <div class="zr-gallery-caption">
+                <h3>Demon's Souls Nexus Study</h3>
+                <a href="#" target="_blank" rel="noopener">ArtStation · Alexis Boyer ↗</a>
+                <p>Architecture néogothique et dalles de pierre taillée</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- NOTIFICATION TOAST -->
+  <div class="toast" id="toast">Réglages CSS copiés dans le presse-papier !</div>
+
+  <script>
+    // ── GESTION DES 4 ONGLETS ──
+    const tabs = document.querySelectorAll('.prop-tab');
+    const views = document.querySelectorAll('.prop-view');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        const target = tab.dataset.target;
+        views.forEach(v => {
+          v.style.display = (v.dataset.prop === target) ? 'block' : 'none';
+        });
+      });
+    });
+
+    // ── FONT SWAP INTERACTIF (CORPS : GT STANDARD L <-> LITERATA) ──
+    const htmlEl = document.documentElement;
+    const btnFontGt = document.getElementById('btnFontGt');
+    const btnFontLiterata = document.getElementById('btnFontLiterata');
+    const currentBodyFontName = document.getElementById('currentBodyFontName');
+
+    btnFontGt.addEventListener('click', () => {
+      htmlEl.setAttribute('data-body-font', 'gtstandard');
+      btnFontGt.classList.add('active');
+      btnFontLiterata.classList.remove('active');
+      currentBodyFontName.textContent = 'GT Standard L';
+    });
+
+    btnFontLiterata.addEventListener('click', () => {
+      htmlEl.setAttribute('data-body-font', 'literata');
+      btnFontLiterata.classList.add('active');
+      btnFontGt.classList.remove('active');
+      currentBodyFontName.textContent = 'Literata';
+    });
+
+    // ── SLIDERS PARAMÉTRIQUES HDA ──
+    const colSlider = document.getElementById('colSlider');
+    const colVal = document.getElementById('colVal');
+    colSlider.addEventListener('input', (e) => {
+      htmlEl.style.setProperty('--gal-cols', e.target.value);
+      colVal.textContent = e.target.value;
+      // Sync switch de colonnes de la vue 4
+      document.querySelectorAll('.btn-col').forEach(b => {
+        b.classList.toggle('active', b.dataset.cols === e.target.value);
+      });
+    });
+
+    const gapSlider = document.getElementById('gapSlider');
+    const gapVal = document.getElementById('gapVal');
+    gapSlider.addEventListener('input', (e) => {
+      htmlEl.style.setProperty('--gal-gap', e.target.value + 'px');
+      gapVal.textContent = e.target.value + 'px';
+    });
+
+    const radiusSlider = document.getElementById('radiusSlider');
+    const radiusVal = document.getElementById('radiusVal');
+    radiusSlider.addEventListener('input', (e) => {
+      htmlEl.style.setProperty('--gal-radius', e.target.value + 'px');
+      radiusVal.textContent = e.target.value + 'px';
+    });
+
+    const ratioSelect = document.getElementById('ratioSelect');
+    ratioSelect.addEventListener('change', (e) => {
+      htmlEl.style.setProperty('--gal-ratio', e.target.value);
+    });
+
+    const fitSelect = document.getElementById('fitSelect');
+    fitSelect.addEventListener('change', (e) => {
+      htmlEl.style.setProperty('--gal-fit', e.target.value);
+    });
+
+    // ── SWITCH COLONNES DE LA VUE 4 ──
+    document.querySelectorAll('.btn-col').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const c = btn.dataset.cols;
+        colSlider.value = c;
+        htmlEl.style.setProperty('--gal-cols', c);
+        colVal.textContent = c;
+        document.querySelectorAll('.btn-col').forEach(b => {
+          b.style.background = (b === btn) ? 'var(--surface)' : 'transparent';
+          b.style.color = (b === btn) ? 'var(--ink)' : 'var(--muted)';
+          b.style.boxShadow = (b === btn) ? '0 1px 3px rgba(0,0,0,.14)' : 'none';
+        });
+      });
+    });
+
+    // ── THÈME CLAIR / SOMBRE ──
+    const themeToggle = document.getElementById('themeToggle');
+    themeToggle.addEventListener('click', () => {
+      const current = htmlEl.getAttribute('data-theme');
+      htmlEl.setAttribute('data-theme', current === 'dark' ? 'light' : 'dark');
+    });
+
+    // ── HOVER PLAY / PAUSE SUR MP4 ET GIF ──
+    const videoTiles = document.querySelectorAll('.video-tile');
+    videoTiles.forEach(tile => {
+      const video = tile.querySelector('video');
+      const scrubFill = tile.querySelector('.scrub-fill');
+      if (!video) return;
+
+      tile.addEventListener('mouseenter', () => {
+        tile.classList.add('is-playing');
+        video.play().catch(() => {});
+      });
+
+      tile.addEventListener('mouseleave', () => {
+        tile.classList.remove('is-playing');
+        video.pause();
+      });
+
+      if (scrubFill) {
+        video.addEventListener('timeupdate', () => {
+          if (video.duration) {
+            const pct = (video.currentTime / video.duration) * 100;
+            scrubFill.style.width = pct + '%';
+          }
+        });
+      }
+    });
+
+    // ── COPIER RÉGLAGES CSS POUR LE PROMPT ──
+    const copyCssBtn = document.getElementById('copyCssBtn');
+    const toast = document.getElementById('toast');
+    copyCssBtn.addEventListener('click', () => {
+      const bodyFontChoice = htmlEl.getAttribute('data-body-font') === 'literata' ? "'Literata', serif" : "'GT Standard L', sans-serif";
+      const cssString = `:root {
+  --gallery-columns: ${colSlider.value};
+  --gallery-gap: ${gapSlider.value}px;
+  --gallery-radius: ${radiusSlider.value}px;
+  --gallery-image-ratio: ${ratioSelect.value};
+  --gallery-image-fit: ${fitSelect.value};
+  --font-title: 'GT Ultra', sans-serif;
+  --font-num: 'GT Ultra', sans-serif;
+  --font-body: ${bodyFontChoice};
+  --font-ui: 'GT Standard L', sans-serif;
+}`;
+      navigator.clipboard.writeText(cssString).then(() => {
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 2400);
+      });
+    });
+  </script>
+</body>
+</html>

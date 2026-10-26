@@ -1,0 +1,20 @@
+{
+  "date": "26 October 2026",
+  "slug": "gallery-rework-todo3d",
+  "folder": "2026-10-26-gallery-rework-todo3d-v2",
+  "version": 2,
+  "title": "Rework Galerie ToDo-3D (4 Propositions, Hover Video, GT Ultra, Toggle Corps)",
+  "module": "ZenRayProgress Gallery",
+  "assetsProject": "zenray-edit",
+  "project": "zenray-progress",
+  "status": "pending",
+  "atelier": "/Users/zenray/.claude/tmp/tmp-gallery-rework-26-October-2026",
+  "files": [
+    "index.html",
+    "check.png",
+    "preview-1280.png"
+  ],
+  "indexSha256": "b107cbec71a704102f9fafc160eb3829fe0d386fcbbcb6f2a9fb4957f2f09f17",
+  "filedAt": "2026-10-26T15:25:37.271Z",
+  "note": null
+}
