@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-10-26T09:43:19.684Z",
+ "scannedAt": "2026-10-26T09:51:36.611Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -146,22 +146,6 @@
    "updatedAt": "2026-10-21T13:55:39.545Z",
    "bytes": 44845970,
    "boundProject": "uv-match-height-20-october-2026"
-  },
-  {
-   "projectId": "zenray-progress",
-   "lines": 37,
-   "work": 4,
-   "prompts": 14,
-   "first": "2026-10-12T12:35:23.765Z",
-   "last": "2026-10-17T21:25:21.769Z",
-   "strength": "strong",
-   "conversationId": "codex:01a1301b-f199-7773-863c-b2a78d50b909",
-   "provider": "codex",
-   "sessionId": "01a1301b-f199-7773-863c-b2a78d50b909",
-   "title": "Conversation codex 01a1301b",
-   "updatedAt": "2026-10-18T22:34:26.136Z",
-   "bytes": 41044233,
-   "boundProject": "zenray-japanese"
   },
   {
    "projectId": "zenray-progress",
@@ -319,8 +303,8 @@
    "provider": "claude",
    "sessionId": "09d15ec8-88ad-4965-a2f0-80b68515e880",
    "title": "zenray meshes",
-   "updatedAt": "2026-10-26T09:42:42.948Z",
-   "bytes": 38189,
+   "updatedAt": "2026-10-26T09:46:00.954Z",
+   "bytes": 38230,
    "boundProject": "zenray-meshes"
   },
   {
@@ -543,8 +527,8 @@
    "provider": "claude",
    "sessionId": "80b6c85a-fcd0-427a-a4c6-75b9f9c24ff5",
    "title": "Chicorée avantages/inconvénients et citation lion",
-   "updatedAt": "2026-10-25T13:56:04.497Z",
-   "bytes": 38383,
+   "updatedAt": "2026-10-26T09:50:29.755Z",
+   "bytes": 3784184,
    "boundProject": null
   },
   {
@@ -607,8 +591,8 @@
    "provider": "claude",
    "sessionId": "38575095-b716-47ed-af1d-bf22b8ff30eb",
    "title": "zenray freelance",
-   "updatedAt": "2026-10-26T09:22:00.864Z",
-   "bytes": 38425,
+   "updatedAt": "2026-10-26T09:50:29.811Z",
+   "bytes": 5474236,
    "boundProject": null
   },
   {
@@ -695,6 +679,38 @@
    "projectId": "zenray-progress",
    "lines": 2,
    "work": 0,
+   "prompts": 1,
+   "first": "2026-10-26T09:48:54.499Z",
+   "last": "2026-10-26T09:48:54.500Z",
+   "strength": "weak",
+   "conversationId": "codex:01a1779c-e438-78e2-a3df-a723e47de83f",
+   "provider": "codex",
+   "sessionId": "01a1779c-e438-78e2-a3df-a723e47de83f",
+   "title": "Conversation codex 01a1779c",
+   "updatedAt": "2026-10-26T09:50:31.770Z",
+   "bytes": 559726,
+   "boundProject": null
+  },
+  {
+   "projectId": "zenray-progress",
+   "lines": 2,
+   "work": 0,
+   "prompts": 0,
+   "first": "2026-10-25T13:40:53.907Z",
+   "last": "2026-10-25T13:40:53.907Z",
+   "strength": "weak",
+   "conversationId": "claude:49b7cc73-992e-4b7f-a693-9e6a0cda48b3",
+   "provider": "claude",
+   "sessionId": "49b7cc73-992e-4b7f-a693-9e6a0cda48b3",
+   "title": "zenray argent",
+   "updatedAt": "2026-10-26T09:50:29.756Z",
+   "bytes": 4459002,
+   "boundProject": "qlmarkdown-designs-25-october-2026"
+  },
+  {
+   "projectId": "zenray-progress",
+   "lines": 2,
+   "work": 0,
    "prompts": 0,
    "first": "2026-10-26T08:47:35.579Z",
    "last": "2026-10-26T08:47:35.579Z",
@@ -738,22 +754,6 @@
    "updatedAt": "2026-10-25T16:10:18.638Z",
    "bytes": 1376754,
    "boundProject": null
-  },
-  {
-   "projectId": "zenray-progress",
-   "lines": 2,
-   "work": 0,
-   "prompts": 0,
-   "first": "2026-10-25T13:40:53.907Z",
-   "last": "2026-10-25T13:40:53.907Z",
-   "strength": "weak",
-   "conversationId": "claude:49b7cc73-992e-4b7f-a693-9e6a0cda48b3",
-   "provider": "claude",
-   "sessionId": "49b7cc73-992e-4b7f-a693-9e6a0cda48b3",
-   "title": "zenray argent",
-   "updatedAt": "2026-10-25T15:35:09.669Z",
-   "bytes": 38169,
-   "boundProject": "qlmarkdown-designs-25-october-2026"
   },
   {
    "projectId": "zenray-progress",
@@ -929,22 +929,6 @@
    "title": "1 zenray freelance",
    "updatedAt": "2026-10-17T13:47:05.186Z",
    "bytes": 40212,
-   "boundProject": null
-  },
-  {
-   "projectId": "zenray-progress",
-   "lines": 2,
-   "work": 0,
-   "prompts": 1,
-   "first": "2026-10-15T09:02:30.805Z",
-   "last": "2026-10-15T09:02:30.807Z",
-   "strength": "weak",
-   "conversationId": "codex:01a13ecc-751b-7bd3-8d67-6eaa5aaa5ed6",
-   "provider": "codex",
-   "sessionId": "01a13ecc-751b-7bd3-8d67-6eaa5aaa5ed6",
-   "title": "Conversation codex 01a13ecc",
-   "updatedAt": "2026-10-16T12:19:54.013Z",
-   "bytes": 2860545,
    "boundProject": null
   },
   {
