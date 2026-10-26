@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-10-26T10:15:04.540Z",
+ "scannedAt": "2026-10-26T10:28:38.083Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -469,18 +469,18 @@
   },
   {
    "projectId": "zenray-progress",
-   "lines": 6,
+   "lines": 8,
    "work": 0,
    "prompts": 0,
    "first": "2026-10-25T16:05:21.061Z",
-   "last": "2026-10-26T10:10:24.215Z",
+   "last": "2026-10-26T10:20:26.385Z",
    "strength": "weak",
    "conversationId": "claude:7b4fce4a-5400-4962-a3d3-28b11fde651d",
    "provider": "claude",
    "sessionId": "7b4fce4a-5400-4962-a3d3-28b11fde651d",
    "title": "speech to text claude",
-   "updatedAt": "2026-10-26T10:14:26.275Z",
-   "bytes": 12577122,
+   "updatedAt": "2026-10-26T10:28:01.289Z",
+   "bytes": 38071,
    "boundProject": "zenray-dictate"
   },
   {
@@ -530,6 +530,22 @@
    "updatedAt": "2026-10-07T09:05:28.740Z",
    "bytes": 23256,
    "boundProject": "zenray-freelance"
+  },
+  {
+   "projectId": "zenray-progress",
+   "lines": 5,
+   "work": 0,
+   "prompts": 0,
+   "first": "2026-10-26T08:47:05.520Z",
+   "last": "2026-10-26T10:28:20.185Z",
+   "strength": "weak",
+   "conversationId": "claude:38575095-b716-47ed-af1d-bf22b8ff30eb",
+   "provider": "claude",
+   "sessionId": "38575095-b716-47ed-af1d-bf22b8ff30eb",
+   "title": "zenray freelance",
+   "updatedAt": "2026-10-26T10:28:36.818Z",
+   "bytes": 9502653,
+   "boundProject": null
   },
   {
    "projectId": "zenray-progress",
@@ -594,22 +610,6 @@
    "updatedAt": "2026-10-21T10:06:45.761Z",
    "bytes": 33540,
    "boundProject": "conversation-claude-f636b9060f04a23ee355c148"
-  },
-  {
-   "projectId": "zenray-progress",
-   "lines": 3,
-   "work": 0,
-   "prompts": 0,
-   "first": "2026-10-26T08:47:05.520Z",
-   "last": "2026-10-26T08:52:36.506Z",
-   "strength": "weak",
-   "conversationId": "claude:38575095-b716-47ed-af1d-bf22b8ff30eb",
-   "provider": "claude",
-   "sessionId": "38575095-b716-47ed-af1d-bf22b8ff30eb",
-   "title": "zenray freelance",
-   "updatedAt": "2026-10-26T10:14:55.270Z",
-   "bytes": 7539308,
-   "boundProject": null
   },
   {
    "projectId": "zenray-progress",

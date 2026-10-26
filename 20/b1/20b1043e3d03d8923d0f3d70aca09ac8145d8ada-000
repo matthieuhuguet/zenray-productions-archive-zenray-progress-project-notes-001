@@ -1,0 +1,19 @@
+{
+  "date": "26 October 2026",
+  "slug": "sidebar-literata-gt-standard",
+  "folder": "2026-10-26-sidebar-literata-gt-standard",
+  "version": 1,
+  "title": "Sidebar de gauche en Literata et GT Standard L, curseurs, Freelance sous Plan",
+  "module": "sidebar",
+  "assetsProject": "zenray-edit",
+  "project": "zenray-progress",
+  "status": "pending",
+  "atelier": "/Users/zenray/.claude/tmp/tmp-zenray-sidebar-fonts-26-october-2026",
+  "files": [
+    "index.html",
+    "preview.png"
+  ],
+  "indexSha256": "f2f1e4510a57de2d7ae492adff3d8016e528005854eba4000839b46ec3797612",
+  "filedAt": "2026-10-26T10:28:18.406Z",
+  "note": null
+}
