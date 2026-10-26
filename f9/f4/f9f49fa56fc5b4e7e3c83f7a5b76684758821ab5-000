@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-10-26T12:43:14.779Z",
+ "scannedAt": "2026-10-26T12:48:48.040Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -222,8 +222,8 @@
    "conversationId": "gemini:dad216b8-610b-4279-a532-56e02644714d",
    "provider": "gemini",
    "sessionId": "dad216b8-610b-4279-a532-56e02644714d",
-   "title": "Conversation Gemini dad216b8",
-   "updatedAt": "2026-10-14T21:13:27.597Z",
+   "title": "zenray progress les fichiers n'ont pas de sous titres pourquoi ? bleach ? until grep -qE \"STAGE FAILED|Traceback|PROOF RED|FINISH FAILED|pub",
+   "updatedAt": "2026-10-14T21:12:45.577735+00:00",
    "bytes": 11730944,
    "boundProject": null
   },
@@ -286,8 +286,8 @@
    "conversationId": "gemini:fae4d3c5-109b-41fa-a03a-0a81a8c0b271",
    "provider": "gemini",
    "sessionId": "fae4d3c5-109b-41fa-a03a-0a81a8c0b271",
-   "title": "Conversation Gemini fae4d3c5",
-   "updatedAt": "2026-10-23T20:00:48.222Z",
+   "title": "J'ai un bug critique sur mon application custom de picker color qui fait que parfois le clic fait que je peux plus cliquer sur la barre des ",
+   "updatedAt": "2026-10-23T20:00:09.881076+00:00",
    "bytes": 22413312,
    "boundProject": null
   },
@@ -319,8 +319,8 @@
    "provider": "claude",
    "sessionId": "09d15ec8-88ad-4965-a2f0-80b68515e880",
    "title": "zenray meshes",
-   "updatedAt": "2026-10-26T12:38:45.112Z",
-   "bytes": 390495713,
+   "updatedAt": "2026-10-26T12:43:56.632Z",
+   "bytes": 391635860,
    "boundProject": "zenray-meshes"
   },
   {
@@ -511,8 +511,8 @@
    "provider": "claude",
    "sessionId": "38575095-b716-47ed-af1d-bf22b8ff30eb",
    "title": "zenray freelance",
-   "updatedAt": "2026-10-26T12:38:51.479Z",
-   "bytes": 15262404,
+   "updatedAt": "2026-10-26T12:40:51.629Z",
+   "bytes": 38632,
    "boundProject": "zenray-calendar-plan-23-october-2026"
   },
   {
@@ -1342,8 +1342,8 @@
    "conversationId": "gemini:3e22a918-b7a6-4b1f-99ea-e50907f40d44",
    "provider": "gemini",
    "sessionId": "3e22a918-b7a6-4b1f-99ea-e50907f40d44",
-   "title": "Conversation Gemini 3e22a918",
-   "updatedAt": "2026-09-15T20:06:00.494Z",
+   "title": "'/Users/zenray/Movies/2026-09-15 20-36-50.mkv' to mov et speed jusqu'à ce que ça fasse 30 secondes speed ajusté à la longueur initial. go da",
+   "updatedAt": "2026-09-15T20:05:24.351772+00:00",
    "bytes": 3629056,
    "boundProject": null
   },
