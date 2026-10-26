@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZenRay Progress — Rework Vue Galerie (3 Propositions)</title>
+  <style>
+    @font-face {
+      font-family: 'GT Ultra';
+      src: url('file:///Users/zenray/.claude/skills/zenray-edit/designs/_shared/fonts/GT-Ultra-Regular.woff2') format('woff2');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'GT Standard L';
+      src: url('file:///Users/zenray/.claude/skills/zenray-edit/designs/_shared/fonts/GT-Standard-L-Regular.woff2') format('woff2');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'GT Standard L';
+      src: url('file:///Users/zenray/.claude/skills/zenray-edit/designs/_shared/fonts/GT-Standard-L-Bold.woff2') format('woff2');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Literata';
+      src: url('file:///Users/zenray/.claude/skills/zenray-edit/designs/_shared/fonts/Literata-latin.woff2') format('woff2');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    :root {
+      --font-title: 'GT Ultra', -apple-system, sans-serif;
+      --font-num: 'GT Ultra', -apple-system, sans-serif;
+      --font-body: 'Literata', Georgia, serif;
+      --font-ui: 'GT Standard L', -apple-system, sans-serif;
+
+      --bg: #121214;
+      --surface: #1c1c20;
+      --surface-subtle: #24242a;
+      --border: rgba(255, 255, 255, 0.08);
+      --ink: #f4f4f6;
+      --muted: #9a9aa2;
+      --accent: #3b82f6;
+      --accent-soft: rgba(59, 130, 246, 0.16);
+      --letterbox: rgba(255, 255, 255, 0.03);
+
+      /* Paramètres réglables par sliders */
+      --gal-cols: 4;
+      --gal-gap: 18px;
+      --gal-radius: 8px;
+      --gal-ratio: 4 / 3;
+      --gal-fit: cover;
+      --halo-opacity: 0.35;
+    }
+
+    [data-theme="light"] {
+      --bg: #f7f7f9;
+      --surface: #ffffff;
+      --surface-subtle: #f0f0f3;
+      --border: rgba(0, 0, 0, 0.08);
+      --ink: #16161a;
+      --muted: #6e6e76;
+      --accent: #2563eb;
+      --accent-soft: rgba(37, 99, 235, 0.12);
+      --letterbox: rgba(0, 0, 0, 0.03);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--font-body);
+      font-size: 15px;
+      line-height: 1.5;
+      padding-bottom: 90px;
+      transition: background 0.2s ease, color 0.2s ease;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Utilitaires typographiques */
+    .title, h1, h2, h3 { font-family: var(--font-title); font-weight: 400; letter-spacing: -0.015em; }
+    .num { font-family: var(--font-num); font-variant-numeric: tabular-nums; font-weight: 400; }
+    .ui, button, label, input, select, .badge { font-family: var(--font-ui); font-size: 13px; }
+
+    /* Panneau Paramétrique Supérieur HDA */
+    .control-deck {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(24, 24, 28, 0.88);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+    }
+    [data-theme="light"] .control-deck {
+      background: rgba(255, 255, 255, 0.90);
+    }
+
+    .deck-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .propositions-tabs {
+      display: inline-flex;
+      background: var(--surface-subtle);
+      padding: 3px;
+      border-radius: 9px;
+      border: 1px solid var(--border);
+      gap: 3px;
+    }
+
+    .prop-tab {
+      padding: 7px 15px;
+      border-radius: 7px;
+      border: 0;
+      background: transparent;
+      color: var(--muted);
+      cursor: pointer;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.16s ease;
+    }
+    .prop-tab.active {
+      background: var(--surface);
+      color: var(--ink);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+    }
+    .prop-tab .tab-idx {
+      font-family: var(--font-num);
+      font-size: 12px;
+      opacity: 0.6;
+    }
+
+    .deck-sliders {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+      padding-top: 4px;
+      font-family: var(--font-ui);
+      font-size: 12px;
+    }
+
+    .slider-group {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .slider-group label {
+      color: var(--muted);
+      white-space: nowrap;
+    }
+    .slider-group .slider-val {
+      font-family: var(--font-num);
+      color: var(--ink);
+      min-width: 28px;
+      text-align: right;
+    }
+    .slider-group input[type="range"] {
+      width: 90px;
+      accent-color: var(--accent);
+      cursor: pointer;
+    }
+
+    .select-pill {
+      background: var(--surface-subtle);
+      border: 1px solid var(--border);
+      color: var(--ink);
+      padding: 4px 10px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .copy-btn, .theme-btn {
+      background: var(--surface-subtle);
+      border: 1px solid var(--border);
+      color: var(--ink);
+      padding: 7px 13px;
+      border-radius: 7px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: background 0.15s ease;
+    }
+    .copy-btn:hover, .theme-btn:hover {
+      background: var(--accent-soft);
+      border-color: var(--accent);
+    }
+
+    /* Conteneur principal */
+    .container {
+      max-width: 1680px;
+      margin: 0 auto;
+      padding: 32px 36px;
+    }
+
+    /* En-tête de section */
+    .view-hero {
+      margin-bottom: 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 18px;
+    }
+    .view-hero h1 {
+      font-size: 32px;
+      color: var(--ink);
+      line-height: 1.15;
+    }
+    .view-hero .subtitle {
+      color: var(--muted);
+      font-size: 14px;
+      margin-top: 6px;
+    }
+    .hero-meta {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      color: var(--muted);
+      font-family: var(--font-ui);
+      font-size: 13px;
+    }
+
+    /* Grille principale paramétrique */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(var(--gal-cols), minmax(0, 1fr));
+      gap: var(--gal-gap);
+      align-items: start;
+    }
+
+    /* Tuiles génériques */
+    .tile {
+      position: relative;
+      background: var(--surface);
+      border-radius: var(--gal-radius);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+    .tile:hover {
+      border-color: rgba(255, 255, 255, 0.18);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.30);
+    }
+    [data-theme="light"] .tile:hover {
+      border-color: rgba(0, 0, 0, 0.15);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.10);
+    }
+
+    .media-box {
+      width: 100%;
+      aspect-ratio: var(--gal-ratio);
+      background: var(--letterbox);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .media-box img, .media-box video {
+      width: 100%;
+      height: 100%;
+      object-fit: var(--gal-fit);
+      display: block;
+      transition: transform 0.25s ease;
+    }
+    .tile:hover .media-box img, .tile:hover .media-box video {
+      transform: scale(1.02);
+    }
+
+    /* Badges de format */
+    .media-badge {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      padding: 3px 8px;
+      background: rgba(14, 14, 18, 0.78);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      color: #fff;
+      border-radius: 5px;
+      font-family: var(--font-ui);
+      font-weight: 700;
+      font-size: 10px;
+      letter-spacing: 0.05em;
+      pointer-events: none;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+    .tile:hover .media-badge {
+      opacity: 0.9;
+    }
+
+    .play-indicator {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: 26px;
+      height: 26px;
+      border-radius: 999px;
+      background: rgba(0, 0, 0, 0.65);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      backdrop-filter: blur(6px);
+      pointer-events: none;
+      transition: all 0.2s ease;
+    }
+    .tile.is-playing .play-indicator {
+      background: var(--accent);
+      transform: scale(0.9);
+    }
+
+    /* Légendes des tuiles */
+    .caption {
+      padding: 12px 14px 14px;
+      background: var(--surface);
+    }
+    .caption-title {
+      font-family: var(--font-title);
+      font-size: 15px;
+      color: var(--ink);
+      line-height: 1.3;
+      margin-bottom: 4px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .caption-note {
+      font-family: var(--font-body);
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.4;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .caption-meta {
+      margin-top: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: var(--font-ui);
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    /* ══════════════════════════════════════════════════════════
+       SPÉCIFICITÉS DES 3 PROPOSITIONS
+       ══════════════════════════════════════════════════════════ */
+
+    /* PROPOSITION 1 : Ultra-Simple & Épurée */
+    .prop-view[data-prop="1"] .gallery-grid {
+      --gal-gap: 14px;
+    }
+    .prop-view[data-prop="1"] .tile {
+      border: 0;
+      background: transparent;
+      box-shadow: none;
+    }
+    .prop-view[data-prop="1"] .media-box {
+      border-radius: var(--gal-radius);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+    }
+    .prop-view[data-prop="1"] .caption {
+      padding: 10px 4px 6px;
+      background: transparent;
+    }
+    .prop-view[data-prop="1"] .caption-title {
+      font-size: 14px;
+      font-weight: 500;
+    }
+    .prop-view[data-prop="1"] .caption-note {
+      font-size: 12px;
+      -webkit-line-clamp: 1;
+    }
+
+    /* PROPOSITION 2 : Classic Clean (Existant réaligné, zéro bande noire) */
+    .prop-view[data-prop="2"] .filter-bar {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 22px;
+      overflow-x: auto;
+      padding-bottom: 4px;
+    }
+    .prop-view[data-prop="2"] .filter-pill {
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--muted);
+      cursor: pointer;
+      font-weight: 500;
+      white-space: nowrap;
+      transition: all 0.15s ease;
+    }
+    .prop-view[data-prop="2"] .filter-pill.active {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+    .prop-view[data-prop="2"] .tile {
+      background: var(--surface);
+    }
+
+    /* PROPOSITION 3 : Innovation Éditoriale & Dynamic Studio */
+    .prop-view[data-prop="3"] .gallery-grid {
+      grid-template-columns: repeat(var(--gal-cols), minmax(0, 1fr));
+    }
+    .prop-view[data-prop="3"] .tile.hero-spot {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+    .prop-view[data-prop="3"] .tile.hero-spot .media-box {
+      aspect-ratio: 16 / 10;
+    }
+    .prop-view[data-prop="3"] .tile.hero-spot .caption-title {
+      font-size: 20px;
+    }
+    .prop-view[data-prop="3"] .tile.hero-spot .caption-note {
+      font-size: 14px;
+      -webkit-line-clamp: 3;
+    }
+    .prop-view[data-prop="3"] .ambient-glow {
+      position: absolute;
+      inset: -14px;
+      border-radius: calc(var(--gal-radius) + 12px);
+      background: radial-gradient(circle at 50% 50%, rgba(59, 130, 246, var(--halo-opacity)), transparent 70%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      z-index: -1;
+      pointer-events: none;
+      filter: blur(16px);
+    }
+    .prop-view[data-prop="3"] .tile:hover .ambient-glow {
+      opacity: 1;
+    }
+    .prop-view[data-prop="3"] .scrub-bar {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: rgba(255, 255, 255, 0.2);
+      z-index: 5;
+    }
+    .prop-view[data-prop="3"] .scrub-fill {
+      height: 100%;
+      width: 0%;
+      background: var(--accent);
+      transition: width 0.05s linear;
+    }
+
+    /* Dossier spécial style */
+    .folder-card {
+      border: 1px dashed var(--border) !important;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 24px 16px;
+      background: var(--surface-subtle) !important;
+      cursor: pointer;
+    }
+    .folder-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      display: grid;
+      place-items: center;
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
+
+    /* Notification toast */
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: #10b981;
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-family: var(--font-ui);
+      font-weight: 600;
+      font-size: 13px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+      opacity: 0;
+      transform: translateY(10px);
+      transition: all 0.25s ease;
+      pointer-events: none;
+      z-index: 200;
+    }
+    .toast.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- PANNEAU SUPÉRIEUR HDA (PROPOSITIONS & SLIDERS) -->
+  <header class="control-deck">
+    <div class="deck-top">
+      <div class="propositions-tabs ui" role="tablist">
+        <button type="button" class="prop-tab active" data-target="1">
+          <span class="tab-idx num">01</span>
+          <span>Ultra-Simple & Épurée</span>
+        </button>
+        <button type="button" class="prop-tab" data-target="2">
+          <span class="tab-idx num">02</span>
+          <span>Classic Clean (Existant)</span>
+        </button>
+        <button type="button" class="prop-tab" data-target="3">
+          <span class="tab-idx num">03</span>
+          <span>Innovation Éditoriale</span>
+        </button>
+      </div>
+
+      <div style="display:flex; align-items:center; gap:10px;">
+        <button type="button" class="theme-btn ui" id="themeToggle" title="Basculer thème clair/sombre">Thème Clair / Sombre</button>
+        <button type="button" class="copy-btn ui" id="copyCssBtn" title="Copier les variables CSS calibrées pour le prompt">Copier les réglages CSS</button>
+      </div>
+    </div>
+
+    <!-- CURSEURS PARAMÉTRIQUES HDA EN DIRECT -->
+    <div class="deck-sliders">
+      <div class="slider-group">
+        <label for="colSlider">Colonnes :</label>
+        <input type="range" id="colSlider" min="2" max="6" value="4" step="1">
+        <span class="slider-val" id="colVal">4</span>
+      </div>
+
+      <div class="slider-group">
+        <label for="gapSlider">Espacement :</label>
+        <input type="range" id="gapSlider" min="8" max="36" value="18" step="2">
+        <span class="slider-val" id="gapVal">18px</span>
+      </div>
+
+      <div class="slider-group">
+        <label for="radiusSlider">Arrondi :</label>
+        <input type="range" id="radiusSlider" min="0" max="24" value="8" step="2">
+        <span class="slider-val" id="radiusVal">8px</span>
+      </div>
+
+      <div class="slider-group">
+        <label for="ratioSelect">Ratio :</label>
+        <select id="ratioSelect" class="select-pill ui">
+          <option value="4 / 3" selected>4 : 3 (Standard)</option>
+          <option value="16 / 9">16 : 9 (Ciné)</option>
+          <option value="1 / 1">1 : 1 (Carré)</option>
+          <option value="auto">Auto / Libre</option>
+        </select>
+      </div>
+
+      <div class="slider-group">
+        <label for="fitSelect">Ajustement :</label>
+        <select id="fitSelect" class="select-pill ui">
+          <option value="cover" selected>Cover (Zéro bande noire)</option>
+          <option value="contain">Contain (Neutre)</option>
+        </select>
+      </div>
+
+      <div class="slider-group">
+        <label for="haloSlider">Intensité Halo :</label>
+        <input type="range" id="haloSlider" min="0" max="100" value="35" step="5">
+        <span class="slider-val" id="haloVal">35%</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTENU DE LA PROPOSITION ACTIVE -->
+  <main class="container">
+
+    <!-- PROPOSITION 1 : ULTRA-SIMPLE -->
+    <section class="prop-view" data-prop="1">
+      <div class="view-hero">
+        <div>
+          <h1 class="title">ToDo-3D · Vue Épurée</h1>
+          <p class="subtitle">Focus visuel immédiat, alignement strict à <span class="num">4</span> cases, bordures douces et absence totale de bandes noires.</p>
+        </div>
+        <div class="hero-meta">
+          <span><span class="num">28</span> références 3D</span>
+          <span>·</span>
+          <span>Auto-Play au survol</span>
+        </div>
+      </div>
+
+      <div class="gallery-grid">
+        <!-- Item 1: MP4 4K avec Hover Play -->
+        <article class="tile video-tile" data-media-type="video">
+          <div class="media-box">
+            <video src="media/clip.mp4" muted loop playsinline preload="metadata"></video>
+            <div class="play-indicator">▶</div>
+            <span class="media-badge num">4K MP4 · 0:03</span>
+          </div>
+          <div class="caption">
+            <div class="caption-title">Japon méconnu · Baie & Colline (Extrait 4K)</div>
+            <div class="caption-note">Plan fixe maritime continu vérifié de 16:43 à 16:46 avec @IchibanJapan.</div>
+            <div class="caption-meta">
+              <span>Résolution <span class="num">3840 × 2160</span></span>
+              <span><span class="num">26</span> Octobre <span class="num">2026</span></span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 2: GIF avec Hover Animation -->
+        <article class="tile gif-tile" data-media-type="gif">
+          <div class="media-box">
+            <img src="media/clip.gif" alt="Aperçu GIF" loading="lazy">
+            <span class="media-badge num">GIF · 720p</span>
+          </div>
+          <div class="caption">
+            <div class="caption-title">Boucle Maritime Céleste (GIF)</div>
+            <div class="caption-note">Boucle continue optimisée via palettegen deux passes.</div>
+            <div class="caption-meta">
+              <span>Palette <span class="num">256</span> teintes</span>
+              <span><span class="num">21.7</span> Mo</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 3: Référence Image 1 -->
+        <article class="tile">
+          <div class="media-box">
+            <img src="media/ref.jpg" alt="Référence paysage" loading="lazy">
+          </div>
+          <div class="caption">
+            <div class="caption-title">Planche Cadre Référence Terrain</div>
+            <div class="caption-note">Capture de validation géométrie 3D, pente herbeuse et relief littoral.</div>
+            <div class="caption-meta">
+              <span>Houdini Terrain</span>
+              <span>Master</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 4: Référence Image 2 -->
+        <article class="tile">
+          <div class="media-box">
+            <img src="media/sample_1.jpg" alt="Échantillon 1" loading="lazy">
+          </div>
+          <div class="caption">
+            <div class="caption-title">Étude Composition Littorale</div>
+            <div class="caption-note">Détail des sentiers et de la toiture pour texturing Copernicus.</div>
+            <div class="caption-meta">
+              <span>Shading PBR</span>
+              <span>v1</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 5: Référence Image 3 -->
+        <article class="tile">
+          <div class="media-box">
+            <img src="media/sample_3.jpg" alt="Échantillon 3" loading="lazy">
+          </div>
+          <div class="caption">
+            <div class="caption-title">Architecture & Cabane en Bois</div>
+            <div class="caption-note">Structure des bardages et modélisation procédurale des poutres.</div>
+            <div class="caption-meta">
+              <span>HDA Asset</span>
+              <span>V_004</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 6: Référence Image 4 -->
+        <article class="tile">
+          <div class="media-box">
+            <img src="media/sample_4.jpg" alt="Échantillon 4" loading="lazy">
+          </div>
+          <div class="caption">
+            <div class="caption-title">Végétation & Herbes Sauvages</div>
+            <div class="caption-note">Densité des touffes d'herbe et scatter procédural sur géométrie.</div>
+            <div class="caption-meta">
+              <span>Scatter Biome</span>
+              <span>4.0 UV/m</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 7: Dossier groupé -->
+        <article class="tile folder-card">
+          <div class="folder-icon">📁</div>
+          <div class="caption-title" style="margin-bottom:2px;">Louisiana Bayou</div>
+          <div class="caption-note"><span class="num">8</span> références groupées</div>
+        </article>
+
+        <!-- Item 8: Dossier groupé -->
+        <article class="tile folder-card">
+          <div class="folder-icon">📁</div>
+          <div class="caption-title" style="margin-bottom:2px;">GTA 6 Assets</div>
+          <div class="caption-note"><span class="num">18</span> captures environnement</div>
+        </article>
+      </div>
+    </section>
+
+    <!-- PROPOSITION 2 : CLASSIC CLEAN -->
+    <section class="prop-view" data-prop="2" style="display:none;">
+      <div class="view-hero">
+        <div>
+          <h1 class="title">ToDo-3D · Architecture Classique Réalignée</h1>
+          <p class="subtitle">Maintien rigoureux des dossiers, tags et filtres de ZenRayProgress, corrigé de toute bande noire avec carte d'aspect 4:3 plein cadre.</p>
+        </div>
+        <div class="hero-meta">
+          <span>Tri par date</span>
+          <span>·</span>
+          <span>Vue Grille <span class="num">4</span></span>
+        </div>
+      </div>
+
+      <div class="filter-bar ui">
+        <button type="button" class="filter-pill active">Tout voir (<span class="num">28</span>)</button>
+        <button type="button" class="filter-pill">Vidéos & GIF (<span class="num">2</span>)</button>
+        <button type="button" class="filter-pill">Dossiers (<span class="num">3</span>)</button>
+        <button type="button" class="filter-pill">Houdini Props (<span class="num">14</span>)</button>
+        <button type="button" class="filter-pill">Environnements (<span class="num">9</span>)</button>
+      </div>
+
+      <div class="gallery-grid">
+        <article class="tile video-tile" data-media-type="video">
+          <div class="media-box">
+            <video src="media/clip.mp4" muted loop playsinline preload="metadata"></video>
+            <div class="play-indicator">▶</div>
+            <span class="media-badge num">MP4 4K</span>
+          </div>
+          <div class="caption">
+            <div class="caption-title">On visite un Japon méconnu avec @IchibanJapan</div>
+            <div class="caption-note">Clip vidéo masterisé 3840×2160 sans compression agressive.</div>
+            <div class="caption-meta">
+              <span>Section 16:43-16:46</span>
+              <span><span class="num">88</span> frames</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="tile gif-tile" data-media-type="gif">
+          <div class="media-box">
+            <img src="media/clip.gif" alt="GIF Loop" loading="lazy">
+            <span class="media-badge num">GIF</span>
+          </div>
+          <div class="caption">
+            <div class="caption-title">Boucle Animée Japon Méconnu</div>
+            <div class="caption-note">Boucle infinie fluide prête pour affichage dynamique.</div>
+            <div class="caption-meta">
+              <span>Format WebP / GIF</span>
+              <span><span class="num">20</span> fps</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="tile">
+          <div class="media-box">
+            <img src="media/ref.jpg" alt="Ref" loading="lazy">
+          </div>
+          <div class="caption">
+            <div class="caption-title">Planche Référence Terrain</div>
+            <div class="caption-note">Contrôle visuel direct contre le frame original.</div>
+            <div class="caption-meta">
+              <span>Image de vérité</span>
+              <span>OK 100%</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="tile">
+          <div class="media-box">
+            <img src="media/sample_2.jpg" alt="Ref 2" loading="lazy">
+          </div>
+          <div class="caption">
+            <div class="caption-title">Relief Côtier et Rochers</div>
+            <div class="caption-note">Érosion maritime et modélisation de falaises procédurales.</div>
+            <div class="caption-meta">
+              <span>Height Map</span>
+              <span>Copernicus</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- PROPOSITION 3 : INNOVATION ÉDITORIALE -->
+    <section class="prop-view" data-prop="3" style="display:none;">
+      <div class="view-hero">
+        <div>
+          <h1 class="title">ToDo-3D · Studio Éditorial Dynamique</h1>
+          <p class="subtitle">Innovation design : Premier plan "Hero Spot" immersif, lueur ambiante chromatique douce réactive au survol et barre de scrubbing interactif.</p>
+        </div>
+        <div class="hero-meta">
+          <span>Mode Studio Pro</span>
+          <span>·</span>
+          <span>Ambient Glow</span>
+        </div>
+      </div>
+
+      <div class="gallery-grid">
+        <!-- Hero spot sur 2x2 colonnes -->
+        <article class="tile hero-spot video-tile" data-media-type="video">
+          <div class="ambient-glow"></div>
+          <div class="media-box">
+            <video src="media/clip.mp4" muted loop playsinline preload="metadata"></video>
+            <div class="play-indicator">▶</div>
+            <div class="scrub-bar"><div class="scrub-fill"></div></div>
+            <span class="media-badge num" style="font-size:12px; padding:4px 10px;">VEDETTE · 4K UHD MASTER</span>
+          </div>
+          <div class="caption" style="padding:18px 20px 20px;">
+            <div class="caption-title">On visite un Japon méconnu avec @IchibanJapan ! 🇯🇵 Amin Japania</div>
+            <div class="caption-note">Prise de vue panoramique maritime avec cabane d'observation et sentier littoral. Clip extrait avec précision chirurgicale de 16:43.57 à 16:46.47 (88 frames rigoureusement continues, sans aucune rupture de plan).</div>
+            <div class="caption-meta" style="margin-top:14px; font-size:13px;">
+              <span>Résolution native : <span class="num">3840 × 2160</span> (<span class="num">29.97</span> fps)</span>
+              <span>Master CRF <span class="num">16</span></span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Autres tuiles alignées autour -->
+        <article class="tile gif-tile" data-media-type="gif">
+          <div class="ambient-glow"></div>
+          <div class="media-box">
+            <img src="media/clip.gif" alt="GIF" loading="lazy">
+            <span class="media-badge num">GIF ANIMÉ</span>
+          </div>
+          <div class="caption">
+            <div class="caption-title">Boucle Dynamique</div>
+            <div class="caption-note">Palette haute fidélité 256 nuances.</div>
+          </div>
+        </article>
+
+        <article class="tile">
+          <div class="ambient-glow"></div>
+          <div class="media-box">
+            <img src="media/ref.jpg" alt="Ref" loading="lazy">
+          </div>
+          <div class="caption">
+            <div class="caption-title">Vérité Terrain 3D</div>
+            <div class="caption-note">Texture et géométrie de référence.</div>
+          </div>
+        </article>
+
+        <article class="tile">
+          <div class="ambient-glow"></div>
+          <div class="media-box">
+            <img src="media/sample_5.png" alt="Sample 5" loading="lazy">
+          </div>
+          <div class="caption">
+            <div class="caption-title">Première Frame Vérifiée</div>
+            <div class="caption-note">Frame 33 (16:43.57) validée sans transition.</div>
+          </div>
+        </article>
+
+        <article class="tile">
+          <div class="ambient-glow"></div>
+          <div class="media-box">
+            <img src="media/sample_6.png" alt="Sample 6" loading="lazy">
+          </div>
+          <div class="caption">
+            <div class="caption-title">Dernière Frame Vérifiée</div>
+            <div class="caption-note">Frame 120 (16:46.47) validée sans coupure.</div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- TOAST DE COPIE -->
+  <div class="toast" id="toast">Variables CSS copiées dans le presse-papier !</div>
+
+  <script>
+    // ── GESTION DES ONGLETS DE PROPOSITIONS ──
+    const tabs = document.querySelectorAll('.prop-tab');
+    const views = document.querySelectorAll('.prop-view');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        const target = tab.dataset.target;
+        views.forEach(v => {
+          v.style.display = (v.dataset.prop === target) ? 'block' : 'none';
+        });
+      });
+    });
+
+    // ── GESTION DES SLIDERS PARAMÉTRIQUES EN DIRECT ──
+    const root = document.documentElement;
+
+    const colSlider = document.getElementById('colSlider');
+    const colVal = document.getElementById('colVal');
+    colSlider.addEventListener('input', (e) => {
+      root.style.setProperty('--gal-cols', e.target.value);
+      colVal.textContent = e.target.value;
+    });
+
+    const gapSlider = document.getElementById('gapSlider');
+    const gapVal = document.getElementById('gapVal');
+    gapSlider.addEventListener('input', (e) => {
+      root.style.setProperty('--gal-gap', e.target.value + 'px');
+      gapVal.textContent = e.target.value + 'px';
+    });
+
+    const radiusSlider = document.getElementById('radiusSlider');
+    const radiusVal = document.getElementById('radiusVal');
+    radiusSlider.addEventListener('input', (e) => {
+      root.style.setProperty('--gal-radius', e.target.value + 'px');
+      radiusVal.textContent = e.target.value + 'px';
+    });
+
+    const ratioSelect = document.getElementById('ratioSelect');
+    ratioSelect.addEventListener('change', (e) => {
+      root.style.setProperty('--gal-ratio', e.target.value);
+    });
+
+    const fitSelect = document.getElementById('fitSelect');
+    fitSelect.addEventListener('change', (e) => {
+      root.style.setProperty('--gal-fit', e.target.value);
+    });
+
+    const haloSlider = document.getElementById('haloSlider');
+    const haloVal = document.getElementById('haloVal');
+    haloSlider.addEventListener('input', (e) => {
+      root.style.setProperty('--halo-opacity', (e.target.value / 100));
+      haloVal.textContent = e.target.value + '%';
+    });
+
+    // ── THÈME CLAIR / SOMBRE ──
+    const themeToggle = document.getElementById('themeToggle');
+    themeToggle.addEventListener('click', () => {
+      const current = root.getAttribute('data-theme');
+      root.setAttribute('data-theme', current === 'dark' ? 'light' : 'dark');
+    });
+
+    // ── LECTURE / PAUSE AUTOMATIQUE AU SURVOL (HOVER PLAY) ──
+    const videoTiles = document.querySelectorAll('.video-tile');
+    videoTiles.forEach(tile => {
+      const video = tile.querySelector('video');
+      const scrubFill = tile.querySelector('.scrub-fill');
+      if (!video) return;
+
+      tile.addEventListener('mouseenter', () => {
+        tile.classList.add('is-playing');
+        video.play().catch(() => {});
+      });
+
+      tile.addEventListener('mouseleave', () => {
+        tile.classList.remove('is-playing');
+        video.pause();
+      });
+
+      if (scrubFill) {
+        video.addEventListener('timeupdate', () => {
+          if (video.duration) {
+            const pct = (video.currentTime / video.duration) * 100;
+            scrubFill.style.width = pct + '%';
+          }
+        });
+      }
+    });
+
+    // ── BOUTON COPIER LES VARIABLES CSS ──
+    const copyCssBtn = document.getElementById('copyCssBtn');
+    const toast = document.getElementById('toast');
+    copyCssBtn.addEventListener('click', () => {
+      const cssString = `:root {
+  --gallery-columns: ${colSlider.value};
+  --gallery-gap: ${gapSlider.value}px;
+  --gallery-radius: ${radiusSlider.value}px;
+  --gallery-image-ratio: ${ratioSelect.value};
+  --gallery-image-fit: ${fitSelect.value};
+  --gallery-letterbox: rgba(255, 255, 255, 0.03);
+  --font-title: 'GT Ultra', sans-serif;
+  --font-num: 'GT Ultra', sans-serif;
+  --font-body: 'Literata', serif;
+  --font-ui: 'GT Standard L', sans-serif;
+}`;
+      navigator.clipboard.writeText(cssString).then(() => {
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 2400);
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "date": "26 October 2026",
+  "slug": "gallery-rework-todo3d",
+  "folder": "2026-10-26-gallery-rework-todo3d",
+  "version": 1,
+  "title": "Rework Galerie ToDo-3D (3 Propositions, Hover Video, 0 Bande Noire)",
+  "module": "ZenRayProgress Gallery",
+  "assetsProject": "zenray-edit",
+  "project": "zenray-progress",
+  "status": "pending",
+  "atelier": "/Users/zenray/.claude/tmp/tmp-gallery-rework-26-October-2026",
+  "files": [
+    "index.html",
+    "check.png"
+  ],
+  "indexSha256": "6384773dd089ce4ff36f0a640f26ee5ef050b414c249b6d2118e6c0cc57acf04",
+  "filedAt": "2026-10-26T15:11:56.723Z",
+  "note": null
+}
