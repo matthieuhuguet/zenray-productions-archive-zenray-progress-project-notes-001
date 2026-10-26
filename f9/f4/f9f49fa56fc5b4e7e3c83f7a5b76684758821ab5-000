@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-10-26T18:01:57.430Z",
+ "scannedAt": "2026-10-26T18:02:57.596Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -111,8 +111,8 @@
    "provider": "claude",
    "sessionId": "d2f26016-25dd-4bcc-a6d8-122d50d3f383",
    "title": "zenray motion design",
-   "updatedAt": "2026-10-26T18:01:50.580Z",
-   "bytes": 538748634,
+   "updatedAt": "2026-10-26T18:02:39.700Z",
+   "bytes": 22409,
    "boundProject": null
   },
   {
@@ -319,7 +319,7 @@
    "provider": "claude",
    "sessionId": "09d15ec8-88ad-4965-a2f0-80b68515e880",
    "title": "zenray meshes",
-   "updatedAt": "2026-10-26T17:57:56.259Z",
+   "updatedAt": "2026-10-26T18:02:23.554Z",
    "bytes": 38261,
    "boundProject": "zenray-meshes"
   },
@@ -527,8 +527,8 @@
    "provider": "claude",
    "sessionId": "b8e43d99-5824-4ddc-8444-a984b5743a04",
    "title": "zenray sfx",
-   "updatedAt": "2026-10-26T18:00:41.977Z",
-   "bytes": 38465,
+   "updatedAt": "2026-10-26T18:02:49.726Z",
+   "bytes": 19949993,
    "boundProject": "zenray-sfx-25-october-2026"
   },
   {
