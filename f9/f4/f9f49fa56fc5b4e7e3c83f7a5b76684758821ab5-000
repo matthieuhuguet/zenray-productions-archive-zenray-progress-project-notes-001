@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-10-25T23:47:26.297Z",
+ "scannedAt": "2026-10-26T00:14:27.651Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -101,18 +101,18 @@
   },
   {
    "projectId": "zenray-progress",
-   "lines": 73,
+   "lines": 79,
    "work": 10,
    "prompts": 3,
    "first": "2026-10-14T11:34:59.327Z",
-   "last": "2026-10-23T18:24:36.427Z",
+   "last": "2026-10-26T00:00:42.298Z",
    "strength": "strong",
    "conversationId": "claude:d2f26016-25dd-4bcc-a6d8-122d50d3f383",
    "provider": "claude",
    "sessionId": "d2f26016-25dd-4bcc-a6d8-122d50d3f383",
    "title": "zenray motion design",
-   "updatedAt": "2026-10-23T20:34:52.519Z",
-   "bytes": 22401,
+   "updatedAt": "2026-10-26T00:11:12.462Z",
+   "bytes": 518890879,
    "boundProject": null
   },
   {
@@ -309,18 +309,18 @@
   },
   {
    "projectId": "zenray-progress",
-   "lines": 40,
+   "lines": 41,
    "work": 0,
    "prompts": 0,
    "first": "2026-10-25T14:43:32.510Z",
-   "last": "2026-10-25T23:02:27.666Z",
+   "last": "2026-10-26T00:09:31.694Z",
    "strength": "weak",
    "conversationId": "claude:09d15ec8-88ad-4965-a2f0-80b68515e880",
    "provider": "claude",
    "sessionId": "09d15ec8-88ad-4965-a2f0-80b68515e880",
    "title": "zenray meshes",
-   "updatedAt": "2026-10-25T23:37:27.491Z",
-   "bytes": 208104467,
+   "updatedAt": "2026-10-26T00:11:06.372Z",
+   "bytes": 236048614,
    "boundProject": "zenray-meshes"
   },
   {
