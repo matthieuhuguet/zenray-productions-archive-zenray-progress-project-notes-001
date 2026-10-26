@@ -1,0 +1,20 @@
+{
+  "date": "26 October 2026",
+  "slug": "gallery-rework-todo3d",
+  "folder": "2026-10-26-gallery-rework-todo3d-v3",
+  "version": 3,
+  "title": "Rework Galerie ToDo-3D (Overlay 02, Titres GT Ultra Top-Right, Corps GT Standard L)",
+  "module": "ZenRayProgress Gallery",
+  "assetsProject": "zenray-edit",
+  "project": "zenray-progress",
+  "status": "pending",
+  "atelier": "/Users/zenray/.claude/tmp/tmp-gallery-rework-26-October-2026",
+  "files": [
+    "index.html",
+    "check.png",
+    "preview-1280.png"
+  ],
+  "indexSha256": "bbd91600b9bd057dd1180c62e15267692255a12df0d35d3d0d77db7265683af9",
+  "filedAt": "2026-10-26T15:46:21.691Z",
+  "note": null
+}
