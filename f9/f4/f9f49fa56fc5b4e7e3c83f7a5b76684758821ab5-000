@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-10-26T17:45:57.673Z",
+ "scannedAt": "2026-10-26T18:01:57.430Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -111,8 +111,8 @@
    "provider": "claude",
    "sessionId": "d2f26016-25dd-4bcc-a6d8-122d50d3f383",
    "title": "zenray motion design",
-   "updatedAt": "2026-10-26T17:45:25.596Z",
-   "bytes": 22403,
+   "updatedAt": "2026-10-26T18:01:50.580Z",
+   "bytes": 538748634,
    "boundProject": null
   },
   {
@@ -319,8 +319,8 @@
    "provider": "claude",
    "sessionId": "09d15ec8-88ad-4965-a2f0-80b68515e880",
    "title": "zenray meshes",
-   "updatedAt": "2026-10-26T17:45:54.758Z",
-   "bytes": 38262,
+   "updatedAt": "2026-10-26T17:57:56.259Z",
+   "bytes": 38261,
    "boundProject": "zenray-meshes"
   },
   {
@@ -517,6 +517,22 @@
   },
   {
    "projectId": "zenray-progress",
+   "lines": 7,
+   "work": 0,
+   "prompts": 0,
+   "first": "2026-10-25T14:08:33.899Z",
+   "last": "2026-10-26T17:56:58.251Z",
+   "strength": "weak",
+   "conversationId": "claude:b8e43d99-5824-4ddc-8444-a984b5743a04",
+   "provider": "claude",
+   "sessionId": "b8e43d99-5824-4ddc-8444-a984b5743a04",
+   "title": "zenray sfx",
+   "updatedAt": "2026-10-26T18:00:41.977Z",
+   "bytes": 38465,
+   "boundProject": "zenray-sfx-25-october-2026"
+  },
+  {
+   "projectId": "zenray-progress",
    "lines": 6,
    "work": 0,
    "prompts": 0,
@@ -562,22 +578,6 @@
    "updatedAt": "2026-10-07T09:05:28.740Z",
    "bytes": 23256,
    "boundProject": "zenray-freelance"
-  },
-  {
-   "projectId": "zenray-progress",
-   "lines": 5,
-   "work": 0,
-   "prompts": 0,
-   "first": "2026-10-25T14:08:33.899Z",
-   "last": "2026-10-26T17:39:07.393Z",
-   "strength": "weak",
-   "conversationId": "claude:b8e43d99-5824-4ddc-8444-a984b5743a04",
-   "provider": "claude",
-   "sessionId": "b8e43d99-5824-4ddc-8444-a984b5743a04",
-   "title": "zenray sfx",
-   "updatedAt": "2026-10-26T17:45:23.054Z",
-   "bytes": 16006147,
-   "boundProject": "zenray-sfx-25-october-2026"
   },
   {
    "projectId": "zenray-progress",
