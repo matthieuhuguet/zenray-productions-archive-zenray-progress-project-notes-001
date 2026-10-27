@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-10-27T17:11:36.707Z",
+ "scannedAt": "2026-10-27T17:49:34.527Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -271,8 +271,8 @@
    "provider": "codex",
    "sessionId": "01a17d3d-b439-7f01-bbb4-7ff8aff96cab",
    "title": "Conversation codex 01a17d3d",
-   "updatedAt": "2026-10-27T17:11:02.089Z",
-   "bytes": 15136879,
+   "updatedAt": "2026-10-27T17:49:25.072Z",
+   "bytes": 23961197,
    "boundProject": "zenray-meshes"
   },
   {
@@ -415,8 +415,8 @@
    "provider": "claude",
    "sessionId": "38575095-b716-47ed-af1d-bf22b8ff30eb",
    "title": "zenray freelance",
-   "updatedAt": "2026-10-27T17:11:31.607Z",
-   "bytes": 23455449,
+   "updatedAt": "2026-10-27T17:27:39.196Z",
+   "bytes": 38603,
    "boundProject": "zenray-calendar-plan-23-october-2026"
   },
   {
@@ -719,8 +719,8 @@
    "provider": "codex",
    "sessionId": "01a17d3d-fb6b-72c2-8fb5-72f5519d6000",
    "title": "Conversation codex 01a17d3d",
-   "updatedAt": "2026-10-27T12:03:55.151Z",
-   "bytes": 997932,
+   "updatedAt": "2026-10-27T17:28:52.419Z",
+   "bytes": 998708,
    "boundProject": null
   },
   {
