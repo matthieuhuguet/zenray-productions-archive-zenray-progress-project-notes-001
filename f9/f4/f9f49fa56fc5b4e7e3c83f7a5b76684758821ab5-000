@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-10-26T18:52:59.916Z",
+ "scannedAt": "2026-10-27T00:53:34.932Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -222,8 +222,8 @@
    "conversationId": "gemini:dad216b8-610b-4279-a532-56e02644714d",
    "provider": "gemini",
    "sessionId": "dad216b8-610b-4279-a532-56e02644714d",
-   "title": "zenray progress les fichiers n'ont pas de sous titres pourquoi ? bleach ? until grep -qE \"STAGE FAILED|Traceback|PROOF RED|FINISH FAILED|pub",
-   "updatedAt": "2026-10-14T21:12:45.577735+00:00",
+   "title": "Conversation Gemini dad216b8",
+   "updatedAt": "2026-10-14T21:13:27.597Z",
    "bytes": 11730944,
    "boundProject": null
   },
@@ -286,8 +286,8 @@
    "conversationId": "gemini:fae4d3c5-109b-41fa-a03a-0a81a8c0b271",
    "provider": "gemini",
    "sessionId": "fae4d3c5-109b-41fa-a03a-0a81a8c0b271",
-   "title": "J'ai un bug critique sur mon application custom de picker color qui fait que parfois le clic fait que je peux plus cliquer sur la barre des ",
-   "updatedAt": "2026-10-23T20:00:09.881076+00:00",
+   "title": "Conversation Gemini fae4d3c5",
+   "updatedAt": "2026-10-23T20:00:48.222Z",
    "bytes": 22413312,
    "boundProject": null
   },
@@ -309,18 +309,18 @@
   },
   {
    "projectId": "zenray-progress",
-   "lines": 82,
+   "lines": 84,
    "work": 0,
    "prompts": 0,
    "first": "2026-10-25T14:43:32.510Z",
-   "last": "2026-10-26T17:15:02.647Z",
+   "last": "2026-10-26T22:52:20.018Z",
    "strength": "weak",
    "conversationId": "claude:09d15ec8-88ad-4965-a2f0-80b68515e880",
    "provider": "claude",
    "sessionId": "09d15ec8-88ad-4965-a2f0-80b68515e880",
    "title": "zenray meshes",
-   "updatedAt": "2026-10-26T18:34:15.739Z",
-   "bytes": 38264,
+   "updatedAt": "2026-10-27T00:53:33.066Z",
+   "bytes": 479690178,
    "boundProject": "zenray-meshes"
   },
   {
@@ -527,8 +527,8 @@
    "provider": "claude",
    "sessionId": "b8e43d99-5824-4ddc-8444-a984b5743a04",
    "title": "zenray sfx",
-   "updatedAt": "2026-10-26T18:52:49.358Z",
-   "bytes": 37990,
+   "updatedAt": "2026-10-26T20:29:44.320Z",
+   "bytes": 38579,
    "boundProject": "zenray-sfx-25-october-2026"
   },
   {
@@ -1374,8 +1374,8 @@
    "conversationId": "gemini:3e22a918-b7a6-4b1f-99ea-e50907f40d44",
    "provider": "gemini",
    "sessionId": "3e22a918-b7a6-4b1f-99ea-e50907f40d44",
-   "title": "'/Users/zenray/Movies/2026-09-15 20-36-50.mkv' to mov et speed jusqu'à ce que ça fasse 30 secondes speed ajusté à la longueur initial. go da",
-   "updatedAt": "2026-09-15T20:05:24.351772+00:00",
+   "title": "Conversation Gemini 3e22a918",
+   "updatedAt": "2026-09-15T20:06:00.494Z",
    "bytes": 3629056,
    "boundProject": null
   },
