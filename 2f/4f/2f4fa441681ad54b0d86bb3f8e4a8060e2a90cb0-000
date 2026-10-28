@@ -1,0 +1,18 @@
+{
+  "date": "28 October 2026",
+  "slug": "sidebar-literata-gt-standard",
+  "folder": "2026-10-28-sidebar-literata-gt-standard",
+  "version": 1,
+  "title": "Sidebar de gauche en Literata et GT Standard L, reprise",
+  "module": "sidebar",
+  "assetsProject": "zenray-edit",
+  "project": "zenray-progress",
+  "status": "pending",
+  "atelier": "/Users/zenray/.claude/tmp/tmp-zenray-edit/tmp-sidebar-literata-gt-standard-28-October-2026",
+  "files": [
+    "index.html"
+  ],
+  "indexSha256": "26885974b471918e996dad55b05b98a673f9c3b0b5c0446a0ee82b0b3c974e08",
+  "filedAt": "2026-10-28T19:22:36.021Z",
+  "note": "Reprise du HTML du 26 October 2026, titre de page en GT Ultra et valeurs numériques en GT Ultra."
+}

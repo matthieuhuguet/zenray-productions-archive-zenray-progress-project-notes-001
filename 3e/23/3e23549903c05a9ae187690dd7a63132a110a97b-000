@@ -1,0 +1,122 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sidebar de gauche, Literata et GT Standard L</title>
+<!-- 28 October 2026 at 20:18 CET. Reprise of the 26 October sidebar, with the current title and number fonts. -->
+<!-- 26 October 2026: the left sidebar of ZenRayProgress with GT Standard L instead of Inter and Literata instead of GT Sectra italic.
+     Every value judged by eye is a slider (max 8 per group) writing CSS variables on :root; "Copier les valeurs" gives one line to paste in a prompt. -->
+<style>
+@font-face{font-family:'GT Standard L';src:url('file:///Users/zenray/.claude/skills/zenray-edit/designs/_shared/fonts/GT-Standard-L-Regular.woff2') format('woff2');font-weight:400;font-style:normal}
+@font-face{font-family:'GT Standard L';src:url('file:///Users/zenray/.claude/skills/zenray-edit/designs/_shared/fonts/GT-Standard-L-Bold.woff2') format('woff2');font-weight:700;font-style:normal}
+@font-face{font-family:'Literata';src:url('file:///Users/zenray/.claude/skills/zenray-edit/designs/_shared/fonts/Literata-latin.woff2') format('woff2');font-weight:200 900;font-style:normal}
+@font-face{font-family:'Literata';src:url('file:///Users/zenray/.claude/skills/zenray-edit/designs/_shared/fonts/Literata-Italic-latin.woff2') format('woff2');font-weight:200 900;font-style:italic}
+@font-face{font-family:'GT Sectra LCG';src:url('file:///Users/zenray/.claude/skills/zenray-edit/designs/_shared/fonts/GT-Sectra-LCGV-Regular-Italic.woff2') format('woff2');font-weight:400;font-style:italic}
+@font-face{font-family:'Inter';src:url('file:///Users/zenray/.claude/skills/zenray-edit/designs/_shared/fonts/InterVariable.woff2') format('woff2');font-weight:100 900;font-style:normal}
+@font-face{font-family:'GT Ultra';src:url('file:///Users/zenray/.claude/skills/zenray-edit/designs/_shared/fonts/GT-Ultra-Regular.woff2') format('woff2');font-weight:400;font-style:normal}
+:root{
+ /* the sliders (defaults = the proposal) */
+ --sb-title-weight:400; --sb-title-style:italic; --sb-title-size:15.1px; --sb-title-track:-.01em; --sb-zone-gap:34px;
+ --sb-ui-size:14px; --sb-ui-weight:400; --sb-ui-track:-.015em; --sb-item-height:31px; --sb-active-weight:400;
+ /* page tokens */
+ --bg:#f4f1ea; --panel:#fffdf8; --line:#e2ddd1; --ink:#22201c; --muted:#6e685d;
+ --font-ui:'GT Standard L',sans-serif;
+ --font-title:'GT Ultra',sans-serif; --font-num:'GT Ultra',sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#1b1a18;--panel:#262421;--line:#3a3732;--ink:#ece8df;--muted:#a29c90}}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:400 14px/1.45 var(--font-ui);padding:24px 16px 80px}
+.page{max-width:1240px;margin:0 auto}
+h1{font:400 24px/1.2 var(--font-title);text-transform:none;letter-spacing:normal;margin:0 0 6px}
+.lead{color:var(--muted);max-width:780px;margin:0 0 18px;font-family:'Literata',Georgia,serif}
+.layout{display:grid;grid-template-columns:300px minmax(0,1fr);gap:20px;align-items:start}
+.controls{position:sticky;top:12px;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 16px 12px}
+.controls h2{font:700 11px var(--font-ui);text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin:14px 0 8px}.controls h2:first-child{margin-top:0}
+.ctl{display:grid;grid-template-columns:1fr auto;gap:2px 8px;margin:0 0 9px}.ctl label{font-size:13px}.ctl output{font:400 12.5px/1 var(--font-num);font-variant-numeric:lining-nums;color:var(--muted)}.ctl input[type=range]{grid-column:1/-1;width:100%;accent-color:var(--ink)}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden}.seg button{font:inherit;font-size:12.5px;border:0;background:none;color:var(--muted);padding:5px 10px;cursor:pointer}.seg button.on{background:var(--ink);color:var(--bg)}
+.row{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}.btn{font:inherit;font-size:12.5px;border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:8px;padding:6px 10px;cursor:pointer}.btn.dark{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.out{font:400 11.5px/1.4 ui-monospace,monospace;color:var(--muted);word-break:break-all;margin-top:8px}
+/* stage: three sidebars over a soft coloured ground so the glass reads */
+.stage{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.cell{border-radius:18px;padding:14px;background:linear-gradient(135deg,#c9d3e6,#e8d5c4 55%,#d9e4d3)}
+.cell.dk{background:linear-gradient(135deg,#232a3a,#3a2c2a 55%,#22302a)}
+.cell h3{font:700 11px var(--font-ui);text-transform:uppercase;letter-spacing:.1em;margin:0 0 10px;color:#22201c}.cell.dk h3{color:#ece8df}
+/* the sidebar (copied from ZenRayProgress fonts.css: aside.zr-ws-sidebar, .zr-ws-heading, .zr-ws-item) */
+.sb{--gal-encre:rgba(34,33,30,.92);--gal-encre-2:rgba(34,33,30,.62);--gal-encre-3:rgba(34,33,30,.40);--gal-marque:#9A5B3C;--gal-survol:rgba(34,33,30,.045);
+ width:100%;max-width:232px;margin:0 auto;padding:17px 18px 22px;border-radius:30px;display:flex;flex-direction:column;
+ background:linear-gradient(135deg,rgba(255,255,255,.78),rgba(226,230,235,.54));backdrop-filter:blur(27px) saturate(169%);-webkit-backdrop-filter:blur(27px) saturate(169%);
+ box-shadow:inset 0 1px 0 rgba(34,37,43,.09),inset 0 -1px 0 rgba(34,37,43,.09),0 14px 38px rgba(62,67,78,.13),0 3px 12px rgba(62,67,78,.08)}
+.dk .sb{--gal-encre:rgba(255,255,255,.92);--gal-encre-2:rgba(255,255,255,.62);--gal-encre-3:rgba(255,255,255,.40);--gal-marque:#D89B76;--gal-survol:rgba(255,255,255,.06);
+ background:linear-gradient(135deg,rgba(255,255,255,.135),rgba(255,255,255,.045));box-shadow:inset 0 1px 0 rgba(255,255,255,.14),inset 0 -1px 0 rgba(255,255,255,.14),0 14px 38px rgba(0,0,0,.3)}
+.sb .head{display:flex;align-items:center;gap:8px;width:100%;text-align:left;padding:0 10px;border:0;background:none;color:var(--gal-encre);cursor:default;margin:var(--sb-zone-gap) 0 2px;min-height:24px;
+ font-family:'Literata','Hiragino Mincho ProN W3',Georgia,serif;font-style:var(--sb-title-style);font-weight:var(--sb-title-weight);font-size:var(--sb-title-size);letter-spacing:var(--sb-title-track)}
+.sb .head:first-child{margin-top:0}
+.sb .head svg{width:12px;height:12px;flex:none;color:var(--gal-encre-3)}
+.sb .item{position:relative;display:flex;align-items:center;gap:7px;width:100%;text-align:left;min-height:var(--sb-item-height);padding:0 8px 0 12px;border:0;border-radius:11px;background:none;cursor:default;color:var(--gal-encre-2);
+ font-family:'GT Standard L','Hiragino Sans W4',sans-serif;font-weight:var(--sb-ui-weight);font-size:var(--sb-ui-size);letter-spacing:var(--sb-ui-track)}
+.sb .item:hover{background:var(--gal-survol);color:var(--gal-encre)}
+.sb .item::before{content:'';position:absolute;left:0;top:50%;transform:translateY(-50%);width:2px;height:0;border-radius:2px;background:var(--gal-marque)}
+.sb .item.active{color:var(--gal-encre);font-weight:var(--sb-active-weight)}.sb .item.active::before{height:15px}
+.sb .tools{display:flex;align-items:center;gap:8px;padding:2px 4px 0 10px}
+.sb .search{flex:1;min-width:0;display:flex;align-items:center;gap:6px;height:30px;padding:0 10px;border-radius:999px;background:rgba(34,33,30,.05);color:var(--gal-encre-3);font:400 var(--sb-ui-size)/1 'GT Standard L',sans-serif;letter-spacing:var(--sb-ui-track)}
+.dk .sb .search{background:rgba(255,255,255,.07)}
+.sb .gear{width:28px;height:28px;border-radius:8px;display:grid;place-items:center;color:var(--gal-encre-3)}
+/* the "Avant" column keeps the previous fonts, fixed */
+.before .head{font-family:'GT Sectra LCG','Literata',serif!important;font-style:italic!important;font-weight:400!important;font-size:15.1px!important;letter-spacing:-.01em!important;margin-top:34px}.before .head:first-child{margin-top:0}
+.before .item,.before .search{font-family:'Inter','Hiragino Sans W4',sans-serif!important;font-weight:400!important;font-size:14px!important;letter-spacing:-.015em!important;min-height:31px}.before .item.active{font-weight:500!important}
+@media (max-width:1000px){.layout{grid-template-columns:1fr}.controls{position:static}.stage{grid-template-columns:1fr}}
+</style></head><body><div class="page">
+<h1>Sidebar de gauche</h1>
+<p class="lead">GT Standard L remplace Inter pour tous les mots de la liste. Literata remplace GT Sectra italique pour les titres de famille, avec une graisse réglable (200 à 900) et l'italique en option. Trois colonnes : l'ancienne sidebar, la nouvelle en clair, la nouvelle en sombre. Freelance est placé juste sous Plan : d'abord Plan, ensuite Freelance, ensuite Create.</p>
+<div class="layout">
+ <div class="controls" id="controls"></div>
+ <div class="stage" id="stage"></div>
+</div></div>
+<script>
+// 26 October 2026: one template, sliders write CSS variables on :root; the three sidebars read them.
+const DEFAULTS={'--sb-title-weight':400,'--sb-title-style':'italic','--sb-title-size':15.1,'--sb-title-track':-.01,'--sb-zone-gap':34,'--sb-ui-size':14,'--sb-ui-weight':400,'--sb-ui-track':-.015,'--sb-item-height':31,'--sb-active-weight':400};
+const UNITS={'--sb-title-size':'px','--sb-title-track':'em','--sb-zone-gap':'px','--sb-ui-size':'px','--sb-ui-track':'em','--sb-item-height':'px'};
+const GROUPS=[
+ {t:'Titres de famille, Literata',c:[
+  {k:'--sb-title-weight',l:'Graisse',min:200,max:900,step:10},
+  {k:'--sb-title-style',l:'Style',seg:[['normal','Droit'],['italic','Italique']]},
+  {k:'--sb-title-size',l:'Taille',min:12,max:20,step:.1},
+  {k:'--sb-title-track',l:'Interlettrage',min:-.04,max:.08,step:.005},
+  {k:'--sb-zone-gap',l:'Espace entre familles',min:16,max:48,step:1}]},
+ {t:'Liste, GT Standard L',c:[
+  {k:'--sb-ui-size',l:'Taille',min:12,max:17,step:.1},
+  {k:'--sb-ui-weight',l:'Graisse',seg:[[400,'Regular'],[700,'Bold']]},
+  {k:'--sb-ui-track',l:'Interlettrage',min:-.03,max:.04,step:.005},
+  {k:'--sb-item-height',l:'Hauteur d’une ligne',min:26,max:38,step:1},
+  {k:'--sb-active-weight',l:'Ligne active',seg:[[400,'Regular'],[700,'Bold']]}]}];
+const PRESETS=[['Droit Regular',{'--sb-title-weight':400,'--sb-title-style':'normal'}],['Italique Regular',{'--sb-title-weight':400,'--sb-title-style':'italic'}],['Droit Medium',{'--sb-title-weight':500,'--sb-title-style':'normal'}],['Italique SemiBold',{'--sb-title-weight':600,'--sb-title-style':'italic'}],['Droit Bold',{'--sb-title-weight':700,'--sb-title-style':'normal'}]];
+const state={...DEFAULTS};
+const root=document.documentElement;
+function apply(){for(const [k,v] of Object.entries(state))root.style.setProperty(k,String(v)+(UNITS[k]||''));
+ document.querySelectorAll('[data-out]').forEach(o=>{const k=o.dataset.out;o.textContent=state[k]+(UNITS[k]||'')});
+ document.querySelectorAll('[data-k]').forEach(i=>{const k=i.dataset.k;if(i.type==='range')i.value=state[k]});
+ document.querySelectorAll('.seg button').forEach(b=>b.classList.toggle('on',String(state[b.dataset.sk])===b.dataset.v));
+ document.getElementById('out').textContent=Object.entries(state).map(([k,v])=>`${k}:${v}${UNITS[k]||''}`).join('; ')}
+const c=document.getElementById('controls');
+c.innerHTML=GROUPS.map(g=>`<h2>${g.t}</h2>`+g.c.map(p=>p.seg
+ ?`<div class="ctl"><label>${p.l}</label><span class="seg">${p.seg.map(([v,t])=>`<button data-sk="${p.k}" data-v="${v}">${t}</button>`).join('')}</span></div>`
+ :`<div class="ctl"><label for="${p.k}">${p.l}</label><output data-out="${p.k}"></output><input id="${p.k}" data-k="${p.k}" type="range" min="${p.min}" max="${p.max}" step="${p.step}"></div>`).join('')).join('')
+ +`<h2>Essais rapides (titres)</h2><div class="row">${PRESETS.map((p,i)=>`<button class="btn" data-p="${i}">${p[0]}</button>`).join('')}</div>`
+ +`<div class="row"><button class="btn dark" id="copy">Copier les valeurs</button><button class="btn" id="reset">Réinitialiser</button></div><div class="out" id="out"></div>`;
+c.addEventListener('input',e=>{const k=e.target.dataset.k;if(k){state[k]=Number(e.target.value);apply()}});
+c.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;
+ if(b.dataset.sk){const v=b.dataset.v;state[b.dataset.sk]=isNaN(Number(v))?v:Number(v);apply()}
+ else if(b.dataset.p){Object.assign(state,PRESETS[b.dataset.p][1]);apply()}
+ else if(b.id==='reset'){Object.assign(state,DEFAULTS);apply()}
+ else if(b.id==='copy'){const t='Sidebar fonts: '+document.getElementById('out').textContent;(navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).catch(()=>{const a=document.createElement('textarea');a.value=t;document.body.appendChild(a);a.select();document.execCommand('copy');a.remove()});b.textContent='Copié ✓';setTimeout(()=>b.textContent='Copier les valeurs',1400)}});
+// 26 October 2026 (Matthieu): Freelance moves right under Plan, so the order of importance reads Plan, Freelance, Create.
+// the sidebar markup: same families and entries as ZenRayProgress (Create, Gallery, Learn, Apps, Système, Tools)
+const chev='<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 4.5 6 8l3.5-3.5"/></svg>';
+const gear='<svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="8" cy="8" r="2.2"/><path d="M8 1.5v1.6M8 12.9v1.6M1.5 8h1.6M12.9 8h1.6M3.4 3.4l1.1 1.1M11.5 11.5l1.1 1.1M3.4 12.6l1.1-1.1M11.5 4.5l1.1-1.1"/></svg>';
+const lens='<svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="7" cy="7" r="4.5"/><path d="m10.5 10.5 3.5 3.5"/></svg>';
+const NAV=[['Create',['Plan','Freelance','Create','Progress','Assets','Abonnement Max','Knowledge','Sport','Houdini']],['Gallery',['Design','Characters','Environments']],['Learn',['Japanese']],['Apps',['Articles','Documents','Features']],['Système',['Archives','Drive','Index','Trash']]];
+const OLD_CREATE=['Plan','Create','Progress','Assets','Abonnement Max','Knowledge','Sport','Freelance','Houdini']; // the previous order, kept in the Avant column
+const sidebar=(cls)=>`<aside class="sb ${cls}">`+NAV.map(([z,i0])=>{const items=(cls==='before'&&z==='Create')?OLD_CREATE:i0;return [z,items]}).map(([z,items])=>`<button class="head">${chev}${z}</button>`+items.map(i=>`<button class="item${i==='Freelance'?' active':''}">${i}</button>`).join('')).join('')
+ +`<button class="head">${chev}Tools</button><div class="tools"><div class="search">${lens}Rechercher</div><div class="gear">${gear}</div></div></aside>`;
+document.getElementById('stage').innerHTML=
+ `<div class="cell"><h3>Avant · Sectra italique et Inter</h3>${sidebar('before')}</div>`
++`<div class="cell"><h3>Après · clair</h3>${sidebar('')}</div>`
++`<div class="cell dk"><h3>Après · sombre</h3>${sidebar('')}</div>`;
+apply();
+</script></body></html>
