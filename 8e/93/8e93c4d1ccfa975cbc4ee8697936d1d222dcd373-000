@@ -1,0 +1,18 @@
+{
+  "date": "28 October 2026",
+  "slug": "sidebar-gt-ultra-literata-toggle",
+  "folder": "2026-10-28-sidebar-gt-ultra-literata-toggle-v3",
+  "version": 3,
+  "title": "Sidebar avec variantes GT Walsheim et GT Ultra",
+  "module": "sidebar",
+  "assetsProject": "zenray-edit",
+  "project": "zenray-progress",
+  "status": "pending",
+  "atelier": "/Users/zenray/.claude/tmp/tmp-zenray-edit/tmp-sidebar-literata-gt-standard-28-October-2026",
+  "files": [
+    "index.html"
+  ],
+  "indexSha256": "78c1eee11a57e2582c14c394904e70b746294c3f6c47ef88900bbafed27ae2f8",
+  "filedAt": "2026-10-28T19:44:58.866Z",
+  "note": null
+}

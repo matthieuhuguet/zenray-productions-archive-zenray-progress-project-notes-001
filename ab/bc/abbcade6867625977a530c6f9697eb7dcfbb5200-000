@@ -1,0 +1,18 @@
+{
+  "date": "28 October 2026",
+  "slug": "sidebar-gt-ultra-literata-toggle",
+  "folder": "2026-10-28-sidebar-gt-ultra-literata-toggle",
+  "version": 1,
+  "title": "Sidebar GT Ultra et Literata avec toggle",
+  "module": "sidebar",
+  "assetsProject": "zenray-edit",
+  "project": "zenray-progress",
+  "status": "pending",
+  "atelier": "/Users/zenray/.claude/tmp/tmp-zenray-edit/tmp-sidebar-literata-gt-standard-28-October-2026",
+  "files": [
+    "index.html"
+  ],
+  "indexSha256": "22f5405088402b6e618af2b9cb4991ed18967363a026c5a439a2938fb08f16e8",
+  "filedAt": "2026-10-28T19:39:48.464Z",
+  "note": null
+}
