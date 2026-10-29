@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-10-29T13:02:08.793Z",
+ "scannedAt": "2026-10-29T13:33:50.552Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -127,8 +127,8 @@
    "provider": "codex",
    "sessionId": "01a183ee-37b7-7c60-a028-d9f9a184591a",
    "title": "Conversation codex 01a183ee",
-   "updatedAt": "2026-10-29T13:01:46.741Z",
-   "bytes": 14447818,
+   "updatedAt": "2026-10-29T13:31:44.993Z",
+   "bytes": 14469095,
    "boundProject": "zenray-edit"
   },
   {
@@ -351,8 +351,8 @@
    "provider": "claude",
    "sessionId": "09d15ec8-88ad-4965-a2f0-80b68515e880",
    "title": "zenray meshes",
-   "updatedAt": "2026-10-29T13:02:07.259Z",
-   "bytes": 719239910,
+   "updatedAt": "2026-10-29T13:33:40.208Z",
+   "bytes": 724109817,
    "boundProject": "zenray-meshes"
   },
   {
@@ -753,6 +753,22 @@
    "title": "Mail transfert dossier auto-école",
    "updatedAt": "2026-10-02T14:38:28.892Z",
    "bytes": 23040,
+   "boundProject": null
+  },
+  {
+   "projectId": "zenray-progress",
+   "lines": 2,
+   "work": 0,
+   "prompts": 0,
+   "first": "2026-10-29T13:31:03.332Z",
+   "last": "2026-10-29T13:31:03.332Z",
+   "strength": "weak",
+   "conversationId": "claude:de76d9d5-aa65-4367-8bbb-d6549dc439b7",
+   "provider": "claude",
+   "sessionId": "de76d9d5-aa65-4367-8bbb-d6549dc439b7",
+   "title": "Refus Ludia Zenray freelance",
+   "updatedAt": "2026-10-29T13:33:48.685Z",
+   "bytes": 3818373,
    "boundProject": null
   },
   {
