@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-10-31T07:51:19.524Z",
+ "scannedAt": "2026-10-31T14:19:59.490Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -18,22 +18,6 @@
    "updatedAt": "2026-10-14T19:11:34.636Z",
    "bytes": 21051,
    "boundProject": null
-  },
-  {
-   "projectId": "zenray-progress",
-   "lines": 376,
-   "work": 187,
-   "prompts": 6,
-   "first": "2026-10-20T16:30:25.542Z",
-   "last": "2026-10-22T10:47:06.978Z",
-   "strength": "strong",
-   "conversationId": "codex:01a15a23-1157-7ef3-83c9-9ce9461c3247",
-   "provider": "codex",
-   "sessionId": "01a15a23-1157-7ef3-83c9-9ce9461c3247",
-   "title": "Conversation codex 01a15a23",
-   "updatedAt": "2026-10-22T21:27:17.592Z",
-   "bytes": 42567998,
-   "boundProject": "zenray-progress"
   },
   {
    "projectId": "zenray-progress",
@@ -206,8 +190,8 @@
    "conversationId": "gemini:dad216b8-610b-4279-a532-56e02644714d",
    "provider": "gemini",
    "sessionId": "dad216b8-610b-4279-a532-56e02644714d",
-   "title": "zenray progress les fichiers n'ont pas de sous titres pourquoi ? bleach ? until grep -qE \"STAGE FAILED|Traceback|PROOF RED|FINISH FAILED|pub",
-   "updatedAt": "2026-10-14T21:12:45.577735+00:00",
+   "title": "Conversation Gemini dad216b8",
+   "updatedAt": "2026-10-14T21:13:27.597Z",
    "bytes": 11730944,
    "boundProject": null
   },
@@ -302,8 +286,8 @@
    "conversationId": "gemini:fae4d3c5-109b-41fa-a03a-0a81a8c0b271",
    "provider": "gemini",
    "sessionId": "fae4d3c5-109b-41fa-a03a-0a81a8c0b271",
-   "title": "J'ai un bug critique sur mon application custom de picker color qui fait que parfois le clic fait que je peux plus cliquer sur la barre des ",
-   "updatedAt": "2026-10-23T20:00:09.881076+00:00",
+   "title": "Conversation Gemini fae4d3c5",
+   "updatedAt": "2026-10-23T20:00:48.222Z",
    "bytes": 22413312,
    "boundProject": null
   },
@@ -1438,8 +1422,8 @@
    "conversationId": "gemini:3e22a918-b7a6-4b1f-99ea-e50907f40d44",
    "provider": "gemini",
    "sessionId": "3e22a918-b7a6-4b1f-99ea-e50907f40d44",
-   "title": "'/Users/zenray/Movies/2026-09-15 20-36-50.mkv' to mov et speed jusqu'à ce que ça fasse 30 secondes speed ajusté à la longueur initial. go da",
-   "updatedAt": "2026-09-15T20:05:24.351772+00:00",
+   "title": "Conversation Gemini 3e22a918",
+   "updatedAt": "2026-09-15T20:06:00.494Z",
    "bytes": 3629056,
    "boundProject": null
   },
@@ -1471,6 +1455,22 @@
    "provider": "codex",
    "sessionId": "01a1511f-9f4c-7410-a6eb-d2e93353fa70",
    "title": "01a1511f-9f4c-7410-a6eb-d2e93353fa70",
+   "updatedAt": null,
+   "bytes": 0,
+   "boundProject": "zenray-progress"
+  },
+  {
+   "projectId": "zenray-progress",
+   "strength": "bound",
+   "lines": 0,
+   "work": 0,
+   "prompts": 0,
+   "first": null,
+   "last": null,
+   "conversationId": "codex:01a15a23-1157-7ef3-83c9-9ce9461c3247",
+   "provider": "codex",
+   "sessionId": "01a15a23-1157-7ef3-83c9-9ce9461c3247",
+   "title": "01a15a23-1157-7ef3-83c9-9ce9461c3247",
    "updatedAt": null,
    "bytes": 0,
    "boundProject": "zenray-progress"
