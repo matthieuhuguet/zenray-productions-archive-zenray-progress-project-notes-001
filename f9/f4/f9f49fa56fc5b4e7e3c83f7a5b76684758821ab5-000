@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-10-30T16:38:33.998Z",
+ "scannedAt": "2026-10-31T07:51:19.524Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -127,8 +127,8 @@
    "provider": "codex",
    "sessionId": "01a183ee-37b7-7c60-a028-d9f9a184591a",
    "title": "Conversation codex 01a183ee",
-   "updatedAt": "2026-10-30T16:07:49.471Z",
-   "bytes": 124011583,
+   "updatedAt": "2026-10-31T06:22:27.936Z",
+   "bytes": 130681305,
    "boundProject": "zenray-edit"
   },
   {
@@ -206,8 +206,8 @@
    "conversationId": "gemini:dad216b8-610b-4279-a532-56e02644714d",
    "provider": "gemini",
    "sessionId": "dad216b8-610b-4279-a532-56e02644714d",
-   "title": "Conversation Gemini dad216b8",
-   "updatedAt": "2026-10-14T21:13:27.597Z",
+   "title": "zenray progress les fichiers n'ont pas de sous titres pourquoi ? bleach ? until grep -qE \"STAGE FAILED|Traceback|PROOF RED|FINISH FAILED|pub",
+   "updatedAt": "2026-10-14T21:12:45.577735+00:00",
    "bytes": 11730944,
    "boundProject": null
   },
@@ -224,7 +224,7 @@
    "sessionId": "beb9938e-4434-4925-8d13-137bb7940fc0",
    "title": "zenray uv",
    "updatedAt": "2026-10-23T13:08:52.408Z",
-   "bytes": 40374,
+   "bytes": 40956,
    "boundProject": "louisiana-bayou"
   },
   {
@@ -302,8 +302,8 @@
    "conversationId": "gemini:fae4d3c5-109b-41fa-a03a-0a81a8c0b271",
    "provider": "gemini",
    "sessionId": "fae4d3c5-109b-41fa-a03a-0a81a8c0b271",
-   "title": "Conversation Gemini fae4d3c5",
-   "updatedAt": "2026-10-23T20:00:48.222Z",
+   "title": "J'ai un bug critique sur mon application custom de picker color qui fait que parfois le clic fait que je peux plus cliquer sur la barre des ",
+   "updatedAt": "2026-10-23T20:00:09.881076+00:00",
    "bytes": 22413312,
    "boundProject": null
   },
@@ -341,18 +341,18 @@
   },
   {
    "projectId": "zenray-progress",
-   "lines": 121,
+   "lines": 129,
    "work": 0,
    "prompts": 0,
    "first": "2026-10-25T14:43:32.510Z",
-   "last": "2026-10-30T16:17:44.319Z",
+   "last": "2026-10-31T04:01:02.997Z",
    "strength": "weak",
    "conversationId": "claude:09d15ec8-88ad-4965-a2f0-80b68515e880",
    "provider": "claude",
    "sessionId": "09d15ec8-88ad-4965-a2f0-80b68515e880",
    "title": "zenray meshes",
-   "updatedAt": "2026-10-30T16:37:17.274Z",
-   "bytes": 39290,
+   "updatedAt": "2026-10-31T04:43:04.063Z",
+   "bytes": 40249,
    "boundProject": "zenray-meshes"
   },
   {
@@ -769,6 +769,22 @@
    "title": "Mail transfert dossier auto-école",
    "updatedAt": "2026-10-02T14:38:28.892Z",
    "bytes": 23040,
+   "boundProject": null
+  },
+  {
+   "projectId": "zenray-progress",
+   "lines": 2,
+   "work": 0,
+   "prompts": 0,
+   "first": "2026-10-30T18:38:10.018Z",
+   "last": "2026-10-30T18:38:10.018Z",
+   "strength": "weak",
+   "conversationId": "claude:1967c0e1-bef3-4b0d-af12-3efe5e9f087e",
+   "provider": "claude",
+   "sessionId": "1967c0e1-bef3-4b0d-af12-3efe5e9f087e",
+   "title": "ZenRay Retopology à 100 % avant minuit",
+   "updatedAt": "2026-10-30T22:48:49.984Z",
+   "bytes": 42586,
    "boundProject": null
   },
   {
@@ -1422,8 +1438,8 @@
    "conversationId": "gemini:3e22a918-b7a6-4b1f-99ea-e50907f40d44",
    "provider": "gemini",
    "sessionId": "3e22a918-b7a6-4b1f-99ea-e50907f40d44",
-   "title": "Conversation Gemini 3e22a918",
-   "updatedAt": "2026-09-15T20:06:00.494Z",
+   "title": "'/Users/zenray/Movies/2026-09-15 20-36-50.mkv' to mov et speed jusqu'à ce que ça fasse 30 secondes speed ajusté à la longueur initial. go da",
+   "updatedAt": "2026-09-15T20:05:24.351772+00:00",
    "bytes": 3629056,
    "boundProject": null
   },
