@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-11-01T19:36:42.162Z",
+ "scannedAt": "2026-11-02T21:42:23.395Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -325,18 +325,18 @@
   },
   {
    "projectId": "zenray-progress",
-   "lines": 135,
+   "lines": 141,
    "work": 0,
    "prompts": 0,
    "first": "2026-10-25T14:43:32.510Z",
-   "last": "2026-11-01T18:53:54.951Z",
+   "last": "2026-11-02T19:59:09.566Z",
    "strength": "weak",
    "conversationId": "claude:09d15ec8-88ad-4965-a2f0-80b68515e880",
    "provider": "claude",
    "sessionId": "09d15ec8-88ad-4965-a2f0-80b68515e880",
    "title": "zenray meshes",
-   "updatedAt": "2026-11-01T19:20:25.682Z",
-   "bytes": 40537,
+   "updatedAt": "2026-11-02T21:35:39.435Z",
+   "bytes": 1125467971,
    "boundProject": "zenray-meshes"
   },
   {
@@ -549,6 +549,22 @@
   },
   {
    "projectId": "zenray-progress",
+   "lines": 8,
+   "work": 0,
+   "prompts": 0,
+   "first": "2026-11-02T14:52:10.940Z",
+   "last": "2026-11-02T21:39:30.931Z",
+   "strength": "weak",
+   "conversationId": "claude:fd247c15-80dd-4c74-93af-112af60fa28e",
+   "provider": "claude",
+   "sessionId": "fd247c15-80dd-4c74-93af-112af60fa28e",
+   "title": "zenray height",
+   "updatedAt": "2026-11-02T21:37:20.080Z",
+   "bytes": 115391768,
+   "boundProject": "alien-skin-2-november-2026"
+  },
+  {
+   "projectId": "zenray-progress",
    "lines": 6,
    "work": 0,
    "prompts": 0,
@@ -594,6 +610,22 @@
    "updatedAt": "2026-10-07T09:05:28.740Z",
    "bytes": 23256,
    "boundProject": "zenray-freelance"
+  },
+  {
+   "projectId": "zenray-progress",
+   "lines": 4,
+   "work": 0,
+   "prompts": 0,
+   "first": "2026-11-02T18:40:37.992Z",
+   "last": "2026-11-02T20:55:03.040Z",
+   "strength": "weak",
+   "conversationId": "claude:6800f4cb-0693-4309-9fee-622e37a3698e",
+   "provider": "claude",
+   "sessionId": "6800f4cb-0693-4309-9fee-622e37a3698e",
+   "title": "Camion Gnomon reproduit dans Houdini",
+   "updatedAt": "2026-11-02T21:32:00.260Z",
+   "bytes": 40621,
+   "boundProject": null
   },
   {
    "projectId": "zenray-progress",
@@ -696,6 +728,22 @@
    "lines": 3,
    "work": 0,
    "prompts": 0,
+   "first": "2026-11-02T18:15:00.514Z",
+   "last": "2026-11-02T18:22:40.868Z",
+   "strength": "weak",
+   "conversationId": "claude:ee4b1ce6-6ce5-417b-b64c-45a996f35fea",
+   "provider": "claude",
+   "sessionId": "ee4b1ce6-6ce5-417b-b64c-45a996f35fea",
+   "title": "gnomon-workshop modeling workshop",
+   "updatedAt": "2026-11-02T18:23:08.455Z",
+   "bytes": 37382,
+   "boundProject": null
+  },
+  {
+   "projectId": "zenray-progress",
+   "lines": 3,
+   "work": 0,
+   "prompts": 0,
    "first": "2026-10-17T19:13:58.896Z",
    "last": "2026-10-17T19:36:56.563Z",
    "strength": "weak",
@@ -753,6 +801,22 @@
    "title": "Mail transfert dossier auto-école",
    "updatedAt": "2026-10-02T14:38:28.892Z",
    "bytes": 23040,
+   "boundProject": null
+  },
+  {
+   "projectId": "zenray-progress",
+   "lines": 2,
+   "work": 0,
+   "prompts": 0,
+   "first": "2026-11-02T05:22:00.265Z",
+   "last": "2026-11-02T05:22:00.265Z",
+   "strength": "weak",
+   "conversationId": "claude:bee732cd-b7ed-45c1-bae9-34c5ba22776e",
+   "provider": "claude",
+   "sessionId": "bee732cd-b7ed-45c1-bae9-34c5ba22776e",
+   "title": "Installation de League of Legends",
+   "updatedAt": "2026-11-02T05:22:39.493Z",
+   "bytes": 37100,
    "boundProject": null
   },
   {
