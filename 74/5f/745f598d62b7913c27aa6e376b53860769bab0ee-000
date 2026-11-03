@@ -1,0 +1,126 @@
+---
+name: zenray-cloud
+description: Sauvegarder en continu des dossiers du Mac vers le drive ZenRayProgress avec l'app ZenRayCloud (Electron, dans Cloud/ du dépôt). Utiliser quand Matthieu veut surveiller ou sauvegarder un dossier, dit "ajoute X à Cloud", "sauvegarde mon disque", "pourquoi ce fichier n'est pas monté", "la synchro est bloquée", veut retrouver un fichier supprimé en local, ou demande ce que devient un fichier déplacé, renommé ou modifié. Utiliser AUSSI avant toute modification de scripts/archive-folder.mjs, dont ZenRayCloud dépend.
+---
+
+# ZenRayCloud
+
+Une app macOS qui surveille des dossiers et les pousse sur le drive. Elle ne synchronise rien elle-même :
+elle regarde, elle attend le silence, puis elle lance `scripts/archive-folder.mjs`, qui fait tout le travail
+depuis 2026-06-11 et plus de cent trente gigaoctets d'archives.
+
+Code : `Cloud/` à la racine de ZenRayProgress. Doctrine complète : `Cloud/README.md`.
+
+## La règle qui prime sur toutes les autres
+
+**Rien n'est jamais effacé du drive.** Un fichier supprimé en local reçoit `deleted: true` et une date sur
+son manifeste ; ses morceaux restent en ligne, ses versions aussi. Le drive est une **sauvegarde**, pas un
+miroir. Un miroir ferait perdre le fichier des deux côtés d'un seul geste, et c'est exactement ce qu'on
+refuse. Quand Matthieu demande « si je supprime en local, ça reste ? », la réponse est oui, sans nuance.
+
+## Les six cas de vie d'un fichier, et ce que fait le moteur
+
+| Ce qui arrive sur le Mac | Ce que fait ZenRayCloud | Octets montés |
+|---|---|---|
+| Fichier nouveau | découpe en morceaux de 19 Mo (95 au-dessus du seuil), écrit un manifeste | tout le fichier |
+| Fichier modifié | ajoute une **nouvelle version** au manifeste, garde les anciennes | tout le fichier |
+| Fichier inchangé | rien, l'empreinte sha256 est identique | zéro |
+| Fichier **déplacé ou renommé** | retrouve l'empreinte ailleurs, écrit un manifeste au nouveau chemin qui pointe les **mêmes** morceaux | **zéro** |
+| Fichier **copié** (doublon) | même mécanisme que le déplacement, déduplication de fait | **zéro** |
+| Fichier supprimé en local | marque `deleted: true` + date, n'efface rien | zéro |
+| Fichier supprimé puis **revenu** | retire le drapeau `deleted`, ne renvoie rien | zéro |
+
+La quatrième ligne est celle qui change tout à l'usage : réorganiser un dossier de plusieurs centaines de
+gigaoctets ne coûte plus rien. Sans elle, déplacer un film de 9 Go dans un autre dossier le renvoyait en
+entier alors que ses morceaux étaient déjà en ligne, identiques au bit près.
+
+## Les drapeaux du moteur, tous optionnels
+
+`scripts/archive-folder.mjs` garde son comportement d'origine sans drapeau. ZenRayCloud en passe quatre.
+
+- `--json` : lignes NDJSON `{"zr":1,…}` **en plus** des logs humains. Le lecteur ignore tout le reste, donc
+  ajouter un `console.log` au script ne peut pas casser l'app.
+- `--skip-noise` : écarte `.DS_Store`, `._*`, corbeilles, `.part`, `.crdownload`, `~$…`.
+- `--mark-deleted` : marque au lieu d'effacer (voir plus haut). Examine `.file.json`, `.img.json` et
+  `.media.json`. Les médias récents portent `sourceRel` ; les anciens retrouvent leur source par leur dossier et
+  leur champ `name`. Chaque voie ne juge que sa tranche, et les chemins exclus restent entièrement ignorés.
+- `--exclude=<motif>`, répétable : écarte un **sous-chemin**, pas un fragment de nom. `--exclude=DJI` écarte
+  le dossier DJI et tout son contenu, mais laisse `photo-DJI.jpg`.
+
+## Ajouter un dossier
+
+Ouvrir l'app, bouton *Ajouter un dossier*. La destination par défaut est `pages/Cloud/<nom>`, **jamais**
+`Archives` : une archive se dépose une fois pour libérer un disque et ne bouge plus, un dossier surveillé est
+vivant et suit le Mac. La racine est définie une seule fois, `RACINE_CLOUD` dans `Cloud/electron/main.ts`.
+
+Avant d'ajouter un gros dossier, mesurer, et surtout chercher ce qui est **déjà** sur le drive :
+
+```bash
+GITHUB_TOKEN=$(gh auth token) node scripts/archive-folder.mjs <dossier> pages/Cloud/<nom> --dry --skip-noise
+```
+
+Downloads en donne l'exemple : 914 Go bruts, dont 288 de rushs DJI déjà archivés sous `pages/Photos/DJI`.
+Les exclure ramène le premier envoi à 348 Go et évite un doublon pur.
+
+## Quand quelque chose ne monte pas
+
+Regarder le journal du dossier dans l'app (bouton *Journal*), ou le fichier complet dans
+`~/Library/Application Support/zenraycloud/logs/<id>.log`.
+
+- **Fichiers « sautés »** : le moteur les liste toujours à la fin, jamais en silence. Un fichier sauté n'est
+  **pas** sauvegardé, la source est donc à conserver.
+- **Rien ne démarre** : vérifier le jeton (`gh auth token`), la racine du dépôt dans les réglages, et que
+  `node` et `gh` sont bien résolus (affichés en bas des réglages). Une app lancée par le Finder n'hérite pas
+  du PATH du terminal, `electron/env.ts` interroge un shell de login pour cela.
+- **Un morceau non vérifié** : le moteur le dit et refuse de conclure. Relancer, la reprise est sûre.
+
+## Trois pièges déjà payés, à ne pas rejouer
+
+**Les crochets dans un nom de fichier.** `git show HEAD:<chemin>` traite les crochets comme un motif :
+un fichier `repack [FitGirl].zip` renvoyait un succès avec une sortie vide, le `JSON.parse` levait
+« Unexpected end of JSON input », et le fichier finissait **non sauvegardé**. Les manifestes se lisent
+désormais sur le disque du clone creux, jamais par `git show` (2026-08-15, Downloads).
+
+**Supprimer une donnée par un chemin que l'index ne surveille pas.** Effacer dans zenray-data en git direct
+laisse l'index de recherche intact, donc Create continue d'afficher le dossier disparu. Passer par les
+actions de l'app (`move-batch`), ou reconstruire l'index (`build-search-index.mjs --apply`).
+
+**Vérifier la fraîcheur par `raw.githubusercontent`.** Son cache de cinq minutes fait croire qu'un push n'a
+pas eu lieu. Vérifier par l'API GitHub, jamais par raw.
+
+## L'app est un HDA, et cela commande toute modification
+
+`Cloud/params.json` porte TOUTE valeur qui gouverne un comportement ou une apparence : couleurs, polices,
+rayons, silence avant envoi, nombre de voies, seuils d'adaptation, lignes de journal, lots d'icônes. Le code
+demande un paramètre par son nom via `p('familles.voieEnvoi.voiesPlafond')`, et un paramètre absent **lève une
+erreur qui le nomme**. Ne jamais réintroduire un littéral dans le code : c'est le premier des cinq échecs
+critiques, et sur une sauvegarde un défaut silencieux ne se découvre qu'au moment de restaurer.
+
+Trois étages, jamais mélangés : `jetons` pour toute l'app, `familles` pour toutes les instances d'un type,
+surcharges d'instance dans le `config.json` écrit par l'app. Le recensement des familles est en tableau dans
+`Cloud/README.md` ; le tenir à jour fait partie de toute modification.
+
+## Les règles héritées de zenray-upload
+
+ZenRayCloud pousse sur la même infrastructure que le skill d'upload média, et ses règles dures s'appliquent
+telles quelles.
+
+- **Jamais de REST en boucle.** Dès cent fichiers, ou pour toute réparation, migration ou réindexation :
+  inventaire local puis clone, commit et push Git. Le quota REST de cinq mille appels par heure a déjà été
+  épuisé deux fois, et une fois cela a mis le site entier en 403 pendant une heure.
+- **Ne jamais recopier `19 * 1024 * 1024` en dur.** La politique de découpage a une source unique,
+  `src/config/chunkPolicy.js`, et tout le monde l'importe. ZenRayCloud passe par `storageChunkFor(taille)`,
+  qui rend 19 Mio sous le seuil et 95 Mio au-dessus.
+- **Ne jamais recréer un dépôt portant un ancien nom.** Trois cent treize dépôts ont été renommés le
+  5 juillet 2026 ; ressusciter un ancien nom casserait des manifestes existants.
+- **Un dépôt n'a jamais deux écrivains.** Chaque voie d'envoi a ses propres dépôts, suffixés par sa tranche ;
+  les manifestes et le dépôt média commun sont sérialisés par un verrou qui vérifie le PID de son propriétaire.
+- **Lire `docs/INDEX-ERREURS-FEATURES.md` du dépôt avant de toucher au chemin d'upload.**
+
+## Construire l'app
+
+```bash
+cd Cloud && npm install && npm run app     # ZenRayCloud.app dans release/mac-arm64
+```
+
+Contrôle visuel sans œil humain : `ZRC_SHOT=/chemin.png npx electron .` capture la fenêtre puis quitte.

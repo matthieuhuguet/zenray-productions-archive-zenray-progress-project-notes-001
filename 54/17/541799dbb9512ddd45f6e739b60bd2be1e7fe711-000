@@ -1,0 +1,129 @@
+"""30 October 2026 : ZENRAY CLOUD HANDOFF : give local files to a Claude cloud session as POINTERS, through GitHub (the cloud session reads the Memory repository, github.com/matthieuhuguet/Memory).
+EN: `stage` copies the chosen files (and folders, walked) into Memory1/Projects/<project>/handoff/<name>/files/<key> and writes MANIFEST.json, the INDEX MAPPING : key -> local source, bytes, sha256, git blob id, GitHub blob and raw URLs, status. A file above --max-mb (default 20) or in an excluded pattern is not copied : it is listed `pointer-only` with the Assets project that holds it (project id, cloud folder, path relative to its workshop) so the shard route can be used later. `push` commits ONLY the handoff folder (explicit paths, never `git add -A`) and pushes to the Memory repository. `verify` proves the remote holds the very same bytes (git blob ids compared with `git ls-tree` of the fetched branch). `selftest` runs the three steps on a throwaway local bare repository, green on a good case and red on a tampered one.
+    python3 Handoff.py stage --project ID --name NAME --path P [--path P ...] [--max-mb 20] [--root Memory1]
+    python3 Handoff.py push --project ID --name NAME ; python3 Handoff.py verify --project ID --name NAME ; python3 Handoff.py pull --branch B --folder Projects/ID/article-cloud --dest DIR ; python3 Handoff.py selftest
+FR : donne des fichiers locaux a une session cloud sous forme de pointeurs via GitHub : copie, table de correspondance (MANIFEST.json), poussee des seuls chemins du dossier, preuve par identifiants de blobs git."""
+import argparse, fnmatch, hashlib, json, os, shutil, subprocess, sys, tempfile, time
+ROOT = "/Users/zenray/.claude/Memory1"; REPO = "matthieuhuguet/Memory"; BRANCH = "main"; MAX_MB = 20.0; STRIP = ("/Users/zenray/.claude/", "/Users/zenray/")
+EXCLUDE = ["__pycache__", "*.pyc", "*.bak*", ".DS_Store", "node_modules", ".git"]
+
+
+def sh(args, cwd=None):
+    r = subprocess.run(args, cwd=cwd, capture_output=True, text=True)
+    if r.returncode: raise SystemExit("command failed: %s\n%s" % (" ".join(args), (r.stderr or r.stdout).strip()))
+    return r.stdout.strip()
+
+
+def sha256(path):
+    h = hashlib.sha256()
+    with open(path, "rb") as f:
+        for b in iter(lambda: f.read(1 << 20), b""): h.update(b)
+    return h.hexdigest()
+
+
+def blob_id(path): return sh(["git", "hash-object", path])
+
+
+def key_of(path):
+    for s in STRIP:
+        if path.startswith(s): return path[len(s):]
+    return path.lstrip("/")
+
+
+def excluded(name): return any(fnmatch.fnmatch(name, p) for p in EXCLUDE)
+
+
+def walk(paths):
+    for p in paths:
+        p = os.path.abspath(p)
+        if os.path.isfile(p): yield p
+        elif os.path.isdir(p):
+            for d, ds, fs in os.walk(p):
+                ds[:] = sorted(x for x in ds if not excluded(x))
+                for f in sorted(fs):
+                    if not excluded(f): yield os.path.join(d, f)
+        else: raise SystemExit("missing path: " + p)
+
+
+def assets_hint(path, root):
+    """the Assets project whose workshop contains the file : the index mapping toward the shard route."""
+    pdir = os.path.join(root, "Projects")
+    for pid in sorted(os.listdir(pdir)) if os.path.isdir(pdir) else []:
+        pj = os.path.join(pdir, pid, "Project.json")
+        if not os.path.exists(pj): continue
+        try: j = json.load(open(pj))
+        except Exception: continue
+        w = j.get("workshopPath")
+        if w and path.startswith(w.rstrip("/") + "/"): return {"projectId": pid, "cloudFolder": j.get("cloudFolder"), "relative": path[len(w.rstrip("/")) + 1:]}
+    return None
+
+
+def hdir(root, project, name): return os.path.join(root, "Projects", project, "handoff", name)
+
+
+def stage(a):
+    out = hdir(a.root, a.project, a.name); files_dir = os.path.join(out, "files"); shutil.rmtree(files_dir, ignore_errors=True); os.makedirs(files_dir); rows = []; blob = "https://github.com/%s/blob/%s/" % (REPO, BRANCH); raw = "https://raw.githubusercontent.com/%s/%s/" % (REPO, BRANCH)
+    for src in walk(a.path):
+        size = os.path.getsize(src); k = key_of(src); rel = "Projects/%s/handoff/%s/files/%s" % (a.project, a.name, k); row = {"key": k, "source": src, "bytes": size, "sha256": sha256(src)}
+        if size > a.max_mb * 1048576: row.update({"status": "pointer-only", "reason": "above %g MB" % a.max_mb, "assets": assets_hint(src, a.root)})
+        else:
+            dst = os.path.join(files_dir, k); os.makedirs(os.path.dirname(dst), exist_ok=True); shutil.copy2(src, dst); row.update({"status": "copied", "blob": blob_id(dst), "repo_path": rel, "github_url": blob + rel.replace(" ", "%20"), "raw_url": raw + rel.replace(" ", "%20")})
+        rows.append(row)
+    man = {"name": a.name, "project": a.project, "repo": REPO, "branch": BRANCH, "created": time.strftime("%d %B %Y %H:%M"), "max_mb": a.max_mb, "files": rows}; json.dump(man, open(os.path.join(out, "MANIFEST.json"), "w"), indent=1)
+    idx = ["# Handoff %s / %s (%s)" % (a.project, a.name, man["created"]), "", "Index mapping of the files given to the cloud session. Read MANIFEST.json for the machine form.", "", "| key | bytes | status | link |", "|---|---|---|---|"] + ["| %s | %d | %s | %s |" % (r["key"], r["bytes"], r["status"], r.get("github_url") or ("Assets " + json.dumps(r.get("assets")))) for r in rows]
+    open(os.path.join(out, "INDEX.md"), "w").write("\n".join(idx) + "\n"); c = sum(1 for r in rows if r["status"] == "copied"); print("staged %d files (%d copied, %d pointer-only) in %s" % (len(rows), c, len(rows) - c, out)); return man
+
+
+def push(a):
+    rel = "Projects/%s/handoff/%s" % (a.project, a.name); sh(["git", "add", "--", rel], cwd=a.root); st = sh(["git", "status", "--porcelain", "--", rel], cwd=a.root)
+    if st: sh(["git", "-c", "gc.auto=0", "commit", "-m", "Cloud handoff %s / %s" % (a.project, a.name), "-m", "Co-Authored-By: Claude Sonnet 5.5 <noreply@anthropic.com>", "--", rel], cwd=a.root)
+    try: sh(["git", "push", "origin", "HEAD:" + BRANCH], cwd=a.root)
+    except SystemExit:
+        sh(["git", "pull", "--rebase", "--autostash", "origin", BRANCH], cwd=a.root); sh(["git", "push", "origin", "HEAD:" + BRANCH], cwd=a.root)
+    print("pushed", rel)
+
+
+def verify(a):
+    man = json.load(open(os.path.join(hdir(a.root, a.project, a.name), "MANIFEST.json"))); sh(["git", "fetch", "origin", BRANCH], cwd=a.root); rel = "Projects/%s/handoff/%s/files" % (a.project, a.name); tree = sh(["git", "ls-tree", "-r", "origin/" + BRANCH, "--", rel], cwd=a.root); remote = {}
+    for l in tree.splitlines(): meta, path = l.split("\t", 1); remote[path] = meta.split()[2]
+    bad = [r["key"] for r in man["files"] if r["status"] == "copied" and remote.get(r["repo_path"]) != r["blob"]]; n = sum(1 for r in man["files"] if r["status"] == "copied")
+    print("verify : %d copied files, %d identical on origin/%s, %d wrong or missing" % (n, n - len(bad), BRANCH, len(bad)))
+    if bad: print("\n".join("  " + b for b in bad[:20])); sys.exit(1)
+
+
+def pull(a):
+    """cloud -> local : fetch a branch written by the cloud session and extract one folder of it into --dest, without touching the working tree."""
+    import io, tarfile
+    sh(["git", "fetch", "origin", a.branch], cwd=a.root); r = subprocess.run(["git", "archive", "--format=tar", "origin/" + a.branch, "--", a.folder], cwd=a.root, capture_output=True)
+    if r.returncode: raise SystemExit("nothing at %s on %s : %s" % (a.folder, a.branch, r.stderr.decode().strip()))
+    os.makedirs(a.dest, exist_ok=True); t = tarfile.open(fileobj=io.BytesIO(r.stdout)); t.extractall(a.dest); n = len(t.getnames()); print("pulled %d entries of %s from %s into %s" % (n, a.folder, a.branch, a.dest)); return n
+
+
+def selftest():
+    tmp = tempfile.mkdtemp(prefix="handoff_"); bare = os.path.join(tmp, "bare.git"); sh(["git", "init", "--bare", "-b", BRANCH, bare]); seed = os.path.join(tmp, "seed"); sh(["git", "clone", bare, seed]); sh(["git", "-C", seed, "checkout", "-b", BRANCH]); open(os.path.join(seed, "README"), "w").write("x"); sh(["git", "-C", seed, "add", "README"]); sh(["git", "-C", seed, "-c", "user.email=t@t", "-c", "user.name=t", "commit", "-m", "init"]); sh(["git", "-C", seed, "push", "origin", "HEAD:" + BRANCH])
+    src = os.path.join(tmp, "src"); os.makedirs(src + "/sub"); open(src + "/a.txt", "w").write("alpha"); open(src + "/sub/b.bin", "wb").write(os.urandom(5000)); open(src + "/c.bak1", "w").write("skip me"); open(src + "/big.dat", "wb").write(b"0" * 2 * 1048576)
+    ns = argparse.Namespace(project="p", name="n", path=[src], max_mb=1.0, root=seed); man = stage(ns); st = {r["key"].split("/")[-1]: r["status"] for r in man["files"]}
+    ok1 = st == {"a.txt": "copied", "b.bin": "copied", "big.dat": "pointer-only"}; os.environ["GIT_COMMITTER_NAME"] = "t"; os.environ["GIT_COMMITTER_EMAIL"] = "t@t"; os.environ["GIT_AUTHOR_NAME"] = "t"; os.environ["GIT_AUTHOR_EMAIL"] = "t@t"; push(ns); verify(ns); ok2 = True
+    tgt = [r for r in man["files"] if r["status"] == "copied"][0]; open(os.path.join(seed, tgt["repo_path"]), "a").write("tamper"); mp = os.path.join(hdir(seed, "p", "n"), "MANIFEST.json"); m2 = json.load(open(mp)); m2["files"][0]["blob"] = blob_id(os.path.join(seed, m2["files"][0]["repo_path"])); json.dump(m2, open(mp, "w"))
+    try: verify(ns); ok3 = False
+    except SystemExit: ok3 = True
+    sh(["git", "-C", seed, "checkout", "-q", "-b", "b1", "origin/" + BRANCH]); os.makedirs(seed + "/Projects/p/article-cloud"); open(seed + "/Projects/p/article-cloud/A.md", "w").write("from the cloud"); sh(["git", "-C", seed, "add", "Projects/p/article-cloud"]); sh(["git", "-C", seed, "commit", "-q", "-m", "cloud"]); sh(["git", "-C", seed, "push", "-q", "origin", "b1"]); sh(["git", "-C", seed, "checkout", "-q", BRANCH])
+    dest = os.path.join(tmp, "dest"); pull(argparse.Namespace(root=seed, branch="b1", folder="Projects/p/article-cloud", dest=dest)); ok4 = open(dest + "/Projects/p/article-cloud/A.md").read() == "from the cloud"
+    shutil.rmtree(tmp, ignore_errors=True); print("selftest : stage statuses %s, push+verify green %s, tampered file red %s, pull from a cloud branch %s" % (ok1, ok2, ok3, ok4)); sys.exit(0 if ok1 and ok2 and ok3 and ok4 else 1)
+
+
+def main():
+    ap = argparse.ArgumentParser(); ap.add_argument("cmd", choices=["stage", "push", "verify", "pull", "selftest"]); ap.add_argument("--project"); ap.add_argument("--name"); ap.add_argument("--path", action="append", default=[]); ap.add_argument("--max-mb", type=float, default=MAX_MB); ap.add_argument("--root", default=ROOT); ap.add_argument("--branch"); ap.add_argument("--folder"); ap.add_argument("--dest"); a = ap.parse_args()
+    if a.cmd == "selftest": selftest()
+    elif a.cmd == "pull":
+        if not (a.branch and a.folder and a.dest): raise SystemExit("--branch, --folder and --dest are required")
+        pull(a)
+    elif not (a.project and a.name): raise SystemExit("--project and --name are required")
+    elif a.cmd == "stage":
+        if not a.path: raise SystemExit("--path is required")
+        stage(a)
+    elif a.cmd == "push": push(a)
+    else: verify(a)
+
+
+if __name__ == "__main__": main()

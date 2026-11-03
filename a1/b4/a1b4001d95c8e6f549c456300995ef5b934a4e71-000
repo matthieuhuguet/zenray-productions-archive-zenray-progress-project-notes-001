@@ -1,0 +1,22 @@
+#!/bin/zsh
+# 30 October 2026 : CLOUD BRIDGE : the research files of the cloud session (branch research/retopo-cloud of matthieuhuguet/Memory) copied to the atelier, WITHOUT touching the working tree or the branch of Memory1.
+# EN: git fetch of the branch, then every file the branch adds or changes under Projects/zenray-meshes/research-dataset/ (compared with main) is written to research/cloud/ ; the new commits are listed. Usage : CloudBridge.sh [--watch]   (--watch prints one line each time the remote branch head changes, for the Monitor tool)
+# FR : le pont vers la session cloud : fetch de la branche, les fichiers nouveaux ou modifies copies dans research/cloud/, sans toucher au depot de travail.
+REPO=/Users/zenray/.claude/Memory1; BR=research/retopo-cloud; OUT=/Users/zenray/.claude/tmp/tmp-zenray-meshes/research/cloud; DIR=Projects/zenray-meshes/research-dataset
+if [[ "$1" == "--watch" ]]; then
+  last=""
+  while true; do
+    head=$(git -C $REPO ls-remote origin refs/heads/$BR 2>/dev/null | awk '{print $1}')
+    if [[ -n "$head" && "$head" != "$last" ]]; then echo "cloud branch $BR now at ${head[1,8]}"; last="$head"; fi
+    sleep 120
+  done
+fi
+mkdir -p "$OUT"
+if ! git -C $REPO fetch -q origin $BR 2>/dev/null; then echo "branch $BR not pushed yet"; exit 0; fi
+git -C $REPO fetch -q origin main 2>/dev/null
+echo "commits on the branch not in main :"; git -C $REPO log --format="  %h %ad %s" --date=format:%H:%M origin/main..origin/$BR | head -20
+n=0
+for f in $(git -C $REPO diff --name-only origin/main...origin/$BR -- $DIR); do
+  rel=${f#$DIR/}; mkdir -p "$OUT/$(dirname $rel)"; git -C $REPO show origin/$BR:$f > "$OUT/$rel" 2>/dev/null && { print "  $(wc -c < "$OUT/$rel" | tr -d ' ') bytes  $rel"; n=$((n+1)); }
+done
+echo "$n file(s) copied to $OUT"; git -C $REPO rev-parse origin/$BR > "$OUT/.last"

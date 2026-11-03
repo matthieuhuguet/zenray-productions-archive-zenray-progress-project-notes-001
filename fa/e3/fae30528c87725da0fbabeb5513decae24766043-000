@@ -1,0 +1,98 @@
+{
+ "name": "cloud-bridge-3-November-2026",
+ "project": "zenray-progress",
+ "repo": "matthieuhuguet/Memory",
+ "branch": "main",
+ "created": "03 November 2026 23:36",
+ "max_mb": 20.0,
+ "files": [
+  {
+   "key": "skills/zenray-cloud-handoff/SKILL.md",
+   "source": "/Users/zenray/.claude/skills/zenray-cloud-handoff/SKILL.md",
+   "bytes": 2281,
+   "sha256": "1f921ed00ee7cc2413d3f57d6dd7734236a979c28ee5dcd37642e05532baa673",
+   "status": "copied",
+   "blob": "f127ee4aef31b037411c30eed532986848f389c0",
+   "repo_path": "Projects/zenray-progress/handoff/cloud-bridge-3-November-2026/files/skills/zenray-cloud-handoff/SKILL.md",
+   "github_url": "https://github.com/matthieuhuguet/Memory/blob/main/Projects/zenray-progress/handoff/cloud-bridge-3-November-2026/files/skills/zenray-cloud-handoff/SKILL.md",
+   "raw_url": "https://raw.githubusercontent.com/matthieuhuguet/Memory/main/Projects/zenray-progress/handoff/cloud-bridge-3-November-2026/files/skills/zenray-cloud-handoff/SKILL.md"
+  },
+  {
+   "key": "skills/zenray-cloud-handoff/scripts/Handoff.py",
+   "source": "/Users/zenray/.claude/skills/zenray-cloud-handoff/scripts/Handoff.py",
+   "bytes": 11082,
+   "sha256": "accae4f9b2cd21aaab0c6d7677aec7e81bfb5d6e2cacfa43a0c9491881f1f67f",
+   "status": "copied",
+   "blob": "e7ed0138196e7b41c301d9dd28c262b8da0d1e1c",
+   "repo_path": "Projects/zenray-progress/handoff/cloud-bridge-3-November-2026/files/skills/zenray-cloud-handoff/scripts/Handoff.py",
+   "github_url": "https://github.com/matthieuhuguet/Memory/blob/main/Projects/zenray-progress/handoff/cloud-bridge-3-November-2026/files/skills/zenray-cloud-handoff/scripts/Handoff.py",
+   "raw_url": "https://raw.githubusercontent.com/matthieuhuguet/Memory/main/Projects/zenray-progress/handoff/cloud-bridge-3-November-2026/files/skills/zenray-cloud-handoff/scripts/Handoff.py"
+  },
+  {
+   "key": "skills/zenray-meshes/scripts/lines/CloudBridge.sh",
+   "source": "/Users/zenray/.claude/skills/zenray-meshes/scripts/lines/CloudBridge.sh",
+   "bytes": 1823,
+   "sha256": "f659e1201f980bedb1a3f3959e7ce7bfa2785b0300a365252dbe49bda630c9be",
+   "status": "copied",
+   "blob": "b92a92228a18d9d4feb0edf916fb6982f52f0139",
+   "repo_path": "Projects/zenray-progress/handoff/cloud-bridge-3-November-2026/files/skills/zenray-meshes/scripts/lines/CloudBridge.sh",
+   "github_url": "https://github.com/matthieuhuguet/Memory/blob/main/Projects/zenray-progress/handoff/cloud-bridge-3-November-2026/files/skills/zenray-meshes/scripts/lines/CloudBridge.sh",
+   "raw_url": "https://raw.githubusercontent.com/matthieuhuguet/Memory/main/Projects/zenray-progress/handoff/cloud-bridge-3-November-2026/files/skills/zenray-meshes/scripts/lines/CloudBridge.sh"
+  },
+  {
+   "key": "skills/zenray-cloud/SKILL.md",
+   "source": "/Users/zenray/.claude/skills/zenray-cloud/SKILL.md",
+   "bytes": 8354,
+   "sha256": "25d761711bcacec14bda3efea92637ce1e7a3d9aec5dae2f6897572b400b516e",
+   "status": "copied",
+   "blob": "2a5827b9c92c768ad574d36a98267ced96de0cf4",
+   "repo_path": "Projects/zenray-progress/handoff/cloud-bridge-3-November-2026/files/skills/zenray-cloud/SKILL.md",
+   "github_url": "https://github.com/matthieuhuguet/Memory/blob/main/Projects/zenray-progress/handoff/cloud-bridge-3-November-2026/files/skills/zenray-cloud/SKILL.md",
+   "raw_url": "https://raw.githubusercontent.com/matthieuhuguet/Memory/main/Projects/zenray-progress/handoff/cloud-bridge-3-November-2026/files/skills/zenray-cloud/SKILL.md"
+  },
+  {
+   "key": "skills/zenray-progress/SKILL.md",
+   "source": "/Users/zenray/.claude/skills/zenray-progress/SKILL.md",
+   "bytes": 24821,
+   "sha256": "0cdc61b993d3cfdbb26c850d9ae1cdd668ea6dc31688ed65bb0f4983c28b810a",
+   "status": "copied",
+   "blob": "554709f60a3a359e56dc239101adac8d10115e26",
+   "repo_path": "Projects/zenray-progress/handoff/cloud-bridge-3-November-2026/files/skills/zenray-progress/SKILL.md",
+   "github_url": "https://github.com/matthieuhuguet/Memory/blob/main/Projects/zenray-progress/handoff/cloud-bridge-3-November-2026/files/skills/zenray-progress/SKILL.md",
+   "raw_url": "https://raw.githubusercontent.com/matthieuhuguet/Memory/main/Projects/zenray-progress/handoff/cloud-bridge-3-November-2026/files/skills/zenray-progress/SKILL.md"
+  },
+  {
+   "key": "skills/zenray-assets/SKILL.md",
+   "source": "/Users/zenray/.claude/skills/zenray-assets/SKILL.md",
+   "bytes": 135006,
+   "sha256": "404100e855f92c42ea594f60fa910f74fef758d04b9597dd54ec29b516f0fa00",
+   "status": "copied",
+   "blob": "a0af26c430b150a2e24f11d50f0aceaea08fd0a8",
+   "repo_path": "Projects/zenray-progress/handoff/cloud-bridge-3-November-2026/files/skills/zenray-assets/SKILL.md",
+   "github_url": "https://github.com/matthieuhuguet/Memory/blob/main/Projects/zenray-progress/handoff/cloud-bridge-3-November-2026/files/skills/zenray-assets/SKILL.md",
+   "raw_url": "https://raw.githubusercontent.com/matthieuhuguet/Memory/main/Projects/zenray-progress/handoff/cloud-bridge-3-November-2026/files/skills/zenray-assets/SKILL.md"
+  },
+  {
+   "key": "skills/zenray-cloud-handoff/SKILL.md",
+   "source": "/Users/zenray/.claude/skills/zenray-cloud-handoff/SKILL.md",
+   "bytes": 2281,
+   "sha256": "1f921ed00ee7cc2413d3f57d6dd7734236a979c28ee5dcd37642e05532baa673",
+   "status": "copied",
+   "blob": "f127ee4aef31b037411c30eed532986848f389c0",
+   "repo_path": "Projects/zenray-progress/handoff/cloud-bridge-3-November-2026/files/skills/zenray-cloud-handoff/SKILL.md",
+   "github_url": "https://github.com/matthieuhuguet/Memory/blob/main/Projects/zenray-progress/handoff/cloud-bridge-3-November-2026/files/skills/zenray-cloud-handoff/SKILL.md",
+   "raw_url": "https://raw.githubusercontent.com/matthieuhuguet/Memory/main/Projects/zenray-progress/handoff/cloud-bridge-3-November-2026/files/skills/zenray-cloud-handoff/SKILL.md"
+  },
+  {
+   "key": "skills/zenray-cloud-handoff/scripts/Handoff.py",
+   "source": "/Users/zenray/.claude/skills/zenray-cloud-handoff/scripts/Handoff.py",
+   "bytes": 11082,
+   "sha256": "accae4f9b2cd21aaab0c6d7677aec7e81bfb5d6e2cacfa43a0c9491881f1f67f",
+   "status": "copied",
+   "blob": "e7ed0138196e7b41c301d9dd28c262b8da0d1e1c",
+   "repo_path": "Projects/zenray-progress/handoff/cloud-bridge-3-November-2026/files/skills/zenray-cloud-handoff/scripts/Handoff.py",
+   "github_url": "https://github.com/matthieuhuguet/Memory/blob/main/Projects/zenray-progress/handoff/cloud-bridge-3-November-2026/files/skills/zenray-cloud-handoff/scripts/Handoff.py",
+   "raw_url": "https://raw.githubusercontent.com/matthieuhuguet/Memory/main/Projects/zenray-progress/handoff/cloud-bridge-3-November-2026/files/skills/zenray-cloud-handoff/scripts/Handoff.py"
+  }
+ ]
+}

@@ -1,0 +1,166 @@
+---
+name: zenray-progress
+description: Travailler sur le site ZenRayProgress (le drive de Matthieu, zenray-progress.pages.dev) et appliquer ses politiques de drive et d'upload. Vue Create (films, séries, photos, audio, streaming CMAF), worker d'upload, push GitHub, miniatures, sous-titres, déploiement Cloudflare, code et UI du site. À ne pas confondre avec zenray-assets (projets de production, LOAD/UNLOAD, feedback, mapping). Ex-zenrayprogress-context.
+---
+
+# ZenRay Progress (14 October 2026)
+
+Ce skill est le seul point d'entrée du site ZenRayProgress : son code, son interface, la vue Create et TOUTES les politiques de drive et d'upload. Il s'appelait `zenrayprogress-context` jusqu'au 14 October 2026 ; ce nom n'existe plus. (14 October 2026)
+
+## Ne pas confondre avec zenray-assets (14 October 2026)
+
+| Demande | Skill | Pourquoi |
+|---|---|---|
+| Envoyer, uploader, streamer un film, un épisode, une photo, un son vers le drive | `zenray-progress` | c'est la bibliothèque (vue Create) |
+| Politique de push GitHub, dépôts d'archive, CMAF, sous-titres, miniatures, noms, dossiers Anime/Movies/Series/Documentaries | `zenray-progress` | politiques du drive |
+| Code, UI, déploiement, bugs du site (Create, Assets, Plan, Media...) | `zenray-progress` | c'est le dépôt ZenRayProgress |
+| Charger, décharger, restaurer une copie locale ; archiver un projet de production ; mapping, FEEDBACK.md, Rules.md, conversations, FileMap, panneau macOS | `zenray-assets` | c'est le service Assets et ses projets |
+
+- Un film ou une photo est un objet de la bibliothèque Create : ce n'est JAMAIS un projet Assets. Un projet Assets est un chantier de production (Houdini, Unreal, TMP) archivé par le service. (14 October 2026)
+- L'onglet « Assets » du site est de l'interface : son code se modifie ici ; le moteur qui archive et restaure appartient à `zenray-assets`. (14 October 2026)
+- Le verbe tranche, jamais un nom de dossier : `envoie / upload / streaming` = ce skill ; `charge / décharge / restaure / archive le projet` = `zenray-assets`. Commande : `node ~/.claude/skills/zenray-progress/scripts/route-method.mjs "<la phrase>"`, qui rend UNE méthode ou « AUCUNE METHODE » (alors poser la question). (14 October 2026)
+
+## Commencer un travail sur le site (14 October 2026)
+
+Travailler dans `/Users/zenray/Create/Build/Productions/GithubProductions/ZenRayProgress` (ou un checkout propre à jour d'`origin/main`).
+
+1. Lire `docs/INDEX-ERREURS-FEATURES.md` d'abord, puis `CLAUDE.md` et les dernières entrées utiles avec `progress.mjs tail --project "ZenRayProgress" --count 3`. (14 October 2026)
+2. Inspecter `git status --short` ; conserver les changements des autres. (14 October 2026)
+3. Lire les vrais appelants avec `rg` ; ne pas se fier à la mémoire ou à de vieux plans quand le dépôt diffère. (14 October 2026)
+4. Réutiliser les helpers existants et valider le vrai flux (build, endpoint, navigateur) avant d'annoncer un succès. (14 October 2026)
+5. Journaliser dans `/Users/zenray/.claude/PROGRESS.md` par le skill `progress` seulement. (14 October 2026)
+6. Déployer : `npx vite build && npx wrangler pages deploy dist --project-name zenray-progress --branch main`, depuis un arbre propre d'origin/main ; contrôle : l'`index-*.js` servi est celui de `dist/index.html`. (14 October 2026)
+
+## Politiques de drive et d'upload en vigueur (14 October 2026)
+
+Valeurs courantes ; le détail daté et les corrections sont dans [references/UploadPolicies.md](references/UploadPolicies.md), les règles épinglées dans `/Users/zenray/.claude/Memory1/Projects/zenray-progress/Rules.md`, les incidents dans `docs/INDEX-ERREURS-FEATURES.md`. Le code fait foi des chiffres : `scripts/lib/push-batch-policy.mjs`, `scripts/lib/repo-create-policy.mjs`.
+
+| Sujet | Règle |
+|---|---|
+| Une entrée | un film ou un épisode part par UN worker, `ZR_ONLY_PLAN=<plan.json> ZR_PROGRESS_REPO=<checkout propre> python3 ~/.claude/tmp/tmp-movies-series-upload/Scripts/ProcessFilmsSequentially.py` : archive chiffrée, CMAF, sous-titres, preuve, déchargement. `upload-mapped-git.mjs` seul (archive sans CMAF) ne suffit jamais |
+| Dossier cloud | `pages/Anime_Movies_Series_Documentaries/{Anime,Movies,Series,Documentaries}`, décidé AVANT l'envoi par `scripts/Films/WorkCategories.json` ; oeuvre inconnue = refusée, on demande à Matthieu puis on l'ajoute à la table ; une oeuvre n'a qu'un dossier |
+| Noms | nom local propre = nom cloud, `MediaRename.mjs plan` validé par Matthieu avant l'upload |
+| Taille d'un push | 1 900 Mio, soit 20 parts de 95 Mio, dimensionnée par la ligne mesurée ; échecs comptés par lot, 3 échecs retombent à 190 Mio puis remontée 2, 4, 8, 12, 16, 20 après 3 réussites ; jamais deux pushes simultanés vers un dépôt |
+| Dépôts | archive de film 4 096 Mio (43 parts) ; archive de dossier 2 048 Mio ; réutilisation d'un dépôt par voie, créations espacées de 120 s, 12 par heure au plus (24 si le volume l'exige) ; un blocage GitHub 403 divise le budget par deux |
+| Preuve avant de décharger | preuve par identité d'objets (manifeste en ligne, noms et blobs, une vraie part relue), pas de relecture complète sauf échec ; déchargement refusé sans `master` et `mpd` (sauf `"cmaf": false` explicite) et sans affiche publique |
+| CMAF | copie directe d'abord, sinon transcodage 4K 16, 8, 4, 2 Mbit/s et autre source 8, 4, 2 ; chaque segment sous 19 Mio ; `hvc1` pour tout HEVC |
+| Streaming | sous-titres obligatoires pour toute vidéo HLS/DASH, toutes les pistes audio nommées par langue |
+| Miniatures | URL jsDelivr publique pinnée sur un commit, jamais `/api/raw-proxy` ni `raw.githubusercontent.com` ; `scripts/CheckFilmPosters.mjs` vert avant d'annoncer un lot fini |
+| Écriture GitHub | un seul écrivain Git sur `zenray-data` pendant un lot ; au-delà de 100 fichiers, clone sparse puis commit et push, jamais l'API en boucle ; jamais de fetch en boucle sans cache ni voie hors quota |
+| Index et recherche | `build-search-index.mjs --apply` est réservé à Matthieu |
+
+## Références (14 October 2026)
+
+- [references/UploadPolicies.md](references/UploadPolicies.md) : toutes les sections datées de politique d'upload, intégrales. (14 October 2026)
+- [references/Upload.md](references/Upload.md) : ex-skill `zenray-upload`, vidéo privée chiffrée, hvc1, pipeline de base. (14 October 2026)
+- [references/AssetsUpload.md](references/AssetsUpload.md) : ex-skill `zenray-assets-upload`, workflow de sous-titres. (14 October 2026)
+- `scripts/PrepareSubtitleCopy.py`, `scripts/RestartFilmWorker.sh`, `scripts/route-method.mjs` : outils du worker. Relancer le worker uniquement par `RestartFilmWorker.sh [--wait-upload-end]`. (14 October 2026)
+
+## Historique du skill zenrayprogress-context (conservé tel quel)
+
+Work in `/Users/zenray/Create/Build/Productions/GithubProductions/ZenRayProgress`.
+
+1. Read `docs/INDEX-ERREURS-FEATURES.md` first, then `CLAUDE.md` and the last relevant global entries with
+   `progress.mjs tail --project "ZenRayProgress" --count 3`.
+2. Inspect `git status --short`; preserve unrelated changes.
+3. Read the actual call sites and code for the requested feature with `rg`; do not rely on Memory or old plans when the repository differs.
+4. Reuse existing helpers and validate the real flow (build, endpoint, or browser) before claiming success.
+5. Journal the result only in `/Users/zenray/.claude/PROGRESS.md` through the `progress` skill. The repository's
+   former `PROGRESS.md` is legacy read-only until Matthieu validates its deletion.
+
+## Téléchargements ZIP, contrôle du 2026-09-03
+
+Réutiliser `src/lib/bulkZip.js` et `notifyProgress` dans `src/components/Notifications.jsx`.
+`runZipDownload` dans App relie la notification et le spinner Finder au même état réel.
+Le callback annonce lecture, écriture et finalisation ; 100 % attend la fermeture disque.
+Vérifier avec `npx vitest run src/lib/bulkZip.test.js src/components/Notifications.test.jsx` :
+archives relues, fermeture retardée, erreurs disque, annulation, repli Blob et notification persistante.
+
+## 11 October 2026 : Branche de production Cloudflare Pages
+
+- 11 October 2026 : La production de `zenray-progress.pages.dev` se déploie avec `npx wrangler pages deploy dist --project-name zenray-progress --branch main` ; `--branch master` ne crée qu'un aperçu (`master.zenray-progress.pages.dev`). Contrôle : l'`index-*.js` servi par `https://zenray-progress.pages.dev/` doit être celui de `dist/index.html`. (11 October 2026)
+- 11 October 2026 : Le panneau Assets lit le relais local `http://127.0.0.1:47831/activity` (`relay/activity-source.mjs`, LaunchAgent `com.zenray.journal-relay`) ; le navigateur intégré de l'agent ne peut pas le joindre, seul le Chrome du Mac le peut. (11 October 2026)
+
+## 12 October 2026 : Miniatures de films et renommage propre avant upload
+
+- 12 October 2026 : Un poster de film est TOUJOURS une URL jsDelivr publique pinnée sur un commit, jamais `/api/raw-proxy` ni `raw.githubusercontent.com` (la production n'a pas `ZENRAY_RAW_TOKEN`, les tuiles sortaient noires). Avant d'annoncer un lot de films fini : `node scripts/CheckFilmPosters.mjs --manifests <clone zenray-data>` doit être vert. Réparation : `scripts/RepairFilmPosters.mjs`. Les caches `localStorage` de poster sont versionnés (`zrposter2:`, `zrfthumb2:`, `zrvcard6:`) : changer la forme d'une URL d'image impose de bumper la clé.
+- 12 October 2026 : Tout upload de médias commence par `node scripts/MediaRename.mjs plan --root <dossier>`, un tableau Avant/Après présenté à Matthieu (sous-dossiers `Titre/Saison NN/` proposés), puis `apply --plan <plan.json> --approved` seulement après sa validation. Le nom local est le nom cloud, propre (`Under The Open Sky.mkv`, `Akane Banashi S01E12.mkv`). Nouveau lot : `ZR_REQUIRE_CLEAN_NAMES=1`. Après l'upload : index mapping puis `MediaRename.mjs check --upload-plan ReadyUploadPlan.json` vert.
+- 12 October 2026 : Avant de dépendre d'un secret serveur, le chercher dans `npx wrangler pages secret list --project-name zenray-progress` ; `server/raw-proxy.js` exige `ZENRAY_RAW_TOKEN`, qui n'y figure pas.
+
+## 12 October 2026 : Audio, sous-titres sans ré-upload, reçus et renommage du cloud
+
+- 12 October 2026 : Piste audio = sa langue (`日本語`), jamais `audio_1` ; `scripts/RepairAudioNames.mjs` répare l'existant. Le menu Audio du lecteur est toujours visible.
+- 12 October 2026 : Un film déjà déchargé qui manque de sous-titres se complète par `scripts/AppendSubtitlesFromCloud.mjs` (restauration depuis le reçu cloud, extraction, ajout au manifeste), jamais par un ré-upload. À lancer depuis le dépôt principal, environ 2,3 Mo/s.
+- 12 October 2026 : Les reçus de récupération comparent `manifestRecoverySha256`, pas le manifeste entier. `RenameCloudMedia.mjs` renomme et range les films du cloud (manifestes et `.streams` ensemble, reçus mis à jour).
+
+## 14 October 2026 : décision streaming seul (code en attente de validation)
+
+- 14 October 2026 : décision de Matthieu : tous les films et formats vidéo passent par le CMAF streamé seul, sans archive chiffrée de l'original ; toutes les pistes audio gardées avec un nom clair ; film transcodé accepté ; re-téléchargement en fichiers séparés (vidéo, audio au choix, sous-titres). Règle complète : `/Users/zenray/.claude/Memory1/Projects/zenray-progress/Rules.md`. Le tableau « Politiques en vigueur » plus haut décrit encore l'état AVANT cette décision (archive + CMAF) tant que le code n'est pas livré. (14 October 2026)
+
+## 14 October 2026 : etat final des envois de films (decision de Matthieu, plus de question)
+
+- 14 October 2026 : streaming seul, toutes les pistes audio, TOUS les sous-titres dans le cloud (trop gros pour le manifeste = fichier texte dans le depot public des segments, `src` dans le manifeste). (14 October 2026)
+- 14 October 2026 : plusieurs films en streaming = le worker : `ZR_ONLY_PLAN=<plan.json> ZR_UNLOAD_ROOTS=<dossier source> ZR_PROGRESS_REPO=<depot> python3 scripts/Films/ProcessFilmsSequentially.py` (StreamBatch.py est supprime) : prepare (CMAF local, `--stage-only`), publie des qu'un depot de 4,2 Gio est pret (`PublishStagedBatch.mjs`, pushes remplis a 1 900 Mio), sous-titres, preuve, dechargement automatique si la preuve est verte. Etat : `StreamBatchStatus.json` dans `~/.claude/tmp/tmp-movies-series-upload/`. (14 October 2026)
+- 14 October 2026 : tout envoi passe par `ProcessFilmsSequentially.py` ; aucun autre script d'envoi. Lecture : `src/lib/cdnFallbackLoader.js` (jsDelivr 3 s puis raw). En cas de doute l'agent tranche seul et le dit apres coup. Regle complete : `Memory1/Projects/zenray-progress/Rules.md`. (14 October 2026)
+
+## 15 October 2026 : affinage du site, ce qui a changé et comment le livrer (15 October 2026)
+
+- 15 October 2026 : Cmd/Ctrl+K est la palette UNIQUE de l'app, montée à la racine d'`App.jsx` (`src/components/SpotlightSearch.jsx`) : destinations de `NAV` d'abord, fichiers de l'index ensuite, depuis toutes les vues. Ne pas la remonter dans Create. (15 October 2026)
+- 15 October 2026 : les demandes vers Create faites depuis une autre vue (note du jour, dossier, lecteur audio, YouTube, Spotify) passent par `poserDemandePages`, exportée de `src/create/Pages.jsx` : la boîte aux lettres vit à côté de `pagesMonte` et `demandePages`. L'ancienne copie dans `App.jsx` levait une ReferenceError et perdait la demande. (15 October 2026)
+- 15 October 2026 : index de recherche : `refresh()` lit les 400 premiers octets de `delta.json` (22 Mo) par `peekDeltaBuiltAt`, et les shards déchiffrés sont réutilisés tant que seul le delta bouge (`loadShardBase`). Le delta se replie dans les shards par `build-search-index.mjs --apply`, réservé à Matthieu. (15 October 2026)
+- 15 October 2026 : `Pages.jsx` : le sondage de l'arbre (25 s) saute le corps quand l'ETag n'a pas bougé ; les marqueurs de visibilité de dossier persistent dix minutes (`zr:folderVis:v1`) et un échec de lecture n'est JAMAIS mémorisé comme absence. (15 October 2026)
+- 15 October 2026 : Freelance : lot de 3, 5, 10, 20 ou 50 ; « Ouvrir les N pages » ouvre les pages de candidature en onglets par le service local (`open-links`, https public seulement, 60 au plus), « Copier » met la lettre prête dans le presse-papiers, « Tout marquer fait » demande une confirmation ; un groupe de cartes affiche 72 fiches puis « Afficher plus ». Gallery : filtre texte qui ne change que l'affichage. (15 October 2026)
+- 15 October 2026 : films : `ProcessFilmsSequentially.py` termine sous-titres, preuve et déchargement 4 films à la fois (`ZR_FINISH_FLOWS`) ; l'encodeur matériel VideoToolbox plafonne vers 20 fois le temps réel dès 2 flux, ne pas monter `ZR_PACKAGE_FLOWS` pour aller plus vite. (15 October 2026)
+- 15 October 2026 : livrer = `~/.claude/tmp/tmp-zenray-refine-14oct/Scripts/Ship.sh [--restart-assets] [--restart-freelance] [--no-deploy]` depuis le worktree `~/.claude/tmp/tmp-zenray-refine-14oct/work` (rebase origin/main, suite complète, build, push, déploiement Pages, fast-forward du dépôt principal, vérification du bundle servi). Prévisualiser : `preview_start zenray-refine` (port 3300, Assets passif, vraie clé média). (15 October 2026)
+
+## 16 October 2026 : Livraison et limites des processus de test
+
+- Ship.sh accepte ZR_SHIP_TEST_WORKERS, défaut4 ; valeur1 pour une vérification globale sans concurrence entre fichiers lorsque les nettoyages des tests Assets rencontrent la charge. Le script conserve désormais le code d’échec avant d’afficher le rapport et de tenter sa relance ; set-e coupait auparavant ce chemin. Aucun échec n’autorise le déploiement. (16 October 2026)
+- Dans AssetsService.test.js, le nettoyage ferme les services avant de supprimer leurs dossiers temporaires ; l’attente d’un audit courant inclut aussi la disparition de son diagnostic périmé. Les assertions restent présentes et aucun comportement de production Assets n’est modifié par cette correction de tests. (16 October 2026)
+
+## 16 October 2026 : vue Sport (Plan et note du jour)
+
+- 16 October 2026 : la vue `sport` (menu Create, après Goals) tient la base d'exercices en tuiles, UNE carte Plan par jour (`sport-<date>`, `sport.entries` structuré et `note` lisible) et le bloc Sport de la note du jour entre `<!-- sport:start -->` et `<!-- sport:end -->`. Tout est dans `src/sport/`, `src/config/sport.js` et `docs/SPORT.md` du dépôt ZenRayProgress ; ajouter un exercice, une photo ou une valeur cliquable s'y décrit en trois lignes. (16 October 2026)
+- 16 October 2026 : le plan actif se résout par réglage manuel `zr:sport:planPath`, puis premier plan épinglé, puis cache, puis chemin de repli ; un plan introuvable ou illisible n'est jamais traité comme vide. Déployé le 16 October 2026 ; la première écriture réelle dans le vrai Plan n'a PAS été exécutée (testée par 19 tests avec écritures simulées). (16 October 2026)
+
+
+## 19 October 2026 : Plan, pièces jointes Create et liens Calendar
+
+- 19 October 2026 : le détail d'une tâche Plan accepte les fichiers originaux par `src/create/PlanAttachments.jsx` et `captureAttachment`, sous `pages/PlanAttachments/<task-id>` ; aucun texte converti ni vidéo transcodée. Les paramètres communs sont dans `src/create/planAttachments.js`. (19 October 2026)
+- 19 October 2026 : les liens `/api/attachment-download?share=…` utilisent le partage signé `kind=file`, permanent et révocable, ciblé sur un seul manifeste `.media.json`. Le retrait révoque le lien et conserve le fichier Create. Le serveur vérifie le jeton avant toute lecture puis déchiffre en flux ; la route Pages native conserve la pression du lecteur. Ne pas utiliser `/api/stream`, qui ne sert qu'une fenêtre de 4 Mio. (19 October 2026)
+- 19 October 2026 : les liens passent dans la description Google Calendar par `workers/plan-gcal/src/core.js`, y compris sur les événements importés modifiables sans tronquer leur description. Déployer Pages ET le Worker `workers/plan-gcal/wrangler.toml` ; valider les tests du composant, du téléchargement et de la synchronisation, puis télécharger un vrai fichier et comparer son SHA-256. (19 October 2026)
+- 19 October 2026 : correction Cloudflare du téléchargement : workerd impose `setAuthTag` AVANT `update`. Lire les 16 derniers octets par Range sur GitHub raw pinné, puis fournir ce tag avant le flux. Le Range jsDelivr peut viser le contenu compressé, donc ne pas y lire le tag. Contrôle local du vrai handler dans workerd : 7 299 017 octets exacts. (19 October 2026)
+
+## 19 October 2026 : limite et progression des pièces jointes Plan
+
+- 19 October 2026 : limite explicite de l'ajout navigateur Plan : 95 Mio par fichier, issue de RAW_THRESHOLD dans src/config/chunkPolicy.js et configurée par src/config/attachmentPolicy.js. Les fichiers vides ou trop gros sont refusés avant tout réseau. Les sélections de 100 fichiers ou plus renvoient vers l'import Create en masse par Git. Il s'agit d'une limite produit Plan, pas de la limite des fichiers GitHub. (19 October 2026)
+- 19 October 2026 : l'ajout ponctuel conserve le moteur universalCapture, AES-GCM, les morceaux de stockage de 19 Mio, les fragments de transport de 3 Mio, le sémaphore API existant, les reprises et le rollover. La politique Git des lots de 1900 Mio s'applique aux transferts Git en masse, pas à cette API navigateur. (19 October 2026)
+- 19 October 2026 : progression par fragment de transport accepté, barre pondérée par la taille des fichiers, SpinnerApple existant, phase réelle et secondes écoulées. La création du lien et la sauvegarde Plan restent visibles ; 100 % attend une confirmation du drive. Réglages dans PLAN_UI.attachments. Tests : src/capture/captureAttachment.test.js, src/config/attachmentPolicy.test.js et src/create/PlanAttachments.test.jsx. (19 October 2026)
+
+## 19 October 2026 : Plan creation attachments and existing Create media
+
+- 19 October 2026 : New goal and task details share PlanAttachments.jsx: visible file drop, Add attachments, From Create index search and direct manifest path. Existing Create media bypasses the 95 MiB new-upload cap because no binary is uploaded. (19 October 2026)
+- 19 October 2026 : linkCreateAttachment.js reads only the selected manifest with raw=1, creates a permanent revocable video/image viewer share for Calendar, or a file download for encrypted originals. The ordinary share expiry remains unchanged without permanent=true. Never send DASH/HLS manifests to the original-file download route. (19 October 2026)
+- 19 October 2026 : Regression checks: PlanBoardAttachments.test.jsx covers real creation and persistence; linkCreateAttachment.test.js covers a 9 GB movie without reupload, original audio downloads and invalid drops; shareRecordGraphql.test.js covers viewer permanence and revocation. No Calendar Worker change is required when only viewer URLs replace download URLs. (19 October 2026)
+
+## 20 October 2026 : articles intégrés à Assets, préparation locale
+
+- Les projets qui déclarent `article.fileId` s’ouvrent sur Article avant Fichiers, en Classique et Tube. Les autres projets gardent leur comportement. `ProjectArticle.jsx` rend un HTML autonome dans une iframe isolée ; `assetsProjectArticle.js` porte la limite de lecture, les références et la politique de contenu. (20 October 2026)
+- Le début du HTML sert de miniature, transportée dans la référence compacte du catalogue ; aucun HTML complet n’est chargé pour la grille. Les fichiers HTML sélectionnés se lisent aussi directement dans l’aperçu Assets. (20 October 2026)
+- Le service accepte `preview-text` avec `format=html` et `set-article` : déployer le code puis recharger le daemon sans interrompre ses archives avant de publier un article. La commande de création et la validation du SHA se décrivent dans le skill zenray-edit, référence ProjectArticles.md. L’article UV-Match Height reste à valider avant publication. (20 October 2026)
+
+- Livraison depuis un worktree : le build doit reprendre les variables VITE du dépôt principal ; sans .env.local, les paramètres Spotify disparaissent du bundle. Pour UV-Match Height, le build final est produit et déployé depuis le checkout principal propre à jour d’origin/main ; le bundle servi est comparé à son dist/index.html. Ne pas afficher les valeurs de configuration dans les logs. (20 October 2026)
+
+## 20 October 2026 : collections ArtStation dans Design
+
+- Import complet des collections, couvertures, images et aperçus vidéo/3D : lire [references/ArtstationCollections.md](references/ArtstationCollections.md), puis réutiliser les scripts et preuves de l'atelier existant. Les cookies restent en mémoire, les fichiers passent par le moteur Git existant, et la vérification compare chaque identité d'image avant l'ouverture de Design. (20 October 2026)
+
+## 23 October 2026 : sous-skill zenray-plan
+
+- 23 October 2026 : tout ce qui touche ZenRay Plan (agenda, tâches, séries, heures, tuiles) passe par le sous-skill `zenray-calendar-plan` (`/Users/zenray/.claude/skills/zenray-calendar-plan/SKILL.md`, outil `scripts/PlanTool.mjs`, projet Assets `zenray-calendar-plan-23-october-2026`). `zenray-plan-publish` en est le mode publication. (23 October 2026)
+
+## 28 October 2026 : vue Gallery > ZenRay Edit (designs HTML du skill zenray-edit, pointés depuis le cloud Assets)
+
+- 28 October 2026 : la vue `zenray-edit` (zone Gallery, après Environments) liste les 62 dossiers de design HTML (79 pages) du skill `zenray-edit` sans rien réuploader. Fichiers : `src/components/EditHtmlGallery.jsx`, `src/config/editHtmlGallery.js` (tous les réglages), `src/lib/editHtmlPointers.js` (fonctions pures), `src/lib/editHtmlBundle.js` et `src/lib/editHtmlArchive.js` (lecture). Entrée de registre : `kind: 'editHtml'` dans `src/config/pointerGalleries.js` ; ce type n'est jamais une cible d'« Ajouter à… ». (28 October 2026)
+- 28 October 2026 : un fichier archivé par Assets (manifeste `type: file`, `mode: chunked`) se lit par `src/lib/editHtmlArchive.js`, jamais par `loadChunked`, qui rend le texte « undefined » sans erreur sur ce schéma. La liste vient de `/api/page?action=tree&dir=<racine>` (un appel, ETag), l'index de recherche n'étant qu'un repli (11 dossiers de retard mesurés). (28 October 2026)
+- 28 October 2026 : l'automatisation vit côté skill : `file-design.mjs` fait la miniature `_thumb.webp` puis synchronise et archive ; `check-gallery-sync.mjs --folder <dossier> --wait 300` prouve la chaîne. Détail : skill `zenray-edit`, section du 28 October 2026. Index des erreurs : `docs/INDEX-ERREURS-FEATURES.md`, section du 28 October 2026. Livré le 28 October 2026 (commit 45b56c53, déploiement Pages `index-DR4MCc5h.js`). (28 October 2026)

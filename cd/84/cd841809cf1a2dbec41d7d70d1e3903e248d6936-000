@@ -1,0 +1,11 @@
+---
+name: zenray-cloud-handoff
+description: "Donner des fichiers locaux à une session Claude cloud sous forme de pointeurs via GitHub : copie dans le dépôt Memory (Projects/<id>/handoff/<nom>/files), table de correspondance MANIFEST.json (clé, source locale, octets, sha256, identifiant de blob git, liens GitHub), poussée des seuls chemins du dossier, preuve par identifiants de blobs. Utiliser quand Matthieu dit « donne ces fichiers à un agent cloud », « handoff cloud », « pointeurs pour le cloud », avant de lancer une session cloud qui doit lire des fichiers locaux (30 October 2026)."
+---
+
+# ZenRay Cloud Handoff (30 October 2026)
+
+- 30 October 2026 : une session cloud lit le dépôt `matthieuhuguet/Memory` (déjà sur GitHub, privé). Tout fichier de moins de 20 Mo peut donc lui être donné en pointeur sans nouvelle infrastructure. Les fichiers plus gros sont listés `pointer-only` avec le projet Assets qui les porte (route des shards, à décider plus tard : elle exige un accès en lecture aux archives chiffrées, donc une décision de Matthieu sur les secrets). (30 October 2026)
+- 30 October 2026 : commandes (Python 3 standard, aucune dépendance) : `python3 /Users/zenray/.claude/skills/zenray-cloud-handoff/scripts/Handoff.py stage --project <id> --name <nom> --path <fichier ou dossier> [--path ...] [--max-mb 20]`, puis `push`, puis `verify` (code de sortie 1 si un fichier distant diffère). `pull --branch <branche> --folder <dossier> --dest <dir>` : récupère ce que la session cloud a écrit sur sa branche, sans toucher à l arbre de travail ; `selftest` : vert sur un cas juste, rouge sur un fichier trafiqué (dépôt bare local jetable). (30 October 2026)
+- 30 October 2026 : règles : jamais de secret ni de clé dans un handoff (le mot de passe du drive, les jetons) ; seuls les chemins du dossier `handoff/<nom>` sont ajoutés au commit (jamais `git add -A`) ; le brief de la session cloud nomme le dossier `Projects/<id>/handoff/<nom>/` et son `INDEX.md` ; le retour du cloud passe par une branche (`CloudBridge.sh` du skill `zenray-meshes` en est le modèle). (30 October 2026)
+- 30 October 2026 : exemples : article ZenRay UV (`zenray-uv`, `uv-article`). Preuve de création : selftest vert le 30 October 2026. (30 October 2026)
