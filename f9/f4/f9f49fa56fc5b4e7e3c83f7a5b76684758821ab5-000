@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-11-04T12:17:32.022Z",
+ "scannedAt": "2026-11-04T18:18:23.296Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -80,7 +80,7 @@
    "sessionId": "d2f26016-25dd-4bcc-a6d8-122d50d3f383",
    "title": "zenray motion design",
    "updatedAt": "2026-10-26T18:52:22.994Z",
-   "bytes": 22509,
+   "bytes": 22576,
    "boundProject": null
   },
   {
@@ -174,8 +174,8 @@
    "conversationId": "gemini:dad216b8-610b-4279-a532-56e02644714d",
    "provider": "gemini",
    "sessionId": "dad216b8-610b-4279-a532-56e02644714d",
-   "title": "Conversation Gemini dad216b8",
-   "updatedAt": "2026-10-14T21:13:27.597Z",
+   "title": "zenray progress les fichiers n'ont pas de sous titres pourquoi ? bleach ? until grep -qE \"STAGE FAILED|Traceback|PROOF RED|FINISH FAILED|pub",
+   "updatedAt": "2026-10-14T21:12:45.577735+00:00",
    "bytes": 11730944,
    "boundProject": null
   },
@@ -287,8 +287,8 @@
    "provider": "codex",
    "sessionId": "01a1a1b0-2ed1-7783-8103-99285b9b3355",
    "title": "Conversation codex 01a1a1b0",
-   "updatedAt": "2026-11-03T22:15:21.628Z",
-   "bytes": 3524009,
+   "updatedAt": "2026-11-04T12:46:01.707Z",
+   "bytes": 4613376,
    "boundProject": "zenray-assets-v2"
   },
   {
@@ -302,8 +302,8 @@
    "conversationId": "gemini:fae4d3c5-109b-41fa-a03a-0a81a8c0b271",
    "provider": "gemini",
    "sessionId": "fae4d3c5-109b-41fa-a03a-0a81a8c0b271",
-   "title": "Conversation Gemini fae4d3c5",
-   "updatedAt": "2026-10-23T20:00:48.222Z",
+   "title": "J'ai un bug critique sur mon application custom de picker color qui fait que parfois le clic fait que je peux plus cliquer sur la barre des ",
+   "updatedAt": "2026-10-23T20:00:09.881076+00:00",
    "bytes": 22413312,
    "boundProject": null
   },
@@ -847,8 +847,40 @@
    "provider": "claude",
    "sessionId": "a1fda4e5-399d-437b-9e9e-c21bc6b9973f",
    "title": "Skill ZenRay Build Nintendo Games",
-   "updatedAt": "2026-11-04T12:16:23.393Z",
-   "bytes": 37883,
+   "updatedAt": "2026-11-04T13:43:18.407Z",
+   "bytes": 37949,
+   "boundProject": null
+  },
+  {
+   "projectId": "zenray-progress",
+   "lines": 2,
+   "work": 0,
+   "prompts": 0,
+   "first": "2026-11-04T12:50:54.363Z",
+   "last": "2026-11-04T12:50:54.363Z",
+   "strength": "weak",
+   "conversationId": "claude:ab8eb886-c8c8-4907-9217-d36f0dd11c49",
+   "provider": "claude",
+   "sessionId": "ab8eb886-c8c8-4907-9217-d36f0dd11c49",
+   "title": "Libération d'espace disque Mac",
+   "updatedAt": "2026-11-04T13:19:44.787Z",
+   "bytes": 37948,
+   "boundProject": null
+  },
+  {
+   "projectId": "zenray-progress",
+   "lines": 2,
+   "work": 0,
+   "prompts": 0,
+   "first": "2026-11-04T12:37:31.310Z",
+   "last": "2026-11-04T12:37:31.310Z",
+   "strength": "weak",
+   "conversationId": "claude:c0e93d26-8268-4475-97b4-0c4c7af585f8",
+   "provider": "claude",
+   "sessionId": "c0e93d26-8268-4475-97b4-0c4c7af585f8",
+   "title": "Zelda Twilight Princess ROM parts renaming",
+   "updatedAt": "2026-11-04T12:37:58.069Z",
+   "bytes": 37896,
    "boundProject": null
   },
   {
@@ -1550,8 +1582,8 @@
    "conversationId": "gemini:3e22a918-b7a6-4b1f-99ea-e50907f40d44",
    "provider": "gemini",
    "sessionId": "3e22a918-b7a6-4b1f-99ea-e50907f40d44",
-   "title": "Conversation Gemini 3e22a918",
-   "updatedAt": "2026-09-15T20:06:00.494Z",
+   "title": "'/Users/zenray/Movies/2026-09-15 20-36-50.mkv' to mov et speed jusqu'à ce que ça fasse 30 secondes speed ajusté à la longueur initial. go da",
+   "updatedAt": "2026-09-15T20:05:24.351772+00:00",
    "bytes": 3629056,
    "boundProject": null
   },
