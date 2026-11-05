@@ -1,0 +1,329 @@
+{
+ "kind": "zenray-cloud-bridge-index",
+ "v": 1,
+ "generatedAt": "2026-11-05T11:00:25.594Z",
+ "generatedBy": "scripts/CloudBridge/Bridge.mjs index",
+ "memoryHead": "595b46b54b20eb771241311ef33751215fc3a598",
+ "handoffs": [
+  {
+   "project": "zenray-meshes",
+   "name": "arch-real-30-October-2026",
+   "created": "30 October 2026 17:42",
+   "files": 11,
+   "duplicates": 0,
+   "copied": 11,
+   "drive": 0,
+   "driveFailed": 0,
+   "pointerOnly": 0,
+   "verified": 11,
+   "mismatched": 0,
+   "missing": 0,
+   "bytes": 4146644,
+   "state": "verified",
+   "problems": [],
+   "path": "Projects/zenray-meshes/handoff/arch-real-30-October-2026",
+   "updatedAt": "2026-10-30T17:42:02+01:00"
+  },
+  {
+   "project": "zenray-meshes",
+   "name": "car-finish-30-October-2026",
+   "created": "30 October 2026 18:15",
+   "files": 18,
+   "duplicates": 0,
+   "copied": 18,
+   "drive": 0,
+   "driveFailed": 0,
+   "pointerOnly": 0,
+   "verified": 18,
+   "mismatched": 0,
+   "missing": 0,
+   "bytes": 17002840,
+   "state": "verified",
+   "problems": [],
+   "path": "Projects/zenray-meshes/handoff/car-finish-30-October-2026",
+   "updatedAt": "2026-10-30T18:16:02+01:00"
+  },
+  {
+   "project": "zenray-progress",
+   "name": "cloud-bridge-3-November-2026",
+   "created": "03 November 2026 23:36",
+   "files": 6,
+   "duplicates": 2,
+   "copied": 6,
+   "drive": 0,
+   "driveFailed": 0,
+   "pointerOnly": 0,
+   "verified": 6,
+   "mismatched": 0,
+   "missing": 0,
+   "bytes": 183367,
+   "state": "verified",
+   "problems": [],
+   "path": "Projects/zenray-progress/handoff/cloud-bridge-3-November-2026",
+   "updatedAt": "2026-11-03T23:36:39+01:00"
+  },
+  {
+   "project": "zenray-uv",
+   "name": "uv-article",
+   "created": "30 October 2026 17:35",
+   "files": 47,
+   "duplicates": 0,
+   "copied": 47,
+   "drive": 0,
+   "driveFailed": 0,
+   "pointerOnly": 0,
+   "verified": 47,
+   "mismatched": 0,
+   "missing": 0,
+   "bytes": 16385260,
+   "state": "verified",
+   "problems": [],
+   "path": "Projects/zenray-uv/handoff/uv-article",
+   "updatedAt": "2026-10-30T17:35:24+01:00"
+  },
+  {
+   "project": "zorah-materials",
+   "name": "synthesis-fonts-3-November-2026",
+   "created": "03 November 2026 23:37",
+   "files": 3,
+   "duplicates": 0,
+   "copied": 3,
+   "drive": 0,
+   "driveFailed": 0,
+   "pointerOnly": 0,
+   "verified": 3,
+   "mismatched": 0,
+   "missing": 0,
+   "bytes": 271836,
+   "state": "verified",
+   "problems": [],
+   "path": "Projects/zorah-materials/handoff/synthesis-fonts-3-November-2026",
+   "updatedAt": "2026-11-03T23:37:18+01:00"
+  },
+  {
+   "project": "zorah-materials",
+   "name": "synthesis-svg-3-November-2026",
+   "created": "03 November 2026 23:35",
+   "files": 29,
+   "duplicates": 0,
+   "copied": 29,
+   "drive": 0,
+   "driveFailed": 0,
+   "pointerOnly": 0,
+   "verified": 29,
+   "mismatched": 0,
+   "missing": 0,
+   "bytes": 27439232,
+   "state": "verified",
+   "problems": [],
+   "path": "Projects/zorah-materials/handoff/synthesis-svg-3-November-2026",
+   "updatedAt": "2026-11-03T23:36:14+01:00"
+  }
+ ],
+ "returns": [
+  {
+   "branch": "claude/affectionate-tesla-ee6pg3",
+   "head": "bdf04bba42814496406295f56d72868db1f4e745",
+   "committedAt": "2026-11-03T23:00:14Z",
+   "pending": true,
+   "pulledAt": null,
+   "pulledHead": null,
+   "receipt": false,
+   "files": 5,
+   "folders": [
+    {
+     "path": "Projects/zorah-materials/handoff",
+     "files": 5
+    }
+   ]
+  },
+  {
+   "branch": "cloud/zorah-synthesis-3-november-2026",
+   "head": "bdf04bba42814496406295f56d72868db1f4e745",
+   "committedAt": "2026-11-03T23:00:14Z",
+   "pending": true,
+   "pulledAt": null,
+   "pulledHead": null,
+   "receipt": false,
+   "files": 5,
+   "folders": [
+    {
+     "path": "Projects/zorah-materials/handoff",
+     "files": 5
+    }
+   ]
+  },
+  {
+   "branch": "claude/bold-brahmagupta-aq3dr9",
+   "head": "92ba96e0c8221397a9179cc163515b97972d1071",
+   "committedAt": "2026-10-30T18:24:27Z",
+   "pending": true,
+   "pulledAt": null,
+   "pulledHead": null,
+   "receipt": false,
+   "files": 137,
+   "folders": [
+    {
+     "path": "Projects/zenray-meshes/research-car",
+     "files": 137
+    }
+   ]
+  },
+  {
+   "branch": "research/car-cloud",
+   "head": "92ba96e0c8221397a9179cc163515b97972d1071",
+   "committedAt": "2026-10-30T18:24:27Z",
+   "pending": true,
+   "pulledAt": null,
+   "pulledHead": null,
+   "receipt": false,
+   "files": 137,
+   "folders": [
+    {
+     "path": "Projects/zenray-meshes/research-car",
+     "files": 137
+    }
+   ]
+  },
+  {
+   "branch": "research/retopo-cloud",
+   "head": "db0b1e564cc62f28c66b02594130a2101fae6695",
+   "committedAt": "2026-10-30T17:43:08Z",
+   "pending": true,
+   "pulledAt": null,
+   "pulledHead": null,
+   "receipt": false,
+   "files": 69,
+   "folders": [
+    {
+     "path": "Projects/zenray-meshes/research-dataset",
+     "files": 69
+    }
+   ]
+  },
+  {
+   "branch": "uv-article/cloud",
+   "head": "286997d0a719120d21bb4a109e6bb8372ab91c83",
+   "committedAt": "2026-10-30T16:56:08Z",
+   "pending": true,
+   "pulledAt": null,
+   "pulledHead": null,
+   "receipt": false,
+   "files": 4,
+   "folders": [
+    {
+     "path": "Projects/zenray-uv/article-cloud",
+     "files": 4
+    }
+   ]
+  },
+  {
+   "branch": "claude/memory1-japanese1-recovery-tx54pq",
+   "head": "10e0f1ad8a37a8738e499b8efb10b4f9f94927b3",
+   "committedAt": "2026-09-26T07:12:26Z",
+   "pending": true,
+   "pulledAt": null,
+   "pulledHead": null,
+   "receipt": false,
+   "files": 1,
+   "folders": [
+    {
+     "path": "Japanese",
+     "files": 1
+    }
+   ]
+  },
+  {
+   "branch": "claude/japanese-memory-lessons-s99u81",
+   "head": "89b1def8539dc48eb7786a8e2ac3e5a566de2dbe",
+   "committedAt": "2026-09-10T11:00:34Z",
+   "pending": true,
+   "pulledAt": null,
+   "pulledHead": null,
+   "receipt": false,
+   "files": 3,
+   "folders": [
+    {
+     "path": "Japanese",
+     "files": 3
+    }
+   ]
+  },
+  {
+   "branch": "claude/japanese-lesson-106-107-v6zh77",
+   "head": "857ce962e655cacb852ebdbe09538da1fb42ce4c",
+   "committedAt": "2026-08-19T07:38:56Z",
+   "pending": true,
+   "pulledAt": null,
+   "pulledHead": null,
+   "receipt": false,
+   "files": 3,
+   "folders": [
+    {
+     "path": "Japanese",
+     "files": 2
+    },
+    {
+     "path": ".",
+     "files": 1
+    }
+   ]
+  },
+  {
+   "branch": "claude/japanese-lesson-template-7j4vsn",
+   "head": "37c73ad6c240e63f845ab4eec6c88ea0d8ec0214",
+   "committedAt": "2026-08-17T05:39:21Z",
+   "pending": true,
+   "pulledAt": null,
+   "pulledHead": null,
+   "receipt": false,
+   "files": 2,
+   "folders": [
+    {
+     "path": "Japanese",
+     "files": 1
+    },
+    {
+     "path": ".",
+     "files": 1
+    }
+   ]
+  },
+  {
+   "branch": "claude/agent-automation-24h-a1kpam",
+   "head": "2864f13f3826e5812cb97213c645d37f90a20716",
+   "committedAt": "2026-08-16T15:06:32Z",
+   "pending": true,
+   "pulledAt": null,
+   "pulledHead": null,
+   "receipt": false,
+   "files": 3,
+   "folders": [
+    {
+     "path": ".",
+     "files": 2
+    },
+    {
+     "path": "Business",
+     "files": 1
+    }
+   ]
+  },
+  {
+   "branch": "claude/japanese-tea-phrases-s13vbq",
+   "head": "5f55756b536c392c0c8abee50a48b31cffcc2891",
+   "committedAt": "2026-08-14T10:07:01Z",
+   "pending": true,
+   "pulledAt": null,
+   "pulledHead": null,
+   "receipt": false,
+   "files": 1,
+   "folders": [
+    {
+     "path": "Japanese",
+     "files": 1
+    }
+   ]
+  }
+ ]
+}

@@ -3963,3 +3963,10 @@
 - Project: zenray-progress; kind: rule. (23 October 2026, 19:39:23 +0200)
 
 > 23 October 2026 : barre latérale = Plan puis Create dans une seule famille, sans marque ZenRay Progress, sans filets (de l'espace, jetons --zr-nav-zone-gap et --zr-nav-head-gap), titres de famille en GT Sectra LCG Regular ITALIQUE (validé), Tools en dernier après System. (23 October 2026, 19:39:23 +0200)
+
+## 5 November 2026, 12:00:49 +0100 : Standing rule
+
+<!-- feedback-event:27ce53452001cf1b8551ab7517753cddf1226e2c26ca2e39c084513d9dc55ca0 (5 November 2026, 12:00:49 +0100) -->
+- Project: zenray-progress; kind: rule. (5 November 2026, 12:00:49 +0100)
+
+> 3 November 2026 : un fichier donné à une session cloud ou rapatrié depuis elle passe par scripts/CloudBridge/Bridge.mjs (send, fetch, return, pull) et n'est déclaré arrivé que lorsque son empreinte a été recalculée à l'autre bout ; jamais de secret dans un handoff ni dans un retour. (5 November 2026, 12:00:49 +0100)
