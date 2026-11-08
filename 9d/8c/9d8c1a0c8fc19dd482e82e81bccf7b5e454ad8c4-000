@@ -3970,3 +3970,17 @@
 - Project: zenray-progress; kind: rule. (5 November 2026, 12:00:49 +0100)
 
 > 3 November 2026 : un fichier donné à une session cloud ou rapatrié depuis elle passe par scripts/CloudBridge/Bridge.mjs (send, fetch, return, pull) et n'est déclaré arrivé que lorsque son empreinte a été recalculée à l'autre bout ; jamais de secret dans un handoff ni dans un retour. (5 November 2026, 12:00:49 +0100)
+
+## 8 November 2026, 01:26:56 +0100 : Prompt
+
+<!-- feedback-event:44fe57308b9b58fb692f165a151fa1f23f2a20bc1be956ec0d92411c22706e76 (8 November 2026, 01:26:56 +0100) -->
+- Project: zenray-progress; kind: prompt. (8 November 2026, 01:26:56 +0100)
+
+> clean rename en Yomi no Tsugai et upload dans anime dans Create. Mais la fonte des épisodes en local en Adobe Clean, en changeant et en faisant un remux pour le faire rapidement, t'as juste à extraire le SRT, à en remettre un nouveau et à remuxer pour le faire rapidement. Et à delete les anciens fichiers. Donc les nouveaux fichiers ont le clean rename. Et ensuite tu les push directement sur Create, et normalement le service vidéo proposera déjà soit la fonte en sérif, soit la fonte en sans sérif. locaux + cloud go (8 November 2026, 01:26:56 +0100)
+
+## 8 November 2026, 02:02:08 +0100 : Log
+
+<!-- feedback-event:1703ac6d923a5270b939df80b2334c2eac7d4e75fc4b9f44e398e3d8cf492ca3 (8 November 2026, 02:02:08 +0100) -->
+- Project: zenray-progress; kind: log. (8 November 2026, 02:02:08 +0100)
+
+> Résultat du 8 novembre : épisodes S01E22 à S01E24 remuxés sans réencodage avec un nouveau SRT français nettoyé, renommés sous Yomi No Tsugai/Saison 01, puis envoyés dans Anime en streaming HLS/DASH seulement. Le worker confirme 3 done, 0 échec, HLS/DASH vérifiés, et les trois MKV propres sont conservés en local. La vérification CDN des affiches reste impossible depuis cet environnement réseau ; les manifestes contiennent des URL jsDelivr publiques épinglées. (8 November 2026, 02:02:08 +0100)
