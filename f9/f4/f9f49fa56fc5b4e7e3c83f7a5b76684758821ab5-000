@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-11-09T06:29:53.699Z",
+ "scannedAt": "2026-11-09T12:05:52.033Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -53,18 +53,18 @@
   },
   {
    "projectId": "zenray-progress",
-   "lines": 24,
-   "work": 12,
+   "lines": 27,
+   "work": 13,
    "prompts": 1,
    "first": "2026-11-08T00:12:42.684Z",
-   "last": "2026-11-08T01:03:46.718Z",
+   "last": "2026-11-09T12:01:54.255Z",
    "strength": "strong",
    "conversationId": "codex:01a1b880-053e-79d2-a657-256ca3f2e083",
    "provider": "codex",
    "sessionId": "01a1b880-053e-79d2-a657-256ca3f2e083",
    "title": "Conversation codex 01a1b880",
-   "updatedAt": "2026-11-08T01:04:29.659Z",
-   "bytes": 4210798,
+   "updatedAt": "2026-11-09T12:05:36.221Z",
+   "bytes": 4768088,
    "boundProject": null
   },
   {
@@ -174,8 +174,8 @@
    "conversationId": "gemini:dad216b8-610b-4279-a532-56e02644714d",
    "provider": "gemini",
    "sessionId": "dad216b8-610b-4279-a532-56e02644714d",
-   "title": "Conversation Gemini dad216b8",
-   "updatedAt": "2026-10-14T21:13:27.597Z",
+   "title": "zenray progress les fichiers n'ont pas de sous titres pourquoi ? bleach ? until grep -qE \"STAGE FAILED|Traceback|PROOF RED|FINISH FAILED|pub",
+   "updatedAt": "2026-10-14T21:12:45.577735+00:00",
    "bytes": 11730944,
    "boundProject": null
   },
@@ -318,8 +318,8 @@
    "conversationId": "gemini:fae4d3c5-109b-41fa-a03a-0a81a8c0b271",
    "provider": "gemini",
    "sessionId": "fae4d3c5-109b-41fa-a03a-0a81a8c0b271",
-   "title": "Conversation Gemini fae4d3c5",
-   "updatedAt": "2026-10-23T20:00:48.222Z",
+   "title": "J'ai un bug critique sur mon application custom de picker color qui fait que parfois le clic fait que je peux plus cliquer sur la barre des ",
+   "updatedAt": "2026-10-23T20:00:09.881076+00:00",
    "bytes": 22413312,
    "boundProject": null
   },
@@ -664,6 +664,22 @@
    "lines": 4,
    "work": 0,
    "prompts": 0,
+   "first": "2026-11-09T11:34:30.864Z",
+   "last": "2026-11-09T11:34:54.545Z",
+   "strength": "weak",
+   "conversationId": "claude:6af72161-967c-4826-aab6-8fed6ea2efc6",
+   "provider": "claude",
+   "sessionId": "6af72161-967c-4826-aab6-8fed6ea2efc6",
+   "title": "zenray liberty",
+   "updatedAt": "2026-11-09T11:54:45.978Z",
+   "bytes": 2808268,
+   "boundProject": "conversation-claude-5316aef55aa94522e805fa65"
+  },
+  {
+   "projectId": "zenray-progress",
+   "lines": 4,
+   "work": 0,
+   "prompts": 0,
    "first": "2026-11-05T18:27:08.735Z",
    "last": "2026-11-05T23:14:35.753Z",
    "strength": "weak",
@@ -862,10 +878,10 @@
    "conversationId": "claude:e8ea2178-33dd-484a-8fb4-198702093ebf",
    "provider": "claude",
    "sessionId": "e8ea2178-33dd-484a-8fb4-198702093ebf",
-   "title": "past.dev setup et intégration",
-   "updatedAt": "2026-11-08T00:10:33.534Z",
-   "bytes": 39680,
-   "boundProject": null
+   "title": "zenray past",
+   "updatedAt": "2026-11-09T12:05:30.938Z",
+   "bytes": 5419629,
+   "boundProject": "zenray-past"
   },
   {
    "projectId": "zenray-progress",
@@ -1646,8 +1662,8 @@
    "conversationId": "gemini:3e22a918-b7a6-4b1f-99ea-e50907f40d44",
    "provider": "gemini",
    "sessionId": "3e22a918-b7a6-4b1f-99ea-e50907f40d44",
-   "title": "Conversation Gemini 3e22a918",
-   "updatedAt": "2026-09-15T20:06:00.494Z",
+   "title": "'/Users/zenray/Movies/2026-09-15 20-36-50.mkv' to mov et speed jusqu'à ce que ça fasse 30 secondes speed ajusté à la longueur initial. go da",
+   "updatedAt": "2026-09-15T20:05:24.351772+00:00",
    "bytes": 3629056,
    "boundProject": null
   },
