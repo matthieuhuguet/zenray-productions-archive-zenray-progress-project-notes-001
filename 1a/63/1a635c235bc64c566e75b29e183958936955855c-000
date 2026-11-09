@@ -1,0 +1,206 @@
+{
+  "v": 1,
+  "generatedAt": "2026-11-09T17:55:35.782Z",
+  "createRoot": "pages/Games",
+  "games": [
+    {
+      "id": "ControlResonant",
+      "label": "Control Resonant",
+      "source": "/Users/zenray/Library/Application Support/CrossOver/Bottles/Control Resonant",
+      "createFolder": "pages/Games/Control Resonant",
+      "stateDir": "/Users/zenray/.zr-games-vault/ControlResonant",
+      "localPresent": true,
+      "sidecar": null,
+      "state": "local-only",
+      "poster": {
+        "url": "https://cdn.jsdelivr.net/gh/matthieuhuguet/zenrayshards-img-124ff562adad@642ba7924fed13d66f7d40b3f8b05e5700573d07/games-control-resonant-48d9.jpg",
+        "source": "shelf",
+        "shelfId": "control-resonant-58a0"
+      },
+      "lastUpload": null,
+      "lastVerify": null,
+      "lastLoadTest": null,
+      "lastUnload": null,
+      "cloudManifests": null,
+      "commands": {
+        "plan": "node scripts/Games/GamesVault.mjs plan ControlResonant",
+        "poster": "node scripts/Games/GamesVault.mjs poster ControlResonant",
+        "upload": "node scripts/Games/GamesVault.mjs upload ControlResonant",
+        "verify": "node scripts/Games/GamesVault.mjs verify ControlResonant",
+        "loadTest": "node scripts/Games/GamesVault.mjs load ControlResonant --test",
+        "load": "node scripts/Games/GamesVault.mjs load ControlResonant --to <empty folder>",
+        "unload": "node scripts/Games/GamesVault.mjs unload ControlResonant --yes"
+      },
+      "generatedAt": "2026-11-09T17:55:35.761Z"
+    },
+    {
+      "id": "TheBloodOfDawnwalker",
+      "label": "The Blood of Dawnwalker",
+      "source": "/Users/zenray/Library/Application Support/CrossOver/Bottles/The Blood of Dawnwalker",
+      "createFolder": "pages/Games/The Blood of Dawnwalker",
+      "stateDir": "/Users/zenray/.zr-games-vault/TheBloodOfDawnwalker",
+      "localPresent": true,
+      "sidecar": {
+        "createdAt": "2026-11-09T17:20:26.790Z",
+        "files": 2321,
+        "bytes": 58909680444,
+        "symlinks": 11
+      },
+      "state": "local-only",
+      "poster": {
+        "url": "https://cdn.jsdelivr.net/gh/matthieuhuguet/zenray-shelf-img@4de20e1de3464605b77359f121dc3b2decc9b0e9/the-blood-of-dawnwalker-89ab.jpg",
+        "source": "shelf",
+        "shelfId": "the-blood-of-dawnwalker-89ab"
+      },
+      "lastUpload": null,
+      "lastVerify": null,
+      "lastLoadTest": null,
+      "lastUnload": null,
+      "cloudManifests": null,
+      "commands": {
+        "plan": "node scripts/Games/GamesVault.mjs plan TheBloodOfDawnwalker",
+        "poster": "node scripts/Games/GamesVault.mjs poster TheBloodOfDawnwalker",
+        "upload": "node scripts/Games/GamesVault.mjs upload TheBloodOfDawnwalker",
+        "verify": "node scripts/Games/GamesVault.mjs verify TheBloodOfDawnwalker",
+        "loadTest": "node scripts/Games/GamesVault.mjs load TheBloodOfDawnwalker --test",
+        "load": "node scripts/Games/GamesVault.mjs load TheBloodOfDawnwalker --to <empty folder>",
+        "unload": "node scripts/Games/GamesVault.mjs unload TheBloodOfDawnwalker --yes"
+      },
+      "generatedAt": "2026-11-09T17:55:35.763Z"
+    },
+    {
+      "id": "DaveTheDiver",
+      "label": "Dave The Diver",
+      "source": "/Users/zenray/Library/Application Support/CrossOver/Bottles/Dave The Diver",
+      "createFolder": "pages/Games/Dave The Diver",
+      "stateDir": "/Users/zenray/.zr-games-vault/DaveTheDiver",
+      "localPresent": false,
+      "sidecar": {
+        "createdAt": "2026-11-09T16:14:46.524Z",
+        "files": 7416,
+        "bytes": 7371492802,
+        "symlinks": 19
+      },
+      "state": "unloaded",
+      "poster": {
+        "url": "https://cdn.jsdelivr.net/gh/matthieuhuguet/zenrayshards-img-124ff562adad@979e6d90ef1c81f881066709dd619acf5c3458d1/games-dave-the-diver-752b.webp",
+        "source": "shelf",
+        "shelfId": "dave-the-diver-dc24"
+      },
+      "lastUpload": {
+        "at": "2026-11-09T16:33:15.895Z",
+        "verdict": "OK",
+        "mode": null,
+        "file": "/Users/zenray/.zr-games-vault/Receipts/UploadReceipt-DaveTheDiver-20261109T163315895Z.json",
+        "reasons": []
+      },
+      "lastVerify": {
+        "at": "2026-11-09T16:36:16.803Z",
+        "verdict": "GREEN",
+        "mode": "full",
+        "file": "/Users/zenray/.zr-games-vault/Receipts/Receipt-DaveTheDiver-20261109T163731142Z.json",
+        "reasons": []
+      },
+      "lastLoadTest": {
+        "at": "2026-11-09T16:37:41.249Z",
+        "verdict": "GREEN",
+        "mode": null,
+        "file": "/Users/zenray/.zr-games-vault/Receipts/LoadTestReceipt-DaveTheDiver-20261109T163924335Z.json",
+        "reasons": []
+      },
+      "lastUnload": {
+        "at": "2026-11-09T16:53:48.485Z",
+        "ok": true,
+        "deleted": {
+          "files": 7416,
+          "symlinks": 19,
+          "specials": 0,
+          "dirs": 249,
+          "bytes": 7371492802
+        }
+      },
+      "cloudManifests": {
+        "files": 7416,
+        "commit": "3fe02efa1c3fd6ddfae0259d3a0455d3678df2c1"
+      },
+      "commands": {
+        "plan": "node scripts/Games/GamesVault.mjs plan DaveTheDiver",
+        "poster": "node scripts/Games/GamesVault.mjs poster DaveTheDiver",
+        "upload": "node scripts/Games/GamesVault.mjs upload DaveTheDiver",
+        "verify": "node scripts/Games/GamesVault.mjs verify DaveTheDiver",
+        "loadTest": "node scripts/Games/GamesVault.mjs load DaveTheDiver --test",
+        "load": "node scripts/Games/GamesVault.mjs load DaveTheDiver --to <empty folder>",
+        "unload": "node scripts/Games/GamesVault.mjs unload DaveTheDiver --yes"
+      },
+      "generatedAt": "2026-11-09T17:55:35.767Z"
+    },
+    {
+      "id": "NintendoGames",
+      "label": "Nintendo Games",
+      "source": "/Users/zenray/Create/Build/NintendoGames",
+      "createFolder": "pages/Games/Nintendo Games",
+      "stateDir": "/Users/zenray/.zr-games-vault/NintendoGames",
+      "localPresent": false,
+      "sidecar": {
+        "createdAt": "2026-11-09T17:11:35.889Z",
+        "files": 28890,
+        "bytes": 3789148213,
+        "symlinks": 0
+      },
+      "state": "unloaded",
+      "poster": {
+        "url": "https://cdn.jsdelivr.net/gh/matthieuhuguet/zenray-shelf-img@4de20e1de3464605b77359f121dc3b2decc9b0e9/zelda-twilight-princess-9dc5.jpg",
+        "source": "shelf",
+        "shelfId": "zelda-twilight-princess-9dc5"
+      },
+      "lastUpload": {
+        "at": "2026-11-09T17:12:21.961Z",
+        "verdict": "OK",
+        "mode": null,
+        "file": "/Users/zenray/.zr-games-vault/Receipts/UploadReceipt-NintendoGames-20261109T171221961Z.json",
+        "reasons": []
+      },
+      "lastVerify": {
+        "at": "2026-11-09T17:12:22.036Z",
+        "verdict": "GREEN",
+        "mode": "full",
+        "file": "/Users/zenray/.zr-games-vault/Receipts/Receipt-NintendoGames-20261109T171651957Z.json",
+        "reasons": []
+      },
+      "lastLoadTest": {
+        "at": "2026-11-09T17:16:56.454Z",
+        "verdict": "GREEN",
+        "mode": null,
+        "file": "/Users/zenray/.zr-games-vault/Receipts/LoadTestReceipt-NintendoGames-20261109T172026720Z.json",
+        "reasons": []
+      },
+      "lastUnload": {
+        "at": "2026-11-09T17:36:52.502Z",
+        "ok": true,
+        "deleted": {
+          "files": 28890,
+          "symlinks": 0,
+          "specials": 0,
+          "dirs": 2142,
+          "bytes": 3789148213
+        }
+      },
+      "cloudManifests": {
+        "files": 28890,
+        "commit": "bb2673dc4d3ef6d5fb9b941a9e2031972746a3b8"
+      },
+      "commands": {
+        "plan": "node scripts/Games/GamesVault.mjs plan NintendoGames",
+        "poster": "node scripts/Games/GamesVault.mjs poster NintendoGames",
+        "upload": "node scripts/Games/GamesVault.mjs upload NintendoGames",
+        "verify": "node scripts/Games/GamesVault.mjs verify NintendoGames",
+        "loadTest": "node scripts/Games/GamesVault.mjs load NintendoGames --test",
+        "load": "node scripts/Games/GamesVault.mjs load NintendoGames --to <empty folder>",
+        "unload": "node scripts/Games/GamesVault.mjs unload NintendoGames --yes"
+      },
+      "generatedAt": "2026-11-09T17:55:35.782Z"
+    }
+  ],
+  "publishedAt": "2026-11-09T17:55:35.816Z",
+  "publishedBy": "scripts/Games/GamesIndexPublish.mjs"
+}
