@@ -4005,3 +4005,10 @@
 - Project: zenray-progress; kind: prompt. (9 November 2026, 14:10:54 +0100)
 
 > Est-ce que c'est publié et est-ce que je peux le tester? Est-ce que tu as une preuve que ça fonctionne? Normalement, simuler une WebView iOS sur Mac, prendre une capture d'écran et noter ensuite la méthode dans CLAUDE.md ou AGENTS.md global. (9 November 2026, 14:10:54 +0100)
+
+## 9 November 2026, 14:15:49 +0100 : Prompt
+
+<!-- feedback-event:f1993bdf384bce33898f5a121434678b3b3c1f79d915359320e0fa1db0539993 (9 November 2026, 14:15:49 +0100) -->
+- Project: zenray-progress; kind: prompt. (9 November 2026, 14:15:49 +0100)
+
+> 9 November 2026 : sur mobile, la sélection et les menus Gear doivent rester cliquables pendant le défilement tactile ; l'échelle typographique doit rester à 100 % par défaut. Recenser le défaut d'upload : si une piste japonaise existe, elle devient la piste audio par défaut, avec test et preuve sur le manifeste avant tout déchargement. (9 November 2026, 14:15:49 +0100)
