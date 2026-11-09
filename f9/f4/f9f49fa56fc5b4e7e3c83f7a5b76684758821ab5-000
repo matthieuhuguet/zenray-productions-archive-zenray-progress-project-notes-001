@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-11-09T15:22:18.078Z",
+ "scannedAt": "2026-11-09T15:25:57.704Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -63,8 +63,8 @@
    "provider": "codex",
    "sessionId": "01a1b880-053e-79d2-a657-256ca3f2e083",
    "title": "Conversation codex 01a1b880",
-   "updatedAt": "2026-11-09T15:21:23.726Z",
-   "bytes": 21595695,
+   "updatedAt": "2026-11-09T15:25:02.588Z",
+   "bytes": 21750842,
    "boundProject": "zenray-progress"
   },
   {
@@ -127,8 +127,8 @@
    "provider": "codex",
    "sessionId": "01a1c0d5-ede9-7f13-9276-0636d1793298",
    "title": "Conversation codex 01a1c0d5",
-   "updatedAt": "2026-11-09T15:21:20.829Z",
-   "bytes": 804830,
+   "updatedAt": "2026-11-09T15:25:04.434Z",
+   "bytes": 899405,
    "boundProject": null
   },
   {
@@ -719,8 +719,8 @@
    "provider": "claude",
    "sessionId": "0611e96b-26b2-4d65-a9e1-cb913738cca3",
    "title": "zenray meshes v3",
-   "updatedAt": "2026-11-09T15:18:47.394Z",
-   "bytes": 28109394,
+   "updatedAt": "2026-11-09T15:24:18.071Z",
+   "bytes": 28135940,
    "boundProject": "zenray-meshes"
   },
   {
@@ -799,8 +799,8 @@
    "provider": "claude",
    "sessionId": "e8ea2178-33dd-484a-8fb4-198702093ebf",
    "title": "zenray past + typo",
-   "updatedAt": "2026-11-09T15:21:40.513Z",
-   "bytes": 18766600,
+   "updatedAt": "2026-11-09T15:24:37.697Z",
+   "bytes": 19239160,
    "boundProject": "zenray-past"
   },
   {
@@ -993,6 +993,22 @@
    "title": "Mail transfert dossier auto-école",
    "updatedAt": "2026-10-02T14:38:28.892Z",
    "bytes": 23040,
+   "boundProject": null
+  },
+  {
+   "projectId": "zenray-progress",
+   "lines": 2,
+   "work": 0,
+   "prompts": 0,
+   "first": "2026-11-09T15:23:26.189Z",
+   "last": "2026-11-09T15:23:26.189Z",
+   "strength": "weak",
+   "conversationId": "claude:db59f75b-cccf-46e4-a3ce-27e1c3aebd7b",
+   "provider": "claude",
+   "sessionId": "db59f75b-cccf-46e4-a3ce-27e1c3aebd7b",
+   "title": "Auditer le prompt Gemini de ZenRay Knight",
+   "updatedAt": "2026-11-09T15:24:30.754Z",
+   "bytes": 3310697,
    "boundProject": null
   },
   {
