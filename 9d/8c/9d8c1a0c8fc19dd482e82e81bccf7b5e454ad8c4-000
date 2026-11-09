@@ -4143,3 +4143,11 @@
 - Source: /Users/zenray/.codex/sessions/2026/11/08/rollout-2026-11-08T01-12-40-01a1b880-053e-79d2-a657-256ca3f2e083.jsonl. (9 November 2026, 15:09:53 +0100)
 
 > continue proprement jusqu'à la fin (9 November 2026, 15:09:53 +0100)
+
+## 9 November 2026, 16:55:39 +0100 : Iteration
+
+<!-- feedback-event:f290127c1d1b8cff4a5d40cbffbe4ee8508598f8c85419d0d4ad88c3ec06eacf (9 November 2026, 16:55:39 +0100) -->
+- Project: zenray-progress; kind: iteration. (9 November 2026, 16:55:39 +0100)
+- Source: checkpoint:codex:01a1b880-053e-79d2-a657-256ca3f2e083. (9 November 2026, 16:55:39 +0100)
+
+> Épisodes S01E22, E23 et E24 disponibles en HLS/DASH seulement, sources MKV locales absentes. Piste japonaise sélectionnée par défaut dans les manifestes et playlists relus. Correctif Gear mobile publié en production; build main identique au JS et CSS servis. Test responsive isolé à 325 × 703 px CSS: menu ouvert pendant le défilement, cibles de 44 px, japonais coché, sous-titres à 100 %, fermeture accessible. Xcode ne fournit ni Simulator ni runtime iOS; aucune preuve WebKit ou vrai iPhone. 72 tests ciblés et build réussis. Prochain: vérifier le plein écran sur iPhone réel si nécessaire. (9 November 2026, 16:55:39 +0100)
