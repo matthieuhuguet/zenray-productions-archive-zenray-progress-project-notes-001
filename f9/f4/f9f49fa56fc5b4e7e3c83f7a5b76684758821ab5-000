@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-11-09T15:31:37.908Z",
+ "scannedAt": "2026-11-09T15:35:30.962Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -53,18 +53,18 @@
   },
   {
    "projectId": "zenray-progress",
-   "lines": 111,
-   "work": 56,
+   "lines": 113,
+   "work": 57,
    "prompts": 1,
    "first": "2026-11-08T00:12:42.684Z",
-   "last": "2026-11-09T15:30:23.602Z",
+   "last": "2026-11-09T15:35:05.256Z",
    "strength": "strong",
    "conversationId": "codex:01a1b880-053e-79d2-a657-256ca3f2e083",
    "provider": "codex",
    "sessionId": "01a1b880-053e-79d2-a657-256ca3f2e083",
    "title": "Conversation codex 01a1b880",
-   "updatedAt": "2026-11-09T15:30:35.379Z",
-   "bytes": 22615486,
+   "updatedAt": "2026-11-09T15:35:06.612Z",
+   "bytes": 22721589,
    "boundProject": "zenray-progress"
   },
   {
@@ -337,6 +337,22 @@
    "title": "Conversation codex 01a1c04b",
    "updatedAt": "2026-11-09T12:51:46.514Z",
    "bytes": 589932,
+   "boundProject": null
+  },
+  {
+   "projectId": "zenray-progress",
+   "lines": 3,
+   "work": 0,
+   "prompts": 2,
+   "first": "2026-11-09T15:34:06.214Z",
+   "last": "2026-11-09T15:35:05.176Z",
+   "strength": "strong",
+   "conversationId": "codex:01a1c0f1-f67d-7c52-9f69-155bf3de297f",
+   "provider": "codex",
+   "sessionId": "01a1c0f1-f67d-7c52-9f69-155bf3de297f",
+   "title": "Conversation codex 01a1c0f1",
+   "updatedAt": "2026-11-09T15:35:05.176Z",
+   "bytes": 322994,
    "boundProject": null
   },
   {
@@ -719,8 +735,8 @@
    "provider": "claude",
    "sessionId": "0611e96b-26b2-4d65-a9e1-cb913738cca3",
    "title": "zenray meshes v3",
-   "updatedAt": "2026-11-09T15:31:02.930Z",
-   "bytes": 29520072,
+   "updatedAt": "2026-11-09T15:34:18.048Z",
+   "bytes": 30399810,
    "boundProject": "zenray-meshes"
   },
   {
@@ -735,8 +751,8 @@
    "provider": "claude",
    "sessionId": "e8ea2178-33dd-484a-8fb4-198702093ebf",
    "title": "zenray past + typo",
-   "updatedAt": "2026-11-09T15:30:50.497Z",
-   "bytes": 39545,
+   "updatedAt": "2026-11-09T15:31:47.568Z",
+   "bytes": 40233,
    "boundProject": "zenray-past"
   },
   {
@@ -1007,8 +1023,8 @@
    "provider": "claude",
    "sessionId": "db59f75b-cccf-46e4-a3ce-27e1c3aebd7b",
    "title": "Auditer le prompt Gemini de ZenRay Knight",
-   "updatedAt": "2026-11-09T15:31:03.312Z",
-   "bytes": 3809326,
+   "updatedAt": "2026-11-09T15:31:29.723Z",
+   "bytes": 42059,
    "boundProject": null
   },
   {
