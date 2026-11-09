@@ -3998,3 +3998,10 @@
 - Project: zenray-progress; kind: log. (9 November 2026, 13:35:50 +0100)
 
 > Épisodes S01E22 à S01E24 déchargés après vérification du streaming cloud, 4 492 888 018 octets retirés du stockage local ; l’allègement Time Machine fait passer l’espace libre d’environ 92 à 145 Gio. Correctif du lecteur iPhone préparé : le plein écran intégré garde le calque de sous-titres, avec une option pour reprendre le lecteur natif iOS ; build Vite réussi, test sur iPhone et publication non faits. (9 November 2026, 13:35:50 +0100)
+
+## 9 November 2026, 14:10:54 +0100 : Prompt
+
+<!-- feedback-event:a97dbf167ea5a56f39041b21e199e5570ca9df411f799ce1d7814cbf3c01865f (9 November 2026, 14:10:54 +0100) -->
+- Project: zenray-progress; kind: prompt. (9 November 2026, 14:10:54 +0100)
+
+> Est-ce que c'est publié et est-ce que je peux le tester? Est-ce que tu as une preuve que ça fonctionne? Normalement, simuler une WebView iOS sur Mac, prendre une capture d'écran et noter ensuite la méthode dans CLAUDE.md ou AGENTS.md global. (9 November 2026, 14:10:54 +0100)
