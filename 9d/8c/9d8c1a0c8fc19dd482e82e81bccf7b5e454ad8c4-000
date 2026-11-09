@@ -4274,3 +4274,10 @@
 > | Générer l’image directement | Bloqué | Aucun outil de génération d’images dans cette session | (9 November 2026, 22:56:26 +0100)
 >
 > Si tu veux que je lance le CLI, réponds simplement : « Oui, utilise le CLI gpt-image-2 ». (9 November 2026, 22:56:26 +0100)
+
+## 10 November 2026, 00:11:06 +0100 : Standing rule
+
+<!-- feedback-event:0e02fd634138f43eee7435520d90ab804c045e90d287424622c4e7f7cd71828a (10 November 2026, 00:11:06 +0100) -->
+- Project: zenray-progress; kind: rule. (10 November 2026, 00:11:06 +0100)
+
+> Photos Apple vers le drive : une photo n'est « dans le drive » que par son sha256 ; un contenu ne va jamais à deux emplacements ; avant tout envoi, écarter (hold) les photos de même nom et mêmes dimensions qu'une image déjà présente (autres octets) et laisser Matthieu trancher ; les originaux iCloud ne font que transiter sous le plafond transit.capBytes puis sont supprimés après preuve ; aucune écriture ni suppression dans le .photoslibrary. Détail : skill zenray-progress, section du 10 November 2026. (10 November 2026, 00:11:06 +0100)
