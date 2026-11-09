@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-11-09T15:45:35.022Z",
+ "scannedAt": "2026-11-09T15:52:19.034Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -63,8 +63,8 @@
    "provider": "codex",
    "sessionId": "01a1b880-053e-79d2-a657-256ca3f2e083",
    "title": "Conversation codex 01a1b880",
-   "updatedAt": "2026-11-09T15:45:06.558Z",
-   "bytes": 24101750,
+   "updatedAt": "2026-11-09T15:52:00.826Z",
+   "bytes": 24558010,
    "boundProject": "zenray-progress"
   },
   {
@@ -287,8 +287,8 @@
    "provider": "codex",
    "sessionId": "01a1c0f1-f67d-7c52-9f69-155bf3de297f",
    "title": "Conversation codex 01a1c0f1",
-   "updatedAt": "2026-11-09T15:44:48.709Z",
-   "bytes": 605328,
+   "updatedAt": "2026-11-09T15:51:07.447Z",
+   "bytes": 704077,
    "boundProject": null
   },
   {
@@ -735,9 +735,25 @@
    "provider": "claude",
    "sessionId": "0611e96b-26b2-4d65-a9e1-cb913738cca3",
    "title": "zenray meshes v3",
-   "updatedAt": "2026-11-09T15:44:28.062Z",
-   "bytes": 35250466,
+   "updatedAt": "2026-11-09T15:48:47.243Z",
+   "bytes": 36532804,
    "boundProject": "zenray-meshes"
+  },
+  {
+   "projectId": "zenray-progress",
+   "lines": 6,
+   "work": 0,
+   "prompts": 0,
+   "first": "2026-11-07T23:01:28.675Z",
+   "last": "2026-11-09T15:28:45.070Z",
+   "strength": "weak",
+   "conversationId": "claude:e8ea2178-33dd-484a-8fb4-198702093ebf",
+   "provider": "claude",
+   "sessionId": "e8ea2178-33dd-484a-8fb4-198702093ebf",
+   "title": "zenray past + typo",
+   "updatedAt": "2026-11-09T15:49:59.788Z",
+   "bytes": 40231,
+   "boundProject": "zenray-past"
   },
   {
    "projectId": "zenray-progress",
@@ -754,22 +770,6 @@
    "updatedAt": "2026-11-09T15:44:26.491Z",
    "bytes": 38184,
    "boundProject": null
-  },
-  {
-   "projectId": "zenray-progress",
-   "lines": 6,
-   "work": 0,
-   "prompts": 0,
-   "first": "2026-11-07T23:01:28.675Z",
-   "last": "2026-11-09T15:28:45.070Z",
-   "strength": "weak",
-   "conversationId": "claude:e8ea2178-33dd-484a-8fb4-198702093ebf",
-   "provider": "claude",
-   "sessionId": "e8ea2178-33dd-484a-8fb4-198702093ebf",
-   "title": "zenray past + typo",
-   "updatedAt": "2026-11-09T15:44:00.860Z",
-   "bytes": 19766950,
-   "boundProject": "zenray-past"
   },
   {
    "projectId": "zenray-progress",
