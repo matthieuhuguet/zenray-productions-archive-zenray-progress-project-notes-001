@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "generatedAt": "2026-11-09T17:55:35.782Z",
+  "generatedAt": "2026-11-09T20:51:54.661Z",
   "createRoot": "pages/Games",
   "games": [
     {
@@ -13,9 +13,12 @@
       "sidecar": null,
       "state": "local-only",
       "poster": {
-        "url": "https://cdn.jsdelivr.net/gh/matthieuhuguet/zenrayshards-img-124ff562adad@642ba7924fed13d66f7d40b3f8b05e5700573d07/games-control-resonant-48d9.jpg",
-        "source": "shelf",
-        "shelfId": "control-resonant-58a0"
+        "url": "https://cdn.jsdelivr.net/gh/matthieuhuguet/zenrayshards-img-124ff562adad@97aaf775b9717b65172534f5522929bdf9586aac/games-control-resonant-ebf7.jpg",
+        "source": "search",
+        "shelfId": "control-resonant-58a0",
+        "width": 1920,
+        "height": 1080,
+        "landscape": true
       },
       "lastUpload": null,
       "lastVerify": null,
@@ -31,7 +34,7 @@
         "load": "node scripts/Games/GamesVault.mjs load ControlResonant --to <empty folder>",
         "unload": "node scripts/Games/GamesVault.mjs unload ControlResonant --yes"
       },
-      "generatedAt": "2026-11-09T17:55:35.761Z"
+      "generatedAt": "2026-11-09T20:51:54.628Z"
     },
     {
       "id": "TheBloodOfDawnwalker",
@@ -41,18 +44,27 @@
       "stateDir": "/Users/zenray/.zr-games-vault/TheBloodOfDawnwalker",
       "localPresent": true,
       "sidecar": {
-        "createdAt": "2026-11-09T17:20:26.790Z",
+        "createdAt": "2026-11-09T18:46:02.024Z",
         "files": 2321,
         "bytes": 58909680444,
         "symlinks": 11
       },
-      "state": "local-only",
+      "state": "uploaded",
       "poster": {
         "url": "https://cdn.jsdelivr.net/gh/matthieuhuguet/zenray-shelf-img@4de20e1de3464605b77359f121dc3b2decc9b0e9/the-blood-of-dawnwalker-89ab.jpg",
         "source": "shelf",
-        "shelfId": "the-blood-of-dawnwalker-89ab"
+        "shelfId": "the-blood-of-dawnwalker-89ab",
+        "width": 1280,
+        "height": 720,
+        "landscape": true
       },
-      "lastUpload": null,
+      "lastUpload": {
+        "at": "2026-11-09T20:37:34.998Z",
+        "verdict": "OK",
+        "mode": null,
+        "file": "/Users/zenray/.zr-games-vault/Receipts/UploadReceipt-TheBloodOfDawnwalker-20261109T203734998Z.json",
+        "reasons": []
+      },
       "lastVerify": null,
       "lastLoadTest": null,
       "lastUnload": null,
@@ -66,7 +78,7 @@
         "load": "node scripts/Games/GamesVault.mjs load TheBloodOfDawnwalker --to <empty folder>",
         "unload": "node scripts/Games/GamesVault.mjs unload TheBloodOfDawnwalker --yes"
       },
-      "generatedAt": "2026-11-09T17:55:35.763Z"
+      "generatedAt": "2026-11-09T20:51:54.633Z"
     },
     {
       "id": "DaveTheDiver",
@@ -83,9 +95,12 @@
       },
       "state": "unloaded",
       "poster": {
-        "url": "https://cdn.jsdelivr.net/gh/matthieuhuguet/zenrayshards-img-124ff562adad@979e6d90ef1c81f881066709dd619acf5c3458d1/games-dave-the-diver-752b.webp",
-        "source": "shelf",
-        "shelfId": "dave-the-diver-dc24"
+        "url": "https://cdn.jsdelivr.net/gh/matthieuhuguet/zenrayshards-img-124ff562adad@0c1a0423aec1a1206888c62a176e8273a9c7f9b8/games-dave-the-diver-1916.jpg",
+        "source": "search",
+        "shelfId": "dave-the-diver-dc24",
+        "width": 2560,
+        "height": 1430,
+        "landscape": true
       },
       "lastUpload": {
         "at": "2026-11-09T16:33:15.895Z",
@@ -132,7 +147,7 @@
         "load": "node scripts/Games/GamesVault.mjs load DaveTheDiver --to <empty folder>",
         "unload": "node scripts/Games/GamesVault.mjs unload DaveTheDiver --yes"
       },
-      "generatedAt": "2026-11-09T17:55:35.767Z"
+      "generatedAt": "2026-11-09T20:51:54.639Z"
     },
     {
       "id": "NintendoGames",
@@ -151,7 +166,10 @@
       "poster": {
         "url": "https://cdn.jsdelivr.net/gh/matthieuhuguet/zenray-shelf-img@4de20e1de3464605b77359f121dc3b2decc9b0e9/zelda-twilight-princess-9dc5.jpg",
         "source": "shelf",
-        "shelfId": "zelda-twilight-princess-9dc5"
+        "shelfId": "zelda-twilight-princess-9dc5",
+        "width": 1920,
+        "height": 1080,
+        "landscape": true
       },
       "lastUpload": {
         "at": "2026-11-09T17:12:21.961Z",
@@ -198,9 +216,9 @@
         "load": "node scripts/Games/GamesVault.mjs load NintendoGames --to <empty folder>",
         "unload": "node scripts/Games/GamesVault.mjs unload NintendoGames --yes"
       },
-      "generatedAt": "2026-11-09T17:55:35.782Z"
+      "generatedAt": "2026-11-09T20:51:54.661Z"
     }
   ],
-  "publishedAt": "2026-11-09T17:55:35.816Z",
+  "publishedAt": "2026-11-09T20:51:54.710Z",
   "publishedBy": "scripts/Games/GamesIndexPublish.mjs"
 }
