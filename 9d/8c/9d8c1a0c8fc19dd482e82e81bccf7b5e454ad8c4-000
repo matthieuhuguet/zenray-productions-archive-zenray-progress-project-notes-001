@@ -4012,3 +4012,134 @@
 - Project: zenray-progress; kind: prompt. (9 November 2026, 14:15:49 +0100)
 
 > 9 November 2026 : sur mobile, la sélection et les menus Gear doivent rester cliquables pendant le défilement tactile ; l'échelle typographique doit rester à 100 % par défaut. Recenser le défaut d'upload : si une piste japonaise existe, elle devient la piste audio par défaut, avec test et preuve sur le manifeste avant tout déchargement. (9 November 2026, 14:15:49 +0100)
+
+## 9 November 2026, 15:39:46 +0100 : Standing rule
+
+<!-- feedback-event:de6cdc916480bea4b7f40dc9cf7d4cd58879dd7bb73c3274e25a491a2fa0e825 (9 November 2026, 15:39:46 +0100) -->
+- Project: zenray-progress; kind: rule. (9 November 2026, 15:39:46 +0100)
+
+> 9 November 2026 : Pour chaque upload vidéo, si une piste japonaise (jpn ou ja) existe, la sélectionner par défaut dans le lecteur, le manifeste et le master HLS ; vérifier ces trois valeurs sur les fichiers réellement publiés avant de décharger la source locale. (9 November 2026, 15:39:46 +0100)
+
+## 9 November 2026, 15:40:09 +0100 : Prompt
+
+<!-- feedback-event:21dfbab22840b52c106c2f800c54de069806abdebb7375edbf01a17226c285bb (9 November 2026, 15:40:09 +0100) -->
+- Project: zenray-progress; kind: prompt. (9 November 2026, 15:40:09 +0100)
+
+> 9 November 2026 : « continue proprement jusqu'à la fin » : terminer les correctifs tactiles et audio, vérifier les trois épisodes publiés, puis déployer et confirmer la version réellement servie. (9 November 2026, 15:40:09 +0100)
+
+## 9 November 2026, 15:40:09 +0100 : Standing rule
+
+<!-- feedback-event:bf929205132de2edc2b05d62fcaeae89e9b13797089ce5bca88b0e582886e4aa (9 November 2026, 15:40:09 +0100) -->
+- Project: zenray-progress; kind: rule. (9 November 2026, 15:40:09 +0100)
+
+> 9 November 2026 : Sur mobile, le panneau Gear reste visible hors du cadre vidéo, défilable au toucher, avec des cibles d'au moins 44 px et une fermeture accessible pendant le défilement. (9 November 2026, 15:40:09 +0100)
+
+## 9 November 2026, 15:40:09 +0100 : Standing rule
+
+<!-- feedback-event:6a5e55094a9ca12f9a7007a9ec45b5f73d35931b1d78ef73aaa24531177675b5 (9 November 2026, 15:40:09 +0100) -->
+- Project: zenray-progress; kind: rule. (9 November 2026, 15:40:09 +0100)
+
+> 9 November 2026 : La taille des sous-titres démarre à 100 % lorsqu'aucun choix valide n'a été enregistré. (9 November 2026, 15:40:09 +0100)
+
+## 8 November 2026, 01:12:42 +0100 : Prompt
+
+<!-- feedback-event:d26ac0892a9d2b5585cc97677275b6a2f4978e4ea9dea24c2a5b20a13c3b0802 (8 November 2026, 01:12:42 +0100) -->
+- Project: zenray-progress; kind: prompt. (8 November 2026, 01:12:42 +0100)
+- Source: /Users/zenray/.codex/sessions/2026/11/08/rollout-2026-11-08T01-12-40-01a1b880-053e-79d2-a657-256ca3f2e083.jsonl. (8 November 2026, 01:12:42 +0100)
+
+> '/Users/zenray/Downloads/Daemons of the Shadow Realm S01E22 MULTi AD 1080p CR WEB-DL AAC2.0 x264-Tsundere-Raws.mkv' '/Users/zenray/Downloads/Daemons of the Shadow Realm S01E24 MULTi 1080p CR WEB-DL AAC2.0 x264-Tsundere-Raws.mkv' '/Users/zenray/Downloads/Daemons of the Shadow Realm S01E23 MULTi 1080p CR WEB-DL AAC2.0 x264-Tsundere-Raws.mkv' (8 November 2026, 01:12:42 +0100)
+>
+> clean rename en Yomi no Tsugai et upload dans anime dans Create [$zenray-progress](/Users/zenray/.codex/skills/zenray-progress/SKILL.md)&#x20; (8 November 2026, 01:12:42 +0100)
+>
+> Mais la fonte des épisodes en local en Adobe Clean, en changeant et en faisant un remux pour le faire rapidement, t'as juste à extraire le SRT, à en remettre un nouveau et à remuxer pour le faire rapidement. Et à delete les anciens fichiers. Donc les nouveaux fichiers ont le clean rename. Et ensuite tu les push directement sur, sur Create, et normalement le service vidéo proposera déjà soit la fonte en sérif, soit la fonte en... Comment ça s'appelle? En sans sérif. locaux + cloud go (8 November 2026, 01:12:42 +0100)
+
+## 8 November 2026, 01:36:52 +0100 : Prompt
+
+<!-- feedback-event:e6469143fde8fc003540942421ffe0ff5f29eddda7d2307f3ac9521f68133bc8 (8 November 2026, 01:36:52 +0100) -->
+- Project: zenray-progress; kind: prompt. (8 November 2026, 01:36:52 +0100)
+- Source: /Users/zenray/.codex/sessions/2026/11/08/rollout-2026-11-08T01-12-40-01a1b880-053e-79d2-a657-256ca3f2e083.jsonl. (8 November 2026, 01:36:52 +0100)
+
+> <send_user_message_question_reply> (8 November 2026, 01:36:52 +0100)
+> [{"questionItemId":"[\"request_user_input_async\",\"call_ba4cbe5a6ed84dd2ac8dc6f09c5b258d\",0]","question":"La règle d’upload zenray-progress exige ta validation du tableau Avant → Après avant le renommage. Valides-tu : S01E22 → Yomi No Tsugai/Saison 01/Yomi No Tsugai S01E22.mkv ; S01E23 → Yomi No Tsugai/Saison 01/Yomi No Tsugai S01E23.mkv ; S01E24 → Yomi No Tsugai/Saison 01/Yomi No Tsugai S01E24.mkv ? Les nouveaux fichiers resteront aussi en local après l’envoi.","answer":"Oui, sur ce, en fait, ce qui me manquait, c'est le fait que les fichiers doivent être en streaming, pas seulement en MKV, tu vois."}] (8 November 2026, 01:36:52 +0100)
+> </send_user_message_question_reply> (8 November 2026, 01:36:52 +0100)
+
+## 8 November 2026, 02:04:29 +0100 : Iteration
+
+<!-- feedback-event:b805c21035396742a723df3a969ac6693a022eb92e4a85c919eb882fc4ac90cb (8 November 2026, 02:04:29 +0100) -->
+- Project: zenray-progress; kind: iteration. (8 November 2026, 02:04:29 +0100)
+- Source: /Users/zenray/.codex/sessions/2026/11/08/rollout-2026-11-08T01-12-40-01a1b880-053e-79d2-a657-256ca3f2e083.jsonl. (8 November 2026, 02:04:29 +0100)
+
+> Les trois épisodes sont renommés, remuxés sans réencodage et conservés en local. Dans Create, ils sont publiés dans Anime en streaming HLS/DASH seulement. Le lecteur propose Adobe Clean sans sérif ou Literata avec sérifs. (8 November 2026, 02:04:29 +0100)
+>
+> | Ce que tu voulais | Fait ? | Preuve | (8 November 2026, 02:04:29 +0100)
+> |---|---|---| (8 November 2026, 02:04:29 +0100)
+> | Clean rename, nouveau SRT français et remux local | Oui | [S01E22](/Users/zenray/Downloads/Yomi%20No%20Tsugai/Saison%2001/Yomi%20No%20Tsugai%20S01E22.mkv), [S01E23](/Users/zenray/Downloads/Yomi%20No%20Tsugai/Saison%2001/Yomi%20No%20Tsugai%20S01E23.mkv), [S01E24](/Users/zenray/Downloads/Yomi%20No%20Tsugai/Saison%2001/Yomi%20No%20Tsugai%20S01E24.mkv). H.264/AAC conservés ; anciens noms absents. | (8 November 2026, 02:04:29 +0100)
+> | Upload dans Anime, en streaming | Oui | File d’envoi : 3/3 terminés, 0 échec. Les manifestes confirment HLS/DASH et `streamOnly=true`. | (8 November 2026, 02:04:29 +0100)
+> | Police sans sérif ou avec sérifs dans le lecteur | Oui | Adobe Clean et Literata sont disponibles dans le lecteur Create déployé. | (8 November 2026, 02:04:29 +0100)
+>
+> Seule vérification incomplète : le réseau de cet environnement bloque le contrôle direct des affiches sur jsDelivr. Les manifestes contiennent bien leurs URL publiques épinglées. (8 November 2026, 02:04:29 +0100)
+
+## 9 November 2026, 13:00:59 +0100 : Prompt
+
+<!-- feedback-event:2e7e9ebed4f862f1c3469735a5bbc79ca60ef6c6ed26484dbbf51ea64817a924 (9 November 2026, 13:00:59 +0100) -->
+- Project: zenray-progress; kind: prompt. (9 November 2026, 13:00:59 +0100)
+- Source: /Users/zenray/.codex/sessions/2026/11/08/rollout-2026-11-08T01-12-40-01a1b880-053e-79d2-a657-256ca3f2e083.jsonl. (9 November 2026, 13:00:59 +0100)
+
+> <external_codex_apps_selected_page_part_1_of_1>Companion Page snapshot part 1 of 1: (9 November 2026, 13:00:59 +0100)
+> {"page_id":null,"document_view":null}</external_codex_apps_selected_page_part_1_of_1> (9 November 2026, 13:00:59 +0100)
+
+## 9 November 2026, 13:00:59 +0100 : Prompt
+
+<!-- feedback-event:b4609fc05449da10b1ac6a31a865887e1ba608a6feed9d7c669dc123f64a1660 (9 November 2026, 13:00:59 +0100) -->
+- Project: zenray-progress; kind: prompt. (9 November 2026, 13:00:59 +0100)
+- Source: /Users/zenray/.codex/sessions/2026/11/08/rollout-2026-11-08T01-12-40-01a1b880-053e-79d2-a657-256ca3f2e083.jsonl. (9 November 2026, 13:00:59 +0100)
+
+> si les eps sont dans le cloud tu peux les unload Par contre, j'ai un problème sur mon site directement, sur la version iOS. Alors, c'est peut-être un problème du lecteur aussi, mais c'est que quand je mets en grand écran, j'ai pas les sous-titres. Est-ce que c'est résolvable actuellement? Je pense que c'est une option à rajouter. Mais j'ai le même problème sur YouTube et sur navigateur, donc c'est peut-être aussi un problème d'Apple sur les dernières versions 27.2, je crois, de iOS. Je suis sur iPhone. (9 November 2026, 13:00:59 +0100)
+
+## 9 November 2026, 13:41:30 +0100 : Iteration
+
+<!-- feedback-event:af8b4020032e63ccca50435442e5f55015e27bdae208f9c25410fb2924bf6b40 (9 November 2026, 13:41:30 +0100) -->
+- Project: zenray-progress; kind: iteration. (9 November 2026, 13:41:30 +0100)
+- Source: /Users/zenray/.codex/sessions/2026/11/08/rollout-2026-11-08T01-12-40-01a1b880-053e-79d2-a657-256ca3f2e083.jsonl. (9 November 2026, 13:41:30 +0100)
+
+> Oui, le problème du lecteur ZenRay est résolvable. Sur iPhone, le plein écran natif remplace le lecteur de la page, donc son calque de sous-titres disparaît. WebKit documente cette limite du plein écran sur iPhone. Apple signale aussi avoir corrigé un problème de sous-titres absents en plein écran dans Safari 27, ce qui rend ta piste iOS plausible, mais ne règle pas le calque propre à ZenRay. [WebKit](https://bugs.webkit.org/show_bug.cgi?id=328773), [Apple](https://developer.apple.com/documentation/safari-release-notes/safari-27-release-notes?language=_5) (9 November 2026, 13:41:30 +0100)
+>
+> J’ai préparé un réglage iPhone qui ouvre par défaut le lecteur intégré avec ses sous-titres, tout en laissant le lecteur natif iOS disponible. Le mode intégré peut laisser visibles les barres de Safari. Le correctif ne peut pas modifier le lecteur YouTube. Il compile, mais reste à publier et à vérifier sur un vrai iPhone. (9 November 2026, 13:41:30 +0100)
+>
+> | Ce que tu voulais | Fait ? | Comment je le sais | (9 November 2026, 13:41:30 +0100)
+> |---|---|---| (9 November 2026, 13:41:30 +0100)
+> | « si les eps sont dans le cloud tu peux les unload » | Oui | Trois reçus confirment la suppression de 4,49 Go ; l’espace libre est passé d’environ 92 à 145 Gio après l’allègement des snapshots. | (9 November 2026, 13:41:30 +0100)
+> | « quand je mets en grand écran, j'ai pas les sous-titres » | Correctif prêt | Commit local `1d1b7370`, build Vite réussi ; [lecteur](</private/tmp/zenray-progress-ios-subtitle-20261109/src/components/VideoPlayer2.jsx:727>). | (9 November 2026, 13:41:30 +0100)
+> | « sur mon site directement » | Pas encore publié | Publier ce correctif en production maintenant ? | (9 November 2026, 13:41:30 +0100)
+
+## 9 November 2026, 13:49:01 +0100 : Prompt
+
+<!-- feedback-event:954a59b553e5bc728ad7dfc261487a7e12c8121c81de20fa7aca7d34c6c091a5 (9 November 2026, 13:49:01 +0100) -->
+- Project: zenray-progress; kind: prompt. (9 November 2026, 13:49:01 +0100)
+- Source: /Users/zenray/.codex/sessions/2026/11/08/rollout-2026-11-08T01-12-40-01a1b880-053e-79d2-a657-256ca3f2e083.jsonl. (9 November 2026, 13:49:01 +0100)
+
+> Est-ce que c'est publié et est-ce que je peux le tester? Est-ce que tu as une preuve que ça fonctionne? Normalement, tu peux, lorsque je te pose ce genre de questions, tu peux simuler une WebView iOS, notamment en plus parce que je suis sur Mac, et comme ça, tu prends une capture d'écran directement pour voir si ça fonctionne. Et à terme, tu le notes directement dans claude.md pour être sûr que tu fasses plus l'erreur, ou dans agent.md. global (9 November 2026, 13:49:01 +0100)
+
+## 9 November 2026, 14:14:25 +0100 : Prompt
+
+<!-- feedback-event:9bc9acdb5d0b07431df04ae0c0d5308ea54be3cf7b63eeb89fc5bef48737b9c3 (9 November 2026, 14:14:25 +0100) -->
+- Project: zenray-progress; kind: prompt. (9 November 2026, 14:14:25 +0100)
+- Source: /Users/zenray/.codex/sessions/2026/11/08/rollout-2026-11-08T01-12-40-01a1b880-053e-79d2-a657-256ca3f2e083.jsonl. (9 November 2026, 14:14:25 +0100)
+
+> Il y a juste un problème, c'est que sur la version mobile, c'est hyper dur de cliquer de manière simple sur les éléments des choses. Parce que la version grand écran fonctionne bien sur mobile en respectant l'interface du, du site. Donc ça fonctionne sur iPhone directement. Mais ce qui pose problème maintenant, c'est la sélection pour sélectionner les éléments. Tu vois, genre c'est hyper difficile de sélectionner proprement un élément pour permettre directement de sélectionner des choses ou pas. Donc en fait, ce qu'il faudrait faire, c'est directement, euh, en fait faire en sorte de, de pouvoir scroll par exemple sur la navigation du gear de manière propre et de pouvoir cliquer et de pouvoir ensuite enlever le truc proprement. Parce que là, tandis que je déroule le scroll, le truc disparaît et où je clique sur un bouton. Enfin, la sélection sur mobile est très complexe actuellement parce que on dirait que ça n'a pas été codé proprement au niveau de la sélection et de penser au design d'une vue tactile du coup. Donc ça, il faudrait le corriger. Et ensuite, il faudrait faire en sorte de mettre la police des fontes à 100% par défaut directement. Et il y a aussi un problème sur les épisodes japonais qui ont été déchargés. En fait, le son de la piste japonaise n'est pas pris en compte. Je ne sais pas pourquoi. Ça doit être un bug, donc j'aimerais que tu le recenses et que tu le notes de manière permanente. Mais lors de l'upload, l'audio japonais, qui devait être normalement par défaut, là t'as mis la piste française, je sais pas pourquoi, l'audio japonais n'a pas marché. Donc vérifie que tu possèdes encore les fichiers, peut-être soit en local, soit sinon bah c'est pas grave, mais note le bug pour faire en sorte de toujours prendre la piste japonaise si elle existe par défaut, et de jamais l'oublier parce que là t'as créé un bug du coup. (9 November 2026, 14:14:25 +0100)
+
+## 9 November 2026, 14:36:07 +0100 : Prompt
+
+<!-- feedback-event:44828c52db7e71ce6e9d7e7bdbda6074c7a5ef6cc6b85da45240017a1f728d0e (9 November 2026, 14:36:07 +0100) -->
+- Project: zenray-progress; kind: prompt. (9 November 2026, 14:36:07 +0100)
+- Source: /Users/zenray/.codex/sessions/2026/11/08/rollout-2026-11-08T01-12-40-01a1b880-053e-79d2-a657-256ca3f2e083.jsonl. (9 November 2026, 14:36:07 +0100)
+
+> continue proprement (9 November 2026, 14:36:07 +0100)
+
+## 9 November 2026, 15:09:53 +0100 : Prompt
+
+<!-- feedback-event:f4c40a2776ed963051b742d508a0942f616cf7b3a700b03011c538bbb746d8bf (9 November 2026, 15:09:53 +0100) -->
+- Project: zenray-progress; kind: prompt. (9 November 2026, 15:09:53 +0100)
+- Source: /Users/zenray/.codex/sessions/2026/11/08/rollout-2026-11-08T01-12-40-01a1b880-053e-79d2-a657-256ca3f2e083.jsonl. (9 November 2026, 15:09:53 +0100)
+
+> continue proprement jusqu'à la fin (9 November 2026, 15:09:53 +0100)
