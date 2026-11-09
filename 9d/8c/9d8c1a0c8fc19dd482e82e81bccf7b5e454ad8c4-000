@@ -3984,3 +3984,10 @@
 - Project: zenray-progress; kind: log. (8 November 2026, 02:02:08 +0100)
 
 > Résultat du 8 novembre : épisodes S01E22 à S01E24 remuxés sans réencodage avec un nouveau SRT français nettoyé, renommés sous Yomi No Tsugai/Saison 01, puis envoyés dans Anime en streaming HLS/DASH seulement. Le worker confirme 3 done, 0 échec, HLS/DASH vérifiés, et les trois MKV propres sont conservés en local. La vérification CDN des affiches reste impossible depuis cet environnement réseau ; les manifestes contiennent des URL jsDelivr publiques épinglées. (8 November 2026, 02:02:08 +0100)
+
+## 9 November 2026, 13:01:54 +0100 : Prompt
+
+<!-- feedback-event:811c651f846954876f4a35848202e9bb7bbd2a9b0a8a9e3112e29295caaa306f (9 November 2026, 13:01:54 +0100) -->
+- Project: zenray-progress; kind: prompt. (9 November 2026, 13:01:54 +0100)
+
+> si les eps sont dans le cloud tu peux les unload Par contre, j'ai un problème sur mon site directement, sur la version iOS. Alors, c'est peut-être un problème du lecteur aussi, mais c'est que quand je mets en grand écran, j'ai pas les sous-titres. Est-ce que c'est résolvable actuellement? Je pense que c'est une option à rajouter. Mais j'ai le même problème sur YouTube et sur navigateur, donc c'est peut-être aussi un problème d'Apple sur les dernières versions 27.2, je crois, de iOS. Je suis sur iPhone. (9 November 2026, 13:01:54 +0100)
