@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-11-10T16:01:00.545Z",
+ "scannedAt": "2026-11-10T22:02:04.227Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -239,8 +239,8 @@
    "provider": "claude",
    "sessionId": "ab8eb886-c8c8-4907-9217-d36f0dd11c49",
    "title": "zenray disk space",
-   "updatedAt": "2026-11-09T23:37:32.358Z",
-   "bytes": 276186,
+   "updatedAt": "2026-11-10T18:08:37.267Z",
+   "bytes": 274521,
    "boundProject": null
   },
   {
@@ -584,6 +584,22 @@
    "lines": 23,
    "work": 0,
    "prompts": 0,
+   "first": "2026-11-05T18:27:08.735Z",
+   "last": "2026-11-10T21:07:01.088Z",
+   "strength": "weak",
+   "conversationId": "claude:0611e96b-26b2-4d65-a9e1-cb913738cca3",
+   "provider": "claude",
+   "sessionId": "0611e96b-26b2-4d65-a9e1-cb913738cca3",
+   "title": "zenray meshes v4",
+   "updatedAt": "2026-11-10T21:42:12.882Z",
+   "bytes": 280422,
+   "boundProject": "zenray-meshes"
+  },
+  {
+   "projectId": "zenray-progress",
+   "lines": 23,
+   "work": 0,
+   "prompts": 0,
    "first": "2026-10-26T08:47:05.520Z",
    "last": "2026-10-30T00:25:22.628Z",
    "strength": "weak",
@@ -594,22 +610,6 @@
    "updatedAt": "2026-10-30T13:00:29.267Z",
    "bytes": 38918,
    "boundProject": "zenray-calendar-plan-23-october-2026"
-  },
-  {
-   "projectId": "zenray-progress",
-   "lines": 20,
-   "work": 0,
-   "prompts": 0,
-   "first": "2026-11-05T18:27:08.735Z",
-   "last": "2026-11-10T10:41:16.085Z",
-   "strength": "weak",
-   "conversationId": "claude:0611e96b-26b2-4d65-a9e1-cb913738cca3",
-   "provider": "claude",
-   "sessionId": "0611e96b-26b2-4d65-a9e1-cb913738cca3",
-   "title": "zenray meshes v4",
-   "updatedAt": "2026-11-10T13:57:03.820Z",
-   "bytes": 280370,
-   "boundProject": "zenray-meshes"
   },
   {
    "projectId": "zenray-progress",
@@ -1057,6 +1057,22 @@
    "title": "Mail transfert dossier auto-école",
    "updatedAt": "2026-10-02T14:38:28.892Z",
    "bytes": 23040,
+   "boundProject": null
+  },
+  {
+   "projectId": "zenray-progress",
+   "lines": 2,
+   "work": 0,
+   "prompts": 0,
+   "first": "2026-11-10T21:29:52.423Z",
+   "last": "2026-11-10T21:29:52.423Z",
+   "strength": "weak",
+   "conversationId": "claude:710b33e1-dfb3-4203-8a30-468c937e1175",
+   "provider": "claude",
+   "sessionId": "710b33e1-dfb3-4203-8a30-468c937e1175",
+   "title": "TPM 2.0 activation B460M",
+   "updatedAt": "2026-11-10T21:33:41.317Z",
+   "bytes": 275973,
    "boundProject": null
   },
   {
