@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "generatedAt": "2026-11-09T21:10:59.748Z",
+  "generatedAt": "2026-11-10T04:08:49.527Z",
   "createRoot": "pages/Games",
   "games": [
     {
@@ -9,14 +9,14 @@
       "source": "/Users/zenray/Library/Application Support/CrossOver/Bottles/Control Resonant",
       "createFolder": "pages/Games/Control Resonant",
       "stateDir": "/Users/zenray/.zr-games-vault/ControlResonant",
-      "localPresent": true,
+      "localPresent": false,
       "sidecar": {
-        "createdAt": "2026-11-09T21:09:58.366Z",
+        "createdAt": "2026-11-10T02:54:28.037Z",
         "files": 2355,
         "bytes": 112560577693,
         "symlinks": 11
       },
-      "state": "local-only",
+      "state": "unloaded",
       "poster": {
         "url": "https://cdn.jsdelivr.net/gh/matthieuhuguet/zenrayshards-img-124ff562adad@97aaf775b9717b65172534f5522929bdf9586aac/games-control-resonant-ebf7.jpg",
         "source": "search",
@@ -25,11 +25,42 @@
         "height": 1080,
         "landscape": true
       },
-      "lastUpload": null,
-      "lastVerify": null,
-      "lastLoadTest": null,
-      "lastUnload": null,
-      "cloudManifests": null,
+      "lastUpload": {
+        "at": "2026-11-10T04:03:14.647Z",
+        "verdict": "OK",
+        "mode": null,
+        "file": "/Users/zenray/.zr-games-vault/Receipts/UploadReceipt-ControlResonant-20261110T040314647Z.json",
+        "reasons": []
+      },
+      "lastVerify": {
+        "at": "2026-11-10T04:03:14.703Z",
+        "verdict": "GREEN",
+        "mode": "full",
+        "file": "/Users/zenray/.zr-games-vault/Receipts/Receipt-ControlResonant-20261110T040609816Z.json",
+        "reasons": []
+      },
+      "lastLoadTest": {
+        "at": "2026-11-10T04:06:12.057Z",
+        "verdict": "GREEN",
+        "mode": null,
+        "file": "/Users/zenray/.zr-games-vault/Receipts/LoadTestReceipt-ControlResonant-20261110T040750894Z.json",
+        "reasons": []
+      },
+      "lastUnload": {
+        "at": "2026-11-10T04:08:49.502Z",
+        "ok": true,
+        "deleted": {
+          "files": 2355,
+          "symlinks": 11,
+          "specials": 0,
+          "dirs": 205,
+          "bytes": 112560577693
+        }
+      },
+      "cloudManifests": {
+        "files": 2355,
+        "commit": "036313754b1750eb38e18fd720446d8969b16078"
+      },
       "commands": {
         "plan": "node scripts/Games/GamesVault.mjs plan ControlResonant",
         "poster": "node scripts/Games/GamesVault.mjs poster ControlResonant",
@@ -39,7 +70,7 @@
         "load": "node scripts/Games/GamesVault.mjs load ControlResonant --to <empty folder>",
         "unload": "node scripts/Games/GamesVault.mjs unload ControlResonant --yes"
       },
-      "generatedAt": "2026-11-09T21:10:59.724Z"
+      "generatedAt": "2026-11-10T04:08:49.505Z"
     },
     {
       "id": "TheBloodOfDawnwalker",
@@ -108,7 +139,7 @@
         "load": "node scripts/Games/GamesVault.mjs load TheBloodOfDawnwalker --to <empty folder>",
         "unload": "node scripts/Games/GamesVault.mjs unload TheBloodOfDawnwalker --yes"
       },
-      "generatedAt": "2026-11-09T21:10:59.726Z"
+      "generatedAt": "2026-11-10T04:08:49.507Z"
     },
     {
       "id": "DaveTheDiver",
@@ -177,7 +208,7 @@
         "load": "node scripts/Games/GamesVault.mjs load DaveTheDiver --to <empty folder>",
         "unload": "node scripts/Games/GamesVault.mjs unload DaveTheDiver --yes"
       },
-      "generatedAt": "2026-11-09T21:10:59.730Z"
+      "generatedAt": "2026-11-10T04:08:49.513Z"
     },
     {
       "id": "NintendoGames",
@@ -246,9 +277,9 @@
         "load": "node scripts/Games/GamesVault.mjs load NintendoGames --to <empty folder>",
         "unload": "node scripts/Games/GamesVault.mjs unload NintendoGames --yes"
       },
-      "generatedAt": "2026-11-09T21:10:59.748Z"
+      "generatedAt": "2026-11-10T04:08:49.527Z"
     }
   ],
-  "publishedAt": "2026-11-09T21:10:59.788Z",
+  "publishedAt": "2026-11-10T04:08:49.528Z",
   "publishedBy": "scripts/Games/GamesIndexPublish.mjs"
 }
