@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-11-11T11:52:23.295Z",
+ "scannedAt": "2026-11-11T17:53:18.932Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -549,6 +549,22 @@
   },
   {
    "projectId": "zenray-progress",
+   "lines": 28,
+   "work": 0,
+   "prompts": 0,
+   "first": "2026-11-05T18:27:08.735Z",
+   "last": "2026-11-11T14:47:46.395Z",
+   "strength": "weak",
+   "conversationId": "claude:0611e96b-26b2-4d65-a9e1-cb913738cca3",
+   "provider": "claude",
+   "sessionId": "0611e96b-26b2-4d65-a9e1-cb913738cca3",
+   "title": "zenray meshes v5",
+   "updatedAt": "2026-11-11T17:52:32.130Z",
+   "bytes": 337005922,
+   "boundProject": "zenray-meshes"
+  },
+  {
+   "projectId": "zenray-progress",
    "lines": 27,
    "work": 0,
    "prompts": 0,
@@ -578,22 +594,6 @@
    "updatedAt": "2026-10-12T04:52:19.855Z",
    "bytes": 21122,
    "boundProject": "zenray-height"
-  },
-  {
-   "projectId": "zenray-progress",
-   "lines": 23,
-   "work": 0,
-   "prompts": 0,
-   "first": "2026-11-05T18:27:08.735Z",
-   "last": "2026-11-10T21:07:01.088Z",
-   "strength": "weak",
-   "conversationId": "claude:0611e96b-26b2-4d65-a9e1-cb913738cca3",
-   "provider": "claude",
-   "sessionId": "0611e96b-26b2-4d65-a9e1-cb913738cca3",
-   "title": "zenray meshes v4",
-   "updatedAt": "2026-11-11T00:49:17.149Z",
-   "bytes": 280517,
-   "boundProject": "zenray-meshes"
   },
   {
    "projectId": "zenray-progress",
