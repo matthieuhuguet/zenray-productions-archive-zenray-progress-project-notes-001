@@ -4281,3 +4281,10 @@
 - Project: zenray-progress; kind: rule. (10 November 2026, 00:11:06 +0100)
 
 > Photos Apple vers le drive : une photo n'est « dans le drive » que par son sha256 ; un contenu ne va jamais à deux emplacements ; avant tout envoi, écarter (hold) les photos de même nom et mêmes dimensions qu'une image déjà présente (autres octets) et laisser Matthieu trancher ; les originaux iCloud ne font que transiter sous le plafond transit.capBytes puis sont supprimés après preuve ; aucune écriture ni suppression dans le .photoslibrary. Détail : skill zenray-progress, section du 10 November 2026. (10 November 2026, 00:11:06 +0100)
+
+## 12 November 2026, 02:03:32 +0100 : Prompt
+
+<!-- feedback-event:fab3b350d37dec574b9471c9d53a7a095faea74b179a9057815b92cbde33b785 (12 November 2026, 02:03:32 +0100) -->
+- Project: zenray-progress; kind: prompt. (12 November 2026, 02:03:32 +0100)
+
+> j'aimerai créer l'équivalent de gallery de /zenray-progress pour les musiques les sons ... SFX ou. BGM en soit UI doit être ultra agréable à utiliser magnifique addictive à utiliser + original et design... donc une vrai gallery Audio ... pas reprendre l'existant de zenray audio mais composer quelque chose de totalement nouveau et faire pareil pour zenray fonts. go propose : fonts Adobe Clean pour les 2 apps. ou font original ou plusieurs pour zenray fonts. go. propose moi des design mockup via /zenray-edit et je choisirai je veux que les design réponde surtout à mes besoins fonctionnels hyper beau / jeux vidéos / créateur technique (12 November 2026, 02:03:32 +0100)
