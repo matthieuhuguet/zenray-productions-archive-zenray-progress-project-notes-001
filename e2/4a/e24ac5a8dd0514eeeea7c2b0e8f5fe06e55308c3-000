@@ -1,0 +1,18 @@
+{
+  "date": "12 November 2026",
+  "slug": "gallery-audio-fonts-mockups",
+  "folder": "2026-11-12-gallery-audio-fonts-mockups",
+  "version": 1,
+  "title": "ZenRay Progress : Galeries Audio (SFX/BGM) & Fonts (Adobe Clean & Multi-Fonts)",
+  "module": "progress",
+  "assetsProject": "zenray-edit",
+  "project": "zenray-progress",
+  "status": "pending",
+  "atelier": "/Users/zenray/.claude/tmp/tmp-gallery-audio-fonts-12-november-2026",
+  "files": [
+    "index.html"
+  ],
+  "indexSha256": "33ebd0dcdc29a0f5127ae2198641f9e5275cb4a70eacf9e7b6a1d604629a4244",
+  "filedAt": "2026-11-12T01:09:15.416Z",
+  "note": null
+}

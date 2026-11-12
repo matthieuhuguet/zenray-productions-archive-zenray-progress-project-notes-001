@@ -1,0 +1,2261 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark" data-font-regime="adobe-clean">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ZenRay Progress · Galeries Audio (SFX / BGM) &amp; Fonts (Adobe Clean &amp; Multi-Fonts)</title>
+<style>
+  /* ==========================================================================
+     1. WEBFONTS AUTHENTIQUES (Zéro déformation procédurale, font-synthesis: none)
+     ========================================================================== */
+  @font-face {
+    font-family: 'Adobe Clean';
+    src: local('Adobe Clean Regular'), local('AdobeClean-Regular'),
+         url('../_shared/fonts/AdobeClean-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Adobe Clean';
+    src: local('Adobe Clean Medium'), local('AdobeClean-Medium'),
+         url('../_shared/fonts/AdobeClean-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Adobe Clean';
+    src: local('Adobe Clean Bold'), local('AdobeClean-Bold'),
+         url('../_shared/fonts/AdobeClean-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'GT Ultra';
+    src: local('GT Ultra Regular'), local('GTUltra-Regular'),
+         url('../_shared/fonts/GT-Ultra-Regular.woff2') format('woff2');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Literata';
+    src: local('Literata Regular'), local('Literata-Regular'),
+         url('../_shared/fonts/Literata-latin.woff2') format('woff2');
+    font-weight: 300 800;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Literata';
+    src: local('Literata Italic'), local('Literata-Italic'),
+         url('../_shared/fonts/Literata-Italic-latin.woff2') format('woff2');
+    font-weight: 300 800;
+    font-style: italic;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'GT Sectra LCG';
+    src: local('GT Sectra LCG Regular'),
+         url('../_shared/fonts/GT-Sectra-LCGV-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'GT Standard L';
+    src: local('GT Standard L Regular'),
+         url('../_shared/fonts/GT-Standard-L-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'GT Standard L';
+    src: local('GT Standard L Bold'),
+         url('../_shared/fonts/GT-Standard-L-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'GT Planar';
+    src: local('GT Planar Regular'), local('GTPlanar-Regular'),
+         url('../_shared/fonts/GT-Planar-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Beaufort for LOL';
+    src: local('BeaufortforLOL-Bold'), local('Beaufort for LOL Bold'),
+         url('../_shared/fonts/BeaufortforLOL-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Vogun';
+    src: local('Vogun Medium'), local('Vogun-Medium'),
+         url('../_shared/fonts/Vogun-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Anthropic Mono';
+    src: local('Anthropic Mono Regular'),
+         url('../_shared/fonts/AnthropicMono-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'FOT-Chiaro Std B';
+    src: local('FOT-ChiaroStd-B'), local('FOT-Chiaro Std B'), local('Hiragino Mincho ProN W6');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  /* ==========================================================================
+     2. PARAMÈTRES HDA (:root) & THÈMES DARK / LIGHT
+     ========================================================================== */
+  :root {
+    --font-adobe: 'Adobe Clean', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-gt-ultra: 'GT Ultra', 'Adobe Clean', sans-serif;
+    --font-literata: 'Literata', Georgia, serif;
+    --font-sectra: 'GT Sectra LCG', Georgia, serif;
+    --font-chiaro: 'FOT-Chiaro Std B', 'Literata', 'Hiragino Mincho ProN', serif;
+    --font-beaufort: 'Beaufort for LOL', 'GT Ultra', serif;
+    --font-vogun: 'Vogun', 'Literata', serif;
+    --font-planar: 'GT Planar', 'Adobe Clean', sans-serif;
+    --font-mono: 'Anthropic Mono', 'SF Mono', Menlo, monospace;
+
+    /* Régime actif par défaut : 100% Adobe Clean */
+    --font-ui: var(--font-adobe);
+    --font-display: var(--font-adobe);
+    --font-num: var(--font-adobe);
+    --display-weight: 700;
+
+    /* Paramètres HDA pilotables aux curseurs */
+    --gal-cols: 4;
+    --gal-gap: 16px;
+    --gal-radius: 16px;
+    --wave-height: 54px;
+    --spec-size: 36px;
+    --card-pad: 16px;
+
+    /* Tokens Dark Mode (défaut ZenRayProgress) */
+    --bg-app: #0d0e11;
+    --bg-sidebar: rgba(20, 22, 26, 0.88);
+    --bg-canvas: #131519;
+    --bg-card: #191c22;
+    --bg-card-hover: #20242c;
+    --bg-elevated: #232730;
+    --bg-glass: rgba(26, 29, 36, 0.78);
+    --line-subtle: rgba(255, 255, 255, 0.07);
+    --line-strong: rgba(255, 255, 255, 0.14);
+    --ink-primary: #f4f5f8;
+    --ink-secondary: #a2a8b4;
+    --ink-muted: #6c7280;
+    --accent-audio: #e89b4c;
+    --accent-audio-soft: rgba(232, 155, 76, 0.14);
+    --accent-fonts: #6396ff;
+    --accent-fonts-soft: rgba(99, 150, 255, 0.14);
+    --accent-emerald: #3ecf8e;
+    --accent-emerald-soft: rgba(62, 207, 142, 0.14);
+    --accent-laser: #ff5468;
+    --shadow-card: 0 12px 32px rgba(0, 0, 0, 0.34);
+  }
+
+  html[data-theme="light"] {
+    --bg-app: #f3f1ec;
+    --bg-sidebar: rgba(246, 244, 238, 0.92);
+    --bg-canvas: #faf8f4;
+    --bg-card: #ffffff;
+    --bg-card-hover: #f5f2eb;
+    --bg-elevated: #edeae2;
+    --bg-glass: rgba(255, 255, 255, 0.86);
+    --line-subtle: rgba(20, 20, 19, 0.08);
+    --line-strong: rgba(20, 20, 19, 0.16);
+    --ink-primary: #151514;
+    --ink-secondary: #575550;
+    --ink-muted: #8a867e;
+    --accent-audio: #c96f18;
+    --accent-audio-soft: rgba(201, 111, 24, 0.11);
+    --accent-fonts: #295be0;
+    --accent-fonts-soft: rgba(41, 91, 224, 0.11);
+    --accent-emerald: #168a56;
+    --accent-emerald-soft: rgba(22, 138, 86, 0.11);
+    --accent-laser: #d92d44;
+    --shadow-card: 0 10px 26px rgba(20, 18, 14, 0.07);
+  }
+
+  /* Régimes typographiques commutables en 1 clic */
+  html[data-font-regime="adobe-clean"] {
+    --font-ui: var(--font-adobe);
+    --font-display: var(--font-adobe);
+    --font-num: var(--font-adobe);
+    --display-weight: 700;
+  }
+  html[data-font-regime="adobe-gt-ultra"] {
+    --font-ui: var(--font-adobe);
+    --font-display: var(--font-gt-ultra);
+    --font-num: var(--font-gt-ultra);
+    --display-weight: 400;
+  }
+  html[data-font-regime="multi-fonts"] {
+    --font-ui: var(--font-adobe);
+    --font-display: var(--font-chiaro);
+    --font-num: var(--font-mono);
+    --display-weight: 700;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-synthesis: none;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    background: var(--bg-app);
+    color: var(--ink-primary);
+    font-family: var(--font-ui);
+    font-size: 14px;
+    line-height: 1.45;
+    min-height: 100vh;
+    overflow-x: hidden;
+    transition: background 0.2s ease, color 0.2s ease;
+  }
+
+  /* ==========================================================================
+     3. BARRE DE CONTRÔLE HDA (Sélecteur d'App, Propositions, Régimes & Curseurs)
+     ========================================================================== */
+  .hda-topbar {
+    position: sticky;
+    top: 0;
+    z-index: 120;
+    background: var(--bg-glass);
+    backdrop-filter: blur(20px) saturate(150%);
+    -webkit-backdrop-filter: blur(20px) saturate(150%);
+    border-bottom: 1px solid var(--line-subtle);
+    padding: 8px 18px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .hda-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .hda-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, var(--accent-audio), var(--accent-fonts));
+    box-shadow: 0 0 12px var(--accent-audio);
+  }
+
+  .hda-title {
+    font-family: var(--font-display);
+    font-weight: var(--display-weight);
+    font-size: 13px;
+    letter-spacing: -0.01em;
+  }
+
+  .hda-pill-group {
+    display: inline-flex;
+    align-items: center;
+    background: var(--bg-elevated);
+    padding: 3px;
+    border-radius: 10px;
+    border: 1px solid var(--line-subtle);
+    gap: 2px;
+  }
+
+  .hda-pill {
+    appearance: none;
+    border: 0;
+    background: transparent;
+    color: var(--ink-secondary);
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: all 0.16s ease;
+    white-space: nowrap;
+  }
+
+  .hda-pill:hover {
+    color: var(--ink-primary);
+  }
+
+  .hda-pill.is-active {
+    background: var(--bg-card);
+    color: var(--ink-primary);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.22);
+  }
+
+  .hda-pill.is-audio.is-active {
+    color: var(--accent-audio);
+    border: 1px solid rgba(232, 155, 76, 0.35);
+  }
+
+  .hda-pill.is-fonts.is-active {
+    color: var(--accent-fonts);
+    border: 1px solid rgba(99, 150, 255, 0.35);
+  }
+
+  .hda-sliders {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .hda-slider-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11.5px;
+    color: var(--ink-secondary);
+  }
+
+  .hda-slider-item input[type="range"] {
+    width: 68px;
+    accent-color: var(--accent-audio);
+    cursor: pointer;
+  }
+
+  .hda-val {
+    font-family: var(--font-num);
+    font-weight: var(--display-weight);
+    color: var(--ink-primary);
+    min-width: 28px;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .hda-copy-btn {
+    appearance: none;
+    border: 1px solid var(--line-strong);
+    background: var(--bg-card);
+    color: var(--ink-primary);
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.16s ease;
+  }
+
+  .hda-copy-btn:hover {
+    border-color: var(--accent-audio);
+    color: var(--accent-audio);
+  }
+
+  /* ==========================================================================
+     4. SHELL ZENRAY PROGRESS (Sidebar Liquid Glass 224px + Canvas Gallery)
+     ========================================================================== */
+  .zr-shell {
+    display: grid;
+    grid-template-columns: 220px minmax(0, 1fr);
+    gap: 14px;
+    padding: 14px 18px 96px;
+    max-width: 1760px;
+    margin: 0 auto;
+  }
+
+  .zr-sidebar {
+    background: var(--bg-sidebar);
+    border: 1px solid var(--line-subtle);
+    border-radius: 22px;
+    padding: 16px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    height: fit-content;
+    position: sticky;
+    top: 62px;
+  }
+
+  .zr-sb-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8px;
+  }
+
+  .zr-sb-brand {
+    font-family: var(--font-display);
+    font-weight: var(--display-weight);
+    font-size: 15px;
+    letter-spacing: -0.02em;
+  }
+
+  .zr-sb-badge {
+    font-size: 10.5px;
+    padding: 2px 7px;
+    border-radius: 999px;
+    background: var(--bg-elevated);
+    color: var(--ink-secondary);
+  }
+
+  .zr-sb-group-title {
+    font-family: var(--font-display);
+    font-weight: var(--display-weight);
+    font-size: 10.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--ink-muted);
+    padding: 0 8px 4px;
+  }
+
+  .zr-sb-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .zr-sb-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7px 10px;
+    border-radius: 10px;
+    font-size: 13px;
+    color: var(--ink-secondary);
+    cursor: pointer;
+    transition: all 0.15s ease;
+    border: 1px solid transparent;
+  }
+
+  .zr-sb-item:hover {
+    background: var(--bg-elevated);
+    color: var(--ink-primary);
+  }
+
+  .zr-sb-item.is-active-audio {
+    background: var(--accent-audio-soft);
+    color: var(--accent-audio);
+    border-color: rgba(232, 155, 76, 0.28);
+    font-weight: 500;
+  }
+
+  .zr-sb-item.is-active-fonts {
+    background: var(--accent-fonts-soft);
+    color: var(--accent-fonts);
+    border-color: rgba(99, 150, 255, 0.28);
+    font-weight: 500;
+  }
+
+  .zr-sb-count {
+    font-family: var(--font-num);
+    font-weight: var(--display-weight);
+    font-size: 11px;
+    opacity: 0.78;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* ==========================================================================
+     5. CANVAS PRINCIPAL (.zr-gallery-canvas)
+     ========================================================================== */
+  .zr-main {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    min-width: 0;
+  }
+
+  .zr-section-block {
+    background: var(--bg-canvas);
+    border: 1px solid var(--line-subtle);
+    border-radius: 24px;
+    padding: 20px 22px 24px;
+    box-shadow: var(--shadow-card);
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .zr-section-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 14px;
+    border-bottom: 1px solid var(--line-subtle);
+    padding-bottom: 14px;
+  }
+
+  .zr-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 4px;
+  }
+
+  .zr-eyebrow.is-audio { color: var(--accent-audio); }
+  .zr-eyebrow.is-fonts { color: var(--accent-fonts); }
+
+  .zr-h1 {
+    font-family: var(--font-display);
+    font-weight: var(--display-weight);
+    font-size: 23px;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+  }
+
+  .zr-sub {
+    color: var(--ink-secondary);
+    font-size: 13px;
+    margin-top: 3px;
+  }
+
+  .zr-prop-tabs {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--bg-elevated);
+    padding: 4px;
+    border-radius: 12px;
+    border: 1px solid var(--line-subtle);
+    flex-wrap: wrap;
+  }
+
+  .zr-prop-btn {
+    appearance: none;
+    border: 0;
+    background: transparent;
+    color: var(--ink-secondary);
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.16s ease;
+  }
+
+  .zr-prop-btn:hover {
+    color: var(--ink-primary);
+  }
+
+  .zr-prop-btn.is-active {
+    background: var(--bg-card);
+    color: var(--ink-primary);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Barre de filtres rapides façon GalleryView */
+  .zr-filter-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .zr-chip-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .zr-chip {
+    appearance: none;
+    border: 1px solid var(--line-subtle);
+    background: var(--bg-card);
+    color: var(--ink-secondary);
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 500;
+    padding: 5px 11px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .zr-chip:hover,
+  .zr-chip.is-active {
+    color: var(--ink-primary);
+    border-color: var(--line-strong);
+    background: var(--bg-elevated);
+  }
+
+  .zr-chip.is-audio-active {
+    background: var(--accent-audio-soft);
+    color: var(--accent-audio);
+    border-color: rgba(232, 155, 76, 0.36);
+  }
+
+  .zr-chip.is-fonts-active {
+    background: var(--accent-fonts-soft);
+    color: var(--accent-fonts);
+    border-color: rgba(99, 150, 255, 0.36);
+  }
+
+  .zr-search-box {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--bg-card);
+    border: 1px solid var(--line-subtle);
+    border-radius: 10px;
+    padding: 5px 11px;
+    min-width: 240px;
+  }
+
+  .zr-search-box input {
+    border: 0;
+    background: transparent;
+    color: var(--ink-primary);
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    width: 100%;
+    outline: none;
+  }
+
+  /* ==========================================================================
+     6. GRILLE DE CARTES UNIFIÉE (Pilotée par --gal-cols, --gal-gap, --gal-radius)
+     ========================================================================== */
+  .zr-grid {
+    display: grid;
+    grid-template-columns: repeat(var(--gal-cols), minmax(0, 1fr));
+    gap: var(--gal-gap);
+  }
+
+  .zr-card {
+    background: var(--bg-card);
+    border: 1px solid var(--line-subtle);
+    border-radius: var(--gal-radius);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .zr-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--line-strong);
+    background: var(--bg-card-hover);
+  }
+
+  .zr-card.is-playing {
+    border-color: var(--accent-audio);
+    box-shadow: 0 0 0 1px var(--accent-audio), var(--shadow-card);
+  }
+
+  /* ==========================================================================
+     7. GALLERY AUDIO · PROPOSITION A : « SPECTRAL & WAVEFORM GALLERY »
+     ========================================================================== */
+  .audio-stage {
+    position: relative;
+    padding: 14px 14px 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 158px;
+    border-bottom: 1px solid var(--line-subtle);
+    overflow: hidden;
+  }
+
+  .audio-stage::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: 0.22;
+    pointer-events: none;
+    background: radial-gradient(circle at 82% 18%, var(--card-glow, #e89b4c), transparent 68%);
+  }
+
+  .audio-top-row {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6px;
+  }
+
+  .audio-kind-pill {
+    font-size: 10.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 3px 8px;
+    border-radius: 6px;
+    background: rgba(0, 0, 0, 0.36);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  html[data-theme="light"] .audio-kind-pill {
+    background: rgba(20, 20, 19, 0.08);
+    color: var(--ink-primary);
+    border-color: rgba(20, 20, 19, 0.12);
+  }
+
+  .audio-tech-badges {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .tech-badge {
+    font-family: var(--font-num);
+    font-weight: var(--display-weight);
+    font-size: 10.5px;
+    padding: 2px 6px;
+    border-radius: 5px;
+    background: var(--bg-elevated);
+    color: var(--ink-secondary);
+    border: 1px solid var(--line-subtle);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .tech-badge.is-lufs {
+    color: var(--accent-emerald);
+    border-color: rgba(62, 207, 142, 0.28);
+    background: var(--accent-emerald-soft);
+  }
+
+  /* Ruban Waveform / Spectrogramme interactif */
+  .waveform-box {
+    position: relative;
+    z-index: 1;
+    height: var(--wave-height);
+    margin: 12px 0 8px;
+    display: flex;
+    align-items: flex-end;
+    gap: 3px;
+    padding: 4px 2px;
+  }
+
+  .wave-bar {
+    flex: 1;
+    border-radius: 99px;
+    background: var(--ink-muted);
+    opacity: 0.42;
+    transition: height 0.18s ease, background 0.15s ease, opacity 0.15s ease;
+    min-height: 14%;
+  }
+
+  .zr-card:hover .wave-bar {
+    opacity: 0.72;
+  }
+
+  .wave-bar.is-hot {
+    background: var(--card-glow, var(--accent-audio));
+    opacity: 0.95;
+  }
+
+  .audio-stage-bottom {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 11px;
+    color: var(--ink-secondary);
+  }
+
+  .play-orb {
+    width: 30px;
+    height: 30px;
+    border-radius: 999px;
+    background: var(--ink-primary);
+    color: var(--bg-card);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 700;
+    transition: transform 0.15s ease, background 0.15s ease;
+  }
+
+  .zr-card:hover .play-orb,
+  .zr-card.is-playing .play-orb {
+    background: var(--accent-audio);
+    color: #0d0e11;
+    transform: scale(1.06);
+  }
+
+  .card-body {
+    padding: var(--card-pad);
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    flex: 1;
+  }
+
+  .card-title-row {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  .card-title {
+    font-family: var(--font-display);
+    font-weight: var(--display-weight);
+    font-size: 15px;
+    color: var(--ink-primary);
+    letter-spacing: -0.01em;
+  }
+
+  .card-dur {
+    font-family: var(--font-num);
+    font-weight: var(--display-weight);
+    font-size: 11.5px;
+    color: var(--ink-muted);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .card-meta {
+    font-size: 12px;
+    color: var(--ink-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6px;
+  }
+
+  .macro-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: auto;
+    padding-top: 4px;
+  }
+
+  .macro-pill {
+    font-size: 10.5px;
+    padding: 2px 7px;
+    border-radius: 6px;
+    background: var(--bg-elevated);
+    color: var(--ink-secondary);
+    border: 1px solid var(--line-subtle);
+  }
+
+  .macro-pill strong {
+    font-family: var(--font-num);
+    font-weight: var(--display-weight);
+    color: var(--ink-primary);
+  }
+
+  /* ==========================================================================
+     8. GALLERY AUDIO · PROPOSITION B : « GAME AUDIO MATRIX & STEM DECK »
+     ========================================================================== */
+  .stem-deck-layout {
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    gap: 16px;
+  }
+
+  .bgm-banner-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .bgm-banner {
+    background: var(--bg-card);
+    border: 1px solid var(--line-subtle);
+    border-radius: var(--gal-radius);
+    padding: 14px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    cursor: pointer;
+    transition: border-color 0.16s ease;
+  }
+
+  .bgm-banner:hover {
+    border-color: var(--accent-audio);
+  }
+
+  .bgm-cue-bar {
+    height: 28px;
+    background: var(--bg-elevated);
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    justify-content: space-between;
+    font-size: 11px;
+    color: var(--ink-secondary);
+    border: 1px solid var(--line-subtle);
+  }
+
+  .bgm-cue-fill {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 68%;
+    background: linear-gradient(90deg, rgba(232, 155, 76, 0.25), rgba(99, 150, 255, 0.22));
+    pointer-events: none;
+  }
+
+  .sfx-pad-matrix {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .sfx-pad {
+    background: var(--bg-card);
+    border: 1px solid var(--line-subtle);
+    border-radius: var(--gal-radius);
+    padding: 13px 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 8px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+  }
+
+  .sfx-pad:hover {
+    border-color: var(--accent-emerald);
+    transform: translateY(-1px);
+  }
+
+  /* ==========================================================================
+     9. GALLERY AUDIO · PROPOSITION C : « OSCILLOSCOPE & INSPECTEUR HDA »
+     ========================================================================== */
+  .osc-inspector-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 330px;
+    gap: 16px;
+  }
+
+  .hda-node-inspector {
+    background: var(--bg-card);
+    border: 1px solid var(--line-strong);
+    border-radius: var(--gal-radius);
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .hda-param-row {
+    display: grid;
+    grid-template-columns: 92px 1fr 44px;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+  }
+
+  .hda-param-row input[type="range"] {
+    width: 100%;
+    accent-color: var(--accent-audio);
+  }
+
+  /* ==========================================================================
+     10. GALLERY FONTS · PROPOSITION A : « FOUNDRY SPECIMEN & GAME DIALOGUE »
+     ========================================================================== */
+  .font-stage {
+    position: relative;
+    padding: 16px 16px 14px;
+    min-height: 168px;
+    border-bottom: 1px solid var(--line-subtle);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: radial-gradient(circle at 86% 16%, rgba(99, 150, 255, 0.13), transparent 65%);
+  }
+
+  .font-stage.has-xray .font-specimen-big {
+    border-bottom: 1.5px solid var(--accent-laser);
+    border-top: 1px dashed rgba(99, 150, 255, 0.45);
+    position: relative;
+  }
+
+  .font-specimen-big {
+    font-size: var(--spec-size);
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+    color: var(--ink-primary);
+    margin: 10px 0 8px;
+    outline: none;
+    word-break: break-word;
+  }
+
+  .font-sample-line {
+    font-size: 13px;
+    color: var(--ink-secondary);
+    line-height: 1.4;
+    outline: none;
+  }
+
+  .weight-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  .weight-pill {
+    font-family: var(--font-num);
+    font-weight: var(--display-weight);
+    font-size: 10px;
+    padding: 2px 6px;
+    border-radius: 5px;
+    background: var(--bg-elevated);
+    color: var(--ink-secondary);
+    border: 1px solid var(--line-subtle);
+  }
+
+  .weight-pill.is-active {
+    background: var(--accent-fonts-soft);
+    color: var(--accent-fonts);
+    border-color: rgba(99, 150, 255, 0.35);
+  }
+
+  /* Aperçu Boîte de Dialogue Zelda / Jeu Vidéo en direct */
+  .game-dialogue-preview {
+    background: linear-gradient(180deg, rgba(16, 20, 28, 0.94), rgba(10, 12, 18, 0.97));
+    border: 1px solid rgba(232, 198, 118, 0.42);
+    border-radius: 16px;
+    padding: 16px 20px;
+    color: #f7f4eb;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+  }
+
+  .game-dialogue-speaker {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #e8c676;
+    margin-bottom: 4px;
+    font-weight: 700;
+  }
+
+  .game-dialogue-text {
+    font-family: var(--preview-game-font, var(--font-chiaro));
+    font-size: 19px;
+    line-height: 1.5;
+    letter-spacing: 0.01em;
+  }
+
+  /* ==========================================================================
+     11. GALLERY FONTS · PROPOSITION B & C : « RAYONS X CJK & MATRICE RÉGIMES »
+     ========================================================================== */
+  .cjk-xray-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .cjk-cell {
+    background: var(--bg-card);
+    border: 1px solid var(--line-subtle);
+    border-radius: var(--gal-radius);
+    padding: 16px;
+    text-align: center;
+    position: relative;
+  }
+
+  .cjk-glyph {
+    font-size: 64px;
+    line-height: 1.1;
+    border-bottom: 1.5px solid var(--accent-laser);
+    display: inline-block;
+    padding: 0 12px 4px;
+    margin-bottom: 8px;
+  }
+
+  .regime-compare-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .regime-card {
+    background: var(--bg-card);
+    border: 1px solid var(--line-subtle);
+    border-radius: var(--gal-radius);
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    cursor: pointer;
+    transition: all 0.16s ease;
+  }
+
+  .regime-card.is-selected {
+    border-color: var(--accent-fonts);
+    box-shadow: 0 0 0 1px var(--accent-fonts);
+  }
+
+  /* ==========================================================================
+     12. DOCK AUDIO & TYPO FLOTTANT EN BAS
+     ========================================================================== */
+  .zr-bottom-dock {
+    position: fixed;
+    bottom: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 130;
+    width: min(1120px, calc(100vw - 36px));
+    background: var(--bg-glass);
+    backdrop-filter: blur(22px) saturate(160%);
+    -webkit-backdrop-filter: blur(22px) saturate(160%);
+    border: 1px solid var(--line-strong);
+    border-radius: 18px;
+    padding: 10px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    box-shadow: 0 18px 42px rgba(0, 0, 0, 0.45);
+  }
+
+  .dock-now-playing {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 240px;
+  }
+
+  .dock-meter {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-num);
+    font-weight: var(--display-weight);
+    font-size: 12px;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .is-hidden {
+    display: none !important;
+  }
+
+  @media (max-width: 1180px) {
+    .zr-shell { grid-template-columns: 1fr; }
+    .zr-sidebar { position: static; }
+    .stem-deck-layout, .osc-inspector-layout, .regime-compare-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+  <!-- ========================================================================
+       BARRE HDA PARAMÉTRIQUE (:root CSS variables + Sélection Régime & Vue)
+       ======================================================================== -->
+  <header class="hda-topbar">
+    <div class="hda-brand">
+      <span class="hda-dot"></span>
+      <span class="hda-title">ZenRay Gallery Studio · Audio &amp; Fonts HDA</span>
+    </div>
+
+    <!-- Commutateur d'App : Vue Globale / Gallery Audio / Gallery Fonts -->
+    <div class="hda-pill-group" role="tablist" aria-label="Sélecteur d'application">
+      <button class="hda-pill is-active" data-app-view="both" onclick="setAppView('both')">Vue Duo (Audio + Fonts)</button>
+      <button class="hda-pill is-audio" data-app-view="audio" onclick="setAppView('audio')">1. Gallery Audio (SFX · BGM)</button>
+      <button class="hda-pill is-fonts" data-app-view="fonts" onclick="setAppView('fonts')">2. Gallery Fonts (ZenRay Fonts)</button>
+    </div>
+
+    <!-- Commutateur de Régime Typographique (Adobe Clean vs GT Ultra vs Multi-Fonts) -->
+    <div class="hda-pill-group" role="tablist" aria-label="Régime typographique">
+      <button class="hda-pill is-active" data-regime-btn="adobe-clean" onclick="setFontRegime('adobe-clean')">Adobe Clean (2 Apps)</button>
+      <button class="hda-pill" data-regime-btn="adobe-gt-ultra" onclick="setFontRegime('adobe-gt-ultra')">Adobe Clean + GT Ultra</button>
+      <button class="hda-pill" data-regime-btn="multi-fonts" onclick="setFontRegime('multi-fonts')">Multi-Fonts Créateur</button>
+    </div>
+
+    <!-- Curseurs paramétriques HDA -->
+    <div class="hda-sliders">
+      <label class="hda-slider-item">
+        <span>Colonnes</span>
+        <input type="range" min="2" max="4" step="1" value="4" oninput="setHdaVar('--gal-cols', this.value, 'val-cols', '')" />
+        <span class="hda-val" id="val-cols">4</span>
+      </label>
+      <label class="hda-slider-item">
+        <span>Gap</span>
+        <input type="range" min="10" max="28" step="2" value="16" oninput="setHdaVar('--gal-gap', this.value + 'px', 'val-gap', 'px')" />
+        <span class="hda-val" id="val-gap">16px</span>
+      </label>
+      <label class="hda-slider-item">
+        <span>Rayon</span>
+        <input type="range" min="6" max="24" step="2" value="16" oninput="setHdaVar('--gal-radius', this.value + 'px', 'val-rad', 'px')" />
+        <span class="hda-val" id="val-rad">16px</span>
+      </label>
+      <label class="hda-slider-item">
+        <span>Spécimen</span>
+        <input type="range" min="24" max="54" step="2" value="36" oninput="setHdaVar('--spec-size', this.value + 'px', 'val-spec', 'px')" />
+        <span class="hda-val" id="val-spec">36px</span>
+      </label>
+      <button class="hda-pill" id="theme-toggle-btn" onclick="toggleTheme()" style="background:var(--bg-elevated);border:1px solid var(--line-subtle);">Thème : Dark</button>
+      <button class="hda-copy-btn" id="copy-hda-btn" onclick="copyHdaChoice()">Copier mon choix &amp; HDA</button>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       SHELL ZENRAY PROGRESS (Sidebar Gauche + Canvas Galeries)
+       ======================================================================== -->
+  <div class="zr-shell">
+
+    <!-- SIDEBAR LIQUID GLASS ZENRAY PROGRESS -->
+    <aside class="zr-sidebar">
+      <div class="zr-sb-header">
+        <span class="zr-sb-brand">ZenRay Progress</span>
+        <span class="zr-sb-badge" id="sb-regime-label">Adobe Clean</span>
+      </div>
+
+      <div>
+        <div class="zr-sb-group-title">Create</div>
+        <div class="zr-sb-list">
+          <div class="zr-sb-item"><span>ZenRay Shards</span><span class="zr-sb-count">412</span></div>
+          <div class="zr-sb-item"><span>ZenRay Assets</span><span class="zr-sb-count">89</span></div>
+          <div class="zr-sb-item"><span>ZenRay Edit</span><span class="zr-sb-count">64</span></div>
+        </div>
+      </div>
+
+      <div>
+        <div class="zr-sb-group-title">Gallery</div>
+        <div class="zr-sb-list">
+          <div class="zr-sb-item"><span>3D · To Do</span><span class="zr-sb-count">128</span></div>
+          <div class="zr-sb-item"><span> Environments</span><span class="zr-sb-count">340</span></div>
+          <div class="zr-sb-item"><span>Motion Design</span><span class="zr-sb-count">102</span></div>
+          <div class="zr-sb-item is-active-audio" onclick="setAppView('audio')">
+            <span>Audio · SFX &amp; BGM</span>
+            <span class="zr-sb-count">214</span>
+          </div>
+          <div class="zr-sb-item is-active-fonts" onclick="setAppView('fonts')">
+            <span>Fonts · Fonderie</span>
+            <span class="zr-sb-count">57</span>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="zr-sb-group-title">Propositions Design</div>
+        <div class="zr-sb-list">
+          <div class="zr-sb-item" onclick="selectAudioProp('A')"><span>Audio A · Spectrogram Cards</span><span class="zr-sb-count">4:3</span></div>
+          <div class="zr-sb-item" onclick="selectAudioProp('B')"><span>Audio B · Stem &amp; Pad Deck</span><span class="zr-sb-count">Mix</span></div>
+          <div class="zr-sb-item" onclick="selectAudioProp('C')"><span>Audio C · Oscilloscope HDA</span><span class="zr-sb-count">Lab</span></div>
+          <div class="zr-sb-item" onclick="selectFontsProp('A')"><span>Fonts A · Foundry &amp; Zelda</span><span class="zr-sb-count">Jeu</span></div>
+          <div class="zr-sb-item" onclick="selectFontsProp('B')"><span>Fonts B · Rayons X CJK</span><span class="zr-sb-count">0%</span></div>
+          <div class="zr-sb-item" onclick="selectFontsProp('C')"><span>Fonts C · Duo / Multi-Fonts</span><span class="zr-sb-count">3x</span></div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- CANVAS PRINCIPAL -->
+    <main class="zr-main">
+
+      <!-- ====================================================================
+           VOLET 1 : GALLERY AUDIO (Musiques · Sons · SFX · BGM · Recettes HDA)
+           ==================================================================== -->
+      <section class="zr-section-block" id="section-audio">
+        <div class="zr-section-head">
+          <div>
+            <div class="zr-eyebrow is-audio">● Gallery Audio · Nouvelle Architecture Créateur Jeu &amp; Tech Art</div>
+            <h1 class="zr-h1">Gallery Audio · BGM, Stems Cinématiques &amp; Recettes SFX</h1>
+            <p class="zr-sub">Clique sur n'importe quelle carte pour écouter la synthèse WebAudio temps réel, inspecter sa signature LUFS / True Peak et régler ses macros HDA.</p>
+          </div>
+
+          <div class="zr-prop-tabs">
+            <button class="zr-prop-btn is-active" data-audio-prop="A" onclick="selectAudioProp('A')">Prop. A · Spectrogram Gallery</button>
+            <button class="zr-prop-btn" data-audio-prop="B" onclick="selectAudioProp('B')">Prop. B · Game Stem &amp; SFX Deck</button>
+            <button class="zr-prop-btn" data-audio-prop="C" onclick="selectAudioProp('C')">Prop. C · Oscilloscope &amp; Node HDA</button>
+          </div>
+        </div>
+
+        <div class="zr-filter-row">
+          <div class="zr-chip-row">
+            <button class="zr-chip is-audio-active" data-audio-filter="all" onclick="filterAudioCards('all', this)">Tous · 8</button>
+            <button class="zr-chip" data-audio-filter="bgm" onclick="filterAudioCards('bgm', this)">BGM &amp; Thèmes · 3</button>
+            <button class="zr-chip" data-audio-filter="sfx" onclick="filterAudioCards('sfx', this)">SFX Jeu &amp; UI · 3</button>
+            <button class="zr-chip" data-audio-filter="recipe" onclick="filterAudioCards('recipe', this)">Recettes Procédurales 99,3 % · 2</button>
+          </div>
+          <div class="zr-search-box">
+            <span style="color:var(--ink-muted);">⌕</span>
+            <input type="text" placeholder="Filtrer par LUFS, tonalité, matière (bois, métal, vent)..." oninput="searchAudioCards(this.value)" />
+          </div>
+        </div>
+
+        <!-- AUDIO PROPOSITION A : GRILLE 4 COLONNES SPECTROGRAMME & MACROS HDA -->
+        <div id="audio-view-A" class="zr-grid">
+
+          <!-- Carte Audio 1 -->
+          <article class="zr-card is-playing" data-kind="bgm" data-sound="lumiere" style="--card-glow:#e89b4c;" onclick="playAudioCard(this, 'lumiere', 'Clair Obscur · Nuit sur Lumière (Cut 01)', '-18.0 LUFS · -1.5 dBTP')">
+            <div class="audio-stage">
+              <div class="audio-top-row">
+                <span class="audio-kind-pill">BGM · Master Cut</span>
+                <div class="audio-tech-badges">
+                  <span class="tech-badge is-lufs">-18.0 LUFS</span>
+                  <span class="tech-badge">-1.5 dBTP</span>
+                </div>
+              </div>
+              <div class="waveform-box" data-bars="28,45,62,88,94,76,68,84,96,72,58,64,82,91,78,54,48,66,74,60,42,34"></div>
+              <div class="audio-stage-bottom">
+                <span>Lorien Testard · Do# mineur · 76 BPM</span>
+                <span class="play-orb">▶</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-title-row">
+                <h3 class="card-title">Nuit sur Lumière · Cut 01</h3>
+                <span class="card-dur">02:14</span>
+              </div>
+              <div class="card-meta">
+                <span>Attaque 0.005 s · Fondu qsin 2.0 s</span>
+                <span>48 kHz · 24-bit</span>
+              </div>
+              <div class="macro-pills">
+                <span class="macro-pill">Attaque <strong>0.005s</strong></span>
+                <span class="macro-pill">Corps <strong>+1.5 dB</strong></span>
+                <span class="macro-pill">Cordes &amp; Piano</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Carte Audio 2 -->
+          <article class="zr-card" data-kind="sfx" data-sound="chest" style="--card-glow:#3ecf8e;" onclick="playAudioCard(this, 'chest', 'Elden Ring · Ouverture Coffre Ancien', '-14.0 LUFS · -1.2 dBTP')">
+            <div class="audio-stage">
+              <div class="audio-top-row">
+                <span class="audio-kind-pill">SFX Jeu · Foley</span>
+                <div class="audio-tech-badges">
+                  <span class="tech-badge is-lufs">-14.0 LUFS</span>
+                  <span class="tech-badge">99,4 % Réf</span>
+                </div>
+              </div>
+              <div class="waveform-box" data-bars="18,95,88,72,64,58,52,48,66,82,74,56,42,38,32,28,24,20,18,15,14,12"></div>
+              <div class="audio-stage-bottom">
+                <span>Impact Métal + Halo Doré · 6 couches</span>
+                <span class="play-orb">▶</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-title-row">
+                <h3 class="card-title">Coffre Ancien &amp; Halo Rune</h3>
+                <span class="card-dur">00:03.4</span>
+              </div>
+              <div class="card-meta">
+                <span>Sous-grave 58 Hz · Carillon 2.4 kHz</span>
+                <span>Synthèse pure</span>
+              </div>
+              <div class="macro-pills">
+                <span class="macro-pill">Matière <strong>Fer + Or</strong></span>
+                <span class="macro-pill">Queue <strong>2.8s</strong></span>
+                <span class="macro-pill">Brillance <strong>0.82</strong></span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Carte Audio 3 -->
+          <article class="zr-card" data-kind="bgm" data-sound="aerith" style="--card-glow:#6396ff;" onclick="playAudioCard(this, 'aerith', 'Final Fantasy VII · Aerith Theme (Piano &amp; Célesta)', '-18.2 LUFS · -1.5 dBTP')">
+            <div class="audio-stage">
+              <div class="audio-top-row">
+                <span class="audio-kind-pill">BGM · Émotion</span>
+                <div class="audio-tech-badges">
+                  <span class="tech-badge is-lufs">-18.2 LUFS</span>
+                  <span class="tech-badge">Ré Majeur</span>
+                </div>
+              </div>
+              <div class="waveform-box" data-bars="22,36,54,68,74,62,48,58,78,86,70,52,64,84,90,72,56,44,50,38,28,20"></div>
+              <div class="audio-stage-bottom">
+                <span>Nobuo Uematsu · Arpège Cristallin</span>
+                <span class="play-orb">▶</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-title-row">
+                <h3 class="card-title">Aerith Theme · Pont Émotionnel</h3>
+                <span class="card-dur">03:08</span>
+              </div>
+              <div class="card-meta">
+                <span>Entrée directe sur note · Zéro silence</span>
+                <span>Cue Unreal prêt</span>
+              </div>
+              <div class="macro-pills">
+                <span class="macro-pill">Célesta <strong>Pur</strong></span>
+                <span class="macro-pill">Réverb <strong>Cathédrale</strong></span>
+                <span class="macro-pill">Fondu <strong>2.0s</strong></span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Carte Audio 4 -->
+          <article class="zr-card" data-kind="recipe" data-sound="totk" style="--card-glow:#f5c451;" onclick="playAudioCard(this, 'totk', 'Zelda TOTK · Validation Dialogue &amp; Korok', '-14.0 LUFS · Recette JSON')">
+            <div class="audio-stage">
+              <div class="audio-top-row">
+                <span class="audio-kind-pill">Recette HDA · UI</span>
+                <div class="audio-tech-badges">
+                  <span class="tech-badge is-lufs">0 Octet WAV</span>
+                  <span class="tech-badge">JSON 1.8 Ko</span>
+                </div>
+              </div>
+              <div class="waveform-box" data-bars="92,76,48,32,88,70,42,28,96,82,58,40,32,26,22,18,15,14,12,10,10,8"></div>
+              <div class="audio-stage-bottom">
+                <span>Bois Marimba + harmonique quinte</span>
+                <span class="play-orb">▶</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-title-row">
+                <h3 class="card-title">Zelda Dialogue Chime &amp; Bois</h3>
+                <span class="card-dur">00:00.8</span>
+              </div>
+              <div class="card-meta">
+                <span>Transitoire boisé 4 ms · Quinte juste</span>
+                <span>ZenRay SFX</span>
+              </div>
+              <div class="macro-pills">
+                <span class="macro-pill">Attaque <strong>4 ms</strong></span>
+                <span class="macro-pill">Matière <strong>Bambou</strong></span>
+                <span class="macro-pill">Hauteur <strong>+2 st</strong></span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Carte Audio 5 -->
+          <article class="zr-card" data-kind="sfx" data-sound="chiral" style="--card-glow:#38bdf8;" onclick="playAudioCard(this, 'chiral', 'Death Stranding · Scanner Odradek Chiral', '-14.1 LUFS · -1.4 dBTP')">
+            <div class="audio-stage">
+              <div class="audio-top-row">
+                <span class="audio-kind-pill">SFX · Sci-Fi HUD</span>
+                <div class="audio-tech-badges">
+                  <span class="tech-badge is-lufs">-14.1 LUFS</span>
+                  <span class="tech-badge">Stéréo Wide</span>
+                </div>
+              </div>
+              <div class="waveform-box" data-bars="64,88,42,94,52,78,86,60,44,72,90,68,54,48,62,76,58,40,32,26,20,16"></div>
+              <div class="audio-stage-bottom">
+                <span>Cliquetis mécanique + balayage FM</span>
+                <span class="play-orb">▶</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-title-row">
+                <h3 class="card-title">Odradek Scanner &amp; Pulse</h3>
+                <span class="card-dur">00:01.9</span>
+              </div>
+              <div class="card-meta">
+                <span>Modulation FM 1.8 kHz · Servo moteur</span>
+                <span>MetaSound prêt</span>
+              </div>
+              <div class="macro-pills">
+                <span class="macro-pill">Servo <strong>0.74</strong></span>
+                <span class="macro-pill">Sweep <strong>1.8 kHz</strong></span>
+                <span class="macro-pill">Matière <strong>Titane</strong></span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Carte Audio 6 -->
+          <article class="zr-card" data-kind="recipe" data-sound="bayou" style="--card-glow:#a78bfa;" onclick="playAudioCard(this, 'bayou', 'ZenRay Shards · Brume du Bayou &amp; Pas Humides', '-24.0 LUFS · Ambiance Loop')">
+            <div class="audio-stage">
+              <div class="audio-top-row">
+                <span class="audio-kind-pill">Ambiance · ZRS</span>
+                <div class="audio-tech-badges">
+                  <span class="tech-badge is-lufs">-24.0 LUFS</span>
+                  <span class="tech-badge">Loop Seamless</span>
+                </div>
+              </div>
+              <div class="waveform-box" data-bars="42,48,52,46,58,62,54,48,52,66,70,58,50,46,54,60,52,48,44,46,42,40"></div>
+              <div class="audio-stage-bottom">
+                <span>Vent filtré + Eau calme + Pas bois</span>
+                <span class="play-orb">▶</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-title-row">
+                <h3 class="card-title">Bayou Nocturne &amp; Ponton</h3>
+                <span class="card-dur">00:32.0</span>
+              </div>
+              <div class="card-meta">
+                <span>Bruit rose sculpté · Résonance cyprès</span>
+                <span>ZenRay Shards</span>
+              </div>
+              <div class="macro-pills">
+                <span class="macro-pill">Souffle <strong>0.62</strong></span>
+                <span class="macro-pill">Eau <strong>0.45</strong></span>
+                <span class="macro-pill">Coupe-bas <strong>90 Hz</strong></span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Carte Audio 7 -->
+          <article class="zr-card" data-kind="sfx" data-sound="psflare" style="--card-glow:#f472b6;" onclick="playAudioCard(this, 'psflare', 'PlayStation Studios · Cristal &amp; Lens Flare', '-14.0 LUFS · Signature Intro')">
+            <div class="audio-stage">
+              <div class="audio-top-row">
+                <span class="audio-kind-pill">SFX · Cinématique</span>
+                <div class="audio-tech-badges">
+                  <span class="tech-badge is-lufs">-14.0 LUFS</span>
+                  <span class="tech-badge">99,3 % Identité</span>
+                </div>
+              </div>
+              <div class="waveform-box" data-bars="15,38,76,96,92,84,78,70,64,58,52,46,42,38,34,30,26,22,18,16,14,12"></div>
+              <div class="audio-stage-bottom">
+                <span>Nappe harmonique + Scintillement aigu</span>
+                <span class="play-orb">▶</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-title-row">
+                <h3 class="card-title">Cristal Intro &amp; Lens Flare</h3>
+                <span class="card-dur">00:04.2</span>
+              </div>
+              <div class="card-meta">
+                <span>Accord suspendu + Shimmer octave</span>
+                <span>Motion Design</span>
+              </div>
+              <div class="macro-pills">
+                <span class="macro-pill">Brillance <strong>0.91</strong></span>
+                <span class="macro-pill">Corps <strong>110 Hz</strong></span>
+                <span class="macro-pill">Queue <strong>3.6s</strong></span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Carte Audio 8 -->
+          <article class="zr-card" data-kind="bgm" data-sound="subbass" style="--card-glow:#fb923c;" onclick="playAudioCard(this, 'subbass', 'Interview Ducking BGM · Warm Minimal Pulse', '-27.0 LUFS · Sous la voix')">
+            <div class="audio-stage">
+              <div class="audio-top-row">
+                <span class="audio-kind-pill">BGM · Sous Voix</span>
+                <div class="audio-tech-badges">
+                  <span class="tech-badge is-lufs">-27.0 LUFS</span>
+                  <span class="tech-badge">Creux 2 kHz</span>
+                </div>
+              </div>
+              <div class="waveform-box" data-bars="52,56,60,54,58,62,56,52,58,64,60,54,56,62,58,52,54,60,56,52,50,48"></div>
+              <div class="audio-stage-bottom">
+                <span>Calibré pour voix podcast à -16 LUFS</span>
+                <span class="play-orb">▶</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-title-row">
+                <h3 class="card-title">Warm Analog Pulse (Sous Voix)</h3>
+                <span class="card-dur">01:48</span>
+              </div>
+              <div class="card-meta">
+                <span>Écart garanti 11 LU sous la voix</span>
+                <span>score-timeline.py</span>
+              </div>
+              <div class="macro-pills">
+                <span class="macro-pill">Voix libre <strong>1-4 kHz</strong></span>
+                <span class="macro-pill">Fade Out <strong>3.8s</strong></span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- AUDIO PROPOSITION B : GAME AUDIO MATRIX & STEM DECK (Masquée par défaut, activable en 1 clic) -->
+        <div id="audio-view-B" class="stem-deck-layout is-hidden">
+          <div class="bgm-banner-stack">
+            <div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--accent-audio);">Stems BGM &amp; Repères de Montage (Attaque 0.005s · Fondu qsin 2.0s)</div>
+            <div class="bgm-banner" onclick="playAudioCard(this, 'lumiere', 'Clair Obscur · Nuit sur Lumière (Stem Master)', '-18.0 LUFS')">
+              <div class="card-title-row">
+                <span class="card-title">01 · Clair Obscur : Nuit sur Lumière (Entrée directe 37.54s)</span>
+                <span class="tech-badge is-lufs">-18.0 LUFS</span>
+              </div>
+              <div class="bgm-cue-bar">
+                <div class="bgm-cue-fill"></div>
+                <span style="position:relative;z-index:1;">Attaque verrouillée : 0.005 s (Zéro silence initial)</span>
+                <span style="position:relative;z-index:1;font-family:var(--font-num);">qsin 2.00 s → Acte II</span>
+              </div>
+            </div>
+            <div class="bgm-banner" onclick="playAudioCard(this, 'aerith', 'Final Fantasy VII · Aerith Theme (Stem Émotion)', '-18.2 LUFS')">
+              <div class="card-title-row">
+                <span class="card-title">02 · Final Fantasy VII : Aerith Theme (Entrée 08.13s)</span>
+                <span class="tech-badge is-lufs">-18.2 LUFS</span>
+              </div>
+              <div class="bgm-cue-bar">
+                <div class="bgm-cue-fill" style="width:82%;"></div>
+                <span style="position:relative;z-index:1;">Pont Piano &amp; Célesta · Courbe logarithmique</span>
+                <span style="position:relative;z-index:1;font-family:var(--font-num);">Fade Out 3.80 s</span>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--accent-emerald);margin-bottom:10px;">Matrice Tactile de Pads SFX (Comparaison A/B Réf vs Recette 99,3 %)</div>
+            <div class="sfx-pad-matrix">
+              <div class="sfx-pad" onclick="playAudioCard(this, 'totk', 'Pad UI · Zelda Dialogue Chime', '-14.0 LUFS')">
+                <div class="card-title-row"><strong class="card-title">UI · Zelda Chime</strong><span class="tech-badge is-lufs">99,6 %</span></div>
+                <span style="font-size:12px;color:var(--ink-secondary);">Bambou 4 ms + Quinte cristalline</span>
+                <span class="macro-pill"> Touche [1] · Copier Cue Unreal</span>
+              </div>
+              <div class="sfx-pad" onclick="playAudioCard(this, 'chest', 'Pad Loot · Coffre Elden Ring', '-14.0 LUFS')">
+                <div class="card-title-row"><strong class="card-title">Loot · Coffre Rune</strong><span class="tech-badge is-lufs">99,4 %</span></div>
+                <span style="font-size:12px;color:var(--ink-secondary);">Grave 58 Hz + Scintillement Or</span>
+                <span class="macro-pill">Touche [2] · Copier Recette JSON</span>
+              </div>
+              <div class="sfx-pad" onclick="playAudioCard(this, 'chiral', 'Pad HUD · Scanner Chiral', '-14.1 LUFS')">
+                <div class="card-title-row"><strong class="card-title">HUD · Odradek</strong><span class="tech-badge is-lufs">99,2 %</span></div>
+                <span style="font-size:12px;color:var(--ink-secondary);">Servo titane + Balayage FM</span>
+                <span class="macro-pill">Touche [3] · Copier MetaSound</span>
+              </div>
+              <div class="sfx-pad" onclick="playAudioCard(this, 'bayou', 'Pad Monde · Bayou &amp; Pas', '-24.0 LUFS')">
+                <div class="card-title-row"><strong class="card-title">Monde · Bayou ZRS</strong><span class="tech-badge is-lufs">Loop</span></div>
+                <span style="font-size:12px;color:var(--ink-secondary);">Souffle cyprès + Pas humides</span>
+                <span class="macro-pill">Touche [4] · Envoyer vers Shards</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- AUDIO PROPOSITION C : OSCILLOSCOPE & INSPECTEUR HDA LATÉRAL -->
+        <div id="audio-view-C" class="osc-inspector-layout is-hidden">
+          <div class="zr-grid" style="--gal-cols:2;">
+            <article class="zr-card" onclick="playAudioCard(this, 'chest', 'Recette Active · Coffre &amp; Rune', '-14.0 LUFS')">
+              <div class="card-body">
+                <span class="zr-eyebrow is-audio">Recette Sémantique Active</span>
+                <h3 class="card-title" style="font-size:18px;">Coffre Ancien &amp; Halo Doré (6 Couches)</h3>
+                <p style="font-size:12.5px;color:var(--ink-secondary);">Modifie les 6 macros HDA à droite puis reclique sur la carte pour entendre immédiatement la nouvelle couleur sonore.</p>
+                <div class="macro-pills">
+                  <span class="macro-pill">1. Sous-grave 58 Hz</span>
+                  <span class="macro-pill">2. Fût boisé 180 Hz</span>
+                  <span class="macro-pill">3. Mécanisme fer</span>
+                  <span class="macro-pill">4. Halo quinte</span>
+                </div>
+              </div>
+            </article>
+            <article class="zr-card" onclick="playAudioCard(this, 'totk', 'Recette Active · Zelda TOTK UI', '-14.0 LUFS')">
+              <div class="card-body">
+                <span class="zr-eyebrow is-audio">Variante Sémantique</span>
+                <h3 class="card-title" style="font-size:18px;">Validation Dialogue &amp; Découverte</h3>
+                <p style="font-size:12.5px;color:var(--ink-secondary);">Zéro fichier WAV stocké : le son est décrit par ses paramètres lisibles et régénéré à la volée.</p>
+                <div class="macro-pills">
+                  <span class="macro-pill">Identité mesurée : <strong>99,35 %</strong></span>
+                  <span class="macro-pill">Pic : <strong>-1.5 dBTP</strong></span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <aside class="hda-node-inspector">
+            <div style="display:flex;justify-content:space-between;align-items:center;">
+              <strong style="font-family:var(--font-display);font-size:14px;">Inspecteur Macros SFX (Live WebAudio)</strong>
+              <span class="tech-badge is-lufs">HDA Sound</span>
+            </div>
+            <div class="hda-param-row">
+              <span>Hauteur</span>
+              <input type="range" id="sfx-pitch" min="0.6" max="1.6" step="0.05" value="1.0" oninput="document.getElementById('v-pitch').textContent=this.value+'x'" />
+              <span class="hda-val" id="v-pitch">1.0x</span>
+            </div>
+            <div class="hda-param-row">
+              <span>Attaque</span>
+              <input type="range" id="sfx-attack" min="0.002" max="0.12" step="0.002" value="0.008" oninput="document.getElementById('v-att').textContent=Math.round(this.value*1000)+'ms'" />
+              <span class="hda-val" id="v-att">8ms</span>
+            </div>
+            <div class="hda-param-row">
+              <span>Corps grave</span>
+              <input type="range" id="sfx-body" min="0.2" max="2.0" step="0.1" value="1.1" oninput="document.getElementById('v-body').textContent=this.value" />
+              <span class="hda-val" id="v-body">1.1</span>
+            </div>
+            <div class="hda-param-row">
+              <span>Brillance</span>
+              <input type="range" id="sfx-bright" min="0.2" max="2.0" step="0.1" value="1.2" oninput="document.getElementById('v-brt').textContent=this.value" />
+              <span class="hda-val" id="v-brt">1.2</span>
+            </div>
+            <div class="hda-param-row">
+              <span>Queue (Tail)</span>
+              <input type="range" id="sfx-tail" min="0.3" max="2.5" step="0.1" value="1.2" oninput="document.getElementById('v-tail').textContent=this.value+'s'" />
+              <span class="hda-val" id="v-tail">1.2s</span>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           VOLET 2 : GALLERY FONTS (ZenRay Fonts · Adobe Clean & Multi-Fonts)
+           ==================================================================== -->
+      <section class="zr-section-block" id="section-fonts">
+        <div class="zr-section-head">
+          <div>
+            <div class="zr-eyebrow is-fonts">◆ Gallery Fonts · Fonderie Vectorielle, CJK &amp; Aperçu Jeu Vidéo</div>
+            <h2 class="zr-h1">ZenRay Fonts · Adobe Clean, Grilli Type &amp; Fontes de Jeu</h2>
+            <p class="zr-sub">Chaque spécimen ci-dessous est éditable au clavier, certifié sans dilatation procédurale, et prévisualisable en boîte de dialogue Zelda / JRPG.</p>
+          </div>
+
+          <div class="zr-prop-tabs">
+            <button class="zr-prop-btn is-active" data-fonts-prop="A" onclick="selectFontsProp('A')">Prop. A · Foundry &amp; Dialogue Jeu</button>
+            <button class="zr-prop-btn" data-fonts-prop="B" onclick="selectFontsProp('B')">Prop. B · Rayons X CoreText &amp; CJK</button>
+            <button class="zr-prop-btn" data-fonts-prop="C" onclick="selectFontsProp('C')">Prop. C · Comparateur 3 Régimes</button>
+          </div>
+        </div>
+
+        <!-- Barre d'outils Fonts : Aperçu Dialogue Jeu en direct + Rayons X Ligne de base -->
+        <div class="game-dialogue-preview" id="zelda-dialogue-bar">
+          <div>
+            <div class="game-dialogue-speaker" id="dialogue-font-label">Aperçu Dialogue Jeu Vidéo · FOT-Chiaro Std B (Zelda OoT / TOTK + CJK)</div>
+            <div class="game-dialogue-text" id="dialogue-live-text" contenteditable="true" spellcheck="false">
+              « Vous avez obtenu l'Éclat de Lune du Bayou. Les contreformes de 鬱 et 警 restent parfaitement ouvertes à 48 px. »
+            </div>
+          </div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;">
+            <button class="zr-chip is-fonts-active" onclick="toggleXrayGuides()">Rayons X : yMin = 0.00</button>
+            <button class="zr-chip" onclick="cycleDialogueFont()">Changer Fonte Dialogue ↻</button>
+          </div>
+        </div>
+
+        <!-- FONTS PROPOSITION A : GRILLE 4 COLONNES DE SPÉCIMENS ÉDITABLES -->
+        <div id="fonts-view-A" class="zr-grid">
+
+          <!-- Fonte 1 : Adobe Clean -->
+          <article class="zr-card" onclick="previewFontInDialogue('var(--font-adobe)', 'Adobe Clean (Regular 400 · Medium 500 · Bold 700)')">
+            <div class="font-stage has-xray" style="font-family:var(--font-adobe);">
+              <div class="audio-top-row">
+                <span class="audio-kind-pill">UI &amp; Système · 2 Apps</span>
+                <span class="tech-badge is-lufs">21 Styles OTF/WOFF2</span>
+              </div>
+              <div class="font-specimen-big" contenteditable="true" spellcheck="false">Aa Bb 0149</div>
+              <div class="font-sample-line" contenteditable="true" spellcheck="false">Clarté chirurgicale pour l'interface, les tables de mixage et les inspecteurs HDA.</div>
+            </div>
+            <div class="card-body">
+              <div class="card-title-row">
+                <h3 class="card-title" style="font-family:var(--font-adobe);">Adobe Clean</h3>
+                <span class="card-dur">Sans-Serif Humaniste</span>
+              </div>
+              <div class="card-meta">
+                <span>yMin = 0.00 · Traverse A = 45u</span>
+                <span>0 % Dilatation</span>
+              </div>
+              <div class="weight-pills">
+                <span class="weight-pill">300 Light</span>
+                <span class="weight-pill is-active">400 Regular</span>
+                <span class="weight-pill is-active">500 Medium</span>
+                <span class="weight-pill is-active">700 Bold</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Fonte 2 : FOT-Chiaro Std B (Zelda) -->
+          <article class="zr-card" onclick="previewFontInDialogue('var(--font-chiaro)', 'FOT-Chiaro Std B (Zelda Ocarina of Time · CJK + Latin)')">
+            <div class="font-stage has-xray" style="font-family:var(--font-chiaro);">
+              <div class="audio-top-row">
+                <span class="audio-kind-pill">Dialogue JRPG · Zelda</span>
+                <span class="tech-badge is-lufs">Latin + Kanji CJK</span>
+              </div>
+              <div class="font-specimen-big" contenteditable="true" spellcheck="false">Aa 鬱警月</div>
+              <div class="font-sample-line" contenteditable="true" spellcheck="false">La voix narrative des boîtes de dialogue de Zelda, hybride incise latine et mincho japonais.</div>
+            </div>
+            <div class="card-body">
+              <div class="card-title-row">
+                <h3 class="card-title" style="font-family:var(--font-chiaro);">FOT-Chiaro Std B</h3>
+                <span class="card-dur">Fontworks · 7 Graisses</span>
+              </div>
+              <div class="card-meta">
+                <span>Contreformes CJK intactes</span>
+                <span>L · R · M · B · EB</span>
+              </div>
+              <div class="weight-pills">
+                <span class="weight-pill">L</span>
+                <span class="weight-pill">M</span>
+                <span class="weight-pill is-active">B (Zelda)</span>
+                <span class="weight-pill">EB</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Fonte 3 : GT Ultra Regular 400 -->
+          <article class="zr-card" onclick="previewFontInDialogue('var(--font-gt-ultra)', 'GT Ultra Regular 400 (Grilli Type · Titres &amp; Nombres)')">
+            <div class="font-stage has-xray" style="font-family:var(--font-gt-ultra);">
+              <div class="audio-top-row">
+                <span class="audio-kind-pill">Titres &amp; Nombres</span>
+                <span class="tech-badge is-lufs">Grilli Type</span>
+              </div>
+              <div class="font-specimen-big" contenteditable="true" spellcheck="false">Aa 99,3 %</div>
+              <div class="font-sample-line" contenteditable="true" spellcheck="false">Tension calligraphique entre serif et sans-serif, verrouillée en graisse 400 pure.</div>
+            </div>
+            <div class="card-body">
+              <div class="card-title-row">
+                <h3 class="card-title" style="font-family:var(--font-gt-ultra);">GT Ultra Regular</h3>
+                <span class="card-dur">font-synthesis: none</span>
+              </div>
+              <div class="card-meta">
+                <span>Verrouillé 400 · Zéro faux gras</span>
+                <span>WOFF2 49 Ko</span>
+              </div>
+              <div class="weight-pills">
+                <span class="weight-pill is-active">400 Regular Authentique</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Fonte 4 : Literata -->
+          <article class="zr-card" onclick="previewFontInDialogue('var(--font-literata)', 'Literata (Variable 300-800 · Lecture Longue &amp; Récit)')">
+            <div class="font-stage has-xray" style="font-family:var(--font-literata);">
+              <div class="audio-top-row">
+                <span class="audio-kind-pill">Éditorial &amp; Lore</span>
+                <span class="tech-badge is-lufs">Axe Optique opsz</span>
+              </div>
+              <div class="font-specimen-big" contenteditable="true" spellcheck="false">Aa Récit</div>
+              <div class="font-sample-line" contenteditable="true" spellcheck="false">Confort de lecture exceptionnel pour les journaux de quête, lettres PDF et articles techniques.</div>
+            </div>
+            <div class="card-body">
+              <div class="card-title-row">
+                <h3 class="card-title" style="font-family:var(--font-literata);">Literata</h3>
+                <span class="card-dur">TypeTogether</span>
+              </div>
+              <div class="card-meta">
+                <span>Romain &amp; Italique authentiques</span>
+                <span>WOFF2 Variable</span>
+              </div>
+              <div class="weight-pills">
+                <span class="weight-pill">300</span>
+                <span class="weight-pill is-active">400</span>
+                <span class="weight-pill">500</span>
+                <span class="weight-pill is-active">Italic</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Fonte 5 : Beaufort for LOL -->
+          <article class="zr-card" onclick="previewFontInDialogue('var(--font-beaufort)', 'Beaufort for LOL Bold (Titres Boss &amp; Cinématiques)')">
+            <div class="font-stage has-xray" style="font-family:var(--font-beaufort);">
+              <div class="audio-top-row">
+                <span class="audio-kind-pill">HUD Boss &amp; Prestige</span>
+                <span class="tech-badge is-lufs">Empattements Acier</span>
+              </div>
+              <div class="font-specimen-big" contenteditable="true" spellcheck="false">ACTE I · IV</div>
+              <div class="font-sample-line" contenteditable="true" spellcheck="false">Autorité monumentale pour les écrans de boss, cartes d'actes et bannières héroïques.</div>
+            </div>
+            <div class="card-body">
+              <div class="card-title-row">
+                <h3 class="card-title" style="font-family:var(--font-beaufort);">Beaufort for LOL</h3>
+                <span class="card-dur">3 Masters OTF</span>
+              </div>
+              <div class="card-meta">
+                <span>Capitales de titre ciselées</span>
+                <span>Regular · Med · Bold</span>
+              </div>
+              <div class="weight-pills">
+                <span class="weight-pill">400</span>
+                <span class="weight-pill">500</span>
+                <span class="weight-pill is-active">700 Bold</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Fonte 6 : GT Sectra LCG -->
+          <article class="zr-card" onclick="previewFontInDialogue('var(--font-sectra)', 'GT Sectra LCG (Grilli Type · Plume &amp; Scalpel)')">
+            <div class="font-stage has-xray" style="font-family:var(--font-sectra);">
+              <div class="audio-top-row">
+                <span class="audio-kind-pill">Presse &amp; Critique</span>
+                <span class="tech-badge is-lufs">Grilli Type</span>
+              </div>
+              <div class="font-specimen-big" contenteditable="true" spellcheck="false">Aa Scalpel</div>
+              <div class="font-sample-line" contenteditable="true" spellcheck="false">Angles vifs au scalpel et rythme éditorial haute densité pour les dossiers et essais.</div>
+            </div>
+            <div class="card-body">
+              <div class="card-title-row">
+                <h3 class="card-title" style="font-family:var(--font-sectra);">GT Sectra LCG</h3>
+                <span class="card-dur">Romain &amp; Italique</span>
+              </div>
+              <div class="card-meta">
+                <span>Contraste franc sans bavure</span>
+                <span>WOFF2</span>
+              </div>
+              <div class="weight-pills">
+                <span class="weight-pill is-active">400 Regular</span>
+                <span class="weight-pill is-active">400 Italic</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Fonte 7 : Vogun Medium -->
+          <article class="zr-card" onclick="previewFontInDialogue('var(--font-vogun)', 'Vogun Medium (Display Organique &amp; Direction Artistique)')">
+            <div class="font-stage has-xray" style="font-family:var(--font-vogun);">
+              <div class="audio-top-row">
+                <span class="audio-kind-pill">Display &amp; Artefact</span>
+                <span class="tech-badge is-lufs">Courbes Lyriques</span>
+              </div>
+              <div class="font-specimen-big" contenteditable="true" spellcheck="false">Aa Shards</div>
+              <div class="font-sample-line" contenteditable="true" spellcheck="false">Contreformes sculptées et terminaisons organiques pour chapitres et artefacts de jeu.</div>
+            </div>
+            <div class="card-body">
+              <div class="card-title-row">
+                <h3 class="card-title" style="font-family:var(--font-vogun);">Vogun Medium</h3>
+                <span class="card-dur">Master TTF 500</span>
+              </div>
+              <div class="card-meta">
+                <span>Signature visuelle singulière</span>
+                <span>59 Ko</span>
+              </div>
+              <div class="weight-pills">
+                <span class="weight-pill is-active">500 Medium</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Fonte 8 : Anthropic Mono -->
+          <article class="zr-card" onclick="previewFontInDialogue('var(--font-mono)', 'Anthropic Mono (Mesures HDA, VEX, Shader &amp; Timecodes)')">
+            <div class="font-stage has-xray" style="font-family:var(--font-mono);">
+              <div class="audio-top-row">
+                <span class="audio-kind-pill">HDA · VEX · LUFS</span>
+                <span class="tech-badge is-lufs">Chasse Fixe Tabulaire</span>
+              </div>
+              <div class="font-specimen-big" contenteditable="true" spellcheck="false">-14.0 dB</div>
+              <div class="font-sample-line" contenteditable="true" spellcheck="false">Alignement vertical absolu pour les timecodes 00:03.40, les empreintes SHA-256 et VEX.</div>
+            </div>
+            <div class="card-body">
+              <div class="card-title-row">
+                <h3 class="card-title" style="font-family:var(--font-mono);">Anthropic Mono</h3>
+                <span class="card-dur">400 &amp; 500</span>
+              </div>
+              <div class="card-meta">
+                <span>Zéro décalage sur les compteurs</span>
+                <span>TTF Authentique</span>
+              </div>
+              <div class="weight-pills">
+                <span class="weight-pill is-active">400 Regular</span>
+                <span class="weight-pill is-active">500 Medium</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- FONTS PROPOSITION B : ATELIER RAYONS X CORETEXT & KANJIS HAUTE DENSITÉ -->
+        <div id="fonts-view-B" class="cjk-xray-grid is-hidden">
+          <div class="cjk-cell">
+            <span class="tech-badge is-lufs">29 Traits · Contreforme Ouverte</span>
+            <div class="cjk-glyph" style="font-family:var(--font-chiaro);">鬱</div>
+            <h4 class="card-title">Utsu · Mélancolie</h4>
+            <p style="font-size:12px;color:var(--ink-secondary);margin-top:4px;">Ligne de base yMin = 0.00 · Zéro fusion des traits internes en FOT-Chiaro Std B.</p>
+          </div>
+          <div class="cjk-cell">
+            <span class="tech-badge is-lufs">23 Traits · Métal &amp; Miroir</span>
+            <div class="cjk-glyph" style="font-family:var(--font-chiaro);">鑑</div>
+            <h4 class="card-title">Kan · Modèle / Miroir</h4>
+            <p style="font-size:12px;color:var(--ink-secondary);margin-top:4px;">Aucun changeWeight procédural : les blancs internes respirent à toute échelle.</p>
+          </div>
+          <div class="cjk-cell">
+            <span class="tech-badge is-lufs">19 Traits · Alerte HUD</span>
+            <div class="cjk-glyph" style="font-family:var(--font-chiaro);">警</div>
+            <h4 class="card-title">Kei · Avertir</h4>
+            <p style="font-size:12px;color:var(--ink-secondary);margin-top:4px;">Alignement optique avec les capitales latines Adobe Clean et GT Ultra.</p>
+          </div>
+          <div class="cjk-cell">
+            <span class="tech-badge is-lufs">Traverse A = 45 unités</span>
+            <div class="cjk-glyph" style="font-family:var(--font-adobe);">Aa</div>
+            <h4 class="card-title">Adobe Clean Master</h4>
+            <p style="font-size:12px;color:var(--ink-secondary);margin-top:4px;">Jonctions d'origine signées par le fondeur, validées CoreText sans dérive.</p>
+          </div>
+        </div>
+
+        <!-- FONTS PROPOSITION C : MATRICE INTERACTIVE DES 3 RÉGIMES TYPOGRAPHIQUES -->
+        <div id="fonts-view-C" class="regime-compare-grid is-hidden">
+          <div class="regime-card is-selected" onclick="setFontRegime('adobe-clean')">
+            <span class="zr-eyebrow is-fonts">Régime 1 · Unifié sur les 2 Apps</span>
+            <h3 style="font-family:var(--font-adobe);font-size:20px;font-weight:700;">100 % Adobe Clean</h3>
+            <p style="font-size:13px;color:var(--ink-secondary);">Interface, titres de cartes, compteurs LUFS et navigation intégralement en Adobe Clean (400, 500, 700). Sobriété pro maximale type outil créatif haut de gamme.</p>
+            <span class="macro-pill">Cliquer pour appliquer à toute la page</span>
+          </div>
+          <div class="regime-card" onclick="setFontRegime('adobe-gt-ultra')">
+            <span class="zr-eyebrow is-audio">Régime 2 · Signature ZenRayProgress</span>
+            <h3 style="font-family:var(--font-gt-ultra);font-size:20px;font-weight:400;">Adobe Clean + GT Ultra 400</h3>
+            <p style="font-size:13px;color:var(--ink-secondary);">Corps et contrôles en Adobe Clean ; titres de sections, noms d'œuvres et chiffres tabulaires en GT Ultra Regular 400.</p>
+            <span class="macro-pill">Cliquer pour appliquer à toute la page</span>
+          </div>
+          <div class="regime-card" onclick="setFontRegime('multi-fonts')">
+            <span class="zr-eyebrow is-fonts">Régime 3 · Multi-Fonts Créateur Jeu</span>
+            <h3 style="font-family:var(--font-chiaro);font-size:20px;font-weight:700;">FOT-Chiaro + Adobe Clean + Mono</h3>
+            <p style="font-size:13px;color:var(--ink-secondary);">Titres expressifs en FOT-Chiaro Std B (Zelda), UI technique en Adobe Clean, et toutes les mesures (-14 LUFS, BPM, ms) en Anthropic Mono.</p>
+            <span class="macro-pill">Cliquer pour appliquer à toute la page</span>
+          </div>
+        </div>
+
+      </section>
+
+    </main>
+  </div>
+
+  <!-- ========================================================================
+       DOCK AUDIO & TYPO FLOTTANT EN BAS (Lecteur WebAudio + État HDA)
+       ======================================================================== -->
+  <footer class="zr-bottom-dock">
+    <div class="dock-now-playing">
+      <span class="play-orb" id="dock-play-icon" onclick="replayLastSound()">▶</span>
+      <div>
+        <div style="font-family:var(--font-display);font-weight:var(--display-weight);font-size:13.5px;" id="dock-track-title">Clair Obscur · Nuit sur Lumière (Cut 01)</div>
+        <div style="font-size:11.5px;color:var(--ink-secondary);" id="dock-track-meta">-18.0 LUFS · -1.5 dBTP · Clique sur une carte pour jouer le son WebAudio</div>
+      </div>
+    </div>
+
+    <div class="dock-meter">
+      <span class="tech-badge is-lufs" id="dock-regime-pill">Régime : Adobe Clean</span>
+      <span class="tech-badge" id="dock-prop-pill">Audio Prop. A + Fonts Prop. A</span>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       MOTEUR INTERACTIF (WebAudio Procédural + Waveform + Contrôles HDA)
+       ======================================================================== -->
+  <script>
+    // 1. Génération des barres de waveform dans chaque carte Audio
+    document.querySelectorAll('.waveform-box').forEach((box) => {
+      const values = (box.getAttribute('data-bars') || '').split(',').map(Number);
+      box.innerHTML = '';
+      values.forEach((v, idx) => {
+        const bar = document.createElement('span');
+        bar.className = 'wave-bar' + (v >= 75 ? ' is-hot' : '');
+        bar.style.height = Math.max(14, Math.min(100, v)) + '%';
+        bar.addEventListener('mouseenter', () => {
+          bar.style.height = Math.min(100, v + 14) + '%';
+        });
+        bar.addEventListener('mouseleave', () => {
+          bar.style.height = Math.max(14, Math.min(100, v)) + '%';
+        });
+        box.appendChild(bar);
+      });
+    });
+
+    // 2. Synthétiseur WebAudio temps réel (zéro dépendance externe)
+    let audioCtx = null;
+    let lastSoundId = 'lumiere';
+
+    function getMacroVal(id, fallback) {
+      const el = document.getElementById(id);
+      return el ? parseFloat(el.value) : fallback;
+    }
+
+    function playProceduralSound(soundId) {
+      try {
+        if (!audioCtx) {
+          const AC = window.AudioContext || window.webkitAudioContext;
+          audioCtx = new AC();
+        }
+        if (audioCtx.state === 'suspended') audioCtx.resume();
+
+        const now = audioCtx.currentTime;
+        const pitch = getMacroVal('sfx-pitch', 1.0);
+        const attack = getMacroVal('sfx-attack', 0.008);
+        const tail = getMacroVal('sfx-tail', 1.2);
+        const bright = getMacroVal('sfx-bright', 1.2);
+
+        const presets = {
+          lumiere: { freqs: [277.18, 329.63, 415.30, 622.25], type: 'triangle', dur: 1.5 },
+          chest:   { freqs: [58.0, 174.61, 523.25, 1046.5, 1567.98], type: 'sine', dur: 1.4 },
+          aerith:  { freqs: [293.66, 369.99, 440.0, 587.33, 880.0], type: 'sine', dur: 1.6 },
+          totk:    { freqs: [523.25, 783.99, 1174.66], type: 'triangle', dur: 0.55 },
+          chiral:  { freqs: [420.0, 840.0, 1680.0], type: 'sawtooth', dur: 0.7 },
+          bayou:   { freqs: [110.0, 164.81, 220.0, 329.63], type: 'sine', dur: 1.5 },
+          psflare: { freqs: [220.0, 329.63, 493.88, 659.25, 1318.5], type: 'sine', dur: 1.7 },
+          subbass: { freqs: [65.41, 130.81, 196.0], type: 'sine', dur: 1.2 }
+        };
+
+        const p = presets[soundId] || presets.lumiere;
+        p.freqs.forEach((f, idx) => {
+          const osc = audioCtx.createOscillator();
+          const gain = audioCtx.createGain();
+          const filter = audioCtx.createBiquadFilter();
+
+          osc.type = p.type;
+          osc.frequency.setValueAtTime(f * pitch, now + idx * 0.045);
+
+          filter.type = 'lowpass';
+          filter.frequency.setValueAtTime(1800 * bright, now);
+
+          const startT = now + idx * 0.045;
+          const totalDur = p.dur * tail;
+          gain.gain.setValueAtTime(0.0001, startT);
+          gain.gain.linearRampToValueAtTime(0.11 / Math.sqrt(idx + 1), startT + attack);
+          gain.gain.exponentialRampToValueAtTime(0.0001, startT + totalDur);
+
+          osc.connect(filter);
+          filter.connect(gain);
+          gain.connect(audioCtx.destination);
+
+          osc.start(startT);
+          osc.stop(startT + totalDur + 0.05);
+        });
+      } catch (e) {
+        // Silencieux en rendu headless
+      }
+    }
+
+    function playAudioCard(cardEl, soundId, title, meta) {
+      lastSoundId = soundId;
+      document.querySelectorAll('#section-audio .zr-card').forEach(c => c.classList.remove('is-playing'));
+      if (cardEl && cardEl.classList.contains('zr-card')) {
+        cardEl.classList.add('is-playing');
+      }
+      document.getElementById('dock-track-title').textContent = title;
+      document.getElementById('dock-track-meta').textContent = meta + ' · Lecture WebAudio active';
+      playProceduralSound(soundId);
+    }
+
+    function replayLastSound() {
+      playProceduralSound(lastSoundId);
+    }
+
+    // 3. Commutation des vues et propositions
+    let currentAppView = 'both';
+    let currentAudioProp = 'A';
+    let currentFontsProp = 'A';
+    let currentRegime = 'adobe-clean';
+
+    function setAppView(view) {
+      currentAppView = view;
+      document.querySelectorAll('[data-app-view]').forEach(btn => {
+        btn.classList.toggle('is-active', btn.getAttribute('data-app-view') === view);
+      });
+      document.getElementById('section-audio').classList.toggle('is-hidden', view === 'fonts');
+      document.getElementById('section-fonts').classList.toggle('is-hidden', view === 'audio');
+      updateDockPill();
+    }
+
+    function selectAudioProp(prop) {
+      currentAudioProp = prop;
+      if (currentAppView === 'fonts') setAppView('both');
+      ['A', 'B', 'C'].forEach(p => {
+        const el = document.getElementById('audio-view-' + p);
+        if (el) el.classList.toggle('is-hidden', p !== prop);
+      });
+      document.querySelectorAll('[data-audio-prop]').forEach(btn => {
+        btn.classList.toggle('is-active', btn.getAttribute('data-audio-prop') === prop);
+      });
+      updateDockPill();
+    }
+
+    function selectFontsProp(prop) {
+      currentFontsProp = prop;
+      if (currentAppView === 'audio') setAppView('both');
+      ['A', 'B', 'C'].forEach(p => {
+        const el = document.getElementById('fonts-view-' + p);
+        if (el) el.classList.toggle('is-hidden', p !== prop);
+      });
+      document.querySelectorAll('[data-fonts-prop]').forEach(btn => {
+        btn.classList.toggle('is-active', btn.getAttribute('data-fonts-prop') === prop);
+      });
+      updateDockPill();
+    }
+
+    function setFontRegime(regime) {
+      currentRegime = regime;
+      document.documentElement.setAttribute('data-font-regime', regime);
+      document.querySelectorAll('[data-regime-btn]').forEach(btn => {
+        btn.classList.toggle('is-active', btn.getAttribute('data-regime-btn') === regime);
+      });
+      const labels = {
+        'adobe-clean': 'Adobe Clean (2 Apps)',
+        'adobe-gt-ultra': 'Adobe Clean + GT Ultra',
+        'multi-fonts': 'Multi-Fonts Créateur'
+      };
+      document.getElementById('sb-regime-label').textContent = labels[regime];
+      document.getElementById('dock-regime-pill').textContent = 'Régime : ' + labels[regime];
+    }
+
+    function updateDockPill() {
+      document.getElementById('dock-prop-pill').textContent =
+        'Audio Prop. ' + currentAudioProp + ' + Fonts Prop. ' + currentFontsProp;
+    }
+
+    // 4. Filtres et recherche Audio
+    function filterAudioCards(kind, btnEl) {
+      document.querySelectorAll('[data-audio-filter]').forEach(b => b.classList.remove('is-audio-active'));
+      if (btnEl) btnEl.classList.add('is-audio-active');
+      document.querySelectorAll('#audio-view-A .zr-card').forEach(card => {
+        const match = (kind === 'all') || (card.getAttribute('data-kind') === kind);
+        card.classList.toggle('is-hidden', !match);
+      });
+    }
+
+    function searchAudioCards(q) {
+      const term = (q || '').trim().toLowerCase();
+      document.querySelectorAll('#audio-view-A .zr-card').forEach(card => {
+        const txt = card.textContent.toLowerCase();
+        card.classList.toggle('is-hidden', term && !txt.includes(term));
+      });
+    }
+
+    // 5. Aperçu Dialogue Jeu Vidéo & Rayons X Fonts
+    const dialogueFonts = [
+      { css: 'var(--font-chiaro)', label: 'FOT-Chiaro Std B (Zelda OoT / TOTK + CJK)' },
+      { css: 'var(--font-adobe)', label: 'Adobe Clean (UI & Sous-titres modernes)' },
+      { css: 'var(--font-gt-ultra)', label: 'GT Ultra Regular 400 (Titres & Narration)' },
+      { css: 'var(--font-literata)', label: 'Literata (Journaux de quête & Lore)' },
+      { css: 'var(--font-beaufort)', label: 'Beaufort for LOL Bold (Boss & Cinématique)' }
+    ];
+    let dialogueIdx = 0;
+
+    function previewFontInDialogue(fontCss, labelText) {
+      document.documentElement.style.setProperty('--preview-game-font', fontCss);
+      document.getElementById('dialogue-font-label').textContent = 'Aperçu Dialogue Jeu Vidéo · ' + labelText;
+    }
+
+    function cycleDialogueFont() {
+      dialogueIdx = (dialogueIdx + 1) % dialogueFonts.length;
+      const item = dialogueFonts[dialogueIdx];
+      previewFontInDialogue(item.css, item.label);
+    }
+
+    function toggleXrayGuides() {
+      document.querySelectorAll('.font-stage').forEach(st => st.classList.toggle('has-xray'));
+    }
+
+    // 6. Contrôles HDA (:root variables, Thème & Copie pour le prompt)
+    function setHdaVar(varName, val, labelId) {
+      document.documentElement.style.setProperty(varName, val);
+      const lbl = document.getElementById(labelId);
+      if (lbl) lbl.textContent = val;
+    }
+
+    function toggleTheme() {
+      const root = document.documentElement;
+      const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      document.getElementById('theme-toggle-btn').textContent = 'Thème : ' + (next === 'dark' ? 'Dark' : 'Light');
+    }
+
+    function copyHdaChoice() {
+      const style = getComputedStyle(document.documentElement);
+      const payload = [
+        'Choix Design Gallery Audio & Fonts :',
+        '- Audio Proposition : ' + currentAudioProp,
+        '- Fonts Proposition : ' + currentFontsProp,
+        '- Régime Typographique : ' + currentRegime,
+        '- Thème : ' + document.documentElement.getAttribute('data-theme'),
+        '- --gal-cols : ' + style.getPropertyValue('--gal-cols').trim(),
+        '- --gal-gap : ' + style.getPropertyValue('--gal-gap').trim(),
+        '- --gal-radius : ' + style.getPropertyValue('--gal-radius').trim(),
+        '- --spec-size : ' + style.getPropertyValue('--spec-size').trim()
+      ].join('\n');
+
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(payload);
+      }
+      const btn = document.getElementById('copy-hda-btn');
+      btn.textContent = 'Copié pour le prompt ✓';
+      setTimeout(() => { btn.textContent = 'Copier mon choix & HDA'; }, 1800);
+    }
+  </script>
+</body>
+</html>
