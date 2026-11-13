@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-11-13T13:21:41.433Z",
+ "scannedAt": "2026-11-13T19:22:57.764Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -437,22 +437,6 @@
   },
   {
    "projectId": "zenray-progress",
-   "lines": 4,
-   "work": 2,
-   "prompts": 0,
-   "first": "2026-11-03T13:54:15.163Z",
-   "last": "2026-11-03T14:18:08.687Z",
-   "strength": "weak",
-   "conversationId": "codex:01a1a1b0-2ed1-7783-8103-99285b9b3355",
-   "provider": "codex",
-   "sessionId": "01a1a1b0-2ed1-7783-8103-99285b9b3355",
-   "title": "Conversation codex 01a1a1b0",
-   "updatedAt": "2026-11-04T23:22:33.033Z",
-   "bytes": 4732655,
-   "boundProject": "zenray-assets-v2"
-  },
-  {
-   "projectId": "zenray-progress",
    "lines": 3,
    "work": 2,
    "prompts": 0,
@@ -544,7 +528,7 @@
    "sessionId": "0611e96b-26b2-4d65-a9e1-cb913738cca3",
    "title": "zenray meshes v5",
    "updatedAt": "2026-11-12T16:31:13.514Z",
-   "bytes": 305749,
+   "bytes": 305804,
    "boundProject": "zenray-meshes"
   },
   {
@@ -581,6 +565,22 @@
   },
   {
    "projectId": "zenray-progress",
+   "lines": 26,
+   "work": 0,
+   "prompts": 0,
+   "first": "2026-11-12T11:07:01.700Z",
+   "last": "2026-11-13T19:14:19.063Z",
+   "strength": "weak",
+   "conversationId": "claude:48664bcf-655d-4f1c-8f4c-981e576050ff",
+   "provider": "claude",
+   "sessionId": "48664bcf-655d-4f1c-8f4c-981e576050ff",
+   "title": "guides jaune et turquoise",
+   "updatedAt": "2026-11-13T19:22:20.290Z",
+   "bytes": 245363132,
+   "boundProject": null
+  },
+  {
+   "projectId": "zenray-progress",
    "lines": 25,
    "work": 0,
    "prompts": 0,
@@ -610,22 +610,6 @@
    "updatedAt": "2026-10-30T13:00:29.267Z",
    "bytes": 38918,
    "boundProject": "zenray-calendar-plan-23-october-2026"
-  },
-  {
-   "projectId": "zenray-progress",
-   "lines": 18,
-   "work": 0,
-   "prompts": 0,
-   "first": "2026-11-12T11:07:01.700Z",
-   "last": "2026-11-13T10:02:42.883Z",
-   "strength": "weak",
-   "conversationId": "claude:48664bcf-655d-4f1c-8f4c-981e576050ff",
-   "provider": "claude",
-   "sessionId": "48664bcf-655d-4f1c-8f4c-981e576050ff",
-   "title": "guides jaune et turquoise",
-   "updatedAt": "2026-11-13T13:14:13.436Z",
-   "bytes": 33400,
-   "boundProject": null
   },
   {
    "projectId": "zenray-progress",
