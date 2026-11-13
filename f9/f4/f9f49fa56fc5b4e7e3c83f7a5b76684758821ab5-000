@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "projectId": "zenray-progress",
- "scannedAt": "2026-11-13T07:20:38.607Z",
+ "scannedAt": "2026-11-13T13:21:41.433Z",
  "conversations": [
   {
    "projectId": "zenray-progress",
@@ -544,7 +544,7 @@
    "sessionId": "0611e96b-26b2-4d65-a9e1-cb913738cca3",
    "title": "zenray meshes v5",
    "updatedAt": "2026-11-12T16:31:13.514Z",
-   "bytes": 305786,
+   "bytes": 305749,
    "boundProject": "zenray-meshes"
   },
   {
@@ -613,6 +613,22 @@
   },
   {
    "projectId": "zenray-progress",
+   "lines": 18,
+   "work": 0,
+   "prompts": 0,
+   "first": "2026-11-12T11:07:01.700Z",
+   "last": "2026-11-13T10:02:42.883Z",
+   "strength": "weak",
+   "conversationId": "claude:48664bcf-655d-4f1c-8f4c-981e576050ff",
+   "provider": "claude",
+   "sessionId": "48664bcf-655d-4f1c-8f4c-981e576050ff",
+   "title": "guides jaune et turquoise",
+   "updatedAt": "2026-11-13T13:14:13.436Z",
+   "bytes": 33400,
+   "boundProject": null
+  },
+  {
+   "projectId": "zenray-progress",
    "lines": 17,
    "work": 0,
    "prompts": 1,
@@ -674,22 +690,6 @@
    "updatedAt": "2026-11-05T11:03:31.906Z",
    "bytes": 38491,
    "boundProject": "zorah-materials"
-  },
-  {
-   "projectId": "zenray-progress",
-   "lines": 12,
-   "work": 0,
-   "prompts": 0,
-   "first": "2026-11-12T11:07:01.700Z",
-   "last": "2026-11-13T06:11:10.289Z",
-   "strength": "weak",
-   "conversationId": "claude:48664bcf-655d-4f1c-8f4c-981e576050ff",
-   "provider": "claude",
-   "sessionId": "48664bcf-655d-4f1c-8f4c-981e576050ff",
-   "title": "guides jaune et turquoise",
-   "updatedAt": "2026-11-13T07:19:24.086Z",
-   "bytes": 283195,
-   "boundProject": null
   },
   {
    "projectId": "zenray-progress",
